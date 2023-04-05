@@ -1,0 +1,200 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Page Content*/
+@mixin pageIndexContentWrap_MT_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: column nowrap; /*To be changed*/
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: auto;
+	margin: 20px 0px 0px 0px;
+}
+
+@mixin pageIndexContentWrap_LD_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap; /*changed*/
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 1080px; /*changed*/
+	margin: 20px auto 0px auto;
+}
+
+
+
+@mixin policyDetailsItem_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+
+
+@mixin policyDateDetailsWrapper{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 0px 5px;
+}
+
+
+
+@mixin policyDateTxt_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	font: italic normal 14px calibri; /*To be changed*/
+	color: gray;
+}
+
+@mixin policyDateTxt_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	font: italic normal 16px calibri; /*changed*/
+	color: gray;
+}
+
+@mixin policyDateTxt_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: italic normal 18px calibri; /*changed*/
+	color: gray;
+}
+
+
+
+@mixin policyUpToDateTxt_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 12px calibri; /*To be changed*/
+	color: gray;
+}
+
+@mixin policyUpToDateTxt_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 14px calibri; /*changed*/
+	color: gray;
+}
+
+@mixin policyUpToDateTxt_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 16px calibri; /*changed*/
+	color: gray;
+}
+
+
+
+@mixin policyBigLabelTxt_MT_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	word-break: keep-all;
+	font: normal normal 20px calibri; /*To be changed*/
+	color: gray;
+	margin: 25px 5px;
+}
+
+@mixin policyBigLabelTxt_Laptop_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	word-break: keep-all;
+	font: normal normal 30px calibri; /*changed*/
+	color: gray;
+	margin: 25px 5px;
+}
+
+@mixin policyBigLabelTxt_Desktop_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	word-break: keep-all;
+	font: normal normal 40px calibri; /*changed*/
+	color: gray;
+	margin: 25px 5px;
+}
+
+
+
+@mixin policyTxtFont_MT_Style{
+	font-family: calibri;
+	font-size: 14px; /*To be changed*/
+	font-style: normal;
+	color: gray;
+}
+
+@mixin policyTxtFont_Laptop_Style{
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	font-style: normal;
+	color: gray;
+}
+
+@mixin policyTxtFont_Desktop_Style{
+	font-family: calibri;
+	font-size: 18px; /*changed*/
+	font-style: normal;
+	color: gray;
+}
+
+
+
+@mixin policyParagraph_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	word-break: keep-all;
+	margin: 0px 5px;
+}
+
+
+
+@mixin policyAgreeTermsWrap_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	margin: 15px 5px;
+	text-align: center;
+}
+
+
+
+@mixin agreeTermsCheckbox_Style{
+	display: inline-block;
+	max-width: 100%;
+}
+
+
+
+@mixin agreeCheckboxLabel_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFMTSize: 15px;
+	--custCheckboxFLDSize: 18px;
+	--cusCheckboxColor: black;
+}
+/*Page Content*/
+/***********************************************************************************************************************************************************************************************************/

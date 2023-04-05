@@ -1,0 +1,81 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+@mixin globalPageHeaderWrap_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	background: linear-gradient(to right, #1B85BD, #208996);
+	padding: 15px 0px;
+}
+
+
+
+@mixin globalPageHeaderTxt_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	text-align: center;
+	font: normal bold 15px calibri; /*To be changed*/
+	color: #ffffff;
+}
+
+@mixin globalPageHeaderTxt_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	text-align: center;
+	font: normal bold 25px calibri; /*changed*/
+	color: #ffffff;
+}
+
+@mixin globalPageHeaderTxt_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	text-align: center;
+	font: normal bold 35px calibri; /*changed*/
+	color: #ffffff;
+}
+
+
+
+@mixin globalPageHeaderSubTxt_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	text-align: center;
+	font: normal normal 12px calibri; /*To be changed*/
+	color: #ffffff;
+}
+
+@mixin globalPageHeaderSubTxt_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	text-align: center;
+	font: normal normal 22px calibri; /*changed*/
+	color: #ffffff;
+}
+
+@mixin globalPageHeaderSubTxt_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	text-align: center;
+	font: normal normal 32px calibri; /*changed*/
+	color: #ffffff;
+}
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
