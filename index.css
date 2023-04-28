@@ -3791,8 +3791,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -3802,11 +3802,10 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    z-index: 1;
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: visible;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -3907,7 +3906,6 @@
     overflow: visible;
     border: 1px solid transparent;
     order: 1;
-    z-index: 2;
     top: 37px;
     width: 100%;
     opacity: 0;
@@ -3967,8 +3965,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -3978,11 +3976,10 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    z-index: 1;
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: visible;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4083,7 +4080,6 @@
     overflow: visible;
     border: 1px solid transparent;
     order: 1;
-    z-index: 2;
     top: 37px;
     width: 100%;
     opacity: 0;
@@ -4143,8 +4139,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -4154,11 +4150,10 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    z-index: 1;
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: visible;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4259,7 +4254,6 @@
     overflow: visible;
     border: 1px solid transparent;
     order: 1;
-    z-index: 2;
     top: 37px;
     width: 100%;
     opacity: 0;
@@ -4319,8 +4313,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -4330,11 +4324,10 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    z-index: 1;
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: visible;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4435,7 +4428,6 @@
     overflow: visible;
     border: 1px solid transparent;
     order: 1;
-    z-index: 2;
     top: 37px;
     width: 100%;
     opacity: 0;
