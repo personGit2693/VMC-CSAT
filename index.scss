@@ -185,6 +185,25 @@
 	label[for="agreeTermsCheckbox"]{
 		@include agreeCheckboxLabel_Style
 	}
+
+
+	.disabledBtn-Class{
+		--normBtnMWidth: 100px;
+		--normBtnTWidth: 100px;
+		--normBtnLWidth: 110px;
+		--normBtnDWidth: 110px;
+		--normBtnPadding: 7px;
+		--normBtnBorderWidth: 1px;
+		--normBtnBorderColor: gray;
+		--normBtnRadius: 7px;
+		--normBtnFWeight: normal;
+		--normBtnFMTSize: 12px;
+		--normBtnFLDSize: 14px;
+		--normBtnBgColor: gray;
+		--normBtnFcolor: #ffffff;
+		--normBtnHovActFColor: #ffffff;
+		--normBtnHovActBgColor: gray;
+	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
 }
@@ -245,6 +264,24 @@
 
 	label[for="agreeTermsCheckbox"]{
 		@include agreeCheckboxLabel_Style
+	}
+
+	.disabledBtn-Class{
+		--normBtnMWidth: 100px;
+		--normBtnTWidth: 100px;
+		--normBtnLWidth: 110px;
+		--normBtnDWidth: 110px;
+		--normBtnPadding: 7px;
+		--normBtnBorderWidth: 1px;
+		--normBtnBorderColor: gray;
+		--normBtnRadius: 7px;
+		--normBtnFWeight: normal;
+		--normBtnFMTSize: 12px;
+		--normBtnFLDSize: 14px;
+		--normBtnBgColor: gray;
+		--normBtnFcolor: #ffffff;
+		--normBtnHovActFColor: #ffffff;
+		--normBtnHovActBgColor: gray;
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
@@ -308,6 +345,24 @@
 	label[for="agreeTermsCheckbox"]{
 		@include agreeCheckboxLabel_Style
 	}
+
+	.disabledBtn-Class{
+		--normBtnMWidth: 100px;
+		--normBtnTWidth: 100px;
+		--normBtnLWidth: 110px;
+		--normBtnDWidth: 110px;
+		--normBtnPadding: 7px;
+		--normBtnBorderWidth: 1px;
+		--normBtnBorderColor: gray;
+		--normBtnRadius: 7px;
+		--normBtnFWeight: normal;
+		--normBtnFMTSize: 12px;
+		--normBtnFLDSize: 14px;
+		--normBtnBgColor: gray;
+		--normBtnFcolor: #ffffff;
+		--normBtnHovActFColor: #ffffff;
+		--normBtnHovActBgColor: gray;
+	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
 }
@@ -368,6 +423,24 @@
 
 	label[for="agreeTermsCheckbox"]{
 		@include agreeCheckboxLabel_Style
+	}
+
+	.disabledBtn-Class{
+		--normBtnMWidth: 100px;
+		--normBtnTWidth: 100px;
+		--normBtnLWidth: 110px;
+		--normBtnDWidth: 110px;
+		--normBtnPadding: 7px;
+		--normBtnBorderWidth: 1px;
+		--normBtnBorderColor: gray;
+		--normBtnRadius: 7px;
+		--normBtnFWeight: normal;
+		--normBtnFMTSize: 12px;
+		--normBtnFLDSize: 14px;
+		--normBtnBgColor: gray;
+		--normBtnFcolor: #ffffff;
+		--normBtnHovActFColor: #ffffff;
+		--normBtnHovActBgColor: gray;
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/

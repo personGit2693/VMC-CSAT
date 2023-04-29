@@ -46,10 +46,10 @@
 			<div class="policyAgreeTermsWrap">
 				<div class="cusCheckBoxPaper_RoClass agreeTermsCheckbox-Class">
 					<label for="agreeTermsCheckbox-Id">I agree to the Terms of Use and Data Privacy Policy:<div class="boxme_RoClass"><img src="./src/checkIcon.png"></div></label>
-					<input type="checkbox" id="agreeTermsCheckbox-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
+					<input type="checkbox" id="agreeTermsCheckbox-Id" onchange="checkCusCheckBox(this), switchRateOurServBtn()" autocomplete="off">
 				</div>
 
-				<button class="normButton_RoClass" style="margin: 5px auto;">Rate our service</button>
+				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto;" onclick="redirectToRateServ()">Rate our service</button>
 			</div>
 			<!--_ _Accept terms and agreement-->			
 		</div>		
@@ -58,6 +58,8 @@
 	<!--Page Content-->
 
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js"></script>	
-	<script type="text/javascript" src="./index.js"></script>	
+	<script type="text/javascript" src="JsCollection_Index.js"></script>	
+	<script type="text/javascript" src="Validation_PrivacyPolicy.js"></script>
+	<script type="text/javascript" src="Portal_RateService.js"></script>
 </body>
 </html>
