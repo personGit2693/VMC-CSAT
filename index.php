@@ -8,6 +8,11 @@
 	<meta charset="utf-16">
 </head>
 <body>
+	<!--Blurrer-->
+	<div class="thisIsJapan_RoClass" style="--putOnTop: 1;"></div>
+	<!--Blurrer-->
+
+
 	<!--Page Header-->
 	<div class="pageHeaderWrap">
 		<div class="pageHeaderTxt">Data Provicy Policy</div>
@@ -57,8 +62,16 @@
 	</div>
 	<!--Page Content-->
 
+
+	<!--Loading-->
+	<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 1;">
+		<img src="./src/Spinner.gif">
+	</div>
+	<!--Loading-->
+
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js"></script>	
 	<script type="text/javascript" src="JsCollection_Index.js"></script>	
+	<script type="text/javascript" src="Request_GenerateRateToken.js"></script>
 	<script type="text/javascript" src="Validation_PrivacyPolicy.js"></script>
 	<script type="text/javascript" src="Portal_RateService.js"></script>
 </body>

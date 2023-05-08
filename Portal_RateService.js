@@ -1,9 +1,9 @@
 /*Redirect to rate service*/
 const redirectToRateServ = () =>{
 	if(proceedToRateServ === true){
-		alert('redirect to rate service step 1');
+		requestRateToken();
 	}else if(proceedToRateServ === false){
-		alert('Agree first');
+		alert('Please READ and AGREE to Data Privacy first.');
 	}
 }
 /*Redirect to rate service*/
