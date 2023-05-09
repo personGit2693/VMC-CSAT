@@ -5,6 +5,11 @@
 /*Page Header*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
+/*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -6509,7 +6514,7 @@
     white-space: normal;
     word-break: keep-all;
     text-align: center;
-    font: normal bold 25px calibri;
+    font: normal bold 18px calibri;
     /*changed*/
     color: #ffffff; }
 
@@ -6520,7 +6525,7 @@
     white-space: normal;
     word-break: keep-all;
     text-align: center;
-    font: normal normal 22px calibri;
+    font: normal normal 15px calibri;
     /*changed*/
     color: #ffffff; } }
 /*Laptop*/
@@ -6542,7 +6547,7 @@
     white-space: normal;
     word-break: keep-all;
     text-align: center;
-    font: normal bold 35px calibri;
+    font: normal bold 21px calibri;
     /*changed*/
     color: #ffffff; }
 
@@ -6553,12 +6558,362 @@
     white-space: normal;
     word-break: keep-all;
     text-align: center;
-    font: normal normal 32px calibri;
+    font: normal normal 18px calibri;
     /*changed*/
     color: #ffffff; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .stepByStepFlex-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: auto;
+    /*To be removed*/
+    margin: 15px auto 0px auto; }
+
+  .stepByStepLine-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid gray;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepLineLight-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid green;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepItem-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: column wrap;
+    align-items: center;
+    width: auto;
+    /*To be changed*/ }
+
+  .stepNumber-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: gray;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    /*To be changed*/
+    color: #ffffff;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50%;
+    width: 28px;
+    /*To be changed*/ }
+
+  .stepNumberLight-Class {
+    background-color: green; }
+
+  .stepDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    /*To be changed*/
+    text-align: center;
+    color: gray;
+    padding: 0px 7px; }
+
+  .stepDefiLight-Class {
+    color: green; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .stepByStepFlex-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row nowrap;
+    justify-content: center;
+    /*width: auto; removed*/
+    min-width: 300px;
+    /*added*/
+    max-width: 580px;
+    /*added*/
+    margin: 15px auto 0px auto; }
+
+  .stepByStepLine-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid gray;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepLineLight-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid green;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepItem-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: column wrap;
+    align-items: center;
+    width: auto;
+    /*To be changed*/ }
+
+  .stepNumber-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: gray;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    /*To be changed*/
+    color: #ffffff;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50%;
+    width: 28px;
+    /*To be changed*/ }
+
+  .stepNumberLight-Class {
+    background-color: green; }
+
+  .stepDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    /*To be changed*/
+    text-align: center;
+    color: gray;
+    padding: 0px 7px; }
+
+  .stepDefiLight-Class {
+    color: green; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .stepByStepFlex-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row nowrap;
+    justify-content: center;
+    /*width: auto; removed*/
+    min-width: 300px;
+    /*added*/
+    max-width: 580px;
+    /*added*/
+    margin: 15px auto 0px auto; }
+
+  .stepByStepLine-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid gray;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepLineLight-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid green;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepItem-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: column wrap;
+    align-items: center;
+    width: auto;
+    /*To be changed*/ }
+
+  .stepNumber-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: gray;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    /*changed*/
+    color: #ffffff;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50%;
+    width: 32px;
+    /*changed*/ }
+
+  .stepNumberLight-Class {
+    background-color: green; }
+
+  .stepDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    /*changed*/
+    text-align: center;
+    color: gray;
+    padding: 0px 7px; }
+
+  .stepDefiLight-Class {
+    color: green; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .stepByStepFlex-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row nowrap;
+    justify-content: center;
+    /*width: auto; removed*/
+    min-width: 300px;
+    /*added*/
+    max-width: 580px;
+    /*added*/
+    margin: 15px auto 0px auto; }
+
+  .stepByStepLineLight-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid green;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepLineLight-Class {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100%;
+    border: 0.4px solid green;
+    top: 12px;
+    left: 0px;
+    align-self: flex-start; }
+
+  .stepByStepItem-Class {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: column wrap;
+    align-items: center;
+    width: auto;
+    /*To be changed*/ }
+
+  .stepNumber-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: gray;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    /*changed*/
+    color: #ffffff;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50%;
+    width: 36px;
+    /*changed*/ }
+
+  .stepNumberLight-Class {
+    background-color: green; }
+
+  .stepDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    /*changed*/
+    text-align: center;
+    color: gray;
+    padding: 0px 7px; }
+
+  .stepDefiLight-Class {
+    color: green; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Page_RateService.css.map */

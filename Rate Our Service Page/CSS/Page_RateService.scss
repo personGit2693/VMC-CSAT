@@ -102,3 +102,168 @@
 
 /*Page Header*/
 /***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){	
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_Mobile_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_MT_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_MT_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}	
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_TLD_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_MT_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_MT_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_TLD_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_Laptop_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_Laptop_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_TLD_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_Desktop_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_Desktop_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/

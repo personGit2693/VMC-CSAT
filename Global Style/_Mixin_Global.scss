@@ -28,7 +28,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	text-align: center;
-	font: normal bold 25px calibri; /*changed*/
+	font: normal bold 18px calibri; /*changed*/
 	color: #ffffff;
 }
 
@@ -39,7 +39,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	text-align: center;
-	font: normal bold 35px calibri; /*changed*/
+	font: normal bold 21px calibri; /*changed*/
 	color: #ffffff;
 }
 
@@ -63,7 +63,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	text-align: center;
-	font: normal normal 22px calibri; /*changed*/
+	font: normal normal 15px calibri; /*changed*/
 	color: #ffffff;
 }
 
@@ -74,8 +74,186 @@
 	white-space: normal;
 	word-break: keep-all;
 	text-align: center;
-	font: normal normal 32px calibri; /*changed*/
+	font: normal normal 18px calibri; /*changed*/
 	color: #ffffff;
 }
 /*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
+@mixin globalStepByStepFlex_Mobile_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: auto; /*To be removed*/
+	margin: 15px auto 0px auto;
+}
+
+@mixin globalStepByStepFlex_TLD_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	justify-content: center;
+	/*width: auto; removed*/
+	min-width: 300px; /*added*/
+	max-width: 580px; /*added*/
+	margin: 15px auto 0px auto;
+}
+
+
+
+@mixin globalStepByStepLine_Style{
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 100%;
+	border: 0.4px solid gray;
+	top: 12px;
+	left: 0px;
+	align-self: flex-start;
+}
+
+
+
+@mixin globalStepByStepLineLight_Style{
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 100%;
+	border: 0.4px solid green;
+	top: 12px;
+	left: 0px;
+	align-self: flex-start;
+}
+
+
+
+@mixin globalStepByStepItem_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: column wrap;
+	align-items: center;
+	width: auto; /*To be changed*/
+}
+
+
+
+@mixin globalStepNumber_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;	
+	background-color: gray;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px; /*To be changed*/
+	color: #ffffff;
+	padding: 4px;
+	text-align: center;
+	border-radius: 50%;
+	width: 28px; /*To be changed*/
+}
+
+@mixin globalStepNumber_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;	
+	background-color: gray;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px; /*changed*/
+	color: #ffffff;
+	padding: 4px;
+	text-align: center;
+	border-radius: 50%;
+	width: 32px; /*changed*/
+}
+
+@mixin globalStepNumber_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;	
+	background-color: gray;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px; /*changed*/
+	color: #ffffff;
+	padding: 4px;
+	text-align: center;
+	border-radius: 50%;
+	width: 36px; /*changed*/
+}
+
+
+
+@mixin globalStepNumberLight_Style{
+	background-color: green;
+}
+
+
+
+@mixin globalStepDefi_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px; /*To be changed*/
+	text-align: center;
+	color: gray;
+	padding: 0px 7px;
+}
+
+@mixin globalStepDefi_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px; /*changed*/
+	text-align: center;
+	color: gray;
+	padding: 0px 7px;
+}
+
+@mixin globalStepDefi_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px; /*changed*/
+	text-align: center;
+	color: gray;
+	padding: 0px 7px;
+}
+
+
+
+@mixin globalStepDefiLight_Style{
+	color: green;
+}
+/*Step by step future framework*/
 /***********************************************************************************************************************************************************************************************************/
