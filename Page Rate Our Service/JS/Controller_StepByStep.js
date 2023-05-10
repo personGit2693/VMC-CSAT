@@ -17,8 +17,8 @@ const nextStep = () =>{
 
 /*Function to back step*/
 const backStep = () =>{
-	if(stepNumIndex >= 0){
-		if(stepNumIndex != 0){
+	if(stepNumIndex >= 1){
+		if(stepNumIndex > 1){
 			stepNumIndex--;
 		}
 
@@ -26,10 +26,7 @@ const backStep = () =>{
 		let numbering = stepByStepItem[stepNumIndex].children[1];
 		let definition = stepByStepItem[stepNumIndex].children[2];
 
-		if(stepNumIndex > 0){
-			lining.classList.remove("stepByStepLineLight-Class");						
-		}
-
+		lining.classList.remove("stepByStepLineLight-Class");
 		numbering.classList.remove("stepNumberLight-Class");
 		definition.classList.remove("stepDefiLight-Class");		
 	}

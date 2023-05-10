@@ -4,7 +4,7 @@ const stepByStepItem = document.getElementsByClassName("stepByStepItem-Class");
 
 
 /*Prep vars*/
-var stepNumIndex = 0;
+var stepNumIndex = 1;
 /*Prep vars*/
 
 

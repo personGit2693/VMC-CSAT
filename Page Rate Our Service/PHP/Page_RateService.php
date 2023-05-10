@@ -24,9 +24,9 @@
 	<!--Step by step-->
 	<div class="stepByStepFlex-Class">
 		<div class="stepByStepItem-Class">
-			<div class="stepByStepLineLight-Class"></div>
-			<div class="stepNumber-Class">1</div>
-			<div class="stepDefi-Class">Fill Information</div>
+			<div class="stepByStepLine-Class stepByStepLineLight-Class"></div>
+			<div class="stepNumber-Class stepNumberLight-Class">1</div>
+			<div class="stepDefi-Class stepDefiLight-Class">Fill Information</div>
 		</div>
 		<div class="stepByStepItem-Class">
 			<div class="stepByStepLine-Class"></div>
