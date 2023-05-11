@@ -3842,7 +3842,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -3861,7 +3862,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -3937,7 +3939,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -3954,7 +3956,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -3969,7 +3971,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -4016,7 +4019,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -4035,7 +4039,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -4111,7 +4116,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -4128,7 +4133,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -4143,7 +4148,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -4190,7 +4196,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -4209,7 +4216,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -4285,7 +4293,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -4302,7 +4310,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -4317,7 +4325,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -4364,7 +4373,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -4383,7 +4393,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -4459,7 +4470,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -4476,7 +4487,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -4491,7 +4502,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;

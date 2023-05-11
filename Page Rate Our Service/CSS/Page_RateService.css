@@ -3842,7 +3842,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -3861,7 +3862,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -3937,7 +3939,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -3954,7 +3956,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -3969,7 +3971,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -4016,7 +4019,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -4035,7 +4039,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -4111,7 +4116,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -4128,7 +4133,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -4143,7 +4148,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -4190,7 +4196,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -4209,7 +4216,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -4285,7 +4293,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -4302,7 +4310,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -4317,7 +4325,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -4364,7 +4373,8 @@
     border-color: var(--cusDropBorderColor);
     flex-flow: column nowrap;
     border-radius: 7px;
-    background-color: var(--cusDropBgColor); }
+    background-color: var(--cusDropBgColor);
+    z-index: var(--cusDropZIndex); }
 
   /*_Dropdown Visible True*/
   /*_Dropdown Option Wrapper or Container*/
@@ -4383,7 +4393,8 @@
     opacity: 0;
     background-color: var(--cusDropOptWrapBgColor);
     order: 2;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
     visibility: visible;
@@ -4459,7 +4470,7 @@
     cursor: pointer;
     order: 0; }
 
-  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span {
+  .scdropdownSelBox_RoClass > .scdropSelected_RoClass > span[style] {
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -4476,7 +4487,7 @@
     background-position: center center;
     transition: all 0.4s; }
 
-  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span {
+  .scdropOptionConActive_RoClass + .scdropSelected_RoClass > span[style] {
     transform: rotateX(180deg); }
 
   /*_Dropdown Selected*/
@@ -4491,7 +4502,8 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: var(--cusDropZIndex); }
 
   .scdropdownSelBox_RoClass > .scdropSearchboxWrap_RoClass > input {
     display: block;
@@ -6421,11 +6433,80 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
+/*Step sets*/
+/*Step title*/
+/*Step title*/
+/*Step per field group*/
+/*Step per field group*/
+/*Step per field*/
+/*Step per field*/
+/*Comments and suggestion textarea*/
+/*Comments and suggestion textarea*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Radio Input Framework*/
+/*Radio Input Framework*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Dropdown Menu Framework*/
+/*Dropdown Menu Framework*/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+:root {
+  /*Radio Input Framework*/
+  --cusRadioBorderWidth: 1px;
+  --cusRadioBorderColor: gray;
+  --cusRadioBgColor: transparent;
+  --cusRadioFWeight: normal;
+  --cusRadioFColor: gray;
+  /*Radio Input Framework*/
+  /*Dropdown Menu Framework*/
+  --cusDropBorderWidth: 1px;
+  --cusDropBorderColor: gray;
+  --cusDropBgColor: transparent;
+  --cusDropSelFColor: gray;
+  --cusDropSearchBorderWidth: 1px;
+  --cusDropSearchBorderColor: gray;
+  --cusDropSearchFColor: gray;
+  --cusDropSearchBgColor: #ffffff;
+  --cusDropOptWrapBorderWidth: 1px;
+  --cusDropOptWrapBorderColor: green;
+  --cusDropOptWrapBgColor: #ffffff;
+  --cusDropOptWrapHeight: 180px;
+  --cusDropOptWrapScrollColor: green;
+  --cusDropOptWrapScrollHovColor: green;
+  --cusDropOptLabColor: gray;
+  --cusDropOptHovLabBgColor: #DEE1E6;
+  /*Dropdown Menu Framework*/
+  /*Button Framework*/
+  --normBtnMWidth: auto;
+  --normBtnTWidth: auto;
+  --normBtnLWidth: auto;
+  --normBtnDWidth: auto;
+  --normBtnPadding: 8px;
+  --normBtnBorderWidth: 1px;
+  --normBtnBorderColor: #1B85BD;
+  --normBtnRadius: 4px;
+  --normBtnFWeight: normal;
+  --normBtnFMTSize: 12px;
+  --normBtnFLDSize: 15px;
+  --normBtnBgColor: #1B85BD;
+  --normBtnFcolor: #ffffff;
+  --normBtnHovActFColor: #ffffff;
+  --normBtnHovActBgColor: #208996;
+  /*Button Framework*/ }
+
+body {
+  background-color: #E9E9E9; }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6882,6 +6963,571 @@
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Step set itself*/
+  .stepSets-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    /*To be changed*/
+    margin: 35px 0px 0px 0px;
+    /*To be changed*/
+    padding: 5px;
+    background-color: #ffffff; }
+
+  /*Step set itself*/
+  /*Step title*/
+  .stepSets-Class > .stepSetTitleWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-bottom: 17px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: black;
+    font-family: calibri;
+    font-size: 15px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 7px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: gray;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  /*Step title*/
+  /*Step per field group*/
+  .stepSets-Class > .stepSetPerFieldGroup-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font-family: calibri;
+    font-size: 13px;
+    /*To be changed*/
+    font-style: italic;
+    font-weight: bold;
+    color: black; }
+
+  /*Step per field group*/
+  /*Step per field*/
+  .stepSets-Class > .stepSetPerFieldWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 14px 0px; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    margin-bottom: 3px;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: black; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: column nowrap;
+    /*To be changed*/
+    justify-content: flex-start; }
+
+  /*Step per field*/
+  /*Comments and suggestion textarea*/
+  .suggestionTextArea-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: normal;
+    width: auto;
+    /*To be changed*/
+    height: 70px; }
+
+  /*Comments and suggestion textarea*/
+  /*Radio Input Framework*/
+  .radioCheckFlex_RoClass {
+    margin: 0px 0px 0px 5px;
+    /*To be changed*/ }
+
+  .customRadioCheck_RoClass {
+    --cusRadioWidth: 12px;
+    /*To be changed*/
+    --cusRadioHeight: 12px;
+    /*To be changed*/ }
+
+  .radioCheckTxtLabel_RoClass {
+    --cusRadioFsize: 12px;
+    /*To be changed*/ }
+
+  /*Radio Input Framework*/
+  /*Dropdown Menu Framework*/
+  #dropdownReligion-Id {
+    --cusDropZIndex: 1;
+    width: auto;
+    /*To be changed*/ }
+
+  /*Dropdown Menu Framework*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Step set itself*/
+  .stepSets-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    /*To be changed*/
+    margin: 35px 0px 0px 0px;
+    /*To be changed*/
+    padding: 5px;
+    background-color: #ffffff; }
+
+  /*Step set itself*/
+  /*Step title*/
+  .stepSets-Class > .stepSetTitleWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-bottom: 17px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: black;
+    font-family: calibri;
+    font-size: 15px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 7px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: gray;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  /*Step title*/
+  /*Step per field group*/
+  .stepSets-Class > .stepSetPerFieldGroup-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font-family: calibri;
+    font-size: 13px;
+    /*To be changed*/
+    font-style: italic;
+    font-weight: bold;
+    color: black; }
+
+  /*Step per field group*/
+  /*Step per field*/
+  .stepSets-Class > .stepSetPerFieldWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 14px 0px; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    margin-bottom: 3px;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: black; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: flex-start;
+    align-content: flex-start;
+    /*Added*/ }
+
+  /*Step per field*/
+  /*Comments and suggestion textarea*/
+  .suggestionTextArea-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: normal;
+    width: auto;
+    /*To be changed*/
+    height: 70px; }
+
+  /*Comments and suggestion textarea*/
+  /*Radio Input Framework*/
+  .radioCheckFlex_RoClass {
+    margin: 0px 20px 0px 5px;
+    /*changed*/ }
+
+  .customRadioCheck_RoClass {
+    --cusRadioWidth: 12px;
+    /*To be changed*/
+    --cusRadioHeight: 12px;
+    /*To be changed*/ }
+
+  .radioCheckTxtLabel_RoClass {
+    --cusRadioFsize: 12px;
+    /*To be changed*/ }
+
+  /*Radio Input Framework*/
+  /*Dropdown Menu Framework*/
+  #dropdownReligion-Id {
+    --cusDropZIndex: 1;
+    width: 190px;
+    /*changed*/ }
+
+  /*Dropdown Menu Framework*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Step set itself*/
+  .stepSets-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 1080px;
+    /*changed*/
+    margin: 35px auto 0px auto;
+    /*changed*/
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    /*Added*/
+    box-shadow: 0px 0px 5px gray; }
+
+  /*Step set itself*/
+  /*Step title*/
+  .stepSets-Class > .stepSetTitleWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-bottom: 17px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: black;
+    font-family: calibri;
+    font-size: 17px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 7px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: gray;
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  /*Step title*/
+  /*Step per field group*/
+  .stepSets-Class > .stepSetPerFieldGroup-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font-family: calibri;
+    font-size: 15px;
+    /*changed*/
+    font-style: italic;
+    font-weight: bold;
+    color: black; }
+
+  /*Step per field group*/
+  /*Step per field*/
+  .stepSets-Class > .stepSetPerFieldWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 14px 0px; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    margin-bottom: 3px;
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: black; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: flex-start;
+    align-content: flex-start;
+    /*Added*/ }
+
+  /*Step per field*/
+  /*Comments and suggestion textarea*/
+  .suggestionTextArea-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+    /*changed*/
+    height: 70px; }
+
+  /*Comments and suggestion textarea*/
+  /*Radio Input Framework*/
+  .radioCheckFlex_RoClass {
+    margin: 0px 20px 0px 5px;
+    /*changed*/ }
+
+  .customRadioCheck_RoClass {
+    --cusRadioWidth: 14px;
+    /*changed*/
+    --cusRadioHeight: 14px;
+    /*changed*/ }
+
+  .radioCheckTxtLabel_RoClass {
+    --cusRadioFsize: 14px;
+    /*changed*/ }
+
+  /*Radio Input Framework*/
+  /*Dropdown Menu Framework*/
+  #dropdownReligion-Id {
+    --cusDropZIndex: 1;
+    width: 190px;
+    /*changed*/ }
+
+  /*Dropdown Menu Framework*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Step set itself*/
+  .stepSets-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: 1080px;
+    /*changed*/
+    margin: 35px auto 0px auto;
+    /*changed*/
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    /*Added*/
+    box-shadow: 0px 0px 5px gray; }
+
+  /*Step set itself*/
+  /*Step title*/
+  .stepSets-Class > .stepSetTitleWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-bottom: 17px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: black;
+    font-family: calibri;
+    font-size: 19px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 7px; }
+
+  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    color: gray;
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  /*Step title*/
+  /*Step per field group*/
+  .stepSets-Class > .stepSetPerFieldGroup-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font-family: calibri;
+    font-size: 17px;
+    /*changed*/
+    font-style: italic;
+    font-weight: bold;
+    color: black; }
+
+  /*Step per field group*/
+  /*Step per field*/
+  .stepSets-Class > .stepSetPerFieldWrap {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 14px 0px; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    margin-bottom: 3px;
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: black; }
+
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: flex-start;
+    align-content: flex-start;
+    /*Added*/ }
+
+  /*Step per field*/
+  /*Comments and suggestion textarea*/
+  .suggestionTextArea-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+    /*changed*/
+    height: 70px; }
+
+  /*Comments and suggestion textarea*/
+  /*Radio Input Framework*/
+  .radioCheckFlex_RoClass {
+    margin: 0px 20px 0px 5px;
+    /*changed*/ }
+
+  .customRadioCheck_RoClass {
+    --cusRadioWidth: 16px;
+    /*changed*/
+    --cusRadioHeight: 16px;
+    /*changed*/ }
+
+  .radioCheckTxtLabel_RoClass {
+    --cusRadioFsize: 16px;
+    /*changed*/ }
+
+  /*Radio Input Framework*/
+  /*Dropdown Menu Framework*/
+  #dropdownReligion-Id {
+    --cusDropZIndex: 1;
+    width: 190px;
+    /*changed*/ }
+
+  /*Dropdown Menu Framework*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Page_RateService.css.map */

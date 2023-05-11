@@ -14,7 +14,7 @@ const requestRateToken = () => {
 				}else if(reqRateToken_Resp.genRateTok_Resp.genRateTok_Count === 0){
 					alert("No token has been generated!");
 				}else if(reqRateToken_Resp.genRateTok_Resp.genRateTok_Exec === true && reqRateToken_Resp.genRateTok_Resp.genRateTok_Count !== 0){
-					window.location.href = reqRateToken_Resp.page_RateService;
+					window.location.href = reqRateToken_Resp.page_RateService+"?rateToken="+reqRateToken_Resp.genRateTok_Resp.genRateTok_Val;
 				}				
 			}catch(requestRateToken_Error){
 				alert(requestRateToken_Error);

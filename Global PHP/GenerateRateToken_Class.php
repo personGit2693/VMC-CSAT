@@ -27,7 +27,7 @@ function generateRateToken(object $vmcCsat_Conn){
 	$genRateToken_Query = "INSERT INTO rateservice_tokens_tab (rateservice_token_value, 
 		rateservice_token_expiration) 
 		VALUES (:generated_Token, 		
-			DATE_ADD(CONVERT(:getDateToday, DATETIME), INTERVAL 1 MINUTE)
+			DATE_ADD(CONVERT(:getDateToday, DATETIME), INTERVAL 1 DAY)
 		);
 	";
 	/*_Prep query*/

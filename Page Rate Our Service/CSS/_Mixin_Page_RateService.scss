@@ -1,0 +1,345 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
+@mixin stepSets_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto; /*To be changed*/
+	margin: 35px 0px 0px 0px; /*To be changed*/
+	padding: 5px;
+	background-color: #ffffff;
+}
+
+@mixin stepSets_LD_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 1080px; /*changed*/
+	margin: 35px auto 0px auto; /*changed*/
+	padding: 5px;
+	background-color: #ffffff;
+	border-radius: 5px; /*Added*/
+	box-shadow: 0px 0px 5px gray;
+}
+/*Step sets*/
+
+
+
+/*Step title*/
+@mixin stepSetTitleWrap_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-bottom: 17px;
+}
+
+
+
+@mixin stepSetTitle_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: black;
+	font-family: calibri;
+	font-size: 15px; /*To be changed*/
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+@mixin stepSetTitle_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: black;
+	font-family: calibri;
+	font-size: 17px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+@mixin stepSetTitle_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: black;
+	font-family: calibri;
+	font-size: 19px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+
+
+@mixin stepSetTitleDefi_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: gray;
+	font-family: calibri;
+	font-size: 12px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+
+@mixin stepSetTitleDefi_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: gray;
+	font-family: calibri;
+	font-size: 14px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+
+@mixin stepSetTitleDefi_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: gray;
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+/*Step title*/
+
+
+
+/*Step per field group*/
+@mixin stepSetPerFieldGroup_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	font-family: calibri;
+	font-size: 13px; /*To be changed*/
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+@mixin stepSetPerFieldGroup_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	font-family: calibri;
+	font-size: 15px; /*changed*/
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+@mixin stepSetPerFieldGroup_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	font-family: calibri;
+	font-size: 17px; /*changed*/
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+/*Step per field group*/
+
+
+
+/*Step per field*/
+@mixin stepSetPerFieldWrap_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 14px 0px;
+}
+
+
+
+@mixin stepSetPerFieldTitle_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	margin-bottom: 3px;
+	font-family: calibri;
+	font-size: 12px; /*To be changed*/
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+@mixin stepSetPerFieldTitle_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	margin-bottom: 3px;
+	font-family: calibri;
+	font-size: 14px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+@mixin stepSetPerFieldTitle_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	margin-bottom: 3px;
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+
+
+@mixin stepSetPerFieldFlex_Mobile_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: column nowrap; /*To be changed*/
+	justify-content: flex-start;	
+}
+
+@mixin stepSetPerFieldFlex_TLD_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row wrap; /*changed*/
+	justify-content: flex-start;
+	align-content: flex-start; /*Added*/
+}
+/*Step per field*/
+
+
+
+/*Comments and suggestion textarea*/
+@mixin suggestionTextArea_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 12px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: auto; /*To be changed*/
+	height: 70px;
+}
+
+@mixin suggestionTextArea_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 14px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: 100%; /*changed*/
+	height: 70px;
+}
+
+@mixin suggestionTextArea_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: 100%; /*changed*/
+	height: 70px;
+}
+/*Comments and suggestion textarea*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Radio Input Framework*/
+@mixin radioCheckFlex_Mobile_RoClass{
+	margin: 0px 0px 0px 5px; /*To be changed*/
+}
+
+@mixin radioCheckFlex_TLD_RoClass{
+	margin: 0px 20px 0px 5px; /*changed*/
+}
+
+
+
+@mixin customRadioCheck_MT_Style{
+	--cusRadioWidth: 12px; /*To be changed*/
+	--cusRadioHeight: 12px; /*To be changed*/
+}
+
+@mixin customRadioCheck_Laptop_Style{
+	--cusRadioWidth: 14px; /*changed*/
+	--cusRadioHeight: 14px; /*changed*/
+}
+
+@mixin customRadioCheck_Desktop_Style{
+	--cusRadioWidth: 16px; /*changed*/
+	--cusRadioHeight: 16px; /*changed*/
+}
+
+
+
+@mixin radioCheckTxtLabel_MT_Style{
+	--cusRadioFsize: 12px; /*To be changed*/
+}
+
+@mixin radioCheckTxtLabel_Laptop_Style{
+	--cusRadioFsize: 14px; /*changed*/
+}
+
+@mixin radioCheckTxtLabel_Desktop_Style{
+	--cusRadioFsize: 16px; /*changed*/
+}
+/*Radio Input Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Dropdown Menu Framework*/
+@mixin dropdownReligion_Mobile_Style{
+	--cusDropZIndex: 1;
+	width: auto; /*To be changed*/
+}
+
+@mixin dropdownReligion_TLD_Style{
+	--cusDropZIndex: 1;
+	width: 190px; /*changed*/
+}
+/*Dropdown Menu Framework*/
+/***********************************************************************************************************************************************************************************************************/

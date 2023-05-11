@@ -13,7 +13,56 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
+	/*Radio Input Framework*/
+	--cusRadioBorderWidth: 1px;
+	--cusRadioBorderColor: gray;	
+	--cusRadioBgColor: transparent;
+	--cusRadioFWeight: normal;	
+	--cusRadioFColor: gray;
+	/*Radio Input Framework*/
 
+
+	/*Dropdown Menu Framework*/
+	--cusDropBorderWidth: 1px;
+	--cusDropBorderColor: gray;
+	--cusDropBgColor: transparent;
+	--cusDropSelFColor: gray;
+	--cusDropSearchBorderWidth: 1px;
+	--cusDropSearchBorderColor: gray;
+	--cusDropSearchFColor: gray;
+	--cusDropSearchBgColor: #ffffff;
+	--cusDropOptWrapBorderWidth: 1px;
+	--cusDropOptWrapBorderColor: green;
+	--cusDropOptWrapBgColor: #ffffff;
+	--cusDropOptWrapHeight: 180px;
+	--cusDropOptWrapScrollColor: green;
+	--cusDropOptWrapScrollHovColor: green;
+	--cusDropOptLabColor: gray;
+	--cusDropOptHovLabBgColor: #DEE1E6;
+	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	--normBtnMWidth: auto;
+	--normBtnTWidth: auto;
+	--normBtnLWidth: auto;
+	--normBtnDWidth: auto;
+	--normBtnPadding: 8px;
+	--normBtnBorderWidth: 1px;
+	--normBtnBorderColor: #1B85BD;
+	--normBtnRadius: 4px;
+	--normBtnFWeight: normal;
+	--normBtnFMTSize: 12px;
+	--normBtnFLDSize: 15px;
+	--normBtnBgColor: #1B85BD;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	--normBtnHovActBgColor: #208996;
+	/*Button Framework*/
+}
+
+body{
+	background-color: #E9E9E9;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -266,4 +315,329 @@
 /***********************************************************************************************************************************************************************************************************/
 
 /*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_MT_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_MT_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_MT_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSets-Class>.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_MT_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSets-Class>.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_MT_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_Mobile_Style;
+	}
+	/*Step per field*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_MT_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_Mobile_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_MT_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_MT_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdownReligion_Mobile_Style;
+	}
+	/*Dropdown Menu Framework*/
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_MT_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_MT_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_MT_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSets-Class>.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_MT_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSets-Class>.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_MT_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_TLD_Style;
+	}
+	/*Step per field*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_MT_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_TLD_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_MT_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_MT_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdownReligion_TLD_Style;
+	}
+	/*Dropdown Menu Framework*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_LD_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_Laptop_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_Laptop_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSets-Class>.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_Laptop_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSets-Class>.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_Laptop_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_TLD_Style;
+	}
+	/*Step per field*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_Laptop_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_TLD_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_Laptop_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_Laptop_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdownReligion_TLD_Style;
+	}
+	/*Dropdown Menu Framework*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_LD_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_Desktop_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_Desktop_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSets-Class>.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_Desktop_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSets-Class>.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_Desktop_Style;
+	}
+
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_TLD_Style;
+	}
+	/*Step per field*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_Desktop_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_TLD_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_Desktop_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_Desktop_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdownReligion_TLD_Style;
+	}
+	/*Dropdown Menu Framework*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Step sets*/
 /***********************************************************************************************************************************************************************************************************/
