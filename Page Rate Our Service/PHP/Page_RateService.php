@@ -59,9 +59,9 @@ if(isset($_GET["rateToken"])){
 			<!--Step by step-->
 			<div class="stepByStepFlex-Class">
 				<div class="stepByStepItem-Class">
-					<div class="stepByStepLine-Class stepByStepLineLight-Class"></div>
-					<div class="stepNumber-Class stepNumberLight-Class">1</div>
-					<div class="stepDefi-Class stepDefiLight-Class">Fill Information</div>
+					<div class="stepByStepLine-Class"></div>
+					<div class="stepNumber-Class">1</div>
+					<div class="stepDefi-Class">Fill Information</div>
 				</div>
 				<div class="stepByStepItem-Class">
 					<div class="stepByStepLine-Class"></div>
@@ -92,7 +92,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Respondent Type</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex respondentField-Class">
 						<div class="radioCheckFlex_RoClass">
 							<label for="respondentPatient-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="respondentPatient-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -364,7 +364,9 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<button class="normButton_RoClass" style="margin: auto;">Proceed</button>
+					<div class="stepSetBtnsFlex">
+						<button class="normButton_RoClass proceedBtn-Class" onclick="nextStep()">Proceed</button>
+					</div>
 				</div>
 			</div>
 			<!--_Step one-->
@@ -458,7 +460,10 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<button class="normButton_RoClass" style="margin: auto;">Proceed</button>
+					<div class="stepSetBtnsFlex">
+						<button class="normButton_RoClass backBtn-Class" onclick="backStep()">Back</button>
+						<button class="normButton_RoClass proceedBtn-Class" onclick="nextStep()">Proceed</button>						
+					</div>
 				</div>
 			</div>
 			<!--_Step two-->
@@ -772,7 +777,7 @@ if(isset($_GET["rateToken"])){
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
-							<label for="question9core3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
+							<label for="question9score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question9score3-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
 							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
 						</div>
@@ -861,7 +866,6 @@ if(isset($_GET["rateToken"])){
 					</div>
 				</div>
 
-
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">I am satisfied with the service that I availed. </div>
 					<div class="stepSetPerFieldFlex">
@@ -898,7 +902,10 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<button class="normButton_RoClass" style="margin: auto;">Proceed</button>
+					<div class="stepSetBtnsFlex">
+						<button class="normButton_RoClass backBtn-Class" onclick="backStep()">Back</button>
+						<button class="normButton_RoClass proceedBtn-Class" onclick="nextStep()">Proceed</button>						
+					</div>
 				</div>
 			</div>
 			<!--_Step Three-->
@@ -925,15 +932,20 @@ if(isset($_GET["rateToken"])){
 				</div>				
 
 				<div class="stepSetPerFieldWrap">
-					<button class="normButton_RoClass" style="margin: auto;">Proceed</button>
+					<div class="stepSetBtnsFlex">
+						<button class="normButton_RoClass backBtn-Class" onclick="backStep()">Back</button>
+						<button class="normButton_RoClass proceedBtn-Class" onclick="">Submit Rating</button>						
+					</div>
 				</div>
 			</div>
 			<!--_Step four-->			
 			<!--Step sets-->
 
 
+			<!--
 			<button onclick="nextStep()">+</button>
 			<button onclick="backStep()">-</button>
+			-->
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 			<script type="text/javascript" src="../JS/JsCollection_Page_RateService.js"></script>

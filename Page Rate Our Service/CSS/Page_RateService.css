@@ -6442,6 +6442,8 @@
 /*Step per field group*/
 /*Step per field*/
 /*Step per field*/
+/*Step per field buttons wrapper*/
+/*Step per field buttons wrapper*/
 /*Comments and suggestion textarea*/
 /*Comments and suggestion textarea*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6449,6 +6451,11 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Radio Input Framework*/
 /*Radio Input Framework*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Dropdown Menu Framework*/
+/*Dropdown Menu Framework*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6493,15 +6500,12 @@
   --normBtnDWidth: auto;
   --normBtnPadding: 8px;
   --normBtnBorderWidth: 1px;
-  --normBtnBorderColor: #1B85BD;
   --normBtnRadius: 4px;
   --normBtnFWeight: normal;
   --normBtnFMTSize: 12px;
   --normBtnFLDSize: 15px;
-  --normBtnBgColor: #1B85BD;
   --normBtnFcolor: #ffffff;
   --normBtnHovActFColor: #ffffff;
-  --normBtnHovActBgColor: #208996;
   /*Button Framework*/ }
 
 body {
@@ -6973,6 +6977,7 @@ body {
   /*Step set itself*/
   .stepSets-Class {
     position: relative;
+    display: none;
     box-sizing: border-box;
     overflow: visible;
     width: auto;
@@ -7064,6 +7069,16 @@ body {
     justify-content: flex-start; }
 
   /*Step per field*/
+  /*Step per field buttons wrapper*/
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    justify-content: center; }
+
+  /*Step per field buttons wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
@@ -7101,7 +7116,21 @@ body {
     width: auto;
     /*To be changed*/ }
 
-  /*Dropdown Menu Framework*/ }
+  /*Dropdown Menu Framework*/
+  /*Button Framework*/
+  .proceedBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #1B85BD;
+    --normBtnBgColor: #1B85BD;
+    --normBtnHovActBgColor: #2760A7; }
+
+  .backBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #FC5050;
+    --normBtnBgColor: #FC5050;
+    --normBtnHovActBgColor: #E22D41; }
+
+  /*Button Framework*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -7110,6 +7139,7 @@ body {
   /*Step set itself*/
   .stepSets-Class {
     position: relative;
+    display: none;
     box-sizing: border-box;
     overflow: visible;
     width: auto;
@@ -7203,18 +7233,28 @@ body {
     /*Added*/ }
 
   /*Step per field*/
+  /*Step per field buttons wrapper*/
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    justify-content: center; }
+
+  /*Step per field buttons wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
     display: block;
     box-sizing: border-box;
     font-family: calibri;
-    font-size: 12px;
-    /*To be changed*/
+    font-size: 14px;
+    /*changed*/
     font-style: normal;
     font-weight: normal;
-    width: auto;
-    /*To be changed*/
+    width: 100%;
+    /*changed*/
     height: 70px; }
 
   /*Comments and suggestion textarea*/
@@ -7240,7 +7280,21 @@ body {
     width: 190px;
     /*changed*/ }
 
-  /*Dropdown Menu Framework*/ }
+  /*Dropdown Menu Framework*/
+  /*Button Framework*/
+  .proceedBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #1B85BD;
+    --normBtnBgColor: #1B85BD;
+    --normBtnHovActBgColor: #2760A7; }
+
+  .backBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #FC5050;
+    --normBtnBgColor: #FC5050;
+    --normBtnHovActBgColor: #E22D41; }
+
+  /*Button Framework*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -7249,6 +7303,7 @@ body {
   /*Step set itself*/
   .stepSets-Class {
     position: relative;
+    display: none;
     box-sizing: border-box;
     overflow: visible;
     width: 1080px;
@@ -7345,6 +7400,16 @@ body {
     /*Added*/ }
 
   /*Step per field*/
+  /*Step per field buttons wrapper*/
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    justify-content: center; }
+
+  /*Step per field buttons wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
@@ -7382,7 +7447,21 @@ body {
     width: 190px;
     /*changed*/ }
 
-  /*Dropdown Menu Framework*/ }
+  /*Dropdown Menu Framework*/
+  /*Button Framework*/
+  .proceedBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #1B85BD;
+    --normBtnBgColor: #1B85BD;
+    --normBtnHovActBgColor: #2760A7; }
+
+  .backBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #FC5050;
+    --normBtnBgColor: #FC5050;
+    --normBtnHovActBgColor: #E22D41; }
+
+  /*Button Framework*/ }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -7391,6 +7470,7 @@ body {
   /*Step set itself*/
   .stepSets-Class {
     position: relative;
+    display: none;
     box-sizing: border-box;
     overflow: visible;
     width: 1080px;
@@ -7487,6 +7567,16 @@ body {
     /*Added*/ }
 
   /*Step per field*/
+  /*Step per field buttons wrapper*/
+  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-flow: row wrap;
+    justify-content: center; }
+
+  /*Step per field buttons wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
@@ -7524,7 +7614,21 @@ body {
     width: 190px;
     /*changed*/ }
 
-  /*Dropdown Menu Framework*/ }
+  /*Dropdown Menu Framework*/
+  /*Button Framework*/
+  .proceedBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #1B85BD;
+    --normBtnBgColor: #1B85BD;
+    --normBtnHovActBgColor: #2760A7; }
+
+  .backBtn-Class {
+    margin: 5px;
+    --normBtnBorderColor: #FC5050;
+    --normBtnBgColor: #FC5050;
+    --normBtnHovActBgColor: #E22D41; }
+
+  /*Button Framework*/ }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Step sets*/

@@ -48,16 +48,13 @@
 	--normBtnLWidth: auto;
 	--normBtnDWidth: auto;
 	--normBtnPadding: 8px;
-	--normBtnBorderWidth: 1px;
-	--normBtnBorderColor: #1B85BD;
+	--normBtnBorderWidth: 1px;	
 	--normBtnRadius: 4px;
 	--normBtnFWeight: normal;
 	--normBtnFMTSize: 12px;
-	--normBtnFLDSize: 15px;
-	--normBtnBgColor: #1B85BD;
+	--normBtnFLDSize: 15px;	
 	--normBtnFcolor: #ffffff;
-	--normBtnHovActFColor: #ffffff;
-	--normBtnHovActBgColor: #208996;
+	--normBtnHovActFColor: #ffffff;	
 	/*Button Framework*/
 }
 
@@ -371,9 +368,16 @@ body{
 	/*Step per field*/
 
 
+	/*Step per field buttons wrapper*/
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
 	/*Comments and suggestion textarea*/
 	.suggestionTextArea-Class{
-		@include suggestionTextArea_MT_Style;
+		@include suggestionTextArea_Mobile_Style;
 	}
 	/*Comments and suggestion textarea*/
 
@@ -398,6 +402,17 @@ body{
 		@include dropdownReligion_Mobile_Style;
 	}
 	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -450,9 +465,16 @@ body{
 	/*Step per field*/
 
 
+	/*Step per field buttons wrapper*/
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
 	/*Comments and suggestion textarea*/
 	.suggestionTextArea-Class{
-		@include suggestionTextArea_MT_Style;
+		@include suggestionTextArea_Laptop_Style;
 	}
 	/*Comments and suggestion textarea*/
 
@@ -477,6 +499,17 @@ body{
 		@include dropdownReligion_TLD_Style;
 	}
 	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -529,6 +562,13 @@ body{
 	/*Step per field*/
 
 
+	/*Step per field buttons wrapper*/
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
 	/*Comments and suggestion textarea*/
 	.suggestionTextArea-Class{
 		@include suggestionTextArea_Laptop_Style;
@@ -556,6 +596,17 @@ body{
 		@include dropdownReligion_TLD_Style;
 	}
 	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -608,6 +659,13 @@ body{
 	/*Step per field*/
 
 
+	/*Step per field buttons wrapper*/
+	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
 	/*Comments and suggestion textarea*/
 	.suggestionTextArea-Class{
 		@include suggestionTextArea_Desktop_Style;
@@ -635,6 +693,17 @@ body{
 		@include dropdownReligion_TLD_Style;
 	}
 	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
 }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/

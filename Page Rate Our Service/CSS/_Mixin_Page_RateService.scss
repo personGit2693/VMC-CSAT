@@ -2,6 +2,7 @@
 /*Step sets*/
 @mixin stepSets_MT_Style{
 	position: relative;
+	display: none;
 	box-sizing: border-box;
 	overflow: visible;
 	width: auto; /*To be changed*/
@@ -12,6 +13,7 @@
 
 @mixin stepSets_LD_Style{
 	position: relative;
+	display: none;
 	box-sizing: border-box;
 	overflow: visible;
 	width: 1080px; /*changed*/
@@ -240,8 +242,21 @@
 
 
 
+/*Step per field buttons wrapper*/
+@mixin stepSetBtnsFlex_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+/*Step per field buttons wrapper*/
+
+
+
 /*Comments and suggestion textarea*/
-@mixin suggestionTextArea_MT_Style{
+@mixin suggestionTextArea_Mobile_Style{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
@@ -250,6 +265,18 @@
 	font-style: normal;
 	font-weight: normal;
 	width: auto; /*To be changed*/
+	height: 70px;
+}
+
+@mixin suggestionTextArea_Tablet_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 12px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: 100%; /*changed*/
 	height: 70px;
 }
 
@@ -340,6 +367,30 @@
 @mixin dropdownReligion_TLD_Style{
 	--cusDropZIndex: 1;
 	width: 190px; /*changed*/
+}
+/*Dropdown Menu Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Dropdown Menu Framework*/
+@mixin proceedBtn_Style{
+	margin: 5px;
+	--normBtnBorderColor: #1B85BD;
+	--normBtnBgColor: #1B85BD;		
+	--normBtnHovActBgColor: #2760A7;
+}
+
+
+
+@mixin backBtn_Style{
+	margin: 5px;
+	--normBtnBorderColor: #FC5050;
+	--normBtnBgColor: #FC5050;
+	--normBtnHovActBgColor: #E22D41;
 }
 /*Dropdown Menu Framework*/
 /***********************************************************************************************************************************************************************************************************/
