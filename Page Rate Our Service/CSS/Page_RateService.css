@@ -7043,7 +7043,7 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    margin: 14px 0px; }
+    margin: 30px 0px; }
 
   .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
     position: relative;
@@ -7066,7 +7066,8 @@ body {
     overflow: visible;
     flex-flow: column nowrap;
     /*To be changed*/
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    /*To be changed*/ }
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
@@ -7096,17 +7097,23 @@ body {
   /*Comments and suggestion textarea*/
   /*Radio Input Framework*/
   .radioCheckFlex_RoClass {
-    margin: 0px 0px 0px 5px;
+    margin: 5px 0px 0px 5px;
     /*To be changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidth: 12px;
+    --cusRadioWidth: 20px;
     /*To be changed*/
-    --cusRadioHeight: 12px;
+    --cusRadioHeight: 20px;
     /*To be changed*/ }
 
   .radioCheckTxtLabel_RoClass {
     --cusRadioFsize: 12px;
+    /*To be changed*/ }
+
+  .radioCheckIconLabel_RoClass {
+    --radioIconLabelWidth: 95px;
+    /*To be changed*/
+    --radioIconLabelHeight: 95px;
     /*To be changed*/ }
 
   /*Radio Input Framework*/
@@ -7205,9 +7212,11 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    margin: 14px 0px; }
+    margin: 30px 0px; }
 
   .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    text-align: center;
+    /*To be changed*/
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -7228,7 +7237,7 @@ body {
     overflow: visible;
     flex-flow: row wrap;
     /*changed*/
-    justify-content: flex-start;
+    justify-content: center;
     align-content: flex-start;
     /*Added*/ }
 
@@ -7260,17 +7269,23 @@ body {
   /*Comments and suggestion textarea*/
   /*Radio Input Framework*/
   .radioCheckFlex_RoClass {
-    margin: 0px 20px 0px 5px;
+    margin: 5px 20px 0px 5px;
     /*changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidth: 12px;
+    --cusRadioWidth: 20px;
     /*To be changed*/
-    --cusRadioHeight: 12px;
+    --cusRadioHeight: 20px;
     /*To be changed*/ }
 
   .radioCheckTxtLabel_RoClass {
     --cusRadioFsize: 12px;
+    /*To be changed*/ }
+
+  .radioCheckIconLabel_RoClass {
+    --radioIconLabelWidth: 95px;
+    /*To be changed*/
+    --radioIconLabelHeight: 95px;
     /*To be changed*/ }
 
   /*Radio Input Framework*/
@@ -7372,9 +7387,11 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    margin: 14px 0px; }
+    margin: 30px 0px; }
 
   .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    text-align: center;
+    /*To be changed*/
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -7395,7 +7412,7 @@ body {
     overflow: visible;
     flex-flow: row wrap;
     /*changed*/
-    justify-content: flex-start;
+    justify-content: center;
     align-content: flex-start;
     /*Added*/ }
 
@@ -7427,18 +7444,24 @@ body {
   /*Comments and suggestion textarea*/
   /*Radio Input Framework*/
   .radioCheckFlex_RoClass {
-    margin: 0px 20px 0px 5px;
+    margin: 5px 20px 0px 5px;
     /*changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidth: 14px;
+    --cusRadioWidth: 25px;
     /*changed*/
-    --cusRadioHeight: 14px;
+    --cusRadioHeight: 25px;
     /*changed*/ }
 
   .radioCheckTxtLabel_RoClass {
     --cusRadioFsize: 14px;
     /*changed*/ }
+
+  .radioCheckIconLabel_RoClass {
+    --radioIconLabelWidth: 100px;
+    /*To be changed*/
+    --radioIconLabelHeight: 100px;
+    /*To be changed*/ }
 
   /*Radio Input Framework*/
   /*Dropdown Menu Framework*/
@@ -7539,9 +7562,11 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    margin: 14px 0px; }
+    margin: 30px 0px; }
 
   .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+    text-align: center;
+    /*To be changed*/
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -7562,7 +7587,7 @@ body {
     overflow: visible;
     flex-flow: row wrap;
     /*changed*/
-    justify-content: flex-start;
+    justify-content: center;
     align-content: flex-start;
     /*Added*/ }
 
@@ -7594,18 +7619,24 @@ body {
   /*Comments and suggestion textarea*/
   /*Radio Input Framework*/
   .radioCheckFlex_RoClass {
-    margin: 0px 20px 0px 5px;
+    margin: 5px 20px 0px 5px;
     /*changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidth: 16px;
+    --cusRadioWidth: 30px;
     /*changed*/
-    --cusRadioHeight: 16px;
+    --cusRadioHeight: 30px;
     /*changed*/ }
 
   .radioCheckTxtLabel_RoClass {
     --cusRadioFsize: 16px;
     /*changed*/ }
+
+  .radioCheckIconLabel_RoClass {
+    --radioIconLabelWidth: 105px;
+    /*To be changed*/
+    --radioIconLabelHeight: 105px;
+    /*To be changed*/ }
 
   /*Radio Input Framework*/
   /*Dropdown Menu Framework*/

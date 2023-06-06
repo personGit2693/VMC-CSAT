@@ -359,7 +359,7 @@ body{
 	}
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
-		@include stepSetPerFieldTitle_MT_Style;
+		@include stepSetPerFieldTitle_MT_Style;				
 	}
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
@@ -393,6 +393,10 @@ body{
 
 	.radioCheckTxtLabel_RoClass{
 		@include radioCheckTxtLabel_MT_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_MT_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -456,6 +460,7 @@ body{
 	}
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitleCenter_Style;
 		@include stepSetPerFieldTitle_MT_Style;
 	}
 
@@ -490,6 +495,10 @@ body{
 
 	.radioCheckTxtLabel_RoClass{
 		@include radioCheckTxtLabel_MT_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_MT_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -553,6 +562,7 @@ body{
 	}
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitleCenter_Style;
 		@include stepSetPerFieldTitle_Laptop_Style;
 	}
 
@@ -587,6 +597,10 @@ body{
 
 	.radioCheckTxtLabel_RoClass{
 		@include radioCheckTxtLabel_Laptop_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_Laptop_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -650,6 +664,7 @@ body{
 	}
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitleCenter_Style;
 		@include stepSetPerFieldTitle_Desktop_Style;
 	}
 
@@ -684,6 +699,10 @@ body{
 
 	.radioCheckTxtLabel_RoClass{
 		@include radioCheckTxtLabel_Desktop_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_Desktop_Style;
 	}
 	/*Radio Input Framework*/
 

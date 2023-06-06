@@ -483,31 +483,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question1score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question1score1-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question1score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question1score2-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question1score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question1score3-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question1score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question1score4-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question1score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question1score5-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -518,31 +518,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question2score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question2score1-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question2score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question2score2-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question2score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question2score3-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question2score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question2score4-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question2score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question2score5-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -553,31 +553,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question3score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question3score1-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question3score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question3score2-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question3score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question3score3-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question3score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question3score4-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question3score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question4score5-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -590,31 +590,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question4score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question4score1-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question4score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question4score2-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question4score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question4score3-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question4score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question4score4-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question4score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question4score5-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -625,31 +625,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question5score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question5score1-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question5score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question5score2-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question5score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question5score3-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question5score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question5score4-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question5score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question5score5-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -660,31 +660,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question6score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question6score1-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question6score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question6score2-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question6score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question6score3-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question6score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question6score4-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question6score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question6score5-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -697,31 +697,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question7score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question7score1-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question7score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question7score2-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question7score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question7score3-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question7score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question7score4-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question7score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question7score5-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -732,31 +732,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question8score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question8score1-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question8score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question8score2-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question8score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question8score3-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question8score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question8score4-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question8score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question8score5-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>					
 				</div>
@@ -767,31 +767,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question9score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question9score1-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question9score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question9score2-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question9score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question9score3-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question9score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question9score4-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question9score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question9score5-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>
 				</div>
@@ -802,31 +802,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question10score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question10score1-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question10score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question10score2-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question10score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question10score3-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question10score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question10score4-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question10score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question10score5-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>
 				</div>
@@ -837,31 +837,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question11score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question11score1-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question11score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question11score2-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question11score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question11score3-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question11score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question11score4-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question11score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question11score5-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>
 				</div>
@@ -872,31 +872,31 @@ if(isset($_GET["rateToken"])){
 						<div class="radioCheckFlex_RoClass">
 							<label for="question12score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question12score1-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question12score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question12score2-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Agree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question12score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question12score3-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Neither agree nor disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
 						</div>
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question12score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question12score4-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
 						</div>						
 
 						<div class="radioCheckFlex_RoClass">
 							<label for="question12score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="question12score5-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Strongly disagree</div>
+							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
 						</div>		
 					</div>
 				</div>

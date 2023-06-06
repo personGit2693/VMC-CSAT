@@ -158,7 +158,7 @@
 	word-break: keep-all;
 	font-family: calibri;
 	font-size: 17px; /*changed*/
-	font-style: italic;
+	font-style: italic;	
 	font-weight: bold;
 	color: black;
 }
@@ -171,7 +171,13 @@
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
-	margin: 14px 0px;
+	margin: 30px 0px;
+}
+
+
+
+@mixin stepSetPerFieldTitleCenter_Style{
+	text-align: center; /*To be changed*/
 }
 
 
@@ -189,7 +195,6 @@
 	font-weight: bold;
 	color: black;
 }
-
 @mixin stepSetPerFieldTitle_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -203,7 +208,6 @@
 	font-weight: bold;
 	color: black;
 }
-
 @mixin stepSetPerFieldTitle_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -226,7 +230,7 @@
 	box-sizing: border-box;
 	overflow: visible;
 	flex-flow: column nowrap; /*To be changed*/
-	justify-content: flex-start;	
+	justify-content: flex-start; /*To be changed*/
 }
 
 @mixin stepSetPerFieldFlex_TLD_Style{
@@ -235,8 +239,8 @@
 	box-sizing: border-box;
 	overflow: visible;
 	flex-flow: row wrap; /*changed*/
-	justify-content: flex-start;
-	align-content: flex-start; /*Added*/
+	justify-content: center;
+	align-content: flex-start; /*Added*/	
 }
 /*Step per field*/
 
@@ -313,28 +317,25 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Radio Input Framework*/
 @mixin radioCheckFlex_Mobile_RoClass{
-	margin: 0px 0px 0px 5px; /*To be changed*/
+	margin: 5px 0px 0px 5px; /*To be changed*/
 }
-
 @mixin radioCheckFlex_TLD_RoClass{
-	margin: 0px 20px 0px 5px; /*changed*/
+	margin: 5px 20px 0px 5px; /*changed*/
 }
 
 
 
 @mixin customRadioCheck_MT_Style{
-	--cusRadioWidth: 12px; /*To be changed*/
-	--cusRadioHeight: 12px; /*To be changed*/
+	--cusRadioWidth: 20px; /*To be changed*/
+	--cusRadioHeight: 20px; /*To be changed*/
 }
-
 @mixin customRadioCheck_Laptop_Style{
-	--cusRadioWidth: 14px; /*changed*/
-	--cusRadioHeight: 14px; /*changed*/
+	--cusRadioWidth: 25px; /*changed*/
+	--cusRadioHeight: 25px; /*changed*/
 }
-
 @mixin customRadioCheck_Desktop_Style{
-	--cusRadioWidth: 16px; /*changed*/
-	--cusRadioHeight: 16px; /*changed*/
+	--cusRadioWidth: 30px; /*changed*/
+	--cusRadioHeight: 30px; /*changed*/
 }
 
 
@@ -342,13 +343,28 @@
 @mixin radioCheckTxtLabel_MT_Style{
 	--cusRadioFsize: 12px; /*To be changed*/
 }
-
 @mixin radioCheckTxtLabel_Laptop_Style{
 	--cusRadioFsize: 14px; /*changed*/
 }
-
 @mixin radioCheckTxtLabel_Desktop_Style{
 	--cusRadioFsize: 16px; /*changed*/
+}
+
+
+
+@mixin radioCheckIconLabel_MT_Style{
+	--radioIconLabelWidth: 95px; /*To be changed*/
+	--radioIconLabelHeight: 95px; /*To be changed*/
+}
+
+@mixin radioCheckIconLabel_Laptop_Style{
+	--radioIconLabelWidth: 100px; /*To be changed*/
+	--radioIconLabelHeight: 100px; /*To be changed*/
+}
+
+@mixin radioCheckIconLabel_Desktop_Style{
+	--radioIconLabelWidth: 105px; /*To be changed*/
+	--radioIconLabelHeight: 105px; /*To be changed*/
 }
 /*Radio Input Framework*/
 /***********************************************************************************************************************************************************************************************************/
