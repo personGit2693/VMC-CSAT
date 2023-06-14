@@ -7067,7 +7067,13 @@ body {
     flex-flow: column nowrap;
     /*To be changed*/
     justify-content: flex-start;
-    /*To be changed*/ }
+    /*To be changed*/
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
 
   /*Step per field*/
   /*Step per field buttons wrapper*/

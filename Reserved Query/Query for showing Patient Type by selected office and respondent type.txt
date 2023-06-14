@@ -1,0 +1,7 @@
+SELECT DISTINCT servicetypes_tab.servicetype_id AS 'serviceTypeId',
+servicetypes_tab.servicetype_value AS 'serviceTypeValue'
+FROM officeservices_tab 
+INNER JOIN servicetypes_tab 
+ON officeservices_tab.servicetype_id = servicetypes_tab.servicetype_id 
+WHERE officeservices_tab.office_id = 5 
+AND officeservices_tab.clienttype_id = 2;

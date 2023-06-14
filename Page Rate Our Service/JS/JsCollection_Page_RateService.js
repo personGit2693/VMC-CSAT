@@ -1,17 +1,7 @@
 /*Elements*/
-const stepByStepItem = document.getElementsByClassName("stepByStepItem-Class");
-const headerDynamicSubTxt = document.getElementById("headerDynamicSubTxt-Id");
-const dropdownReligion = document.getElementById("dropdownReligion-Id");
-const stepSets = document.getElementsByClassName("stepSets-Class");
-const stepSetPerFieldFlex = document.getElementsByClassName("stepSetPerFieldFlex");
+export const stepByStepItem = document.getElementsByClassName("stepByStepItem-Class");
+export const headerDynamicSubTxt = document.getElementById("headerDynamicSubTxt-Id");
+export const dropdownReligion = document.getElementById("dropdownReligion-Id");
+export const stepSets = document.getElementsByClassName("stepSets-Class");
+export const stepSetPerFieldFlex = document.getElementsByClassName("stepSetPerFieldFlex");
 /*Elements*/
-
-
-/*Prep vars*/
-var stepNumIndex = 0;
-/*Prep vars*/
-
-
-/*Prep AJAX*/
-
-/*Prep AJAX*/

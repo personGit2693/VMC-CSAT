@@ -50,7 +50,7 @@ if(isset($_GET["rateToken"])){
 
 			<!--Page Header-->
 			<div class="pageHeaderWrap">
-				<div class="pageHeaderTxt">HOSPITAL CLIENT EXPERIENCE SURVEY (HCES)</div>
+				<div class="pageHeaderTxt">Client Satisfaction Measurement (CSM)</div>
 				<div class="pageHeaderSubtxt" id="headerDynamicSubTxt-Id">This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.</div>
 			</div>
 			<!--Page Header-->
@@ -92,7 +92,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Respondent Type</div>
-					<div class="stepSetPerFieldFlex respondentField-Class">
+					<div class="stepSetPerFieldFlex">
 						<div class="radioCheckFlex_RoClass">
 							<label for="respondentPatient-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="respondentPatient-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -948,8 +948,7 @@ if(isset($_GET["rateToken"])){
 			-->
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-			<script type="text/javascript" src="../JS/JsCollection_Page_RateService.js"></script>
-			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
+			<script type="module" src="../JS/Controller_StepByStep.js"></script>
 		</body>
 		</html>
 <?php 

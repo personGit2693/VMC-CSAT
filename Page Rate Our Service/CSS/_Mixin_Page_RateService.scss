@@ -10,7 +10,6 @@
 	padding: 5px;
 	background-color: #ffffff;
 }
-
 @mixin stepSets_LD_Style{
 	position: relative;
 	display: none;
@@ -50,7 +49,6 @@
 	font-weight: bold;
 	margin-bottom: 7px;
 }
-
 @mixin stepSetTitle_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -64,7 +62,6 @@
 	font-weight: bold;
 	margin-bottom: 7px;
 }
-
 @mixin stepSetTitle_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -93,7 +90,6 @@
 	font-style: normal;
 	font-weight: normal;
 }
-
 @mixin stepSetTitleDefi_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -106,7 +102,6 @@
 	font-style: normal;
 	font-weight: normal;
 }
-
 @mixin stepSetTitleDefi_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -136,7 +131,6 @@
 	font-weight: bold;
 	color: black;
 }
-
 @mixin stepSetPerFieldGroup_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -149,7 +143,6 @@
 	font-weight: bold;
 	color: black;
 }
-
 @mixin stepSetPerFieldGroup_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -167,6 +160,29 @@
 
 
 /*Step per field*/
+@mixin stepPerFieldMessageFont_MT_Style{
+	font-family: calibri;
+	font-size: 12px; /*To be changed*/
+	font-style: normal;
+	font-weight: bold;
+	color: red;
+}
+@mixin stepPerFieldMessageFont_Laptop_Style{
+	font-family: calibri;
+	font-size: 14px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	color: red;
+}
+@mixin stepPerFieldMessageFont_Desktop_Style{
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	color: red;
+}
+
+
 @mixin stepSetPerFieldWrap_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -230,9 +246,8 @@
 	box-sizing: border-box;
 	overflow: visible;
 	flex-flow: column nowrap; /*To be changed*/
-	justify-content: flex-start; /*To be changed*/
+	justify-content: flex-start; /*To be changed*/	
 }
-
 @mixin stepSetPerFieldFlex_TLD_Style{
 	position: relative;
 	display: flex;
@@ -271,7 +286,6 @@
 	width: auto; /*To be changed*/
 	height: 70px;
 }
-
 @mixin suggestionTextArea_Tablet_Style{
 	position: relative;
 	display: block;
@@ -283,7 +297,6 @@
 	width: 100%; /*changed*/
 	height: 70px;
 }
-
 @mixin suggestionTextArea_Laptop_Style{
 	position: relative;
 	display: block;
@@ -295,7 +308,6 @@
 	width: 100%; /*changed*/
 	height: 70px;
 }
-
 @mixin suggestionTextArea_Desktop_Style{
 	position: relative;
 	display: block;

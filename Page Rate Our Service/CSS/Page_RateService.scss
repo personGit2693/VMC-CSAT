@@ -364,6 +364,7 @@ body{
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_Mobile_Style;
+		@include stepPerFieldMessageFont_MT_Style;
 	}
 	/*Step per field*/
 

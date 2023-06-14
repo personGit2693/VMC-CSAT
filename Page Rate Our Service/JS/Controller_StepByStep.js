@@ -1,3 +1,13 @@
+/*Imported*/
+import {stepByStepItem, headerDynamicSubTxt, dropdownReligion, stepSets, stepSetPerFieldFlex} from "./JsCollection_Page_RateService.js";
+/*Imported*/
+
+
+/*Prep vars*/
+var stepNumIndex = 0;
+/*Prep vars*/
+
+
 /*Function to lighten per step*/
 const nextStep = () =>{
 	if(stepNumIndex < stepByStepItem.length){
