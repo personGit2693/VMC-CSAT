@@ -1,5 +1,5 @@
 /*Imported*/
-import {stepByStepItem, headerDynamicSubTxt, dropdownReligion, stepSets, stepSetPerFieldFlex} from "./JsCollection_Page_RateService.js";
+import * as pageRateService from "./JsCollection_Page_RateService.js";
 /*Imported*/
 
 
@@ -10,11 +10,11 @@ var stepNumIndex = 0;
 
 /*Function to lighten per step*/
 const nextStep = () =>{
-	if(stepNumIndex < stepByStepItem.length){
+	if(stepNumIndex < pageRateService.stepByStepItem.length){
 
-		let lining = stepByStepItem[stepNumIndex].children[0];
-		let numbering = stepByStepItem[stepNumIndex].children[1];
-		let definition = stepByStepItem[stepNumIndex].children[2];
+		let lining = pageRateService.stepByStepItem[stepNumIndex].children[0];
+		let numbering = pageRateService.stepByStepItem[stepNumIndex].children[1];
+		let definition = pageRateService.stepByStepItem[stepNumIndex].children[2];
 
 		lining.classList.add("stepByStepLineLight-Class");
 		numbering.classList.add("stepNumberLight-Class");
@@ -24,23 +24,22 @@ const nextStep = () =>{
 		/*Editable*/
 		/*_Change sub header text per step*/
 		if(stepNumIndex === 0){
-			headerDynamicSubTxt.innerText = "This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.";			
+			pageRateService.headerDynamicSubTxt.innerText = "This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.";			
 		}else if(stepNumIndex === 1){
-			headerDynamicSubTxt.innerText = "The Citizen’s Charter is an official document that reflects the services of a government agency/office including its requirements, fees, and processing times among others.";
+			pageRateService.headerDynamicSubTxt.innerText = "The Citizen’s Charter is an official document that reflects the services of a government agency/office including its requirements, fees, and processing times among others.";
 		}else if(stepNumIndex === 2){
-			headerDynamicSubTxt.innerText = "Rate Valenzuela Medical Center's Staffs and Facilities that best corresponds to your rating for each item.";
+			pageRateService.headerDynamicSubTxt.innerText = "Rate Valenzuela Medical Center's Staffs and Facilities that best corresponds to your rating for each item.";
 		}else if(stepNumIndex === 3){
-			headerDynamicSubTxt.innerText = "Your suggestions, comments and commendations are matter to us.";
+			pageRateService.headerDynamicSubTxt.innerText = "Your suggestions, comments and commendations are matter to us.";
 		}
 		/*_Change sub header text per step*/
 
-
 		/*_Display respective form in accordance to number of step*/
-		for(let index=0; index < stepSets.length; index++){
+		for(let index=0; index < pageRateService.stepSets.length; index++){
 			if(index === stepNumIndex){
-				stepSets[index].style.display = "block";
+				pageRateService.stepSets[index].style.display = "block";
 			}else if(index !== stepNumIndex){
-				stepSets[index].style.display = "none";
+				pageRateService.stepSets[index].style.display = "none";
 			}
 		}
 		/*_Display respective form in accordance to number of step*/
@@ -62,9 +61,9 @@ const backStep = () =>{
 
 		stepNumIndex--;
 
-		let lining = stepByStepItem[stepNumIndex].children[0];
-		let numbering = stepByStepItem[stepNumIndex].children[1];
-		let definition = stepByStepItem[stepNumIndex].children[2];
+		let lining = pageRateService.stepByStepItem[stepNumIndex].children[0];
+		let numbering = pageRateService.stepByStepItem[stepNumIndex].children[1];
+		let definition = pageRateService.stepByStepItem[stepNumIndex].children[2];
 
 		lining.classList.remove("stepByStepLineLight-Class");
 		numbering.classList.remove("stepNumberLight-Class");
@@ -74,21 +73,21 @@ const backStep = () =>{
 		/*Editable*/
 		/*_Change sub header text per step*/
 		if(stepNumIndex === 1){
-			headerDynamicSubTxt.innerText = "This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.";
+			pageRateService.headerDynamicSubTxt.innerText = "This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.";
 		}else if(stepNumIndex === 2){
-			headerDynamicSubTxt.innerText = "The Citizen’s Charter is an official document that reflects the services of a government agency/office including its requirements, fees, and processing times among others.";
+			pageRateService.headerDynamicSubTxt.innerText = "The Citizen’s Charter is an official document that reflects the services of a government agency/office including its requirements, fees, and processing times among others.";
 		}else if(stepNumIndex === 3){
-			headerDynamicSubTxt.innerText = "Rate Valenzuela Medical Center's Staffs and Facilities that best corresponds to your rating for each item.";
+			pageRateService.headerDynamicSubTxt.innerText = "Rate Valenzuela Medical Center's Staffs and Facilities that best corresponds to your rating for each item.";
 		}
 		/*_Change sub header text per step*/
 
 
 		/*_Display respective form in accordance to number of step*/
-		for(let index=0; index < stepSets.length; index++){
+		for(let index=0; index < pageRateService.stepSets.length; index++){
 			if(index === stepNumIndex){
-				stepSets[index].style.display = "none";
+				pageRateService.stepSets[index].style.display = "none";
 			}else if(index === stepNumIndex - 1){
-				stepSets[index].style.display = "block";
+				pageRateService.stepSets[index].style.display = "block";
 			}
 		}
 		/*_Display respective form in accordance to number of step*/
@@ -102,8 +101,16 @@ const backStep = () =>{
 /*Function to back step*/
 
 
+/*Add nextStep and backStep listener*/
+pageRateService.proceedBtnOne.addEventListener("click", nextStep);
+pageRateService.proceedBtnTwo.addEventListener("click", nextStep);
+pageRateService.proceedBtnThree.addEventListener("click", nextStep);
+pageRateService.backBtnTwo.addEventListener("click", backStep);
+pageRateService.backBtnThree.addEventListener("click", backStep);
+pageRateService.backBtnFour.addEventListener("click", backStep);
+/*Add nextStep and backStep listener*/
+
+
 /*Inital Invoke*/
 nextStep();
 /*Inital Invoke*/
-
-createCusDropOptWoRogrid(dropdownReligion);
