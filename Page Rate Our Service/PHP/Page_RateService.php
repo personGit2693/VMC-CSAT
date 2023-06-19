@@ -364,8 +364,8 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetBtnsFlex">
-						<button class="normButton_RoClass proceedBtn-Class" id="proceedBtnOne-Id">Proceed</button>
+					<div class="stepSetBtnsFlex" id="stepOneBtnsWrap">
+						<!--<button class="normButton_RoClass proceedBtn-Class" id="proceedBtnOne-Id">Proceed</button>-->
 					</div>
 				</div>
 			</div>
@@ -948,7 +948,8 @@ if(isset($_GET["rateToken"])){
 			-->
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-			<script type="module" src="../JS/Controller_StepByStep.js"></script>			
+			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>			
+			<script type="module" src="../JS/Executor_Page_RateService.js"></script>
 		</body>
 		</html>
 <?php 
