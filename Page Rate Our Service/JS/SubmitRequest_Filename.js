@@ -1,0 +1,3 @@
+const submitRequestFunction = () =>{
+	gatewayFunction();
+}

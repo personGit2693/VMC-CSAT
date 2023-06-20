@@ -27,7 +27,7 @@
 		<div class="policyDetailsItem">
 			<!--_ _Policy date details-->
 			<div class="policyDateDetailsWrap">				
-				<div class="policyDateTxt">Effective March 22, 2023</div>
+				<div class="policyDateTxt">Confidentiality and Nondisclosure Agreement</div>
 				<div class="policyUpToDateTxt">Our Data Privacy Policy is up to date.</div>
 			</div>
 			<!--_ _Policy date details-->
@@ -40,9 +40,15 @@
 
 			<!--_ _Policy Paragraph-->
 			<div class="policyParagraph-Class">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+				I agree with the following statements:
 				<br><br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+				I have read and understood Privacy Policy.
+				<br><br>
+				I understand that I may come in contact with confidential information during the course of preparing and consolidating the reports for the Client Experience Survey. As part of the condition as the personnel-in-charge for this report, I hereby undertake to keep in strict confidence any information found in the survey. I will do this in accordance with the privacy policy and applicable laws, including those that require mandatory reporting.
+				<br><br>
+				I will not divulge any confidential information that may be gathered about the client through the survey form.
+				<br><br>
+				I also agree to never remove any confidential material of any kind from the premises, unless, authorized as part of my duties, or with the expressed permission of direction to do so from the respective offices.
 			</div>
 			<!--_ _Policy Paragraph-->
 

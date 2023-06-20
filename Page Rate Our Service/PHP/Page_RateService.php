@@ -92,7 +92,9 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Respondent Type</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex" id="respondentTypeWrap">
+						Loading...
+						<!--Component
 						<div class="radioCheckFlex_RoClass">
 							<label for="respondentPatient-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="respondentPatient-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -116,6 +118,7 @@ if(isset($_GET["rateToken"])){
 							<input type="radio" id="respondentEmployee-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
 							<div class="radioCheckTxtLabel_RoClass">Employee</div>
 						</div>
+						-->
 					</div>
 				</div>
 
@@ -365,7 +368,8 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetBtnsFlex" id="stepOneBtnsWrap">
-						<!--<button class="normButton_RoClass proceedBtn-Class" id="proceedBtnOne-Id">Proceed</button>-->
+						<!--Components-->
+						Loading...
 					</div>
 				</div>
 			</div>
@@ -460,9 +464,8 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetBtnsFlex">
-						<button class="normButton_RoClass backBtn-Class" id="backBtnTwo-Id">Back</button>
-						<button class="normButton_RoClass proceedBtn-Class" id="proceedBtnTwo-Id">Proceed</button>						
+					<div class="stepSetBtnsFlex" id="stepTwoBtnsWrap">
+						Loading...						
 					</div>
 				</div>
 			</div>
@@ -902,9 +905,8 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetBtnsFlex">
-						<button class="normButton_RoClass backBtn-Class" id="backBtnThree-Id">Back</button>
-						<button class="normButton_RoClass proceedBtn-Class" id="proceedBtnThree-Id">Proceed</button>						
+					<div class="stepSetBtnsFlex" id="stepThreeBtnsWrap">
+						Loading...						
 					</div>
 				</div>
 			</div>
@@ -932,9 +934,8 @@ if(isset($_GET["rateToken"])){
 				</div>				
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetBtnsFlex">
-						<button class="normButton_RoClass backBtn-Class" id="backBtnFour-Id">Back</button>
-						<button class="normButton_RoClass proceedBtn-Class" id="submitRatingBtn-Id">Submit Rating</button>						
+					<div class="stepSetBtnsFlex" id="stepFourBtnsWrap">
+						Loading...											
 					</div>
 				</div>
 			</div>
@@ -948,8 +949,10 @@ if(isset($_GET["rateToken"])){
 			-->
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>			
-			<script type="module" src="../JS/Executor_Page_RateService.js"></script>
+			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
+			<script type="module" src="../JS/Gateway_Filename.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Filename.js"></script>
+			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			
 		</body>
 		</html>
 <?php 

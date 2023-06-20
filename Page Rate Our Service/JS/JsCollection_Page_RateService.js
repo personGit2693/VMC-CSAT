@@ -5,13 +5,34 @@ export const dropdownReligion = document.getElementById("dropdownReligion-Id");
 export const stepSets = document.getElementsByClassName("stepSets-Class");
 export const stepSetPerFieldFlex = document.getElementsByClassName("stepSetPerFieldFlex");
 export const stepOneBtnsWrap = document.getElementById("stepOneBtnsWrap");
-
-/*export const proceedBtnOne = document.getElementById("proceedBtnOne-Id");
-export const proceedBtnTwo = document.getElementById("proceedBtnTwo-Id");
-export const proceedBtnThree = document.getElementById("proceedBtnThree-Id");
-export const submitRatingBtn = document.getElementById("submitRatingBtn-Id");
-export const backBtnTwo = document.getElementById("backBtnTwo-Id");
-export const backBtnThree = document.getElementById("backBtnThree-Id");
-export const backBtnFour = document.getElementById("backBtnFour-Id");
-*/
+export const stepTwoBtnsWrap = document.getElementById("stepTwoBtnsWrap");
+export const stepThreeBtnsWrap = document.getElementById("stepThreeBtnsWrap");
+export const stepFourBtnsWrap = document.getElementById("stepFourBtnsWrap");
 /*Elements*/
+
+/*
+var submittedRate = {
+	respondentDetails:{
+		type:"value", 
+		age: "value",
+		gender: "value",
+		genderPreference: "value",
+		otherGenderPreference: "value",
+		religion: "value",
+		otherReligion: "value",
+		education: "value",
+		office: "value",
+		visityear: "value"
+	},
+	ccRate:{
+		awareness:"value",
+		visibility:"value",
+		helpfulness:"value"
+	},
+	hospitalRate:[
+		"value",
+		"value",
+		"value"
+	]
+};
+*/
