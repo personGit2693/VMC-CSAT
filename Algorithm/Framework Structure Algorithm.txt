@@ -1,0 +1,8 @@
+1. Page load Structure (Component Only)
+	*Execute->View->Component
+
+2. Page load Structure (With request to the server)
+	*Execute->Request->View->Component
+
+3. Await and Ready to load Structure
+	*Submit Request->Gateway->Request->View->Component

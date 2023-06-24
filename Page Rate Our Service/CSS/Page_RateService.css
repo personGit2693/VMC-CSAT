@@ -7245,7 +7245,13 @@ body {
     /*changed*/
     justify-content: center;
     align-content: flex-start;
-    /*Added*/ }
+    /*Added*/
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
@@ -7420,7 +7426,13 @@ body {
     /*changed*/
     justify-content: center;
     align-content: flex-start;
-    /*Added*/ }
+    /*Added*/
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
@@ -7595,7 +7607,13 @@ body {
     /*changed*/
     justify-content: center;
     align-content: flex-start;
-    /*Added*/ }
+    /*Added*/
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
 
   /*Step per field*/
   /*Step per field buttons wrapper*/

@@ -467,6 +467,7 @@ body{
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
+		@include stepPerFieldMessageFont_MT_Style;
 	}
 	/*Step per field*/
 
@@ -569,6 +570,7 @@ body{
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
+		@include stepPerFieldMessageFont_Laptop_Style;
 	}
 	/*Step per field*/
 
@@ -671,6 +673,7 @@ body{
 
 	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
+		@include stepPerFieldMessageFont_Desktop_Style;
 	}
 	/*Step per field*/
 

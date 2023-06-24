@@ -1,12 +1,12 @@
 /*Import*/
-import {executorFunction} from "./Executor_Filename.js";
+/*import renderComponent from "./View_Filename.js";*/
 /*Import*/
 
 var requestVar = null;
 
 function requestFunction(){
 	requestVar = "Test";
-	executorFunction(requestVar);
+	/*renderComponent()*/
 }
 
 export {requestFunction, requestVar};

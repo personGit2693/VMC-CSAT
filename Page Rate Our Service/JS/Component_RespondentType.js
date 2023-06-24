@@ -1,5 +1,0 @@
-/*Components*/
-function respondentTypeOption(){
-
-}
-/*Components*/

@@ -5,39 +5,23 @@ import {StepOneBtns, StepTwoBtns, StepThreeBtns, StepFourBtns} from "./Component
 
 
 /*Render*/
-async function renderStepOneBtns(){
-	let renderStepOneBtns_Promise = new Promise(function(resolve, reject){
-		resolve(StepOneBtns());
-	});	
-
-	stepOneBtnsWrap.innerHTML = await renderStepOneBtns_Promise;
+function renderStepOneBtns(){
+	stepOneBtnsWrap.innerHTML = StepOneBtns();
 }
 
 
-async function renderStepTwoBtns(){
-	let renderStepTwoBtns_Promise = new Promise(function(resolve, reject){
-		resolve(StepTwoBtns());
-	});	
-
-	stepTwoBtnsWrap.innerHTML = await renderStepTwoBtns_Promise;
+function renderStepTwoBtns(){
+	stepTwoBtnsWrap.innerHTML = StepTwoBtns();
 }
 
 
-async function renderStepThreeBtns(){
-	let renderStepThreeBtns_Promise = new Promise(function(resolve, reject){
-		resolve(StepThreeBtns());
-	});	
-
-	stepThreeBtnsWrap.innerHTML = await renderStepThreeBtns_Promise;
+function renderStepThreeBtns(){	
+	stepThreeBtnsWrap.innerHTML = StepThreeBtns();
 }
 
 
-async function renderStepFourBtns(){
-	let renderStepFourBtns_Promise = new Promise(function(resolve, reject){
-		resolve(StepFourBtns());
-	});	
-
-	stepFourBtnsWrap.innerHTML = await renderStepFourBtns_Promise;
+function renderStepFourBtns(){
+	stepFourBtnsWrap.innerHTML = StepFourBtns();
 }
 /*Render*/
 

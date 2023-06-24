@@ -91,197 +91,82 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Respondent Type</div>
-					<div class="stepSetPerFieldFlex" id="respondentTypeWrap">
-						Loading...
-						<!--Component
-						<div class="radioCheckFlex_RoClass">
-							<label for="respondentPatient-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="respondentPatient-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Patient</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="respondentCompanion-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="respondentCompanion-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Companion (Family/Relative)</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="respondentBusiness-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="respondentBusiness-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Business (visited for business purposes)</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="respondentEmployee-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="respondentEmployee-Id" name="respondent-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Employee</div>
-						</div>
-						-->
+					<div class="stepSetPerFieldTitle-Class">Respondent</div>
+					<div class="stepSetPerFieldFlex" id="respondentTypeWrap">						
+						<!--Component-->
+						Loading...						
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Age</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="age1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="age1-Id" name="age-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">19 or lower</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="age2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="age2-Id" name="age-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">20-34</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="age3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="age3-Id" name="age-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">35-49</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="age4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="age4-Id" name="age-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">50-64</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="age5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="age5-Id" name="age-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">65 or higher</div>
-						</div>
+					<div class="stepSetPerFieldFlex" id="ageRangesRadioBtnsWrap">
+						<!--Component-->
+						Loading...
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Gender</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="gender1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="gender1-Id" name="gender-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Male</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="gender2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="gender2-Id" name="gender-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Female</div>
-						</div>
+					<div class="stepSetPerFieldFlex" id="genderRadioBtnsWrap">
+						<!--Component-->
+						Loading...
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Religion</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex" id="religionDropdownMenuWrap">
 						<div class="scdropdownSelBox_RoClass" id="dropdownReligion-Id">
-							<div class="scdropOptionCon_RoClass">
-								<div class="scdropOption_RoClass">
-									<input type="radio" name="religion-Name" value="Catholic" id="religion1-Id">
-									<label for="religion1">Catholic</label>
-								</div>
-								<div class="scdropOption_RoClass">
-									<input type="radio" name="religion-Name" value="muslim" id="religion2-Id">
-									<label for="religion2">Muslim</label>
-								</div>
+							<div class="scdropOptionCon_RoClass" id="dropdownReligionCon-Id">
+								<!--Component-->
+								Loading...								
 							</div>
 							<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('../../src/Chevron Down_Green.png');"></span><span class="scdropSelectedVal_RoClass">Select Religion</span></div>
 							<div class="scdropSearchboxWrap_RoClass">
-								<input type="text" placeholder="Start Typing...">
+								<input type="text" placeholder="Start Typing..." id="dropdownReligionSearch-Id" onkeyup="submitRequestReligions()">
 							</div>
-							<input type="hidden" class="scDropdownVal_RoClass" autocomplete="off">
+							<input type="hidden" class="scDropdownVal_RoClass" autocomplete="off" id="dropdownReligionValue-Id">
 						</div>	
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Educational Attainment</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="educ1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="educ1-Id" name="educational-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Primary</div>
-						</div>
+					<div class="stepSetPerFieldFlex" id="educAttainmentRadioBtnsWrap">
+						<!--Component-->
+						Loading...
+					</div>
+				</div>
 
-						<div class="radioCheckFlex_RoClass">
-							<label for="educ2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="educ2-Id" name="educational-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Secondary</div>
-						</div>
+				<div class="stepSetPerFieldWrap">
+					<div class="stepSetPerFieldTitle-Class">Building</div>
+					<div class="stepSetPerFieldFlex" id="buildingRadioBtnsWrap">
+						<!--Component-->
+						Loading...
+					</div>
+				</div>
 
-						<div class="radioCheckFlex_RoClass">
-							<label for="educ3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="educ3-Id" name="educational-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Postgraduate/Masters</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="educ4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="educ4-Id" name="educational-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Vocational</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="educ5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="educ5-Id" name="educational-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">No Formal Education</div>
-						</div>
+				<div class="stepSetPerFieldWrap">
+					<div class="stepSetPerFieldTitle-Class">Floor</div>
+					<div class="stepSetPerFieldFlex" id="floorRadioBtnsWrap">
+						<!--Component-->
+						Choose building first.
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Point of Entry Department Visited</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="office1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office1-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Admitting Office</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="office2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office2-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Cash Operation Section</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="office3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office3-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Department of Pathology and Laboratory</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="office4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office4-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Department of Radiology</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="office5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office5-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Emergency Department</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="office5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office5-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Medical Social Work Service</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="office6-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="office6-Id" name="office-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Pharmacy Service</div>
-						</div>
+					<div class="stepSetPerFieldFlex" id="officeRadioBtnsWrap">
+						<!--Component-->						
+						Select building and floor.
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Service Type</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldTitle-Class">Service-Type</div>
+					<div class="stepSetPerFieldFlex" id="serviceTypeRadioBtnsWrap">
+						<!--Component
 						<div class="radioCheckFlex_RoClass">
 							<label for="service1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="service1-Id" name="service-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -293,6 +178,8 @@ if(isset($_GET["rateToken"])){
 							<input type="radio" id="service2-Id" name="service-Name" onchange="radioCheckSelected(this)" autocomplete="off">
 							<div class="radioCheckTxtLabel_RoClass">Documents</div>
 						</div>
+						-->
+						Select Respondent and Office.
 					</div>
 				</div>
 
@@ -465,6 +352,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetBtnsFlex" id="stepTwoBtnsWrap">
+						<!--Component-->
 						Loading...						
 					</div>
 				</div>
@@ -906,6 +794,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetBtnsFlex" id="stepThreeBtnsWrap">
+						<!--Component-->
 						Loading...						
 					</div>
 				</div>
@@ -935,6 +824,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetBtnsFlex" id="stepFourBtnsWrap">
+						<!--Component-->
 						Loading...											
 					</div>
 				</div>
@@ -950,8 +840,16 @@ if(isset($_GET["rateToken"])){
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
-			<script type="module" src="../JS/Gateway_Filename.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Filename.js"></script>
+			<script type="module" src="../JS/Gateway_RespondentType.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_RespondentType.js"></script>
+			<script type="module" src="../JS/Gateway_Religions.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js"></script>
+			<script type="module" src="../JS/Gateway_Floors.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Floors.js"></script>
+			<script type="module" src="../JS/Gateway_Offices.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js"></script>
+			<script type="module" src="../JS/Gateway_ServiceTypes.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js"></script>
 			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			
 		</body>
 		</html>
