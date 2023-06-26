@@ -101,7 +101,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || isset($_POST["clientTypeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"])){
 	$getServiceTypes_Resp = new stdClass();
 	$getServiceTypes_Resp->execution = null;
 	$getServiceTypes_Resp->globalTokenResult = null;

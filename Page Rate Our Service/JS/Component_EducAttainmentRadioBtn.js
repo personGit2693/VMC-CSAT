@@ -19,6 +19,10 @@ function EducAttainmentRadioBtn(){
 		`</div>`;
 	}
 
+	if(educAttainmentRadioBtn == ""){
+		educAttainmentRadioBtn = "No educational attainments found to select!";
+	}
+
 	return educAttainmentRadioBtn;
 }
 /*Component*/

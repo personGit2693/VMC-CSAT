@@ -1,5 +1,5 @@
 /*Import*/
-import {officeServiceDetails_Array} from "./Request_OfficeService.js";
+import {officeServiceDetails_Array} from "./Request_OfficeServices.js";
 /*Import*/
 
 
@@ -20,7 +20,7 @@ function OfficeServiceRadioBtn(){
 	}
 
 	if(officeServiceRadioBtn == ""){
-		officeServiceRadioBtn = "No Services found yet! Select Respondent, Point of Entry Department Visited and Service-Type first.";
+		officeServiceRadioBtn = "No Services found to select!";
 	}
 
 	return officeServiceRadioBtn;

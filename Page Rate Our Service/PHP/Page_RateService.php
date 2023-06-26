@@ -115,6 +115,14 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
+					<div class="stepSetPerFieldTitle-Class">Gender Preference</div>
+					<div class="stepSetPerFieldFlex" id="genderPrefRadioBtnsWrap">
+						<!--Component-->
+						Loading...
+					</div>
+				</div>
+
+				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Religion</div>
 					<div class="stepSetPerFieldFlex" id="religionDropdownMenuWrap">
 						<div class="scdropdownSelBox_RoClass" id="dropdownReligion-Id">
@@ -174,73 +182,16 @@ if(isset($_GET["rateToken"])){
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Service Availed</div>
 					<div class="stepSetPerFieldFlex" id="officeServiceRadioBtnsWrap">
-						<!--
-						<div class="radioCheckFlex_RoClass">
-							<label for="officerService1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="officerService1-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Consultation</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="officerService2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="officerService2-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Admission</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="officerService3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="officerService3-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Laboratory</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="officerService4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="officerService4-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Discharge</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="officerService5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="officerService5-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Settlement of Fees</div>
-						</div>
-						-->
+						<!--Component-->
 						Select Respondent, Point of Entry Department Visited and Service-Type first.
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">How frequent do you visit this facility?</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="frequentlyVisit1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="frequentlyVisit1-Id" name="frequentlyVisit-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">First Time</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="frequentlyVisit2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="frequentlyVisit2-Id" name="frequentlyVisit-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">1-3x a year</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="frequentlyVisit3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="frequentlyVisit3-Id" name="frequentlyVisit-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">4-6x a year</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="frequentlyVisit4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="frequentlyVisit4-Id" name="frequentlyVisit-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">7-11x a year</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="frequentlyVisit5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="frequentlyVisit5-Id" name="frequentlyVisit-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">>12x a year</div>
-						</div>
+					<div class="stepSetPerFieldFlex" id="freqVisitRadioBtnsWrap">
+						<!--Component-->
+						Loading...
 					</div>
 				</div>
 
@@ -840,6 +791,8 @@ if(isset($_GET["rateToken"])){
 			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js"></script>			
 			<script type="module" src="../JS/Gateway_ServiceTypes.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js"></script>
+			<script type="module" src="../JS/Gateway_OfficeServices.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_OfficeServices.js"></script>
 			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			
 		</body>
 		</html>

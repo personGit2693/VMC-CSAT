@@ -14,13 +14,13 @@ function OfficeRadioBtn(){
 
 		officeRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="office-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueOffice(this.value), submitRequestServiceTypes()" autocomplete="off"/>`+
+			`<input type="radio" id="`+elemValue+`" name="office-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueOffice(this.value), submitRequestServiceTypes(), submitRequestOfficeServices()" autocomplete="off"/>`+
 			`<div class="radioCheckTxtLabel_RoClass">`+officeDetails_Array[index].office_value+`</div>`+
 		`</div>`;
 	}
 
 	if(officeRadioBtn == ""){
-		officeRadioBtn = "No office found!";
+		officeRadioBtn = "No offices found to select!";
 	}
 
 	return officeRadioBtn;

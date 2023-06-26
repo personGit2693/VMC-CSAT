@@ -14,9 +14,13 @@ function RespondentTypeRadioBtn(){
 
 		respondentTypeRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="respondentType-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueRespondentType(this.value), submitRequestServiceTypes()" autocomplete="off"/>`+
+			`<input type="radio" id="`+elemValue+`" name="respondentType-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueRespondentType(this.value), submitRequestServiceTypes(), submitRequestOfficeServices()" autocomplete="off"/>`+
 			`<div class="radioCheckTxtLabel_RoClass">`+respondentDetails_Array[index].respondent_name+`</div>`+
 		`</div>`;
+	}
+
+	if(respondentTypeRadioBtn == ""){
+		respondentTypeRadioBtn = "No respondents found to select!";
 	}
 
 	return respondentTypeRadioBtn;

@@ -96,7 +96,7 @@ if(isset($_POST["token"]) && isset($_POST["buildingId"]) && isset($_POST["floorI
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["buildingId"]) || isset($_POST["floorId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["buildingId"]) || !isset($_POST["floorId"])){
 	$getOffices_Resp = new stdClass();
 	$getOffices_Resp->execution = null;
 	$getOffices_Resp->globalTokenResult = null;

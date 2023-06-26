@@ -4,9 +4,11 @@ import {renderStepOneBtns, renderStepTwoBtns, renderStepThreeBtns, renderStepFou
 import {requestRespondentType} from "./Request_RespondentType.js";
 import {requestAgeRanges} from "./Request_AgeRanges.js";
 import {requestGenders} from "./Request_Genders.js";
+import {requestGenderPrefs} from "./Request_GenderPrefs.js";
 import {requestReligions} from "./Request_Religions.js";
 import {requestEducAttainment} from "./Request_EducAttainment.js";
 import {requestBuildings} from "./Request_Buildings.js";
+import {requestFreqVisits} from "./Request_FreqVisits.js";
 /*Import*/
 
 
@@ -30,6 +32,11 @@ requestGenders();
 /*To render GenderRadioBtn component*/
 
 
+/*To render GenderPrefRadioBtn component*/
+requestGenderPrefs()
+/*To render GenderPrefRadioBtn component*/
+
+
 /*To render ReligionDropdownMenu component*/
 requestReligions();
 createCusDropOptWoRogrid(dropdownReligion);
@@ -39,6 +46,11 @@ createCusDropOptWoRogrid(dropdownReligion);
 /*To render EducAttainmentRadioBtn component*/
 requestEducAttainment();
 /*To render EducAttainmentRadioBtn component*/
+
+
+/*To render FreqVisitRadioBtn component*/
+requestFreqVisits();
+/*To render FreqVisitRadioBtn component*/
 
 
 /*To render buildings*/

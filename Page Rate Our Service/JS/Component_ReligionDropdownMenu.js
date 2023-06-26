@@ -13,7 +13,7 @@ function ReligionDropdownMenu(){
 		elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(religionDetails_Array[index]))));
 
 		religionDropdownMenu += `<div class="scdropOption_RoClass">`+
-			`<input type="radio" name="religion-Name" value="`+elemValue+`" id="`+elemValue+`" />`+
+			`<input type="radio" class="scdropOptionRadio_RoClass" name="religion-Name" value="`+elemValue+`" id="`+elemValue+`" onchange="valueReligion(this.value)" />`+
 			`<label for="`+elemValue+`">`+religionDetails_Array[index].religion_name+`</label>`+			
 		`</div>`;
 	}

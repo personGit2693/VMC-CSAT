@@ -14,13 +14,13 @@ function ServiceTypeRadioBtn(){
 
 		serviceTypeRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="serviceType-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueServiceType(this.value)" autocomplete="off"/>`+
+			`<input type="radio" id="`+elemValue+`" name="serviceType-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueServiceType(this.value), submitRequestOfficeServices()" autocomplete="off"/>`+
 			`<div class="radioCheckTxtLabel_RoClass">`+serviceTypeDetails_Array[index].serviceTypeValue+`</div>`+
 		`</div>`;
 	}
 
 	if(serviceTypeRadioBtn == ""){
-		serviceTypeRadioBtn = "No Service-Type found yet! Select Respondent and Point of Entry Department Visited first.";
+		serviceTypeRadioBtn = "No Service-Type found to select!";
 	}
 
 	return serviceTypeRadioBtn;

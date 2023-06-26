@@ -14,9 +14,13 @@ function GenderRadioBtn(){
 
 		genderRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="gender-Name" value="`+elemValue+`" onchange="radioCheckSelected(this)" autocomplete="off"/>`+
+			`<input type="radio" id="`+elemValue+`" name="gender-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueGender(this.value)" autocomplete="off"/>`+
 			`<div class="radioCheckTxtLabel_RoClass">`+genderDetails_Array[index].gender_value+`</div>`+
 		`</div>`;
+	}
+
+	if(genderRadioBtn == ""){
+		genderRadioBtn = "No genders found to select!";
 	}
 
 	return genderRadioBtn;

@@ -19,6 +19,10 @@ function BuildingRadioBtn(){
 		`</div>`;
 	}
 
+	if(buildingRadioBtn == ""){
+		buildingRadioBtn = "No buildings found to select!";
+	}
+
 	return buildingRadioBtn;
 }
 /*Component*/

@@ -3890,7 +3890,8 @@
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > input {
     position: absolute;
     display: block;
-    visibility: hidden; }
+    visibility: hidden;
+    width: 100%; }
 
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > label {
     position: relative;
@@ -4067,7 +4068,8 @@
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > input {
     position: absolute;
     display: block;
-    visibility: hidden; }
+    visibility: hidden;
+    width: 100%; }
 
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > label {
     position: relative;
@@ -4244,7 +4246,8 @@
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > input {
     position: absolute;
     display: block;
-    visibility: hidden; }
+    visibility: hidden;
+    width: 100%; }
 
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > label {
     position: relative;
@@ -4421,7 +4424,8 @@
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > input {
     position: absolute;
     display: block;
-    visibility: hidden; }
+    visibility: hidden;
+    width: 100%; }
 
   .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > label {
     position: relative;

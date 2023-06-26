@@ -1,7 +1,6 @@
 /*Import*/
-import renderServiceTypeRadioBtn from "./View_ServiceTypeRadioBtn.js";
+import renderGenderPrefRadioBtn from "./View_GenderPrefRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 
@@ -12,15 +11,14 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var serviceTypeDetails_Array = [];
+var genderPrefDetails_Array = [];
 /*Export variables*/
 
 
-/*Get office details*/
-function requestServiceTypes(){
-
+/*Get gender preferences details*/
+function requestGenderPrefs(){
 	httpRequest.onload = function(){
-		if(httpRequest.status == 200){			
+		if(httpRequest.status == 200){
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
 
@@ -29,13 +27,13 @@ function requestServiceTypes(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting service types has execution problem");
+					alert("Getting genders has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					serviceTypeDetails_Array = httpResponse.serviceTypeDetails_Array;
-					renderServiceTypeRadioBtn();						
+					genderPrefDetails_Array = httpResponse.genderPrefDetails_Array;
+					renderGenderPrefRadioBtn();
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Service-Type");
+				alert("Response is not an object on getting Genders");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,17 +41,15 @@ function requestServiceTypes(){
 		}
 	}
 
-	const queryString = "token="+token+
-	"&officeId="+officeId+
-	"&clientTypeId="+clientTypeId;
-	
-	httpRequest.open("POST", "../PHP/Response_ServiceTypes.php", false);
+
+	const queryString = "token="+token;
+	httpRequest.open("POST", "../PHP/Response_GenderPrefs.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString); 	
+	httpRequest.send(queryString);		
 }
-/*Get office details*/
+/*Get gender preferences details*/
 
 
 /*Export*/
-export {requestServiceTypes ,serviceTypeDetails_Array};
+export {requestGenderPrefs, genderPrefDetails_Array};
 /*Export*/
