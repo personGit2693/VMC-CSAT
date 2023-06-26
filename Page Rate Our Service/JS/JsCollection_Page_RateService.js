@@ -18,6 +18,7 @@ export const buildingRadioBtnsWrap = document.getElementById("buildingRadioBtnsW
 export const floorRadioBtnsWrap = document.getElementById("floorRadioBtnsWrap");
 export const officeRadioBtnsWrap = document.getElementById("officeRadioBtnsWrap");
 export const serviceTypeRadioBtnsWrap = document.getElementById("serviceTypeRadioBtnsWrap");
+export const officeServiceRadioBtnsWrap = document.getElementById("officeServiceRadioBtnsWrap");
 /*Elements*/
 
 /*

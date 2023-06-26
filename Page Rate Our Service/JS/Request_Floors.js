@@ -1,7 +1,7 @@
 /*Import*/
 import renderFloorRadioBtn from "./View_FloorRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {buildingId} from "./Gateway_Floors.js";
+import {buildingId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 

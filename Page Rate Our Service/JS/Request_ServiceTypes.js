@@ -1,8 +1,7 @@
 /*Import*/
 import renderServiceTypeRadioBtn from "./View_ServiceTypeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {officeId} from "./Gateway_ServiceTypes.js";
-import {respondentTypeClientTypeId} from "./Gateway_RespondentType.js";
+import {officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 
@@ -46,7 +45,7 @@ function requestServiceTypes(){
 
 	const queryString = "token="+token+
 	"&officeId="+officeId+
-	"&respondentTypeClientTypeId="+respondentTypeClientTypeId;
+	"&clientTypeId="+clientTypeId;
 	
 	httpRequest.open("POST", "../PHP/Response_ServiceTypes.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

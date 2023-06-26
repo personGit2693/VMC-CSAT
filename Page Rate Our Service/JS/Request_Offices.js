@@ -1,8 +1,7 @@
 /*Import*/
 import renderOfficeRadioBtn from "./View_OfficeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {buildingId} from "./Gateway_Floors.js";
-import {floorId} from "./Gateway_Offices.js";
+import {buildingId, floorId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 

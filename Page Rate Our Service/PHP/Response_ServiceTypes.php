@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["respondentTypeClientTypeId"])){
+if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -16,7 +16,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["responde
 	/*Query string*/
 	$token = $_POST["token"];
 	$officeId = $_POST["officeId"];
-	$respondentTypeClientTypeId = $_POST["respondentTypeClientTypeId"];
+	$clientTypeId = $_POST["clientTypeId"];
 	/*Query string*/
 
 
@@ -71,14 +71,14 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["responde
 			INNER JOIN servicetypes_tab 
 			ON officeservices_tab.servicetype_id = servicetypes_tab.servicetype_id 
 			WHERE officeservices_tab.office_id = :officeId 
-			AND officeservices_tab.clienttype_id = :respondentTypeClientTypeId;
+			AND officeservices_tab.clienttype_id = :clientTypeId;
 		";
 		/*_ _Prep query*/
 
 		/*_ _Execute query*/
 		$getServiceType_QueryObj = $vmcCsat_Conn->prepare($getServiceType_Query);		
 		$getServiceType_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
-		$getServiceType_QueryObj->bindValue(':respondentTypeClientTypeId', intval($respondentTypeClientTypeId), PDO::PARAM_INT);
+		$getServiceType_QueryObj->bindValue(':clientTypeId', intval($clientTypeId), PDO::PARAM_INT);
 		$execution = $getServiceType_QueryObj->execute();
 		/*_ _Execute query*/
 
@@ -101,7 +101,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["responde
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || isset($_POST["respondentTypeClientTypeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || isset($_POST["clientTypeId"])){
 	$getServiceTypes_Resp = new stdClass();
 	$getServiceTypes_Resp->execution = null;
 	$getServiceTypes_Resp->globalTokenResult = null;

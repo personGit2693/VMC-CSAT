@@ -166,26 +166,15 @@ if(isset($_GET["rateToken"])){
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Service-Type</div>
 					<div class="stepSetPerFieldFlex" id="serviceTypeRadioBtnsWrap">
-						<!--Component
-						<div class="radioCheckFlex_RoClass">
-							<label for="service1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="service1-Id" name="service-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Patient Care</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="service2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="service2-Id" name="service-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Documents</div>
-						</div>
-						-->
-						Select Respondent and Office.
+						<!--Component-->
+						Select Respondent and Point of Entry Department Visited.
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Service Availed</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex" id="officeServiceRadioBtnsWrap">
+						<!--
 						<div class="radioCheckFlex_RoClass">
 							<label for="officerService1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="officerService1-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -215,6 +204,8 @@ if(isset($_GET["rateToken"])){
 							<input type="radio" id="officerService5-Id" name="officeService-Name" onchange="radioCheckSelected(this)" autocomplete="off">
 							<div class="radioCheckTxtLabel_RoClass">Settlement of Fees</div>
 						</div>
+						-->
+						Select Respondent, Point of Entry Department Visited and Service-Type first.
 					</div>
 				</div>
 
@@ -840,14 +831,13 @@ if(isset($_GET["rateToken"])){
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
-			<script type="module" src="../JS/Gateway_RespondentType.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_RespondentType.js"></script>
+			<script type="module" src="../../Global JS/Values_Page_RateService.js"></script>
 			<script type="module" src="../JS/Gateway_Religions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js"></script>
 			<script type="module" src="../JS/Gateway_Floors.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Floors.js"></script>
 			<script type="module" src="../JS/Gateway_Offices.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js"></script>			
 			<script type="module" src="../JS/Gateway_ServiceTypes.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js"></script>
 			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			

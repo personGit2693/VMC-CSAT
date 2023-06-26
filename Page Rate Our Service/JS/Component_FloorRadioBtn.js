@@ -14,7 +14,7 @@ function FloorRadioBtn(){
 
 		floorRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="floor-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), submitRequestOffices(this.value)" autocomplete="off"/>`+
+			`<input type="radio" id="`+elemValue+`" name="floor-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueFloor(this.value), submitRequestOffices()" autocomplete="off"/>`+
 			`<div class="radioCheckTxtLabel_RoClass">`+floorDetails_Array[index].floorAbbre+`</div>`+
 		`</div>`;
 	}
