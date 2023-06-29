@@ -80,6 +80,17 @@ function valueReligion(selectedReligion_Base){
 /*Assign Value for religionId*/
 
 
+/*Assign Value for educationId*/
+function valueEducAttain(selectedEducAttain_Base){
+	const selectedEducAttain_Obj = JSON.parse(atob(selectedEducAttain_Base));
+
+	educationId = selectedEducAttain_Obj.educattain_id;
+
+	submittedRate.respondentDetails.educationId = educationId;
+}
+/*Assign Value for educationId*/
+
+
 /*Assign Value for buildingId*/
 function valueBuilding(selectedBuilding_Base){
 	const selectedBuilding_Obj = JSON.parse(atob(selectedBuilding_Base));
@@ -132,6 +143,8 @@ function valueOffice(selectedOffice_Base){
 
 	officeId = selectedOffice_Obj.office_id;
 
+	submittedRate.respondentDetails.officeId = officeId;
+
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
 	officeServiceRadioBtnsWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 }
@@ -143,7 +156,10 @@ function valueServiceType(selectedServiceType_Base){
 	const selectedServiceType_Obj = JSON.parse(atob(selectedServiceType_Base));
 
 	officeServiceId = "";
+
 	serviceTypeId = selectedServiceType_Obj.serviceTypeId;
+
+	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
 
 	officeServiceRadioBtnsWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 }

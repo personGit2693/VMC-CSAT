@@ -338,28 +338,25 @@
 
 
 @mixin customRadioCheck_MT_Style{
-	--cusRadioWidth: 20px; /*To be changed*/
-	--cusRadioHeight: 20px; /*To be changed*/
+	--cusRadioWidthHeight: 20px;
 }
 @mixin customRadioCheck_Laptop_Style{
-	--cusRadioWidth: 25px; /*changed*/
-	--cusRadioHeight: 25px; /*changed*/
+	--cusRadioWidthHeight: 25px; 
 }
 @mixin customRadioCheck_Desktop_Style{
-	--cusRadioWidth: 30px; /*changed*/
-	--cusRadioHeight: 30px; /*changed*/
+	--cusRadioWidthHeight: 30px;
 }
 
 
 
 @mixin radioCheckTxtLabel_MT_Style{
-	--cusRadioFsize: 12px; /*To be changed*/
+	--cusRadioFsize: 12px;
 }
 @mixin radioCheckTxtLabel_Laptop_Style{
-	--cusRadioFsize: 14px; /*changed*/
+	--cusRadioFsize: 14px;
 }
 @mixin radioCheckTxtLabel_Desktop_Style{
-	--cusRadioFsize: 16px; /*changed*/
+	--cusRadioFsize: 16px;
 }
 
 
@@ -387,14 +384,35 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Dropdown Menu Framework*/
-@mixin dropdownReligion_Mobile_Style{
+@mixin dropdown_Mobile_Style{
 	--cusDropZIndex: 1;
 	width: auto; /*To be changed*/
 }
-
-@mixin dropdownReligion_TLD_Style{
+@mixin dropdown_TLD_Style{
 	--cusDropZIndex: 1;
 	width: 190px; /*changed*/
+}
+
+
+@mixin dropdownFSize_MT_Style{	
+	--cusDropFsize: 12px;
+}
+@mixin dropdownFSize_Laptop_Style{	
+	--cusDropFsize: 14px;
+}
+@mixin dropdownFSize_Desktop_Style{	
+	--cusDropFsize: 16px;
+}
+
+
+@mixin dropdownArrowSize_MT_Style{
+	--cusDropArrowWidthHeight: 12px;
+}
+@mixin dropdownArrowSize_Laptop_Style{
+	--cusDropArrowWidthHeight: 14px;
+}
+@mixin dropdownArrowSize_Desktop_Style{
+	--cusDropArrowWidthHeight: 16px;
 }
 /*Dropdown Menu Framework*/
 /***********************************************************************************************************************************************************************************************************/

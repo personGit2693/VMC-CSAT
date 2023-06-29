@@ -13,33 +13,14 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{	
-	--cusCheckboxMTWidth: 16px;
-	--cusCheckboxLDWidth: 20px;
-	--cusCheckboxMTHeight: 16px;
-	--cusCheckboxLDHeight: 20px;
+	--cusCheckboxFStyle: normal;  
+	--cusCheckboxFWeight: normal; 
+	--cusCheckboxColor: black;
 	--cusCheckboxBorderWidth: 1px;
 	--cusCheckboxBorderColor: gray;
 
 
-	--normBtnMWidth: 100px;
-	--normBtnTWidth: 100px;
-	--normBtnLWidth: 110px;
-	--normBtnDWidth: 110px;
-	--normBtnPadding: 7px;
-	--normBtnBorderWidth: 1px;
-	--normBtnBorderColor: #237DB6;
-	--normBtnRadius: 7px;
-	--normBtnFWeight: normal;
-	--normBtnFMTSize: 12px;
-	--normBtnFLDSize: 14px;
-	--normBtnBgColor: #237DB6;
-	--normBtnFcolor: #ffffff;
-	--normBtnHovActFColor: #ffffff;
-	--normBtnHovActBgColor: #0E8EF1;
-
-
-	--spinnerWidth: 75px;
-	--spinnerHeight: 75px;
+	--spinnerWidthHeight: 75px;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -186,27 +167,29 @@
 		@include agreeTermsCheckbox_Style;
 	}
 
-	label[for="agreeTermsCheckbox"]{
+	.boxme_RoClass{
+		@include agreeCheckboxSize_MT_Style;
+	}
+
+	label[for="agreeTermsCheckbox-Id"]{
+		@include agreeCheckboxFontSize_MT_Style;
 		@include agreeCheckboxLabel_Style
 	}
 
 
+	.enabledBtn-Class{
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_MT_Style;
+		@include rateServiceBtnWidth_MT_Style;
+		@include rateServiceEnabledBtn_Style;
+	}
+
+
 	.disabledBtn-Class{
-		--normBtnMWidth: 100px;
-		--normBtnTWidth: 100px;
-		--normBtnLWidth: 110px;
-		--normBtnDWidth: 110px;
-		--normBtnPadding: 7px;
-		--normBtnBorderWidth: 1px;
-		--normBtnBorderColor: gray;
-		--normBtnRadius: 7px;
-		--normBtnFWeight: normal;
-		--normBtnFMTSize: 12px;
-		--normBtnFLDSize: 14px;
-		--normBtnBgColor: gray;
-		--normBtnFcolor: #ffffff;
-		--normBtnHovActFColor: #ffffff;
-		--normBtnHovActBgColor: gray;
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_MT_Style;
+		@include rateServiceBtnWidth_MT_Style;
+		@include rateServiceDisabledBtn_Style;
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
@@ -266,26 +249,27 @@
 		@include agreeTermsCheckbox_Style;
 	}
 
-	label[for="agreeTermsCheckbox"]{
+	.boxme_RoClass{
+		@include agreeCheckboxSize_MT_Style;
+	}
+
+	label[for="agreeTermsCheckbox-Id"]{
+		@include agreeCheckboxFontSize_MT_Style;
 		@include agreeCheckboxLabel_Style
 	}
 
-	.disabledBtn-Class{
-		--normBtnMWidth: 100px;
-		--normBtnTWidth: 100px;
-		--normBtnLWidth: 110px;
-		--normBtnDWidth: 110px;
-		--normBtnPadding: 7px;
-		--normBtnBorderWidth: 1px;
-		--normBtnBorderColor: gray;
-		--normBtnRadius: 7px;
-		--normBtnFWeight: normal;
-		--normBtnFMTSize: 12px;
-		--normBtnFLDSize: 14px;
-		--normBtnBgColor: gray;
-		--normBtnFcolor: #ffffff;
-		--normBtnHovActFColor: #ffffff;
-		--normBtnHovActBgColor: gray;
+	.enabledBtn-Class{
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_MT_Style;
+		@include rateServiceBtnWidth_MT_Style;
+		@include rateServiceEnabledBtn_Style;
+	}
+
+	.disabledBtn-Class{		
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_MT_Style;
+		@include rateServiceBtnWidth_MT_Style;
+		@include rateServiceDisabledBtn_Style;
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
@@ -346,26 +330,27 @@
 		@include agreeTermsCheckbox_Style;
 	}
 
-	label[for="agreeTermsCheckbox"]{
+	.boxme_RoClass{
+		@include agreeCheckboxSize_Laptop_Style;
+	}
+
+	label[for="agreeTermsCheckbox-Id"]{
+		@include agreeCheckboxFontSize_Laptop_Style;
 		@include agreeCheckboxLabel_Style
 	}
 
-	.disabledBtn-Class{
-		--normBtnMWidth: 100px;
-		--normBtnTWidth: 100px;
-		--normBtnLWidth: 110px;
-		--normBtnDWidth: 110px;
-		--normBtnPadding: 7px;
-		--normBtnBorderWidth: 1px;
-		--normBtnBorderColor: gray;
-		--normBtnRadius: 7px;
-		--normBtnFWeight: normal;
-		--normBtnFMTSize: 12px;
-		--normBtnFLDSize: 14px;
-		--normBtnBgColor: gray;
-		--normBtnFcolor: #ffffff;
-		--normBtnHovActFColor: #ffffff;
-		--normBtnHovActBgColor: gray;
+	.enabledBtn-Class{
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_Laptop_Style;
+		@include rateServiceBtnWidth_LD_Style;
+		@include rateServiceEnabledBtn_Style;
+	}
+
+	.disabledBtn-Class{		
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_Laptop_Style;
+		@include rateServiceBtnWidth_LD_Style;
+		@include rateServiceDisabledBtn_Style;
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
@@ -425,26 +410,27 @@
 		@include agreeTermsCheckbox_Style;
 	}
 
-	label[for="agreeTermsCheckbox"]{
+	.boxme_RoClass{
+		@include agreeCheckboxSize_Desktop_Style;
+	}
+
+	label[for="agreeTermsCheckbox-Id"]{
+		@include agreeCheckboxFontSize_Desktop_Style;
 		@include agreeCheckboxLabel_Style
 	}
 
-	.disabledBtn-Class{
-		--normBtnMWidth: 100px;
-		--normBtnTWidth: 100px;
-		--normBtnLWidth: 110px;
-		--normBtnDWidth: 110px;
-		--normBtnPadding: 7px;
-		--normBtnBorderWidth: 1px;
-		--normBtnBorderColor: gray;
-		--normBtnRadius: 7px;
-		--normBtnFWeight: normal;
-		--normBtnFMTSize: 12px;
-		--normBtnFLDSize: 14px;
-		--normBtnBgColor: gray;
-		--normBtnFcolor: #ffffff;
-		--normBtnHovActFColor: #ffffff;
-		--normBtnHovActBgColor: gray;
+	.enabledBtn-Class{
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_Desktop_Style;
+		@include rateServiceBtnWidth_LD_Style;
+		@include rateServiceEnabledBtn_Style;
+	}
+
+	.disabledBtn-Class{		
+		@include rateServiceBtn_Style;
+		@include rateServiceBtnFSize_Desktop_Style;
+		@include rateServiceBtnWidth_LD_Style;
+		@include rateServiceDisabledBtn_Style;
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/

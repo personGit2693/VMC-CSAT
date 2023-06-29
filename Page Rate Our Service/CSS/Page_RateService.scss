@@ -13,9 +13,9 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	/*Radio Input Framework*/
+	/*Radio Input Framework*/	
 	--cusRadioBorderWidth: 1px;
-	--cusRadioBorderColor: gray;	
+	--cusRadioBorderColor: gray;
 	--cusRadioBgColor: transparent;
 	--cusRadioFWeight: normal;	
 	--cusRadioFColor: gray;
@@ -38,7 +38,7 @@
 	--cusDropOptWrapScrollColor: green;
 	--cusDropOptWrapScrollHovColor: green;
 	--cusDropOptLabColor: gray;
-	--cusDropOptHovLabBgColor: #DEE1E6;
+	--cusDropOptHovLabBgColor: #DEE1E6;	
 	/*Dropdown Menu Framework*/
 
 
@@ -404,7 +404,15 @@ body{
 
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
-		@include dropdownReligion_Mobile_Style;
+		@include dropdown_Mobile_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_MT_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_MT_Style;
 	}
 	/*Dropdown Menu Framework*/
 
@@ -507,7 +515,15 @@ body{
 
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
-		@include dropdownReligion_TLD_Style;
+		@include dropdown_TLD_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_MT_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_MT_Style;
 	}
 	/*Dropdown Menu Framework*/
 
@@ -610,7 +626,15 @@ body{
 
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
-		@include dropdownReligion_TLD_Style;
+		@include dropdown_TLD_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_Laptop_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_Laptop_Style;
 	}
 	/*Dropdown Menu Framework*/
 
@@ -713,7 +737,19 @@ body{
 
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
-		@include dropdownReligion_TLD_Style;
+		@include dropdown_TLD_Style;
+	}
+
+	#dropdownReligion-Id{
+		@include dropdown_TLD_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_Desktop_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_Desktop_Style;
 	}
 	/*Dropdown Menu Framework*/
 
