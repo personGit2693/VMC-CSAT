@@ -2809,13 +2809,18 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Dropdown Menu Framework*/
-/*Dropdown Menu Framework*/
+/*Checkbox Input Framework*/
+/*Checkbox Input Framework*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Dropdown Menu Framework*/
 /*Dropdown Menu Framework*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Button Framework*/
+/*Button Framework*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
@@ -2830,6 +2835,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --cusRadioFWeight: normal;
   --cusRadioFColor: gray;
   /*Radio Input Framework*/
+  /*Checkbox Input Framework*/
+  --cusCheckboxFStyle: normal;
+  --cusCheckboxFWeight: normal;
+  --cusCheckboxColor: gray;
+  --cusCheckboxBorderWidth: 1px;
+  --cusCheckboxBorderColor: gray;
+  /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   --cusDropBorderWidth: 1px;
   --cusDropBorderColor: gray;
@@ -2849,16 +2861,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --cusDropOptHovLabBgColor: #DEE1E6;
   /*Dropdown Menu Framework*/
   /*Button Framework*/
-  --normBtnMWidth: auto;
-  --normBtnTWidth: auto;
-  --normBtnLWidth: auto;
-  --normBtnDWidth: auto;
+  --normBtnWidth: auto;
   --normBtnPadding: 8px;
   --normBtnBorderWidth: 1px;
   --normBtnRadius: 4px;
   --normBtnFWeight: normal;
-  --normBtnFMTSize: 12px;
-  --normBtnFLDSize: 15px;
   --normBtnFcolor: #ffffff;
   --normBtnHovActFColor: #ffffff;
   /*Button Framework*/ }
@@ -3325,6 +3332,21 @@ body {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Asterisk*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.redAsterisk-Class {
+  color: red; }
+
+.greenAsterisk-Class {
+  color: green; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Asterisk*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Step sets*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
@@ -3468,12 +3490,21 @@ body {
     --cusRadioFsize: 12px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidth: 95px;
-    /*To be changed*/
-    --radioIconLabelHeight: 95px;
-    /*To be changed*/ }
+    --radioIconLabelWidthHeight: 95px; }
 
   /*Radio Input Framework*/
+  /*Checkbox Input Framework*/
+  .cusCheckBoxPaper_RoClass {
+    margin: 5px 0px 0px 0px;
+    /*To be changed*/ }
+
+  .cusCheckBoxPaper_RoClass > label {
+    --cusCheckboxFStyle: 12px; }
+
+  .boxme_RoClass {
+    --cusCheckboxWidthHeight: 20px; }
+
+  /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
@@ -3484,17 +3515,19 @@ body {
     --cusDropFsize: 12px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 12px; }
+    --cusDropArrowWidthHeight: 14px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
+    --normBtnFSize: 12px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
+    --normBtnFSize: 12px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;
@@ -3648,12 +3681,21 @@ body {
     --cusRadioFsize: 12px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidth: 95px;
-    /*To be changed*/
-    --radioIconLabelHeight: 95px;
-    /*To be changed*/ }
+    --radioIconLabelWidthHeight: 95px; }
 
   /*Radio Input Framework*/
+  /*Checkbox Input Framework*/
+  .cusCheckBoxPaper_RoClass {
+    margin: 5px 20px 0px 0px;
+    /*changed*/ }
+
+  .cusCheckBoxPaper_RoClass > label {
+    --cusCheckboxFStyle: 12px; }
+
+  .boxme_RoClass {
+    --cusCheckboxWidthHeight: 20px; }
+
+  /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
@@ -3664,17 +3706,19 @@ body {
     --cusDropFsize: 12px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 12px; }
+    --cusDropArrowWidthHeight: 14px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
+    --normBtnFSize: 12px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
+    --normBtnFSize: 12px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;
@@ -3831,12 +3875,21 @@ body {
     --cusRadioFsize: 14px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidth: 100px;
-    /*To be changed*/
-    --radioIconLabelHeight: 100px;
-    /*To be changed*/ }
+    --radioIconLabelWidthHeight: 100px; }
 
   /*Radio Input Framework*/
+  /*Checkbox Input Framework*/
+  .cusCheckBoxPaper_RoClass {
+    margin: 5px 20px 0px 0px;
+    /*changed*/ }
+
+  .cusCheckBoxPaper_RoClass > label {
+    --cusCheckboxFStyle: 14px; }
+
+  .boxme_RoClass {
+    --cusCheckboxWidthHeight: 25px; }
+
+  /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
@@ -3847,17 +3900,19 @@ body {
     --cusDropFsize: 14px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 14px; }
+    --cusDropArrowWidthHeight: 16px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
+    --normBtnFSize: 14px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
+    --normBtnFSize: 14px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;
@@ -4014,12 +4069,21 @@ body {
     --cusRadioFsize: 16px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidth: 105px;
-    /*To be changed*/
-    --radioIconLabelHeight: 105px;
-    /*To be changed*/ }
+    --radioIconLabelWidthHeight: 105px; }
 
   /*Radio Input Framework*/
+  /*Checkbox Input Framework*/
+  .cusCheckBoxPaper_RoClass {
+    margin: 5px 20px 0px 0px;
+    /*changed*/ }
+
+  .cusCheckBoxPaper_RoClass > label {
+    --cusCheckboxFStyle: 16px; }
+
+  .boxme_RoClass {
+    --cusCheckboxWidthHeight: 30px; }
+
+  /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
@@ -4035,17 +4099,19 @@ body {
     --cusDropFsize: 16px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 16px; }
+    --cusDropArrowWidthHeight: 18px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
+    --normBtnFSize: 16px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
+    --normBtnFSize: 16px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;

@@ -91,7 +91,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Respondent</div>
+					<div class="stepSetPerFieldTitle-Class">Respondent<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="respondentTypeWrap">						
 						<!--Component-->
 						Loading...						
@@ -99,7 +99,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Age</div>
+					<div class="stepSetPerFieldTitle-Class">Age<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="ageRangesRadioBtnsWrap">
 						<!--Component-->
 						Loading...
@@ -107,7 +107,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Gender</div>
+					<div class="stepSetPerFieldTitle-Class">Gender<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="genderRadioBtnsWrap">
 						<!--Component-->
 						Loading...
@@ -115,7 +115,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Gender Preference</div>
+					<div class="stepSetPerFieldTitle-Class">Gender Preference<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="genderPrefRadioBtnsWrap">
 						<!--Component-->
 						Loading...
@@ -123,7 +123,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Religion</div>
+					<div class="stepSetPerFieldTitle-Class">Religion<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="religionDropdownMenuWrap">
 						<div class="scdropdownSelBox_RoClass" id="dropdownReligion-Id">
 							<div class="scdropOptionCon_RoClass" id="dropdownReligionCon-Id">
@@ -140,7 +140,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Educational Attainment</div>
+					<div class="stepSetPerFieldTitle-Class">Educational Attainment<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="educAttainmentRadioBtnsWrap">
 						<!--Component-->
 						Loading...
@@ -148,7 +148,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Building</div>
+					<div class="stepSetPerFieldTitle-Class">Building<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="buildingRadioBtnsWrap">
 						<!--Component-->
 						Loading...
@@ -156,7 +156,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Floor</div>
+					<div class="stepSetPerFieldTitle-Class">Floor<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="floorRadioBtnsWrap">
 						<!--Component-->
 						Choose building first.
@@ -164,7 +164,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Point of Entry Department Visited</div>
+					<div class="stepSetPerFieldTitle-Class">Point of Entry Department Visited<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="officeRadioBtnsWrap">
 						<!--Component-->						
 						Select building and floor.
@@ -172,7 +172,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Service-Type</div>
+					<div class="stepSetPerFieldTitle-Class">Service-Type<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="serviceTypeRadioBtnsWrap">
 						<!--Component-->
 						Select Respondent and Point of Entry Department Visited.
@@ -180,15 +180,15 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Service Availed</div>
-					<div class="stepSetPerFieldFlex" id="officeServiceRadioBtnsWrap">
-						<!--Component-->
+					<div class="stepSetPerFieldTitle-Class">Service Availed<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldFlex" id="officeServiceCheckboxesWrap">
+						<!--Component-->						
 						Select Respondent, Point of Entry Department Visited and Service-Type first.
 					</div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">How frequent do you visit this facility?</div>
+					<div class="stepSetPerFieldTitle-Class">How frequent do you visit this facility?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="freqVisitRadioBtnsWrap">
 						<!--Component-->
 						Loading...
@@ -782,6 +782,8 @@ if(isset($_GET["rateToken"])){
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
+			<script type="module" src="../JS/Validator_StepOne.js"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_StepOne.js"></script>
 			<script type="module" src="../../Global JS/Values_Page_RateService.js"></script>
 			<script type="module" src="../JS/Gateway_Religions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js"></script>

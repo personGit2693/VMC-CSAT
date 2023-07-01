@@ -362,20 +362,56 @@
 
 
 @mixin radioCheckIconLabel_MT_Style{
-	--radioIconLabelWidth: 95px; /*To be changed*/
-	--radioIconLabelHeight: 95px; /*To be changed*/
+	--radioIconLabelWidthHeight: 95px;
 }
 
 @mixin radioCheckIconLabel_Laptop_Style{
-	--radioIconLabelWidth: 100px; /*To be changed*/
-	--radioIconLabelHeight: 100px; /*To be changed*/
+	--radioIconLabelWidthHeight: 100px;
 }
 
 @mixin radioCheckIconLabel_Desktop_Style{
-	--radioIconLabelWidth: 105px; /*To be changed*/
-	--radioIconLabelHeight: 105px; /*To be changed*/
+	--radioIconLabelWidthHeight: 105px;
 }
 /*Radio Input Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Checkbox Input Framework*/
+@mixin cusCheckbox_Mobile_RoClass{
+	margin: 5px 0px 0px 0px; /*To be changed*/
+}
+@mixin cusCheckbox_TLD_RoClass{
+	margin: 5px 20px 0px 0px; /*changed*/
+}
+
+
+
+@mixin cusCheckboxCheck_MT_Style{
+	--cusCheckboxWidthHeight: 20px;
+}
+@mixin cusCheckboxCheck_Laptop_Style{
+	--cusCheckboxWidthHeight: 25px;
+}
+@mixin cusCheckboxCheck_Desktop_Style{
+	--cusCheckboxWidthHeight: 30px;
+}
+
+
+
+@mixin cusCheckboxTxtLabel_MT_Style{
+	--cusCheckboxFStyle: 12px;
+}
+@mixin cusCheckboxTxtLabel_Laptop_Style{
+	--cusCheckboxFStyle: 14px;
+}
+@mixin cusCheckboxTxtLabel_Desktop_Style{
+	--cusCheckboxFStyle: 16px;
+}
+/*Checkbox Input Framework*/
 /***********************************************************************************************************************************************************************************************************/
 
 
@@ -406,13 +442,13 @@
 
 
 @mixin dropdownArrowSize_MT_Style{
-	--cusDropArrowWidthHeight: 12px;
-}
-@mixin dropdownArrowSize_Laptop_Style{
 	--cusDropArrowWidthHeight: 14px;
 }
-@mixin dropdownArrowSize_Desktop_Style{
+@mixin dropdownArrowSize_Laptop_Style{
 	--cusDropArrowWidthHeight: 16px;
+}
+@mixin dropdownArrowSize_Desktop_Style{
+	--cusDropArrowWidthHeight: 18px;
 }
 /*Dropdown Menu Framework*/
 /***********************************************************************************************************************************************************************************************************/
@@ -422,7 +458,7 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
-/*Dropdown Menu Framework*/
+/*Button Framework*/
 @mixin proceedBtn_Style{
 	margin: 5px;
 	--normBtnBorderColor: #1B85BD;
@@ -438,5 +474,17 @@
 	--normBtnBgColor: #FC5050;
 	--normBtnHovActBgColor: #E22D41;
 }
-/*Dropdown Menu Framework*/
+
+
+
+@mixin buttonFSize_MT_Style{
+	--normBtnFSize: 12px;
+}
+@mixin buttonFSize_Laptop_Style{
+	--normBtnFSize: 14px;
+}
+@mixin buttonFSize_Desktop_Style{
+	--normBtnFSize: 16px;
+}
+/*Button Framework*/
 /***********************************************************************************************************************************************************************************************************/

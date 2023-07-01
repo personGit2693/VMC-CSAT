@@ -20,8 +20,12 @@ export const buildingRadioBtnsWrap = document.getElementById("buildingRadioBtnsW
 export const floorRadioBtnsWrap = document.getElementById("floorRadioBtnsWrap");
 export const officeRadioBtnsWrap = document.getElementById("officeRadioBtnsWrap");
 export const serviceTypeRadioBtnsWrap = document.getElementById("serviceTypeRadioBtnsWrap");
-export const officeServiceRadioBtnsWrap = document.getElementById("officeServiceRadioBtnsWrap");
+export const officeServiceCheckboxesWrap = document.getElementById("officeServiceCheckboxesWrap");
 export const freqVisitRadioBtnsWrap = document.getElementById("freqVisitRadioBtnsWrap");
+export const nextStepOneBtn = document.getElementById("nextStepOneBtn-Id");
+export const nextStepTwoBtn = document.getElementById("nextStepTwoBtn-Id");
+export const nextStepThreeBtn = document.getElementById("nextStepThreeBtn-Id");
+export const submitScoreBtn = document.getElementById("submitScoreBtn-Id");
 /*Elements*/
 
 /*

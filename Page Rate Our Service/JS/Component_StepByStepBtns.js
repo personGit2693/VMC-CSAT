@@ -1,6 +1,6 @@
 /*Components*/
 function StepOneBtns(){
-	let stepOneBtns = `<button class="normButton_RoClass proceedBtn-Class" id="nextStepOneBtn-Id" onclick="nextStep('stepByStepItem-Class', 'headerDynamicSubTxt-Id', 'stepSets-Class')">`+
+	let stepOneBtns = `<button class="normButton_RoClass proceedBtn-Class" id="nextStepOneBtn-Id" onclick="submitValidationStepOne()">`+
 		`Proceed`+
 	`</button>`;
 

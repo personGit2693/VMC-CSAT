@@ -6,3 +6,6 @@
 
 3. Await and Ready to load Structure
 	*Submit Request->Gateway->Request->View->Component
+
+4. Validation condition (Validator return true or false)
+	*Submit Validation->Validator

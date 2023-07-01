@@ -22,6 +22,15 @@
 	/*Radio Input Framework*/
 
 
+	/*Checkbox Input Framework*/
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--cusCheckboxColor: gray;	
+	--cusCheckboxBorderWidth: 1px;
+	--cusCheckboxBorderColor: gray;
+	/*Checkbox Input Framework*/
+
+
 	/*Dropdown Menu Framework*/
 	--cusDropBorderWidth: 1px;
 	--cusDropBorderColor: gray;
@@ -43,18 +52,13 @@
 
 
 	/*Button Framework*/
-	--normBtnMWidth: auto;
-	--normBtnTWidth: auto;
-	--normBtnLWidth: auto;
-	--normBtnDWidth: auto;
+	--normBtnWidth: auto;
 	--normBtnPadding: 8px;
-	--normBtnBorderWidth: 1px;	
+	--normBtnBorderWidth: 1px;
 	--normBtnRadius: 4px;
 	--normBtnFWeight: normal;
-	--normBtnFMTSize: 12px;
-	--normBtnFLDSize: 15px;	
 	--normBtnFcolor: #ffffff;
-	--normBtnHovActFColor: #ffffff;	
+	--normBtnHovActFColor: #ffffff;
 	/*Button Framework*/
 }
 
@@ -319,6 +323,28 @@ body{
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Asterisk*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.redAsterisk-Class{
+	color: red;
+}
+
+.greenAsterisk-Class{
+	color: green;
+}
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Asterisk*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Step sets*/
 
 /***********************************************************************************************************************************************************************************************************/
@@ -402,6 +428,21 @@ body{
 	/*Radio Input Framework*/
 
 
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_Mobile_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_MT_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_MT_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
 		@include dropdown_Mobile_Style;
@@ -419,10 +460,12 @@ body{
 
 	/*Button Framework*/
 	.proceedBtn-Class{
+		@include buttonFSize_MT_Style;
 		@include proceedBtn_Style;
 	}
 
 	.backBtn-Class{
+		@include buttonFSize_MT_Style;
 		@include backBtn_Style;
 	}
 	/*Button Framework*/
@@ -513,6 +556,21 @@ body{
 	/*Radio Input Framework*/
 
 
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_TLD_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_MT_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_MT_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
 		@include dropdown_TLD_Style;
@@ -530,10 +588,12 @@ body{
 
 	/*Button Framework*/
 	.proceedBtn-Class{
+		@include buttonFSize_MT_Style;
 		@include proceedBtn_Style;
 	}
 
 	.backBtn-Class{
+		@include buttonFSize_MT_Style;
 		@include backBtn_Style;
 	}
 	/*Button Framework*/
@@ -624,6 +684,21 @@ body{
 	/*Radio Input Framework*/
 
 
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_TLD_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_Laptop_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_Laptop_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
 		@include dropdown_TLD_Style;
@@ -641,10 +716,12 @@ body{
 
 	/*Button Framework*/
 	.proceedBtn-Class{
+		@include buttonFSize_Laptop_Style;
 		@include proceedBtn_Style;
 	}
 
 	.backBtn-Class{
+		@include buttonFSize_Laptop_Style;
 		@include backBtn_Style;
 	}
 	/*Button Framework*/
@@ -735,6 +812,21 @@ body{
 	/*Radio Input Framework*/
 
 
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_TLD_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_Desktop_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_Desktop_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
 	/*Dropdown Menu Framework*/
 	#dropdownReligion-Id{
 		@include dropdown_TLD_Style;
@@ -756,10 +848,12 @@ body{
 
 	/*Button Framework*/
 	.proceedBtn-Class{
+		@include buttonFSize_Desktop_Style;
 		@include proceedBtn_Style;
 	}
 
 	.backBtn-Class{
+		@include buttonFSize_Desktop_Style;
 		@include backBtn_Style;
 	}
 	/*Button Framework*/

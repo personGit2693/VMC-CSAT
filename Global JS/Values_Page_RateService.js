@@ -1,5 +1,5 @@
 /*Import*/
-import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceRadioBtnsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
+import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
 /*Import*/
 
 
@@ -30,8 +30,9 @@ var submittedRate = {
 		educationId: educationId,
 		officeId: officeId,
 		clientTypeId: clientTypeId,
-		visityearId: visityearId
-	}
+		freqVisitId: freqVisitId
+	},
+	availedOfficeServices:[]
 };
 /*Prep export variables*/
 
@@ -120,7 +121,7 @@ function valueRespondentType(selectedRespondentType_Base){
 	const selectedRespondentType_Obj = JSON.parse(atob(selectedRespondentType_Base));
 
 	serviceTypeId = "";
-	officeServiceId = "";
+	submittedRate.availedOfficeServices = [];
 
 	respondentId = selectedRespondentType_Obj.respondent_id ;
 	clientTypeId = selectedRespondentType_Obj.clienttype_id;	
@@ -129,7 +130,7 @@ function valueRespondentType(selectedRespondentType_Base){
 	submittedRate.respondentDetails.clientTypeId = clientTypeId;	
 
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
-	officeServiceRadioBtnsWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
+	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 }
 /*Assign Value for clientTypeId, respondentId*/
 
@@ -139,14 +140,14 @@ function valueOffice(selectedOffice_Base){
 	const selectedOffice_Obj = JSON.parse(atob(selectedOffice_Base));
 
 	serviceTypeId = "";
-	officeServiceId = "";
+	submittedRate.availedOfficeServices = [];
 
 	officeId = selectedOffice_Obj.office_id;
 
 	submittedRate.respondentDetails.officeId = officeId;
 
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
-	officeServiceRadioBtnsWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
+	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 }
 /*Assign Value for officeId*/
 
@@ -155,22 +156,30 @@ function valueOffice(selectedOffice_Base){
 function valueServiceType(selectedServiceType_Base){
 	const selectedServiceType_Obj = JSON.parse(atob(selectedServiceType_Base));
 
-	officeServiceId = "";
+	submittedRate.availedOfficeServices = [];
 
 	serviceTypeId = selectedServiceType_Obj.serviceTypeId;
 
 	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
 
-	officeServiceRadioBtnsWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
+	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 }
 /*Assign Value for serviceTypeId*/
 
 
 /*Assign Value for officeServiceId*/
-function valueOfficeService(selectedOfficeService_Base){
+function availedOfficeServices(selectedOfficeService_Base, officeServiceCheckbox){
 	const selectedOfficeService_Obj = JSON.parse(atob(selectedOfficeService_Base));
 
 	officeServiceId = selectedOfficeService_Obj.officeservice_id;
+	
+	if(officeServiceCheckbox.checked === true){
+		submittedRate.availedOfficeServices.push(officeServiceId);
+	}else if(officeServiceCheckbox.checked === false){
+		submittedRate.availedOfficeServices = submittedRate.availedOfficeServices.filter(function(value, index, array){
+			return value != officeServiceId;
+		});
+	}
 }
 /*Assign Value for officeServiceId*/
 
@@ -180,6 +189,8 @@ function valueFreqVisit(selectedFreqVisit_Base){
 	const selectedFreqVisit_Obj = JSON.parse(atob(selectedFreqVisit_Base));
 
 	freqVisitId = selectedFreqVisit_Obj.visityear_id;
+
+	submittedRate.respondentDetails.freqVisitId = freqVisitId;
 }
 /*Assign Value for freqVisitId*/
 
@@ -190,15 +201,16 @@ window.valueFloor = valueFloor;
 window.valueRespondentType = valueRespondentType;
 window.valueOffice = valueOffice;
 window.valueServiceType = valueServiceType;
-window.valueOfficeService = valueOfficeService;
+window.availedOfficeServices = availedOfficeServices;
 window.valueFreqVisit = valueFreqVisit;
 window.valueAgeRange = valueAgeRange;
 window.valueGender = valueGender;
 window.valueGenderPref = valueGenderPref;
 window.valueReligion = valueReligion;
+window.valueEducAttain = valueEducAttain;
 /*Declare global*/
 
 
 /*Export*/
-export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId};
+export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate};
 /*Export*/
