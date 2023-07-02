@@ -60,7 +60,7 @@ if(isset($_POST["token"])){
 
 	/*Valid global token*/
 	if($globalTokenResult === null){
-		/*_Get religions on db*/
+		/*_Get buildings on db*/
 		/*_ _Prep query*/
 		$getBuildings_Query = "SELECT * FROM buildings_tab";
 		/*_ _Prep query*/
@@ -77,7 +77,7 @@ if(isset($_POST["token"])){
 			}
 		}
 		/*_ _Fetching result*/
-		/*_Get religions on db*/
+		/*_Get buildings on db*/
 		
 
 		/*_Return response*/

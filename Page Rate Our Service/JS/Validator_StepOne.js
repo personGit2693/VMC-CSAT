@@ -1,5 +1,5 @@
 /*Import*/
-import {submittedRate, availedOfficeServices} from "../../Global JS/Values_Page_RateService.js";
+import {submittedRate} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 
@@ -12,7 +12,7 @@ function validatorStepOne(){
 			validationResult = false;
 			break;
 		}else if(submittedRate.respondentDetails[key] != ""){
-			if(availedOfficeServices.length == 0){
+			if(submittedRate.availedOfficeServices.length == 0){
 				validationResult = false;
 				break;
 			}

@@ -213,7 +213,8 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Which of the following best describes your awareness of a CC?</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex" id="cc1RadioBtnsWrap">
+						<!--Component
 						<div class="radioCheckFlex_RoClass">
 							<label for="ccAwareness1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="ccAwareness1-Id" name="ccAwareness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -236,13 +237,14 @@ if(isset($_GET["rateToken"])){
 							<label for="ccAwareness4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="ccAwareness4-Id" name="ccAwareness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
 							<div class="radioCheckTxtLabel_RoClass">I do not know what a CC is and I did not see this office’s CC.</div>
-						</div>	
+						</div>
+						-->	
 					</div>					
 				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Would you say that the CC of this office was?</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex" id="cc2RadioBtnsWrap">
 						<div class="radioCheckFlex_RoClass">
 							<label for="ccVisibility1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="ccVisibility1-Id" name="ccVisibility-Name" onchange="radioCheckSelected(this)" autocomplete="off">
@@ -271,7 +273,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">How much did the CC help you in your transaction?</div>
-					<div class="stepSetPerFieldFlex">
+					<div class="stepSetPerFieldFlex" id="cc3RadioBtnsWrap">
 						<div class="radioCheckFlex_RoClass">
 							<label for="ccHelpfulness1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
 							<input type="radio" id="ccHelpfulness1-Id" name="ccHelpfulness-Name" onchange="radioCheckSelected(this)" autocomplete="off">

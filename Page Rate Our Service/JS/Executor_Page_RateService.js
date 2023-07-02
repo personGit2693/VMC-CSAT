@@ -9,6 +9,7 @@ import {requestReligions} from "./Request_Religions.js";
 import {requestEducAttainment} from "./Request_EducAttainment.js";
 import {requestBuildings} from "./Request_Buildings.js";
 import {requestFreqVisits} from "./Request_FreqVisits.js";
+import {requestAwarenessRates} from "./Request_AwarenessRates.js";
 /*Import*/
 
 
@@ -51,6 +52,11 @@ requestEducAttainment();
 /*To render FreqVisitRadioBtn component*/
 requestFreqVisits();
 /*To render FreqVisitRadioBtn component*/
+
+
+/*To render AwarenessRateRadioBtn component*/
+requestAwarenessRates();
+/*To render AwarenessRateRadioBtn component*/
 
 
 /*To render buildings*/

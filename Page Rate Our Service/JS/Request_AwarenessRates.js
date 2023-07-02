@@ -1,5 +1,5 @@
 /*Import*/
-import renderBuildingRadioBtn from "./View_BuildingRadioBtn.js";
+import renderAwarenessRateRadioBtn from "./View_AwarenessRateRadioBtn.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -11,12 +11,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var buildingDetails_Array = [];
+var awarenessRateDetails_Array = [];
 /*Export variables*/
 
 
-/*Get buildings details*/
-function requestBuildings(){
+/*Get awareness rates*/
+function requestAwarenessRates(){
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -27,13 +27,13 @@ function requestBuildings(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting buildings has execution problem");
+					alert("Getting awareness rates has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					buildingDetails_Array = httpResponse.buildingDetails_Array;
-					renderBuildingRadioBtn();
+					awarenessRateDetails_Array = httpResponse.awarenessRateDetails_Array;
+					renderAwarenessRateRadioBtn();
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Buildings");
+				alert("Response is not an object on getting Awareness Rates");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,13 +43,13 @@ function requestBuildings(){
 
 
 	const queryString = "token="+token;
-	httpRequest.open("POST", "../PHP/Response_Buildings.php", false);
+	httpRequest.open("POST", "../PHP/Response_AwarenessRates.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);		
 }
-/*Get buildings details*/
+/*Get awareness rates*/
 
 
 /*Export*/
-export {requestBuildings ,buildingDetails_Array};
+export {requestAwarenessRates ,awarenessRateDetails_Array};
 /*Export*/

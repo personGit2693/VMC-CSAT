@@ -26,6 +26,9 @@ export const nextStepOneBtn = document.getElementById("nextStepOneBtn-Id");
 export const nextStepTwoBtn = document.getElementById("nextStepTwoBtn-Id");
 export const nextStepThreeBtn = document.getElementById("nextStepThreeBtn-Id");
 export const submitScoreBtn = document.getElementById("submitScoreBtn-Id");
+export const cc1RadioBtnsWrap = document.getElementById("cc1RadioBtnsWrap"); 
+export const cc2RadioBtnsWrap = document.getElementById("cc2RadioBtnsWrap");
+export const cc3RadioBtnsWrap = document.getElementById("cc3RadioBtnsWrap");
 /*Elements*/
 
 /*
