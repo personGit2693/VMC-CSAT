@@ -1,5 +1,5 @@
 /*Import*/
-import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
+import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
 /*Import*/
 
 
@@ -18,6 +18,9 @@ var clientTypeId = "";
 var serviceTypeId = "";
 var officeServiceId = "";
 var freqVisitId = "";
+var awarenessRatingViaId = "";
+var visibilityRatingViaId = "";
+var helpfulnessRatingViaId = "";
 
 
 var submittedRate = {
@@ -32,7 +35,13 @@ var submittedRate = {
 		clientTypeId: clientTypeId,
 		freqVisitId: freqVisitId
 	},
-	availedOfficeServices:[]
+	availedOfficeServices:[],
+	ccRate:{
+		awarenessRatingViaId: awarenessRatingViaId,
+		visibilityRatingViaId: visibilityRatingViaId,
+		helpfulnessRatingViaId: helpfulnessRatingViaId
+	},
+	respondentRatings:[]
 };
 /*Prep export variables*/
 
@@ -97,9 +106,13 @@ function valueBuilding(selectedBuilding_Base){
 	const selectedBuilding_Obj = JSON.parse(atob(selectedBuilding_Base));
 
 	floorId = "";
+	officeId = "";
 	buildingId = selectedBuilding_Obj.building_id;
 
+	submittedRate.respondentDetails.officeId = officeId;
+
 	floorRadioBtnsWrap.innerHTML = "Choose building first.";
+	officeRadioBtnsWrap.innerHTML = "Select building and floor.";
 }
 /*Assign Value for buildingId*/
 
@@ -110,6 +123,8 @@ function valueFloor(selectedFloor_Base){
 
 	officeId = "";
 	floorId = selectedFloor_Obj.floorId;
+
+	submittedRate.respondentDetails.officeId = officeId;
 
 	officeRadioBtnsWrap.innerHTML = "Select building and floor.";
 }
@@ -122,15 +137,18 @@ function valueRespondentType(selectedRespondentType_Base){
 
 	serviceTypeId = "";
 	submittedRate.availedOfficeServices = [];
+	submittedRate.respondentRatings = [];
 
 	respondentId = selectedRespondentType_Obj.respondent_id ;
 	clientTypeId = selectedRespondentType_Obj.clienttype_id;	
 
 	submittedRate.respondentDetails.respondentId = respondentId;
-	submittedRate.respondentDetails.clientTypeId = clientTypeId;	
+	submittedRate.respondentDetails.clientTypeId = clientTypeId;
+	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;	
 
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
 	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
+	questionsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
 }
 /*Assign Value for clientTypeId, respondentId*/
 
@@ -141,13 +159,16 @@ function valueOffice(selectedOffice_Base){
 
 	serviceTypeId = "";
 	submittedRate.availedOfficeServices = [];
+	submittedRate.respondentRatings = [];
 
 	officeId = selectedOffice_Obj.office_id;
 
 	submittedRate.respondentDetails.officeId = officeId;
+	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
 
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
 	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
+	questionsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
 }
 /*Assign Value for officeId*/
 
@@ -168,7 +189,7 @@ function valueServiceType(selectedServiceType_Base){
 
 
 /*Assign Value for officeServiceId*/
-function availedOfficeServices(selectedOfficeService_Base, officeServiceCheckbox){
+function valueOfficeServices(selectedOfficeService_Base, officeServiceCheckbox){
 	const selectedOfficeService_Obj = JSON.parse(atob(selectedOfficeService_Base));
 
 	officeServiceId = selectedOfficeService_Obj.officeservice_id;
@@ -195,22 +216,114 @@ function valueFreqVisit(selectedFreqVisit_Base){
 /*Assign Value for freqVisitId*/
 
 
+/*Assign Value for awarenessRatingViaId*/
+function valueAwarenessRating(selectedAwarenessRating_Base){
+	const selectedAwarenessRating_Obj = JSON.parse(atob(selectedAwarenessRating_Base));
+
+	awarenessRatingViaId = selectedAwarenessRating_Obj.ccquestionsrate_id;
+	visibilityRatingViaId = "";
+	helpfulnessRatingViaId = "";
+
+	submittedRate.ccRate.awarenessRatingViaId = awarenessRatingViaId;	
+	submittedRate.ccRate.visibilityRatingViaId = visibilityRatingViaId;
+	submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;
+
+	cc2RadioBtnsWrap.innerHTML = "No options for Visibility Rating to select!";
+	cc3RadioBtnsWrap.innerHTML = "No options for Helpfulness Rating to select!";
+
+	if(awarenessRatingViaId == 4){
+		visibilityRatingViaId = 12;
+		helpfulnessRatingViaId = 13;
+
+		submittedRate.ccRate.visibilityRatingViaId = visibilityRatingViaId;
+		submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;
+
+		cc2RadioBtnsWrap.innerHTML = "Not Applicable";
+		cc3RadioBtnsWrap.innerHTML = "Not Applicable";
+	}	
+}
+/*Assign Value for awarenessRatingViaId*/
+
+
+/*Assign Value for visibilityRatingViaId*/
+function valueVisibilityRating(selectedVisibilityRating_Base){
+	const selectedVisibilityRating_Obj = JSON.parse(atob(selectedVisibilityRating_Base));
+
+	visibilityRatingViaId = selectedVisibilityRating_Obj.ccquestionsrate_id;
+	helpfulnessRatingViaId = "";
+
+	submittedRate.ccRate.visibilityRatingViaId = visibilityRatingViaId;
+	submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;
+	
+	cc3RadioBtnsWrap.innerHTML = "No options for Helpfulness Rating to select!";
+
+	if(visibilityRatingViaId == 8){
+		helpfulnessRatingViaId = 13;
+
+		submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;
+
+		cc3RadioBtnsWrap.innerHTML = "Not Applicable";
+	}	
+}
+/*Assign Value for visibilityRatingViaId*/
+
+
+/*Assign Value for helpfulnessRatingViaId*/
+function valueHelpfulnessRating(selectedHelpfulnessRating_Base){
+	const selectedHelpfulnessRating_Obj = JSON.parse(atob(selectedHelpfulnessRating_Base));
+
+	helpfulnessRatingViaId = selectedHelpfulnessRating_Obj.ccquestionsrate_id;
+
+	submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;	
+}
+/*Assign Value for helpfulnessRatingViaId*/
+
+
+/*Assign Value for respondentRatings*/
+function valueRespondentRatings(selectedQuestionScore_Base, questionScoreRadioBtn){
+	const selectedQuestionScore_Obj = JSON.parse(atob(selectedQuestionScore_Base));
+	const questionId = selectedQuestionScore_Obj.questionId;
+
+
+	if(questionScoreRadioBtn.checked === true){
+		/*_Remove first the previous selected rating via questionId if any*/
+		submittedRate.respondentRatings = submittedRate.respondentRatings.filter(function(value, index, array){
+			return questionId != value.questionId;
+		});
+		/*_Remove first the previous selected rating from the question via questionId if any*/
+
+		/*_Add new selected selectedQuestionScore_Obj*/
+		submittedRate.respondentRatings.push(selectedQuestionScore_Obj);
+		/*_Add new selected selectedQuestionScore_Obj*/
+	}else if(questionScoreRadioBtn.checked === false){
+		submittedRate.respondentRatings = submittedRate.respondentRatings.filter(function(value, index, array){
+			return value != selectedQuestionScore_Obj;
+		});
+	}
+}
+/*Assign Value for respondentRatings*/
+
+
 /*Declare global*/
 window.valueBuilding = valueBuilding;
 window.valueFloor = valueFloor;
 window.valueRespondentType = valueRespondentType;
 window.valueOffice = valueOffice;
 window.valueServiceType = valueServiceType;
-window.availedOfficeServices = availedOfficeServices;
+window.valueOfficeServices = valueOfficeServices;
 window.valueFreqVisit = valueFreqVisit;
 window.valueAgeRange = valueAgeRange;
 window.valueGender = valueGender;
 window.valueGenderPref = valueGenderPref;
 window.valueReligion = valueReligion;
 window.valueEducAttain = valueEducAttain;
+window.valueAwarenessRating = valueAwarenessRating;
+window.valueVisibilityRating = valueVisibilityRating;
+window.valueHelpfulnessRating = valueHelpfulnessRating;
+window.valueRespondentRatings = valueRespondentRatings;
 /*Declare global*/
 
 
 /*Export*/
-export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate};
+export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId};
 /*Export*/

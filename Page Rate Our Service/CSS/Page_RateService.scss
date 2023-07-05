@@ -373,33 +373,41 @@ body{
 
 
 	/*Step per field group*/
-	.stepSets-Class>.stepSetPerFieldGroup-Class{
+	.stepSetPerFieldGroup-Class{
 		@include stepSetPerFieldGroup_MT_Style;
 	}
 	/*Step per field group*/
 
 
 	/*Step per field*/
-	.stepSets-Class>.stepSetPerFieldWrap{
+	.stepSetPerFieldWrap{
 		@include stepSetPerFieldWrap_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
 		@include stepSetPerFieldTitle_MT_Style;				
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_Mobile_Style;
-		@include stepPerFieldMessageFont_MT_Style;
+		@include messageFont_MT_Style;
 	}
 	/*Step per field*/
 
 
 	/*Step per field buttons wrapper*/
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
 		@include stepSetBtnsFlex_Style;
+		@include messageFont_MT_Style;
 	}
 	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_MT_Style;
+	}
+	/*Set of questions wrapper*/
 
 
 	/*Comments and suggestion textarea*/
@@ -500,34 +508,41 @@ body{
 
 
 	/*Step per field group*/
-	.stepSets-Class>.stepSetPerFieldGroup-Class{
+	.stepSetPerFieldGroup-Class{
 		@include stepSetPerFieldGroup_MT_Style;
 	}
 	/*Step per field group*/
 
 
 	/*Step per field*/
-	.stepSets-Class>.stepSetPerFieldWrap{
+	.stepSetPerFieldWrap{
 		@include stepSetPerFieldWrap_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
 		@include stepSetPerFieldTitleCenter_Style;
 		@include stepSetPerFieldTitle_MT_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
-		@include stepPerFieldMessageFont_MT_Style;
+		@include messageFont_MT_Style;
 	}
 	/*Step per field*/
 
 
 	/*Step per field buttons wrapper*/
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
 		@include stepSetBtnsFlex_Style;
 	}
 	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_MT_Style;
+	}
+	/*Set of questions wrapper*/
 
 
 	/*Comments and suggestion textarea*/
@@ -628,34 +643,41 @@ body{
 
 
 	/*Step per field group*/
-	.stepSets-Class>.stepSetPerFieldGroup-Class{
+	.stepSetPerFieldGroup-Class{
 		@include stepSetPerFieldGroup_Laptop_Style;
 	}
 	/*Step per field group*/
 
 
 	/*Step per field*/
-	.stepSets-Class>.stepSetPerFieldWrap{
+	.stepSetPerFieldWrap{
 		@include stepSetPerFieldWrap_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
 		@include stepSetPerFieldTitleCenter_Style;
 		@include stepSetPerFieldTitle_Laptop_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
-		@include stepPerFieldMessageFont_Laptop_Style;
+		@include messageFont_Laptop_Style;
 	}
 	/*Step per field*/
 
 
 	/*Step per field buttons wrapper*/
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
 		@include stepSetBtnsFlex_Style;
 	}
 	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_Laptop_Style;
+	}
+	/*Set of questions wrapper*/
 
 
 	/*Comments and suggestion textarea*/
@@ -756,34 +778,41 @@ body{
 
 
 	/*Step per field group*/
-	.stepSets-Class>.stepSetPerFieldGroup-Class{
+	.stepSetPerFieldGroup-Class{
 		@include stepSetPerFieldGroup_Desktop_Style;
 	}
 	/*Step per field group*/
 
 
 	/*Step per field*/
-	.stepSets-Class>.stepSetPerFieldWrap{
+	.stepSetPerFieldWrap{
 		@include stepSetPerFieldWrap_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
 		@include stepSetPerFieldTitleCenter_Style;
 		@include stepSetPerFieldTitle_Desktop_Style;
 	}
 
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
-		@include stepPerFieldMessageFont_Desktop_Style;
+		@include messageFont_Desktop_Style;
 	}
 	/*Step per field*/
 
 
 	/*Step per field buttons wrapper*/
-	.stepSets-Class>.stepSetPerFieldWrap>.stepSetBtnsFlex{
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
 		@include stepSetBtnsFlex_Style;
 	}
 	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_Desktop_Style;
+	}
+	/*Set of questions wrapper*/
 
 
 	/*Comments and suggestion textarea*/

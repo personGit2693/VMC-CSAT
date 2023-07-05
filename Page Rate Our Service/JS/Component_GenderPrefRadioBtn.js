@@ -15,7 +15,7 @@ function GenderPrefRadioBtn(){
 		genderPrefRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
 			`<input type="radio" id="`+elemValue+`" name="genderPref-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueGenderPref(this.value)" autocomplete="off"/>`+
-			`<div class="radioCheckTxtLabel_RoClass">`+genderPrefDetails_Array[index].genderpreference_value+`</div>`+
+			`<div class="radioCheckTxtLabel_RoClass"><label for="`+elemValue+`" style="cursor:pointer">`+genderPrefDetails_Array[index].genderpreference_value+`</label></div>`+
 		`</div>`;
 	}
 

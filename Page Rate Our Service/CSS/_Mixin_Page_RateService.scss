@@ -160,21 +160,21 @@
 
 
 /*Step per field*/
-@mixin stepPerFieldMessageFont_MT_Style{
+@mixin messageFont_MT_Style{
 	font-family: calibri;
 	font-size: 12px; /*To be changed*/
 	font-style: normal;
 	font-weight: bold;
 	color: red;
 }
-@mixin stepPerFieldMessageFont_Laptop_Style{
+@mixin messageFont_Laptop_Style{
 	font-family: calibri;
 	font-size: 14px; /*changed*/
 	font-style: normal;
 	font-weight: bold;
 	color: red;
 }
-@mixin stepPerFieldMessageFont_Desktop_Style{
+@mixin messageFont_Desktop_Style{
 	font-family: calibri;
 	font-size: 16px; /*changed*/
 	font-style: normal;

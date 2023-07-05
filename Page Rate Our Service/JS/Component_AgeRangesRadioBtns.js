@@ -15,7 +15,7 @@ function AgeRangesRadioBtns(){
 		ageRangesRadioBtns += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
 			`<input type="radio" id="`+elemValue+`" name="age-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueAgeRange(this.value)" autocomplete="off"/>`+
-			`<div class="radioCheckTxtLabel_RoClass">`+ageRangeDetails_Array[index].agerange_value+`</div>`+
+			`<div class="radioCheckTxtLabel_RoClass"><label for="`+elemValue+`" style="cursor:pointer">`+ageRangeDetails_Array[index].agerange_value+`</label></div>`+
 		`</div>`;
 	}
 

@@ -1,6 +1,5 @@
 /*Import*/
-import renderGenderPrefRadioBtn from "./View_GenderPrefRadioBtn.js";
-import token from "../../Global JS/Token.js";
+import token from "./Token.js";
 /*Import*/
 
 
@@ -11,12 +10,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var genderPrefDetails_Array = [];
+var scoreDetails_Array = [];
 /*Export variables*/
 
 
-/*Get gender preferences details*/
-function requestGenderPrefs(){
+/*Get scores*/
+function requestScores(){
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -27,29 +26,28 @@ function requestGenderPrefs(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting gender preferences has execution problem");
+					alert("Getting scores has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					genderPrefDetails_Array = httpResponse.genderPrefDetails_Array;
-					renderGenderPrefRadioBtn();
+					scoreDetails_Array = httpResponse.scoreDetails_Array;				
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Gender Preferences");
+				alert("Response is not an object on getting Scores");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
-			alert("File not found");
+			alert("File not found!");
 		}
 	}
 
 
 	const queryString = "token="+token;
-	httpRequest.open("POST", "../PHP/Response_GenderPrefs.php", false);
+	httpRequest.open("POST", "../../Global PHP/Response_Scores.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);		
 }
-/*Get gender preferences details*/
+/*Get scores*/
 
 
 /*Export*/
-export {requestGenderPrefs, genderPrefDetails_Array};
+export {requestScores ,scoreDetails_Array};
 /*Export*/

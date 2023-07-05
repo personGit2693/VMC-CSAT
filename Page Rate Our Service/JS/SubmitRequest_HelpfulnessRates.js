@@ -1,0 +1,3 @@
+function submitRequestHelpfulnessRates(){
+	gatewayHelpfulnessRates();
+}

@@ -10,6 +10,7 @@ import {requestEducAttainment} from "./Request_EducAttainment.js";
 import {requestBuildings} from "./Request_Buildings.js";
 import {requestFreqVisits} from "./Request_FreqVisits.js";
 import {requestAwarenessRates} from "./Request_AwarenessRates.js";
+import {requestScores} from "../../Global JS/Request_Scores.js";
 /*Import*/
 
 
@@ -62,6 +63,11 @@ requestAwarenessRates();
 /*To render buildings*/
 requestBuildings();
 /*To render buildings*/
+
+
+/*To assign value on scoreDetails_Array*/
+requestScores();
+/*To assign value on scoreDetails_Array*/
 
 
 /*To render StepByStepBtns component*/

@@ -3401,7 +3401,7 @@ body {
 
   /*Step title*/
   /*Step per field group*/
-  .stepSets-Class > .stepSetPerFieldGroup-Class {
+  .stepSetPerFieldGroup-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -3416,13 +3416,13 @@ body {
 
   /*Step per field group*/
   /*Step per field*/
-  .stepSets-Class > .stepSetPerFieldWrap {
+  .stepSetPerFieldWrap {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     margin: 30px 0px; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -3436,7 +3436,7 @@ body {
     font-weight: bold;
     color: black; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -3454,15 +3454,31 @@ body {
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+  .stepSetPerFieldWrap > .stepSetBtnsFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
     overflow: visible;
     flex-flow: row wrap;
-    justify-content: center; }
+    justify-content: center;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
 
   /*Step per field buttons wrapper*/
+  /*Set of questions wrapper*/
+  .questionsWrap-Class {
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
+
+  /*Set of questions wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
@@ -3589,7 +3605,7 @@ body {
 
   /*Step title*/
   /*Step per field group*/
-  .stepSets-Class > .stepSetPerFieldGroup-Class {
+  .stepSetPerFieldGroup-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -3604,13 +3620,13 @@ body {
 
   /*Step per field group*/
   /*Step per field*/
-  .stepSets-Class > .stepSetPerFieldWrap {
+  .stepSetPerFieldWrap {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     margin: 30px 0px; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
     text-align: center;
     /*To be changed*/
     position: relative;
@@ -3626,7 +3642,7 @@ body {
     font-weight: bold;
     color: black; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -3645,7 +3661,7 @@ body {
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+  .stepSetPerFieldWrap > .stepSetBtnsFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -3654,6 +3670,16 @@ body {
     justify-content: center; }
 
   /*Step per field buttons wrapper*/
+  /*Set of questions wrapper*/
+  .questionsWrap-Class {
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
+
+  /*Set of questions wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
@@ -3783,7 +3809,7 @@ body {
 
   /*Step title*/
   /*Step per field group*/
-  .stepSets-Class > .stepSetPerFieldGroup-Class {
+  .stepSetPerFieldGroup-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -3798,13 +3824,13 @@ body {
 
   /*Step per field group*/
   /*Step per field*/
-  .stepSets-Class > .stepSetPerFieldWrap {
+  .stepSetPerFieldWrap {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     margin: 30px 0px; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
     text-align: center;
     /*To be changed*/
     position: relative;
@@ -3820,7 +3846,7 @@ body {
     font-weight: bold;
     color: black; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -3839,7 +3865,7 @@ body {
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+  .stepSetPerFieldWrap > .stepSetBtnsFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -3848,6 +3874,16 @@ body {
     justify-content: center; }
 
   /*Step per field buttons wrapper*/
+  /*Set of questions wrapper*/
+  .questionsWrap-Class {
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
+
+  /*Set of questions wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;
@@ -3977,7 +4013,7 @@ body {
 
   /*Step title*/
   /*Step per field group*/
-  .stepSets-Class > .stepSetPerFieldGroup-Class {
+  .stepSetPerFieldGroup-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -3992,13 +4028,13 @@ body {
 
   /*Step per field group*/
   /*Step per field*/
-  .stepSets-Class > .stepSetPerFieldWrap {
+  .stepSetPerFieldWrap {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     margin: 30px 0px; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
+  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
     text-align: center;
     /*To be changed*/
     position: relative;
@@ -4014,7 +4050,7 @@ body {
     font-weight: bold;
     color: black; }
 
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetPerFieldFlex {
+  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -4033,7 +4069,7 @@ body {
 
   /*Step per field*/
   /*Step per field buttons wrapper*/
-  .stepSets-Class > .stepSetPerFieldWrap > .stepSetBtnsFlex {
+  .stepSetPerFieldWrap > .stepSetBtnsFlex {
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -4042,6 +4078,16 @@ body {
     justify-content: center; }
 
   /*Step per field buttons wrapper*/
+  /*Set of questions wrapper*/
+  .questionsWrap-Class {
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    font-style: normal;
+    font-weight: bold;
+    color: red; }
+
+  /*Set of questions wrapper*/
   /*Comments and suggestion textarea*/
   .suggestionTextArea-Class {
     position: relative;

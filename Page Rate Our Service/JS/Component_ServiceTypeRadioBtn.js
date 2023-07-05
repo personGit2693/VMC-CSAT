@@ -15,7 +15,7 @@ function ServiceTypeRadioBtn(){
 		serviceTypeRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
 			`<input type="radio" id="`+elemValue+`" name="serviceType-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueServiceType(this.value), submitRequestOfficeServices()" autocomplete="off"/>`+
-			`<div class="radioCheckTxtLabel_RoClass">`+serviceTypeDetails_Array[index].serviceTypeValue+`</div>`+
+			`<div class="radioCheckTxtLabel_RoClass"><label for="`+elemValue+`" style="cursor:pointer">`+serviceTypeDetails_Array[index].serviceTypeValue+`</label></div>`+
 		`</div>`;
 	}
 

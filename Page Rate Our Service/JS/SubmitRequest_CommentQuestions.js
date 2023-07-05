@@ -1,0 +1,3 @@
+const submitRequestCommentQuestions = () =>{
+	gatewayCommentQuestions();
+}

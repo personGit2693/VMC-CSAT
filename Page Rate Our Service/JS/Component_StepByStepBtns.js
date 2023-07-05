@@ -8,7 +8,7 @@ function StepOneBtns(){
 }
 
 function StepTwoBtns(){
-	let stepTwoBtns = `<button class="normButton_RoClass proceedBtn-Class" id="nextStepTwoBtn-Id" onclick="nextStep('stepByStepItem-Class', 'headerDynamicSubTxt-Id', 'stepSets-Class')">`+
+	let stepTwoBtns = `<button class="normButton_RoClass proceedBtn-Class" id="nextStepTwoBtn-Id" onclick="submitValidationStepTwo()">`+
 		`Proceed`+
 	`</button>`+
 	`<button class="normButton_RoClass backBtn-Class" id="backStepTwoBtn-Id" onclick="backStep('stepByStepItem-Class', 'headerDynamicSubTxt-Id', 'stepSets-Class')">`+

@@ -14,8 +14,8 @@ function AwarenessRateRadioBtn(){
 
 		awarenessRateRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="awarenessRate-Name" value="`+elemValue+`" onchange="radioCheckSelected(this)" autocomplete="off"/>`+
-			`<div class="radioCheckTxtLabel_RoClass">`+awarenessRateDetails_Array[index].ccquestionsrate_value+`</div>`+
+			`<input type="radio" id="`+elemValue+`" name="awarenessRate-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueAwarenessRating(this.value), submitValidationRequestVisibilityRates()" autocomplete="off"/>`+
+			`<div class="radioCheckTxtLabel_RoClass"><label for="`+elemValue+`" style="cursor:pointer">`+awarenessRateDetails_Array[index].ccquestionsrate_value+`</label></div>`+
 		`</div>`;
 	}
 

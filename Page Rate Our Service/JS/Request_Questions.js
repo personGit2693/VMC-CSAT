@@ -1,6 +1,7 @@
 /*Import*/
-import renderGenderPrefRadioBtn from "./View_GenderPrefRadioBtn.js";
 import token from "../../Global JS/Token.js";
+import {clientTypeId, officeId} from "../../Global JS/Values_Page_RateService.js";
+import renderQuestionScoreRadioBtn from "./View_QuestionScoreRadioBtn.js";
 /*Import*/
 
 
@@ -11,14 +12,15 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var genderPrefDetails_Array = [];
+var questionDetails_Array = [];
 /*Export variables*/
 
 
-/*Get gender preferences details*/
-function requestGenderPrefs(){
+/*Get office services details*/
+function requestQuestions(){
+
 	httpRequest.onload = function(){
-		if(httpRequest.status == 200){
+		if(httpRequest.status == 200){				
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
 
@@ -27,13 +29,14 @@ function requestGenderPrefs(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting gender preferences has execution problem");
+					alert("Getting office services has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					genderPrefDetails_Array = httpResponse.genderPrefDetails_Array;
-					renderGenderPrefRadioBtn();
+					questionDetails_Array = httpResponse.questionDetails_Array;
+					renderQuestionScoreRadioBtn();						
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Gender Preferences");
+				alert(httpRequest.responseText);
+				alert("Response is not an object on getting Questions");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -41,15 +44,17 @@ function requestGenderPrefs(){
 		}
 	}
 
-
-	const queryString = "token="+token;
-	httpRequest.open("POST", "../PHP/Response_GenderPrefs.php", false);
+	const queryString = "token="+token+
+	"&clientTypeId="+clientTypeId+
+	"&officeId="+officeId;	
+	
+	httpRequest.open("POST", "../PHP/Response_Questions.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString);		
+	httpRequest.send(queryString); 	
 }
-/*Get gender preferences details*/
+/*Get office services details*/
 
 
 /*Export*/
-export {requestGenderPrefs, genderPrefDetails_Array};
+export {requestQuestions, questionDetails_Array};
 /*Export*/

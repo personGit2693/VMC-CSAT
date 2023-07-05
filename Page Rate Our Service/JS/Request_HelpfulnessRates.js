@@ -1,5 +1,5 @@
 /*Import*/
-import renderGenderPrefRadioBtn from "./View_GenderPrefRadioBtn.js";
+import renderHelpfulnessRateRadioBtn from "./View_HelpfulnessRateRadioBtn.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -11,12 +11,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var genderPrefDetails_Array = [];
+var helpfulnessRateDetails_Array = [];
 /*Export variables*/
 
 
-/*Get gender preferences details*/
-function requestGenderPrefs(){
+/*Get helpfulness rates*/
+function requestHelpfulnessRates(){
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -27,13 +27,13 @@ function requestGenderPrefs(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting gender preferences has execution problem");
+					alert("Getting awareness rates has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					genderPrefDetails_Array = httpResponse.genderPrefDetails_Array;
-					renderGenderPrefRadioBtn();
+					helpfulnessRateDetails_Array = httpResponse.helpfulnessRateDetails_Array;
+					renderHelpfulnessRateRadioBtn();
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Gender Preferences");
+				alert("Response is not an object on getting Helpfulness Rates");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,13 +43,13 @@ function requestGenderPrefs(){
 
 
 	const queryString = "token="+token;
-	httpRequest.open("POST", "../PHP/Response_GenderPrefs.php", false);
+	httpRequest.open("POST", "../PHP/Response_HelpfulnessRates.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);		
 }
-/*Get gender preferences details*/
+/*Get helpfulness rates*/
 
 
 /*Export*/
-export {requestGenderPrefs, genderPrefDetails_Array};
+export {requestHelpfulnessRates, helpfulnessRateDetails_Array};
 /*Export*/

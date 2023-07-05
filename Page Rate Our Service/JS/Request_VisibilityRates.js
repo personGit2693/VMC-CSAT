@@ -1,5 +1,5 @@
 /*Import*/
-import renderGenderPrefRadioBtn from "./View_GenderPrefRadioBtn.js";
+import renderVisibilityRateRadioBtn from "./View_VisibilityRateRadioBtn.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -11,12 +11,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var genderPrefDetails_Array = [];
+var visibilityRateDetails_Array = [];
 /*Export variables*/
 
 
-/*Get gender preferences details*/
-function requestGenderPrefs(){
+/*Get visibility rates*/
+function requestVisibilityRates(){
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -27,13 +27,13 @@ function requestGenderPrefs(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting gender preferences has execution problem");
+					alert("Getting visibility rates has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					genderPrefDetails_Array = httpResponse.genderPrefDetails_Array;
-					renderGenderPrefRadioBtn();
+					visibilityRateDetails_Array = httpResponse.visibilityRateDetails_Array;
+					renderVisibilityRateRadioBtn();
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Gender Preferences");
+				alert("Response is not an object on getting Visibility Rates");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,13 +43,13 @@ function requestGenderPrefs(){
 
 
 	const queryString = "token="+token;
-	httpRequest.open("POST", "../PHP/Response_GenderPrefs.php", false);
+	httpRequest.open("POST", "../PHP/Response_VisibilityRates.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);		
 }
-/*Get gender preferences details*/
+/*Get visibility rates*/
 
 
 /*Export*/
-export {requestGenderPrefs, genderPrefDetails_Array};
+export {requestVisibilityRates ,visibilityRateDetails_Array};
 /*Export*/

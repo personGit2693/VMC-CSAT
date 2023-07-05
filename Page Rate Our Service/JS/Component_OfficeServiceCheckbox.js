@@ -14,7 +14,7 @@ function OfficeServiceCheckbox(){
 
 		officeServiceCheckbox += `<div class="cusCheckBoxPaper_RoClass">`+
 			`<label for="`+elemValue+`"><div class="boxme_RoClass"><img src="`+elemImgSrc+`"></div> `+officeServiceDetails_Array[index].officeservice_name+`</label>`+
-			`<input type="checkbox" id="`+elemValue+`" value="`+elemValue+`" name="officeService-Name" onchange="checkCusCheckBox(this), availedOfficeServices(this.value, this)" autocomplete="off">`+			
+			`<input type="checkbox" id="`+elemValue+`" value="`+elemValue+`" name="officeService-Name" onchange="checkCusCheckBox(this), valueOfficeServices(this.value, this)" autocomplete="off">`+			
 		`</div>`;
 	}
 

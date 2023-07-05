@@ -29,32 +29,6 @@ export const submitScoreBtn = document.getElementById("submitScoreBtn-Id");
 export const cc1RadioBtnsWrap = document.getElementById("cc1RadioBtnsWrap"); 
 export const cc2RadioBtnsWrap = document.getElementById("cc2RadioBtnsWrap");
 export const cc3RadioBtnsWrap = document.getElementById("cc3RadioBtnsWrap");
+export const questionsWrap = document.getElementById("questionsWrap");
+export const commentsWrap = document.getElementById("commentsWrap");
 /*Elements*/
-
-/*
-var submittedRate = {
-	respondentDetails:{
-		type:"value", 
-		age: "value",
-		gender: "value",
-		genderPreference: "value",
-		otherGenderPreference: "value",
-		religion: "value",
-		otherReligion: "value",
-		education: "value",
-		office: "value",
-		client: "value",
-		visityear: "value"
-	},
-	ccRate:{
-		awareness:"value",
-		visibility:"value",
-		helpfulness:"value"
-	},
-	hospitalRate:[
-		"value",
-		"value",
-		"value"
-	]
-};
-*/

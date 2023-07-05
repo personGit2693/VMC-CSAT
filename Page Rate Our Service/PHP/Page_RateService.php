@@ -212,85 +212,26 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Which of the following best describes your awareness of a CC?</div>
+					<div class="stepSetPerFieldTitle-Class">Which of the following best describes your awareness of a CC?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc1RadioBtnsWrap">
-						<!--Component
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccAwareness1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccAwareness1-Id" name="ccAwareness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">I know what a CC is and I saw this office’s CC.</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccAwareness2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccAwareness2-Id" name="ccAwareness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">I know what a CC is but I did not see this office’s CC.</div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccAwareness3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccAwareness3-Id" name="ccAwareness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">I learned of the CC only when I saw this office’s CC.</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccAwareness4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccAwareness4-Id" name="ccAwareness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">I do not know what a CC is and I did not see this office’s CC.</div>
-						</div>
-						-->	
+						<!--Component-->	
+						Loading
 					</div>					
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Would you say that the CC of this office was?</div>
+					<div class="stepSetPerFieldTitle-Class">Would you say that the CC of this office was?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc2RadioBtnsWrap">
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccVisibility1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccVisibility1-Id" name="ccVisibility-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Easy to see</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccVisibility2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccVisibility2-Id" name="ccVisibility-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Somewhat easy to see</div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccVisibility3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccVisibility3-Id" name="ccVisibility-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Difficult to see</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccVisibility4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccVisibility4-Id" name="ccVisibility-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Not visible at all</div>
-						</div>	
+						<!--Component-->
+						Choose from CC1 first.	
 					</div>					
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">How much did the CC help you in your transaction?</div>
+					<div class="stepSetPerFieldTitle-Class">How much did the CC help you in your transaction?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc3RadioBtnsWrap">
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccHelpfulness1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccHelpfulness1-Id" name="ccHelpfulness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Helped very much</div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccHelpfulness2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccHelpfulness2-Id" name="ccHelpfulness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Somewhat helped</div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="ccHelpfulness3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="ccHelpfulness3-Id" name="ccHelpfulness-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckTxtLabel_RoClass">Did not help</div>
-						</div>
+						<!--Component-->
+						Choose from CC2 first.
 					</div>								
 				</div>
 
@@ -310,431 +251,44 @@ if(isset($_GET["rateToken"])){
 					<div class="stepSetTitleDefi-Class">Please rate your experience in our Hospital.</div>
 				</div>
 
-				<div class="stepSetPerFieldGroup-Class">A. Infrastructures and Process</div>
+				<div class="questionsWrap-Class" id="questionsWrap">
+					<!--Component
+					<div class="stepSetPerFieldWrap">
+						<div class="stepSetPerFieldTitle-Class">The waiting areas were clean, orderly, and comfortable. (Infrastructures and Process)</div>
+						<div class="stepSetPerFieldFlex">
+							<div class="radioCheckFlex_RoClass">
+								<label for="question1score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
+								<input type="radio" id="question1score1-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
+								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot strongly agree.png"></div>
+							</div>
 
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">The waiting areas were clean, orderly, and comfortable.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question1score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question1score1-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
+							<div class="radioCheckFlex_RoClass">
+								<label for="question1score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
+								<input type="radio" id="question1score2-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
+								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot agree.png"></div>
+							</div>						
 
-						<div class="radioCheckFlex_RoClass">
-							<label for="question1score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question1score2-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
+							<div class="radioCheckFlex_RoClass">
+								<label for="question1score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
+								<input type="radio" id="question1score3-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
+								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot neither.png"></div>
+							</div>
 
-						<div class="radioCheckFlex_RoClass">
-							<label for="question1score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question1score3-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
+							<div class="radioCheckFlex_RoClass">
+								<label for="question1score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
+								<input type="radio" id="question1score4-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
+								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot disagree.png"></div>
+							</div>						
 
-						<div class="radioCheckFlex_RoClass">
-							<label for="question1score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question1score4-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question1score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question1score5-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">The toilets and bathrooms inside the facility were kept clean, orderly and with a steady water supply.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question2score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question2score1-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question2score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question2score2-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question2score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question2score3-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question2score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question2score4-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question2score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question2score5-Id" name="question2-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">The patients’ rooms were kept clean, tidy, and comfortable.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question3score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question3score1-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question3score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question3score2-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question3score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question3score3-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question3score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question3score4-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question3score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question4score5-Id" name="question3-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldGroup-Class">B. Client Engagement and Empowerment</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">The medical condition, procedures and instructions were discussed clearly.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question4score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question4score1-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question4score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question4score2-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question4score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question4score3-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question4score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question4score4-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question4score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question4score5-Id" name="question4-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Our sentiments, cultural background, and beliefs were heard and considered in the treatment procedure.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question5score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question5score1-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question5score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question5score2-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question5score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question5score3-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question5score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question5score4-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question5score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question5score5-Id" name="question5-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">We were given the chance to decide which treatment procedure shall be performed.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question6score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question6score1-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question6score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question6score2-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question6score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question6score3-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question6score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question6score4-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question6score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question6score5-Id" name="question6-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldGroup-Class">C. Culture of Responsiveness</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Doctor</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question7score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question7score1-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question7score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question7score2-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question7score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question7score3-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question7score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question7score4-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question7score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question7score5-Id" name="question7-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Nurse</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question8score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question8score1-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question8score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question8score2-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question8score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question8score3-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question8score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question8score4-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question8score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question8score5-Id" name="question8-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>					
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Midwife</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question9score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question9score1-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question9score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question9score2-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question9score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question9score3-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question9score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question9score4-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question9score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question9score5-Id" name="question9-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Security</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question10score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question10score1-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question10score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question10score2-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question10score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question10score3-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question10score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question10score4-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question10score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question10score5-Id" name="question10-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">I was treated fairly, or “walang palakasan”, during my transaction.</div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question11score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question11score1-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question11score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question11score2-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question11score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question11score3-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question11score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question11score4-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question11score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question11score5-Id" name="question11-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>
-				</div>
-
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">I am satisfied with the service that I availed. </div>
-					<div class="stepSetPerFieldFlex">
-						<div class="radioCheckFlex_RoClass">
-							<label for="question12score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question12score1-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly agree.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question12score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question12score2-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot agree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question12score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question12score3-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot neither.png"></div>
-						</div>
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question12score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question12score4-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot disagree.png"></div>
-						</div>						
-
-						<div class="radioCheckFlex_RoClass">
-							<label for="question12score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-							<input type="radio" id="question12score5-Id" name="question12-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-							<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/emot strongly disagree.png"></div>
-						</div>		
-					</div>
-				</div>
+							<div class="radioCheckFlex_RoClass">
+								<label for="question1score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
+								<input type="radio" id="question1score5-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
+								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot strongly disagree.png"></div>
+							</div>		
+						</div>					
+					</div>-->
+					Please select Respondent-Type and Point of Entry first.					
+				</div>				
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetBtnsFlex" id="stepThreeBtnsWrap">
@@ -745,26 +299,33 @@ if(isset($_GET["rateToken"])){
 			</div>
 			<!--_Step Three-->
 
-			<!--_Step four-->
+			<!--_Step four-->			
 			<div class="stepSets-Class">
 				<div class="stepSetTitleWrap">
 					<div class="stepSetTitle-Class">Comments and Suggestions</div>
 					<div class="stepSetTitleDefi-Class">Our Hospital is open to any comments and suggestions of our clients, so feel free to provide yours and we will read it.</div>
 				</div>
 
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Suggestions on how we can further improve our services.</div>
-					<div class="stepSetPerFieldFlex">
-						<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>
+				<div class="questionsWrap-Class" id="commentsWrap">	
+					<!--Component				
+					<div class="stepSetPerFieldWrap commentField-Class">
+						<div class="stepSetPerFieldTitle-Class">Suggestions on how we can further improve our services.</div>
+						<div class="stepSetPerFieldFlex">
+							<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>
+							<input type="hidden" value="" />
+						</div>
 					</div>
-				</div>
 
-				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">If applicable, please the name of any remarkable hospital staff you would like to commend, as well as your reason.</div>
-					<div class="stepSetPerFieldFlex">
-						<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>
+					<div class="stepSetPerFieldWrap commentField-Class">
+						<div class="stepSetPerFieldTitle-Class">If applicable, please the name of any remarkable hospital staff you would like to commend, as well as your reason.</div>
+						<div class="stepSetPerFieldFlex">
+							<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>
+							<input type="hidden" value="" />
+						</div>
 					</div>
-				</div>				
+					-->
+					No Fields to provide your comments and suggestions!									
+				</div>
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetBtnsFlex" id="stepFourBtnsWrap">
@@ -786,6 +347,8 @@ if(isset($_GET["rateToken"])){
 			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
 			<script type="module" src="../JS/Validator_StepOne.js"></script>
 			<script type="text/javascript" src="../JS/SubmitValidation_StepOne.js"></script>
+			<script type="module" src="../JS/Validator_StepTwo.js"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_StepTwo.js"></script>
 			<script type="module" src="../../Global JS/Values_Page_RateService.js"></script>
 			<script type="module" src="../JS/Gateway_Religions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js"></script>
@@ -797,6 +360,18 @@ if(isset($_GET["rateToken"])){
 			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js"></script>
 			<script type="module" src="../JS/Gateway_OfficeServices.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_OfficeServices.js"></script>
+			<script type="module" src="../JS/Gateway_VisibilityRates.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_VisibilityRates.js"></script>
+			<script type="module" src="../JS/Validator_RequestVisibilityRates.js"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_RequestVisibilityRates.js"></script>	
+			<script type="module" src="../JS/Gateway_HelpfulnessRates.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_HelpfulnessRates.js"></script>		
+			<script type="module" src="../JS/Validator_RequestHelpfulnessRates.js"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_RequestHelpfulnessRates.js"></script>
+			<script type="module" src="../JS/Gateway_Questions.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Questions.js"></script>		
+			<script type="module" src="../JS/Gateway_CommentQuestions.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_CommentQuestions.js"></script>
 			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			
 		</body>
 		</html>

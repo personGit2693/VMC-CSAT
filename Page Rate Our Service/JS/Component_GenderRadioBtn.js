@@ -1,5 +1,6 @@
 /*Import*/
 import {genderDetails_Array} from "./Request_Genders.js";
+import {genderRadioBtnsWrap} from "./JsCollection_Page_RateService.js";
 /*Import*/
 
 
@@ -15,7 +16,7 @@ function GenderRadioBtn(){
 		genderRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
 			`<input type="radio" id="`+elemValue+`" name="gender-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueGender(this.value)" autocomplete="off"/>`+
-			`<div class="radioCheckTxtLabel_RoClass">`+genderDetails_Array[index].gender_value+`</div>`+
+			`<div class="radioCheckTxtLabel_RoClass"><label for="`+elemValue+`" style="cursor:pointer">`+genderDetails_Array[index].gender_value+`</label></div>`+
 		`</div>`;
 	}
 

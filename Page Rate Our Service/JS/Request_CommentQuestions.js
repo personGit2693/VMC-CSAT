@@ -1,6 +1,7 @@
 /*Import*/
-import renderGenderPrefRadioBtn from "./View_GenderPrefRadioBtn.js";
+import renderCommentField from "./View_CommentField.js";
 import token from "../../Global JS/Token.js";
+import {clientTypeId, officeId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 
@@ -11,12 +12,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var genderPrefDetails_Array = [];
+var commentQuestionDetails_Array = [];
 /*Export variables*/
 
 
-/*Get gender preferences details*/
-function requestGenderPrefs(){
+/*Get comment questions details*/
+function requestCommentQuestions(){
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -27,13 +28,13 @@ function requestGenderPrefs(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting gender preferences has execution problem");
+					alert("Getting Comment Questions has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					genderPrefDetails_Array = httpResponse.genderPrefDetails_Array;
-					renderGenderPrefRadioBtn();
+					commentQuestionDetails_Array = httpResponse.commentQuestionDetails_Array;
+					renderCommentField();
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Gender Preferences");
+				alert("Response is not an object on getting Comment Questions");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -42,14 +43,16 @@ function requestGenderPrefs(){
 	}
 
 
-	const queryString = "token="+token;
-	httpRequest.open("POST", "../PHP/Response_GenderPrefs.php", false);
+	const queryString = "token="+token+
+	"&clientTypeId="+clientTypeId+
+	"&officeId="+officeId;
+	httpRequest.open("POST", "Response_CommentQuestions.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);		
 }
-/*Get gender preferences details*/
+/*Get comment questions details*/
 
 
 /*Export*/
-export {requestGenderPrefs, genderPrefDetails_Array};
+export {requestCommentQuestions, commentQuestionDetails_Array};
 /*Export*/

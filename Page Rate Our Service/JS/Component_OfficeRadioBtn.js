@@ -14,8 +14,8 @@ function OfficeRadioBtn(){
 
 		officeRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 			`<label for="`+elemValue+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
-			`<input type="radio" id="`+elemValue+`" name="office-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueOffice(this.value), submitRequestServiceTypes(), submitRequestOfficeServices()" autocomplete="off"/>`+
-			`<div class="radioCheckTxtLabel_RoClass">`+officeDetails_Array[index].office_value+`</div>`+
+			`<input type="radio" id="`+elemValue+`" name="office-Name" value="`+elemValue+`" onchange="radioCheckSelected(this), valueOffice(this.value), submitRequestServiceTypes(), submitRequestOfficeServices(), submitRequestQuestions(), submitRequestCommentQuestions()" autocomplete="off"/>`+
+			`<div class="radioCheckTxtLabel_RoClass"><label for="`+elemValue+`" style="cursor:pointer">`+officeDetails_Array[index].office_value+`</label></div>`+
 		`</div>`;
 	}
 
