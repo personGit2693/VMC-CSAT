@@ -41,7 +41,8 @@ var submittedRate = {
 		visibilityRatingViaId: visibilityRatingViaId,
 		helpfulnessRatingViaId: helpfulnessRatingViaId
 	},
-	respondentRatings:[]
+	respondentRatings:[],
+	comments:[]
 };
 /*Prep export variables*/
 
@@ -290,7 +291,7 @@ function valueRespondentRatings(selectedQuestionScore_Base, questionScoreRadioBt
 		submittedRate.respondentRatings = submittedRate.respondentRatings.filter(function(value, index, array){
 			return questionId != value.questionId;
 		});
-		/*_Remove first the previous selected rating from the question via questionId if any*/
+		/*_Remove first the previous selected rating via questionId if any*/
 
 		/*_Add new selected selectedQuestionScore_Obj*/
 		submittedRate.respondentRatings.push(selectedQuestionScore_Obj);
@@ -302,6 +303,30 @@ function valueRespondentRatings(selectedQuestionScore_Base, questionScoreRadioBt
 	}
 }
 /*Assign Value for respondentRatings*/
+
+
+/*Assign Value for comments*/
+function valueComments(suggestionTextArea){
+	const commentQuestionDet_Obj = JSON.parse(atob(suggestionTextArea.nextElementSibling.value));
+	const questionId = commentQuestionDet_Obj.question_id;	
+
+
+	const commentsDetails_Obj = {};
+	commentsDetails_Obj.questionId = commentQuestionDet_Obj.question_id;
+	commentsDetails_Obj.respondentComment = suggestionTextArea.value;
+
+	submittedRate.comments = submittedRate.comments.filter(function(value, index, array){
+		return questionId != value.questionId;
+	});
+
+	/*
+	comments:[{questionId:value, respondentComment:value}]
+	alert(JSON.stringify(commentQuestionDet_Obj)+" "+suggestionTextArea.value);
+	*/
+
+	submittedRate.comments.push(commentsDetails_Obj);
+}
+/*Assign Value for comments*/
 
 
 /*Declare global*/
@@ -321,6 +346,7 @@ window.valueAwarenessRating = valueAwarenessRating;
 window.valueVisibilityRating = valueVisibilityRating;
 window.valueHelpfulnessRating = valueHelpfulnessRating;
 window.valueRespondentRatings = valueRespondentRatings;
+window.valueComments = valueComments;
 /*Declare global*/
 
 
