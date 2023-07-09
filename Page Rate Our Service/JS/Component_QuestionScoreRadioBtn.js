@@ -11,6 +11,7 @@ function QuestionScoreRadioBtn(){
 	let elemName = "";
 	const logoPath = "../../src/";
 	const elemImgSrc = "../../src/green check.png";	
+	let stepSetPerFieldGroup_Culture = false;
 
 	let questionScoreRadioBtn = "";
 	for(let index=0; index < questionDetails_Array.length; index++){
@@ -18,6 +19,12 @@ function QuestionScoreRadioBtn(){
 		questionResponseRate_Obj.questionId = questionDetails_Array[index].question_id;
 
 		elemName = btoa(unescape(encodeURIComponent(JSON.stringify(questionDetails_Array[index]))));
+
+		if(questionDetails_Array[index].questionsgroup_id == 3 && stepSetPerFieldGroup_Culture == false){
+			stepSetPerFieldGroup_Culture = true;
+
+			questionScoreRadioBtn += `<div class="stepSetPerFieldGroup-Class">`+questionDetails_Array[index].questionsgroup_desc+`</div>`;			
+		}
 
 		questionScoreRadioBtn += `<div class="stepSetPerFieldWrap">`;
 			if(questionDetails_Array[index].questionsgroup_value != ""){
@@ -38,11 +45,11 @@ function QuestionScoreRadioBtn(){
 			questionScoreRadioBtn += `<div class="radioCheckFlex_RoClass">`+
 				`<label for="`+elemForId+`" class="customRadioCheck_RoClass"><img src="`+elemImgSrc+`"></label>`+
 				`<input type="radio" id="`+elemForId+`" name="`+elemName+`" value="`+elemValue+`" onchange="radioCheckSelected(this), valueRespondentRatings(this.value, this)" autocomplete="off">`+
-				`<div class="radioCheckIconLabel_RoClass"><img src="`+logoPath+scoreDetails_Array[scoresIndex].score_logo+`"></div>`+
+				`<label class="radioCheckIconLabel_RoClass" for="`+elemForId+`" style="cursor: pointer;"><img src="`+logoPath+scoreDetails_Array[scoresIndex].score_logo+`"></label>`+
 			`</div>`;
 		}
 
-		questionScoreRadioBtn += `</div>`;
+		questionScoreRadioBtn += `</div></div>`;
 	}
 
 	if(questionScoreRadioBtn == ""){

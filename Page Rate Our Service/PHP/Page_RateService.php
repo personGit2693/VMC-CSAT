@@ -28,7 +28,7 @@ if(isset($_GET["rateToken"])){
 		echo "Authentication failed to execute! please try again.";
 		header("Refresh:4;".$landingPage_EndUser);
 	}else if($validateRateTok_Resp->validateRateTok_Count === 0){
-		echo "Invalid token!";
+		echo "Invalid token or Session is already expired! Please wait";
 		header("Refresh:4;".$landingPage_EndUser);
 	}else if($validateRateTok_Resp->validateRateTok_Count !== 0 && $validateRateTok_Resp->validateRateTok_Exec === true){
 	/*Token Validation*/
@@ -37,6 +37,17 @@ if(isset($_GET["rateToken"])){
 		<html>
 		<head>
 			<title>Rate Our Services</title>
+
+			<!--JQuery version-->
+			<script src="../../Global JS/Jquery_jquery-3.6.4.min.js"></script>
+			<!--JQuery version-->
+
+			<!--Plugin Select2-->
+			<link rel="stylesheet" type="text/css" href="../../Global Style/Plugin_select2.min.css">
+			<script src="../../Global JS/Plugin_select2.min.js"></script>
+			<script src="../../Global JS/Init_Select2.js"></script>
+			<!--Plugin Select2-->
+
 			<link rel="stylesheet" type="text/css" href="../CSS/Page_RateService.css">
 			<link rel="shortcut icon" href="../../src/vmclogo.png">		
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">		
@@ -138,6 +149,21 @@ if(isset($_GET["rateToken"])){
 						</div>	
 					</div>
 				</div>
+
+				<!--
+				<div class="stepSetPerFieldWrap">
+					<div class="stepSetPerFieldTitle-Class">Select2<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldFlex" id="religionDropdownMenuWrap">
+						<select class="js-example-basic-single" name="state" style="width: 100%;">
+							<optgroup label="Group Name">
+								<option value="AL">Alabama</option>
+								<option value="WY">Wyoming</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				-->
+
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Educational Attainment<span class="redAsterisk-Class">*</span></div>
@@ -252,41 +278,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="questionsWrap-Class" id="questionsWrap">
-					<!--Component
-					<div class="stepSetPerFieldWrap">
-						<div class="stepSetPerFieldTitle-Class">The waiting areas were clean, orderly, and comfortable. (Infrastructures and Process)</div>
-						<div class="stepSetPerFieldFlex">
-							<div class="radioCheckFlex_RoClass">
-								<label for="question1score1-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-								<input type="radio" id="question1score1-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot strongly agree.png"></div>
-							</div>
-
-							<div class="radioCheckFlex_RoClass">
-								<label for="question1score2-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-								<input type="radio" id="question1score2-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot agree.png"></div>
-							</div>						
-
-							<div class="radioCheckFlex_RoClass">
-								<label for="question1score3-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-								<input type="radio" id="question1score3-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot neither.png"></div>
-							</div>
-
-							<div class="radioCheckFlex_RoClass">
-								<label for="question1score4-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-								<input type="radio" id="question1score4-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot disagree.png"></div>
-							</div>						
-
-							<div class="radioCheckFlex_RoClass">
-								<label for="question1score5-Id" class="customRadioCheck_RoClass"><img src="../../src/green check.png"></label>
-								<input type="radio" id="question1score5-Id" name="question1-Name" onchange="radioCheckSelected(this)" autocomplete="off">
-								<div class="radioCheckIconLabel_RoClass"><img src="../../src/emot strongly disagree.png"></div>
-							</div>		
-						</div>					
-					</div>-->
+					<!--Component-->
 					Please select Respondent-Type and Point of Entry first.					
 				</div>				
 
@@ -307,24 +299,8 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="questionsWrap-Class" id="commentsWrap">	
-					<!--Component				
-					<div class="stepSetPerFieldWrap commentField-Class">
-						<div class="stepSetPerFieldTitle-Class">Suggestions on how we can further improve our services.</div>
-						<div class="stepSetPerFieldFlex">
-							<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>
-							<input type="hidden" value="" />
-						</div>
-					</div>
-
-					<div class="stepSetPerFieldWrap commentField-Class">
-						<div class="stepSetPerFieldTitle-Class">If applicable, please the name of any remarkable hospital staff you would like to commend, as well as your reason.</div>
-						<div class="stepSetPerFieldFlex">
-							<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>
-							<input type="hidden" value="" />
-						</div>
-					</div>
-					-->
-					No Fields to provide your comments and suggestions!									
+					<!--Component-->
+					Please select Respondent-Type and Point of Entry first.									
 				</div>
 
 				<div class="stepSetPerFieldWrap">

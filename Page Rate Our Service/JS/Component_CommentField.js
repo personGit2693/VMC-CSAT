@@ -14,7 +14,7 @@ function CommentField(){
 		commentField += `<div class="stepSetPerFieldWrap commentField-Class">`+
 			`<div class="stepSetPerFieldTitle-Class">`+commentQuestionDetails_Array[index].question_value+`</div>`+
 			`<div class="stepSetPerFieldFlex">`+
-				`<textarea class="suggestionTextArea-Class" placeholder="Optional"></textarea>`+
+				`<textarea class="suggestionTextArea-Class" placeholder="Optional" onkeyup="valueComments(this)"></textarea>`+
 				`<input type="hidden" value="`+elemValue+`" />`+
 			`</div>`+
 		`</div>`;

@@ -1,5 +1,5 @@
 /*Import*/
-import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
+import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap, commentsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
 /*Import*/
 
 
@@ -139,6 +139,7 @@ function valueRespondentType(selectedRespondentType_Base){
 	serviceTypeId = "";
 	submittedRate.availedOfficeServices = [];
 	submittedRate.respondentRatings = [];
+	submittedRate.comments = [];
 
 	respondentId = selectedRespondentType_Obj.respondent_id ;
 	clientTypeId = selectedRespondentType_Obj.clienttype_id;	
@@ -150,6 +151,7 @@ function valueRespondentType(selectedRespondentType_Base){
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
 	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 	questionsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
+	commentsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
 }
 /*Assign Value for clientTypeId, respondentId*/
 
@@ -161,6 +163,7 @@ function valueOffice(selectedOffice_Base){
 	serviceTypeId = "";
 	submittedRate.availedOfficeServices = [];
 	submittedRate.respondentRatings = [];
+	submittedRate.comments = [];
 
 	officeId = selectedOffice_Obj.office_id;
 
@@ -170,6 +173,7 @@ function valueOffice(selectedOffice_Base){
 	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
 	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 	questionsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
+	commentsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
 }
 /*Assign Value for officeId*/
 
@@ -318,11 +322,6 @@ function valueComments(suggestionTextArea){
 	submittedRate.comments = submittedRate.comments.filter(function(value, index, array){
 		return questionId != value.questionId;
 	});
-
-	/*
-	comments:[{questionId:value, respondentComment:value}]
-	alert(JSON.stringify(commentQuestionDet_Obj)+" "+suggestionTextArea.value);
-	*/
 
 	submittedRate.comments.push(commentsDetails_Obj);
 }

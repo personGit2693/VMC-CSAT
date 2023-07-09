@@ -3412,7 +3412,8 @@ body {
     /*To be changed*/
     font-style: italic;
     font-weight: bold;
-    color: black; }
+    color: black;
+    margin-top: 15px; }
 
   /*Step per field group*/
   /*Step per field*/
@@ -3616,7 +3617,8 @@ body {
     /*To be changed*/
     font-style: italic;
     font-weight: bold;
-    color: black; }
+    color: black;
+    margin-top: 15px; }
 
   /*Step per field group*/
   /*Step per field*/
@@ -3820,7 +3822,8 @@ body {
     /*changed*/
     font-style: italic;
     font-weight: bold;
-    color: black; }
+    color: black;
+    margin-top: 15px; }
 
   /*Step per field group*/
   /*Step per field*/
@@ -4024,7 +4027,8 @@ body {
     /*changed*/
     font-style: italic;
     font-weight: bold;
-    color: black; }
+    color: black;
+    margin-top: 15px; }
 
   /*Step per field group*/
   /*Step per field*/
