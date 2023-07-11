@@ -19,7 +19,7 @@ function StepTwoBtns(){
 }
 
 function StepThreeBtns(){
-	let stepThreeBtns = `<button class="normButton_RoClass proceedBtn-Class" id="nextStepThreeBtn-Id" onclick="nextStep('stepByStepItem-Class', 'headerDynamicSubTxt-Id', 'stepSets-Class')">`+
+	let stepThreeBtns = `<button class="normButton_RoClass proceedBtn-Class" id="nextStepThreeBtn-Id" onclick="submitValidationStepThree()">`+
 		`Proceed`+
 	`</button>`+
 	`<button class="normButton_RoClass backBtn-Class" id="backStepThreeBtn-Id" onclick="backStep('stepByStepItem-Class', 'headerDynamicSubTxt-Id', 'stepSets-Class')">`+

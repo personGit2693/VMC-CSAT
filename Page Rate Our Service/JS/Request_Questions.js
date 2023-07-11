@@ -1,6 +1,6 @@
 /*Import*/
 import token from "../../Global JS/Token.js";
-import {clientTypeId, officeId} from "../../Global JS/Values_Page_RateService.js";
+import {clientTypeId, officeId, valuePopRespondentRatings} from "../../Global JS/Values_Page_RateService.js";
 import renderQuestionScoreRadioBtn from "./View_QuestionScoreRadioBtn.js";
 /*Import*/
 
@@ -16,7 +16,7 @@ var questionDetails_Array = [];
 /*Export variables*/
 
 
-/*Get office services details*/
+/*Get questions details*/
 function requestQuestions(){
 
 	httpRequest.onload = function(){
@@ -29,13 +29,13 @@ function requestQuestions(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting office services has execution problem");
+					alert("Getting questions has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
 					questionDetails_Array = httpResponse.questionDetails_Array;
-					renderQuestionScoreRadioBtn();						
+					renderQuestionScoreRadioBtn();
+					valuePopRespondentRatings();						
 				}
 			}catch(httpRequest_Error){
-				alert(httpRequest.responseText);
 				alert("Response is not an object on getting Questions");
 				alert(httpRequest_Error);
 			}			
@@ -52,7 +52,7 @@ function requestQuestions(){
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString); 	
 }
-/*Get office services details*/
+/*Get questions details*/
 
 
 /*Export*/

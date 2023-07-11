@@ -17,6 +17,7 @@ function QuestionScoreRadioBtn(){
 	for(let index=0; index < questionDetails_Array.length; index++){
 		const questionResponseRate_Obj = {};
 		questionResponseRate_Obj.questionId = questionDetails_Array[index].question_id;
+		questionResponseRate_Obj.questionGroupId = questionDetails_Array[index].questionsgroup_id;
 
 		elemName = btoa(unescape(encodeURIComponent(JSON.stringify(questionDetails_Array[index]))));
 

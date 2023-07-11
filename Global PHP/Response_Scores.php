@@ -62,7 +62,10 @@ if(isset($_POST["token"])){
 	if($globalTokenResult === null){
 		/*_Get scores on db*/
 		/*_ _Prep query*/
-		$getScores_Query = "SELECT * FROM scores_tab ORDER BY score_value DESC;";
+		$getScores_Query = "SELECT * FROM scores_tab 
+			WHERE NOT score_id = 6
+			ORDER BY score_value DESC;
+		";
 		/*_ _Prep query*/
 
 		/*_ _Execute query*/

@@ -1,5 +1,6 @@
 /*Import*/
 import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap, commentsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
+import {questionDetails_Array} from "../Page Rate Our Service/JS/Request_Questions.js";
 /*Import*/
 
 
@@ -21,6 +22,8 @@ var freqVisitId = "";
 var awarenessRatingViaId = "";
 var visibilityRatingViaId = "";
 var helpfulnessRatingViaId = "";
+var questionGroups = [];
+var selectedQuestionGroups = [];
 
 
 var submittedRate = {
@@ -139,6 +142,8 @@ function valueRespondentType(selectedRespondentType_Base){
 	serviceTypeId = "";
 	submittedRate.availedOfficeServices = [];
 	submittedRate.respondentRatings = [];
+	questionGroups = [];
+	selectedQuestionGroups = [];
 	submittedRate.comments = [];
 
 	respondentId = selectedRespondentType_Obj.respondent_id ;
@@ -163,6 +168,8 @@ function valueOffice(selectedOffice_Base){
 	serviceTypeId = "";
 	submittedRate.availedOfficeServices = [];
 	submittedRate.respondentRatings = [];
+	questionGroups = [];
+	selectedQuestionGroups = [];
 	submittedRate.comments = [];
 
 	officeId = selectedOffice_Obj.office_id;
@@ -285,25 +292,59 @@ function valueHelpfulnessRating(selectedHelpfulnessRating_Base){
 
 
 /*Assign Value for respondentRatings*/
+function valuePopRespondentRatings(){
+	 questionDetails_Array.forEach(function(value, index, array){
+	 	const preQuestionValue_Obj = {questionId: value.question_id, questionGroupId: value.questionsgroup_id, scoreId: 6};
+
+		submittedRate.respondentRatings.push(preQuestionValue_Obj);
+
+		if(questionGroups.includes(value.questionsgroup_id) == false){
+			questionGroups.push(value.questionsgroup_id);
+		}		
+	});
+}
+
 function valueRespondentRatings(selectedQuestionScore_Base, questionScoreRadioBtn){
 	const selectedQuestionScore_Obj = JSON.parse(atob(selectedQuestionScore_Base));
 	const questionId = selectedQuestionScore_Obj.questionId;
-
+	const questionGroupId = selectedQuestionScore_Obj.questionGroupId;
 
 	if(questionScoreRadioBtn.checked === true){
-		/*_Remove first the previous selected rating via questionId if any*/
+		/*_Remove first the previous selected rating via questionId*/
 		submittedRate.respondentRatings = submittedRate.respondentRatings.filter(function(value, index, array){
 			return questionId != value.questionId;
 		});
-		/*_Remove first the previous selected rating via questionId if any*/
+		/*_Remove first the previous selected rating via questionId*/
+
 
 		/*_Add new selected selectedQuestionScore_Obj*/
 		submittedRate.respondentRatings.push(selectedQuestionScore_Obj);
 		/*_Add new selected selectedQuestionScore_Obj*/
+
+
+		/*_Add to selectedQuestionGroups for validation of at least one question group has rating*/
+		selectedQuestionGroups.push(selectedQuestionScore_Obj.questionGroupId);
+		/*_Add to selectedQuestionGroups for validation of at least one question group has rating*/
+
 	}else if(questionScoreRadioBtn.checked === false){
 		submittedRate.respondentRatings = submittedRate.respondentRatings.filter(function(value, index, array){
-			return value != selectedQuestionScore_Obj;
+			return questionId != value.questionId;
 		});
+
+
+		/*_Return the unselected questionScore to default value then add*/
+		selectedQuestionScore_Obj.scoreId = 6;
+		submittedRate.respondentRatings.push(selectedQuestionScore_Obj);
+		/*_Return the unselected questionScore to default value then add*/
+
+
+		/*_Remove one similar questionGroupId from selectedQuestionGroups*/
+		for(let index=0; index<selectedQuestionGroups.length; index++){
+			if(selectedQuestionGroups[index] == questionGroupId){
+				selectedQuestionGroups.splice(index, 1);
+			}
+		}
+		/*_Remove one similar questionGroupId from selectedQuestionGroups*/
 	}
 }
 /*Assign Value for respondentRatings*/
@@ -350,5 +391,5 @@ window.valueComments = valueComments;
 
 
 /*Export*/
-export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId};
+export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId, valuePopRespondentRatings, questionGroups, selectedQuestionGroups};
 /*Export*/
