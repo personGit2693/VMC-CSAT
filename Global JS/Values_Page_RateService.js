@@ -4,7 +4,13 @@ import {questionDetails_Array} from "../Page Rate Our Service/JS/Request_Questio
 /*Import*/
 
 
+/*Prep variables*/
+
+/*Prep variables*/
+
+
 /*Prep export variables*/
+var clientResponseRef = "";
 var respondentId = "";
 var ageRangeId = "";
 var genderId = "";
@@ -28,6 +34,7 @@ var selectedQuestionGroups = [];
 
 var submittedRate = {
 	respondentDetails:{
+		clientResponseRef: clientResponseRef,
 		respondentId: respondentId, 
 		ageRangeId: ageRangeId,
 		genderId: genderId,
@@ -364,9 +371,22 @@ function valueComments(suggestionTextArea){
 		return questionId != value.questionId;
 	});
 
-	submittedRate.comments.push(commentsDetails_Obj);
+
+	if(suggestionTextArea.value != ""){
+		submittedRate.comments.push(commentsDetails_Obj);
+	}	
 }
 /*Assign Value for comments*/
+
+
+/*Assign Value for clientResponseRef*/
+function valueClientResponseRef(){
+	const toDate = new Date();
+	
+	clientResponseRef = toDate.getFullYear()+"-"+"VMCCSAT-"+toDate.getMonth()+toDate.getDate()+toDate.getHours()+toDate.getMinutes()+toDate.getSeconds()+toDate.getMilliseconds();
+	submittedRate.respondentDetails.clientResponseRef = clientResponseRef;
+}
+/*Assign Value for clientResponseRef*/
 
 
 /*Declare global*/
@@ -387,6 +407,7 @@ window.valueVisibilityRating = valueVisibilityRating;
 window.valueHelpfulnessRating = valueHelpfulnessRating;
 window.valueRespondentRatings = valueRespondentRatings;
 window.valueComments = valueComments;
+window.valueClientResponseRef = valueClientResponseRef;
 /*Declare global*/
 
 

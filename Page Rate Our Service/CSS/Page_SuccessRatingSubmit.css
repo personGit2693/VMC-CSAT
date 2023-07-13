@@ -1,4 +1,15 @@
 /***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
+/*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -2778,5 +2789,604 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Body*/
+/*For Body*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Landing page content*/
+/*For Landing page content*/
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Success Landing Page Body & response container*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  body {
+    background-color: #ffffff; }
 
-/*# sourceMappingURL=Rostrap_Global.css.map */
+  /*Main Container itself*/
+  div#mainContainer-Id {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 100%;
+    /*To be changed*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: none;
+    /*To be changed*/
+    box-shadow: none;
+    /*To be changed*/
+    padding: 30px;
+    background-color: transparent;
+    /*To be changed*/ }
+
+  /*Main Container itself*/
+  /*Icon*/
+  div#iconContainer-Id {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap; }
+
+  div#iconContainer-Id > div#iconWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 95px;
+    /*To be changed*/
+    height: 95px;
+    /*To be changed*/
+    margin: auto; }
+
+  div#iconContainer-Id > div#iconWrapper > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Icon*/
+  /*Message txt*/
+  div#messageTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal bold 18px calibri;
+    /*To be changed*/
+    color: #4860A6;
+    margin-top: 8px;
+    /*To be changed*/
+    text-align: center;
+    /*To be changed*/ }
+
+  /*Message txt*/
+  /*System message txt*/
+  div#systemMessTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal bold 14px calibri;
+    /*To be changed*/
+    color: #9E9E9E;
+    margin-top: 8px;
+    text-align: center;
+    /*To be changed*/ }
+
+  /*System message txt*/
+  /*Return button link*/
+  div#buttonWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    margin-top: 30px; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 190px;
+    /*To be changed*/
+    background-color: #02A696;
+    border-radius: 30px;
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+    /*To be changed*/
+    text-align: center; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnTxtItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: 100%;
+    font: normal bold 12px calibri;
+    /*To be changed*/
+    color: #ffffff; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    flex-shrink: 0;
+    width: 30px;
+    /*To be changed*/
+    height: 30px;
+    /*To be changed*/ }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Return button link*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  body {
+    background-color: #ffffff; }
+
+  /*Main Container itself*/
+  div#mainContainer-Id {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 100%;
+    /*To be changed*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: none;
+    /*To be changed*/
+    box-shadow: none;
+    /*To be changed*/
+    padding: 30px;
+    background-color: transparent;
+    /*To be changed*/ }
+
+  /*Main Container itself*/
+  /*Icon*/
+  div#iconContainer-Id {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap; }
+
+  div#iconContainer-Id > div#iconWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 95px;
+    /*To be changed*/
+    height: 95px;
+    /*To be changed*/
+    margin: auto; }
+
+  div#iconContainer-Id > div#iconWrapper > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Icon*/
+  /*Message txt*/
+  div#messageTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal bold 18px calibri;
+    /*To be changed*/
+    color: #4860A6;
+    margin-top: 8px;
+    /*To be changed*/
+    text-align: center;
+    /*To be changed*/ }
+
+  /*Message txt*/
+  /*System message txt*/
+  div#systemMessTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal bold 14px calibri;
+    /*To be changed*/
+    color: #9E9E9E;
+    margin-top: 8px;
+    text-align: center;
+    /*To be changed*/ }
+
+  /*System message txt*/
+  /*Return button link*/
+  div#buttonWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    margin-top: 30px; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 190px;
+    /*To be changed*/
+    background-color: #02A696;
+    border-radius: 30px;
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+    /*To be changed*/
+    text-align: center; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnTxtItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: 100%;
+    font: normal bold 12px calibri;
+    /*To be changed*/
+    color: #ffffff; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    flex-shrink: 0;
+    width: 30px;
+    /*To be changed*/
+    height: 30px;
+    /*To be changed*/ }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Return button link*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  body {
+    background-color: #EEEEEE; }
+
+  /*Main Container itself*/
+  div#mainContainer-Id {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 400px;
+    /*changed*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    /*changed*/
+    box-shadow: 0px 0px 3px gray;
+    /*changed*/
+    padding: 30px;
+    background-color: #ffffff;
+    /*changed*/ }
+
+  /*Main Container itself*/
+  /*Icon*/
+  div#iconContainer-Id {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap; }
+
+  div#iconContainer-Id > div#iconWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 100px;
+    /*changed*/
+    height: 100px;
+    /*changed*/
+    margin: auto; }
+
+  div#iconContainer-Id > div#iconWrapper > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Icon*/
+  /*Message txt*/
+  div#messageTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal bold 24px calibri;
+    /*changed*/
+    color: #4860A6;
+    margin-top: 30px;
+    /*changed*/
+    text-align: left;
+    /*changed*/ }
+
+  /*Message txt*/
+  /*System message txt*/
+  div#systemMessTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal normal 18px calibri;
+    /*changed*/
+    color: #9E9E9E;
+    margin-top: 8px;
+    text-align: left;
+    /*changed*/ }
+
+  /*System message txt*/
+  /*Return button link*/
+  div#buttonWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    margin-top: 30px; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 225px;
+    /*changed*/
+    background-color: #02A696;
+    border-radius: 30px;
+    padding: 5px;
+    text-decoration: none;
+    margin: 0px;
+    /*changed*/
+    text-align: center; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnTxtItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: 100%;
+    font: normal bold 14px calibri;
+    /*changed*/
+    color: #ffffff; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    flex-shrink: 0;
+    width: 32px;
+    /*changed*/
+    height: 32px;
+    /*changed*/ }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Return button link*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  body {
+    background-color: #EEEEEE; }
+
+  /*Main Container itself*/
+  div#mainContainer-Id {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 450px;
+    /*changed*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    /*changed*/
+    box-shadow: 0px 0px 3px gray;
+    /*changed*/
+    padding: 30px;
+    background-color: #ffffff;
+    /*changed*/ }
+
+  /*Main Container itself*/
+  /*Icon*/
+  div#iconContainer-Id {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap; }
+
+  div#iconContainer-Id > div#iconWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: 115px;
+    /*changed*/
+    height: 115px;
+    /*changed*/
+    margin: auto; }
+
+  div#iconContainer-Id > div#iconWrapper > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Icon*/
+  /*Message txt*/
+  div#messageTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal bold 28px calibri;
+    /*changed*/
+    color: #4860A6;
+    margin-top: 30px;
+    /*changed*/
+    text-align: left;
+    /*changed*/ }
+
+  /*Message txt*/
+  /*System message txt*/
+  div#systemMessTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    font: normal normal 22px calibri;
+    /*changed*/
+    color: #9E9E9E;
+    margin-top: 8px;
+    text-align: left;
+    /*changed*/ }
+
+  /*System message txt*/
+  /*Return button link*/
+  div#buttonWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    margin-top: 30px; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 230px;
+    /*changed*/
+    background-color: #02A696;
+    border-radius: 30px;
+    padding: 5px;
+    text-decoration: none;
+    margin: 0px;
+    /*changed*/
+    text-align: center; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnTxtItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: 100%;
+    font: normal bold 16px calibri;
+    /*changed*/
+    color: #ffffff; }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    flex-shrink: 0;
+    width: 34px;
+    /*changed*/
+    height: 34px;
+    /*changed*/ }
+
+  div#buttonWrapper > a#returnBtnLinkFlex > div#returnBtnImageItem > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Return button link*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Success Landing Page Body & response container*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*# sourceMappingURL=Page_SuccessRatingSubmit.css.map */

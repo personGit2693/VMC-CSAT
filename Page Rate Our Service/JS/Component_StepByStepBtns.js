@@ -30,7 +30,7 @@ function StepThreeBtns(){
 }
 
 function StepFourBtns(){
-	let stepFourBtns = `<button class="normButton_RoClass proceedBtn-Class" id="submitScoreBtn-Id">`+
+	let stepFourBtns = `<button class="normButton_RoClass proceedBtn-Class" id="submitScoreBtn-Id" onclick="valueClientResponseRef(), submitRequestEncodeRating(this)">`+
 		`Submit Rating`+
 	`</button>`+
 	`<button class="normButton_RoClass backBtn-Class" id="backStepFourBtn-Id" onclick="backStep('stepByStepItem-Class', 'headerDynamicSubTxt-Id', 'stepSets-Class')">`+

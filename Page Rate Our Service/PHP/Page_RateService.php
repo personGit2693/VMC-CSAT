@@ -18,6 +18,15 @@ if(isset($_GET["rateToken"])){
 	/*Query string*/
 
 
+	/*Check connection*/
+	if($serverConnection != null){
+		echo "No Connection from the server.";
+		header("Refresh:4;".$landingPage_EndUser);
+		return;
+	}
+	/*Check connection*/
+
+
 	/*Token Validation*/
 	$validateRateTok_Resp = validateRateToken($vmcCsat_Conn, $rateToken);
 
@@ -325,9 +334,11 @@ if(isset($_GET["rateToken"])){
 			<script type="text/javascript" src="../JS/SubmitValidation_StepOne.js"></script>
 			<script type="module" src="../JS/Validator_StepTwo.js"></script>
 			<script type="text/javascript" src="../JS/SubmitValidation_StepTwo.js"></script>
-			<script type="module" src="../JS/Validator_StepThree.js"></script>
-			<script type="text/javascript" src="../JS/SubmitValidation_StepThree.js"></script>
+			<script type="module" src="../JS/Validator_StepThree.js"></script>			
+			<script type="text/javascript" src="../JS/SubmitValidation_StepThree.js"></script>			
 			<script type="module" src="../../Global JS/Values_Page_RateService.js"></script>
+			<script type="module" src="../JS/Gateway_EncodeRating.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_EncodeRating.js"></script>
 			<script type="module" src="../JS/Gateway_Religions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js"></script>
 			<script type="module" src="../JS/Gateway_Floors.js"></script>

@@ -8,10 +8,10 @@ function validatorStepOne(){
 	let validationResult = true;
 
 	for(let key in submittedRate.respondentDetails){
-		if(submittedRate.respondentDetails[key] == ""){
+		if(submittedRate.respondentDetails[key] == "" && key != "clientResponseRef"){
 			validationResult = false;
 			break;
-		}else if(submittedRate.respondentDetails[key] != ""){
+		}else if(submittedRate.respondentDetails[key] != "" && key != "clientResponseRef"){
 			if(submittedRate.availedOfficeServices.length == 0){
 				validationResult = false;
 				break;

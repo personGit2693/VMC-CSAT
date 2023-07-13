@@ -20,7 +20,7 @@ var officeServiceDetails_Array = [];
 function requestOfficeServices(){
 
 	httpRequest.onload = function(){
-		if(httpRequest.status == 200){				
+		if(httpRequest.status == 200){
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
 
