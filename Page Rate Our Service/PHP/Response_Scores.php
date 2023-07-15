@@ -8,8 +8,8 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 
 if(isset($_POST["token"])){
 	/*Required Files*/
-	require_once "Connection.php";
-	require_once "CheckGlobalToken_Class.php";
+	require_once "../../Global PHP/Connection.php";
+	require_once "../../Global PHP/CheckGlobalToken_Class.php";
 	/*Required Files*/
 
 

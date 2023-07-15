@@ -10,7 +10,7 @@ import {requestEducAttainment} from "./Request_EducAttainment.js";
 import {requestBuildings} from "./Request_Buildings.js";
 import {requestFreqVisits} from "./Request_FreqVisits.js";
 import {requestAwarenessRates} from "./Request_AwarenessRates.js";
-import {requestScores} from "../../Global JS/Request_Scores.js";
+import {requestScores} from "./Request_Scores.js";
 /*Import*/
 
 

@@ -1,5 +1,5 @@
 /*Import*/
-import token from "./Token.js";
+import token from "../../Global JS/Token.js";
 /*Import*/
 
 
@@ -41,7 +41,7 @@ function requestScores(){
 
 
 	const queryString = "token="+token;
-	httpRequest.open("POST", "../../Global PHP/Response_Scores.php", false);
+	httpRequest.open("POST", "Response_Scores.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);		
 }

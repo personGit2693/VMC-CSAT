@@ -1,6 +1,6 @@
 /*Import*/
 import {questionDetails_Array} from "./Request_Questions.js";
-import {scoreDetails_Array} from "../../Global JS/Request_Scores.js";
+import {scoreDetails_Array} from "./Request_Scores.js";
 /*Import*/
 
 
