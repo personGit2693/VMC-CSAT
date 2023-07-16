@@ -126,22 +126,10 @@
 /*_Left side Content*/
 /*_Navigation Menu*/
 /*_Navigation Menu*/
-/*_Navigation Menu with Collapse (Right Chevron)*/
-/*_Navigation Menu with Collapse (Right Chevron)*/
-/*_Navigation Menu with Collapse (Down Chevron)*/
-/*_Navigation Menu with Collapse (Down Chevron)*/
-/*_Navigation Menu Hover and Active*/
-/*_Navigation Menu Hover and Active*/
-/*_Navigation Menu with Collapse(Right Chevron) Hover & Active*/
-/*_Navigation Menu with Collapse(Right Chevron) Hover & Active*/
-/*_Navigation Menu with Collapse(Down Chevron) Hover & Active*/
-/*_Navigation Menu with Collapse(Down Chevron) Hover & Active*/
-/*_Navigation Menus*/
-/*_Navigation Menus*/
-/*_Navigation Menus Hover & Active*/
-/*_Navigation Menus Hover & Active*/
-/*_Navigation Menu Icon Wrapper*/
-/*_Navigation Menu Icon Wrapper*/
+/*_Navigation Menus From Collapse or Sub Menu*/
+/*_Navigation Menus From Collapse or Sub Menu*/
+/*_Burger*/
+/*_Burger*/
 /*_Navigation Menu Icon*/
 /*_Navigation Menu Icon*/
 /*_Main side content*/
@@ -1363,229 +1351,212 @@ button.iconBtn_RoClass {
     height: auto;
     background: none; }
 
-  /*_Navigation Menu*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass {
-    /*Normal Nav Menu Without Collapse*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: transparent var(--navicon) no-repeat 5px center;
-    background-origin: padding-box;
-    background-size: var(--naviconSize);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRight_RoClass {
-    /*Normal Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDown_RoClass {
-    /*Normal Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuActive_RoClass {
-    /*Active Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass:hover {
-    /*Hovered Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass {
-    /*Active Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass {
-    /*Active Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass {
-    /*Hovered Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass {
-    /*Hovered Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  /*_Navigation Menu*/
-  /*_ _Navigation Menus From Collapse*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenusActive_RoClass {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass:hover {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  /*_ _/*Navigation Menus From Collapse*/
   /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
   /*Main Side*/
   div.rolayout_RoClass > div.mainmecha_RoClass {
     position: relative;
@@ -1722,229 +1693,212 @@ button.iconBtn_RoClass {
     height: auto;
     background: none; }
 
-  /*_Navigation Menu*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass {
-    /*Normal Nav Menu Without Collapse*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: transparent var(--navicon) no-repeat 5px center;
-    background-origin: padding-box;
-    background-size: var(--naviconSize);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRight_RoClass {
-    /*Normal Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDown_RoClass {
-    /*Normal Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuActive_RoClass {
-    /*Active Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass:hover {
-    /*Hovered Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass {
-    /*Active Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass {
-    /*Active Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass {
-    /*Hovered Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass {
-    /*Hovered Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  /*_Navigation Menu*/
-  /*_Navigation Menus Collapse*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenusActive_RoClass {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass:hover {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  /*_Navigation Menus Collapse*/
   /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
   /*Main Side*/
   div.rolayout_RoClass > div.mainmecha_RoClass {
     position: relative;
@@ -2081,229 +2035,212 @@ button.iconBtn_RoClass {
     height: auto;
     background: none; }
 
-  /*_Navigation Menu*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass {
-    /*Normal Nav Menu Without Collapse*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: transparent var(--navicon) no-repeat 5px center;
-    background-origin: padding-box;
-    background-size: var(--naviconSize);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRight_RoClass {
-    /*Normal Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDown_RoClass {
-    /*Normal Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuActive_RoClass {
-    /*Active Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass:hover {
-    /*Hovered Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass {
-    /*Active Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass {
-    /*Active Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass {
-    /*Hovered Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass {
-    /*Hovered Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  /*_Navigation Menu*/
-  /*_Navigation Menus Collapse*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenusActive_RoClass {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass:hover {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  /*_Navigation Menus Collapse*/
   /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
   /*Main Side*/
   div.rolayout_RoClass > div.mainmecha_RoClass {
     position: relative;
@@ -2440,229 +2377,212 @@ button.iconBtn_RoClass {
     height: auto;
     background: none; }
 
-  /*_Navigation Menu*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass {
-    /*Normal Nav Menu Without Collapse*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: transparent var(--navicon) no-repeat 5px center;
-    background-origin: padding-box;
-    background-size: var(--naviconSize);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRight_RoClass {
-    /*Normal Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDown_RoClass {
-    /*Normal Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--navicon) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuActive_RoClass {
-    /*Active Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenu_RoClass:hover {
-    /*Hovered Nav Menu Without Collapse*/
-    background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-    color: var(--navFcolorha);
-    background-origin: padding-box;
-    background-size: var(--naviconSize); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass {
-    /*Active Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass {
-    /*Active Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass {
-    /*Hovered Nav Menu With Collapse Right*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass {
-    /*Hovered Nav Menu With Collapse Down*/
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    margin-bottom: 3px;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center;
-    background-origin: padding-box, padding-box;
-    background-size: var(--naviconSize), var(--navArrowSize);
-    background-color: var(--navBgColorha);
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolorha);
-    cursor: pointer; }
-
-  /*_Navigation Menu*/
-  /*_Navigation Menus Collapse*/
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    padding-top: var(--navpaddtop);
-    padding-right: var(--navpaddright);
-    padding-bottom: var(--navpaddbottom);
-    padding-left: var(--navpaddleft);
-    background-color: transparent;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-family: calibri;
-    font-size: var(--navFSize);
-    color: var(--navFcolor);
-    cursor: pointer; }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenusActive_RoClass {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass .collapseMenus_RoClass:hover {
-    background-color: var(--navBgColorha);
-    color: var(--navFcolorha); }
-
-  /*_Navigation Menus Collapse*/
   /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
   /*Main Side*/
   div.rolayout_RoClass > div.mainmecha_RoClass {
     position: relative;
