@@ -126,6 +126,15 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Layout one made Rogrid Mixin*/
 /*_Flex Items wrapper*/
 /*_Flex Items wrapper*/
@@ -147,6 +156,8 @@
 /*_Main side content*/
 /*_Main side project title*/
 /*_Main side project title*/
+/*_Project Title and Login User Details*/
+/*_Project Title and Login User Details*/
 /*Layout one Rogrid Mixin*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -1306,6 +1317,157 @@ button.iconBtn_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.chartWrap_RoClass {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-width: var(--chartWrapBorderWidth);
+  border-style: var(--chartWrapBorderStyle);
+  border-color: var(--chartWrapBorderColor);
+  border-radius: var(--chartWrapBorderRadius);
+  width: var(--chartWrapWidth);
+  height: var(--chartWrapHeight); }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.dateRange_RoClass {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: var(--dateRangeBorderRadius);
+  border-width: var(--dateRangeBorderWidth);
+  border-style: solid;
+  border-color: var(--dateRangeBorderColor);
+  width: auto;
+  cursor: pointer; }
+
+.dateRangeDatails_RoClass {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: var(--dateRangePadding); }
+
+.dateRangeIcon_RoClass {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  width: var(--dateRangeIconSize);
+  height: var(--dateRangeIconSize);
+  background-color: transparent;
+  background-image: var(--dateRangeIcon);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0; }
+
+.dateRangeText_RoClass {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-family: calibri;
+  font-size: var(--dateRangeFSize);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--dateRangeFColor); }
+
+.dateRangeTooltipArrow_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  display: none;
+  border-width: 7px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: var(--dateRangeTooltipColor);
+  border-left-color: transparent;
+  width: 10px; }
+
+.dateRangeCalLite_RoClass {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--dateRangeCalLiteBorderColor); }
+
+/*General Media*/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    /*To be changed*/
+    width: 100%;
+    /*To be changed*/
+    max-height: 0px;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    /*changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    /*changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    /*changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Layout one design RoStrap Mixin*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
@@ -1639,12 +1801,83 @@ button.iconBtn_RoClass {
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 18px calibri;
-    /*To be changed*/
-    color: #ffffff;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: column wrap;
+    /*To be changed*/
+    justify-content: flex-start;
+    /*To be changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1981,12 +2214,83 @@ button.iconBtn_RoClass {
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 18px calibri;
-    /*To be changed*/
-    color: #ffffff;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -2316,19 +2620,90 @@ button.iconBtn_RoClass {
 
   div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
     position: relative;
-    display: block;
-    /*return to mobile value*/
+    display: inline-block;
+    /*changed*/
     box-sizing: border-box;
     overflow: hidden;
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 20px calibri;
-    /*changed*/
-    color: #ffffff;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -2658,19 +3033,90 @@ button.iconBtn_RoClass {
 
   div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
     position: relative;
-    display: block;
-    /*return to mobile value*/
+    display: inline-block;
+    /*changed*/
     box-sizing: border-box;
     overflow: hidden;
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 20px calibri;
-    /*changed*/
-    color: #ffffff;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Dekstop*/
 /***********************************************************************************************************************************************************************************************************/
