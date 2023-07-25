@@ -37,6 +37,224 @@
 	--projectTitleTextFSize: 16px;
 	--projectTitleUserIconSize: 30px;
 	/*Page Title*/
+
+
+	/*Calendar*/
+	--calendarHeadTxtFSize: 12px;
+	--calendarHeadBtnWidthHeight: 14px;
+	--calendarDayTxtFSize: 12px;
+	/*Calendar*/
+
+
+	/*Date Range*/	
+	--dateRangeBorderRadius: 4px;
+	--dateRangeBorderWidth: 1px;
+	--dateRangeBorderColor: #285FF3;
+	--dateRangePadding: 4px;	
+	--dateRangeCalLiteBorderColor: #8394B7;				
+	/*Date Range*/
 }
 /*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.globalWrapper{
+		@include globalWrapper_MTL_Style;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.globalWrapper{
+		@include globalWrapper_MTL_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.globalWrapper{
+		@include globalWrapper_MTL_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.globalWrapper{
+		@include globalWrapper_Desktop_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	#searchWrapper{
+		@include searchWrapper_Style;
+	}
+
+	.searchWrapperItem-Class{
+		@include searchWrapperItem_Style;
+	}
+
+	#dateRangeOneItemWrap{
+		@include dateRangeOneItemWrap_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
+		@include dateRangeOneIcon_MT_RoStyle;
+	}	
+
+	#dateRangeOneWrap-Id .dateRangeText_RoClass{
+		@include dateRangeOneText_MT_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
+		@include dateRangeOneTooltipArrow_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Mobile_Style;
+	}	
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	#searchWrapper{
+		@include searchWrapper_Style;
+	}
+
+	.searchWrapperItem-Class{
+		@include searchWrapperItem_Style;
+	}
+
+	#dateRangeOneItemWrap{
+		@include dateRangeOneItemWrap_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
+		@include dateRangeOneIcon_MT_RoStyle;
+	}	
+
+	#dateRangeOneWrap-Id .dateRangeText_RoClass{
+		@include dateRangeOneText_MT_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
+		@include dateRangeOneTooltipArrow_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Tablet_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	#searchWrapper{
+		@include searchWrapper_Style;
+	}
+
+	.searchWrapperItem-Class{
+		@include searchWrapperItem_Style;
+	}
+
+	#dateRangeOneItemWrap{
+		@include dateRangeOneItemWrap_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
+		@include dateRangeOneIcon_Laptop_RoStyle;
+	}	
+
+	#dateRangeOneWrap-Id .dateRangeText_RoClass{
+		@include dateRangeOneText_Laptop_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
+		@include dateRangeOneTooltipArrow_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Laptop_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	#searchWrapper{
+		@include searchWrapper_Style;
+	}
+
+	.searchWrapperItem-Class{
+		@include searchWrapperItem_Style;
+	}
+
+	#dateRangeOneItemWrap{
+		@include dateRangeOneItemWrap_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
+		@include dateRangeOneIcon_Desktop_RoStyle;
+	}	
+
+	#dateRangeOneWrap-Id .dateRangeText_RoClass{
+		@include dateRangeOneText_Desktop_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
+		@include dateRangeOneTooltipArrow_Style;
+	}
+
+	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Desktop_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Search area*/
 /***********************************************************************************************************************************************************************************************************/

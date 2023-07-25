@@ -65,11 +65,144 @@
 			</div>
 			<!--Page title-->
 
-			
+			<!--Search area-->
+			<div class="globalWrapper" id="searchWrapper">
+
+				<!--_Date Range Item-->
+				<div class="searchWrapperItem-Class" id="dateRangeOneItemWrap">
+					<!--_ _Date Range Wrap-->
+					<div class="dateRangeWrap_RoClass" id="dateRangeOneWrap-Id">
+						<!--_ _ _Date Range-->
+						<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
+							<div class="dateRangeDetails_RoClass">
+								<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('../../src/calendaricon blue.png');"></div>
+								<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
+							</div>
+							<div class="dateRangeTooltipArrow_RoClass"></div>					
+						</div>
+						<!--_ _ _Date Range-->
+						<!--_ _ _Date Range Calendar Lite Wrap-->
+						<div class="dateRangeCalLiteWrap_RoClass">
+							<!--_ _ _ _Date Range Calendar Lite To-->						
+							<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass" id="dateRangeFrom">
+								<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
+								<div class="calLiteHead_RoClass">
+									<div class="calLiteMonthHead_RoClass">
+										<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'dateRangeFrom')"><img src="../../src/callite left.png"></div>
+										<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'dateRangeFrom')"><img src="../../src/callite right.png"></div>
+									</div>
+									<div class="calLiteYearHead_RoClass">
+										<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'dateRangeFrom')"><img src="../../src/callite left.png"></div>
+										<div class="calLiteYearText_RoClass"><!--Print Here--></div>
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'dateRangeFrom')"><img src="../../src/callite right.png"></div>
+									</div>									
+								</div>
+								<div class="calLiteDaysTxt_RoClass">
+									<div>Sun</div>
+									<div>Mon</div>
+									<div>Tue</div>
+									<div>Wed</div>
+									<div>Thu</div>
+									<div>Fri</div>
+									<div>Sat</div>
+								</div>
+								<div class="calLiteDaysIndex_RoClass">
+									<div>
+										<!--Print Here-->
+									</div>
+									<div>
+										<!--Print Here-->								
+									</div>
+
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+								</div>
+							</div>
+							<!--_ _ _ _Date Range Calendar Lite To-->
+
+							<!--_ _ _ _Date Range Calendar Lite To-->
+							<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass" id="dateRangeTo">
+								<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
+								<div class="calLiteHead_RoClass">
+									<div class="calLiteMonthHead_RoClass">
+										<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'dateRangeTo')"><img src="../../src/callite left.png"></div>
+										<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'dateRangeTo')"><img src="../../src/callite right.png"></div>
+									</div>
+									<div class="calLiteYearHead_RoClass">
+										<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'dateRangeTo')"><img src="../../src/callite left.png"></div>
+										<div class="calLiteYearText_RoClass"><!--Print Here--></div>
+										<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'dateRangeTo')"><img src="../../src/callite right.png"></div>
+									</div>									
+								</div>
+								<div class="calLiteDaysTxt_RoClass">
+									<div>Sun</div>
+									<div>Mon</div>
+									<div>Tue</div>
+									<div>Wed</div>
+									<div>Thu</div>
+									<div>Fri</div>
+									<div>Sat</div>
+								</div>
+								<div class="calLiteDaysIndex_RoClass">
+									<div>
+										<!--Print Here-->
+									</div>
+									<div>
+										<!--Print Here-->								
+									</div>
+
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+									<div>
+										<!--Print Here-->										
+									</div>
+								</div>
+							</div>
+							<!--_ _ _ _Date Range Calendar Lite To-->
+						</div>
+						<!--_ _ _Date Range Calendar Lite Wrap-->
+					</div>
+					<!--_ _Date Range Wrap-->				
+				</div>
+				<!--_Date Range Item-->
+
+			</div>
+			<!--Search area-->
 		</div> 
 	</div>
 
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
+	<script type="text/javascript" src="../JS/Executor_Page_Dashboard.js"></script>
 </body>
 </html>

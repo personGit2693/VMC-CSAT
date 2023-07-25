@@ -1330,6 +1330,14 @@ button.iconBtn_RoClass {
 /*Date Range*/
 /***********************************************************************************************************************************************************************************************************/
 /*General Media*/
+.dateRangeWrap_RoClass {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 0px solid transparent;
+  width: auto; }
+
 .dateRange_RoClass {
   position: relative;
   display: inline-block;
@@ -1343,7 +1351,7 @@ button.iconBtn_RoClass {
   width: auto;
   cursor: pointer; }
 
-.dateRangeDatails_RoClass {
+.dateRangeDetails_RoClass {
   position: relative;
   overflow: visible;
   display: flex;
@@ -1378,7 +1386,7 @@ button.iconBtn_RoClass {
   color: var(--dateRangeFColor); }
 
 .dateRangeTooltipArrow_RoClass {
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   display: none;
   border-width: 7px;
@@ -1401,13 +1409,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: column nowrap;
     /*To be changed*/
-    width: 100%;
-    /*To be changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /*Tablet*/
@@ -1416,12 +1424,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
     width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /*Laptop*/
@@ -1430,12 +1439,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
     width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /*Desktop*/
@@ -1444,12 +1454,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
     width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /***********************************************************************************************************************************************************************************************************/

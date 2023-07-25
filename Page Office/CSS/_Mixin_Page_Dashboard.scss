@@ -1,0 +1,82 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+@mixin searchWrapper_Style{
+	display: flex;
+	flex-flow: row nowrap;		
+	padding: 5px;
+	justify-content: flex-end;
+	background-color: #ffffff;
+}
+
+
+@mixin searchWrapperItem_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+
+@mixin dateRangeOneItemWrap_Style{
+	flex-shrink: 0;	
+}
+
+
+@mixin dateRangeOneText_MT_Style{
+	--dateRangeFSize: 12px; /*To be changed*/
+	--dateRangeFColor: #285FF3;
+}
+@mixin dateRangeOneText_Laptop_Style{
+	--dateRangeFSize: 14px; /*changed*/
+	--dateRangeFColor: #285FF3;
+}
+@mixin dateRangeOneText_Desktop_Style{
+	--dateRangeFSize: 16px; /*changed*/
+	--dateRangeFColor: #285FF3;
+}
+
+
+@mixin dateRangeOneTooltipArrow_Style{
+	--dateRangeTooltipColor: #8394B7;	
+	right:0;
+}
+
+
+@mixin dateRangeCalLiteWrap_Mobile_Style{
+	--dateRangeCalLiteWrapWidth: 300px; /*To be changed*/
+	--dateRangeCalLiteWrapTop: 35px; /*To be changed*/
+	right: 0;
+}
+@mixin dateRangeCalLiteWrap_Tablet_Style{
+	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
+	--dateRangeCalLiteWrapTop: 35px; /*changed*/
+	right: 0;
+}
+@mixin dateRangeCalLiteWrap_Laptop_Style{
+	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
+	--dateRangeCalLiteWrapTop: 37px; /*changed*/
+	right: 0;
+}
+@mixin dateRangeCalLiteWrap_Desktop_Style{
+	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
+	--dateRangeCalLiteWrapTop: 39px; /*changed*/
+	right: 0;
+}
+
+
+@mixin dateRangeOneIcon_MT_RoStyle{
+	--dateRangeIconSize: 14px; /*To be changed*/
+}
+@mixin dateRangeOneIcon_Laptop_RoStyle{
+	--dateRangeIconSize: 16px; /*changed*/
+}
+@mixin dateRangeOneIcon_Desktop_RoStyle{
+	--dateRangeIconSize: 18px; /*changed*/
+}
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/

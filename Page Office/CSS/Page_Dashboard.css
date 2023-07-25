@@ -10,6 +10,11 @@
 /*Step by step future framework*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global Wrapper*/
+/*Global Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -1341,6 +1346,14 @@ button.iconBtn_RoClass {
 /*Date Range*/
 /***********************************************************************************************************************************************************************************************************/
 /*General Media*/
+.dateRangeWrap_RoClass {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 0px solid transparent;
+  width: auto; }
+
 .dateRange_RoClass {
   position: relative;
   display: inline-block;
@@ -1354,7 +1367,7 @@ button.iconBtn_RoClass {
   width: auto;
   cursor: pointer; }
 
-.dateRangeDatails_RoClass {
+.dateRangeDetails_RoClass {
   position: relative;
   overflow: visible;
   display: flex;
@@ -1389,7 +1402,7 @@ button.iconBtn_RoClass {
   color: var(--dateRangeFColor); }
 
 .dateRangeTooltipArrow_RoClass {
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   display: none;
   border-width: 7px;
@@ -1412,13 +1425,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: column nowrap;
     /*To be changed*/
-    width: 100%;
-    /*To be changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /*Tablet*/
@@ -1427,12 +1440,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
     width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /*Laptop*/
@@ -1441,12 +1455,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
     width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /*Desktop*/
@@ -1455,12 +1470,13 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
     width: var(--dateRangeCalLiteWrapWidth);
     max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
 /***********************************************************************************************************************************************************************************************************/
@@ -3155,6 +3171,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3181,9 +3203,247 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitleTextFColor: #494C55;
   --projectTitleTextFSize: 16px;
   --projectTitleUserIconSize: 30px;
-  /*Page Title*/ }
+  /*Page Title*/
+  /*Calendar*/
+  --calendarHeadTxtFSize: 12px;
+  --calendarHeadBtnWidthHeight: 14px;
+  --calendarDayTxtFSize: 12px;
+  /*Calendar*/
+  /*Date Range*/
+  --dateRangeBorderRadius: 4px;
+  --dateRangeBorderWidth: 1px;
+  --dateRangeBorderColor: #285FF3;
+  --dateRangePadding: 4px;
+  --dateRangeCalLiteBorderColor: #8394B7;
+  /*Date Range*/ }
 
 /*Root*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 1420px;
+    /*changed*/
+    margin: 4px auto 4px auto;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+    justify-content: flex-end;
+    background-color: #ffffff; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible; }
+
+  #dateRangeOneItemWrap {
+    flex-shrink: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 12px;
+    /*To be changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 300px;
+    /*To be changed*/
+    --dateRangeCalLiteWrapTop: 35px;
+    /*To be changed*/
+    right: 0; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+    justify-content: flex-end;
+    background-color: #ffffff; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible; }
+
+  #dateRangeOneItemWrap {
+    flex-shrink: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 12px;
+    /*To be changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 450px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 35px;
+    /*changed*/
+    right: 0; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+    justify-content: flex-end;
+    background-color: #ffffff; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible; }
+
+  #dateRangeOneItemWrap {
+    flex-shrink: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 14px;
+    /*changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 450px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 37px;
+    /*changed*/
+    right: 0; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+    justify-content: flex-end;
+    background-color: #ffffff; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible; }
+
+  #dateRangeOneItemWrap {
+    flex-shrink: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 18px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 16px;
+    /*changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 450px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 39px;
+    /*changed*/
+    right: 0; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Page_Dashboard.css.map */
