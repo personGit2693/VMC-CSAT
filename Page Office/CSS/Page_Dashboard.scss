@@ -11,50 +11,220 @@
 /*Root*/
 :root{
 	/*Navigation*/
-	--generalNavMenuPadding: 12px;
-
-	--mainNavMenuIconSize: 20px;
-	--mainNavMenuFSize: 16px;
-	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: #494C55;
-	--hoverMainNavMenuBgColor: #247F4F;
-	--hoverMainNavMenuFColor: #ffffff;	
-
-	--subNavMenuIconSize: 20px;
-	--subNavMenuWrapBgColor: #E6E6E6;
-	--subNavMenuBgColor: transparent;
-	--subNavMenuFSize: 16px;
-	--subNavMenuFColor: #494C55;
-	--hoverSubNavMenuBgColor: #247F4F;
-	--hoverSubNavMenuFColor: #ffffff;
-
-	--chevronIconSize: 14px;
-	/*Navigation*/
-
-
-	/*Page Title*/
-	--projectTitleTextFColor: #494C55;
-	--projectTitleTextFSize: 16px;
-	--projectTitleUserIconSize: 30px;
-	/*Page Title*/
-
-
-	/*Calendar*/
-	--calendarHeadTxtFSize: 12px;
-	--calendarHeadBtnWidthHeight: 14px;
-	--calendarDayTxtFSize: 12px;
-	/*Calendar*/
+	--generalNavMenuPadding: 12px;		
+	/*Navigation*/	
 
 
 	/*Date Range*/	
 	--dateRangeBorderRadius: 4px;
-	--dateRangeBorderWidth: 1px;
+	--dateRangeBorderWidth: 2px;
 	--dateRangeBorderColor: #285FF3;
 	--dateRangePadding: 4px;	
 	--dateRangeCalLiteBorderColor: #8394B7;				
 	/*Date Range*/
 }
 /*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Side Nav*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	/*Side Nav Header*/
+	.sideNavHeader-Class{
+		@include globalSideNavHeader_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderIcon-Class{
+		@include globalSideNavHeaderIcon_MT_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderTxt-Class{
+		@include globalSideNavHeaderTxt_MT_Style;
+	}
+	/*Side Nav Header*/
+
+
+	/*Side Nav Menu*/
+	.mainNavMenu-Class{
+		@include globalMainNavMenu_MT_Style;
+	}
+
+	.mainNavIconSize-Class{
+		@include globalMainNavIconSize_MT_Style;
+	}
+
+	.subNavMenuWrapLevelOne-Class{
+		@include globalSubNavMenuWrapLevelOne_Style;
+	}
+
+	.subNavMenu-Class{
+		@include globalSubNavMenu_MT_Style;
+	}
+
+	.subNavIconSize-Class{
+		@include globalSubNavIconSize_MT_Style;
+	}
+
+	.chevronSize-Class{
+		@include globalChevronSize_MT_Style;
+	}
+	/*Side Nav Menu*/
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Side Nav Header*/
+	.sideNavHeader-Class{
+		@include globalSideNavHeader_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderIcon-Class{
+		@include globalSideNavHeaderIcon_MT_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderTxt-Class{
+		@include globalSideNavHeaderTxt_MT_Style;
+	}
+	/*Side Nav Header*/
+
+
+	/*Side Nav Menu*/
+	.mainNavMenu-Class{
+		@include globalMainNavMenu_MT_Style;
+	}
+
+	.mainNavIconSize-Class{
+		@include globalMainNavIconSize_MT_Style;
+	}
+
+	.subNavMenuWrapLevelOne-Class{
+		@include globalSubNavMenuWrapLevelOne_Style;
+	}
+
+	.subNavMenu-Class{
+		@include globalSubNavMenu_MT_Style;
+	}
+
+	.subNavIconSize-Class{
+		@include globalSubNavIconSize_MT_Style;
+	}
+
+	.chevronSize-Class{
+		@include globalChevronSize_MT_Style;
+	}
+	/*Side Nav Menu*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Side Nav Header*/
+	.sideNavHeader-Class{
+		@include globalSideNavHeader_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderIcon-Class{
+		@include globalSideNavHeaderIcon_Laptop_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderTxt-Class{
+		@include globalSideNavHeaderTxt_Laptop_Style;
+	}
+	/*Side Nav Header*/
+
+
+	/*Side Nav Menu*/
+	.mainNavMenu-Class{
+		@include globalMainNavMenu_Laptop_Style;
+	}
+
+	.mainNavIconSize-Class{
+		@include globalMainNavIconSize_Laptop_Style;
+	}
+
+	.subNavMenuWrapLevelOne-Class{
+		@include globalSubNavMenuWrapLevelOne_Style;
+	}
+
+	.subNavMenu-Class{
+		@include globalSubNavMenu_Laptop_Style;
+	}
+
+	.subNavIconSize-Class{
+		@include globalSubNavIconSize_Laptop_Style;
+	}
+
+	.chevronSize-Class{
+		@include globalChevronSize_Laptop_Style;
+	}
+	/*Side Nav Menu*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	/*Side Nav Header*/
+	.sideNavHeader-Class{
+		@include globalSideNavHeader_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderIcon-Class{
+		@include globalSideNavHeaderIcon_Desktop_Style;
+	}
+
+	.sideNavHeader-Class .sideNavHeaderTxt-Class{
+		@include globalSideNavHeaderTxt_Desktop_Style;
+	}
+	/*Side Nav Header*/
+
+
+	/*Side Nav Menu*/
+	.mainNavMenu-Class{
+		@include globalMainNavMenu_Desktop_Style;
+	}
+
+	.mainNavIconSize-Class{
+		@include globalMainNavIconSize_Desktop_Style;
+	}
+
+	.subNavMenuWrapLevelOne-Class{
+		@include globalSubNavMenuWrapLevelOne_Style;
+	}
+
+	.subNavMenu-Class{
+		@include globalSubNavMenu_Desktop_Style;
+	}
+
+	.subNavIconSize-Class{
+		@include globalSubNavIconSize_Desktop_Style;
+	}
+
+	.chevronSize-Class{
+		@include globalChevronSize_Desktop_Style;
+	}
+	/*Side Nav Menu*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Side Nav*/
 /***********************************************************************************************************************************************************************************************************/
 
 
@@ -115,6 +285,91 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.projTitleAndUserLogin_RoClass{
+		@include globalOfficePageHeaderAlignItems_Style;
+	}
+
+	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
+		@include globalOfficePageHeaderTxt_MT_Style;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include globalOfficePageHeaderIcon_MT_Style;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.projTitleAndUserLogin_RoClass{
+		@include globalOfficePageHeaderAlignItems_Style;
+	}
+
+	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
+		@include globalOfficePageHeaderTxt_MT_Style;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include globalOfficePageHeaderIcon_MT_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.projTitleAndUserLogin_RoClass{
+		@include globalOfficePageHeaderAlignItems_Style;
+	}
+
+	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
+		@include globalOfficePageHeaderTxt_Laptop_Style;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include globalOfficePageHeaderIcon_Laptop_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.projTitleAndUserLogin_RoClass{
+		@include globalOfficePageHeaderAlignItems_Style;
+	}
+
+	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
+		@include globalOfficePageHeaderTxt_Desktop_Style;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include globalOfficePageHeaderIcon_Desktop_Style;		
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Search area*/
 
 /***********************************************************************************************************************************************************************************************************/
@@ -127,6 +382,26 @@
 	.searchWrapperItem-Class{
 		@include searchWrapperItem_Style;
 	}
+
+	#filterClientItemWrap{
+		@include filterClientItemWrap_Style;
+	}
+
+	.searchAreaLabelTxt-Class{
+		@include searchAreaLabelTxt_MT_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass{
+		@include filterClientCusCheckBoxPaper_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass label{
+		@include filterClientCusCheckBoxLabel_MT_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass{
+		 @include filterClientCusCheckboxMe_MT_Style;		
+	}	
 
 	#dateRangeOneItemWrap{
 		@include dateRangeOneItemWrap_Style;
@@ -145,7 +420,19 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
-		@include dateRangeCalLiteWrap_Mobile_Style;
+		@include dateRangeOneCalLiteWrap_Mobile_Style;
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass{
+		@include dateRangeOneWrapCalLiteHeadTxt_MT_Style;				
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass{	
+		@include dateRangeOneWrapCalLiteHeadBtn_MT_Style;	
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass{				
+		@include dateRangeOneWrapCalLiteDayTxt_MT_Style;
 	}	
 }
 /*Mobile*/
@@ -163,6 +450,26 @@
 		@include searchWrapperItem_Style;
 	}
 
+	#filterClientItemWrap{
+		@include filterClientItemWrap_Style;
+	}
+
+	.searchAreaLabelTxt-Class{
+		@include searchAreaLabelTxt_MT_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass{
+		@include filterClientCusCheckBoxPaper_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass label{
+		@include filterClientCusCheckBoxLabel_MT_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass{
+		 @include filterClientCusCheckboxMe_MT_Style;		
+	}
+
 	#dateRangeOneItemWrap{
 		@include dateRangeOneItemWrap_Style;
 	}
@@ -180,7 +487,19 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
-		@include dateRangeCalLiteWrap_Tablet_Style;
+		@include dateRangeOneCalLiteWrap_Tablet_Style;
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass{
+		@include dateRangeOneWrapCalLiteHeadTxt_MT_Style;				
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass{	
+		@include dateRangeOneWrapCalLiteHeadBtn_MT_Style;	
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass{				
+		@include dateRangeOneWrapCalLiteDayTxt_MT_Style;
 	}
 }
 /*Tablet*/
@@ -196,6 +515,26 @@
 
 	.searchWrapperItem-Class{
 		@include searchWrapperItem_Style;
+	}
+
+	#filterClientItemWrap{
+		@include filterClientItemWrap_Style;
+	}
+
+	.searchAreaLabelTxt-Class{
+		@include searchAreaLabelTxt_Laptop_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass{
+		@include filterClientCusCheckBoxPaper_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass label{
+		@include filterClientCusCheckBoxLabel_Laptop_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass{
+		 @include filterClientCusCheckboxMe_Laptop_Style;		
 	}
 
 	#dateRangeOneItemWrap{
@@ -215,7 +554,19 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
-		@include dateRangeCalLiteWrap_Laptop_Style;
+		@include dateRangeOneCalLiteWrap_Laptop_Style;
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass{
+		@include dateRangeOneWrapCalLiteHeadTxt_Laptop_Style;				
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass{	
+		@include dateRangeOneWrapCalLiteHeadBtn_Laptop_Style;	
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass{				
+		@include dateRangeOneWrapCalLiteDayTxt_Laptop_Style;
 	}
 }
 /*Laptop*/
@@ -231,6 +582,26 @@
 
 	.searchWrapperItem-Class{
 		@include searchWrapperItem_Style;
+	}
+
+	#filterClientItemWrap{
+		@include filterClientItemWrap_Style;
+	}
+
+	.searchAreaLabelTxt-Class{
+		@include searchAreaLabelTxt_Laptop_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass{
+		@include filterClientCusCheckBoxPaper_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass label{
+		@include filterClientCusCheckBoxLabel_Laptop_Style;
+	}
+
+	#filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass{
+		 @include filterClientCusCheckboxMe_Laptop_Style;		
 	}
 
 	#dateRangeOneItemWrap{
@@ -250,7 +621,19 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
-		@include dateRangeCalLiteWrap_Desktop_Style;
+		@include dateRangeOneCalLiteWrap_Desktop_Style;
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass{
+		@include dateRangeOneWrapCalLiteHeadTxt_Desktop_Style;				
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass{	
+		@include dateRangeOneWrapCalLiteHeadBtn_Desktop_Style;	
+	}
+
+	#dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass{				
+		@include dateRangeOneWrapCalLiteDayTxt_Desktop_Style;
 	}
 }
 /*Desktop*/

@@ -15,6 +15,20 @@
 /*Global Wrapper*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global Side Nav*/
+/*_Side Nav Header*/
+/*_Side Nav Header*/
+/*_Navigation Menu*/
+/*_Navigation Menu*/
+/*Global Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global Office Page Header*/
+/*Global Office Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -3184,40 +3198,313 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 :root {
   /*Navigation*/
   --generalNavMenuPadding: 12px;
-  --mainNavMenuIconSize: 20px;
-  --mainNavMenuFSize: 16px;
-  --mainNavMenuBgColor: transparent;
-  --mainNavMenuFColor: #494C55;
-  --hoverMainNavMenuBgColor: #247F4F;
-  --hoverMainNavMenuFColor: #ffffff;
-  --subNavMenuIconSize: 20px;
-  --subNavMenuWrapBgColor: #E6E6E6;
-  --subNavMenuBgColor: transparent;
-  --subNavMenuFSize: 16px;
-  --subNavMenuFColor: #494C55;
-  --hoverSubNavMenuBgColor: #247F4F;
-  --hoverSubNavMenuFColor: #ffffff;
-  --chevronIconSize: 14px;
   /*Navigation*/
-  /*Page Title*/
-  --projectTitleTextFColor: #494C55;
-  --projectTitleTextFSize: 16px;
-  --projectTitleUserIconSize: 30px;
-  /*Page Title*/
-  /*Calendar*/
-  --calendarHeadTxtFSize: 12px;
-  --calendarHeadBtnWidthHeight: 14px;
-  --calendarDayTxtFSize: 12px;
-  /*Calendar*/
   /*Date Range*/
   --dateRangeBorderRadius: 4px;
-  --dateRangeBorderWidth: 1px;
+  --dateRangeBorderWidth: 2px;
   --dateRangeBorderColor: #285FF3;
   --dateRangePadding: 4px;
   --dateRangeCalLiteBorderColor: #8394B7;
   /*Date Range*/ }
 
 /*Root*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 90px;
+    /*To be changed*/
+    width: 90px;
+    /*To be changed*/ }
+
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 18px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #494C55;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 16px;
+    /*To be changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #494C55;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --subNavMenuFColor: #494C55;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 18px;
+    /*To be changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 90px;
+    /*To be changed*/
+    width: 90px;
+    /*To be changed*/ }
+
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 18px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #494C55;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 16px;
+    /*To be changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #494C55;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --subNavMenuFColor: #494C55;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 18px;
+    /*To be changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 92px;
+    /*changed*/
+    width: 92px;
+    /*changed*/ }
+
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 20px calibri;
+    /*changed*/
+    text-align: center;
+    color: #494C55;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 18px;
+    /*changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #494C55;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 22px;
+    /*changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 18px;
+    /*changed*/
+    --subNavMenuFColor: #494C55;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 22px;
+    /*changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 20px;
+    /*changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 94px;
+    /*changed*/
+    width: 94px;
+    /*changed*/ }
+
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 22px calibri;
+    /*changed*/
+    text-align: center;
+    color: #494C55;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 20px;
+    /*changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #494C55;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 24px;
+    /*changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 20px;
+    /*changed*/
+    --subNavMenuFColor: #494C55;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 24px;
+    /*changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 22px;
+    /*changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Side Nav*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3286,6 +3573,75 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .projTitleAndUserLogin_RoClass {
+    align-items: center; }
+
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 16px;
+    /*To be changed*/
+    --projectTitleTextFColor: #494C55; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 22px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .projTitleAndUserLogin_RoClass {
+    align-items: center; }
+
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 16px;
+    /*To be changed*/
+    --projectTitleTextFColor: #494C55; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 22px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .projTitleAndUserLogin_RoClass {
+    align-items: center; }
+
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 20px;
+    /*changed*/
+    --projectTitleTextFColor: #494C55; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 26px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .projTitleAndUserLogin_RoClass {
+    align-items: center; }
+
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 24px;
+    /*changed*/
+    --projectTitleTextFColor: #494C55; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 30px;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Search area*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
@@ -3294,19 +3650,55 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
-    justify-content: flex-end;
-    background-color: #ffffff; }
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible; }
 
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    width: auto; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 16px calibri;
+    /*To be changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
+    margin: 0px 5px; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 14px;
+    /*To be changed*/
+    --cusCheckboxColor: #535F80; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 18px;
+    /*To be changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
+
   #dateRangeOneItemWrap {
     flex-shrink: 0; }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
-    --dateRangeIconSize: 14px;
+    --dateRangeIconSize: 22px;
     /*To be changed*/ }
 
   #dateRangeOneWrap-Id .dateRangeText_RoClass {
@@ -3321,9 +3713,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
     --dateRangeCalLiteWrapWidth: 300px;
     /*To be changed*/
-    --dateRangeCalLiteWrapTop: 35px;
+    --dateRangeCalLiteWrapTop: 45px;
     /*To be changed*/
-    right: 0; } }
+    right: 0; }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 12px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 12px;
+    /*To be changed*/ } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3333,19 +3737,55 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
-    justify-content: flex-end;
-    background-color: #ffffff; }
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible; }
 
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    width: auto; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 16px calibri;
+    /*To be changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
+    margin: 0px 5px; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 14px;
+    /*To be changed*/
+    --cusCheckboxColor: #535F80; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 18px;
+    /*To be changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
+
   #dateRangeOneItemWrap {
     flex-shrink: 0; }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
-    --dateRangeIconSize: 14px;
+    --dateRangeIconSize: 22px;
     /*To be changed*/ }
 
   #dateRangeOneWrap-Id .dateRangeText_RoClass {
@@ -3360,9 +3800,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
     --dateRangeCalLiteWrapWidth: 450px;
     /*changed*/
-    --dateRangeCalLiteWrapTop: 35px;
+    --dateRangeCalLiteWrapTop: 45.5px;
     /*changed*/
-    right: 0; } }
+    right: 0; }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 12px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 12px;
+    /*To be changed*/ } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3372,19 +3824,55 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
-    justify-content: flex-end;
-    background-color: #ffffff; }
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible; }
 
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    width: auto; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 20px calibri;
+    /*changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
+    margin: 0px 5px; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 18px;
+    /*changed*/
+    --cusCheckboxColor: #535F80; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 22px;
+    /*changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
+
   #dateRangeOneItemWrap {
     flex-shrink: 0; }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
-    --dateRangeIconSize: 16px;
+    --dateRangeIconSize: 24px;
     /*changed*/ }
 
   #dateRangeOneWrap-Id .dateRangeText_RoClass {
@@ -3397,11 +3885,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     right: 0; }
 
   #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
-    --dateRangeCalLiteWrapWidth: 450px;
+    --dateRangeCalLiteWrapWidth: 550px;
     /*changed*/
-    --dateRangeCalLiteWrapTop: 37px;
+    --dateRangeCalLiteWrapTop: 47px;
     /*changed*/
-    right: 0; } }
+    right: 0; }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 14px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 14px;
+    /*changed*/ } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3411,19 +3911,55 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
-    justify-content: flex-end;
-    background-color: #ffffff; }
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible; }
 
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    width: auto; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 20px calibri;
+    /*changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
+    margin: 0px 5px; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 18px;
+    /*changed*/
+    --cusCheckboxColor: #535F80; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 22px;
+    /*changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
+
   #dateRangeOneItemWrap {
     flex-shrink: 0; }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
-    --dateRangeIconSize: 18px;
+    --dateRangeIconSize: 26px;
     /*changed*/ }
 
   #dateRangeOneWrap-Id .dateRangeText_RoClass {
@@ -3436,11 +3972,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     right: 0; }
 
   #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
-    --dateRangeCalLiteWrapWidth: 450px;
+    --dateRangeCalLiteWrapWidth: 700px;
     /*changed*/
-    --dateRangeCalLiteWrapTop: 39px;
+    --dateRangeCalLiteWrapTop: 49px;
     /*changed*/
-    right: 0; } }
+    right: 0; }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 18px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 16px;
+    /*changed*/ } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Search area*/

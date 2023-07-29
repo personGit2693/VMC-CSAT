@@ -1,0 +1,10 @@
+SELECT COUNT(ccresponses_tab.ccresponse_id) AS 'CC1 Rate 1' 
+FROM ccresponses_tab 
+INNER JOIN clientresponses_tab 
+ON ccresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
+INNER JOIN ccquestionsrates_tab 
+ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id
+WHERE clientresponses_tab.office_id = 3 
+AND clientresponses_tab.clienttype_id = 1 
+AND ccresponses_tab.ccquestionsrate_id = 1 
+AND ccquestionsrates_tab.ccquestion_id = 'CC1';

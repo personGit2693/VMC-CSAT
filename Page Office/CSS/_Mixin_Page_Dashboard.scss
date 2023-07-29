@@ -4,8 +4,9 @@
 	display: flex;
 	flex-flow: row nowrap;		
 	padding: 5px;
-	justify-content: flex-end;
+	justify-content: space-between;
 	background-color: #ffffff;
+	margin-top: 20px;
 }
 
 
@@ -16,8 +17,101 @@
 }
 
 
+@mixin filterClientItemWrap_Style{
+	display: flex;
+	flex-flow: row nowrap;
+	width: auto;
+	justify-content: space-between;
+	align-items: center;
+	flex-shrink: 0;
+	width: auto;
+}
+
+
+@mixin searchAreaLabelTxt_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 16px calibri; /*To be changed*/
+	color: #494C55;
+}
+@mixin searchAreaLabelTxt_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 20px calibri; /*changed*/
+	color: #494C55;
+}
+@mixin searchAreaLabelTxt_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 24px calibri; /*To be changed*/
+	color: #494C55;
+}
+
+
+@mixin filterClientCusCheckBoxPaper_Style{
+	margin: 0px 5px;
+}
+
+
+@mixin filterClientCusCheckBoxLabel_MT_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 14px; /*To be changed*/
+	--cusCheckboxColor: #535F80;
+}
+@mixin filterClientCusCheckBoxLabel_Laptop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 18px; /*changed*/
+	--cusCheckboxColor: #535F80;
+}
+@mixin filterClientCusCheckBoxLabel_Desktop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 22px; /*changed*/
+	--cusCheckboxColor: #535F80;
+}
+
+
+@mixin filterClientCusCheckboxMe_MT_Style{
+	--cusCheckboxWidthHeight: 18px; /*To be changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+@mixin filterClientCusCheckboxMe_Laptop_Style{
+	--cusCheckboxWidthHeight: 22px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+@mixin filterClientCusCheckboxMe_Desktop_Style{
+	--cusCheckboxWidthHeight: 24px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+
+
 @mixin dateRangeOneItemWrap_Style{
 	flex-shrink: 0;	
+}
+
+
+@mixin dateRangeOneIcon_MT_RoStyle{
+	--dateRangeIconSize: 22px; /*To be changed*/
+}
+@mixin dateRangeOneIcon_Laptop_RoStyle{
+	--dateRangeIconSize: 24px; /*changed*/
+}
+@mixin dateRangeOneIcon_Desktop_RoStyle{
+	--dateRangeIconSize: 26px; /*changed*/
 }
 
 
@@ -41,36 +135,58 @@
 }
 
 
-@mixin dateRangeCalLiteWrap_Mobile_Style{
+@mixin dateRangeOneCalLiteWrap_Mobile_Style{
 	--dateRangeCalLiteWrapWidth: 300px; /*To be changed*/
-	--dateRangeCalLiteWrapTop: 35px; /*To be changed*/
+	--dateRangeCalLiteWrapTop: 45px; /*To be changed*/
 	right: 0;
 }
-@mixin dateRangeCalLiteWrap_Tablet_Style{
+@mixin dateRangeOneCalLiteWrap_Tablet_Style{
 	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
-	--dateRangeCalLiteWrapTop: 35px; /*changed*/
+	--dateRangeCalLiteWrapTop: 45.5px; /*changed*/
 	right: 0;
 }
-@mixin dateRangeCalLiteWrap_Laptop_Style{
-	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
-	--dateRangeCalLiteWrapTop: 37px; /*changed*/
+@mixin dateRangeOneCalLiteWrap_Laptop_Style{
+	--dateRangeCalLiteWrapWidth: 550px; /*changed*/
+	--dateRangeCalLiteWrapTop: 47px; /*changed*/
 	right: 0;
 }
-@mixin dateRangeCalLiteWrap_Desktop_Style{
-	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
-	--dateRangeCalLiteWrapTop: 39px; /*changed*/
+@mixin dateRangeOneCalLiteWrap_Desktop_Style{
+	--dateRangeCalLiteWrapWidth: 700px; /*changed*/
+	--dateRangeCalLiteWrapTop: 49px; /*changed*/
 	right: 0;
 }
 
 
-@mixin dateRangeOneIcon_MT_RoStyle{
-	--dateRangeIconSize: 14px; /*To be changed*/
+@mixin dateRangeOneWrapCalLiteHeadTxt_MT_Style{
+	--calendarHeadTxtFSize: 12px; /*To be changed*/
 }
-@mixin dateRangeOneIcon_Laptop_RoStyle{
-	--dateRangeIconSize: 16px; /*changed*/
+@mixin dateRangeOneWrapCalLiteHeadTxt_Laptop_Style{
+	--calendarHeadTxtFSize: 14px; /*changed*/
 }
-@mixin dateRangeOneIcon_Desktop_RoStyle{
-	--dateRangeIconSize: 18px; /*changed*/
+@mixin dateRangeOneWrapCalLiteHeadTxt_Desktop_Style{
+	--calendarHeadTxtFSize: 16px; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteHeadBtn_MT_Style{
+	--calendarHeadBtnWidthHeight: 14px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadBtn_Laptop_Style{
+	--calendarHeadBtnWidthHeight: 16px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadBtn_Desktop_Style{
+	--calendarHeadBtnWidthHeight: 18px; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteDayTxt_MT_Style{
+	--calendarDayTxtFSize: 12px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteDayTxt_Laptop_Style{
+	--calendarDayTxtFSize: 14px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteDayTxt_Desktop_Style{
+	--calendarDayTxtFSize: 16px; /*changed*/
 }
 /*Search area*/
 /***********************************************************************************************************************************************************************************************************/

@@ -11,41 +11,40 @@
 	<div class="rolayout_RoClass">
 		<div class="sidemecha_RoClass" style="--naviBgColor:#ffffff;"> 
 			<div class="sidemechaCon_RoClass">
-				<a href="" class="mainNavMenu_RoClass">					
-					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/abouticonwhite.png'); --activeMainNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-					<span class="generalNavMenuText_RoClass">navigation 1</span>
-				</a>
+				<div class="sideNavHeader-Class">
+					<div class="sideNavHeaderIcon-Class" style="background-image: url('../../src/vmclogo.png');"></div>
+					<div class="sideNavHeaderTxt-Class">VMC CSAT</div>
+				</div>
 
-
-				<a href="" class="activeMainNavMenu_RoClass">					
-					<div class="activeMainNavMenuIconWrap_RoClass" style="--activeMainNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-					<span class="generalNavMenuText_RoClass">navigation 2</span>
-				</a>
+				<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
+					<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
+					<span class="generalNavMenuText_RoClass">Dashboard</span>
+				</a>				
 				
 
-				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">					
-					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/bookcontacticonwhite.png'); --activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
-					<span class="generalNavMenuText_RoClass">navigation 3</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right.png" /></div>
+				<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
+					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/bookcontacticonwhite.png'); --activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
+					<span class="generalNavMenuText_RoClass">navigation 3</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 				</div>
-				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
+				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
+					<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
 						<span class="generalNavMenuText_RoClass">navigation 3.1</span>
 					</a>
 				</div>
 	
 
-				<div class="activeMainNavMenu_RoClass" onclick="collapseMenu(this)">					
-					<div class="activeMainNavMenuIconWrap_RoClass" style="--activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
-					<span class="generalNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass"><img src="../../src/Chevron Right.png" /></div>
+				<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
+					<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
+					<span class="generalNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 				</div>
-				<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass">
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
+				<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
+					<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
 						<span class="generalNavMenuText_RoClass">navigation 4.1</span>
 					</a>
-					<a href="" class="activeSubNavMenu_RoClass">					
-						<div class="activeSubNavMenuIconWrap_RoClass" style="--activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
+					<a href="" class="activeSubNavMenu_RoClass subNavMenu-Class">					
+						<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
 						<span class="generalNavMenuText_RoClass">navigation 4.2</span>
 					</a>
 				</div>
@@ -58,7 +57,7 @@
 				<div class="projTitleAndUserLogin_RoClass">
 					<div class="projTitleTxt_RoClass">Dashboard</div>
 					<div class="userLogin_RoClass">
-						<div class="userLoginIconWrap_RoClass"><img src="../../src/office-building.png"></div>
+						<div class="userLoginIconWrap_RoClass"><img src="../../src/avataricon.png"></div>
 						<div class="userLoginDetails_RoClass">Office Account Details</div>
 					</div>
 				</div>
@@ -67,6 +66,20 @@
 
 			<!--Search area-->
 			<div class="globalWrapper" id="searchWrapper">
+
+				<!--_Filter Client Type Item-->				
+				<div class="searchWrapperItem-Class" id="filterClientItemWrap">
+					<span class="searchAreaLabelTxt-Class">Client-Type</span>
+					<div class="cusCheckBoxPaper_RoClass">
+						<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
+						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
+					</div>
+					<div class="cusCheckBoxPaper_RoClass">
+						<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
+						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
+					</div>
+				</div>
+				<!--_Filter Client Type Item-->
 
 				<!--_Date Range Item-->
 				<div class="searchWrapperItem-Class" id="dateRangeOneItemWrap">

@@ -278,3 +278,216 @@
 
 /*Global Wrapper*/
 /***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Global Side Nav*/
+
+/*_Side Nav Header*/
+@mixin globalSideNavHeader_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	width: 100%;
+	margin-top: 7px;
+}
+
+
+@mixin globalSideNavHeaderIcon_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0px auto;
+	height: 90px; /*To be changed*/
+	width: 90px; /*To be changed*/
+}
+@mixin globalSideNavHeaderIcon_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0px auto;
+	height: 92px; /*changed*/
+	width: 92px; /*changed*/
+}
+@mixin globalSideNavHeaderIcon_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0px auto;
+	height: 94px; /*changed*/
+	width: 94px; /*changed*/
+}
+
+
+@mixin globalSideNavHeaderTxt_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: bold normal 18px calibri; /*To be changed*/
+	text-align: center;
+	color: #494C55;
+	margin-bottom: 7px;
+}
+@mixin globalSideNavHeaderTxt_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: bold normal 20px calibri; /*changed*/
+	text-align: center;
+	color: #494C55;
+	margin-bottom: 7px;
+}
+@mixin globalSideNavHeaderTxt_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: bold normal 22px calibri; /*changed*/
+	text-align: center;
+	color: #494C55;
+	margin-bottom: 7px;
+}
+/*_Side Nav Header*/
+
+
+/*_Navigation Menu*/
+@mixin globalMainNavMenu_MT_Style{
+	--mainNavMenuFSize: 16px; /*To be changed*/
+	--mainNavMenuBgColor: transparent;
+	--mainNavMenuFColor: #494C55;
+	--hoverMainNavMenuBgColor: #247F4F;
+	--hoverMainNavMenuFColor: #ffffff;
+}
+@mixin globalMainNavMenu_Laptop_Style{
+	--mainNavMenuFSize: 18px; /*changed*/
+	--mainNavMenuBgColor: transparent;
+	--mainNavMenuFColor: #494C55;
+	--hoverMainNavMenuBgColor: #247F4F;
+	--hoverMainNavMenuFColor: #ffffff;
+}
+@mixin globalMainNavMenu_Desktop_Style{
+	--mainNavMenuFSize: 20px; /*changed*/
+	--mainNavMenuBgColor: transparent;
+	--mainNavMenuFColor: #494C55;
+	--hoverMainNavMenuBgColor: #247F4F;
+	--hoverMainNavMenuFColor: #ffffff;
+}
+
+
+@mixin globalMainNavIconSize_MT_Style{
+	--mainNavMenuIconSize: 20px; /*To be changed*/
+}
+@mixin globalMainNavIconSize_Laptop_Style{
+	--mainNavMenuIconSize: 22px; /*changed*/
+}
+@mixin globalMainNavIconSize_Desktop_Style{
+	--mainNavMenuIconSize: 24px; /*changed*/
+}
+
+
+@mixin globalSubNavMenuWrapLevelOne_Style{
+	--subNavMenuWrapBgColor: #E6E6E6;
+}
+
+
+@mixin globalSubNavMenu_MT_Style{	
+	--subNavMenuBgColor: transparent;
+	--subNavMenuFSize: 16px; /*To be changed*/
+	--subNavMenuFColor: #494C55;
+	--hoverSubNavMenuBgColor: #247F4F;
+	--hoverSubNavMenuFColor: #ffffff;
+}
+@mixin globalSubNavMenu_Laptop_Style{
+	--subNavMenuBgColor: transparent;
+	--subNavMenuFSize: 18px; /*changed*/
+	--subNavMenuFColor: #494C55;
+	--hoverSubNavMenuBgColor: #247F4F;
+	--hoverSubNavMenuFColor: #ffffff;
+}
+@mixin globalSubNavMenu_Desktop_Style{
+	--subNavMenuBgColor: transparent;
+	--subNavMenuFSize: 20px; /*changed*/
+	--subNavMenuFColor: #494C55;
+	--hoverSubNavMenuBgColor: #247F4F;
+	--hoverSubNavMenuFColor: #ffffff;
+}
+
+
+@mixin globalSubNavIconSize_MT_Style{
+	--subNavMenuIconSize: 20px; /*To be changed*/
+}
+@mixin globalSubNavIconSize_Laptop_Style{
+	--subNavMenuIconSize: 22px; /*changed*/
+}
+@mixin globalSubNavIconSize_Desktop_Style{
+	--subNavMenuIconSize: 24px; /*changed*/
+}
+
+
+@mixin globalChevronSize_MT_Style{
+	--chevronIconSize: 18px; /*To be changed*/
+}
+@mixin globalChevronSize_Laptop_Style{
+	--chevronIconSize: 20px; /*changed*/
+}
+@mixin globalChevronSize_Desktop_Style{
+	--chevronIconSize: 22px; /*changed*/
+}
+/*_Navigation Menu*/
+
+/*Global Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Global Office Page Header*/
+
+@mixin globalOfficePageHeaderAlignItems_Style{
+	align-items: center;
+}
+
+
+@mixin globalOfficePageHeaderTxt_MT_Style{
+	--projectTitleTextFSize: 16px; /*To be changed*/
+	--projectTitleTextFColor: #494C55;
+}
+@mixin globalOfficePageHeaderTxt_Laptop_Style{
+	--projectTitleTextFSize: 20px; /*changed*/
+	--projectTitleTextFColor: #494C55;
+}
+@mixin globalOfficePageHeaderTxt_Desktop_Style{
+	--projectTitleTextFSize: 24px; /*changed*/
+	--projectTitleTextFColor: #494C55;
+}
+
+
+@mixin globalOfficePageHeaderIcon_MT_Style{
+	--projectTitleUserIconSize: 22px; /*To be changed*/
+}
+@mixin globalOfficePageHeaderIcon_Laptop_Style{
+	--projectTitleUserIconSize: 26px; /*changed*/
+}
+@mixin globalOfficePageHeaderIcon_Desktop_Style{
+	--projectTitleUserIconSize: 30px; /*changed*/
+}
+/*Global Office Page Header*/
+/***********************************************************************************************************************************************************************************************************/
