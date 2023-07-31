@@ -290,10 +290,6 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	.projTitleAndUserLogin_RoClass{
-		@include globalOfficePageHeaderAlignItems_Style;
-	}
-
 	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
 		@include globalOfficePageHeaderTxt_MT_Style;
 	}
@@ -309,10 +305,6 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	.projTitleAndUserLogin_RoClass{
-		@include globalOfficePageHeaderAlignItems_Style;
-	}
-
 	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
 		@include globalOfficePageHeaderTxt_MT_Style;
 	}
@@ -328,10 +320,6 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-	.projTitleAndUserLogin_RoClass{
-		@include globalOfficePageHeaderAlignItems_Style;
-	}
-
 	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
 		@include globalOfficePageHeaderTxt_Laptop_Style;
 	}
@@ -347,10 +335,6 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-	.projTitleAndUserLogin_RoClass{
-		@include globalOfficePageHeaderAlignItems_Style;
-	}
-
 	.projTitleTxt_RoClass, .userLoginDetails_RoClass{
 		@include globalOfficePageHeaderTxt_Desktop_Style;
 	}

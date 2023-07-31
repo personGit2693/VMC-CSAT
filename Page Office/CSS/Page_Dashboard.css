@@ -150,6 +150,11 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Chart Wrapper*/
 /*Chart Wrapper*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1498,6 +1503,76 @@ button.iconBtn_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.selectDropdownWrap_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-width: var(--selectDropdownBorderWidth);
+  border-style: solid;
+  border-color: var(--selectDropdownBorderColor);
+  border-radius: var(--selectDropdownBorderRadius);
+  width: var(--selectDropdownWidth);
+  cursor: pointer; }
+
+.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--selectDropdownBgColor); }
+
+.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass .displayedSelectedIcon_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--displayedSelectedIcon);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--displayedSelectedIconSize);
+  height: var(--displayedSelectedIconSize);
+  flex-shrink: 0; }
+
+.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass .displayedSelectedText_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--displayedSelectedFSize);
+  color: var(--displayedSelectedFColor);
+  margin-left: 4px; }
+
+.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass .displayedSelectedChevron_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--selectDropdownChevron);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownChevronSize);
+  height: var(--selectDropdownChevronSize);
+  flex-shrink: 0; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Layout one design RoStrap Mixin*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
@@ -1848,6 +1923,7 @@ button.iconBtn_RoClass {
     border: 1px solid transparent;
     flex-flow: column wrap;
     /*To be changed*/
+    align-items: center;
     justify-content: flex-start;
     /*To be changed*/
     width: 100%; }
@@ -2261,6 +2337,7 @@ button.iconBtn_RoClass {
     border: 1px solid transparent;
     flex-flow: row wrap;
     /*changed*/
+    align-items: center;
     justify-content: space-between;
     /*changed*/
     width: 100%; }
@@ -2674,6 +2751,7 @@ button.iconBtn_RoClass {
     border: 1px solid transparent;
     flex-flow: row wrap;
     /*changed*/
+    align-items: center;
     justify-content: space-between;
     /*changed*/
     width: 100%; }
@@ -3087,6 +3165,7 @@ button.iconBtn_RoClass {
     border: 1px solid transparent;
     flex-flow: row wrap;
     /*changed*/
+    align-items: center;
     justify-content: space-between;
     /*changed*/
     width: 100%; }
@@ -3577,9 +3656,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  .projTitleAndUserLogin_RoClass {
-    align-items: center; }
-
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 16px;
     /*To be changed*/
@@ -3593,9 +3669,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  .projTitleAndUserLogin_RoClass {
-    align-items: center; }
-
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 16px;
     /*To be changed*/
@@ -3609,9 +3682,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  .projTitleAndUserLogin_RoClass {
-    align-items: center; }
-
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 20px;
     /*changed*/
@@ -3625,9 +3695,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
-  .projTitleAndUserLogin_RoClass {
-    align-items: center; }
-
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 24px;
     /*changed*/
