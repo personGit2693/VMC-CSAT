@@ -1579,8 +1579,7 @@ button.iconBtn_RoClass {
   width: 100%;
   background-color: var(--selectDropdownBgColor);
   -webkit-transition: max-height 1s;
-  transition: max-height 1s;
-  border: 1px solid red; }
+  transition: max-height 1s; }
 
 .selectDropdownWrap_RoClass .searchOpts_RoClass {
   position: sticky;
