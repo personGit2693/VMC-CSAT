@@ -64,6 +64,10 @@
 		@include globalSubNavMenuWrapLevelOne_Style;
 	}
 
+	.subNavMenuWrapLevelTwo-Class{
+		@include globalSubNavMenuWrapLevelTwo_Style;
+	}
+
 	.subNavMenu-Class{
 		@include globalSubNavMenu_MT_Style;
 	}
@@ -110,6 +114,10 @@
 
 	.subNavMenuWrapLevelOne-Class{
 		@include globalSubNavMenuWrapLevelOne_Style;
+	}
+
+	.subNavMenuWrapLevelTwo-Class{
+		@include globalSubNavMenuWrapLevelTwo_Style;
 	}
 
 	.subNavMenu-Class{
@@ -160,6 +168,10 @@
 		@include globalSubNavMenuWrapLevelOne_Style;
 	}
 
+	.subNavMenuWrapLevelTwo-Class{
+		@include globalSubNavMenuWrapLevelTwo_Style;
+	}
+
 	.subNavMenu-Class{
 		@include globalSubNavMenu_Laptop_Style;
 	}
@@ -206,6 +218,10 @@
 
 	.subNavMenuWrapLevelOne-Class{
 		@include globalSubNavMenuWrapLevelOne_Style;
+	}
+
+	.subNavMenuWrapLevelTwo-Class{
+		@include globalSubNavMenuWrapLevelTwo_Style;
 	}
 
 	.subNavMenu-Class{

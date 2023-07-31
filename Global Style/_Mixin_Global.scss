@@ -404,6 +404,9 @@
 @mixin globalSubNavMenuWrapLevelOne_Style{
 	--subNavMenuWrapBgColor: #E6E6E6;
 }
+@mixin globalSubNavMenuWrapLevelTwo_Style{
+	--subNavMenuWrapBgColor: #d9d4d4;
+}
 
 
 @mixin globalSubNavMenu_MT_Style{	
@@ -460,12 +463,6 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Global Office Page Header*/
-
-@mixin globalOfficePageHeaderAlignItems_Style{
-	align-items: center;
-}
-
-
 @mixin globalOfficePageHeaderTxt_MT_Style{
 	--projectTitleTextFSize: 16px; /*To be changed*/
 	--projectTitleTextFColor: #494C55;

@@ -19,21 +19,69 @@
 				<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
 					<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
 					<span class="generalNavMenuText_RoClass">Dashboard</span>
+				</a>
+
+				<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+					<span class="generalNavMenuText_RoClass">Setup Questions</span>
 				</a>				
 				
-
 				<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/bookcontacticonwhite.png'); --activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
-					<span class="generalNavMenuText_RoClass">navigation 3</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
+					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
+					<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 				</div>
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
 					<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-						<span class="generalNavMenuText_RoClass">navigation 3.1</span>
+						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/demographics_black.png'); --activeSubNavMenuIcon:url('../../src/demographics_white.png')"></div>
+						<span class="generalNavMenuText_RoClass">Summary Demographics</span>
 					</a>
-				</div>
-	
+					<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/DataIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/DataIcon_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Data One</span>
+					</a>
+					<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/DataIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/DataIcon_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Data Two</span>
+					</a>
+					<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+						<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/CollatedData_Black.png'); --activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Collated Data</span>
+					</a>
 
+					<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Analysis</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
+					</div>
+					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelTwo-Class">
+						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ResponsiveAnal_Black.png'); --activeSubNavMenuIcon:url('../../src/ResponsiveAnal_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Responsiveness Analysis</span>
+						</a>
+						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Analysis Q1-Q7</span>
+						</a>
+						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Analysis Q8-Q12</span>
+						</a>
+						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Analysis Q3-Q28</span>
+						</a>
+						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
+						</a>
+					</div>
+				</div>
+
+				<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/GearIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/GearIcon_White.png')"></div>
+					<span class="generalNavMenuText_RoClass">Settings</span>
+				</a>
+	
+				<!--
 				<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 					<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
 					<span class="generalNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
@@ -48,6 +96,7 @@
 						<span class="generalNavMenuText_RoClass">navigation 4.2</span>
 					</a>
 				</div>
+				-->
 			</div>
 		</div>
 		<div class="mainmecha_RoClass" style="--mainBodyBgColor:#E8EFFF;">
