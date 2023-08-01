@@ -64,7 +64,7 @@ function loadOverallStronglyAgreeLineChart(){
 	myLineChart.load('current', {packages: ['corechart', 'line']});
 
 	myLineChart.setOnLoadCallback(function(){
-		drawLineChart(overallStronglyAgreeData_Array, lineChartOption_Obj, "overallStronglyAgreeLineChartWrap");
+		drawAreaChart(overallStronglyAgreeData_Array, lineChartOption_Obj, "overallStronglyAgreeLineChartWrap");
 	});
 }
 /*Function for loading Overall Strongly Agree Line Chart*/
