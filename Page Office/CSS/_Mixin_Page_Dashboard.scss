@@ -196,3 +196,26 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Charts*/
+@mixin chartsWrapper_Style{
+	display: flex;
+	flex-flow: row wrap;		
+	align-items: flex-start;		
+	background-color: #ffffff;
+	margin-top: 15px;
+}
+
+
+@mixin chartWrap_Style{	
+	--chartWrapWidth: 480px;
+	--chartWrapHeight: auto; 
+	--chartWrapBorderWidth: 1px;
+	--chartWrapBorderStyle: solid;
+	--chartWrapBorderColor: #8394B7;
+	--chartWrapBorderRadius: 4px;
+	margin: 8px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+/*Charts*/
+/***********************************************************************************************************************************************************************************************************/

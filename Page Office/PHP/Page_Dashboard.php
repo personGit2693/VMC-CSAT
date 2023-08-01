@@ -114,7 +114,7 @@
 			<!--Page title-->
 
 			<!--Search area-->
-			<div class="globalWrapper" id="searchWrapper">
+			<div class="globalWrapper" id="searchWrapper" style="z-index: 1;">
 
 				<!--_Filter Client Type Item-->				
 				<div class="searchWrapperItem-Class" id="filterClientItemWrap">
@@ -259,12 +259,25 @@
 
 			</div>
 			<!--Search area-->
+
+
+			<!--Charts-->
+			<div class="globalWrapper" id="chartsWrapper">
+				<div class="chartWrap_RoClass chartWrap-Class" id="overallServRatePieChartWrap"></div>
+				<div class="chartWrap_RoClass chartWrap-Class" id="overallStronglyAgreeLineChartWrap"></div>
+				<div class="chartWrap_RoClass chartWrap-Class" id="overallAgreeLineChartWrap"></div>
+			</div>
+			<!--Charts-->
 		</div> 
 	</div>
 
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
-	<script type="text/javascript" src="../JS/Executor_Page_Dashboard.js"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
+	<script type="module" src="../JS/Controller_OverallServRatePieChart.js"></script>
+	<script type="module" src="../JS/Controller_OverallStronglyAgreeLineChart.js"></script>
+	<script type="module" src="../JS/Controller_OverallAgreeLineChart.js"></script>
+	<script type="module" src="../JS/Executor_Page_Dashboard.js"></script>
 </body>
 </html>
