@@ -1,7 +1,7 @@
 /*Import*/
-import {valueOverallStronglyAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+import {valueOverallServRate, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
 import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-import loadOverallStronglyAgreeLineChart from "./Controller_OverallStronglyAgreeLineChart.js";
+import loadOverallServRatePieChart from "./Controller_OverallServRatePieChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -13,12 +13,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var overallStronglyAgree_Array = [];
+var overallServRate_Array = [];
 /*Export variables*/
 
 
-/*Count overall Strongly Agree*/
-function requestOverallStronglyAgree(){
+/*Count overall service rating rating*/
+function requestOverallServRate(){
 	
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
@@ -30,18 +30,17 @@ function requestOverallStronglyAgree(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution === false){
-					alert("Getting Overall Strongly Agree has execution problem!");
+					alert("Getting Overall Client Satisfaction has execution problem!");
 				}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && overallFromDate.value !== "" && overallToDate.value !== ""){
-					alert("Getting Overall Strongly Agree has never been executed!");
+					alert("Getting Overall Client Satisfaction has never been executed!");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
-					overallStronglyAgree_Array = httpResponse.overallStronglyAgree_Array;
-					valueOverallStronglyAgree();
-					loadOverallStronglyAgreeLineChart();					
+					overallServRate_Array = httpResponse.overallServRate_Array;
+					valueOverallServRate();
+					loadOverallServRatePieChart();
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting overall Strongly Agree");
+				alert("Response is not an object on getting Overall Client Satisfaction");
 				alert(httpRequest_Error);
-				alert(httpRequest.responseText);
 			}			
 		}else if(httpRequest.status != 200){
 			alert("File not found");
@@ -56,13 +55,13 @@ function requestOverallStronglyAgree(){
 	"&overallFromDate="+overallFromDate.value+
 	"&overallToDate="+overallToDate.value;
 
-	httpRequest.open("POST", "Response_OverallStronglyAgree.php", false);
+	httpRequest.open("POST", "Response_OverallServRate.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);
 };
-/*Count overall Strongly Agree*/
+/*Count overall service rating rating*/
 
 
 /*Export*/
-export {requestOverallStronglyAgree, overallStronglyAgree_Array};
+export {requestOverallServRate, overallServRate_Array};
 /*Export*/

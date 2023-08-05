@@ -1,0 +1,4 @@
+function submitRequestOverallDisagree(){
+	showSpinningLoad();
+	gatewayOverallDisagree();
+}

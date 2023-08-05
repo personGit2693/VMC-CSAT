@@ -1,6 +1,10 @@
 SELECT scores_tab.score_name AS 'Rating', 
 COUNT(questionresponses_tab.questionresponse_id) AS 'Responses'
-FROM questionresponses_tab 
-RIGHT JOIN scores_tab 
-ON questionresponses_tab.score_id = scores_tab.score_id 
-GROUP BY scores_tab.score_name;
+FROM scores_tab 
+LEFT JOIN questionresponses_tab 
+ON scores_tab.score_id = questionresponses_tab.score_id 
+LEFT JOIN clientresponses_tab 
+ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
+WHERE clientresponses_tab.office_id = 3
+GROUP BY scores_tab.score_name 
+ORDER BY scores_tab.score_id;

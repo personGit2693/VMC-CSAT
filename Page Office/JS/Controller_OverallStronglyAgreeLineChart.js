@@ -6,11 +6,13 @@ import {overallStronglyAgreeData_Array} from "../../Global JS/Values_Page_Dashbo
 /*Function for loading Overall Strongly Agree Line Chart*/
 function loadOverallStronglyAgreeLineChart(){
 	
+	const setChartWidth = overallStronglyAgreeData_Array.length * 100 + "";
+
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
 		title: 'Overall Strongly Agree',
-		curveType: 'function',		
+		curveType: 'function',				
 		titleTextStyle:{
 			color: "#494C55",
 			fontSize: 16,
@@ -28,7 +30,7 @@ function loadOverallStronglyAgreeLineChart(){
 			width: "auto"
 		},
 		height: "auto",
-		width: "auto",				
+		width: setChartWidth,				
 		legend:{
 			alignment: "start",
 			position: "right",
@@ -44,10 +46,11 @@ function loadOverallStronglyAgreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}			
+			}
 		},
 		vAxis: {
-			title: 'Strongly Agree',
+			title: 'Total Response',
+			minValue: 0,
 			textStyle:{
 				color: "#494C55"
 			},

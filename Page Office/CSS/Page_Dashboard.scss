@@ -22,6 +22,11 @@
 	--dateRangePadding: 4px;	
 	--dateRangeCalLiteBorderColor: #8394B7;				
 	/*Date Range*/
+
+
+	/*Spinner loading*/
+	--spinnerWidthHeight: 68px;
+	/*Spinner loading*/
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -656,6 +661,26 @@
 		@include chartsWrapper_Style;
 	}
 
+	.chartWrapWrapper-Class{
+		@include chartWrapWrapper_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar{
+		@include chartWrapWrapper_Scrollbar_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-track{
+		@include chartWrapWrapper_Track_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb{
+		@include chartWrapper_Thumb_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover{
+		@include chartWrapWrapper_ThumbHover_Style;
+	}
+
 	.chartWrap-Class{
 		@include chartWrap_Style;
 	}
@@ -669,6 +694,26 @@
 @media all and (min-width:642px) and (max-width:1080px){
 	#chartsWrapper{
 		@include chartsWrapper_Style;
+	}
+
+	.chartWrapWrapper-Class{
+		@include chartWrapWrapper_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar{
+		@include chartWrapWrapper_Scrollbar_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-track{
+		@include chartWrapWrapper_Track_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb{
+		@include chartWrapper_Thumb_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover{
+		@include chartWrapWrapper_ThumbHover_Style;
 	}
 
 	.chartWrap-Class{
@@ -686,6 +731,26 @@
 		@include chartsWrapper_Style;
 	}
 
+	.chartWrapWrapper-Class{
+		@include chartWrapWrapper_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar{
+		@include chartWrapWrapper_Scrollbar_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-track{
+		@include chartWrapWrapper_Track_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb{
+		@include chartWrapper_Thumb_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover{
+		@include chartWrapWrapper_ThumbHover_Style;
+	}
+
 	.chartWrap-Class{
 		@include chartWrap_Style;
 	}
@@ -701,6 +766,26 @@
 		@include chartsWrapper_Style;
 	}
 
+	.chartWrapWrapper-Class{
+		@include chartWrapWrapper_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar{
+		@include chartWrapWrapper_Scrollbar_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-track{
+		@include chartWrapWrapper_Track_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb{
+		@include chartWrapper_Thumb_Style;
+	}
+
+	.chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover{
+		@include chartWrapWrapper_ThumbHover_Style;
+	}
+
 	.chartWrap-Class{
 		@include chartWrap_Style;
 	}
@@ -709,4 +794,60 @@
 /***********************************************************************************************************************************************************************************************************/
 
 /*Charts*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Comment Section*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	#commentSectionWrap{
+		position: relative;
+		display: block;
+		overflow: auto;
+		box-sizing: border-box;
+		width: auto;
+		height: 700px;
+		background-color: #ffffff;
+
+		border: 1px solid yellow;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	
+	
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Comment Section*/
 /***********************************************************************************************************************************************************************************************************/

@@ -1,0 +1,28 @@
+SELECT clientresponses_tab.clientresponse_reference AS 'Reference Number',
+ offices_tab.office_value AS 'Office Visited',
+ offices_tab.office_abbre AS 'Office Abbre',
+ respondents_tab.respondent_name AS 'Respondent-Type',
+ ageranges_tab.agerange_value AS 'Age',
+ genders_tab.gender_value AS 'Gender',
+ clienttypes_tab.clienttype_value AS 'Client-Type',
+ questions_tab.question_value AS 'Questions',
+ commentsresponses_tab.commentresponse_value AS 'Comment',
+ commentsresponses_tab.commentresponse_datetime AS 'Datetime' 
+ FROM clientresponses_tab 
+ INNER JOIN offices_tab 
+ ON clientresponses_tab.office_id = offices_tab.office_id 
+ INNER JOIN respondents_tab 
+ ON clientresponses_tab.respondent_id = respondents_tab.respondent_id 
+ INNER JOIN ageranges_tab 
+ ON clientresponses_tab.agerange_id = ageranges_tab.agerange_id 
+ INNER JOIN genders_tab 
+ ON clientresponses_tab.gender_id = genders_tab.gender_id 
+ INNER JOIN clienttypes_tab 
+ ON clientresponses_tab.clienttype_id = clienttypes_tab.clienttype_id 
+ INNER JOIN commentsresponses_tab 
+ ON clientresponses_tab.clientresponse_reference = commentsresponses_tab.clientresponse_reference
+ INNER JOIN questions_tab 
+ ON commentsresponses_tab.question_id = questions_tab.question_id 
+ INNER JOIN (SELECT clientresponse_reference, COUNT() AS '') AS 'stronglyagree_tab'
+ WHERE clientresponses_tab.office_id = 3 
+ ORDER BY commentsresponses_tab.commentresponse_datetime DESC;

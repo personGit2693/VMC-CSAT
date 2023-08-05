@@ -1,17 +1,17 @@
 /*Import*/
-import {overallAgreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
+import {overallDisagreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
-/*Function for loading Overall Agree Line Chart*/
-function loadOverallAgreeLineChart(){
+/*Function for loading Overall Disagree Chart*/
+function loadOverallDisagreeLineChart(){
 	
-	const setChartWidth = overallAgreeData_Array.length * 100 + "";
+	const setChartWidth = overallDisagreeData_Array.length * 100 + "";
 
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Overall Agree',
+		title: 'Disagree',
 		curveType: 'function',		
 		titleTextStyle:{
 			color: "#494C55",
@@ -58,10 +58,7 @@ function loadOverallAgreeLineChart(){
 				color: "#494C55"
 			}
 		},
-		colors:["#8EC63F"],
-		tooltip:{
-			ignoreBounds: true
-		}		
+		colors:["#E35B6F"]		
 	};
 
 
@@ -70,12 +67,12 @@ function loadOverallAgreeLineChart(){
 	myLineChart.load('current', {packages: ['corechart', 'line']});
 
 	myLineChart.setOnLoadCallback(function(){
-		drawAreaChart(overallAgreeData_Array, lineChartOption_Obj, "overallAgreeLineChartWrap");
+		drawAreaChart(overallDisagreeData_Array, lineChartOption_Obj, "overallDisagreeLineChartWrap");
 	});
 }
-/*Function for loading Overall Agree Line Chart*/
+/*Function for loading Overall Disagree Chart*/
 
 
 /*Export*/
-export default loadOverallAgreeLineChart;
+export default loadOverallDisagreeLineChart;
 /*Export*/

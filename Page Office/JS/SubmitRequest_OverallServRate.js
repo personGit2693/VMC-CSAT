@@ -1,0 +1,4 @@
+function submitRequestOverallServRate(){
+	showSpinningLoad();
+	gatewayOverallServRate();
+}

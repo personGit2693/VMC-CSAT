@@ -121,11 +121,11 @@
 					<span class="searchAreaLabelTxt-Class">Client-Type</span>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating()" autocomplete="off">
 					</div>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating()" autocomplete="off">
 					</div>
 				</div>
 				<!--_Filter Client Type Item-->
@@ -135,7 +135,7 @@
 					<!--_ _Date Range Wrap-->
 					<div class="dateRangeWrap_RoClass" id="dateRangeOneWrap-Id">
 						<!--_ _ _Date Range-->
-						<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
+						<div class="dateRange_RoClass" id="dateRangeOne-Id" onclick="displayDateRangeCalLite(this)">
 							<div class="dateRangeDetails_RoClass">
 								<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('../../src/calendaricon blue.png');"></div>
 								<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
@@ -146,8 +146,8 @@
 						<!--_ _ _Date Range Calendar Lite Wrap-->
 						<div class="dateRangeCalLiteWrap_RoClass">
 							<!--_ _ _ _Date Range Calendar Lite To-->						
-							<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass" id="dateRangeFrom">
-								<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
+							<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass overallCalendar-Class" id="dateRangeFrom">
+								<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="overallFromDate-Id">
 								<div class="calLiteHead_RoClass">
 									<div class="calLiteMonthHead_RoClass">
 										<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
@@ -199,8 +199,8 @@
 							<!--_ _ _ _Date Range Calendar Lite To-->
 
 							<!--_ _ _ _Date Range Calendar Lite To-->
-							<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass" id="dateRangeTo">
-								<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
+							<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass overallCalendar-Class" id="dateRangeTo">
+								<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="overallToDate-Id">
 								<div class="calLiteHead_RoClass">
 									<div class="calLiteMonthHead_RoClass">
 										<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
@@ -256,28 +256,79 @@
 					<!--_ _Date Range Wrap-->				
 				</div>
 				<!--_Date Range Item-->
-
 			</div>
 			<!--Search area-->
 
 
 			<!--Charts-->
 			<div class="globalWrapper" id="chartsWrapper">
-				<div class="chartWrap_RoClass chartWrap-Class" id="overallServRatePieChartWrap"></div>
-				<div class="chartWrap_RoClass chartWrap-Class" id="overallStronglyAgreeLineChartWrap"></div>
-				<div class="chartWrap_RoClass chartWrap-Class" id="overallAgreeLineChartWrap"></div>
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#0E8EF1; --charWrapScrollbarHoverBgColor: #0C86EE;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallServRatePieChartWrap"></div>
+				</div>
+
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#036939; --charWrapScrollbarHoverBgColor: #036939;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallStronglyAgreeLineChartWrap"></div>
+				</div>
+
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8EC63F; --charWrapScrollbarHoverBgColor: #8EC63F;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallAgreeLineChartWrap"></div>	
+				</div>
+
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#FAB142; --charWrapScrollbarHoverBgColor: #FAB142;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallNeitherLineChartWrap"></div>
+				</div>
+
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#E35B6F; --charWrapScrollbarHoverBgColor: #E35B6F;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallDisagreeLineChartWrap"></div>
+				</div>				
+
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#BD212F; --charWrapScrollbarHoverBgColor: #BD212F;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallStronglyDisagreeLineChartWrap"></div>
+				</div>
+
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#92A2AA; --charWrapScrollbarHoverBgColor: #92A2AA;">
+					<div class="chartWrap_RoClass chartWrap-Class" id="overallNoRatingLineChartWrap"></div>
+				</div>								
 			</div>
 			<!--Charts-->
+
+
+			<!--Comment Section-->
+			<div class="globalWrapper" id="commentSectionWrap">
+				<div class="commentDetails-Class">
+					
+				</div>
+			</div>
+			<!--Comment Section-->
 		</div> 
 	</div>
+
+	<!--Loading Indicator-->
+	<div class="thisIsJapan_RoClass" style="--putOnTop: 1;"></div>
+	<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 1;">
+		<img src="../../src/Spinner.gif">
+	</div>	
+	<!--Loading Indicator-->
 
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
-	<script type="module" src="../JS/Controller_OverallServRatePieChart.js"></script>
-	<script type="module" src="../JS/Controller_OverallStronglyAgreeLineChart.js"></script>
-	<script type="module" src="../JS/Controller_OverallAgreeLineChart.js"></script>
+	<script type="module" src="../../Global JS/Values_Page_Dashboard.js"></script>
+	<script type="module" src="../JS/Gateway_OverallServRate.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallServRate.js"></script>
+	<script type="module" src="../JS/Gateway_OverallStronglyAgree.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyAgree.js"></script>
+	<script type="module" src="../JS/Gateway_OverallAgree.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallAgree.js"></script>
+	<script type="module" src="../JS/Gateway_OverallNeither.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallNeither.js"></script>
+	<script type="module" src="../JS/Gateway_OverallDisagree.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallDisagree.js"></script>
+	<script type="module" src="../JS/Gateway_OverallStronglyDisagree.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
+	<script type="module" src="../JS/Gateway_OverallNoRating.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
 	<script type="module" src="../JS/Executor_Page_Dashboard.js"></script>
 </body>
 </html>

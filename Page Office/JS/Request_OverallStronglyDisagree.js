@@ -1,7 +1,7 @@
 /*Import*/
-import {valueOverallStronglyAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+import {valueOverallStronglyDisagree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
 import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-import loadOverallStronglyAgreeLineChart from "./Controller_OverallStronglyAgreeLineChart.js";
+import loadOverallStronglyDisagreeLineChart from "./Controller_OverallStronglyDisagreeLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -13,12 +13,12 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var overallStronglyAgree_Array = [];
+var overallStronglyDisagree_Array = [];
 /*Export variables*/
 
 
-/*Count overall Strongly Agree*/
-function requestOverallStronglyAgree(){
+/*Count overall Strongly Disagree*/
+function requestOverallStronglyDisagree(){
 	
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
@@ -30,16 +30,16 @@ function requestOverallStronglyAgree(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution === false){
-					alert("Getting Overall Strongly Agree has execution problem!");
+					alert("Getting Overall Strongly Disagree has execution problem!");
 				}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && overallFromDate.value !== "" && overallToDate.value !== ""){
-					alert("Getting Overall Strongly Agree has never been executed!");
+					alert("Getting Overall Strongly Disagree has never been executed!");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
-					overallStronglyAgree_Array = httpResponse.overallStronglyAgree_Array;
-					valueOverallStronglyAgree();
-					loadOverallStronglyAgreeLineChart();					
+					overallStronglyDisagree_Array = httpResponse.overallStronglyDisagree_Array;
+					valueOverallStronglyDisagree();
+					loadOverallStronglyDisagreeLineChart();									
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting overall Strongly Agree");
+				alert("Response is not an object on getting overall Strongly Disagree");
 				alert(httpRequest_Error);
 				alert(httpRequest.responseText);
 			}			
@@ -56,13 +56,13 @@ function requestOverallStronglyAgree(){
 	"&overallFromDate="+overallFromDate.value+
 	"&overallToDate="+overallToDate.value;
 
-	httpRequest.open("POST", "Response_OverallStronglyAgree.php", false);
+	httpRequest.open("POST", "Response_OverallStronglyDisagree.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);
 };
-/*Count overall Strongly Agree*/
+/*Count overall Strongly Disagree*/
 
 
 /*Export*/
-export {requestOverallStronglyAgree, overallStronglyAgree_Array};
+export {requestOverallStronglyDisagree, overallStronglyDisagree_Array};
 /*Export*/
