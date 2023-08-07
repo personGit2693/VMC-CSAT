@@ -4,4 +4,5 @@ export const checkboxFilterExternal = document.getElementById("checkboxFilterExt
 export const dateRangeOne = document.getElementById("dateRangeOne-Id");
 export const overallFromDate = document.getElementById("overallFromDate-Id");
 export const overallToDate = document.getElementById("overallToDate-Id");
+export const commentSectionWrap = document.getElementById("commentSectionWrap");
 /*Elements*/

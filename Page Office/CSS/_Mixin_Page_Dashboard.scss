@@ -214,7 +214,7 @@
 	margin: 8px;
 	flex-grow: 0;
 	flex-shrink: 0;
-	width: 350px;
+	width: 390px;
 	height: auto;
 	border-radius: 4px;
 	border: 1px solid #8394B7;
@@ -241,11 +241,401 @@
 @mixin chartWrap_Style{
 	overflow: visible;	
 	--chartWrapWidth: auto;
-	--chartWrapHeight: 250px; 
+	--chartWrapHeight: 210px; 
 	--chartWrapBorderWidth: 1px;
 	--chartWrapBorderStyle: solid;
 	--chartWrapBorderColor: transparent;
 	--chartWrapBorderRadius: 0px;
 }
 /*Charts*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Comment Section*/
+@mixin commentSectionTextWrap_Style{
+	background-color: #ffffff;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+
+@mixin commentSectionText_MT_Style{
+	position: relative;
+		display: block;
+		box-sizing: border-box;
+		overflow: visible;
+		white-space: normal;
+		font: normal bold 17px calibri; /*To be changed*/
+		margin: 5px;
+		color: #494C55;
+}
+@mixin commentSectionText_Laptop_Style{
+	position: relative;
+		display: block;
+		box-sizing: border-box;
+		overflow: visible;
+		white-space: normal;
+		font: normal bold 19px calibri; /*changed*/
+		margin: 5px;
+		color: #494C55;
+}
+@mixin commentSectionText_Desktop_Style{
+	position: relative;
+		display: block;
+		box-sizing: border-box;
+		overflow: visible;
+		white-space: normal;
+		font: normal bold 21px calibri; /*changed*/
+		margin: 5px;
+		color: #494C55;
+}
+
+
+@mixin commentSectionWrap_Style{
+	display: block;
+	overflow: auto;	
+	height: 250px;
+	background-color: #ffffff;
+	margin-top: 0px;
+}
+
+
+@mixin noCommentText_MT_Style{
+	font: normal normal 13px calibri; /*To be changed*/
+	color: #494C55;
+}
+@mixin noCommentText_Laptop_Style{
+	font: normal normal 16px calibri; /*changed*/
+	color: #494C55;
+}
+@mixin noCommentText_Desktop_Style{
+	font: normal normal 18px calibri; /*changed*/
+	color: #494C55;
+}
+
+
+@mixin commentSection_Scrollbar_Style{
+	width: 7px;
+	height: 7px;
+}
+
+
+@mixin commentSection_Track_Style{
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+
+
+@mixin commentSection_Thumb_Style{
+	background: #1B85BD;
+	border-radius: 10px;
+}
+
+
+@mixin commentSection_ThumbHover_Style{
+	background: #1B85BD;
+}
+
+
+@mixin commentDetailsWrap_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	white-space: normal;
+	box-sizing: border-box;
+	padding: 5px;
+	margin: 5px;
+}
+
+
+@mixin commentDetailsWrapOdd_Style{
+	background-color: #ffffff;
+	border: 0.5px solid #DEE1E6;
+}
+
+
+@mixin commentDetailsWrapEven_Style{
+	background-color: #f2f2f2;
+	border: 0.5px solid #DEE1E6;
+}
+
+
+@mixin commentHeaderFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+@mixin commentIcon_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	background-image: url("../../src/Comment_Icon_Black.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	background-origin: padding-box;
+	height: 20px; /*To be changed*/
+	width: 20px; /*To be changed*/
+	flex-shrink: 0;
+	flex-grow: 0;	
+}
+@mixin commentIcon_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	background-image: url("../../src/Comment_Icon_Black.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	background-origin: padding-box;
+	height: 22px; /*changed*/
+	width: 22px; /*changed*/
+	flex-shrink: 0;
+	flex-grow: 0;	
+}
+@mixin commentIcon_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	background-image: url("../../src/Comment_Icon_Black.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	background-origin: padding-box;
+	height: 24px; /*changed*/
+	width: 24px; /*changed*/
+	flex-shrink: 0;
+	flex-grow: 0;	
+}
+
+
+@mixin commentRefNo_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 15px calibri; /*To be changed*/
+	width: 100%;
+	color: #494C55;
+}
+@mixin commentRefNo_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 17px calibri; /*changed*/
+	width: 100%;
+	color: #494C55;
+}
+@mixin commentRefNo_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 19px calibri; /*changed*/
+	width: 100%;
+	color: #494C55;
+}
+
+
+@mixin commentRating_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 15px calibri; /*To be changed*/
+	color: #535F80;
+	flex-shrink: 0;
+}
+@mixin commentRating_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 17px calibri; /*changed*/
+	color: #535F80;
+	flex-shrink: 0;
+}
+@mixin commentRating_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 19px calibri; /*changed*/
+	color: #535F80;
+	flex-shrink: 0;
+}
+
+
+@mixin commentRespDetFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+
+@mixin commentRespDetItem_MT_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	width: auto;
+	border: 2px solid #1B85BD;
+	border-radius: 5px;
+	color: #1B85BD;
+	background-color: #ffffff;
+	font: normal normal 13px calibri; /*To be changed*/
+	margin: 3px 7px 0px 7px;
+	text-align: center;
+	padding: 5px;
+}
+@mixin commentRespDetItem_Laptop_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	width: auto;
+	border: 2px solid #1B85BD;
+	border-radius: 5px;
+	color: #1B85BD;
+	background-color: #ffffff;
+	font: normal normal 15px calibri; /*changed*/
+	margin: 3px 7px 0px 7px;
+	text-align: center;
+	padding: 5px;
+}
+@mixin commentRespDetItem_Desktop_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	width: auto;
+	border: 2px solid #1B85BD;
+	border-radius: 5px;
+	color: #1B85BD;
+	background-color: #ffffff;
+	font: normal normal 17px calibri; /*changed*/
+	margin: 3px 7px 0px 7px;
+	text-align: center;
+	padding: 5px;
+}
+
+
+@mixin commentQuestion_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 15px calibri; /*To be changed*/
+	color: #494C55;
+	margin-top: 3px;
+}
+@mixin commentQuestion_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 17px calibri; /*changed*/
+	color: #494C55;
+	margin-top: 3px;
+}
+@mixin commentQuestion_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 19px calibri; /*changed*/
+	color: #494C55;
+	margin-top: 3px;
+}
+
+
+@mixin commentAnswer_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 15px calibri; /*To be changed*/
+	color: #535F80;
+}
+@mixin commentAnswer_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 17px calibri; /*changed*/
+	color: #535F80;
+}
+@mixin commentAnswer_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 19px calibri; /*changed*/
+	color: #535F80;
+}
+
+
+@mixin commentDatetime_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 14px calibri; /*To be changed*/
+	color: #535F80;
+	margin-top: 4px;
+}
+@mixin commentDatetime_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 16px calibri; /*changed*/
+	color: #535F80;
+	margin-top: 4px;
+}
+@mixin commentDatetime_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 18px calibri; /*changed*/
+	color: #535F80;
+	margin-top: 4px;
+}
+/*Comment Section*/
 /***********************************************************************************************************************************************************************************************************/

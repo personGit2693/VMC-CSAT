@@ -11,7 +11,7 @@ function loadOverallDisagreeLineChart(){
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Disagree',
+		title: 'Daily Total Disagree',
 		curveType: 'function',		
 		titleTextStyle:{
 			color: "#494C55",
@@ -33,7 +33,7 @@ function loadOverallDisagreeLineChart(){
 		width: setChartWidth,				
 		legend:{
 			alignment: "start",
-			position: "right",
+			position: "none",
 			textStyle: { 
 				color: "#494C55"
 			}

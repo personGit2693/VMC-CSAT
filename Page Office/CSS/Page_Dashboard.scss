@@ -806,16 +806,81 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	#commentSectionWrap{
-		position: relative;
-		display: block;
-		overflow: auto;
-		box-sizing: border-box;
-		width: auto;
-		height: 700px;
-		background-color: #ffffff;
+	#commentSectionTextWrap{		
+		@include commentSectionTextWrap_Style;
+	}
 
-		border: 1px solid yellow;
+	#commentSectionTextWrap .commentSectionText-Class{
+		@include commentSectionText_MT_Style;	
+	}
+
+	#commentSectionWrap{		
+		@include commentSectionWrap_Style;
+		@include noCommentText_MT_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar{
+		@include commentSection_Scrollbar_Style;	
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-track{
+		@include commentSection_Track_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb{
+		@include commentSection_Thumb_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb:hover{
+		@include commentSection_ThumbHover_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap{
+		@include commentDetailsWrap_Style;	
+	}
+
+	.commentDetailsWrap:nth-child(even){
+		@include commentDetailsWrapEven_Style;
+	}
+
+	.commentDetailsWrap:nth-child(odd){
+		@include commentDetailsWrapOdd_Style
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex{
+		@include commentHeaderFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class{
+		@include commentIcon_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class{
+		@include commentRefNo_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class{
+		@include commentRating_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex{
+		@include commentRespDetFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class{
+		@include commentRespDetItem_MT_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap .commentQuestion-Class{
+		@include commentQuestion_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentAnswer-Class{
+		@include commentAnswer_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
+		@include commentDatetime_MT_Style;
 	}
 }
 /*Mobile*/
@@ -825,7 +890,82 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	
+	#commentSectionTextWrap{		
+		@include commentSectionTextWrap_Style;
+	}
+
+	#commentSectionTextWrap .commentSectionText-Class{
+		@include commentSectionText_MT_Style;	
+	}
+
+	#commentSectionWrap{		
+		@include commentSectionWrap_Style;
+		@include noCommentText_MT_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar{
+		@include commentSection_Scrollbar_Style;	
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-track{
+		@include commentSection_Track_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb{
+		@include commentSection_Thumb_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb:hover{
+		@include commentSection_ThumbHover_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap{
+		@include commentDetailsWrap_Style;	
+	}
+
+	.commentDetailsWrap:nth-child(even){
+		@include commentDetailsWrapEven_Style;
+	}
+
+	.commentDetailsWrap:nth-child(odd){
+		@include commentDetailsWrapOdd_Style
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex{
+		@include commentHeaderFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class{
+		@include commentIcon_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class{
+		@include commentRefNo_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class{
+		@include commentRating_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex{
+		@include commentRespDetFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class{
+		@include commentRespDetItem_MT_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap .commentQuestion-Class{
+		@include commentQuestion_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentAnswer-Class{
+		@include commentAnswer_MT_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
+		@include commentDatetime_MT_Style;
+	}
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -834,7 +974,82 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-	
+	#commentSectionTextWrap{		
+		@include commentSectionTextWrap_Style;
+	}
+
+	#commentSectionTextWrap .commentSectionText-Class{
+		@include commentSectionText_Laptop_Style;	
+	}
+
+	#commentSectionWrap{		
+		@include commentSectionWrap_Style;
+		@include commentSectionText_Laptop_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar{
+		@include commentSection_Scrollbar_Style;	
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-track{
+		@include commentSection_Track_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb{
+		@include commentSection_Thumb_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb:hover{
+		@include commentSection_ThumbHover_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap{
+		@include commentDetailsWrap_Style;	
+	}
+
+	.commentDetailsWrap:nth-child(even){
+		@include commentDetailsWrapEven_Style;
+	}
+
+	.commentDetailsWrap:nth-child(odd){
+		@include commentDetailsWrapOdd_Style
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex{
+		@include commentHeaderFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class{
+		@include commentIcon_Laptop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class{
+		@include commentRefNo_Laptop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class{
+		@include commentRating_Laptop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex{
+		@include commentRespDetFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class{
+		@include commentRespDetItem_Laptop_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap .commentQuestion-Class{
+		@include commentQuestion_Laptop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentAnswer-Class{
+		@include commentAnswer_Laptop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
+		@include commentDatetime_Laptop_Style;
+	}
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -843,8 +1058,82 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-	
-	
+	#commentSectionTextWrap{		
+		@include commentSectionTextWrap_Style;
+	}
+
+	#commentSectionTextWrap .commentSectionText-Class{
+		@include commentSectionText_Desktop_Style;	
+	}
+
+	#commentSectionWrap{		
+		@include commentSectionWrap_Style;
+		@include noCommentText_Desktop_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar{
+		@include commentSection_Scrollbar_Style;	
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-track{
+		@include commentSection_Track_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb{
+		@include commentSection_Thumb_Style;
+	}
+
+	#commentSectionWrap::-webkit-scrollbar-thumb:hover{
+		@include commentSection_ThumbHover_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap{
+		@include commentDetailsWrap_Style;	
+	}
+
+	.commentDetailsWrap:nth-child(even){
+		@include commentDetailsWrapEven_Style;
+	}
+
+	.commentDetailsWrap:nth-child(odd){
+		@include commentDetailsWrapOdd_Style
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex{
+		@include commentHeaderFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class{
+		@include commentIcon_Desktop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class{
+		@include commentRefNo_Desktop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class{
+		@include commentRating_Desktop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex{
+		@include commentRespDetFlex_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class{
+		@include commentRespDetItem_Laptop_Style;
+	}	
+
+	#commentSectionWrap .commentDetailsWrap .commentQuestion-Class{
+		@include commentQuestion_Desktop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentAnswer-Class{
+		@include commentAnswer_Desktop_Style;
+	}
+
+	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
+		@include commentDatetime_Desktop_Style;
+	}
 }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/

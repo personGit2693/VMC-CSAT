@@ -294,9 +294,116 @@
 
 
 			<!--Comment Section-->
+			<div class="globalWrapper" id="commentSectionTextWrap">
+				<div class="commentSectionText-Class">Comment Section</div>
+			</div>
 			<div class="globalWrapper" id="commentSectionWrap">
-				<div class="commentDetails-Class">
-					
+				<div class="commentDetailsWrap">
+					<div class="commentHeaderFlex">
+						<div class="commentIcon-Class"></div>
+						<div class="commentRefNo-Class">2023-VMCCSAT-61382639444</div>
+						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">20%</span></div>					
+					</div>
+					<div class="commentRespDetFlex">
+						<div class="commentRespDetItem-Class">HRMO</div>
+						<div class="commentRespDetItem-Class">Employee</div>
+						<div class="commentRespDetItem-Class">25-30</div>
+						<div class="commentRespDetItem-Class">Male</div>
+						<div class="commentRespDetItem-Class">INTERNAL</div>
+					</div>					
+					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
+					<div class="commentAnswer-Class">Wala palitan nalang boss ng HR</div>
+					<div class="commentedDatetime-Class">2023-08-04 11:53:53</div>
+				</div>
+
+				<div class="commentDetailsWrap">
+					<div class="commentHeaderFlex">
+						<div class="commentIcon-Class"></div>
+						<div class="commentRefNo-Class">2023-VMCCSAT-7411911737</div>						
+						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">80%</span></div>					
+					</div>
+					<div class="commentRespDetFlex">
+						<div class="commentRespDetItem-Class">HRMO</div>
+						<div class="commentRespDetItem-Class">Employee</div>
+						<div class="commentRespDetItem-Class">25-30</div>
+						<div class="commentRespDetItem-Class">Male</div>
+						<div class="commentRespDetItem-Class">INTERNAL</div>
+					</div>					
+					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
+					<div class="commentAnswer-Class">Laht naging maayos</div>
+					<div class="commentedDatetime-Class">2023-08-07 11:53:53</div>
+				</div>
+
+				<div class="commentDetailsWrap">
+					<div class="commentHeaderFlex">
+						<div class="commentIcon-Class"></div>
+						<div class="commentRefNo-Class">2023-VMCCSAT-61382639444</div>						
+						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">20%</span></div>					
+					</div>
+					<div class="commentRespDetFlex">
+						<div class="commentRespDetItem-Class">HRMO</div>
+						<div class="commentRespDetItem-Class">Employee</div>
+						<div class="commentRespDetItem-Class">25-30</div>
+						<div class="commentRespDetItem-Class">Male</div>
+						<div class="commentRespDetItem-Class">INTERNAL</div>
+					</div>					
+					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
+					<div class="commentAnswer-Class">Wala palitan nalang boss ng HR</div>
+					<div class="commentedDatetime-Class">2023-08-04 11:53:53</div>
+				</div>
+
+				<div class="commentDetailsWrap">
+					<div class="commentHeaderFlex">
+						<div class="commentIcon-Class"></div>
+						<div class="commentRefNo-Class">2023-VMCCSAT-7411911737</div>						
+						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">80%</span></div>					
+					</div>
+					<div class="commentRespDetFlex">
+						<div class="commentRespDetItem-Class">HRMO</div>
+						<div class="commentRespDetItem-Class">Employee</div>
+						<div class="commentRespDetItem-Class">25-30</div>
+						<div class="commentRespDetItem-Class">Male</div>
+						<div class="commentRespDetItem-Class">INTERNAL</div>
+					</div>					
+					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
+					<div class="commentAnswer-Class">Laht naging maayos</div>
+					<div class="commentedDatetime-Class">2023-08-07 11:53:53</div>
+				</div>
+
+				<div class="commentDetailsWrap">
+					<div class="commentHeaderFlex">
+						<div class="commentIcon-Class"></div>
+						<div class="commentRefNo-Class">2023-VMCCSAT-61382639444</div>						
+						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">20%</span></div>					
+					</div>
+					<div class="commentRespDetFlex">
+						<div class="commentRespDetItem-Class">HRMO</div>
+						<div class="commentRespDetItem-Class">Employee</div>
+						<div class="commentRespDetItem-Class">25-30</div>
+						<div class="commentRespDetItem-Class">Male</div>
+						<div class="commentRespDetItem-Class">INTERNAL</div>
+					</div>					
+					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
+					<div class="commentAnswer-Class">Wala palitan nalang boss ng HR</div>
+					<div class="commentedDatetime-Class">2023-08-04 11:53:53</div>
+				</div>
+
+				<div class="commentDetailsWrap">
+					<div class="commentHeaderFlex">
+						<div class="commentIcon-Class"></div>
+						<div class="commentRefNo-Class">2023-VMCCSAT-7411911737</div>						
+						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">80%</span></div>					
+					</div>
+					<div class="commentRespDetFlex">
+						<div class="commentRespDetItem-Class">HRMO</div>
+						<div class="commentRespDetItem-Class">Employee</div>
+						<div class="commentRespDetItem-Class">25-30</div>
+						<div class="commentRespDetItem-Class">Male</div>
+						<div class="commentRespDetItem-Class">INTERNAL</div>
+					</div>					
+					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
+					<div class="commentAnswer-Class">Laht naging maayos</div>
+					<div class="commentedDatetime-Class">2023-08-07 11:53:53</div>
 				</div>
 			</div>
 			<!--Comment Section-->

@@ -11,7 +11,7 @@ function loadOverallNeitherLineChart(){
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Overall Neither Agree nor Disagree',
+		title: 'Daily Total Neither Agree nor Disagree',
 		curveType: 'function',		
 		titleTextStyle:{
 			color: "#494C55",
@@ -33,7 +33,7 @@ function loadOverallNeitherLineChart(){
 		width: setChartWidth,				
 		legend:{
 			alignment: "start",
-			position: "right",
+			position: "none",
 			textStyle: { 
 				color: "#494C55"
 			}

@@ -1,13 +1,13 @@
-SELECT clientresponses_tab.clientresponse_reference AS 'Reference Number',
- offices_tab.office_value AS 'Office Visited',
- offices_tab.office_abbre AS 'Office Abbre',
- respondents_tab.respondent_name AS 'Respondent-Type',
- ageranges_tab.agerange_value AS 'Age',
- genders_tab.gender_value AS 'Gender',
- clienttypes_tab.clienttype_value AS 'Client-Type',
- questions_tab.question_value AS 'Questions',
- commentsresponses_tab.commentresponse_value AS 'Comment',
- commentsresponses_tab.commentresponse_datetime AS 'Datetime' 
+SELECT clientresponses_tab.clientresponse_reference AS 'referenceNo',
+ offices_tab.office_value AS 'office',
+ offices_tab.office_abbre AS 'officeAbre',
+ respondents_tab.respondent_name AS 'respType',
+ ageranges_tab.agerange_value AS 'ageRangeValue',
+ genders_tab.gender_value AS 'gender',
+ clienttypes_tab.clienttype_value AS 'clientType',
+ questions_tab.question_value AS 'question',
+ commentsresponses_tab.commentresponse_value AS 'comment',
+ commentsresponses_tab.commentresponse_datetime AS 'datetime' 
  FROM clientresponses_tab 
  INNER JOIN offices_tab 
  ON clientresponses_tab.office_id = offices_tab.office_id 
@@ -23,6 +23,5 @@ SELECT clientresponses_tab.clientresponse_reference AS 'Reference Number',
  ON clientresponses_tab.clientresponse_reference = commentsresponses_tab.clientresponse_reference
  INNER JOIN questions_tab 
  ON commentsresponses_tab.question_id = questions_tab.question_id 
- INNER JOIN (SELECT clientresponse_reference, COUNT() AS '') AS 'stronglyagree_tab'
  WHERE clientresponses_tab.office_id = 3 
  ORDER BY commentsresponses_tab.commentresponse_datetime DESC;

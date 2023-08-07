@@ -11,7 +11,7 @@ function loadOverallNoRatingLineChart(){
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Overall No Rating',
+		title: 'Daily Total No Rating',
 		curveType: 'function',				
 		titleTextStyle:{
 			color: "#494C55",
@@ -33,7 +33,7 @@ function loadOverallNoRatingLineChart(){
 		width: setChartWidth,				
 		legend:{
 			alignment: "start",
-			position: "right",
+			position: "none",
 			textStyle: { 
 				color: "#494C55"
 			}

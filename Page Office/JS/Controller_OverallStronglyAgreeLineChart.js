@@ -11,7 +11,7 @@ function loadOverallStronglyAgreeLineChart(){
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Overall Strongly Agree',
+		title: 'Daily Total Strongly Agree',
 		curveType: 'function',				
 		titleTextStyle:{
 			color: "#494C55",
@@ -33,7 +33,7 @@ function loadOverallStronglyAgreeLineChart(){
 		width: setChartWidth,				
 		legend:{
 			alignment: "start",
-			position: "right",
+			position: "none",
 			textStyle: { 
 				color: "#494C55"
 			}

@@ -3358,6 +3358,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Charts*/
 /*Charts*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Comment Section*/
+/*Comment Section*/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -4184,7 +4189,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 8px;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 350px;
+    width: 390px;
     height: auto;
     border-radius: 4px;
     border: 1px solid #8394B7; }
@@ -4207,7 +4212,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .chartWrap-Class {
     overflow: visible;
     --chartWrapWidth: auto;
-    --chartWrapHeight: 250px;
+    --chartWrapHeight: 210px;
     --chartWrapBorderWidth: 1px;
     --chartWrapBorderStyle: solid;
     --chartWrapBorderColor: transparent;
@@ -4232,7 +4237,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 8px;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 350px;
+    width: 390px;
     height: auto;
     border-radius: 4px;
     border: 1px solid #8394B7; }
@@ -4255,7 +4260,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .chartWrap-Class {
     overflow: visible;
     --chartWrapWidth: auto;
-    --chartWrapHeight: 250px;
+    --chartWrapHeight: 210px;
     --chartWrapBorderWidth: 1px;
     --chartWrapBorderStyle: solid;
     --chartWrapBorderColor: transparent;
@@ -4280,7 +4285,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 8px;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 350px;
+    width: 390px;
     height: auto;
     border-radius: 4px;
     border: 1px solid #8394B7; }
@@ -4303,7 +4308,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .chartWrap-Class {
     overflow: visible;
     --chartWrapWidth: auto;
-    --chartWrapHeight: 250px;
+    --chartWrapHeight: 210px;
     --chartWrapBorderWidth: 1px;
     --chartWrapBorderStyle: solid;
     --chartWrapBorderColor: transparent;
@@ -4328,7 +4333,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 8px;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 350px;
+    width: 390px;
     height: auto;
     border-radius: 4px;
     border: 1px solid #8394B7; }
@@ -4351,7 +4356,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .chartWrap-Class {
     overflow: visible;
     --chartWrapWidth: auto;
-    --chartWrapHeight: 250px;
+    --chartWrapHeight: 210px;
     --chartWrapBorderWidth: 1px;
     --chartWrapBorderStyle: solid;
     --chartWrapBorderColor: transparent;
@@ -4366,27 +4371,675 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  #commentSectionWrap {
+  #commentSectionTextWrap {
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+
+  #commentSectionTextWrap .commentSectionText-Class {
     position: relative;
     display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 17px calibri;
+    /*To be changed*/
+    margin: 5px;
+    color: #494C55; }
+
+  #commentSectionWrap {
+    display: block;
     overflow: auto;
+    height: 250px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    font: normal normal 13px calibri;
+    /*To be changed*/
+    color: #494C55; }
+
+  #commentSectionWrap::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  #commentSectionWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb {
+    background: #1B85BD;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb:hover {
+    background: #1B85BD; }
+
+  #commentSectionWrap .commentDetailsWrap {
+    position: relative;
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px; }
+
+  .commentDetailsWrap:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 0.5px solid #DEE1E6; }
+
+  .commentDetailsWrap:nth-child(odd) {
+    background-color: #ffffff;
+    border: 0.5px solid #DEE1E6; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: transparent;
+    background-image: url("../../src/Comment_Icon_Black.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-origin: padding-box;
+    height: 20px;
+    /*To be changed*/
+    width: 20px;
+    /*To be changed*/
+    flex-shrink: 0;
+    flex-grow: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 15px calibri;
+    /*To be changed*/
+    width: 100%;
+    color: #494C55; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 15px calibri;
+    /*To be changed*/
+    color: #535F80;
+    flex-shrink: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
     box-sizing: border-box;
     width: auto;
-    height: 700px;
+    border: 2px solid #1B85BD;
+    border-radius: 5px;
+    color: #1B85BD;
     background-color: #ffffff;
-    border: 1px solid yellow; } }
+    font: normal normal 13px calibri;
+    /*To be changed*/
+    margin: 3px 7px 0px 7px;
+    text-align: center;
+    padding: 5px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentQuestion-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 15px calibri;
+    /*To be changed*/
+    color: #494C55;
+    margin-top: 3px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentAnswer-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 15px calibri;
+    /*To be changed*/
+    color: #535F80; }
+
+  #commentSectionWrap .commentDetailsWrap .commentedDatetime-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 14px calibri;
+    /*To be changed*/
+    color: #535F80;
+    margin-top: 4px; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  #commentSectionTextWrap {
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+
+  #commentSectionTextWrap .commentSectionText-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 17px calibri;
+    /*To be changed*/
+    margin: 5px;
+    color: #494C55; }
+
+  #commentSectionWrap {
+    display: block;
+    overflow: auto;
+    height: 250px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    font: normal normal 13px calibri;
+    /*To be changed*/
+    color: #494C55; }
+
+  #commentSectionWrap::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  #commentSectionWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb {
+    background: #1B85BD;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb:hover {
+    background: #1B85BD; }
+
+  #commentSectionWrap .commentDetailsWrap {
+    position: relative;
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px; }
+
+  .commentDetailsWrap:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 0.5px solid #DEE1E6; }
+
+  .commentDetailsWrap:nth-child(odd) {
+    background-color: #ffffff;
+    border: 0.5px solid #DEE1E6; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: transparent;
+    background-image: url("../../src/Comment_Icon_Black.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-origin: padding-box;
+    height: 20px;
+    /*To be changed*/
+    width: 20px;
+    /*To be changed*/
+    flex-shrink: 0;
+    flex-grow: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 15px calibri;
+    /*To be changed*/
+    width: 100%;
+    color: #494C55; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 15px calibri;
+    /*To be changed*/
+    color: #535F80;
+    flex-shrink: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    width: auto;
+    border: 2px solid #1B85BD;
+    border-radius: 5px;
+    color: #1B85BD;
+    background-color: #ffffff;
+    font: normal normal 13px calibri;
+    /*To be changed*/
+    margin: 3px 7px 0px 7px;
+    text-align: center;
+    padding: 5px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentQuestion-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 15px calibri;
+    /*To be changed*/
+    color: #494C55;
+    margin-top: 3px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentAnswer-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 15px calibri;
+    /*To be changed*/
+    color: #535F80; }
+
+  #commentSectionWrap .commentDetailsWrap .commentedDatetime-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 14px calibri;
+    /*To be changed*/
+    color: #535F80;
+    margin-top: 4px; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  #commentSectionTextWrap {
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+
+  #commentSectionTextWrap .commentSectionText-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 19px calibri;
+    /*changed*/
+    margin: 5px;
+    color: #494C55; }
+
+  #commentSectionWrap {
+    display: block;
+    overflow: auto;
+    height: 250px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 19px calibri;
+    /*changed*/
+    margin: 5px;
+    color: #494C55; }
+
+  #commentSectionWrap::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  #commentSectionWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb {
+    background: #1B85BD;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb:hover {
+    background: #1B85BD; }
+
+  #commentSectionWrap .commentDetailsWrap {
+    position: relative;
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px; }
+
+  .commentDetailsWrap:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 0.5px solid #DEE1E6; }
+
+  .commentDetailsWrap:nth-child(odd) {
+    background-color: #ffffff;
+    border: 0.5px solid #DEE1E6; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: transparent;
+    background-image: url("../../src/Comment_Icon_Black.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-origin: padding-box;
+    height: 22px;
+    /*changed*/
+    width: 22px;
+    /*changed*/
+    flex-shrink: 0;
+    flex-grow: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 17px calibri;
+    /*changed*/
+    width: 100%;
+    color: #494C55; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 17px calibri;
+    /*changed*/
+    color: #535F80;
+    flex-shrink: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    width: auto;
+    border: 2px solid #1B85BD;
+    border-radius: 5px;
+    color: #1B85BD;
+    background-color: #ffffff;
+    font: normal normal 15px calibri;
+    /*changed*/
+    margin: 3px 7px 0px 7px;
+    text-align: center;
+    padding: 5px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentQuestion-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 17px calibri;
+    /*changed*/
+    color: #494C55;
+    margin-top: 3px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentAnswer-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 17px calibri;
+    /*changed*/
+    color: #535F80; }
+
+  #commentSectionWrap .commentDetailsWrap .commentedDatetime-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 16px calibri;
+    /*changed*/
+    color: #535F80;
+    margin-top: 4px; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
+@media all and (min-width: 1601px) {
+  #commentSectionTextWrap {
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+
+  #commentSectionTextWrap .commentSectionText-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 21px calibri;
+    /*changed*/
+    margin: 5px;
+    color: #494C55; }
+
+  #commentSectionWrap {
+    display: block;
+    overflow: auto;
+    height: 250px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    font: normal normal 18px calibri;
+    /*changed*/
+    color: #494C55; }
+
+  #commentSectionWrap::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  #commentSectionWrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb {
+    background: #1B85BD;
+    border-radius: 10px; }
+
+  #commentSectionWrap::-webkit-scrollbar-thumb:hover {
+    background: #1B85BD; }
+
+  #commentSectionWrap .commentDetailsWrap {
+    position: relative;
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px; }
+
+  .commentDetailsWrap:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 0.5px solid #DEE1E6; }
+
+  .commentDetailsWrap:nth-child(odd) {
+    background-color: #ffffff;
+    border: 0.5px solid #DEE1E6; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentIcon-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: transparent;
+    background-image: url("../../src/Comment_Icon_Black.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-origin: padding-box;
+    height: 24px;
+    /*changed*/
+    width: 24px;
+    /*changed*/
+    flex-shrink: 0;
+    flex-grow: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRefNo-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 19px calibri;
+    /*changed*/
+    width: 100%;
+    color: #494C55; }
+
+  #commentSectionWrap .commentDetailsWrap .commentHeaderFlex .commentRating-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 19px calibri;
+    /*changed*/
+    color: #535F80;
+    flex-shrink: 0; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    align-items: center; }
+
+  #commentSectionWrap .commentDetailsWrap .commentRespDetFlex .commentRespDetItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    width: auto;
+    border: 2px solid #1B85BD;
+    border-radius: 5px;
+    color: #1B85BD;
+    background-color: #ffffff;
+    font: normal normal 15px calibri;
+    /*changed*/
+    margin: 3px 7px 0px 7px;
+    text-align: center;
+    padding: 5px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentQuestion-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 19px calibri;
+    /*changed*/
+    color: #494C55;
+    margin-top: 3px; }
+
+  #commentSectionWrap .commentDetailsWrap .commentAnswer-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal normal 19px calibri;
+    /*changed*/
+    color: #535F80; }
+
+  #commentSectionWrap .commentDetailsWrap .commentedDatetime-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: normal bold 18px calibri;
+    /*changed*/
+    color: #535F80;
+    margin-top: 4px; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Comment Section*/
