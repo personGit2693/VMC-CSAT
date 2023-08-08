@@ -4727,14 +4727,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     height: 250px;
     background-color: #ffffff;
     margin-top: 0px;
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font: normal bold 19px calibri;
+    font: normal normal 16px calibri;
     /*changed*/
-    margin: 5px;
     color: #494C55; }
 
   #commentSectionWrap::-webkit-scrollbar {

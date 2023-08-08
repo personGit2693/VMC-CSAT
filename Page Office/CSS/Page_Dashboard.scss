@@ -984,7 +984,7 @@
 
 	#commentSectionWrap{		
 		@include commentSectionWrap_Style;
-		@include commentSectionText_Laptop_Style;
+		@include noCommentText_Laptop_Style;
 	}
 
 	#commentSectionWrap::-webkit-scrollbar{
