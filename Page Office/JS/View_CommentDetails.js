@@ -1,16 +1,16 @@
 /*Import*/
-import {buildingRadioBtnsWrap} from "./JsCollection_Page_RateService.js";
-import BuildingRadioBtn from "./Component_BuildingRadioBtn.js";
+import {commentSectionWrap} from "./JSCollection_Page_Dashboard.js";
+import CommentDetails from "./Component_CommentDetails.js";
 /*Import*/
 
 
 /*Render*/
-function renderBuildingRadioBtn(){
-	buildingRadioBtnsWrap.innerHTML = BuildingRadioBtn();
+function renderCommentDetails(){
+	commentSectionWrap.innerHTML = CommentDetails();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderBuildingRadioBtn;
+export default renderCommentDetails;
 /*Export*/

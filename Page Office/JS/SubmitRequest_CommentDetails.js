@@ -1,0 +1,4 @@
+function submitRequestCommentDetails(){
+	showSpinningLoad();
+	gatewayCommentDetails();
+}

@@ -1,27 +1,55 @@
 SELECT clientresponses_tab.clientresponse_reference AS 'referenceNo',
- offices_tab.office_value AS 'office',
- offices_tab.office_abbre AS 'officeAbre',
- respondents_tab.respondent_name AS 'respType',
- ageranges_tab.agerange_value AS 'ageRangeValue',
- genders_tab.gender_value AS 'gender',
- clienttypes_tab.clienttype_value AS 'clientType',
- questions_tab.question_value AS 'question',
- commentsresponses_tab.commentresponse_value AS 'comment',
- commentsresponses_tab.commentresponse_datetime AS 'datetime' 
- FROM clientresponses_tab 
- INNER JOIN offices_tab 
- ON clientresponses_tab.office_id = offices_tab.office_id 
- INNER JOIN respondents_tab 
- ON clientresponses_tab.respondent_id = respondents_tab.respondent_id 
- INNER JOIN ageranges_tab 
- ON clientresponses_tab.agerange_id = ageranges_tab.agerange_id 
- INNER JOIN genders_tab 
- ON clientresponses_tab.gender_id = genders_tab.gender_id 
- INNER JOIN clienttypes_tab 
- ON clientresponses_tab.clienttype_id = clienttypes_tab.clienttype_id 
- INNER JOIN commentsresponses_tab 
- ON clientresponses_tab.clientresponse_reference = commentsresponses_tab.clientresponse_reference
- INNER JOIN questions_tab 
- ON commentsresponses_tab.question_id = questions_tab.question_id 
- WHERE clientresponses_tab.office_id = 3 
- ORDER BY commentsresponses_tab.commentresponse_datetime DESC;
+offices_tab.office_value AS 'office',
+offices_tab.office_abbre AS 'officeAbre',
+respondents_tab.respondent_name AS 'respType',
+ageranges_tab.agerange_value AS 'ageRangeValue',
+genders_tab.gender_value AS 'gender',
+clienttypes_tab.clienttype_value AS 'clientType',
+questions_tab.question_value AS 'question',
+commentsresponses_tab.commentresponse_value AS 'comment',
+commentsresponses_tab.commentresponse_datetime AS 'datetime',
+allcountedscores_tab.allCountedScore AS 'allCountedScore',
+allpassscore_tab.allPassScore AS 'allPassScore'
+FROM clientresponses_tab 
+INNER JOIN offices_tab 
+ON clientresponses_tab.office_id = offices_tab.office_id 
+INNER JOIN respondents_tab 
+ON clientresponses_tab.respondent_id = respondents_tab.respondent_id 
+INNER JOIN ageranges_tab 
+ON clientresponses_tab.agerange_id = ageranges_tab.agerange_id 
+INNER JOIN genders_tab 
+ON clientresponses_tab.gender_id = genders_tab.gender_id 
+INNER JOIN clienttypes_tab 
+ON clientresponses_tab.clienttype_id = clienttypes_tab.clienttype_id 
+INNER JOIN commentsresponses_tab 
+ON clientresponses_tab.clientresponse_reference = commentsresponses_tab.clientresponse_reference
+INNER JOIN questions_tab 
+ON commentsresponses_tab.question_id = questions_tab.question_id 
+INNER JOIN (SELECT questionresponses_tab.clientresponse_reference AS 'clientresponse_reference',
+    IFNULL(questionresponses_tab2.allCountedScore, 0) AS 'allCountedScore' 
+    FROM questionresponses_tab 
+    LEFT JOIN (SELECT clientresponse_reference, 
+        COUNT(questionresponse_id) AS 'allCountedScore' 
+        FROM questionresponses_tab  
+        WHERE NOT score_id = 6
+        GROUP BY clientresponse_reference) 
+    AS questionresponses_tab2 
+    ON questionresponses_tab.clientresponse_reference = questionresponses_tab2.clientresponse_reference 
+    GROUP BY questionresponses_tab.clientresponse_reference) 
+AS allcountedscores_tab 
+ON clientresponses_tab.clientresponse_reference = allcountedscores_tab.clientresponse_reference
+INNER JOIN (SELECT questionresponses_tab.clientresponse_reference AS 'clientresponse_reference',
+    IFNULL(questionresponses_tab2.allPassScore, 0) AS 'allPassScore' 
+    FROM questionresponses_tab 
+    LEFT JOIN (SELECT clientresponse_reference, 
+        COUNT(questionresponse_id) AS 'allPassScore' 
+        FROM questionresponses_tab  
+        WHERE score_id = 1 OR score_id = 2
+        GROUP BY clientresponse_reference)
+    AS questionresponses_tab2 
+    ON questionresponses_tab.clientresponse_reference = questionresponses_tab2.clientresponse_reference 
+    GROUP BY questionresponses_tab.clientresponse_reference) 
+AS allpassscore_tab 
+ON clientresponses_tab.clientresponse_reference = allpassscore_tab.clientresponse_reference
+WHERE clientresponses_tab.office_id = 3 
+ORDER BY commentsresponses_tab.commentresponse_datetime DESC;

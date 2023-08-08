@@ -7,6 +7,7 @@ import {requestOverallNeither} from "./Request_OverallNeither.js";
 import {requestOverallDisagree} from "./Request_OverallDisagree.js";
 import {requestOverallStronglyDisagree} from "./Request_OverallStronglyDisagree.js";
 import {requestOverallNoRating} from "./Request_OverallNoRating.js";
+import {requestCommentDetails} from "./Request_CommentDetails.js";
 /*Import*/
 
 
@@ -28,3 +29,8 @@ requestOverallDisagree();
 requestOverallStronglyDisagree();
 requestOverallNoRating();
 /*Get the initial value for overall service rates response*/
+
+
+/*Get the comment details*/
+requestCommentDetails();
+/*Get the comment details*/

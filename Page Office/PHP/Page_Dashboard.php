@@ -121,11 +121,11 @@
 					<span class="searchAreaLabelTxt-Class">Client-Type</span>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating()" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
 					</div>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating()" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
 					</div>
 				</div>
 				<!--_Filter Client Type Item-->
@@ -298,113 +298,7 @@
 				<div class="commentSectionText-Class">Comment Section</div>
 			</div>
 			<div class="globalWrapper" id="commentSectionWrap">
-				<div class="commentDetailsWrap">
-					<div class="commentHeaderFlex">
-						<div class="commentIcon-Class"></div>
-						<div class="commentRefNo-Class">2023-VMCCSAT-61382639444</div>
-						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">20%</span></div>					
-					</div>
-					<div class="commentRespDetFlex">
-						<div class="commentRespDetItem-Class">HRMO</div>
-						<div class="commentRespDetItem-Class">Employee</div>
-						<div class="commentRespDetItem-Class">25-30</div>
-						<div class="commentRespDetItem-Class">Male</div>
-						<div class="commentRespDetItem-Class">INTERNAL</div>
-					</div>					
-					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
-					<div class="commentAnswer-Class">Wala palitan nalang boss ng HR</div>
-					<div class="commentedDatetime-Class">2023-08-04 11:53:53</div>
-				</div>
-
-				<div class="commentDetailsWrap">
-					<div class="commentHeaderFlex">
-						<div class="commentIcon-Class"></div>
-						<div class="commentRefNo-Class">2023-VMCCSAT-7411911737</div>						
-						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">80%</span></div>					
-					</div>
-					<div class="commentRespDetFlex">
-						<div class="commentRespDetItem-Class">HRMO</div>
-						<div class="commentRespDetItem-Class">Employee</div>
-						<div class="commentRespDetItem-Class">25-30</div>
-						<div class="commentRespDetItem-Class">Male</div>
-						<div class="commentRespDetItem-Class">INTERNAL</div>
-					</div>					
-					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
-					<div class="commentAnswer-Class">Laht naging maayos</div>
-					<div class="commentedDatetime-Class">2023-08-07 11:53:53</div>
-				</div>
-
-				<div class="commentDetailsWrap">
-					<div class="commentHeaderFlex">
-						<div class="commentIcon-Class"></div>
-						<div class="commentRefNo-Class">2023-VMCCSAT-61382639444</div>						
-						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">20%</span></div>					
-					</div>
-					<div class="commentRespDetFlex">
-						<div class="commentRespDetItem-Class">HRMO</div>
-						<div class="commentRespDetItem-Class">Employee</div>
-						<div class="commentRespDetItem-Class">25-30</div>
-						<div class="commentRespDetItem-Class">Male</div>
-						<div class="commentRespDetItem-Class">INTERNAL</div>
-					</div>					
-					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
-					<div class="commentAnswer-Class">Wala palitan nalang boss ng HR</div>
-					<div class="commentedDatetime-Class">2023-08-04 11:53:53</div>
-				</div>
-
-				<div class="commentDetailsWrap">
-					<div class="commentHeaderFlex">
-						<div class="commentIcon-Class"></div>
-						<div class="commentRefNo-Class">2023-VMCCSAT-7411911737</div>						
-						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">80%</span></div>					
-					</div>
-					<div class="commentRespDetFlex">
-						<div class="commentRespDetItem-Class">HRMO</div>
-						<div class="commentRespDetItem-Class">Employee</div>
-						<div class="commentRespDetItem-Class">25-30</div>
-						<div class="commentRespDetItem-Class">Male</div>
-						<div class="commentRespDetItem-Class">INTERNAL</div>
-					</div>					
-					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
-					<div class="commentAnswer-Class">Laht naging maayos</div>
-					<div class="commentedDatetime-Class">2023-08-07 11:53:53</div>
-				</div>
-
-				<div class="commentDetailsWrap">
-					<div class="commentHeaderFlex">
-						<div class="commentIcon-Class"></div>
-						<div class="commentRefNo-Class">2023-VMCCSAT-61382639444</div>						
-						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">20%</span></div>					
-					</div>
-					<div class="commentRespDetFlex">
-						<div class="commentRespDetItem-Class">HRMO</div>
-						<div class="commentRespDetItem-Class">Employee</div>
-						<div class="commentRespDetItem-Class">25-30</div>
-						<div class="commentRespDetItem-Class">Male</div>
-						<div class="commentRespDetItem-Class">INTERNAL</div>
-					</div>					
-					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
-					<div class="commentAnswer-Class">Wala palitan nalang boss ng HR</div>
-					<div class="commentedDatetime-Class">2023-08-04 11:53:53</div>
-				</div>
-
-				<div class="commentDetailsWrap">
-					<div class="commentHeaderFlex">
-						<div class="commentIcon-Class"></div>
-						<div class="commentRefNo-Class">2023-VMCCSAT-7411911737</div>						
-						<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">80%</span></div>					
-					</div>
-					<div class="commentRespDetFlex">
-						<div class="commentRespDetItem-Class">HRMO</div>
-						<div class="commentRespDetItem-Class">Employee</div>
-						<div class="commentRespDetItem-Class">25-30</div>
-						<div class="commentRespDetItem-Class">Male</div>
-						<div class="commentRespDetItem-Class">INTERNAL</div>
-					</div>					
-					<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">Ano ang naging maayos sa paglingkod sa inyo?</div>
-					<div class="commentAnswer-Class">Laht naging maayos</div>
-					<div class="commentedDatetime-Class">2023-08-07 11:53:53</div>
-				</div>
+				No comment yet!
 			</div>
 			<!--Comment Section-->
 		</div> 
@@ -436,6 +330,8 @@
 	<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
 	<script type="module" src="../JS/Gateway_OverallNoRating.js"></script>
 	<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
+	<script type="module" src="../JS/Gateway_CommentDetails.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
 	<script type="module" src="../JS/Executor_Page_Dashboard.js"></script>
 </body>
 </html>
