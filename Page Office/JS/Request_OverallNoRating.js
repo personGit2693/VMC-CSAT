@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallNoRating, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+import {selectedOffice_Obj, valueOverallNoRating, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
 import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
 import loadOverallNoRatingLineChart from "./Controller_OverallNoRatingLineChart.js";
 import token from "../../Global JS/Token.js";
@@ -50,7 +50,7 @@ function requestOverallNoRating(){
 
 
 	const queryString = "token="+token+
-	"&officeId="+3+
+	"&officeId="+selectedOffice_Obj.office_id+
 	"&clientTypeInternal="+clientTypeInternal+
 	"&clientTypeExternal="+clientTypeExternal+
 	"&overallFromDate="+overallFromDate.value+

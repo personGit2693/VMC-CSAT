@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+import {selectedOffice_Obj, valueOverallAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
 import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
 import loadOverallAgreeLineChart from "./Controller_OverallAgreeLineChart.js";
 import token from "../../Global JS/Token.js";
@@ -19,7 +19,7 @@ var overallAgree_Array = [];
 
 /*Count overall Agree*/
 function requestOverallAgree(){
-	
+
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -50,7 +50,7 @@ function requestOverallAgree(){
 
 
 	const queryString = "token="+token+
-	"&officeId="+3+
+	"&officeId="+selectedOffice_Obj.office_id+
 	"&clientTypeInternal="+clientTypeInternal+
 	"&clientTypeExternal="+clientTypeExternal+
 	"&overallFromDate="+overallFromDate.value+

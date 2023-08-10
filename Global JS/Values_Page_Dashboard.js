@@ -1,5 +1,5 @@
 /*Import*/
-import {checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, overallFromDate, overallToDate} from "../Page Office/JS/JSCollection_Page_Dashboard.js";
+import {selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, overallFromDate, overallToDate} from "../Page Office/JS/JSCollection_Page_Dashboard.js";
 import {overallServRate_Array} from "../Page Office/JS/Request_OverallServRate.js";
 import {overallStronglyAgree_Array} from "../Page Office/JS/Request_OverallStronglyAgree.js";
 import {overallAgree_Array} from "../Page Office/JS/Request_OverallAgree.js";
@@ -17,6 +17,8 @@ var clientTypeExternal = 2;
 
 
 /*Prep export variables*/
+var selectedOffice_Obj = {office_id:0};
+
 var overallServRateDataColumn_Array = [
 	[0, 'FillerOnly'],
 	[1,'Strongly Agree'],
@@ -66,6 +68,13 @@ var overallNoRatingData_Array = [
 	["yyyy/mm/dd", 0]
 ];
 /*Prep export variables*/
+
+
+/*Assign value for selectedOffice_Obj*/
+function valueSelectedOfficeObj(){
+	selectedOffice_Obj = JSON.parse(atob(selDropOfficeValue.value));
+}
+/*Assign value for selectedOffice_Obj*/
 
 
 /*Assign value for overallServRateData_Array*/
@@ -255,9 +264,10 @@ function valueOverallNoRating(){
 /*Declare global*/
 window.valueClientTypeInternal = valueClientTypeInternal;
 window.valueClientTypeExternal = valueClientTypeExternal;
+window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 /*Declare global*/
 
 
 /*Export*/
-export {overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/

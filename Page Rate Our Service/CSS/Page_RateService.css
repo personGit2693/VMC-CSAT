@@ -1641,8 +1641,8 @@ button.iconBtn_RoClass {
   color: var(--hoverOptFColor); }
 
 .selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar {
-  width: 7px;
-  height: 7px; }
+  width: var(--selectDropdownScrollSize);
+  height: var(--selectDropdownScrollSize); }
 
 .selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px gray;

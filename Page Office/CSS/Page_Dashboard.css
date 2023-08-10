@@ -1641,8 +1641,8 @@ button.iconBtn_RoClass {
   color: var(--hoverOptFColor); }
 
 .selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar {
-  width: 7px;
-  height: 7px; }
+  width: var(--selectDropdownScrollSize);
+  height: var(--selectDropdownScrollSize); }
 
 .selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px gray;
@@ -3371,6 +3371,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Navigation*/
   --generalNavMenuPadding: 12px;
   /*Navigation*/
+  /*Select Dropdown*/
+  --selectDropdownFColor: #494C55;
+  --selectDropdownBgColor: #ffffff;
+  --searchOptsBgColor: #ffffff;
+  --searchOptsFColor: #494C55;
+  --hoverOptBgColor: #8394B8;
+  --hoverOptFColor: #285FF3;
+  --selectDropdownScrollSize: 4px;
+  --optWrapThumbBgColor: #285FF3;
+  /*Select Dropdown*/
   /*Date Range*/
   --dateRangeBorderRadius: 4px;
   --dateRangeBorderWidth: 2px;
@@ -3823,25 +3833,28 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 @media all and (max-width: 641px) {
   #searchWrapper {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    /*To be changed*/
     padding: 5px;
-    justify-content: space-between;
+    align-content: space-between;
+    /*To be removed*/
     background-color: #ffffff;
     margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
-    overflow: visible; }
+    overflow: visible;
+    margin: 5px 0px;
+    /*To be changed*/ }
 
   #filterClientItemWrap {
     display: flex;
     flex-flow: row nowrap;
-    width: auto;
+    width: 250px;
+    /*To be changed*/
     justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    width: auto; }
+    align-items: center; }
 
   .searchAreaLabelTxt-Class {
     position: relative;
@@ -3869,8 +3882,27 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --cusCheckboxBorderWidth: 1.5px;
     --cusCheckboxBorderColor: #535F80; }
 
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: auto;
+    /*To be changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
+
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
   #dateRangeOneItemWrap {
-    flex-shrink: 0; }
+    width: auto; }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
     --dateRangeIconSize: 22px;
@@ -3883,14 +3915,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
     --dateRangeTooltipColor: #8394B7;
-    right: 0; }
+    left: 0; }
 
   #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
     --dateRangeCalLiteWrapWidth: 300px;
     /*To be changed*/
     --dateRangeCalLiteWrapTop: 45px;
     /*To be changed*/
-    right: 0; }
+    left: 0;
+    /*To be changed*/ }
 
   #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
     --calendarHeadTxtFSize: 12px;
@@ -3911,24 +3944,26 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #searchWrapper {
     display: flex;
     flex-flow: row nowrap;
+    /*To be changed*/
     padding: 5px;
-    justify-content: space-between;
+    /*align-content: space-between; removed*/
     background-color: #ffffff;
     margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
-    overflow: visible; }
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
 
   #filterClientItemWrap {
     display: flex;
     flex-flow: row nowrap;
     width: auto;
+    /*changed*/
     justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    width: auto; }
+    align-items: center; }
 
   .searchAreaLabelTxt-Class {
     position: relative;
@@ -3956,8 +3991,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --cusCheckboxBorderWidth: 1.5px;
     --cusCheckboxBorderColor: #535F80; }
 
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 200px;
+    /*changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
+
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
   #dateRangeOneItemWrap {
-    flex-shrink: 0; }
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
     --dateRangeIconSize: 22px;
@@ -3977,7 +4033,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     /*changed*/
     --dateRangeCalLiteWrapTop: 45.5px;
     /*changed*/
-    right: 0; }
+    right: 0;
+    /*changed*/ }
 
   #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
     --calendarHeadTxtFSize: 12px;
@@ -3998,24 +4055,26 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #searchWrapper {
     display: flex;
     flex-flow: row nowrap;
+    /*To be changed*/
     padding: 5px;
-    justify-content: space-between;
+    /*align-content: space-between; removed*/
     background-color: #ffffff;
     margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
-    overflow: visible; }
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
 
   #filterClientItemWrap {
     display: flex;
     flex-flow: row nowrap;
     width: auto;
+    /*changed*/
     justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    width: auto; }
+    align-items: center; }
 
   .searchAreaLabelTxt-Class {
     position: relative;
@@ -4043,8 +4102,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --cusCheckboxBorderWidth: 1.5px;
     --cusCheckboxBorderColor: #535F80; }
 
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 300px;
+    /*changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
+
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 18px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 16px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
   #dateRangeOneItemWrap {
-    flex-shrink: 0; }
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
     --dateRangeIconSize: 24px;
@@ -4064,7 +4144,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     /*changed*/
     --dateRangeCalLiteWrapTop: 47px;
     /*changed*/
-    right: 0; }
+    right: 0;
+    /*changed*/ }
 
   #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
     --calendarHeadTxtFSize: 14px;
@@ -4085,24 +4166,26 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #searchWrapper {
     display: flex;
     flex-flow: row nowrap;
+    /*To be changed*/
     padding: 5px;
-    justify-content: space-between;
+    /*align-content: space-between; removed*/
     background-color: #ffffff;
     margin-top: 20px; }
 
   .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
-    overflow: visible; }
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
 
   #filterClientItemWrap {
     display: flex;
     flex-flow: row nowrap;
     width: auto;
+    /*changed*/
     justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    width: auto; }
+    align-items: center; }
 
   .searchAreaLabelTxt-Class {
     position: relative;
@@ -4130,8 +4213,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --cusCheckboxBorderWidth: 1.5px;
     --cusCheckboxBorderColor: #535F80; }
 
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 300px;
+    /*changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
+
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 18px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 16px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
   #dateRangeOneItemWrap {
-    flex-shrink: 0; }
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
 
   #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
     --dateRangeIconSize: 26px;
@@ -4151,7 +4255,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     /*changed*/
     --dateRangeCalLiteWrapTop: 49px;
     /*changed*/
-    right: 0; }
+    right: 0;
+    /*changed*/ }
 
   #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
     --calendarHeadTxtFSize: 16px;

@@ -21,7 +21,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$overallFromDate = $_POST["overallFromDate"];
 	$overallToDate = $_POST["overallToDate"];
 	/*Query string*/
-
+	
 
 	/*Prep response*/
 	$getCommentDetails_Resp = new stdClass();

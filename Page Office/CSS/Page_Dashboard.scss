@@ -15,6 +15,18 @@
 	/*Navigation*/	
 
 
+	/*Select Dropdown*/
+	--selectDropdownFColor: #494C55;
+	--selectDropdownBgColor: #ffffff;
+	--searchOptsBgColor: #ffffff;
+	--searchOptsFColor: #494C55;
+	--hoverOptBgColor: #8394B8;
+	--hoverOptFColor: #285FF3;
+	--selectDropdownScrollSize: 4px;
+	--optWrapThumbBgColor: #285FF3;
+	/*Select Dropdown*/
+
+
 	/*Date Range*/	
 	--dateRangeBorderRadius: 4px;
 	--dateRangeBorderWidth: 2px;
@@ -381,15 +393,15 @@
 /*Mobile*/
 @media all and (max-width:641px){
 	#searchWrapper{
-		@include searchWrapper_Style;
+		@include searchWrapper_Mobile_Style;
 	}
 
 	.searchWrapperItem-Class{
-		@include searchWrapperItem_Style;
+		@include searchWrapperItem_Mobile_Style;
 	}
 
 	#filterClientItemWrap{
-		@include filterClientItemWrap_Style;
+		@include filterClientItemWrap_Mobile_Style;
 	}
 
 	.searchAreaLabelTxt-Class{
@@ -406,10 +418,26 @@
 
 	#filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass{
 		 @include filterClientCusCheckboxMe_MT_Style;		
+	}
+
+	#selDropdownPointOfEntryItem-Id{		
+		@include selDropdownPointOfEntryItem_Mobile_Style;
+	}
+
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_MT_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass{
+		@include selectDropdownF_MT_Style;
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_MT_Style;
 	}	
 
 	#dateRangeOneItemWrap{
-		@include dateRangeOneItemWrap_Style;
+		@include dateRangeOneItemWrap_Mobile_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
@@ -421,7 +449,7 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
-		@include dateRangeOneTooltipArrow_Style;
+		@include dateRangeOneTooltipArrow_Mobile_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
@@ -448,15 +476,15 @@
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 	#searchWrapper{
-		@include searchWrapper_Style;
+		@include searchWrapper_TLD_Style;
 	}
 
 	.searchWrapperItem-Class{
-		@include searchWrapperItem_Style;
+		@include searchWrapperItem_TLD_Style;
 	}
 
 	#filterClientItemWrap{
-		@include filterClientItemWrap_Style;
+		@include filterClientItemWrap_TLD_Style;
 	}
 
 	.searchAreaLabelTxt-Class{
@@ -475,8 +503,24 @@
 		 @include filterClientCusCheckboxMe_MT_Style;		
 	}
 
+	#selDropdownPointOfEntryItem-Id{		
+		@include selDropdownPointOfEntryItem_Tablet_Style;
+	}
+
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_MT_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass{
+		@include selectDropdownF_MT_Style;
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_MT_Style;
+	}
+
 	#dateRangeOneItemWrap{
-		@include dateRangeOneItemWrap_Style;
+		@include dateRangeOneItemWrap_TLD_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
@@ -488,7 +532,7 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
-		@include dateRangeOneTooltipArrow_Style;
+		@include dateRangeOneTooltipArrow_TLD_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
@@ -515,15 +559,15 @@
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
 	#searchWrapper{
-		@include searchWrapper_Style;
+		@include searchWrapper_TLD_Style;
 	}
 
 	.searchWrapperItem-Class{
-		@include searchWrapperItem_Style;
+		@include searchWrapperItem_TLD_Style;
 	}
 
 	#filterClientItemWrap{
-		@include filterClientItemWrap_Style;
+		@include filterClientItemWrap_TLD_Style;
 	}
 
 	.searchAreaLabelTxt-Class{
@@ -542,8 +586,24 @@
 		 @include filterClientCusCheckboxMe_Laptop_Style;		
 	}
 
+	#selDropdownPointOfEntryItem-Id{		
+		@include selDropdownPointOfEntryItem_Laptop_Style;
+	}
+
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_Laptop_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass{
+		@include selectDropdownF_Laptop_Style;
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_MT_Style;
+	}
+
 	#dateRangeOneItemWrap{
-		@include dateRangeOneItemWrap_Style;
+		@include dateRangeOneItemWrap_TLD_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
@@ -555,7 +615,7 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
-		@include dateRangeOneTooltipArrow_Style;
+		@include dateRangeOneTooltipArrow_TLD_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{
@@ -582,15 +642,15 @@
 /*Desktop*/
 @media all and (min-width:1601px){
 	#searchWrapper{
-		@include searchWrapper_Style;
+		@include searchWrapper_TLD_Style;
 	}
 
 	.searchWrapperItem-Class{
-		@include searchWrapperItem_Style;
+		@include searchWrapperItem_TLD_Style;
 	}
 
 	#filterClientItemWrap{
-		@include filterClientItemWrap_Style;
+		@include filterClientItemWrap_TLD_Style;
 	}
 
 	.searchAreaLabelTxt-Class{
@@ -609,8 +669,24 @@
 		 @include filterClientCusCheckboxMe_Laptop_Style;		
 	}
 
+	#selDropdownPointOfEntryItem-Id{		
+		@include selDropdownPointOfEntryItem_Laptop_Style;
+	}
+
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_Laptop_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass{
+		@include selectDropdownF_Laptop_Style;
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_MT_Style;
+	}
+
 	#dateRangeOneItemWrap{
-		@include dateRangeOneItemWrap_Style;
+		@include dateRangeOneItemWrap_TLD_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeIcon_RoClass{
@@ -622,7 +698,7 @@
 	}
 
 	#dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass{
-		@include dateRangeOneTooltipArrow_Style;
+		@include dateRangeOneTooltipArrow_TLD_Style;
 	}
 
 	#dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass{

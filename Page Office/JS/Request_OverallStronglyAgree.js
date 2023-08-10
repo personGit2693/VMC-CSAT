@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallStronglyAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+import {selectedOffice_Obj, valueOverallStronglyAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
 import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
 import loadOverallStronglyAgreeLineChart from "./Controller_OverallStronglyAgreeLineChart.js";
 import token from "../../Global JS/Token.js";
@@ -50,7 +50,7 @@ function requestOverallStronglyAgree(){
 
 
 	const queryString = "token="+token+
-	"&officeId="+3+
+	"&officeId="+selectedOffice_Obj.office_id+
 	"&clientTypeInternal="+clientTypeInternal+
 	"&clientTypeExternal="+clientTypeExternal+
 	"&overallFromDate="+overallFromDate.value+

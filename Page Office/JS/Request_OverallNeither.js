@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallNeither, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+import {selectedOffice_Obj, valueOverallNeither, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
 import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
 import loadOverallNeitherLineChart from "./Controller_OverallNeitherLineChart.js";
 import token from "../../Global JS/Token.js";
@@ -50,7 +50,7 @@ function requestOverallNeither(){
 
 
 	const queryString = "token="+token+
-	"&officeId="+3+
+	"&officeId="+selectedOffice_Obj.office_id+
 	"&clientTypeInternal="+clientTypeInternal+
 	"&clientTypeExternal="+clientTypeExternal+
 	"&overallFromDate="+overallFromDate.value+

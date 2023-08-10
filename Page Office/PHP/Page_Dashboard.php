@@ -80,6 +80,11 @@
 					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/GearIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/GearIcon_White.png')"></div>
 					<span class="generalNavMenuText_RoClass">Settings</span>
 				</a>
+
+				<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+					<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/logouticon black.png'); --activeMainNavMenuIcon:url('../../src/logouticon white.png')"></div>
+					<span class="generalNavMenuText_RoClass">Logout</span>
+				</a>
 	
 				<!--
 				<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
@@ -129,6 +134,35 @@
 					</div>
 				</div>
 				<!--_Filter Client Type Item-->
+
+				<!--_Select Point of Entry-->
+				<div class="selectDropdownWrap_RoClass searchWrapperItem-Class" id="selDropdownPointOfEntryItem-Id" style="z-index: 1;">
+					<input type="hidden" class="selectedOptValue_RoClass" value="" id="selDropOfficeValue-Id">					
+					<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '180px')">
+						<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
+						<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
+						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
+					</div>
+					<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
+						<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry()">
+						<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
+							<!--Component-->
+							<!--
+							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px')">
+								<input type="hidden" class="optValue_RoClass" value="3">
+								<div class="optIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
+								<div class="optText_RoClass" title="HRMO">Human Resource Management Office</div>
+							</div>
+							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px')">
+								<input type="hidden" class="optValue_RoClass" value="1">
+								<div class="optIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
+								<div class="optText_RoClass" title="RADIO">Department of Radiology</div>
+							</div>
+							-->
+						</div>
+					</div>
+				</div>
+				<!--_Select Point of Entry-->
 
 				<!--_Date Range Item-->
 				<div class="searchWrapperItem-Class" id="dateRangeOneItemWrap">
@@ -262,6 +296,10 @@
 
 			<!--Charts-->
 			<div class="globalWrapper" id="chartsWrapper">
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8394B7; --charWrapScrollbarHoverBgColor: #8394B7;">
+					
+				</div>
+
 				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#0E8EF1; --charWrapScrollbarHoverBgColor: #0C86EE;">
 					<div class="chartWrap_RoClass chartWrap-Class" id="overallServRatePieChartWrap"></div>
 				</div>
@@ -332,6 +370,8 @@
 	<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
 	<script type="module" src="../JS/Gateway_CommentDetails.js"></script>
 	<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
+	<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 	<script type="module" src="../JS/Executor_Page_Dashboard.js"></script>
 </body>
 </html>

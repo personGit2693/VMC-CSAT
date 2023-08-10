@@ -1,0 +1,33 @@
+SELECT officeQuestions_tab.question_id AS 'questionId', 
+officeQuestions_tab.question_value AS 'questionValue',
+officeQuestions_tab.question_number AS 'questionNo',
+IFNULL(totalQuestionRespondents_tab.totalQuestionRespondent, 0) AS 'totalRespondent'
+FROM (SELECT DISTINCT questionstag_tab.question_id AS 'question_id',
+      	questions_tab.question_value AS 'question_value',
+      	questions_tab.question_number AS 'question_number'
+		FROM offices_tab 
+		INNER JOIN officestag_tab 
+		ON offices_tab.office_id = officestag_tab.office_id 
+		INNER JOIN forms_tab 
+		ON officestag_tab.form_id = forms_tab.form_id 
+		INNER JOIN questionstag_tab 
+		ON forms_tab.form_id = questionstag_tab.form_id 
+		INNER JOIN questions_tab 
+		ON questionstag_tab.question_id = questions_tab.question_id 
+		WHERE offices_tab.office_id = 3
+		AND NOT questions_tab.dimension_id = 10
+		AND(forms_tab.clienttype_id = 1 OR forms_tab.clienttype_id = 2)      	
+    ) AS officeQuestions_tab 
+LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
+            questionresponses_tab.question_id AS 'question_id',
+            COUNT(questionresponses_tab.questionresponse_id) AS 'totalQuestionRespondent' 
+            FROM clientresponses_tab 
+            INNER JOIN questionresponses_tab 
+            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
+            WHERE questionresponses_tab.score_id = 1 
+           	AND clientresponses_tab.office_id = 3
+            AND (clientresponses_tab.clienttype_id = 1 OR clientresponses_tab.clienttype_id = 2)
+            GROUP BY question_id
+          ) AS totalQuestionRespondents_tab
+ON officeQuestions_tab.question_id = totalQuestionRespondents_tab.question_id 
+ORDER BY officeQuestions_tab.question_number;

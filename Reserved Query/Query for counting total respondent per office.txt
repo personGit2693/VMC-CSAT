@@ -1,0 +1,4 @@
+SELECT COUNT(clientresponse_reference) AS 'allRespondent' 
+FROM clientresponses_tab 
+WHERE office_id = 3 
+AND (clienttype_id = 1 OR clienttype_id = 2);
