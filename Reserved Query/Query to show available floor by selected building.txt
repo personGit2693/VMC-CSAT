@@ -1,7 +1,0 @@
-SELECT DISTINCT floors_tab.floor_id AS 'floorId',
-floors_tab.floor_value AS 'floor', 
-floors_tab.floor_abbre AS 'floorAbbre'
-FROM offices_tab
-INNER JOIN floors_tab 
-ON offices_tab.floor_id = floors_tab.floor_id 
-WHERE offices_tab.building_id = 2;

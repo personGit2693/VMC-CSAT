@@ -4283,7 +4283,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: #E8EFFF;
     margin-top: 15px; }
 
   .chartWrapWrapper-Class {
@@ -4313,6 +4313,100 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover {
     background: var(--charWrapScrollbarHoverBgColor); }
+
+  .engagementDetWrap {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    height: 210px; }
+
+  .engagementDetWrap .overallEngagementTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    text-align: center;
+    padding: 5px;
+    font: normal bold 20px calibri;
+    /*To be changed*/
+    color: #535F80;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .overallEngagementValWrap {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px; }
+
+  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: visible;
+    text-align: center;
+    color: #535F80;
+    font: normal bold 35px calibri;
+    /*To be changed*/
+    width: auto;
+    margin: 0px auto 0px auto;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .respondentTotalDetWrap {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    bottom: 0px;
+    color: #535F80;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #285FF3;
+    border-right: 2px solid #285FF3; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    align-items: center; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentText-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding: 5px;
+    font: normal normal 20px calibri;
+    /*To be changed*/
+    color: #535F80; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 50px;
+    /*To be changed*/
+    height: 50px;
+    /*To be changed*/
+    background-color: transparent;
+    background-image: url("../../src/respondent_blue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding-left: 5px;
+    font: normal bold 26px calibri;
+    /*To be changed*/
+    color: #535F80; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4331,7 +4425,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: #E8EFFF;
     margin-top: 15px; }
 
   .chartWrapWrapper-Class {
@@ -4361,6 +4455,100 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover {
     background: var(--charWrapScrollbarHoverBgColor); }
+
+  .engagementDetWrap {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    height: 210px; }
+
+  .engagementDetWrap .overallEngagementTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    text-align: center;
+    padding: 5px;
+    font: normal bold 20px calibri;
+    /*To be changed*/
+    color: #535F80;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .overallEngagementValWrap {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px; }
+
+  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: visible;
+    text-align: center;
+    color: #535F80;
+    font: normal bold 35px calibri;
+    /*To be changed*/
+    width: auto;
+    margin: 0px auto 0px auto;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .respondentTotalDetWrap {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    bottom: 0px;
+    color: #535F80;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #285FF3;
+    border-right: 2px solid #285FF3; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    align-items: center; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentText-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding: 5px;
+    font: normal normal 20px calibri;
+    /*To be changed*/
+    color: #535F80; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 50px;
+    /*To be changed*/
+    height: 50px;
+    /*To be changed*/
+    background-color: transparent;
+    background-image: url("../../src/respondent_blue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding-left: 5px;
+    font: normal bold 26px calibri;
+    /*To be changed*/
+    color: #535F80; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4379,7 +4567,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: #E8EFFF;
     margin-top: 15px; }
 
   .chartWrapWrapper-Class {
@@ -4409,6 +4597,100 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover {
     background: var(--charWrapScrollbarHoverBgColor); }
+
+  .engagementDetWrap {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    height: 210px; }
+
+  .engagementDetWrap .overallEngagementTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    text-align: center;
+    padding: 5px;
+    font: normal bold 22px calibri;
+    /*changed*/
+    color: #535F80;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .overallEngagementValWrap {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px; }
+
+  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: visible;
+    text-align: center;
+    color: #535F80;
+    font: normal bold 37px calibri;
+    /*changed*/
+    width: auto;
+    margin: 0px auto 0px auto;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .respondentTotalDetWrap {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    bottom: 0px;
+    color: #535F80;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #285FF3;
+    border-right: 2px solid #285FF3; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    align-items: center; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentText-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding: 5px;
+    font: normal normal 22px calibri;
+    /*changed*/
+    color: #535F80; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 52px;
+    /*changed*/
+    height: 52px;
+    /*changed*/
+    background-color: transparent;
+    background-image: url("../../src/respondent_blue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding-left: 5px;
+    font: normal bold 28px calibri;
+    /*changed*/
+    color: #535F80; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4427,7 +4709,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: #E8EFFF;
     margin-top: 15px; }
 
   .chartWrapWrapper-Class {
@@ -4457,6 +4739,100 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .chartWrapWrapper-Class::-webkit-scrollbar-thumb:hover {
     background: var(--charWrapScrollbarHoverBgColor); }
+
+  .engagementDetWrap {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    height: 210px; }
+
+  .engagementDetWrap .overallEngagementTxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    text-align: center;
+    padding: 5px;
+    font: normal bold 24px calibri;
+    /*changed*/
+    color: #535F80;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .overallEngagementValWrap {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px; }
+
+  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: visible;
+    text-align: center;
+    color: #535F80;
+    font: normal bold 39px calibri;
+    /*changed*/
+    width: auto;
+    margin: 0px auto 0px auto;
+    background-color: #ffffff; }
+
+  .engagementDetWrap .respondentTotalDetWrap {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: visible;
+    bottom: 0px;
+    color: #535F80;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #285FF3;
+    border-right: 2px solid #285FF3; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    align-items: center; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentText-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding: 5px;
+    font: normal normal 24px calibri;
+    /*changed*/
+    color: #535F80; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class {
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 54px;
+    /*changed*/
+    height: 54px;
+    /*changed*/
+    background-color: transparent;
+    background-image: url("../../src/respondent_blue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    padding-left: 5px;
+    font: normal bold 30px calibri;
+    /*changed*/
+    color: #535F80; }
 
   .chartWrap-Class {
     overflow: visible;

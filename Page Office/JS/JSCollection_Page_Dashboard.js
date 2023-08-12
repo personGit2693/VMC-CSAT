@@ -8,4 +8,6 @@ export const commentSectionWrap = document.getElementById("commentSectionWrap");
 export const pointOfEntryOptsArea = document.getElementById("pointOfEntryOptsArea-Id");
 export const searchPointOfEntry = document.getElementById("searchPointOfEntry-Id");
 export const selDropOfficeValue = document.getElementById("selDropOfficeValue-Id");
+export const overallEngagementVal = document.getElementById("overallEngagementVal-Id");
+export const respondentVal = document.getElementById("respondentVal-Id");
 /*Elements*/

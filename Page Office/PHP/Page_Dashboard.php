@@ -126,11 +126,11 @@
 					<span class="searchAreaLabelTxt-Class">Client-Type</span>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestTotalRespondent(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
 					</div>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestTotalRespondent(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
 					</div>
 				</div>
 				<!--_Filter Client Type Item-->
@@ -296,8 +296,19 @@
 
 			<!--Charts-->
 			<div class="globalWrapper" id="chartsWrapper">
-				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8394B7; --charWrapScrollbarHoverBgColor: #8394B7;">
-					
+				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8394B7; --charWrapScrollbarHoverBgColor: #8394B7; border: none; background-color: #E8EFFF;">
+					<div class="engagementDetWrap">
+						<div class="overallEngagementTxt">Overall Engagement</div>
+						<div class="overallEngagementValWrap"><div class="overallEngagementVal-Class" id="overallEngagementVal-Id">0</div></div>
+
+						<div class="respondentTotalDetWrap">
+							<div class="respondentTextIconFlex">
+								<div class="respondentText-Class">Total Respondent</div>
+								<div class="respondentIcon-Class"></div>
+							</div>
+							<div class="respondentVal-Class" id="respondentVal-Id">0</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#0E8EF1; --charWrapScrollbarHoverBgColor: #0C86EE;">
@@ -354,6 +365,10 @@
 	<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
 	<script type="module" src="../../Global JS/Values_Page_Dashboard.js"></script>
+	<script type="module" src="../JS/Gateway_OverallEngagement.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_OverallEngagement.js"></script>
+	<script type="module" src="../JS/Gateway_TotalRespondent.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_TotalRespondent.js"></script>
 	<script type="module" src="../JS/Gateway_OverallServRate.js"></script>
 	<script type="text/javascript" src="../JS/SubmitRequest_OverallServRate.js"></script>
 	<script type="module" src="../JS/Gateway_OverallStronglyAgree.js"></script>

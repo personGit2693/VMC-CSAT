@@ -1,5 +1,7 @@
 /*Import*/
 import {valueCheckboxClientype, valueDateRangeOne}from "../../Global JS/Values_Page_Dashboard.js";
+import {requestOverallEngagement} from "./Request_OverallEngagement.js";
+import {requestTotalRespondent} from "./Request_TotalRespondent.js";
 import {requestOverallServRate} from "./Request_OverallServRate.js";
 import {requestOverallStronglyAgree} from "./Request_OverallStronglyAgree.js";
 import {requestOverallAgree} from "./Request_OverallAgree.js";
@@ -25,6 +27,9 @@ renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rog
 /*Get the initial value for overall service rates response*/
 valueCheckboxClientype();
 valueDateRangeOne();
+
+requestOverallEngagement();
+requestTotalRespondent();
 
 requestOverallServRate();
 requestOverallStronglyAgree();

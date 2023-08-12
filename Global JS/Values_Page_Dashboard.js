@@ -1,5 +1,5 @@
 /*Import*/
-import {selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, overallFromDate, overallToDate} from "../Page Office/JS/JSCollection_Page_Dashboard.js";
+import {respondentVal, overallEngagementVal, selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, overallFromDate, overallToDate} from "../Page Office/JS/JSCollection_Page_Dashboard.js";
 import {overallServRate_Array} from "../Page Office/JS/Request_OverallServRate.js";
 import {overallStronglyAgree_Array} from "../Page Office/JS/Request_OverallStronglyAgree.js";
 import {overallAgree_Array} from "../Page Office/JS/Request_OverallAgree.js";
@@ -7,6 +7,8 @@ import {overallNeither_Array} from "../Page Office/JS/Request_OverallNeither.js"
 import {overallDisagree_Array} from "../Page Office/JS/Request_OverallDisagree.js";
 import {overallStronglyDisagree_Array} from "../Page Office/JS/Request_OverallStronglyDisagree.js";
 import {overallNoRating_Array} from "../Page Office/JS/Request_OverallNoRating.js";
+import {overallEngagement} from "../Page Office/JS/Request_OverallEngagement.js";
+import {totalRespondent} from "../Page Office/JS/Request_TotalRespondent.js";
 /*Import*/
 
 
@@ -68,6 +70,20 @@ var overallNoRatingData_Array = [
 	["yyyy/mm/dd", 0]
 ];
 /*Prep export variables*/
+
+
+/*Assign value respondentVal*/
+function valueRespondentVal(){
+	respondentVal.innerText = totalRespondent;
+}
+/*Assign value respondentVal*/
+
+
+/*Assign value overallEngagementVal*/
+function valueOverallEngagementVal(){
+	overallEngagementVal.innerText = overallEngagement;
+}
+/*Assign value overallEngagementVal*/
 
 
 /*Assign value for selectedOffice_Obj*/
@@ -269,5 +285,5 @@ window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 
 
 /*Export*/
-export {selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {valueOverallEngagementVal, valueRespondentVal, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/
