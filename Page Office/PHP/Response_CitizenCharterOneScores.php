@@ -69,24 +69,32 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($overallFromDate) && !empty($overallToDate))){		
 			/*_Prep query*/
 			$getCitizenCharterOneScores_Query = "
-				SELECT ccquestionsrates_tab.ccquestionsrate_value AS 'ccRate', 
-				ccquestions_tab.ccquestion_question AS 'ccQuestion',
-				ccquestionsrates_tab.ccquestion_id AS 'ccNumber',
-				ccquestionsrates_tab.ccquestionsrate_id AS 'ccRateId',
-				COUNT(ccresponses_tab.ccresponse_id) AS 'responses'
-				FROM clientresponses_tab 
-				INNER JOIN ccresponses_tab 
-				ON clientresponses_tab.clientresponse_reference = ccresponses_tab.clientresponse_reference 
-				INNER JOIN ccquestionsrates_tab 
-				ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
-				INNER JOIN ccquestions_tab 
-				ON ccquestionsrates_tab.ccquestion_id = ccquestions_tab.ccquestion_id
-				WHERE clientresponses_tab.office_id = :officeId 
-				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				AND CONVERT(ccresponses_tab.ccresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)  
-				AND ccquestionsrates_tab.ccquestion_id = 'CC1'
-				GROUP BY ccquestionsrates_tab.ccquestionsrate_id 
-				ORDER BY ccquestionsrates_tab.ccquestion_id;			
+				SELECT cc1questions_tab.ccquestion_question AS 'ccQuestion',
+				cc1questions_tab.ccquestionsrate_value AS 'ccRate',
+				IFNULL(ccscores_tab.responses, 0) AS 'responses' 
+				FROM (SELECT ccquestionsrates_tab.ccquestionsrate_id AS 'ccquestionsrate_id',
+					ccquestionsrates_tab.ccquestionsrate_value AS 'ccquestionsrate_value', 
+					ccquestions_tab.ccquestion_question AS 'ccquestion_question' 
+					FROM ccquestionsrates_tab 
+					INNER JOIN ccquestions_tab 
+					ON ccquestionsrates_tab.ccquestion_id = ccquestions_tab.ccquestion_id 
+					WHERE ccquestionsrates_tab.ccquestion_id = 'CC1' 
+					ORDER BY ccquestionsrates_tab.ccquestionsrate_id
+				) AS cc1questions_tab 
+				LEFT JOIN (SELECT ccresponses_tab.ccquestionsrate_id AS 'ccquestionsrate_id',
+				    COUNT(ccresponses_tab.ccresponse_id) AS 'responses'
+				    FROM clientresponses_tab 
+				    INNER JOIN ccresponses_tab 
+				    ON clientresponses_tab.clientresponse_reference = ccresponses_tab.clientresponse_reference 
+				    INNER JOIN ccquestionsrates_tab 
+				    ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
+				    WHERE clientresponses_tab.office_id = :officeId 
+				    AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
+					AND CONVERT(ccresponses_tab.ccresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				    AND ccquestionsrates_tab.ccquestion_id = 'CC1' 
+				    GROUP BY ccresponses_tab.ccquestionsrate_id
+				) AS ccscores_tab 
+				ON cc1questions_tab.ccquestionsrate_id = ccscores_tab.ccquestionsrate_id;			
 			"; 							
 			/*_Prep query*/
 
