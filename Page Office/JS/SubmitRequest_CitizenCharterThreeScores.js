@@ -1,0 +1,4 @@
+function submitRequestCitizenCharterThreeScores(){
+	showSpinningLoad();
+	gatewayCitizenCharterThreeScores();
+}

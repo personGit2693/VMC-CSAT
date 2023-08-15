@@ -3360,6 +3360,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Questions and cc table*/
+/*Questions and cc table*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Comment Section*/
 /*Comment Section*/
 /***********************************************************************************************************************************************************************************************************/
@@ -4316,7 +4321,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap {
     position: relative;
-    display: flex;
     box-sizing: border-box;
     overflow: visible;
     height: 210px; }
@@ -4331,6 +4335,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: normal bold 20px calibri;
     /*To be changed*/
     color: #535F80;
+    width: 100%;
     background-color: #ffffff; }
 
   .engagementDetWrap .overallEngagementValWrap {
@@ -4406,7 +4411,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     padding-left: 5px;
     font: normal bold 26px calibri;
     /*To be changed*/
-    color: #535F80; }
+    color: #535F80;
+    text-align: center; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4458,7 +4464,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap {
     position: relative;
-    display: flex;
     box-sizing: border-box;
     overflow: visible;
     height: 210px; }
@@ -4473,6 +4478,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: normal bold 20px calibri;
     /*To be changed*/
     color: #535F80;
+    width: 100%;
     background-color: #ffffff; }
 
   .engagementDetWrap .overallEngagementValWrap {
@@ -4548,7 +4554,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     padding-left: 5px;
     font: normal bold 26px calibri;
     /*To be changed*/
-    color: #535F80; }
+    color: #535F80;
+    text-align: center; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4600,7 +4607,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap {
     position: relative;
-    display: flex;
     box-sizing: border-box;
     overflow: visible;
     height: 210px; }
@@ -4615,6 +4621,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: normal bold 22px calibri;
     /*changed*/
     color: #535F80;
+    width: 100%;
     background-color: #ffffff; }
 
   .engagementDetWrap .overallEngagementValWrap {
@@ -4690,7 +4697,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     padding-left: 5px;
     font: normal bold 28px calibri;
     /*changed*/
-    color: #535F80; }
+    color: #535F80;
+    text-align: center; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4742,7 +4750,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap {
     position: relative;
-    display: flex;
     box-sizing: border-box;
     overflow: visible;
     height: 210px; }
@@ -4757,6 +4764,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: normal bold 24px calibri;
     /*changed*/
     color: #535F80;
+    width: 100%;
     background-color: #ffffff; }
 
   .engagementDetWrap .overallEngagementValWrap {
@@ -4832,7 +4840,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     padding-left: 5px;
     font: normal bold 30px calibri;
     /*changed*/
-    color: #535F80; }
+    color: #535F80;
+    text-align: center; }
 
   .chartWrap-Class {
     overflow: visible;
@@ -4846,6 +4855,181 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Charts*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Questions and cc table*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .summaryResponsesFlex {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    width: auto;
+    margin: 5px 0px;
+    font: normal normal 13px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #494C55; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table tr {
+    border: 1px solid #8394B8; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table th {
+    background-color: #000000;
+    color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table td {
+    color: #535F80; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .summaryResponsesFlex {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    width: auto;
+    margin: 5px 0px;
+    font: normal normal 13px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #494C55; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table tr {
+    border: 1px solid #8394B8; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table th {
+    background-color: #000000;
+    color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table td {
+    color: #535F80; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .summaryResponsesFlex {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    width: auto;
+    margin: 5px 0px;
+    font: normal normal 15px calibri;
+    /*changed*/
+    text-align: center;
+    color: #494C55; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table tr {
+    border: 1px solid #8394B8; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table th {
+    background-color: #000000;
+    color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table td {
+    color: #535F80; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .summaryResponsesFlex {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    width: auto;
+    margin: 5px 0px;
+    font: normal normal 17px calibri;
+    /*changed*/
+    text-align: center;
+    color: #494C55; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 18px;
+    /*changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table tr {
+    border: 1px solid #8394B8; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table th {
+    background-color: #000000;
+    color: #ffffff; }
+
+  .summaryResponsesFlex .summaryResponsesItem-Class table td {
+    color: #535F80; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Questions and cc table*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Comment Section*/

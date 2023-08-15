@@ -1,10 +1,16 @@
-SELECT COUNT(ccresponses_tab.ccresponse_id) AS 'CC1 Rate 1' 
-FROM ccresponses_tab 
-INNER JOIN clientresponses_tab 
-ON ccresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
+SELECT ccquestionsrates_tab.ccquestionsrate_value AS 'ccRate', 
+ccquestions_tab.ccquestion_question AS 'ccQuestion',
+ccquestionsrates_tab.ccquestion_id AS 'ccNumber',
+ccquestionsrates_tab.ccquestionsrate_id AS 'ccRateId',
+COUNT(ccresponses_tab.ccresponse_id) AS 'responses'
+FROM clientresponses_tab 
+INNER JOIN ccresponses_tab 
+ON clientresponses_tab.clientresponse_reference = ccresponses_tab.clientresponse_reference 
 INNER JOIN ccquestionsrates_tab 
-ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id
+ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
+INNER JOIN ccquestions_tab 
+ON ccquestionsrates_tab.ccquestion_id = ccquestions_tab.ccquestion_id
 WHERE clientresponses_tab.office_id = 3 
 AND (clientresponses_tab.clienttype_id = 1 OR clientresponses_tab.clienttype_id = 2)
-AND ccresponses_tab.ccquestionsrate_id = 1 
-AND ccquestionsrates_tab.ccquestion_id = 'CC1';
+GROUP BY ccquestionsrates_tab.ccquestionsrate_id 
+ORDER BY ccquestionsrates_tab.ccquestion_id;

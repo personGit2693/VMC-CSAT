@@ -1018,6 +1018,133 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Questions and cc table*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.summaryResponsesFlex{
+		@include summaryResponsesFlex_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class{
+		@include summaryResponsesItem_MT_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table{
+		@include summaryResponsesItemTable_MT_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table tr{
+		@include summaryResponsesItemTableTr_Style;
+	}	
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table th{
+		@include summaryResponsesItemTableTh_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table td{
+		@include summaryResponsesItemTableTd_Style;
+	}	
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.summaryResponsesFlex{
+		@include summaryResponsesFlex_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class{
+		@include summaryResponsesItem_MT_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table{
+		@include summaryResponsesItemTable_MT_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table tr{
+		@include summaryResponsesItemTableTr_Style;
+	}	
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table th{
+		@include summaryResponsesItemTableTh_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table td{
+		@include summaryResponsesItemTableTd_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.summaryResponsesFlex{
+		@include summaryResponsesFlex_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class{
+		@include summaryResponsesItem_Laptop_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table{
+		@include summaryResponsesItemTable_Laptop_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table tr{
+		@include summaryResponsesItemTableTr_Style;
+	}	
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table th{
+		@include summaryResponsesItemTableTh_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table td{
+		@include summaryResponsesItemTableTd_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.summaryResponsesFlex{
+		@include summaryResponsesFlex_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class{
+		@include summaryResponsesItem_Desktop_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table{
+		@include summaryResponsesItemTable_Desktop_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table tr{
+		@include summaryResponsesItemTableTr_Style;
+	}	
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table th{
+		@include summaryResponsesItemTableTh_Style;
+	}
+
+	.summaryResponsesFlex .summaryResponsesItem-Class table td{
+		@include summaryResponsesItemTableTd_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Questions and cc table*/
+/***********************************************************************************************************************************************************************************************************/
 
 
 /***********************************************************************************************************************************************************************************************************/

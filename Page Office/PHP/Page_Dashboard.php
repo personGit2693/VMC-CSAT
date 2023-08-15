@@ -112,7 +112,7 @@
 					<div class="projTitleTxt_RoClass">Dashboard</div>
 					<div class="userLogin_RoClass">
 						<div class="userLoginIconWrap_RoClass"><img src="../../src/avataricon.png"></div>
-						<div class="userLoginDetails_RoClass">Office Account Details</div>
+						<div class="userLoginDetails_RoClass">Rogie's  Account</div>
 					</div>
 				</div>
 			</div>
@@ -126,11 +126,11 @@
 					<span class="searchAreaLabelTxt-Class">Client-Type</span>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestTotalRespondent(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
 					</div>
 					<div class="cusCheckBoxPaper_RoClass">
 						<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestTotalRespondent(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
+						<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
 					</div>
 				</div>
 				<!--_Filter Client Type Item-->
@@ -342,6 +342,39 @@
 			<!--Charts-->
 
 
+			<!--Questions and cc table-->
+			<div class="globalWrapper summaryResponsesFlex">
+				<!--_Questions table-->
+				<div class="summaryResponsesItem-Class" id="questionsTabWrap-Id">
+					<!--Component-->
+				</div>
+				<!--_Questions table-->
+				
+				<!--_CC Table-->
+				<div class="summaryResponsesItem-Class">
+					<!--_ _CC1 table-->
+					<div id="cc1TabWrap">
+						<!--Component-->
+					</div>
+					<!--_ _CC1 table-->
+
+					<!--_ _CC2 table-->
+					<div id="cc2TabWrap">
+						<!--Component-->
+					</div>
+					<!--_ _CC2 table-->
+
+					<!--_ _CC3 table-->
+					<div id="cc3TabWrap">
+						<!--Component-->
+					</div>
+					<!--_ _CC3 table-->
+				</div>
+				<!--_CC Table-->
+			</div>
+			<!--Questions and cc table-->
+
+
 			<!--Comment Section-->
 			<div class="globalWrapper" id="commentSectionTextWrap">
 				<div class="commentSectionText-Class">Comment Section</div>
@@ -365,6 +398,14 @@
 	<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
 	<script type="module" src="../../Global JS/Values_Page_Dashboard.js"></script>
+	<script type="module" src="../JS/Gateway_CitizenCharterThreeScores.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterThreeScores.js"></script>
+	<script type="module" src="../JS/Gateway_CitizenCharterTwoScores.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterTwoScores.js"></script>
+	<script type="module" src="../JS/Gateway_CitizenCharterOneScores.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterOneScores.js"></script>
+	<script type="module" src="../JS/Gateway_QuestionsTable.js"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_QuestionsTable.js"></script>
 	<script type="module" src="../JS/Gateway_OverallEngagement.js"></script>
 	<script type="text/javascript" src="../JS/SubmitRequest_OverallEngagement.js"></script>
 	<script type="module" src="../JS/Gateway_TotalRespondent.js"></script>

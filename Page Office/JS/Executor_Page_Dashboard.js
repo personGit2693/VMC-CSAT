@@ -11,6 +11,10 @@ import {requestOverallStronglyDisagree} from "./Request_OverallStronglyDisagree.
 import {requestOverallNoRating} from "./Request_OverallNoRating.js";
 import {requestCommentDetails} from "./Request_CommentDetails.js";
 import {requestPointOfEntry} from "./Request_PointOfEntry.js";
+import {requestQuestionsScores} from "./Request_QuestionsTable.js";
+import {requestCitizenCharterOneScores} from "./Request_CitizenCharterOneScores.js";
+import {requestCitizenCharterTwoScores} from "./Request_CitizenCharterTwoScores.js";
+import {requestCitizenCharterThreeScores} from "./Request_CitizenCharterThreeScores.js";
 /*Import*/
 
 
@@ -30,6 +34,11 @@ valueDateRangeOne();
 
 requestOverallEngagement();
 requestTotalRespondent();
+
+requestQuestionsScores();
+requestCitizenCharterOneScores();
+requestCitizenCharterTwoScores();
+requestCitizenCharterThreeScores();
 
 requestOverallServRate();
 requestOverallStronglyAgree();

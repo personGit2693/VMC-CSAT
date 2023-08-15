@@ -1,0 +1,4 @@
+function submitRequestCitizenCharterOneScores(){
+	showSpinningLoad();
+	gatewayCitizenCharterOneScores();
+}

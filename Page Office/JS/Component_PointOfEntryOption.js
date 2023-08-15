@@ -10,7 +10,7 @@ function PointOfEntryOption(){
 	for(let index=0; index < pointOfEntry_Array.length; index++){
 		const elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(pointOfEntry_Array[index]))));
 
-		pointOfEntryOption += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px'), valueSelectedOfficeObj(), submitRequestTotalRespondent(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()"">`+
+		pointOfEntryOption += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px'), valueSelectedOfficeObj(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()"">`+
 			`<input type="hidden" class="optValue_RoClass" value="`+elemValue+`">`+
 			`<div class="optIcon_RoClass" style="--optIcon: url('../../src/`+pointOfEntry_Array[index].office_icon+`');"></div>`+
 			`<div class="optText_RoClass" title="`+pointOfEntry_Array[index].office_abbre+`">`+pointOfEntry_Array[index].office_value+`</div>`+

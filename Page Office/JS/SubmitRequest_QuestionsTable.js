@@ -1,0 +1,4 @@
+function submitRequestQuestionsTable(){
+	showSpinningLoad();
+	gatewayQuestionsTable();
+}
