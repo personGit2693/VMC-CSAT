@@ -13,6 +13,7 @@ function CitizenCharterOneTable(){
 			`<caption><b>`+citizenCharterOneScores_Array[0].ccQuestion+`</b></caption>`+
 			`<thead>`+
 				`<tr>`+
+					`<th>Number</th>`+
 					`<th>Rating Description</th>`+
 					`<th>Responses</th>`+
 				`</tr>`+
@@ -20,6 +21,7 @@ function CitizenCharterOneTable(){
 		`<tbody>`;
 		for(let index=0; index < citizenCharterOneScores_Array.length; index++){
 			citizenCharterOneTable += `<tr>`+
+				`<td>`+citizenCharterOneScores_Array[index].ccNumbering+`</td>`+
 				`<td>`+citizenCharterOneScores_Array[index].ccRate+`</td>`+
 				`<td>`+citizenCharterOneScores_Array[index].responses+`</td>`+
 			`</tr>`;

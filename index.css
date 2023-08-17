@@ -29,6 +29,11 @@
 /*Global Office Page Header*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global Background Image Container*/
+/*Global Background Image Container*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -3379,7 +3384,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     box-sizing: border-box;
     background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    padding: 15px 25px; }
 
   .pageHeaderWrap > .pageHeaderTxt {
     position: relative;
@@ -3387,8 +3392,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 15px calibri;
+    font: normal bold 27px calibri;
     /*To be changed*/
     color: #ffffff; }
 
@@ -3398,10 +3402,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 12px calibri;
+    font: normal normal 18px calibri;
     /*To be changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 720px;
+    margin-top: 8px; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3412,7 +3417,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     box-sizing: border-box;
     background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    padding: 15px 25px; }
 
   .pageHeaderWrap > .pageHeaderTxt {
     position: relative;
@@ -3420,8 +3425,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 15px calibri;
+    font: normal bold 27px calibri;
     /*To be changed*/
     color: #ffffff; }
 
@@ -3431,10 +3435,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 12px calibri;
+    font: normal normal 18px calibri;
     /*To be changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 720px;
+    margin-top: 8px; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3445,7 +3450,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     box-sizing: border-box;
     background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    padding: 15px 25px; }
 
   .pageHeaderWrap > .pageHeaderTxt {
     position: relative;
@@ -3453,8 +3458,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 18px calibri;
+    font: normal bold 29px calibri;
     /*changed*/
     color: #ffffff; }
 
@@ -3464,10 +3468,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 15px calibri;
+    font: normal normal 20px calibri;
     /*changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 820px;
+    margin-top: 8px; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3478,7 +3483,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     box-sizing: border-box;
     background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    padding: 15px 25px; }
 
   .pageHeaderWrap > .pageHeaderTxt {
     position: relative;
@@ -3486,8 +3491,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 21px calibri;
+    font: normal bold 31px calibri;
     /*changed*/
     color: #ffffff; }
 
@@ -3497,10 +3501,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 18px calibri;
+    font: normal normal 22px calibri;
     /*changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 1020px;
+    margin-top: 8px; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Page Header*/

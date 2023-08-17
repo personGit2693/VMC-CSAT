@@ -18,14 +18,14 @@
 	--cusRadioBorderColor: gray;
 	--cusRadioBgColor: transparent;
 	--cusRadioFWeight: normal;	
-	--cusRadioFColor: gray;
+	--cusRadioFColor: #303238;
 	/*Radio Input Framework*/
 
 
 	/*Checkbox Input Framework*/
 	--cusCheckboxFStyle: normal;
 	--cusCheckboxFWeight: normal;
-	--cusCheckboxColor: gray;	
+	--cusCheckboxColor: #303238;	
 	--cusCheckboxBorderWidth: 1px;
 	--cusCheckboxBorderColor: gray;
 	/*Checkbox Input Framework*/
@@ -35,10 +35,10 @@
 	--cusDropBorderWidth: 1px;
 	--cusDropBorderColor: gray;
 	--cusDropBgColor: transparent;
-	--cusDropSelFColor: gray;
+	--cusDropSelFColor: #303238;
 	--cusDropSearchBorderWidth: 1px;
 	--cusDropSearchBorderColor: gray;
-	--cusDropSearchFColor: gray;
+	--cusDropSearchFColor: #303238;
 	--cusDropSearchBgColor: #ffffff;
 	--cusDropOptWrapBorderWidth: 1px;
 	--cusDropOptWrapBorderColor: green;
@@ -46,7 +46,7 @@
 	--cusDropOptWrapHeight: 180px;
 	--cusDropOptWrapScrollColor: green;
 	--cusDropOptWrapScrollHovColor: green;
-	--cusDropOptLabColor: gray;
+	--cusDropOptLabColor: #303238;
 	--cusDropOptHovLabBgColor: #DEE1E6;	
 	/*Dropdown Menu Framework*/
 
@@ -63,7 +63,10 @@
 }
 
 body{
-	background-color: #E9E9E9;
+	background-color: #E8EFFF;
+	background-image: url("../../src/sampleformbg.jpg");	
+	background-position: center;
+	background-size: contain;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -82,11 +85,19 @@ body{
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_MT_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_MT_Style;
 	}
 }
@@ -101,11 +112,19 @@ body{
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_MT_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_MT_Style;
 	}
 }
@@ -120,13 +139,21 @@ body{
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_Laptop_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_Laptop_Style;
-	}
+	}	
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -139,11 +166,19 @@ body{
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_Desktop_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_Desktop_Style;
 	}
 }
@@ -164,7 +199,7 @@ body{
 /*Mobile*/
 @media all and (max-width:641px){	
 	.stepByStepFlex-Class{
-		@include globalStepByStepFlex_Mobile_Style;
+		@include globalStepByStepFlex_Style;
 	}
 
 	.stepByStepLine-Class{
@@ -203,7 +238,7 @@ body{
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 	.stepByStepFlex-Class{
-		@include globalStepByStepFlex_TLD_Style;
+		@include globalStepByStepFlex_Style;
 	}
 
 	.stepByStepLine-Class{
@@ -242,7 +277,7 @@ body{
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
 	.stepByStepFlex-Class{
-		@include globalStepByStepFlex_TLD_Style;
+		@include globalStepByStepFlex_Style;
 	}
 
 	.stepByStepLine-Class{
@@ -281,7 +316,7 @@ body{
 /*Desktop*/
 @media all and (min-width:1601px){
 	.stepByStepFlex-Class{
-		@include globalStepByStepFlex_TLD_Style;
+		@include globalStepByStepFlex_Style;
 	}
 
 	.stepByStepLine-Class{
@@ -385,7 +420,7 @@ body{
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
-		@include stepSetPerFieldTitle_MT_Style;				
+		@include stepSetPerFieldTitle_Style;				
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
@@ -423,15 +458,15 @@ body{
 	}
 
 	.customRadioCheck_RoClass{
-		@include customRadioCheck_MT_Style;
+		@include customRadioCheck_Style;
 	}
 
 	.radioCheckTxtLabel_RoClass{
-		@include radioCheckTxtLabel_MT_Style;
+		@include radioCheckTxtLabel_Style;
 	}
 
 	.radioCheckIconLabel_RoClass{
-		@include radioCheckIconLabel_MT_Style;
+		@include radioCheckIconLabel_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -442,11 +477,11 @@ body{
 	}
 
 	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxTxtLabel_MT_Style;
+		@include cusCheckboxTxtLabel_Style;
 	}
 
 	.boxme_RoClass{
-		@include cusCheckboxCheck_MT_Style;
+		@include cusCheckboxCheck_Style;
 	}
 	/*Checkbox Input Framework*/
 
@@ -457,11 +492,11 @@ body{
 	}
 
 	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
-		@include dropdownFSize_MT_Style;
+		@include dropdownFSize_Style;
 	}
 
 	.scdropSelected_RoClass>span{
-		@include dropdownArrowSize_MT_Style;
+		@include dropdownArrowSize_Style;
 	}
 	/*Dropdown Menu Framework*/
 
@@ -520,8 +555,7 @@ body{
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
-		@include stepSetPerFieldTitleCenter_Style;
-		@include stepSetPerFieldTitle_MT_Style;
+		@include stepSetPerFieldTitle_Style;
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
@@ -558,15 +592,15 @@ body{
 	}
 
 	.customRadioCheck_RoClass{
-		@include customRadioCheck_MT_Style;
+		@include customRadioCheck_Style;
 	}
 
 	.radioCheckTxtLabel_RoClass{
-		@include radioCheckTxtLabel_MT_Style;
+		@include radioCheckTxtLabel_Style;
 	}
 
 	.radioCheckIconLabel_RoClass{
-		@include radioCheckIconLabel_MT_Style;
+		@include radioCheckIconLabel_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -577,11 +611,11 @@ body{
 	}
 
 	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxTxtLabel_MT_Style;
+		@include cusCheckboxTxtLabel_Style;
 	}
 
 	.boxme_RoClass{
-		@include cusCheckboxCheck_MT_Style;
+		@include cusCheckboxCheck_Style;
 	}
 	/*Checkbox Input Framework*/
 
@@ -592,11 +626,11 @@ body{
 	}
 
 	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
-		@include dropdownFSize_MT_Style;
+		@include dropdownFSize_Style;
 	}
 
 	.scdropSelected_RoClass>span{
-		@include dropdownArrowSize_MT_Style;
+		@include dropdownArrowSize_Style;
 	}
 	/*Dropdown Menu Framework*/
 
@@ -655,8 +689,7 @@ body{
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
-		@include stepSetPerFieldTitleCenter_Style;
-		@include stepSetPerFieldTitle_Laptop_Style;
+		@include stepSetPerFieldTitle_Style;
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
@@ -693,15 +726,15 @@ body{
 	}
 
 	.customRadioCheck_RoClass{
-		@include customRadioCheck_Laptop_Style;
+		@include customRadioCheck_Style;
 	}
 
 	.radioCheckTxtLabel_RoClass{
-		@include radioCheckTxtLabel_Laptop_Style;
+		@include radioCheckTxtLabel_Style;
 	}
 
 	.radioCheckIconLabel_RoClass{
-		@include radioCheckIconLabel_Laptop_Style;
+		@include radioCheckIconLabel_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -712,11 +745,11 @@ body{
 	}
 
 	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxTxtLabel_Laptop_Style;
+		@include cusCheckboxTxtLabel_Style;
 	}
 
 	.boxme_RoClass{
-		@include cusCheckboxCheck_Laptop_Style;
+		@include cusCheckboxCheck_Style;
 	}
 	/*Checkbox Input Framework*/
 
@@ -727,11 +760,11 @@ body{
 	}
 
 	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
-		@include dropdownFSize_Laptop_Style;
+		@include dropdownFSize_Style;
 	}
 
 	.scdropSelected_RoClass>span{
-		@include dropdownArrowSize_Laptop_Style;
+		@include dropdownArrowSize_Style;
 	}
 	/*Dropdown Menu Framework*/
 
@@ -790,8 +823,7 @@ body{
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
-		@include stepSetPerFieldTitleCenter_Style;
-		@include stepSetPerFieldTitle_Desktop_Style;
+		@include stepSetPerFieldTitle_Style;
 	}
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
@@ -828,15 +860,15 @@ body{
 	}
 
 	.customRadioCheck_RoClass{
-		@include customRadioCheck_Desktop_Style;
+		@include customRadioCheck_Style;
 	}
 
 	.radioCheckTxtLabel_RoClass{
-		@include radioCheckTxtLabel_Desktop_Style;
+		@include radioCheckTxtLabel_Style;
 	}
 
 	.radioCheckIconLabel_RoClass{
-		@include radioCheckIconLabel_Desktop_Style;
+		@include radioCheckIconLabel_Style;
 	}
 	/*Radio Input Framework*/
 
@@ -847,11 +879,11 @@ body{
 	}
 
 	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxTxtLabel_Desktop_Style;
+		@include cusCheckboxTxtLabel_Style;
 	}
 
 	.boxme_RoClass{
-		@include cusCheckboxCheck_Desktop_Style;
+		@include cusCheckboxCheck_Style;
 	}
 	/*Checkbox Input Framework*/
 
@@ -866,11 +898,11 @@ body{
 	}
 
 	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
-		@include dropdownFSize_Desktop_Style;
+		@include dropdownFSize_Style;
 	}
 
 	.scdropSelected_RoClass>span{
-		@include dropdownArrowSize_Desktop_Style;
+		@include dropdownArrowSize_Style;
 	}
 	/*Dropdown Menu Framework*/
 

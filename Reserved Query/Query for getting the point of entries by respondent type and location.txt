@@ -1,0 +1,14 @@
+SELECT offices_tab.office_id AS 'office_id',
+offices_tab.office_value AS 'office_value',
+offices_tab.office_abbre AS 'office_abbre',
+offices_tab.building_id AS 'building_id',
+offices_tab.floor_id AS 'floor_id',
+offices_tab.office_icon AS 'office_icon'
+FROM respondents_tab  
+INNER JOIN respondenttags_tab 
+ON respondents_tab.respondent_id = respondenttags_tab.respondent_id 
+INNER JOIN offices_tab 
+ON respondenttags_tab.office_id = offices_tab.office_id 
+WHERE respondenttags_tab.respondent_id = 1 
+AND offices_tab.building_id = 2 
+AND offices_tab.floor_id = 1;

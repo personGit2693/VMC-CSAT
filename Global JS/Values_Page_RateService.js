@@ -72,7 +72,7 @@ function valueAgeRange(selectedAgeRange_Base){
 function valueGender(selectedGender_Base){
 	const selectedGender_Obj = JSON.parse(atob(selectedGender_Base));
 
-	genderId = selectedGender_Obj.gender_id ;
+	genderId = selectedGender_Obj.gender_id;
 
 	submittedRate.respondentDetails.genderId = genderId;
 }
@@ -153,7 +153,7 @@ function valueRespondentType(selectedRespondentType_Base){
 	selectedQuestionGroups = [];
 	submittedRate.comments = [];
 
-	respondentId = selectedRespondentType_Obj.respondent_id ;
+	respondentId = selectedRespondentType_Obj.respondent_id;
 	clientTypeId = selectedRespondentType_Obj.clienttype_id;	
 
 	submittedRate.respondentDetails.respondentId = respondentId;

@@ -2,47 +2,63 @@
 /*Page Header*/
 @mixin globalPageHeaderWrap_Style{
 	position: relative;
+	display: block;
 	overflow: visible;
-	box-sizing: border-box;
-	background: linear-gradient(to right, #1B85BD, #208996);
-	padding: 15px 0px;
+	box-sizing: border-box;	
+	background-color: transparent;
+	height: auto;
 }
 
 
+@mixin globalPageHeaderItem_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;	
+	flex-shrink: 0;
+	width: auto;
+	height: auto;
+}
+
+
+@mixin pageHeaderBackground_Style{
+	background: url("../../src/Banner One.png") center no-repeat;
+	background-size: cover; /*changed*/
+}
+
 
 @mixin globalPageHeaderTxt_MT_Style{
-	position: relative;
+	position: relative;	
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	text-align: center;
-	font: normal bold 15px calibri; /*To be changed*/
-	color: #ffffff;
+	font: normal bold 22px calibri; /*To be changed*/	
+	color: #ffffff;	
+	max-width: 300px; /*To be changed*/
+	padding: 8px 10px;
 }
-
 @mixin globalPageHeaderTxt_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	text-align: center;
-	font: normal bold 18px calibri; /*changed*/
+	font: normal bold 28px calibri; /*changed*/
 	color: #ffffff;
+	max-width: auto; /*changed*/
+	padding: 8px 60px;
 }
-
 @mixin globalPageHeaderTxt_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	text-align: center;
-	font: normal bold 21px calibri; /*changed*/
+	font: normal bold 32px calibri; /*changed*/
 	color: #ffffff;
+	max-width: auto; /*changed*/
+	padding: 8px 60px;
 }
-
 
 
 @mixin globalPageHeaderSubTxt_MT_Style{
@@ -51,31 +67,32 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	text-align: center;
-	font: normal normal 12px calibri; /*To be changed*/
-	color: #ffffff;
+	font: normal normal 16px calibri; /*To be changed*/
+	color: #ffffff;	
+	max-width: 300px; /*To be changed*/
+	padding: 0px 10px 10px 10px;
 }
-
 @mixin globalPageHeaderSubTxt_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	text-align: center;
-	font: normal normal 15px calibri; /*changed*/
+	font: normal normal 20px calibri; /*changed*/
 	color: #ffffff;
+	max-width: 530px; /*changed*/
+	padding: 0px 60px 10px 60px;
 }
-
 @mixin globalPageHeaderSubTxt_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	text-align: center;
-	font: normal normal 18px calibri; /*changed*/
-	color: #ffffff;
+	font: normal normal 24px calibri; /*changed*/
+	color: #ffffff;	
+	max-width: 720px; /*changed*/
+	padding: 0px 60px 10px 60px;
 }
 /*Page Header*/
 /***********************************************************************************************************************************************************************************************************/
@@ -86,30 +103,16 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Step by step future framework*/
-@mixin globalStepByStepFlex_Mobile_Style{
+@mixin globalStepByStepFlex_Style{
 	position: relative;
 	display: flex;
 	box-sizing: border-box;
 	overflow: visible;
 	flex-flow: row nowrap;
 	justify-content: center;
-	width: auto; /*To be removed*/
+	width: auto;
 	margin: 15px auto 0px auto;
 }
-
-@mixin globalStepByStepFlex_TLD_Style{
-	position: relative;
-	display: flex;
-	box-sizing: border-box;
-	overflow: visible;
-	flex-flow: row nowrap;
-	justify-content: center;
-	/*width: auto; removed*/
-	min-width: 300px; /*added*/
-	max-width: 580px; /*added*/
-	margin: 15px auto 0px auto;
-}
-
 
 
 @mixin globalStepByStepLine_Style{
@@ -119,17 +122,15 @@
 	overflow: visible;
 	width: 100%;
 	border: 0.4px solid gray;
-	top: 12px;
+	top: 20px;
 	left: 0px;
 	align-self: flex-start;
 }
 
 
-
 @mixin globalStepByStepLineLight_Style{
 	border: 0.4px solid green;
 }
-
 
 
 @mixin globalStepByStepItem_Style{
@@ -139,9 +140,8 @@
 	overflow: visible;
 	flex-flow: column wrap;
 	align-items: center;
-	width: auto; /*To be changed*/
+	width: 270px;
 }
-
 
 
 @mixin globalStepNumber_MT_Style{
@@ -152,14 +152,13 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 14px; /*To be changed*/
+	font-size: 22px; /*To be changed*/
 	color: #ffffff;
 	padding: 4px;
 	text-align: center;
 	border-radius: 50%;
-	width: 28px; /*To be changed*/
+	width: 36px; /*To be changed*/
 }
-
 @mixin globalStepNumber_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -168,14 +167,13 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 18px; /*changed*/
+	font-size: 24px; /*changed*/
 	color: #ffffff;
 	padding: 4px;
 	text-align: center;
 	border-radius: 50%;
-	width: 32px; /*changed*/
+	width: 38px; /*changed*/
 }
-
 @mixin globalStepNumber_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -184,20 +182,18 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 20px; /*changed*/
+	font-size: 28px; /*changed*/
 	color: #ffffff;
 	padding: 4px;
 	text-align: center;
 	border-radius: 50%;
-	width: 36px; /*changed*/
+	width: 42px; /*changed*/
 }
-
 
 
 @mixin globalStepNumberLight_Style{
 	background-color: green;
 }
-
 
 
 @mixin globalStepDefi_MT_Style{
@@ -208,12 +204,11 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px; /*To be changed*/
+	font-size: 20px; /*To be changed*/
 	text-align: center;
 	color: gray;
 	padding: 0px 7px;
 }
-
 @mixin globalStepDefi_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -222,12 +217,11 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 18px; /*changed*/
+	font-size: 22px; /*changed*/
 	text-align: center;
 	color: gray;
 	padding: 0px 7px;
 }
-
 @mixin globalStepDefi_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -236,12 +230,11 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px; /*changed*/
+	font-size: 26px; /*changed*/
 	text-align: center;
 	color: gray;
 	padding: 0px 7px;
 }
-
 
 
 @mixin globalStepDefiLight_Style{
@@ -340,7 +333,7 @@
 	white-space: normal;
 	font: bold normal 18px calibri; /*To be changed*/
 	text-align: center;
-	color: #494C55;
+	color: #303238;
 	margin-bottom: 7px;
 }
 @mixin globalSideNavHeaderTxt_Laptop_Style{
@@ -350,7 +343,7 @@
 	white-space: normal;
 	font: bold normal 20px calibri; /*changed*/
 	text-align: center;
-	color: #494C55;
+	color: #303238;
 	margin-bottom: 7px;
 }
 @mixin globalSideNavHeaderTxt_Desktop_Style{
@@ -360,7 +353,7 @@
 	white-space: normal;
 	font: bold normal 22px calibri; /*changed*/
 	text-align: center;
-	color: #494C55;
+	color: #303238;
 	margin-bottom: 7px;
 }
 /*_Side Nav Header*/
@@ -370,21 +363,21 @@
 @mixin globalMainNavMenu_MT_Style{
 	--mainNavMenuFSize: 16px; /*To be changed*/
 	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: #494C55;
+	--mainNavMenuFColor: #303238;
 	--hoverMainNavMenuBgColor: #247F4F;
 	--hoverMainNavMenuFColor: #ffffff;
 }
 @mixin globalMainNavMenu_Laptop_Style{
 	--mainNavMenuFSize: 18px; /*changed*/
 	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: #494C55;
+	--mainNavMenuFColor: #303238;
 	--hoverMainNavMenuBgColor: #247F4F;
 	--hoverMainNavMenuFColor: #ffffff;
 }
 @mixin globalMainNavMenu_Desktop_Style{
 	--mainNavMenuFSize: 20px; /*changed*/
 	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: #494C55;
+	--mainNavMenuFColor: #303238;
 	--hoverMainNavMenuBgColor: #247F4F;
 	--hoverMainNavMenuFColor: #ffffff;
 }
@@ -412,21 +405,21 @@
 @mixin globalSubNavMenu_MT_Style{	
 	--subNavMenuBgColor: transparent;
 	--subNavMenuFSize: 16px; /*To be changed*/
-	--subNavMenuFColor: #494C55;
+	--subNavMenuFColor: #303238;
 	--hoverSubNavMenuBgColor: #247F4F;
 	--hoverSubNavMenuFColor: #ffffff;
 }
 @mixin globalSubNavMenu_Laptop_Style{
 	--subNavMenuBgColor: transparent;
 	--subNavMenuFSize: 18px; /*changed*/
-	--subNavMenuFColor: #494C55;
+	--subNavMenuFColor: #303238;
 	--hoverSubNavMenuBgColor: #247F4F;
 	--hoverSubNavMenuFColor: #ffffff;
 }
 @mixin globalSubNavMenu_Desktop_Style{
 	--subNavMenuBgColor: transparent;
 	--subNavMenuFSize: 20px; /*changed*/
-	--subNavMenuFColor: #494C55;
+	--subNavMenuFColor: #303238;
 	--hoverSubNavMenuBgColor: #247F4F;
 	--hoverSubNavMenuFColor: #ffffff;
 }
@@ -465,15 +458,15 @@
 /*Global Office Page Header*/
 @mixin globalOfficePageHeaderTxt_MT_Style{
 	--projectTitleTextFSize: 16px; /*To be changed*/
-	--projectTitleTextFColor: #494C55;
+	--projectTitleTextFColor: #303238;
 }
 @mixin globalOfficePageHeaderTxt_Laptop_Style{
 	--projectTitleTextFSize: 20px; /*changed*/
-	--projectTitleTextFColor: #494C55;
+	--projectTitleTextFColor: #303238;
 }
 @mixin globalOfficePageHeaderTxt_Desktop_Style{
 	--projectTitleTextFSize: 24px; /*changed*/
-	--projectTitleTextFColor: #494C55;
+	--projectTitleTextFColor: #303238;
 }
 
 

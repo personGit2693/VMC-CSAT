@@ -3394,12 +3394,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --cusRadioBorderColor: gray;
   --cusRadioBgColor: transparent;
   --cusRadioFWeight: normal;
-  --cusRadioFColor: gray;
+  --cusRadioFColor: #303238;
   /*Radio Input Framework*/
   /*Checkbox Input Framework*/
   --cusCheckboxFStyle: normal;
   --cusCheckboxFWeight: normal;
-  --cusCheckboxColor: gray;
+  --cusCheckboxColor: #303238;
   --cusCheckboxBorderWidth: 1px;
   --cusCheckboxBorderColor: gray;
   /*Checkbox Input Framework*/
@@ -3407,10 +3407,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --cusDropBorderWidth: 1px;
   --cusDropBorderColor: gray;
   --cusDropBgColor: transparent;
-  --cusDropSelFColor: gray;
+  --cusDropSelFColor: #303238;
   --cusDropSearchBorderWidth: 1px;
   --cusDropSearchBorderColor: gray;
-  --cusDropSearchFColor: gray;
+  --cusDropSearchFColor: #303238;
   --cusDropSearchBgColor: #ffffff;
   --cusDropOptWrapBorderWidth: 1px;
   --cusDropOptWrapBorderColor: green;
@@ -3418,7 +3418,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --cusDropOptWrapHeight: 180px;
   --cusDropOptWrapScrollColor: green;
   --cusDropOptWrapScrollHovColor: green;
-  --cusDropOptLabColor: gray;
+  --cusDropOptLabColor: #303238;
   --cusDropOptHovLabBgColor: #DEE1E6;
   /*Dropdown Menu Framework*/
   /*Button Framework*/
@@ -3432,7 +3432,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Button Framework*/ }
 
 body {
-  background-color: #E9E9E9; }
+  background-color: #E8EFFF;
+  background-image: url("../../src/sampleformbg.jpg");
+  background-position: center;
+  background-size: contain; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3444,32 +3447,50 @@ body {
 @media all and (max-width: 641px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: url("../../src/Banner One.png") center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 15px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
-    color: #ffffff; }
+    color: #ffffff;
+    max-width: 300px;
+    /*To be changed*/
+    padding: 8px 10px; }
 
-  .pageHeaderWrap > .pageHeaderSubtxt {
+  .pageHeaderWrap .pageHeaderSubtxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 12px calibri;
+    font: normal normal 16px calibri;
     /*To be changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 300px;
+    /*To be changed*/
+    padding: 0px 10px 10px 10px; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3477,32 +3498,50 @@ body {
 @media all and (min-width: 642px) and (max-width: 1080px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: url("../../src/Banner One.png") center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 15px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
-    color: #ffffff; }
+    color: #ffffff;
+    max-width: 300px;
+    /*To be changed*/
+    padding: 8px 10px; }
 
-  .pageHeaderWrap > .pageHeaderSubtxt {
+  .pageHeaderWrap .pageHeaderSubtxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 12px calibri;
+    font: normal normal 16px calibri;
     /*To be changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 300px;
+    /*To be changed*/
+    padding: 0px 10px 10px 10px; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3510,32 +3549,50 @@ body {
 @media all and (min-width: 1081px) and (max-width: 1600px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: url("../../src/Banner One.png") center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 18px calibri;
+    font: normal bold 28px calibri;
     /*changed*/
-    color: #ffffff; }
+    color: #ffffff;
+    max-width: auto;
+    /*changed*/
+    padding: 8px 60px; }
 
-  .pageHeaderWrap > .pageHeaderSubtxt {
+  .pageHeaderWrap .pageHeaderSubtxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 15px calibri;
+    font: normal normal 20px calibri;
     /*changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 530px;
+    /*changed*/
+    padding: 0px 60px 10px 60px; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3543,32 +3600,50 @@ body {
 @media all and (min-width: 1601px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 0px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: url("../../src/Banner One.png") center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal bold 21px calibri;
+    font: normal bold 32px calibri;
     /*changed*/
-    color: #ffffff; }
+    color: #ffffff;
+    max-width: auto;
+    /*changed*/
+    padding: 8px 60px; }
 
-  .pageHeaderWrap > .pageHeaderSubtxt {
+  .pageHeaderWrap .pageHeaderSubtxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    text-align: center;
-    font: normal normal 18px calibri;
+    font: normal normal 24px calibri;
     /*changed*/
-    color: #ffffff; } }
+    color: #ffffff;
+    max-width: 720px;
+    /*changed*/
+    padding: 0px 60px 10px 60px; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Page Header*/
@@ -3587,7 +3662,6 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     width: auto;
-    /*To be removed*/
     margin: 15px auto 0px auto; }
 
   .stepByStepLine-Class {
@@ -3597,7 +3671,7 @@ body {
     overflow: visible;
     width: 100%;
     border: 0.4px solid gray;
-    top: 12px;
+    top: 20px;
     left: 0px;
     align-self: flex-start; }
 
@@ -3611,8 +3685,7 @@ body {
     overflow: visible;
     flex-flow: column wrap;
     align-items: center;
-    width: auto;
-    /*To be changed*/ }
+    width: 270px; }
 
   .stepNumber-Class {
     position: relative;
@@ -3622,13 +3695,13 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 22px;
     /*To be changed*/
     color: #ffffff;
     padding: 4px;
     text-align: center;
     border-radius: 50%;
-    width: 28px;
+    width: 36px;
     /*To be changed*/ }
 
   .stepNumberLight-Class {
@@ -3642,7 +3715,7 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 20px;
     /*To be changed*/
     text-align: center;
     color: gray;
@@ -3662,11 +3735,7 @@ body {
     overflow: visible;
     flex-flow: row nowrap;
     justify-content: center;
-    /*width: auto; removed*/
-    min-width: 300px;
-    /*added*/
-    max-width: 580px;
-    /*added*/
+    width: auto;
     margin: 15px auto 0px auto; }
 
   .stepByStepLine-Class {
@@ -3676,7 +3745,7 @@ body {
     overflow: visible;
     width: 100%;
     border: 0.4px solid gray;
-    top: 12px;
+    top: 20px;
     left: 0px;
     align-self: flex-start; }
 
@@ -3690,8 +3759,7 @@ body {
     overflow: visible;
     flex-flow: column wrap;
     align-items: center;
-    width: auto;
-    /*To be changed*/ }
+    width: 270px; }
 
   .stepNumber-Class {
     position: relative;
@@ -3701,13 +3769,13 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 22px;
     /*To be changed*/
     color: #ffffff;
     padding: 4px;
     text-align: center;
     border-radius: 50%;
-    width: 28px;
+    width: 36px;
     /*To be changed*/ }
 
   .stepNumberLight-Class {
@@ -3721,7 +3789,7 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 20px;
     /*To be changed*/
     text-align: center;
     color: gray;
@@ -3741,11 +3809,7 @@ body {
     overflow: visible;
     flex-flow: row nowrap;
     justify-content: center;
-    /*width: auto; removed*/
-    min-width: 300px;
-    /*added*/
-    max-width: 580px;
-    /*added*/
+    width: auto;
     margin: 15px auto 0px auto; }
 
   .stepByStepLine-Class {
@@ -3755,7 +3819,7 @@ body {
     overflow: visible;
     width: 100%;
     border: 0.4px solid gray;
-    top: 12px;
+    top: 20px;
     left: 0px;
     align-self: flex-start; }
 
@@ -3769,8 +3833,7 @@ body {
     overflow: visible;
     flex-flow: column wrap;
     align-items: center;
-    width: auto;
-    /*To be changed*/ }
+    width: 270px; }
 
   .stepNumber-Class {
     position: relative;
@@ -3780,13 +3843,13 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     /*changed*/
     color: #ffffff;
     padding: 4px;
     text-align: center;
     border-radius: 50%;
-    width: 32px;
+    width: 38px;
     /*changed*/ }
 
   .stepNumberLight-Class {
@@ -3800,7 +3863,7 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 22px;
     /*changed*/
     text-align: center;
     color: gray;
@@ -3820,11 +3883,7 @@ body {
     overflow: visible;
     flex-flow: row nowrap;
     justify-content: center;
-    /*width: auto; removed*/
-    min-width: 300px;
-    /*added*/
-    max-width: 580px;
-    /*added*/
+    width: auto;
     margin: 15px auto 0px auto; }
 
   .stepByStepLine-Class {
@@ -3834,7 +3893,7 @@ body {
     overflow: visible;
     width: 100%;
     border: 0.4px solid gray;
-    top: 12px;
+    top: 20px;
     left: 0px;
     align-self: flex-start; }
 
@@ -3848,8 +3907,7 @@ body {
     overflow: visible;
     flex-flow: column wrap;
     align-items: center;
-    width: auto;
-    /*To be changed*/ }
+    width: 270px; }
 
   .stepNumber-Class {
     position: relative;
@@ -3859,13 +3917,13 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     /*changed*/
     color: #ffffff;
     padding: 4px;
     text-align: center;
     border-radius: 50%;
-    width: 36px;
+    width: 42px;
     /*changed*/ }
 
   .stepNumberLight-Class {
@@ -3879,7 +3937,7 @@ body {
     font-family: calibri;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 26px;
     /*changed*/
     text-align: center;
     color: gray;
@@ -3922,8 +3980,11 @@ body {
     /*To be changed*/
     margin: 35px 0px 0px 0px;
     /*To be changed*/
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 10px;
+    background-color: #ffffff;
+    background-image: url("../../src/sampleformbg.jpg");
+    background-position: center;
+    background-size: contain; }
 
   /*Step set itself*/
   /*Step title*/
@@ -3941,7 +4002,7 @@ body {
     word-break: keep-all;
     color: black;
     font-family: calibri;
-    font-size: 15px;
+    font-size: 35px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -3953,9 +4014,9 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    color: gray;
+    color: #303238;
     font-family: calibri;
-    font-size: 12px;
+    font-size: 18px;
     /*To be changed*/
     font-style: normal;
     font-weight: normal; }
@@ -3992,8 +4053,7 @@ body {
     word-break: keep-all;
     margin-bottom: 3px;
     font-family: calibri;
-    font-size: 12px;
-    /*To be changed*/
+    font-size: 22px;
     font-style: normal;
     font-weight: bold;
     color: black; }
@@ -4006,9 +4066,8 @@ body {
     flex-flow: column nowrap;
     /*To be changed*/
     justify-content: flex-start;
-    /*To be changed*/
     font-family: calibri;
-    font-size: 12px;
+    font-size: 16px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -4024,7 +4083,7 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     font-family: calibri;
-    font-size: 12px;
+    font-size: 16px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -4034,7 +4093,7 @@ body {
   /*Set of questions wrapper*/
   .questionsWrap-Class {
     font-family: calibri;
-    font-size: 12px;
+    font-size: 16px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -4047,7 +4106,7 @@ body {
     display: block;
     box-sizing: border-box;
     font-family: calibri;
-    font-size: 12px;
+    font-size: 15px;
     /*To be changed*/
     font-style: normal;
     font-weight: normal;
@@ -4062,13 +4121,13 @@ body {
     /*To be changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 20px; }
+    --cusRadioWidthHeight: 18px; }
 
   .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 12px; }
+    --cusRadioFsize: 22px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 95px; }
+    --radioIconLabelWidthHeight: 105px; }
 
   /*Radio Input Framework*/
   /*Checkbox Input Framework*/
@@ -4077,10 +4136,10 @@ body {
     /*To be changed*/ }
 
   .cusCheckBoxPaper_RoClass > label {
-    --cusCheckboxFStyle: 12px; }
+    --custCheckboxFSize: 22px; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 20px; }
+    --cusCheckboxWidthHeight: 18px; }
 
   /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
@@ -4090,22 +4149,22 @@ body {
     /*To be changed*/ }
 
   .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 12px; }
+    --cusDropFsize: 22px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 14px; }
+    --cusDropArrowWidthHeight: 22px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
-    --normBtnFSize: 12px;
+    --normBtnFSize: 18px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
-    --normBtnFSize: 12px;
+    --normBtnFSize: 18px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;
@@ -4127,8 +4186,11 @@ body {
     /*To be changed*/
     margin: 35px 0px 0px 0px;
     /*To be changed*/
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 10px;
+    background-color: #ffffff;
+    background-image: url("../../src/sampleformbg.jpg");
+    background-position: center;
+    background-size: contain; }
 
   /*Step set itself*/
   /*Step title*/
@@ -4146,7 +4208,7 @@ body {
     word-break: keep-all;
     color: black;
     font-family: calibri;
-    font-size: 15px;
+    font-size: 35px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -4158,9 +4220,9 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    color: gray;
+    color: #303238;
     font-family: calibri;
-    font-size: 12px;
+    font-size: 18px;
     /*To be changed*/
     font-style: normal;
     font-weight: normal; }
@@ -4190,8 +4252,6 @@ body {
     margin: 30px 0px; }
 
   .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    text-align: center;
-    /*To be changed*/
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -4199,8 +4259,7 @@ body {
     word-break: keep-all;
     margin-bottom: 3px;
     font-family: calibri;
-    font-size: 12px;
-    /*To be changed*/
+    font-size: 22px;
     font-style: normal;
     font-weight: bold;
     color: black; }
@@ -4212,11 +4271,11 @@ body {
     overflow: visible;
     flex-flow: row wrap;
     /*changed*/
-    justify-content: center;
+    justify-content: flex-start;
     align-content: flex-start;
     /*Added*/
     font-family: calibri;
-    font-size: 12px;
+    font-size: 16px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -4236,7 +4295,7 @@ body {
   /*Set of questions wrapper*/
   .questionsWrap-Class {
     font-family: calibri;
-    font-size: 12px;
+    font-size: 16px;
     /*To be changed*/
     font-style: normal;
     font-weight: bold;
@@ -4249,7 +4308,7 @@ body {
     display: block;
     box-sizing: border-box;
     font-family: calibri;
-    font-size: 14px;
+    font-size: 19px;
     /*changed*/
     font-style: normal;
     font-weight: normal;
@@ -4264,13 +4323,13 @@ body {
     /*changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 20px; }
+    --cusRadioWidthHeight: 18px; }
 
   .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 12px; }
+    --cusRadioFsize: 22px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 95px; }
+    --radioIconLabelWidthHeight: 105px; }
 
   /*Radio Input Framework*/
   /*Checkbox Input Framework*/
@@ -4279,35 +4338,35 @@ body {
     /*changed*/ }
 
   .cusCheckBoxPaper_RoClass > label {
-    --cusCheckboxFStyle: 12px; }
+    --custCheckboxFSize: 22px; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 20px; }
+    --cusCheckboxWidthHeight: 18px; }
 
   /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
-    width: 190px;
+    width: 310px;
     /*changed*/ }
 
   .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 12px; }
+    --cusDropFsize: 22px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 14px; }
+    --cusDropArrowWidthHeight: 22px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
-    --normBtnFSize: 12px;
+    --normBtnFSize: 18px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
-    --normBtnFSize: 12px;
+    --normBtnFSize: 18px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;
@@ -4329,11 +4388,14 @@ body {
     /*changed*/
     margin: 35px auto 0px auto;
     /*changed*/
-    padding: 5px;
+    padding: 10px;
     background-color: #ffffff;
     border-radius: 5px;
     /*Added*/
-    box-shadow: 0px 0px 5px gray; }
+    box-shadow: 0px 0px 5px gray;
+    background-image: url("../../src/sampleformbg.jpg");
+    background-position: center;
+    background-size: contain; }
 
   /*Step set itself*/
   /*Step title*/
@@ -4351,7 +4413,7 @@ body {
     word-break: keep-all;
     color: black;
     font-family: calibri;
-    font-size: 17px;
+    font-size: 37px;
     /*changed*/
     font-style: normal;
     font-weight: bold;
@@ -4363,9 +4425,9 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    color: gray;
+    color: #303238;
     font-family: calibri;
-    font-size: 14px;
+    font-size: 20px;
     /*changed*/
     font-style: normal;
     font-weight: normal; }
@@ -4395,8 +4457,6 @@ body {
     margin: 30px 0px; }
 
   .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    text-align: center;
-    /*To be changed*/
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -4404,8 +4464,7 @@ body {
     word-break: keep-all;
     margin-bottom: 3px;
     font-family: calibri;
-    font-size: 14px;
-    /*changed*/
+    font-size: 22px;
     font-style: normal;
     font-weight: bold;
     color: black; }
@@ -4417,11 +4476,11 @@ body {
     overflow: visible;
     flex-flow: row wrap;
     /*changed*/
-    justify-content: center;
+    justify-content: flex-start;
     align-content: flex-start;
     /*Added*/
     font-family: calibri;
-    font-size: 14px;
+    font-size: 18px;
     /*changed*/
     font-style: normal;
     font-weight: bold;
@@ -4441,7 +4500,7 @@ body {
   /*Set of questions wrapper*/
   .questionsWrap-Class {
     font-family: calibri;
-    font-size: 14px;
+    font-size: 18px;
     /*changed*/
     font-style: normal;
     font-weight: bold;
@@ -4454,7 +4513,7 @@ body {
     display: block;
     box-sizing: border-box;
     font-family: calibri;
-    font-size: 14px;
+    font-size: 19px;
     /*changed*/
     font-style: normal;
     font-weight: normal;
@@ -4469,13 +4528,13 @@ body {
     /*changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 25px; }
+    --cusRadioWidthHeight: 18px; }
 
   .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 14px; }
+    --cusRadioFsize: 22px; }
 
   .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 100px; }
+    --radioIconLabelWidthHeight: 105px; }
 
   /*Radio Input Framework*/
   /*Checkbox Input Framework*/
@@ -4484,35 +4543,35 @@ body {
     /*changed*/ }
 
   .cusCheckBoxPaper_RoClass > label {
-    --cusCheckboxFStyle: 14px; }
+    --custCheckboxFSize: 22px; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 25px; }
+    --cusCheckboxWidthHeight: 18px; }
 
   /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
-    width: 190px;
+    width: 310px;
     /*changed*/ }
 
   .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 14px; }
+    --cusDropFsize: 22px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 16px; }
+    --cusDropArrowWidthHeight: 22px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
-    --normBtnFSize: 14px;
+    --normBtnFSize: 22px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
-    --normBtnFSize: 14px;
+    --normBtnFSize: 22px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;
@@ -4534,11 +4593,14 @@ body {
     /*changed*/
     margin: 35px auto 0px auto;
     /*changed*/
-    padding: 5px;
+    padding: 10px;
     background-color: #ffffff;
     border-radius: 5px;
     /*Added*/
-    box-shadow: 0px 0px 5px gray; }
+    box-shadow: 0px 0px 5px gray;
+    background-image: url("../../src/sampleformbg.jpg");
+    background-position: center;
+    background-size: contain; }
 
   /*Step set itself*/
   /*Step title*/
@@ -4556,7 +4618,7 @@ body {
     word-break: keep-all;
     color: black;
     font-family: calibri;
-    font-size: 19px;
+    font-size: 39px;
     /*changed*/
     font-style: normal;
     font-weight: bold;
@@ -4568,9 +4630,9 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    color: gray;
+    color: #303238;
     font-family: calibri;
-    font-size: 16px;
+    font-size: 22px;
     /*changed*/
     font-style: normal;
     font-weight: normal; }
@@ -4600,8 +4662,6 @@ body {
     margin: 30px 0px; }
 
   .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    text-align: center;
-    /*To be changed*/
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -4609,8 +4669,7 @@ body {
     word-break: keep-all;
     margin-bottom: 3px;
     font-family: calibri;
-    font-size: 16px;
-    /*changed*/
+    font-size: 22px;
     font-style: normal;
     font-weight: bold;
     color: black; }
@@ -4622,11 +4681,11 @@ body {
     overflow: visible;
     flex-flow: row wrap;
     /*changed*/
-    justify-content: center;
+    justify-content: flex-start;
     align-content: flex-start;
     /*Added*/
     font-family: calibri;
-    font-size: 16px;
+    font-size: 20px;
     /*changed*/
     font-style: normal;
     font-weight: bold;
@@ -4646,7 +4705,7 @@ body {
   /*Set of questions wrapper*/
   .questionsWrap-Class {
     font-family: calibri;
-    font-size: 16px;
+    font-size: 20px;
     /*changed*/
     font-style: normal;
     font-weight: bold;
@@ -4659,7 +4718,7 @@ body {
     display: block;
     box-sizing: border-box;
     font-family: calibri;
-    font-size: 16px;
+    font-size: 21px;
     /*changed*/
     font-style: normal;
     font-weight: normal;
@@ -4674,10 +4733,10 @@ body {
     /*changed*/ }
 
   .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 30px; }
+    --cusRadioWidthHeight: 18px; }
 
   .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 16px; }
+    --cusRadioFsize: 22px; }
 
   .radioCheckIconLabel_RoClass {
     --radioIconLabelWidthHeight: 105px; }
@@ -4689,40 +4748,40 @@ body {
     /*changed*/ }
 
   .cusCheckBoxPaper_RoClass > label {
-    --cusCheckboxFStyle: 16px; }
+    --custCheckboxFSize: 22px; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 30px; }
+    --cusCheckboxWidthHeight: 18px; }
 
   /*Checkbox Input Framework*/
   /*Dropdown Menu Framework*/
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
-    width: 190px;
+    width: 310px;
     /*changed*/ }
 
   #dropdownReligion-Id {
     --cusDropZIndex: 1;
-    width: 190px;
+    width: 310px;
     /*changed*/ }
 
   .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 16px; }
+    --cusDropFsize: 22px; }
 
   .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 18px; }
+    --cusDropArrowWidthHeight: 22px; }
 
   /*Dropdown Menu Framework*/
   /*Button Framework*/
   .proceedBtn-Class {
-    --normBtnFSize: 16px;
+    --normBtnFSize: 26px;
     margin: 5px;
     --normBtnBorderColor: #1B85BD;
     --normBtnBgColor: #1B85BD;
     --normBtnHovActBgColor: #2760A7; }
 
   .backBtn-Class {
-    --normBtnFSize: 16px;
+    --normBtnFSize: 26px;
     margin: 5px;
     --normBtnBorderColor: #FC5050;
     --normBtnBgColor: #FC5050;

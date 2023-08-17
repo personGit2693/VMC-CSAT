@@ -35,7 +35,7 @@ requestGenders();
 
 
 /*To render GenderPrefRadioBtn component*/
-requestGenderPrefs()
+requestGenderPrefs();
 /*To render GenderPrefRadioBtn component*/
 
 

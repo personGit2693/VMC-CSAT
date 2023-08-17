@@ -13,12 +13,14 @@ import {totalRespondent} from "../Page Office/JS/Request_TotalRespondent.js";
 
 
 /*Prep variables*/
-var clientTypeInternal = 1;
-var clientTypeExternal = 2;
+
 /*Prep variables*/
 
 
 /*Prep export variables*/
+var clientTypeInternal = 1;
+var clientTypeExternal = 2;
+
 var selectedOffice_Obj = {office_id:0};
 
 var overallServRateDataColumn_Array = [

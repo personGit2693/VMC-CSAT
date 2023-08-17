@@ -7,8 +7,11 @@
 	overflow: visible;
 	width: auto; /*To be changed*/
 	margin: 35px 0px 0px 0px; /*To be changed*/
-	padding: 5px;
+	padding: 10px;
 	background-color: #ffffff;
+	background-image: url("../../src/sampleformbg.jpg");
+	background-position: center;
+	background-size: contain;
 }
 @mixin stepSets_LD_Style{
 	position: relative;
@@ -17,13 +20,15 @@
 	overflow: visible;
 	width: 1080px; /*changed*/
 	margin: 35px auto 0px auto; /*changed*/
-	padding: 5px;
+	padding: 10px;
 	background-color: #ffffff;
 	border-radius: 5px; /*Added*/
 	box-shadow: 0px 0px 5px gray;
+	background-image: url("../../src/sampleformbg.jpg");	
+	background-position: center;
+	background-size: contain;
 }
 /*Step sets*/
-
 
 
 /*Step title*/
@@ -35,7 +40,6 @@
 }
 
 
-
 @mixin stepSetTitle_MT_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -44,7 +48,7 @@
 	word-break: keep-all;
 	color: black;
 	font-family: calibri;
-	font-size: 15px; /*To be changed*/
+	font-size: 35px; /*To be changed*/
 	font-style: normal;
 	font-weight: bold;
 	margin-bottom: 7px;
@@ -57,7 +61,7 @@
 	word-break: keep-all;
 	color: black;
 	font-family: calibri;
-	font-size: 17px; /*changed*/
+	font-size: 37px; /*changed*/
 	font-style: normal;
 	font-weight: bold;
 	margin-bottom: 7px;
@@ -70,12 +74,11 @@
 	word-break: keep-all;
 	color: black;
 	font-family: calibri;
-	font-size: 19px; /*changed*/
+	font-size: 39px; /*changed*/
 	font-style: normal;
 	font-weight: bold;
 	margin-bottom: 7px;
 }
-
 
 
 @mixin stepSetTitleDefi_MT_Style{
@@ -84,9 +87,9 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	color: gray;
+	color: #303238;
 	font-family: calibri;
-	font-size: 12px; /*To be changed*/
+	font-size: 18px; /*To be changed*/
 	font-style: normal;
 	font-weight: normal;
 }
@@ -96,9 +99,9 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	color: gray;
+	color: #303238;
 	font-family: calibri;
-	font-size: 14px; /*changed*/
+	font-size: 20px; /*changed*/
 	font-style: normal;
 	font-weight: normal;
 }
@@ -108,14 +111,13 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	color: gray;
+	color: #303238;
 	font-family: calibri;
-	font-size: 16px; /*changed*/
+	font-size: 22px; /*changed*/
 	font-style: normal;
 	font-weight: normal;
 }
 /*Step title*/
-
 
 
 /*Step per field group*/
@@ -161,25 +163,24 @@
 /*Step per field group*/
 
 
-
 /*Step per field*/
 @mixin messageFont_MT_Style{
 	font-family: calibri;
-	font-size: 12px; /*To be changed*/
+	font-size: 16px; /*To be changed*/
 	font-style: normal;
 	font-weight: bold;
 	color: red;
 }
 @mixin messageFont_Laptop_Style{
 	font-family: calibri;
-	font-size: 14px; /*changed*/
+	font-size: 18px; /*changed*/
 	font-style: normal;
 	font-weight: bold;
 	color: red;
 }
 @mixin messageFont_Desktop_Style{
 	font-family: calibri;
-	font-size: 16px; /*changed*/
+	font-size: 20px; /*changed*/
 	font-style: normal;
 	font-weight: bold;
 	color: red;
@@ -194,14 +195,12 @@
 }
 
 
-
 @mixin stepSetPerFieldTitleCenter_Style{
-	text-align: center; /*To be changed*/
+	text-align: center;
 }
 
 
-
-@mixin stepSetPerFieldTitle_MT_Style{
+@mixin stepSetPerFieldTitle_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
@@ -209,38 +208,11 @@
 	word-break: keep-all;
 	margin-bottom: 3px;
 	font-family: calibri;
-	font-size: 12px; /*To be changed*/
+	font-size: 22px; 
 	font-style: normal;
 	font-weight: bold;
 	color: black;
 }
-@mixin stepSetPerFieldTitle_Laptop_Style{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	margin-bottom: 3px;
-	font-family: calibri;
-	font-size: 14px; /*changed*/
-	font-style: normal;
-	font-weight: bold;
-	color: black;
-}
-@mixin stepSetPerFieldTitle_Desktop_Style{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	margin-bottom: 3px;
-	font-family: calibri;
-	font-size: 16px; /*changed*/
-	font-style: normal;
-	font-weight: bold;
-	color: black;
-}
-
 
 
 @mixin stepSetPerFieldFlex_Mobile_Style{
@@ -249,7 +221,7 @@
 	box-sizing: border-box;
 	overflow: visible;
 	flex-flow: column nowrap; /*To be changed*/
-	justify-content: flex-start; /*To be changed*/	
+	justify-content: flex-start;	
 }
 @mixin stepSetPerFieldFlex_TLD_Style{
 	position: relative;
@@ -257,11 +229,10 @@
 	box-sizing: border-box;
 	overflow: visible;
 	flex-flow: row wrap; /*changed*/
-	justify-content: center;
+	justify-content: flex-start;
 	align-content: flex-start; /*Added*/	
 }
 /*Step per field*/
-
 
 
 /*Step per field buttons wrapper*/
@@ -276,14 +247,13 @@
 /*Step per field buttons wrapper*/
 
 
-
 /*Comments and suggestion textarea*/
 @mixin suggestionTextArea_Mobile_Style{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
 	font-family: calibri;
-	font-size: 12px; /*To be changed*/
+	font-size: 15px; /*To be changed*/
 	font-style: normal;
 	font-weight: normal;
 	width: auto; /*To be changed*/
@@ -294,7 +264,7 @@
 	display: block;
 	box-sizing: border-box;
 	font-family: calibri;
-	font-size: 12px; /*To be changed*/
+	font-size: 17px; /*To be changed*/
 	font-style: normal;
 	font-weight: normal;
 	width: 100%; /*changed*/
@@ -305,7 +275,7 @@
 	display: block;
 	box-sizing: border-box;
 	font-family: calibri;
-	font-size: 14px; /*changed*/
+	font-size: 19px; /*changed*/
 	font-style: normal;
 	font-weight: normal;
 	width: 100%; /*changed*/
@@ -316,7 +286,7 @@
 	display: block;
 	box-sizing: border-box;
 	font-family: calibri;
-	font-size: 16px; /*changed*/
+	font-size: 21px; /*changed*/
 	font-style: normal;
 	font-weight: normal;
 	width: 100%; /*changed*/
@@ -339,40 +309,17 @@
 }
 
 
-
-@mixin customRadioCheck_MT_Style{
-	--cusRadioWidthHeight: 20px;
-}
-@mixin customRadioCheck_Laptop_Style{
-	--cusRadioWidthHeight: 25px; 
-}
-@mixin customRadioCheck_Desktop_Style{
-	--cusRadioWidthHeight: 30px;
+@mixin customRadioCheck_Style{
+	--cusRadioWidthHeight: 18px;
 }
 
 
-
-@mixin radioCheckTxtLabel_MT_Style{
-	--cusRadioFsize: 12px;
-}
-@mixin radioCheckTxtLabel_Laptop_Style{
-	--cusRadioFsize: 14px;
-}
-@mixin radioCheckTxtLabel_Desktop_Style{
-	--cusRadioFsize: 16px;
+@mixin radioCheckTxtLabel_Style{
+	--cusRadioFsize: 22px;
 }
 
 
-
-@mixin radioCheckIconLabel_MT_Style{
-	--radioIconLabelWidthHeight: 95px;
-}
-
-@mixin radioCheckIconLabel_Laptop_Style{
-	--radioIconLabelWidthHeight: 100px;
-}
-
-@mixin radioCheckIconLabel_Desktop_Style{
+@mixin radioCheckIconLabel_Style{
 	--radioIconLabelWidthHeight: 105px;
 }
 /*Radio Input Framework*/
@@ -392,27 +339,13 @@
 }
 
 
-
-@mixin cusCheckboxCheck_MT_Style{
-	--cusCheckboxWidthHeight: 20px;
-}
-@mixin cusCheckboxCheck_Laptop_Style{
-	--cusCheckboxWidthHeight: 25px;
-}
-@mixin cusCheckboxCheck_Desktop_Style{
-	--cusCheckboxWidthHeight: 30px;
+@mixin cusCheckboxCheck_Style{
+	--cusCheckboxWidthHeight: 18px;
 }
 
 
-
-@mixin cusCheckboxTxtLabel_MT_Style{
-	--cusCheckboxFStyle: 12px;
-}
-@mixin cusCheckboxTxtLabel_Laptop_Style{
-	--cusCheckboxFStyle: 14px;
-}
-@mixin cusCheckboxTxtLabel_Desktop_Style{
-	--cusCheckboxFStyle: 16px;
+@mixin cusCheckboxTxtLabel_Style{
+	--custCheckboxFSize: 22px;
 }
 /*Checkbox Input Framework*/
 /***********************************************************************************************************************************************************************************************************/
@@ -429,29 +362,17 @@
 }
 @mixin dropdown_TLD_Style{
 	--cusDropZIndex: 1;
-	width: 190px; /*changed*/
+	width: 310px; /*changed*/
 }
 
 
-@mixin dropdownFSize_MT_Style{	
-	--cusDropFsize: 12px;
-}
-@mixin dropdownFSize_Laptop_Style{	
-	--cusDropFsize: 14px;
-}
-@mixin dropdownFSize_Desktop_Style{	
-	--cusDropFsize: 16px;
+@mixin dropdownFSize_Style{	
+	--cusDropFsize: 22px;
 }
 
 
-@mixin dropdownArrowSize_MT_Style{
-	--cusDropArrowWidthHeight: 14px;
-}
-@mixin dropdownArrowSize_Laptop_Style{
-	--cusDropArrowWidthHeight: 16px;
-}
-@mixin dropdownArrowSize_Desktop_Style{
-	--cusDropArrowWidthHeight: 18px;
+@mixin dropdownArrowSize_Style{
+	--cusDropArrowWidthHeight: 22px;
 }
 /*Dropdown Menu Framework*/
 /***********************************************************************************************************************************************************************************************************/
@@ -470,7 +391,6 @@
 }
 
 
-
 @mixin backBtn_Style{
 	margin: 5px;
 	--normBtnBorderColor: #FC5050;
@@ -479,15 +399,14 @@
 }
 
 
-
 @mixin buttonFSize_MT_Style{
-	--normBtnFSize: 12px;
+	--normBtnFSize: 18px;
 }
 @mixin buttonFSize_Laptop_Style{
-	--normBtnFSize: 14px;
+	--normBtnFSize: 22px;
 }
 @mixin buttonFSize_Desktop_Style{
-	--normBtnFSize: 16px;
+	--normBtnFSize: 26px;
 }
 /*Button Framework*/
 /***********************************************************************************************************************************************************************************************************/
