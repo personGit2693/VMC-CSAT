@@ -21,7 +21,7 @@
 
 
 @mixin pageHeaderBackground_Style{
-	background: url("../../src/Banner One.png") center no-repeat;
+	background: var(--pageHeaderBackground) center no-repeat;
 	background-size: cover; /*changed*/
 }
 
@@ -80,7 +80,7 @@
 	word-break: keep-all;
 	font: normal normal 20px calibri; /*changed*/
 	color: #ffffff;
-	max-width: 530px; /*changed*/
+	max-width: 720px; /*changed*/
 	padding: 0px 60px 10px 60px;
 }
 @mixin globalPageHeaderSubTxt_Desktop_Style{
@@ -91,7 +91,7 @@
 	word-break: keep-all;
 	font: normal normal 24px calibri; /*changed*/
 	color: #ffffff;	
-	max-width: 720px; /*changed*/
+	max-width: 920px; /*changed*/
 	padding: 0px 60px 10px 60px;
 }
 /*Page Header*/

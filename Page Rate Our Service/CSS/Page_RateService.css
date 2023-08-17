@@ -3462,7 +3462,7 @@ body {
     height: auto; }
 
   .pageHeaderBg-Class {
-    background: url("../../src/Banner One.png") center no-repeat;
+    background: var(--pageHeaderBackground) center no-repeat;
     background-size: cover;
     /*changed*/ }
 
@@ -3513,7 +3513,7 @@ body {
     height: auto; }
 
   .pageHeaderBg-Class {
-    background: url("../../src/Banner One.png") center no-repeat;
+    background: var(--pageHeaderBackground) center no-repeat;
     background-size: cover;
     /*changed*/ }
 
@@ -3564,7 +3564,7 @@ body {
     height: auto; }
 
   .pageHeaderBg-Class {
-    background: url("../../src/Banner One.png") center no-repeat;
+    background: var(--pageHeaderBackground) center no-repeat;
     background-size: cover;
     /*changed*/ }
 
@@ -3590,7 +3590,7 @@ body {
     font: normal normal 20px calibri;
     /*changed*/
     color: #ffffff;
-    max-width: 530px;
+    max-width: 720px;
     /*changed*/
     padding: 0px 60px 10px 60px; } }
 /*Laptop*/
@@ -3615,7 +3615,7 @@ body {
     height: auto; }
 
   .pageHeaderBg-Class {
-    background: url("../../src/Banner One.png") center no-repeat;
+    background: var(--pageHeaderBackground) center no-repeat;
     background-size: cover;
     /*changed*/ }
 
@@ -3641,7 +3641,7 @@ body {
     font: normal normal 24px calibri;
     /*changed*/
     color: #ffffff;
-    max-width: 720px;
+    max-width: 920px;
     /*changed*/
     padding: 0px 60px 10px 60px; } }
 /*Desktop*/

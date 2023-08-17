@@ -50,7 +50,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	font: italic normal 14px calibri; /*To be changed*/
-	color: gray;
+	color: #303238;
 }
 
 @mixin policyDateTxt_Laptop_Style{
@@ -60,7 +60,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	font: italic normal 16px calibri; /*changed*/
-	color: gray;
+	color: #303238;
 }
 
 @mixin policyDateTxt_Desktop_Style{
@@ -69,7 +69,7 @@
 	overflow: visible;
 	white-space: normal;
 	font: italic normal 18px calibri; /*changed*/
-	color: gray;
+	color: #303238;
 }
 
 
@@ -80,7 +80,7 @@
 	overflow: visible;
 	white-space: normal;
 	font: normal normal 12px calibri; /*To be changed*/
-	color: gray;
+	color: #303238;
 }
 
 @mixin policyUpToDateTxt_Laptop_Style{
@@ -89,7 +89,7 @@
 	overflow: visible;
 	white-space: normal;
 	font: normal normal 14px calibri; /*changed*/
-	color: gray;
+	color: #303238;
 }
 
 @mixin policyUpToDateTxt_Desktop_Style{
@@ -98,7 +98,7 @@
 	overflow: visible;
 	white-space: normal;
 	font: normal normal 16px calibri; /*changed*/
-	color: gray;
+	color: #303238;
 }
 
 
@@ -110,7 +110,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	font: normal normal 20px calibri; /*To be changed*/
-	color: gray;
+	color: #303238;
 	margin: 25px 5px;
 }
 
@@ -121,7 +121,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	font: normal normal 30px calibri; /*changed*/
-	color: gray;
+	color: #303238;
 	margin: 25px 5px;
 }
 
@@ -132,7 +132,7 @@
 	white-space: normal;
 	word-break: keep-all;
 	font: normal normal 40px calibri; /*changed*/
-	color: gray;
+	color: #303238;
 	margin: 25px 5px;
 }
 
@@ -142,21 +142,21 @@
 	font-family: calibri;
 	font-size: 14px; /*To be changed*/
 	font-style: normal;
-	color: gray;
+	color: #303238;
 }
 
 @mixin policyTxtFont_Laptop_Style{
 	font-family: calibri;
 	font-size: 16px; /*changed*/
 	font-style: normal;
-	color: gray;
+	color: #303238;
 }
 
 @mixin policyTxtFont_Desktop_Style{
 	font-family: calibri;
 	font-size: 18px; /*changed*/
 	font-style: normal;
-	color: gray;
+	color: #303238;
 }
 
 

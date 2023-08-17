@@ -29,11 +29,6 @@
 /*Global Office Page Header*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Global Background Image Container*/
-/*Global Background Image Container*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -3371,6 +3366,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --cusCheckboxBorderColor: gray;
   --spinnerWidthHeight: 75px; }
 
+body {
+  background-color: #E8EFFF;
+  background-image: url("./src/sampleformbg.jpg");
+  background-position: center;
+  background-size: contain; }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3381,32 +3382,50 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 @media all and (max-width: 641px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 25px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: var(--pageHeaderBackground) center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: normal bold 27px calibri;
-    /*To be changed*/
-    color: #ffffff; }
-
-  .pageHeaderWrap > .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 18px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
     color: #ffffff;
-    max-width: 720px;
-    margin-top: 8px; } }
+    max-width: 300px;
+    /*To be changed*/
+    padding: 8px 10px; }
+
+  .pageHeaderWrap .pageHeaderSubtxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font: normal normal 16px calibri;
+    /*To be changed*/
+    color: #ffffff;
+    max-width: 300px;
+    /*To be changed*/
+    padding: 0px 10px 10px 10px; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3414,32 +3433,50 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 @media all and (min-width: 642px) and (max-width: 1080px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 25px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: var(--pageHeaderBackground) center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: normal bold 27px calibri;
-    /*To be changed*/
-    color: #ffffff; }
-
-  .pageHeaderWrap > .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 18px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
     color: #ffffff;
-    max-width: 720px;
-    margin-top: 8px; } }
+    max-width: 300px;
+    /*To be changed*/
+    padding: 8px 10px; }
+
+  .pageHeaderWrap .pageHeaderSubtxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font: normal normal 16px calibri;
+    /*To be changed*/
+    color: #ffffff;
+    max-width: 300px;
+    /*To be changed*/
+    padding: 0px 10px 10px 10px; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3447,22 +3484,39 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 @media all and (min-width: 1081px) and (max-width: 1600px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 25px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: var(--pageHeaderBackground) center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: normal bold 29px calibri;
+    font: normal bold 28px calibri;
     /*changed*/
-    color: #ffffff; }
+    color: #ffffff;
+    max-width: auto;
+    /*changed*/
+    padding: 8px 60px; }
 
-  .pageHeaderWrap > .pageHeaderSubtxt {
+  .pageHeaderWrap .pageHeaderSubtxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -3471,8 +3525,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: normal normal 20px calibri;
     /*changed*/
     color: #ffffff;
-    max-width: 820px;
-    margin-top: 8px; } }
+    max-width: 720px;
+    /*changed*/
+    padding: 0px 60px 10px 60px; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3480,32 +3535,50 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 @media all and (min-width: 1601px) {
   .pageHeaderWrap {
     position: relative;
+    display: block;
     overflow: visible;
     box-sizing: border-box;
-    background: linear-gradient(to right, #1B85BD, #208996);
-    padding: 15px 25px; }
+    background-color: transparent;
+    height: auto; }
 
-  .pageHeaderWrap > .pageHeaderTxt {
+  .pageHeaderWrap .pageHeaderItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-shrink: 0;
+    width: auto;
+    height: auto; }
+
+  .pageHeaderBg-Class {
+    background: var(--pageHeaderBackground) center no-repeat;
+    background-size: cover;
+    /*changed*/ }
+
+  .pageHeaderWrap .pageHeaderTxt {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: normal bold 31px calibri;
-    /*changed*/
-    color: #ffffff; }
-
-  .pageHeaderWrap > .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 22px calibri;
+    font: normal bold 32px calibri;
     /*changed*/
     color: #ffffff;
-    max-width: 1020px;
-    margin-top: 8px; } }
+    max-width: auto;
+    /*changed*/
+    padding: 8px 60px; }
+
+  .pageHeaderWrap .pageHeaderSubtxt {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    font: normal normal 24px calibri;
+    /*changed*/
+    color: #ffffff;
+    max-width: 920px;
+    /*changed*/
+    padding: 0px 60px 10px 60px; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Page Header*/
@@ -3549,7 +3622,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: italic normal 14px calibri;
     /*To be changed*/
-    color: gray; }
+    color: #303238; }
 
   .policyUpToDateTxt {
     position: relative;
@@ -3558,7 +3631,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     white-space: normal;
     font: normal normal 12px calibri;
     /*To be changed*/
-    color: gray; }
+    color: #303238; }
 
   /*_Policy date details*/
   /*_Policy big label*/
@@ -3570,7 +3643,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: normal normal 20px calibri;
     /*To be changed*/
-    color: gray;
+    color: #303238;
     margin: 25px 5px; }
 
   /*_Policy big label*/
@@ -3586,7 +3659,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font-size: 14px;
     /*To be changed*/
     font-style: normal;
-    color: gray; }
+    color: #303238; }
 
   /*_Policy Paragraph*/
   /*_Accept terms and agreement*/
@@ -3678,7 +3751,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: italic normal 14px calibri;
     /*To be changed*/
-    color: gray; }
+    color: #303238; }
 
   .policyUpToDateTxt {
     position: relative;
@@ -3687,7 +3760,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     white-space: normal;
     font: normal normal 12px calibri;
     /*To be changed*/
-    color: gray; }
+    color: #303238; }
 
   /*_Policy date details*/
   /*_Policy big label*/
@@ -3699,7 +3772,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: normal normal 20px calibri;
     /*To be changed*/
-    color: gray;
+    color: #303238;
     margin: 25px 5px; }
 
   /*_Policy big label*/
@@ -3715,7 +3788,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font-size: 14px;
     /*To be changed*/
     font-style: normal;
-    color: gray; }
+    color: #303238; }
 
   /*_Policy Paragraph*/
   /*_Accept terms and agreement*/
@@ -3808,7 +3881,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: italic normal 16px calibri;
     /*changed*/
-    color: gray; }
+    color: #303238; }
 
   .policyUpToDateTxt {
     position: relative;
@@ -3817,7 +3890,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     white-space: normal;
     font: normal normal 14px calibri;
     /*changed*/
-    color: gray; }
+    color: #303238; }
 
   /*_Policy date details*/
   /*_Policy big label*/
@@ -3829,7 +3902,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: normal normal 30px calibri;
     /*changed*/
-    color: gray;
+    color: #303238;
     margin: 25px 5px; }
 
   /*_Policy big label*/
@@ -3845,7 +3918,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font-size: 16px;
     /*changed*/
     font-style: normal;
-    color: gray; }
+    color: #303238; }
 
   /*_Policy Paragraph*/
   /*_Accept terms and agreement*/
@@ -3937,7 +4010,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     white-space: normal;
     font: italic normal 18px calibri;
     /*changed*/
-    color: gray; }
+    color: #303238; }
 
   .policyUpToDateTxt {
     position: relative;
@@ -3946,7 +4019,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     white-space: normal;
     font: normal normal 16px calibri;
     /*changed*/
-    color: gray; }
+    color: #303238; }
 
   /*_Policy date details*/
   /*_Policy big label*/
@@ -3958,7 +4031,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     word-break: keep-all;
     font: normal normal 40px calibri;
     /*changed*/
-    color: gray;
+    color: #303238;
     margin: 25px 5px; }
 
   /*_Policy big label*/
@@ -3974,7 +4047,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font-size: 18px;
     /*changed*/
     font-style: normal;
-    color: gray; }
+    color: #303238; }
 
   /*_Policy Paragraph*/
   /*_Accept terms and agreement*/

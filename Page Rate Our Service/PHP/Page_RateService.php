@@ -70,7 +70,7 @@ if(isset($_GET["rateToken"])){
 
 			<!--Page Header-->
 			<div class="pageHeaderWrap">
-				<div class="pageHeaderItem pageHeaderBg-Class">
+				<div class="pageHeaderItem pageHeaderBg-Class" style="--pageHeaderBackground: url('../../src/Banner One.png')">
 					<div class="pageHeaderTxt">Client Satisfaction Measurement (CSM)</div>
 					<div class="pageHeaderSubtxt" id="headerDynamicSubTxt-Id">This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.</div>
 				</div>								

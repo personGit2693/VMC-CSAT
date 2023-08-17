@@ -29,11 +29,6 @@
 /*Global Office Page Header*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Global Background Image Container*/
-/*Global Background Image Container*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /*From another mixin*/
@@ -3441,7 +3436,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: bold normal 18px calibri;
     /*To be changed*/
     text-align: center;
-    color: #494C55;
+    color: #303238;
     margin-bottom: 7px; }
 
   /*Side Nav Header*/
@@ -3450,7 +3445,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuFSize: 16px;
     /*To be changed*/
     --mainNavMenuBgColor: transparent;
-    --mainNavMenuFColor: #494C55;
+    --mainNavMenuFColor: #303238;
     --hoverMainNavMenuBgColor: #247F4F;
     --hoverMainNavMenuFColor: #ffffff; }
 
@@ -3468,7 +3463,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --subNavMenuBgColor: transparent;
     --subNavMenuFSize: 16px;
     /*To be changed*/
-    --subNavMenuFColor: #494C55;
+    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
@@ -3517,7 +3512,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: bold normal 18px calibri;
     /*To be changed*/
     text-align: center;
-    color: #494C55;
+    color: #303238;
     margin-bottom: 7px; }
 
   /*Side Nav Header*/
@@ -3526,7 +3521,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuFSize: 16px;
     /*To be changed*/
     --mainNavMenuBgColor: transparent;
-    --mainNavMenuFColor: #494C55;
+    --mainNavMenuFColor: #303238;
     --hoverMainNavMenuBgColor: #247F4F;
     --hoverMainNavMenuFColor: #ffffff; }
 
@@ -3544,7 +3539,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --subNavMenuBgColor: transparent;
     --subNavMenuFSize: 16px;
     /*To be changed*/
-    --subNavMenuFColor: #494C55;
+    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
@@ -3593,7 +3588,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: bold normal 20px calibri;
     /*changed*/
     text-align: center;
-    color: #494C55;
+    color: #303238;
     margin-bottom: 7px; }
 
   /*Side Nav Header*/
@@ -3602,7 +3597,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuFSize: 18px;
     /*changed*/
     --mainNavMenuBgColor: transparent;
-    --mainNavMenuFColor: #494C55;
+    --mainNavMenuFColor: #303238;
     --hoverMainNavMenuBgColor: #247F4F;
     --hoverMainNavMenuFColor: #ffffff; }
 
@@ -3620,7 +3615,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --subNavMenuBgColor: transparent;
     --subNavMenuFSize: 18px;
     /*changed*/
-    --subNavMenuFColor: #494C55;
+    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
@@ -3669,7 +3664,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     font: bold normal 22px calibri;
     /*changed*/
     text-align: center;
-    color: #494C55;
+    color: #303238;
     margin-bottom: 7px; }
 
   /*Side Nav Header*/
@@ -3678,7 +3673,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuFSize: 20px;
     /*changed*/
     --mainNavMenuBgColor: transparent;
-    --mainNavMenuFColor: #494C55;
+    --mainNavMenuFColor: #303238;
     --hoverMainNavMenuBgColor: #247F4F;
     --hoverMainNavMenuFColor: #ffffff; }
 
@@ -3696,7 +3691,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --subNavMenuBgColor: transparent;
     --subNavMenuFSize: 20px;
     /*changed*/
-    --subNavMenuFColor: #494C55;
+    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
@@ -3787,7 +3782,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 16px;
     /*To be changed*/
-    --projectTitleTextFColor: #494C55; }
+    --projectTitleTextFColor: #303238; }
 
   .userLoginIconWrap_RoClass {
     --projectTitleUserIconSize: 22px;
@@ -3800,7 +3795,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 16px;
     /*To be changed*/
-    --projectTitleTextFColor: #494C55; }
+    --projectTitleTextFColor: #303238; }
 
   .userLoginIconWrap_RoClass {
     --projectTitleUserIconSize: 22px;
@@ -3813,7 +3808,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 20px;
     /*changed*/
-    --projectTitleTextFColor: #494C55; }
+    --projectTitleTextFColor: #303238; }
 
   .userLoginIconWrap_RoClass {
     --projectTitleUserIconSize: 26px;
@@ -3826,7 +3821,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .projTitleTxt_RoClass, .userLoginDetails_RoClass {
     --projectTitleTextFSize: 24px;
     /*changed*/
-    --projectTitleTextFColor: #494C55; }
+    --projectTitleTextFColor: #303238; }
 
   .userLoginIconWrap_RoClass {
     --projectTitleUserIconSize: 30px;

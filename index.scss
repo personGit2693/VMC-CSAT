@@ -22,6 +22,14 @@
 
 	--spinnerWidthHeight: 75px;
 }
+
+
+body{
+	background-color: #E8EFFF;
+	background-image: url("./src/sampleformbg.jpg");	
+	background-position: center;
+	background-size: contain;
+}
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -39,11 +47,19 @@
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_MT_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_MT_Style;
 	}
 }
@@ -57,11 +73,19 @@
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_MT_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_MT_Style;
 	}
 }
@@ -75,11 +99,19 @@
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_Laptop_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_Laptop_Style;
 	}
 }
@@ -93,11 +125,19 @@
 		@include globalPageHeaderWrap_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderTxt{
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
 		@include globalPageHeaderTxt_Desktop_Style;
 	}
 
-	.pageHeaderWrap>.pageHeaderSubtxt{
+	.pageHeaderWrap .pageHeaderSubtxt{
 		@include globalPageHeaderSubTxt_Desktop_Style;
 	}
 }
