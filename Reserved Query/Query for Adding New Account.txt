@@ -1,0 +1,11 @@
+INSERT INTO accounts_tab (
+	account_number,
+	account_password,
+	account_identifier,
+	office_id
+) VALUES (
+	'hrmocsat01',
+	CONVERT('passwordHere', BINARY(255)),
+	'identifierHere',
+	3
+)

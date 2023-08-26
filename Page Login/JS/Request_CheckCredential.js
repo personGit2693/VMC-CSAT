@@ -1,7 +1,7 @@
 /*Import*/
-import renderOfficeRadioBtn from "./View_OfficeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {respondentId, buildingId, floorId} from "../../Global JS/Values_Page_RateService.js";
+import {usernInput, passInput} from "./JSCollection_Page_Login.js";
+import {getIdentifier_Obj} from "./Request_GetIdentifier.js";
 /*Import*/
 
 
@@ -12,30 +12,31 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var officeDetails_Array = [];
+var checkCredential_Obj = {};
 /*Export variables*/
 
 
-/*Get office details*/
-function requestOffices(){
+/*Check Credential*/
+function requestCheckCredential(){
 
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
-
+								
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting floors has execution problem");
-				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					officeDetails_Array = httpResponse.officeDetails_Array;
-					renderOfficeRadioBtn();						
+					alert("Checking credential has execution problem!");
+				}else if(httpResponse.validAccount == 0){
+					alert("Wrong Account username or password!");
+				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null && httpResponse.validAccount != 0){
+					checkCredential_Obj = httpResponse;				
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Offices");
+				alert("Response is not an object on checking Credential!");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,18 +44,19 @@ function requestOffices(){
 		}
 	}
 
+
 	const queryString = "token="+token+
-	"&respondentId="+respondentId+
-	"&buildingId="+buildingId+
-	"&floorId="+floorId;
+	"&usernInput="+encodeURIComponent(usernInput.value)+
+	"&passInput="+encodeURIComponent(passInput.value)+
+	"&identifier="+getIdentifier_Obj.identifier;
 	
-	httpRequest.open("POST", "../PHP/Response_Offices.php", false);
+	httpRequest.open("POST", "Response_CheckCredential.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString); 	
 }
-/*Get office details*/
+/*Check Credential*/
 
 
 /*Export*/
-export {requestOffices ,officeDetails_Array};
+export {requestCheckCredential, checkCredential_Obj};
 /*Export*/

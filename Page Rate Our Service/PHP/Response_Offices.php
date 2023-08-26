@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["buildingId"]) && isset($_POST["floorId"])){
+if(isset($_POST["token"]) && isset($_POST["respondentId"]) && isset($_POST["buildingId"]) && isset($_POST["floorId"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -15,6 +15,7 @@ if(isset($_POST["token"]) && isset($_POST["buildingId"]) && isset($_POST["floorI
 
 	/*Query string*/
 	$token = $_POST["token"];
+	$respondentId = $_POST["respondentId"];
 	$buildingId = $_POST["buildingId"];
 	$floorId = $_POST["floorId"];
 	/*Query string*/
@@ -64,14 +65,27 @@ if(isset($_POST["token"]) && isset($_POST["buildingId"]) && isset($_POST["floorI
 	if($globalTokenResult === null){
 		/*_Get offices on db*/
 		/*_ _Prep query*/
-		$getOffices_Query = "SELECT * FROM offices_tab 
-			WHERE building_id = :buildingId
-			AND floor_id = :floorId;
+		$getOffices_Query = "
+			SELECT offices_tab.office_id AS 'office_id',
+			offices_tab.office_value AS 'office_value',
+			offices_tab.office_abbre AS 'office_abbre',
+			offices_tab.building_id AS 'building_id',
+			offices_tab.floor_id AS 'floor_id',
+			offices_tab.office_icon AS 'office_icon'
+			FROM respondents_tab  
+			INNER JOIN respondenttags_tab 
+			ON respondents_tab.respondent_id = respondenttags_tab.respondent_id 
+			INNER JOIN offices_tab 
+			ON respondenttags_tab.office_id = offices_tab.office_id 
+			WHERE respondenttags_tab.respondent_id = :respondentId 
+			AND offices_tab.building_id = :buildingId 
+			AND offices_tab.floor_id = :floorId;		
 		";
 		/*_ _Prep query*/
 
 		/*_ _Execute query*/
 		$getOffices_QueryObj = $vmcCsat_Conn->prepare($getOffices_Query);		
+		$getOffices_QueryObj->bindValue(':respondentId', intval($respondentId), PDO::PARAM_INT);
 		$getOffices_QueryObj->bindValue(':buildingId', intval($buildingId), PDO::PARAM_INT);
 		$getOffices_QueryObj->bindValue(':floorId', intval($floorId), PDO::PARAM_INT);
 		$execution = $getOffices_QueryObj->execute();
@@ -96,7 +110,7 @@ if(isset($_POST["token"]) && isset($_POST["buildingId"]) && isset($_POST["floorI
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["buildingId"]) || !isset($_POST["floorId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["respondentId"]) || !isset($_POST["buildingId"]) || !isset($_POST["floorId"])){
 	$getOffices_Resp = new stdClass();
 	$getOffices_Resp->execution = null;
 	$getOffices_Resp->globalTokenResult = null;

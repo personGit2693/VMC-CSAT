@@ -1,3 +1,0 @@
-1. Insert created token into vmc csat db.
-2. Return token as response.
-3. Redirect to page with token.

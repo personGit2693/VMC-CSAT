@@ -2,7 +2,7 @@
 import {dropdownReligion} from "./JsCollection_Page_RateService.js";
 import {renderStepOneBtns, renderStepTwoBtns, renderStepThreeBtns, renderStepFourBtns} from "./View_StepByStepBtns.js";
 import {requestRespondentType} from "./Request_RespondentType.js";
-import {requestAgeRanges} from "./Request_AgeRanges.js";
+/*import {requestAgeRanges} from "./Request_AgeRanges.js";*/
 import {requestGenders} from "./Request_Genders.js";
 import {requestGenderPrefs} from "./Request_GenderPrefs.js";
 import {requestReligions} from "./Request_Religions.js";
@@ -25,7 +25,7 @@ requestRespondentType();
 
 
 /*To render AgeRangesRadioBtns component*/
-requestAgeRanges();
+/*requestAgeRanges();*/
 /*To render AgeRangesRadioBtns component*/
 
 

@@ -13,6 +13,13 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
+	/*Input text Framework*/
+	--customInputColor: #303238;
+	--customInputFSize: 22px;
+	--customInputAnimFSize: 16px;
+	/*Input text Framework*/
+
+
 	/*Radio Input Framework*/	
 	--cusRadioBorderWidth: 1px;
 	--cusRadioBorderColor: gray;
@@ -425,7 +432,7 @@ body{
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_Mobile_Style;
-		@include messageFont_MT_Style;
+		@include messageFont_Style;
 	}
 	/*Step per field*/
 
@@ -433,14 +440,14 @@ body{
 	/*Step per field buttons wrapper*/
 	.stepSetPerFieldWrap>.stepSetBtnsFlex{
 		@include stepSetBtnsFlex_Style;
-		@include messageFont_MT_Style;
+		@include messageFont_Style;
 	}
 	/*Step per field buttons wrapper*/
 
 
 	/*Set of questions wrapper*/
 	.questionsWrap-Class{
-		@include messageFont_MT_Style;
+		@include messageFont_Style;
 	}
 	/*Set of questions wrapper*/
 
@@ -560,7 +567,7 @@ body{
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
-		@include messageFont_MT_Style;
+		@include messageFont_Style;
 	}
 	/*Step per field*/
 
@@ -574,7 +581,7 @@ body{
 
 	/*Set of questions wrapper*/
 	.questionsWrap-Class{
-		@include messageFont_MT_Style;
+		@include messageFont_Style;
 	}
 	/*Set of questions wrapper*/
 
@@ -694,7 +701,7 @@ body{
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
-		@include messageFont_Laptop_Style;
+		@include messageFont_Style;
 	}
 	/*Step per field*/
 
@@ -708,7 +715,7 @@ body{
 
 	/*Set of questions wrapper*/
 	.questionsWrap-Class{
-		@include messageFont_Laptop_Style;
+		@include messageFont_Style;
 	}
 	/*Set of questions wrapper*/
 
@@ -828,7 +835,7 @@ body{
 
 	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
 		@include stepSetPerFieldFlex_TLD_Style;
-		@include messageFont_Desktop_Style;
+		@include messageFont_Style;
 	}
 	/*Step per field*/
 
@@ -842,7 +849,7 @@ body{
 
 	/*Set of questions wrapper*/
 	.questionsWrap-Class{
-		@include messageFont_Desktop_Style;
+		@include messageFont_Style;
 	}
 	/*Set of questions wrapper*/
 

@@ -1,4 +1,5 @@
 /*Import*/
+import {respondentId, officeId} from "../../Global JS/Values_Page_RateService.js";
 import {commentQuestionDetails_Array} from "./Request_CommentQuestions.js";
 /*Import*/
 
@@ -21,7 +22,15 @@ function CommentField(){
 	}
 
 	if(commentField == ""){
-		commentField = "No Fields to provide your comments and suggestions!";
+		if(respondentId == "" && officeId == ""){
+			commentField = "Select Respondent and Point of Entry.";	
+		}else if(respondentId == ""){
+			commentField = "Select Respondent.";	
+		}else if(officeId == ""){
+			commentField = "Select Point of Entry.";
+		}else if(respondentId != "" && officeId != ""){
+			commentField = "No Fields to provide your comments and suggestions!";
+		}		
 	}
 
 	return commentField;

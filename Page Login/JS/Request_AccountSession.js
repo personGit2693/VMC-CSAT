@@ -1,7 +1,7 @@
 /*Import*/
-import renderServiceTypeRadioBtn from "./View_ServiceTypeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
+import {getIdentifier_Obj} from "./Request_GetIdentifier.js";
+import {generateAccToken_Obj} from "./Request_GenerateAccToken.js";
 /*Import*/
 
 
@@ -12,30 +12,30 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var serviceTypeDetails_Array = [];
+var accountSession_Obj = {};
 /*Export variables*/
 
 
-/*Get office details*/
-function requestServiceTypes(){
+/*Create Account Session*/
+function requestAccountSession(){
 
 	httpRequest.onload = function(){
-		if(httpRequest.status == 200){			
+		if(httpRequest.status == 200){
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
-
+								
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting service types has execution problem");
+					alert("Creating account session has execution problem!");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					serviceTypeDetails_Array = httpResponse.serviceTypeDetails_Array;
-					renderServiceTypeRadioBtn();						
+					accountSession_Obj = httpResponse;				
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Service-Type");
+				alert(httpRequest.responseText);
+				alert("Response is not an object on creating account session!");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,17 +43,21 @@ function requestServiceTypes(){
 		}
 	}
 
+
 	const queryString = "token="+token+
-	"&officeId="+officeId+
-	"&clientTypeId="+clientTypeId;
+	"&accountNumber="+getIdentifier_Obj.accountNumber+
+	"&officeId="+getIdentifier_Obj.officeId+
+	"&identifier="+getIdentifier_Obj.identifier+
+	"&active="+getIdentifier_Obj.active+
+	"&accToken="+generateAccToken_Obj.accToken;	
 	
-	httpRequest.open("POST", "Response_ServiceTypes.php", false);
+	httpRequest.open("POST", "Response_AccountSession.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString); 	
 }
-/*Get office details*/
+/*Create Account Session*/
 
 
 /*Export*/
-export {requestServiceTypes ,serviceTypeDetails_Array};
+export {requestAccountSession, accountSession_Obj};
 /*Export*/

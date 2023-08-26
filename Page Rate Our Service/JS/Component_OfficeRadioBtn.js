@@ -1,4 +1,5 @@
 /*Import*/
+import {respondentId, buildingId, floorId} from "../../Global JS/Values_Page_RateService.js";
 import {officeDetails_Array} from "./Request_Offices.js";
 /*Import*/
 
@@ -20,8 +21,18 @@ function OfficeRadioBtn(){
 	}
 
 	if(officeRadioBtn == ""){
-		officeRadioBtn = "No offices found to select!";
-	}
+		if(respondentId == "" && buildingId == "" && floorId == ""){
+			officeRadioBtn = "Select Respondent, building and floor.";
+		}else if(respondentId == ""){
+			officeRadioBtn = "Select Respondent.";
+		}else if(buildingId == ""){
+			officeRadioBtn = "Select building.";
+		}else if(floorId == ""){
+			officeRadioBtn = "Select floor.";
+		}else if(respondentId != "" && buildingId != "" && floorId != ""){
+			officeRadioBtn = "No offices found to select!";
+		}		
+	}	
 
 	return officeRadioBtn;
 }

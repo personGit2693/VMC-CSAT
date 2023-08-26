@@ -1,4 +1,5 @@
 /*Import*/
+import {serviceTypeId, respondentId, officeId} from "../../Global JS/Values_Page_RateService.js";
 import {officeServiceDetails_Array} from "./Request_OfficeServices.js";
 /*Import*/
 
@@ -19,7 +20,17 @@ function OfficeServiceCheckbox(){
 	}
 
 	if(officeServiceCheckbox == ""){
-		officeServiceCheckbox = "No Services found to select!";
+		if(serviceTypeId == "" && respondentId == "" && officeId == ""){
+			officeServiceCheckbox = "Select Respondent, Point of Entry Department Visited and Service-Type.";
+		}else if(serviceTypeId == ""){
+			officeServiceCheckbox = "Select Service-Type.";
+		}else if(respondentId == ""){
+			officeServiceCheckbox = "Select Respondent.";
+		}else if(officeId == ""){
+			officeServiceCheckbox = "Select Point of Entry Department Visited.";
+		}else if(serviceTypeId != "" && respondentId != "" && officeId != ""){
+			officeServiceCheckbox = "No Services found to select!";
+		}		
 	}
 
 	return officeServiceCheckbox;

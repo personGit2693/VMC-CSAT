@@ -45,6 +45,7 @@ function requestEncodeRespondentDetails(){
 	const queryString = "token="+token+
 	"&clientResponseRef="+submittedRate.respondentDetails.clientResponseRef+
 	"&respondentId="+submittedRate.respondentDetails.respondentId+
+	"&clientResponseAge="+submittedRate.respondentDetails.clientResponseAge+
 	"&ageRangeId="+submittedRate.respondentDetails.ageRangeId+
 	"&genderId="+submittedRate.respondentDetails.genderId+
 	"&genderPreferenceId="+submittedRate.respondentDetails.genderPreferenceId+

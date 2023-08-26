@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respondentId"]) && isset($_POST["ageRangeId"]) && isset($_POST["genderId"]) && isset($_POST["genderPreferenceId"]) && isset($_POST["religionId"]) && isset($_POST["educationId"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"]) && isset($_POST["freqVisitId"])){
+if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respondentId"]) && isset($_POST["clientResponseAge"]) && isset($_POST["ageRangeId"]) && isset($_POST["genderId"]) && isset($_POST["genderPreferenceId"]) && isset($_POST["religionId"]) && isset($_POST["educationId"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"]) && isset($_POST["freqVisitId"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -16,7 +16,8 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 	/*Query string*/
 	$token = $_POST["token"];
 	$clientResponseRef = $_POST["clientResponseRef"];
-	$respondentId = $_POST["respondentId"];	
+	$respondentId = $_POST["respondentId"];
+	$clientResponseAge = $_POST["clientResponseAge"];	
 	$ageRangeId = $_POST["ageRangeId"];
 	$genderId = $_POST["genderId"];
 	$genderPreferenceId = $_POST["genderPreferenceId"];
@@ -74,7 +75,8 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 		/*_ _Prep query*/
 		$encodeRespondentDetails_Query = "INSERT INTO clientresponses_tab (clientresponse_reference,
 				respondent_id, 
-				agerange_id, 
+				agerange_id,
+				clientresponse_age, 
 				gender_id,
 				genderpreference_id,
 				religion_id,
@@ -87,6 +89,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 				:clientResponseRef,
 				:respondentId,
 				:ageRangeId,
+				:clientResponseAge,
 				:genderId,
 				:genderPreferenceId,
 				:religionId,
@@ -103,6 +106,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 		$encodeRespondentDetails_QueryObj->bindValue(':clientResponseRef', $clientResponseRef, PDO::PARAM_STR);
 		$encodeRespondentDetails_QueryObj->bindValue(':respondentId', intval($respondentId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':ageRangeId', intval($ageRangeId), PDO::PARAM_INT);
+		$encodeRespondentDetails_QueryObj->bindValue(':clientResponseAge', intval($clientResponseAge), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':genderId', intval($genderId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':genderPreferenceId', intval($genderPreferenceId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':religionId', intval($religionId), PDO::PARAM_INT);
@@ -130,7 +134,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["clientResponseRef"]) || !isset($_POST["respondentId"]) || !isset($_POST["ageRangeId"]) || !isset($_POST["genderId"]) || !isset($_POST["genderPreferenceId"]) || !isset($_POST["religionId"]) || !isset($_POST["educationId"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"]) || !isset($_POST["freqVisitId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["clientResponseRef"]) || !isset($_POST["respondentId"]) || !isset($_POST["clientResponseAge"]) || !isset($_POST["ageRangeId"]) || !isset($_POST["genderId"]) || !isset($_POST["genderPreferenceId"]) || !isset($_POST["religionId"]) || !isset($_POST["educationId"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"]) || !isset($_POST["freqVisitId"])){
 	$encodeRespondentDetails_Resp = new stdClass();
 	$encodeRespondentDetails_Resp->execution = null;
 	$encodeRespondentDetails_Resp->globalTokenResult = null;

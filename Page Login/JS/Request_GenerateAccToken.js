@@ -1,7 +1,6 @@
 /*Import*/
-import renderServiceTypeRadioBtn from "./View_ServiceTypeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
+import {usernInput} from "./JSCollection_Page_Login.js";
 /*Import*/
 
 
@@ -12,30 +11,32 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var serviceTypeDetails_Array = [];
+var generateAccToken_Obj = {};
 /*Export variables*/
 
 
-/*Get office details*/
-function requestServiceTypes(){
+/*Generate account token*/
+function requestGenerateAccToken(){
 
 	httpRequest.onload = function(){
-		if(httpRequest.status == 200){			
+		if(httpRequest.status == 200){
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
-
+								
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting service types has execution problem");
-				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					serviceTypeDetails_Array = httpResponse.serviceTypeDetails_Array;
-					renderServiceTypeRadioBtn();						
+					alert("Generating token has execution problem!");
+				}else if(httpResponse.tokenCreated == 0){
+					alert("No token has been generated! cannot login as of this momment.");
+				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null && httpResponse.tokenCreated != 0){
+					generateAccToken_Obj = httpResponse;				
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Service-Type");
+				alert(httpRequest.responseText);
+				alert("Response is not an object on generating token!");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,17 +44,17 @@ function requestServiceTypes(){
 		}
 	}
 
+
 	const queryString = "token="+token+
-	"&officeId="+officeId+
-	"&clientTypeId="+clientTypeId;
+	"&usernInput="+encodeURIComponent(usernInput.value);	
 	
-	httpRequest.open("POST", "Response_ServiceTypes.php", false);
+	httpRequest.open("POST", "Response_GenerateAccToken.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString); 	
 }
-/*Get office details*/
+/*Generate account token*/
 
 
 /*Export*/
-export {requestServiceTypes ,serviceTypeDetails_Array};
+export {requestGenerateAccToken, generateAccToken_Obj};
 /*Export*/

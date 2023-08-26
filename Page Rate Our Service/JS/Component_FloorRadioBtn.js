@@ -1,4 +1,5 @@
 /*Import*/
+import {buildingId} from "../../Global JS/Values_Page_RateService.js";
 import {floorDetails_Array} from "./Request_Floors.js";
 /*Import*/
 
@@ -20,7 +21,11 @@ function FloorRadioBtn(){
 	}
 
 	if(floorRadioBtn == ""){
-		floorRadioBtn = "No floors found!";
+		if(buildingId == ""){
+			floorRadioBtn = "Select Building.";
+		}else if(buildingId != ""){
+			buildingId == "No Floors found to select!"
+		}		
 	}
 
 	return floorRadioBtn;

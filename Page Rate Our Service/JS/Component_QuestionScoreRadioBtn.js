@@ -1,4 +1,5 @@
 /*Import*/
+import {respondentId, officeId} from "../../Global JS/Values_Page_RateService.js";
 import {questionDetails_Array} from "./Request_Questions.js";
 import {scoreDetails_Array} from "./Request_Scores.js";
 /*Import*/
@@ -54,7 +55,15 @@ function QuestionScoreRadioBtn(){
 	}
 
 	if(questionScoreRadioBtn == ""){
-		questionScoreRadioBtn = "No set if questions found to select!";
+		if(respondentId == "" && officeId == ""){
+			questionScoreRadioBtn = "Select Respondent and Point of Entry.";	
+		}else if(respondentId == ""){
+			questionScoreRadioBtn = "Select Respondent.";	
+		}else if(officeId == ""){
+			questionScoreRadioBtn = "Select Point of Entry.";
+		}else if(respondentId != "" && officeId != ""){
+			questionScoreRadioBtn = "No set if questions found to select!";
+		}		
 	}
 
 	return questionScoreRadioBtn;

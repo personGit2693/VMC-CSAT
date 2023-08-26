@@ -1,4 +1,5 @@
 /*Import*/
+import {respondentId, officeId} from "../../Global JS/Values_Page_RateService.js";
 import {serviceTypeDetails_Array} from "./Request_ServiceTypes.js";
 /*Import*/
 
@@ -20,7 +21,15 @@ function ServiceTypeRadioBtn(){
 	}
 
 	if(serviceTypeRadioBtn == ""){
-		serviceTypeRadioBtn = "No Service-Type found to select!";
+		if(respondentId == "" && officeId == ""){
+			serviceTypeRadioBtn = "Select Respondent and Point of Entry Department Visited.";
+		}else if(respondentId == ""){
+			serviceTypeRadioBtn = "Select Respondent.";
+		}else if(officeId == ""){
+			serviceTypeRadioBtn = "Select Point of Entry Department Visited.";
+		}else if(respondentId != "" && officeId != ""){
+			serviceTypeRadioBtn = "No Service-Type found to select!";
+		}		
 	}
 
 	return serviceTypeRadioBtn;

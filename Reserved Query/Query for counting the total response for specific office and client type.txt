@@ -1,6 +1,0 @@
-SELECT COUNT(questionresponses_tab.questionresponse_id) AS 'overallEngagement' 
-FROM questionresponses_tab 
-INNER JOIN clientresponses_tab 
-ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
-WHERE clientresponses_tab.office_id = 3 
-AND (clientresponses_tab.clienttype_id = 1 OR clientresponses_tab.clienttype_id = 2);

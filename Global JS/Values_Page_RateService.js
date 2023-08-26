@@ -12,6 +12,7 @@ import {questionDetails_Array} from "../Page Rate Our Service/JS/Request_Questio
 /*Prep export variables*/
 var clientResponseRef = "";
 var respondentId = "";
+var clientResponseAge = "";
 var ageRangeId = "";
 var genderId = "";
 var genderPreferenceId = "";
@@ -36,12 +37,14 @@ var submittedRate = {
 	respondentDetails:{
 		clientResponseRef: clientResponseRef,
 		respondentId: respondentId, 
+		clientResponseAge: clientResponseAge,
 		ageRangeId: ageRangeId,
 		genderId: genderId,
 		genderPreferenceId: genderPreferenceId,
 		religionId: religionId,
 		educationId: educationId,
 		officeId: officeId,
+		serviceTypeId: serviceTypeId,
 		clientTypeId: clientTypeId,
 		freqVisitId: freqVisitId
 	},
@@ -58,12 +61,23 @@ var submittedRate = {
 
 
 /*Assign Value for ageRangeId*/
-function valueAgeRange(selectedAgeRange_Base){
-	const selectedAgeRange_Obj = JSON.parse(atob(selectedAgeRange_Base));
+function valueAgeRange(ageInputVal){	
 
-	ageRangeId = selectedAgeRange_Obj.agerange_id;
+	clientResponseAge = ageInputVal;
+	if(parseInt(ageInputVal) <= 19){
+		ageRangeId = 1;		
+	}else if(parseInt(ageInputVal) > 19 && parseInt(ageInputVal) <= 34){
+		ageRangeId = 2;
+	}else if(parseInt(ageInputVal) > 34 && parseInt(ageInputVal) <= 49){
+		ageRangeId = 3;
+	}else if(parseInt(ageInputVal) > 49 && parseInt(ageInputVal) <= 64){
+		ageRangeId = 4;
+	}else if(parseInt(ageInputVal) > 64){
+		ageRangeId = 5;
+	}	
 
 	submittedRate.respondentDetails.ageRangeId = ageRangeId;
+	submittedRate.respondentDetails.clientResponseAge = clientResponseAge;
 }
 /*Assign Value for ageRangeId*/
 
@@ -116,14 +130,8 @@ function valueEducAttain(selectedEducAttain_Base){
 function valueBuilding(selectedBuilding_Base){
 	const selectedBuilding_Obj = JSON.parse(atob(selectedBuilding_Base));
 
-	floorId = "";
-	officeId = "";
-	buildingId = selectedBuilding_Obj.building_id;
-
-	submittedRate.respondentDetails.officeId = officeId;
-
-	floorRadioBtnsWrap.innerHTML = "Choose building first.";
-	officeRadioBtnsWrap.innerHTML = "Select building and floor.";
+	floorId = "";	
+	buildingId = selectedBuilding_Obj.building_id;	
 }
 /*Assign Value for buildingId*/
 
@@ -133,11 +141,10 @@ function valueFloor(selectedFloor_Base){
 	const selectedFloor_Obj = JSON.parse(atob(selectedFloor_Base));
 
 	officeId = "";
+
 	floorId = selectedFloor_Obj.floorId;
 
 	submittedRate.respondentDetails.officeId = officeId;
-
-	officeRadioBtnsWrap.innerHTML = "Select building and floor.";
 }
 /*Assign Value for floorId*/
 
@@ -146,24 +153,14 @@ function valueFloor(selectedFloor_Base){
 function valueRespondentType(selectedRespondentType_Base){
 	const selectedRespondentType_Obj = JSON.parse(atob(selectedRespondentType_Base));
 
-	serviceTypeId = "";
-	submittedRate.availedOfficeServices = [];
-	submittedRate.respondentRatings = [];
-	questionGroups = [];
-	selectedQuestionGroups = [];
-	submittedRate.comments = [];
-
+	officeId = "";
+	
 	respondentId = selectedRespondentType_Obj.respondent_id;
 	clientTypeId = selectedRespondentType_Obj.clienttype_id;	
 
 	submittedRate.respondentDetails.respondentId = respondentId;
-	submittedRate.respondentDetails.clientTypeId = clientTypeId;
-	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;	
-
-	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
-	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
-	questionsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
-	commentsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
+	submittedRate.respondentDetails.clientTypeId = clientTypeId;	
+	submittedRate.respondentDetails.officeId = officeId;
 }
 /*Assign Value for clientTypeId, respondentId*/
 
@@ -172,8 +169,7 @@ function valueRespondentType(selectedRespondentType_Base){
 function valueOffice(selectedOffice_Base){
 	const selectedOffice_Obj = JSON.parse(atob(selectedOffice_Base));
 
-	serviceTypeId = "";
-	submittedRate.availedOfficeServices = [];
+	serviceTypeId = "";	
 	submittedRate.respondentRatings = [];
 	questionGroups = [];
 	selectedQuestionGroups = [];
@@ -182,12 +178,7 @@ function valueOffice(selectedOffice_Base){
 	officeId = selectedOffice_Obj.office_id;
 
 	submittedRate.respondentDetails.officeId = officeId;
-	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
-
-	serviceTypeRadioBtnsWrap.innerHTML = "Select Respondent and Point of Entry Department Visited first.";
-	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
-	questionsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
-	commentsWrap.innerHTML = "Please select Respondent-Type and Point of Entry first.";
+	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;;
 }
 /*Assign Value for officeId*/
 
@@ -201,8 +192,6 @@ function valueServiceType(selectedServiceType_Base){
 	serviceTypeId = selectedServiceType_Obj.serviceTypeId;
 
 	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
-
-	officeServiceCheckboxesWrap.innerHTML = "Select Respondent, Point of Entry Department Visited and Service-Type first.";
 }
 /*Assign Value for serviceTypeId*/
 
@@ -247,9 +236,6 @@ function valueAwarenessRating(selectedAwarenessRating_Base){
 	submittedRate.ccRate.visibilityRatingViaId = visibilityRatingViaId;
 	submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;
 
-	cc2RadioBtnsWrap.innerHTML = "No options for Visibility Rating to select!";
-	cc3RadioBtnsWrap.innerHTML = "No options for Helpfulness Rating to select!";
-
 	if(awarenessRatingViaId == 4){
 		visibilityRatingViaId = 12;
 		helpfulnessRatingViaId = 13;
@@ -273,8 +259,6 @@ function valueVisibilityRating(selectedVisibilityRating_Base){
 
 	submittedRate.ccRate.visibilityRatingViaId = visibilityRatingViaId;
 	submittedRate.ccRate.helpfulnessRatingViaId = helpfulnessRatingViaId;
-	
-	cc3RadioBtnsWrap.innerHTML = "No options for Helpfulness Rating to select!";
 
 	if(visibilityRatingViaId == 8){
 		helpfulnessRatingViaId = 13;
@@ -412,5 +396,5 @@ window.valueClientResponseRef = valueClientResponseRef;
 
 
 /*Export*/
-export {buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId, valuePopRespondentRatings, questionGroups, selectedQuestionGroups};
+export {respondentId, buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId, valuePopRespondentRatings, questionGroups, selectedQuestionGroups};
 /*Export*/

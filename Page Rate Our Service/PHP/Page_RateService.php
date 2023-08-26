@@ -122,9 +122,11 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Age<span class="redAsterisk-Class">*</span></div>
-					<div class="stepSetPerFieldFlex" id="ageRangesRadioBtnsWrap">
-						<!--Component-->
-						Loading...
+					<div class="stepSetPerFieldFlex" id="ageRangesRadioBtnsWrap">																
+						<div class="cusInputs_RoClass">					
+							<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" onkeyup="valueAgeRange(this.value)" required>
+							<div class="placeholdme_RoClass">Provide your age</div>
+						</div>						
 					</div>
 				</div>
 
@@ -196,7 +198,7 @@ if(isset($_GET["rateToken"])){
 					<div class="stepSetPerFieldTitle-Class">Floor<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="floorRadioBtnsWrap">
 						<!--Component-->
-						Choose building first.
+						Select building.
 					</div>
 				</div>
 
@@ -204,7 +206,7 @@ if(isset($_GET["rateToken"])){
 					<div class="stepSetPerFieldTitle-Class">Point of Entry Department Visited<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="officeRadioBtnsWrap">
 						<!--Component-->						
-						Select building and floor.
+						Select Respondent, building and floor.
 					</div>
 				</div>
 
@@ -220,7 +222,7 @@ if(isset($_GET["rateToken"])){
 					<div class="stepSetPerFieldTitle-Class">Service Availed<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="officeServiceCheckboxesWrap">
 						<!--Component-->						
-						Select Respondent, Point of Entry Department Visited and Service-Type first.
+						Select Respondent, Point of Entry Department Visited and Service-Type.
 					</div>
 				</div>
 
@@ -260,7 +262,7 @@ if(isset($_GET["rateToken"])){
 					<div class="stepSetPerFieldTitle-Class">Would you say that the CC of this office was?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc2RadioBtnsWrap">
 						<!--Component-->
-						Choose from CC1 first.	
+						Select CC1 first.	
 					</div>					
 				</div>
 
@@ -268,7 +270,7 @@ if(isset($_GET["rateToken"])){
 					<div class="stepSetPerFieldTitle-Class">How much did the CC help you in your transaction?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc3RadioBtnsWrap">
 						<!--Component-->
-						Choose from CC2 first.
+						Select CC2 first.
 					</div>								
 				</div>
 
@@ -290,7 +292,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="questionsWrap-Class" id="questionsWrap">
 					<!--Component-->
-					Please select Respondent-Type and Point of Entry first.					
+					Select Respondent and Point of Entry.
 				</div>				
 
 				<div class="stepSetPerFieldWrap">
@@ -311,7 +313,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="questionsWrap-Class" id="commentsWrap">	
 					<!--Component-->
-					Please select Respondent-Type and Point of Entry first.									
+					Select Respondent and Point of Entry.								
 				</div>
 
 				<div class="stepSetPerFieldWrap">

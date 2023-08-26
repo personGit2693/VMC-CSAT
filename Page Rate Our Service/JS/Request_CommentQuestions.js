@@ -18,6 +18,7 @@ var commentQuestionDetails_Array = [];
 
 /*Get comment questions details*/
 function requestCommentQuestions(){
+	
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{

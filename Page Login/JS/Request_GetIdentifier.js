@@ -1,7 +1,6 @@
 /*Import*/
-import renderServiceTypeRadioBtn from "./View_ServiceTypeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
+import {usernInput} from "./JSCollection_Page_Login.js";
 /*Import*/
 
 
@@ -12,15 +11,15 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var serviceTypeDetails_Array = [];
+var getIdentifier_Obj = {};
 /*Export variables*/
 
 
-/*Get office details*/
-function requestServiceTypes(){
+/*Get Identifier*/
+function requestGetIdentifier(){
 
 	httpRequest.onload = function(){
-		if(httpRequest.status == 200){			
+		if(httpRequest.status == 200){
 			try{
 				httpResponse = JSON.parse(httpRequest.responseText);
 
@@ -29,13 +28,16 @@ function requestServiceTypes(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting service types has execution problem");
-				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					serviceTypeDetails_Array = httpResponse.serviceTypeDetails_Array;
-					renderServiceTypeRadioBtn();						
+					alert("Getting Identifier has execution problem!");
+				}else if(httpResponse.found == 0){
+					alert("Wrong username or password");
+				}else if(httpResponse.found != 0 && httpResponse.active == 0){
+					alert("Account is deactivated!");
+				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null && httpResponse.found != 0 && httpResponse.active == 1){
+					getIdentifier_Obj = httpResponse;				
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Service-Type");
+				alert("Response is not an object on getting Identifier!");
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,17 +45,17 @@ function requestServiceTypes(){
 		}
 	}
 
+
 	const queryString = "token="+token+
-	"&officeId="+officeId+
-	"&clientTypeId="+clientTypeId;
+	"&usernInput="+encodeURIComponent(usernInput.value);
 	
-	httpRequest.open("POST", "Response_ServiceTypes.php", false);
+	httpRequest.open("POST", "Response_GetIdentifier.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString); 	
 }
-/*Get office details*/
+/*Get Identifier*/
 
 
 /*Export*/
-export {requestServiceTypes ,serviceTypeDetails_Array};
+export {requestGetIdentifier, getIdentifier_Obj};
 /*Export*/

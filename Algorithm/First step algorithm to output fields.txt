@@ -1,0 +1,20 @@
+● Floor algorithm
+	Building (Trigger)
+ 
+● Point Of Entry algorithm
+	Respondent (Trigger)
+	Building 
+	Floor (Trigger)
+
+● Service-Type algorithm
+	Respondent
+	Point Of Entry (Trigger)
+
+● Office Services algorithm
+	Respondent
+	Point Of Entry
+	Service-Type (Trigger)
+
+● Set of questions algorithm	
+	Respondent
+	Point Of Entry (Trigger)

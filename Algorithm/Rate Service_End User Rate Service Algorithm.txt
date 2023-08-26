@@ -1,8 +1,0 @@
-1. Terms and Agreement
-2. Select Office
-3. Select Client Type (Internal Or External)
-4. Select Service Type (Patient Care or Documents)
-5. Fill up form
-6. Fill up CC
-7. Select office services to survey
-8. Submit

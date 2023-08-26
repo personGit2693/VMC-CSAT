@@ -35,7 +35,8 @@ function requestQuestions(){
 					renderQuestionScoreRadioBtn();
 					valuePopRespondentRatings();						
 				}
-			}catch(httpRequest_Error){
+			}catch(httpRequest_Error){				
+				alert(httpRequest.responseText);
 				alert("Response is not an object on getting Questions");
 				alert(httpRequest_Error);
 			}			
@@ -48,7 +49,7 @@ function requestQuestions(){
 	"&clientTypeId="+clientTypeId+
 	"&officeId="+officeId;	
 	
-	httpRequest.open("POST", "../PHP/Response_Questions.php", false);
+	httpRequest.open("POST", "Response_Questions.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString); 	
 }

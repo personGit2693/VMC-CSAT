@@ -27,7 +27,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeId"]) && isset($_POST["offi
 	$getQuestions_Resp->questionDetails_Array = array();
 	$getQuestions_Resp->serverConnection = $serverConnection;
 
-	$execution = null;	
+	$execution = true;	
 	$globalTokenResult = null;
 	$questionDetails_Array = array();
 	/*Prep response*/
@@ -91,7 +91,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeId"]) && isset($_POST["offi
 		";
 		/*_ _Prep query*/
 
-		/*_ _Execute query*/
+		/*_ _Execute query*/		
 		$getQuestions_QueryObj = $vmcCsat_Conn->prepare($getQuestions_Query);
 		$getQuestions_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 		$getQuestions_QueryObj->bindValue(':clientTypeId', intval($clientTypeId), PDO::PARAM_INT);
@@ -99,11 +99,12 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeId"]) && isset($_POST["offi
 		/*_ _Execute query*/
 
 		/*_ _Fetching result*/
+
 		if($execution){
 			while($question_Assoc = $getQuestions_QueryObj->fetch(PDO::FETCH_ASSOC)){
 				$questionDetails_Array[] = $question_Assoc;
 			}
-		}
+		}		
 		/*_ _Fetching result*/
 		/*_Get questions on db*/
 		

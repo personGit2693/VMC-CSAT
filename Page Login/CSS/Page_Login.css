@@ -3350,44 +3350,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Step sets*/
-/*Step sets*/
-/*Step title*/
-/*Step title*/
-/*Step per field group*/
-/*Step per field group*/
-/*Step per field*/
-/*Step per field*/
-/*Step per field buttons wrapper*/
-/*Step per field buttons wrapper*/
-/*Comments and suggestion textarea*/
-/*Comments and suggestion textarea*/
+/*Login Section Style Section*/
+/*Login Section Style Section*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Input text Field Framework*/
-/*Input text Field Framework*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Radio Input Framework*/
-/*Radio Input Framework*/
+/*VMC logo wrapper Section*/
+/*VMC logo wrapper Section*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Checkbox Input Framework*/
-/*Checkbox Input Framework*/
+/*Images Style Section*/
+/*Images Style Section*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Dropdown Menu Framework*/
-/*Dropdown Menu Framework*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Button Framework*/
-/*Button Framework*/
+/*username & password custom inputs margin Style Section*/
+/*username & password custom inputs margin Style Section*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3395,1404 +3374,395 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  /*Input text Framework*/
-  --customInputColor: #303238;
+  --customInputColor: black;
   --customInputFSize: 22px;
   --customInputAnimFSize: 16px;
-  /*Input text Framework*/
-  /*Radio Input Framework*/
-  --cusRadioBorderWidth: 1px;
-  --cusRadioBorderColor: gray;
-  --cusRadioBgColor: transparent;
-  --cusRadioFWeight: normal;
-  --cusRadioFColor: #303238;
-  /*Radio Input Framework*/
-  /*Checkbox Input Framework*/
-  --cusCheckboxFStyle: normal;
-  --cusCheckboxFWeight: normal;
-  --cusCheckboxColor: #303238;
-  --cusCheckboxBorderWidth: 1px;
-  --cusCheckboxBorderColor: gray;
-  /*Checkbox Input Framework*/
-  /*Dropdown Menu Framework*/
-  --cusDropBorderWidth: 1px;
-  --cusDropBorderColor: gray;
-  --cusDropBgColor: transparent;
-  --cusDropSelFColor: #303238;
-  --cusDropSearchBorderWidth: 1px;
-  --cusDropSearchBorderColor: gray;
-  --cusDropSearchFColor: #303238;
-  --cusDropSearchBgColor: #ffffff;
-  --cusDropOptWrapBorderWidth: 1px;
-  --cusDropOptWrapBorderColor: green;
-  --cusDropOptWrapBgColor: #ffffff;
-  --cusDropOptWrapHeight: 180px;
-  --cusDropOptWrapScrollColor: green;
-  --cusDropOptWrapScrollHovColor: green;
-  --cusDropOptLabColor: #303238;
-  --cusDropOptHovLabBgColor: #DEE1E6;
-  /*Dropdown Menu Framework*/
-  /*Button Framework*/
-  --normBtnWidth: auto;
-  --normBtnPadding: 8px;
-  --normBtnBorderWidth: 1px;
-  --normBtnRadius: 4px;
-  --normBtnFWeight: normal;
-  --normBtnFcolor: #ffffff;
-  --normBtnHovActFColor: #ffffff;
-  /*Button Framework*/ }
-
-body {
-  background-color: #E8EFFF;
-  background-image: url("../../src/sampleformbg.jpg");
-  background-position: center;
-  background-size: contain; }
+  --footerBgColor: #285FF3;
+  --footerFSize: 14px;
+  --footerFColor: #ffffff;
+  --spinnerWidthHeight: 75px; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Page Header*/
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
+/*Login Mobile Section*/
 @media all and (max-width: 641px) {
-  .pageHeaderWrap {
+  div#loginSection {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    /*To be changed*/
+    top: none;
+    /*To be changed*/
+    left: none;
+    /*To be changed*/
+    transform: none;
+    /*To be changed*/ }
+
+  /*Vmc Logo Section*/
+  div#loginSection > div#vmcLogoWrap {
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px; }
+
+  div#loginSection > div#vmcLogoWrap > img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Vmc Logo Section*/
+  /*Login Win Section*/
+  div#loginSection > div#loginWin_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: none;
+    /*To be changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    width: auto;
+    font: normal bold 28px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*To be changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    word-break: keep-all;
+    width: auto;
+    font: normal normal 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*To be changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
+    margin-top: 35px; }
+
+  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
+    margin-top: 25px; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class {
     position: relative;
     display: block;
-    overflow: visible;
     box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
-    /*changed*/ }
-
-  .pageHeaderWrap .pageHeaderTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 22px verdana;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 25px;
+    padding: 7px;
     /*To be changed*/
+    font: normal bold 22px calibri;
+    border: none;
+    border-radius: 12px;
+    background-color: #25990B;
     color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 8px 10px; }
+    cursor: pointer;
+    transition: background-color 0.1s linear 0s; }
 
-  .pageHeaderWrap .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 16px calibri;
-    /*To be changed*/
-    color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 0px 10px 10px 10px; } }
-/*Mobile*/
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
+    background-color: #208403; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
+    background-color: #0071BF; }
+
+  /*Login Win Section*/ }
+/*Login Mobile Section*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/*Login Tablet Section*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  .pageHeaderWrap {
-    position: relative;
-    display: block;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
+  div#loginSection {
+    position: absolute;
     box-sizing: border-box;
     overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
+    width: 480px;
+    /*changed*/
+    top: 40%;
+    /*changed*/
+    left: 50%;
+    /*changed*/
+    transform: translate(-50%, -50%);
     /*changed*/ }
 
-  .pageHeaderWrap .pageHeaderTxt {
+  /*Vmc Logo Section*/
+  div#loginSection > div#vmcLogoWrap {
     position: relative;
     box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 22px verdana;
-    /*To be changed*/
-    color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 8px 10px; }
+    width: 100px;
+    height: 100px; }
 
-  .pageHeaderWrap .pageHeaderSubtxt {
+  div#loginSection > div#vmcLogoWrap > img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Vmc Logo Section*/
+  /*Login Win Section*/
+  div#loginSection > div#loginWin_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 2px gray;
+    /*changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    width: auto;
+    font: normal bold 28px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*To be changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: normal normal 16px calibri;
+    width: auto;
+    font: normal normal 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*To be changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
+    margin-top: 35px; }
+
+  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
+    margin-top: 25px; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 25px;
+    padding: 7px;
     /*To be changed*/
+    font: normal bold 22px calibri;
+    border: none;
+    border-radius: 12px;
+    background-color: #25990B;
     color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 0px 10px 10px 10px; } }
-/*Tablet*/
+    cursor: pointer;
+    transition: background-color 0.1s linear 0s; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
+    background-color: #208403; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
+    background-color: #0071BF; }
+
+  /*Login Win Section*/ }
+/*Login Tablet Section*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Login Login Laptop Section*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  .pageHeaderWrap {
-    position: relative;
-    display: block;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
+  div#loginSection {
+    position: absolute;
     box-sizing: border-box;
     overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
+    width: 480px;
+    /*changed*/
+    top: 40%;
+    /*changed*/
+    left: 50%;
+    /*changed*/
+    transform: translate(-50%, -50%);
     /*changed*/ }
 
-  .pageHeaderWrap .pageHeaderTxt {
+  /*Vmc Logo Section*/
+  div#loginSection > div#vmcLogoWrap {
     position: relative;
     box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 28px verdana;
-    /*changed*/
-    color: #ffffff;
-    max-width: auto;
-    /*changed*/
-    padding: 8px 60px; }
+    width: 100px;
+    height: 100px; }
 
-  .pageHeaderWrap .pageHeaderSubtxt {
+  div#loginSection > div#vmcLogoWrap > img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Vmc Logo Section*/
+  /*Login Win Section*/
+  div#loginSection > div#loginWin_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 2px gray;
+    /*changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    width: auto;
+    font: normal bold 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: normal normal 20px calibri;
+    width: auto;
+    font: normal normal 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
+    margin-top: 35px; }
+
+  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
+    margin-top: 25px; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
     /*changed*/
+    font: normal bold 22px calibri;
+    border: none;
+    border-radius: 12px;
+    background-color: #25990B;
     color: #ffffff;
-    max-width: 720px;
-    /*changed*/
-    padding: 0px 60px 10px 60px; } }
-/*Laptop*/
+    cursor: pointer;
+    transition: background-color 0.1s linear 0s; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
+    background-color: #208403; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
+    background-color: #0071BF; }
+
+  /*Login Win Section*/ }
+/*Login Laptop Section*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Login Desktop Section*/
 @media all and (min-width: 1601px) {
-  .pageHeaderWrap {
-    position: relative;
-    display: block;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
-    /*changed*/ }
-
-  .pageHeaderWrap .pageHeaderTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 32px verdana;
-    /*changed*/
-    color: #ffffff;
-    max-width: auto;
-    /*changed*/
-    padding: 8px 60px; }
-
-  .pageHeaderWrap .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 24px calibri;
-    /*changed*/
-    color: #ffffff;
-    max-width: 920px;
-    /*changed*/
-    padding: 0px 60px 10px 60px; } }
-/*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-/*Page Header*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Step by step future framework*/
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width: 641px) {
-  .stepByStepFlex-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: auto;
-    margin: 15px auto 0px auto; }
-
-  .stepByStepLine-Class {
+  div#loginSection {
     position: absolute;
-    display: block;
     box-sizing: border-box;
     overflow: visible;
-    width: 100%;
-    border: 0.4px solid gray;
-    top: 20px;
-    left: 0px;
-    align-self: flex-start; }
-
-  .stepByStepLineLight-Class {
-    border: 0.4px solid green; }
-
-  .stepByStepItem-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: column wrap;
-    align-items: center;
-    width: 270px; }
-
-  .stepNumber-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    background-color: gray;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    /*To be changed*/
-    color: #ffffff;
-    padding: 4px;
-    text-align: center;
-    border-radius: 50%;
-    width: 36px;
-    /*To be changed*/ }
-
-  .stepNumberLight-Class {
-    background-color: green; }
-
-  .stepDefi-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    /*To be changed*/
-    text-align: center;
-    color: gray;
-    padding: 0px 7px; }
-
-  .stepDefiLight-Class {
-    color: green; } }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width: 642px) and (max-width: 1080px) {
-  .stepByStepFlex-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: auto;
-    margin: 15px auto 0px auto; }
-
-  .stepByStepLine-Class {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 100%;
-    border: 0.4px solid gray;
-    top: 20px;
-    left: 0px;
-    align-self: flex-start; }
-
-  .stepByStepLineLight-Class {
-    border: 0.4px solid green; }
-
-  .stepByStepItem-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: column wrap;
-    align-items: center;
-    width: 270px; }
-
-  .stepNumber-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    background-color: gray;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    /*To be changed*/
-    color: #ffffff;
-    padding: 4px;
-    text-align: center;
-    border-radius: 50%;
-    width: 36px;
-    /*To be changed*/ }
-
-  .stepNumberLight-Class {
-    background-color: green; }
-
-  .stepDefi-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    /*To be changed*/
-    text-align: center;
-    color: gray;
-    padding: 0px 7px; }
-
-  .stepDefiLight-Class {
-    color: green; } }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width: 1081px) and (max-width: 1600px) {
-  .stepByStepFlex-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: auto;
-    margin: 15px auto 0px auto; }
-
-  .stepByStepLine-Class {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 100%;
-    border: 0.4px solid gray;
-    top: 20px;
-    left: 0px;
-    align-self: flex-start; }
-
-  .stepByStepLineLight-Class {
-    border: 0.4px solid green; }
-
-  .stepByStepItem-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: column wrap;
-    align-items: center;
-    width: 270px; }
-
-  .stepNumber-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    background-color: gray;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
+    width: 500px;
     /*changed*/
-    color: #ffffff;
-    padding: 4px;
-    text-align: center;
-    border-radius: 50%;
-    width: 38px;
+    top: 40%;
+    /*changed*/
+    left: 50%;
+    /*changed*/
+    transform: translate(-50%, -50%);
     /*changed*/ }
 
-  .stepNumberLight-Class {
-    background-color: green; }
-
-  .stepDefi-Class {
+  /*Vmc Logo Section*/
+  div#loginSection > div#vmcLogoWrap {
     position: relative;
     box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    /*changed*/
-    text-align: center;
-    color: gray;
-    padding: 0px 7px; }
+    width: 100px;
+    height: 100px; }
 
-  .stepDefiLight-Class {
-    color: green; } }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width: 1601px) {
-  .stepByStepFlex-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: auto;
-    margin: 15px auto 0px auto; }
-
-  .stepByStepLine-Class {
-    position: absolute;
+  div#loginSection > div#vmcLogoWrap > img {
     display: block;
     box-sizing: border-box;
-    overflow: visible;
     width: 100%;
-    border: 0.4px solid gray;
-    top: 20px;
-    left: 0px;
-    align-self: flex-start; }
+    height: 100%; }
 
-  .stepByStepLineLight-Class {
-    border: 0.4px solid green; }
-
-  .stepByStepItem-Class {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: column wrap;
-    align-items: center;
-    width: 270px; }
-
-  .stepNumber-Class {
+  /*Vmc Logo Section*/
+  /*Login Win Section*/
+  div#loginSection > div#loginWin_ID {
     position: relative;
     box-sizing: border-box;
-    overflow: visible;
-    background-color: gray;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    /*changed*/
-    color: #ffffff;
-    padding: 4px;
-    text-align: center;
-    border-radius: 50%;
-    width: 42px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 2px gray;
     /*changed*/ }
 
-  .stepNumberLight-Class {
-    background-color: green; }
+  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    width: auto;
+    font: normal bold 35px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*changed*/ }
 
-  .stepDefi-Class {
+  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    font-family: calibri;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    /*changed*/
-    text-align: center;
-    color: gray;
-    padding: 0px 7px; }
-
-  .stepDefiLight-Class {
-    color: green; } }
-/*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-/*Step by step future framework*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Asterisk*/
-/***********************************************************************************************************************************************************************************************************/
-/*General Media*/
-.redAsterisk-Class {
-  color: red; }
-
-.greenAsterisk-Class {
-  color: green; }
-
-/*General Media*/
-/***********************************************************************************************************************************************************************************************************/
-/*Asterisk*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Step sets*/
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width: 641px) {
-  /*Step set itself*/
-  .stepSets-Class {
-    position: relative;
-    display: none;
-    box-sizing: border-box;
-    overflow: visible;
+    word-break: keep-all;
     width: auto;
-    /*To be changed*/
-    margin: 35px 0px 0px 0px;
-    /*To be changed*/
+    font: normal normal 19px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*changed*/ }
+
+  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
+    margin-top: 35px; }
+
+  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
+    margin-top: 25px; }
+
+  div#loginSection > div#loginWin_ID > .signInBtn-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 25px;
     padding: 10px;
-    background-color: #ffffff;
-    background-image: url("../../src/sampleformbg.jpg");
-    background-position: center;
-    background-size: contain; }
-
-  /*Step set itself*/
-  /*Step title*/
-  .stepSets-Class > .stepSetTitleWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin-bottom: 17px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: black;
-    font-family: calibri;
-    font-size: 35px;
-    /*To be changed*/
-    font-style: normal;
-    font-weight: bold;
-    margin-bottom: 7px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: #303238;
-    font-family: calibri;
-    font-size: 18px;
-    /*To be changed*/
-    font-style: normal;
-    font-weight: normal; }
-
-  /*Step title*/
-  /*Step per field group*/
-  .stepSetPerFieldGroup-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font-family: calibri;
-    font-size: 13px;
-    /*To be changed*/
-    font-style: italic;
-    font-weight: bold;
-    color: black;
-    margin-top: 15px; }
-
-  /*Step per field group*/
-  /*Step per field*/
-  .stepSetPerFieldWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin: 30px 0px; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    margin-bottom: 3px;
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: black; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: column nowrap;
-    /*To be changed*/
-    justify-content: flex-start;
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Step per field*/
-  /*Step per field buttons wrapper*/
-  .stepSetPerFieldWrap > .stepSetBtnsFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
-    justify-content: center;
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Step per field buttons wrapper*/
-  /*Set of questions wrapper*/
-  .questionsWrap-Class {
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Set of questions wrapper*/
-  /*Comments and suggestion textarea*/
-  .suggestionTextArea-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    font-family: calibri;
-    font-size: 15px;
-    /*To be changed*/
-    font-style: normal;
-    font-weight: normal;
-    width: auto;
-    /*To be changed*/
-    height: 70px; }
-
-  /*Comments and suggestion textarea*/
-  /*Radio Input Framework*/
-  .radioCheckFlex_RoClass {
-    margin: 5px 0px 0px 5px;
-    /*To be changed*/ }
-
-  .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 18px; }
-
-  .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 22px; }
-
-  .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 105px; }
-
-  /*Radio Input Framework*/
-  /*Checkbox Input Framework*/
-  .cusCheckBoxPaper_RoClass {
-    margin: 5px 0px 0px 0px;
-    /*To be changed*/ }
-
-  .cusCheckBoxPaper_RoClass > label {
-    --custCheckboxFSize: 22px; }
-
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 18px; }
-
-  /*Checkbox Input Framework*/
-  /*Dropdown Menu Framework*/
-  #dropdownReligion-Id {
-    --cusDropZIndex: 1;
-    width: auto;
-    /*To be changed*/ }
-
-  .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 22px; }
-
-  .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 22px; }
-
-  /*Dropdown Menu Framework*/
-  /*Button Framework*/
-  .proceedBtn-Class {
-    --normBtnFSize: 18px;
-    margin: 5px;
-    --normBtnBorderColor: #1B85BD;
-    --normBtnBgColor: #1B85BD;
-    --normBtnHovActBgColor: #2760A7; }
-
-  .backBtn-Class {
-    --normBtnFSize: 18px;
-    margin: 5px;
-    --normBtnBorderColor: #FC5050;
-    --normBtnBgColor: #FC5050;
-    --normBtnHovActBgColor: #E22D41; }
-
-  /*Button Framework*/ }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width: 642px) and (max-width: 1080px) {
-  /*Step set itself*/
-  .stepSets-Class {
-    position: relative;
-    display: none;
-    box-sizing: border-box;
-    overflow: visible;
-    width: auto;
-    /*To be changed*/
-    margin: 35px 0px 0px 0px;
-    /*To be changed*/
-    padding: 10px;
-    background-color: #ffffff;
-    background-image: url("../../src/sampleformbg.jpg");
-    background-position: center;
-    background-size: contain; }
-
-  /*Step set itself*/
-  /*Step title*/
-  .stepSets-Class > .stepSetTitleWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin-bottom: 17px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: black;
-    font-family: calibri;
-    font-size: 35px;
-    /*To be changed*/
-    font-style: normal;
-    font-weight: bold;
-    margin-bottom: 7px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: #303238;
-    font-family: calibri;
-    font-size: 18px;
-    /*To be changed*/
-    font-style: normal;
-    font-weight: normal; }
-
-  /*Step title*/
-  /*Step per field group*/
-  .stepSetPerFieldGroup-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font-family: calibri;
-    font-size: 13px;
-    /*To be changed*/
-    font-style: italic;
-    font-weight: bold;
-    color: black;
-    margin-top: 15px; }
-
-  /*Step per field group*/
-  /*Step per field*/
-  .stepSetPerFieldWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin: 30px 0px; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    margin-bottom: 3px;
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: black; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
     /*changed*/
-    justify-content: flex-start;
-    align-content: flex-start;
-    /*Added*/
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
+    font: normal bold 22px calibri;
+    border: none;
+    border-radius: 12px;
+    background-color: #25990B;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.1s linear 0s; }
 
-  /*Step per field*/
-  /*Step per field buttons wrapper*/
-  .stepSetPerFieldWrap > .stepSetBtnsFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
-    justify-content: center; }
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
+    background-color: #208403; }
 
-  /*Step per field buttons wrapper*/
-  /*Set of questions wrapper*/
-  .questionsWrap-Class {
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
+  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
+    background-color: #0071BF; }
 
-  /*Set of questions wrapper*/
-  /*Comments and suggestion textarea*/
-  .suggestionTextArea-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    font-family: calibri;
-    font-size: 19px;
-    /*changed*/
-    font-style: normal;
-    font-weight: normal;
-    width: 100%;
-    /*changed*/
-    height: 70px; }
-
-  /*Comments and suggestion textarea*/
-  /*Radio Input Framework*/
-  .radioCheckFlex_RoClass {
-    margin: 5px 20px 0px 5px;
-    /*changed*/ }
-
-  .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 18px; }
-
-  .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 22px; }
-
-  .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 105px; }
-
-  /*Radio Input Framework*/
-  /*Checkbox Input Framework*/
-  .cusCheckBoxPaper_RoClass {
-    margin: 5px 20px 0px 0px;
-    /*changed*/ }
-
-  .cusCheckBoxPaper_RoClass > label {
-    --custCheckboxFSize: 22px; }
-
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 18px; }
-
-  /*Checkbox Input Framework*/
-  /*Dropdown Menu Framework*/
-  #dropdownReligion-Id {
-    --cusDropZIndex: 1;
-    width: 310px;
-    /*changed*/ }
-
-  .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 22px; }
-
-  .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 22px; }
-
-  /*Dropdown Menu Framework*/
-  /*Button Framework*/
-  .proceedBtn-Class {
-    --normBtnFSize: 18px;
-    margin: 5px;
-    --normBtnBorderColor: #1B85BD;
-    --normBtnBgColor: #1B85BD;
-    --normBtnHovActBgColor: #2760A7; }
-
-  .backBtn-Class {
-    --normBtnFSize: 18px;
-    margin: 5px;
-    --normBtnBorderColor: #FC5050;
-    --normBtnBgColor: #FC5050;
-    --normBtnHovActBgColor: #E22D41; }
-
-  /*Button Framework*/ }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width: 1081px) and (max-width: 1600px) {
-  /*Step set itself*/
-  .stepSets-Class {
-    position: relative;
-    display: none;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 1080px;
-    /*changed*/
-    margin: 35px auto 0px auto;
-    /*changed*/
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    /*Added*/
-    box-shadow: 0px 0px 5px gray;
-    background-image: url("../../src/sampleformbg.jpg");
-    background-position: center;
-    background-size: contain; }
-
-  /*Step set itself*/
-  /*Step title*/
-  .stepSets-Class > .stepSetTitleWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin-bottom: 17px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: black;
-    font-family: calibri;
-    font-size: 37px;
-    /*changed*/
-    font-style: normal;
-    font-weight: bold;
-    margin-bottom: 7px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: #303238;
-    font-family: calibri;
-    font-size: 20px;
-    /*changed*/
-    font-style: normal;
-    font-weight: normal; }
-
-  /*Step title*/
-  /*Step per field group*/
-  .stepSetPerFieldGroup-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font-family: calibri;
-    font-size: 15px;
-    /*changed*/
-    font-style: italic;
-    font-weight: bold;
-    color: black;
-    margin-top: 15px; }
-
-  /*Step per field group*/
-  /*Step per field*/
-  .stepSetPerFieldWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin: 30px 0px; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    margin-bottom: 3px;
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: black; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
-    /*changed*/
-    justify-content: flex-start;
-    align-content: flex-start;
-    /*Added*/
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Step per field*/
-  /*Step per field buttons wrapper*/
-  .stepSetPerFieldWrap > .stepSetBtnsFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
-    justify-content: center; }
-
-  /*Step per field buttons wrapper*/
-  /*Set of questions wrapper*/
-  .questionsWrap-Class {
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Set of questions wrapper*/
-  /*Comments and suggestion textarea*/
-  .suggestionTextArea-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    font-family: calibri;
-    font-size: 19px;
-    /*changed*/
-    font-style: normal;
-    font-weight: normal;
-    width: 100%;
-    /*changed*/
-    height: 70px; }
-
-  /*Comments and suggestion textarea*/
-  /*Radio Input Framework*/
-  .radioCheckFlex_RoClass {
-    margin: 5px 20px 0px 5px;
-    /*changed*/ }
-
-  .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 18px; }
-
-  .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 22px; }
-
-  .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 105px; }
-
-  /*Radio Input Framework*/
-  /*Checkbox Input Framework*/
-  .cusCheckBoxPaper_RoClass {
-    margin: 5px 20px 0px 0px;
-    /*changed*/ }
-
-  .cusCheckBoxPaper_RoClass > label {
-    --custCheckboxFSize: 22px; }
-
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 18px; }
-
-  /*Checkbox Input Framework*/
-  /*Dropdown Menu Framework*/
-  #dropdownReligion-Id {
-    --cusDropZIndex: 1;
-    width: 310px;
-    /*changed*/ }
-
-  .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 22px; }
-
-  .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 22px; }
-
-  /*Dropdown Menu Framework*/
-  /*Button Framework*/
-  .proceedBtn-Class {
-    --normBtnFSize: 22px;
-    margin: 5px;
-    --normBtnBorderColor: #1B85BD;
-    --normBtnBgColor: #1B85BD;
-    --normBtnHovActBgColor: #2760A7; }
-
-  .backBtn-Class {
-    --normBtnFSize: 22px;
-    margin: 5px;
-    --normBtnBorderColor: #FC5050;
-    --normBtnBgColor: #FC5050;
-    --normBtnHovActBgColor: #E22D41; }
-
-  /*Button Framework*/ }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width: 1601px) {
-  /*Step set itself*/
-  .stepSets-Class {
-    position: relative;
-    display: none;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 1080px;
-    /*changed*/
-    margin: 35px auto 0px auto;
-    /*changed*/
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    /*Added*/
-    box-shadow: 0px 0px 5px gray;
-    background-image: url("../../src/sampleformbg.jpg");
-    background-position: center;
-    background-size: contain; }
-
-  /*Step set itself*/
-  /*Step title*/
-  .stepSets-Class > .stepSetTitleWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin-bottom: 17px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: black;
-    font-family: calibri;
-    font-size: 39px;
-    /*changed*/
-    font-style: normal;
-    font-weight: bold;
-    margin-bottom: 7px; }
-
-  .stepSets-Class > .stepSetTitleWrap > .stepSetTitleDefi-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    color: #303238;
-    font-family: calibri;
-    font-size: 22px;
-    /*changed*/
-    font-style: normal;
-    font-weight: normal; }
-
-  /*Step title*/
-  /*Step per field group*/
-  .stepSetPerFieldGroup-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font-family: calibri;
-    font-size: 17px;
-    /*changed*/
-    font-style: italic;
-    font-weight: bold;
-    color: black;
-    margin-top: 15px; }
-
-  /*Step per field group*/
-  /*Step per field*/
-  .stepSetPerFieldWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin: 30px 0px; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldTitle-Class {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    margin-bottom: 3px;
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: black; }
-
-  .stepSetPerFieldWrap > .stepSetPerFieldFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
-    /*changed*/
-    justify-content: flex-start;
-    align-content: flex-start;
-    /*Added*/
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Step per field*/
-  /*Step per field buttons wrapper*/
-  .stepSetPerFieldWrap > .stepSetBtnsFlex {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-flow: row wrap;
-    justify-content: center; }
-
-  /*Step per field buttons wrapper*/
-  /*Set of questions wrapper*/
-  .questionsWrap-Class {
-    font-family: calibri;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: bold;
-    color: red; }
-
-  /*Set of questions wrapper*/
-  /*Comments and suggestion textarea*/
-  .suggestionTextArea-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    font-family: calibri;
-    font-size: 21px;
-    /*changed*/
-    font-style: normal;
-    font-weight: normal;
-    width: 100%;
-    /*changed*/
-    height: 70px; }
-
-  /*Comments and suggestion textarea*/
-  /*Radio Input Framework*/
-  .radioCheckFlex_RoClass {
-    margin: 5px 20px 0px 5px;
-    /*changed*/ }
-
-  .customRadioCheck_RoClass {
-    --cusRadioWidthHeight: 18px; }
-
-  .radioCheckTxtLabel_RoClass {
-    --cusRadioFsize: 22px; }
-
-  .radioCheckIconLabel_RoClass {
-    --radioIconLabelWidthHeight: 105px; }
-
-  /*Radio Input Framework*/
-  /*Checkbox Input Framework*/
-  .cusCheckBoxPaper_RoClass {
-    margin: 5px 20px 0px 0px;
-    /*changed*/ }
-
-  .cusCheckBoxPaper_RoClass > label {
-    --custCheckboxFSize: 22px; }
-
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 18px; }
-
-  /*Checkbox Input Framework*/
-  /*Dropdown Menu Framework*/
-  #dropdownReligion-Id {
-    --cusDropZIndex: 1;
-    width: 310px;
-    /*changed*/ }
-
-  #dropdownReligion-Id {
-    --cusDropZIndex: 1;
-    width: 310px;
-    /*changed*/ }
-
-  .scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass {
-    --cusDropFsize: 22px; }
-
-  .scdropSelected_RoClass > span {
-    --cusDropArrowWidthHeight: 22px; }
-
-  /*Dropdown Menu Framework*/
-  /*Button Framework*/
-  .proceedBtn-Class {
-    --normBtnFSize: 26px;
-    margin: 5px;
-    --normBtnBorderColor: #1B85BD;
-    --normBtnBgColor: #1B85BD;
-    --normBtnHovActBgColor: #2760A7; }
-
-  .backBtn-Class {
-    --normBtnFSize: 26px;
-    margin: 5px;
-    --normBtnBorderColor: #FC5050;
-    --normBtnBgColor: #FC5050;
-    --normBtnHovActBgColor: #E22D41; }
-
-  /*Button Framework*/ }
-/*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-/*Step sets*/
+  /*Login Win Section*/ }
+/*Login Desktop Section*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=Page_RateService.css.map */
+/*# sourceMappingURL=Page_Login.css.map */

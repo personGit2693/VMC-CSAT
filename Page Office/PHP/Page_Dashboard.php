@@ -1,3 +1,12 @@
+<?php
+/*Dependency PHP Codes*/
+declare(strict_types=1);
+session_start();
+date_default_timezone_set('Asia/Manila');
+$currentDateTime = date("Y-m-d H:i:s", time());
+/*Dependency PHP Codes*/
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
