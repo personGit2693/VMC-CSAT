@@ -1,6 +1,0 @@
-Verifying Account
-1. Find Identifier
-2. Get Identifier
-3. Hash Password Input + Identifier
-4. Check Account with generated encryted value from step 4
-5. Generate Token

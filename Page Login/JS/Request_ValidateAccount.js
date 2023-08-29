@@ -72,7 +72,7 @@ function requestValidateAccount(){
 	/*Create account session*/
 
 
-	alert("Success!");
+	window.location.href = accountSession_Obj.endpoint;
 }
 
 /*Export*/

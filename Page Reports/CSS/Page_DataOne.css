@@ -3350,760 +3350,1098 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Page Content*/
-/*Page Content*/
+/*Rogrid Library*/
+/*Rogrid Library*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Data one table*/
+/*Data one table*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --cusCheckboxFStyle: normal;
-  --cusCheckboxFWeight: normal;
-  --cusCheckboxColor: black;
-  --cusCheckboxBorderWidth: 1px;
-  --cusCheckboxBorderColor: gray;
-  --spinnerWidthHeight: 75px; }
-
-body {
-  background-color: #E8EFFF;
-  background-image: url("./src/sampleformbg.jpg");
-  background-position: center;
-  background-size: contain; }
+  /*Navigation*/
+  --generalNavMenuPadding: 12px;
+  /*Navigation*/
+  /*Select Dropdown*/
+  --selectDropdownFColor: #494C55;
+  --selectDropdownBgColor: #ffffff;
+  --searchOptsBgColor: #ffffff;
+  --searchOptsFColor: #494C55;
+  --hoverOptBgColor: #8394B8;
+  --hoverOptFColor: #285FF3;
+  --selectDropdownScrollSize: 4px;
+  --optWrapThumbBgColor: #285FF3;
+  /*Select Dropdown*/
+  /*Date Range*/
+  --dateRangeBorderRadius: 4px;
+  --dateRangeBorderWidth: 2px;
+  --dateRangeBorderColor: #285FF3;
+  --dateRangePadding: 4px;
+  --dateRangeCalLiteBorderColor: #8394B7;
+  /*Date Range*/
+  /*Normal Button*/
+  --normBtnWidth: auto;
+  --normBtnPadding: 5px;
+  --normBtnBorderWidth: 1px;
+  --normBtnBorderColor: #0F763D;
+  --normBtnRadius: 4px;
+  --normBtnFWeight: normal;
+  --normBtnBgColor: #21A366;
+  --normBtnFcolor: #ffffff;
+  --normBtnHovActFColor: #ffffff;
+  --normBtnHovActBgColor: #0F763D;
+  /*Normal Button*/
+  /*Spinner loading*/
+  --spinnerWidthHeight: 68px;
+  /*Spinner loading*/ }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Page Header*/
+/*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  .pageHeaderWrap {
-    position: relative;
-    display: block;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
-    /*changed*/ }
-
-  .pageHeaderWrap .pageHeaderTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 22px verdana;
-    /*To be changed*/
-    color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 8px 10px; }
-
-  .pageHeaderWrap .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 16px calibri;
-    /*To be changed*/
-    color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 0px 10px 10px 10px; } }
+  .normButton_RoClass {
+    --normBtnFSize: 16px; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  .pageHeaderWrap {
-    position: relative;
-    display: block;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
-    /*changed*/ }
-
-  .pageHeaderWrap .pageHeaderTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 22px verdana;
-    /*To be changed*/
-    color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 8px 10px; }
-
-  .pageHeaderWrap .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 16px calibri;
-    /*To be changed*/
-    color: #ffffff;
-    max-width: 300px;
-    /*To be changed*/
-    padding: 0px 10px 10px 10px; } }
+  .normButton_RoClass {
+    --normBtnFSize: 16px; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  .pageHeaderWrap {
-    position: relative;
-    display: block;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
-
-  .pageHeaderWrap .pageHeaderItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
-
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
-    /*changed*/ }
-
-  .pageHeaderWrap .pageHeaderTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal bold 28px verdana;
-    /*changed*/
-    color: #ffffff;
-    max-width: auto;
-    /*changed*/
-    padding: 8px 60px; }
-
-  .pageHeaderWrap .pageHeaderSubtxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 20px calibri;
-    /*changed*/
-    color: #ffffff;
-    max-width: 720px;
-    /*changed*/
-    padding: 0px 60px 10px 60px; } }
+  .normButton_RoClass {
+    --normBtnFSize: 18px; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
-  .pageHeaderWrap {
+  .normButton_RoClass {
+    --normBtnFSize: 20px; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Library*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
     position: relative;
     display: block;
-    overflow: visible;
     box-sizing: border-box;
-    background-color: transparent;
-    height: auto; }
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
 
-  .pageHeaderWrap .pageHeaderItem {
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    flex-shrink: 0;
-    width: auto;
-    height: auto; }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 90px;
+    /*To be changed*/
+    width: 90px;
+    /*To be changed*/ }
 
-  .pageHeaderBg-Class {
-    background: var(--pageHeaderBackground) center no-repeat;
-    background-size: cover;
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 18px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 16px;
+    /*To be changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 18px;
+    /*To be changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 90px;
+    /*To be changed*/
+    width: 90px;
+    /*To be changed*/ }
+
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 18px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 16px;
+    /*To be changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 18px;
+    /*To be changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 92px;
+    /*changed*/
+    width: 92px;
     /*changed*/ }
 
-  .pageHeaderWrap .pageHeaderTxt {
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    word-break: keep-all;
-    font: normal bold 32px verdana;
+    font: bold normal 20px calibri;
     /*changed*/
-    color: #ffffff;
-    max-width: auto;
-    /*changed*/
-    padding: 8px 60px; }
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
 
-  .pageHeaderWrap .pageHeaderSubtxt {
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 18px;
+    /*changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 22px;
+    /*changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 18px;
+    /*changed*/
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 22px;
+    /*changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 20px;
+    /*changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 94px;
+    /*changed*/
+    width: 94px;
+    /*changed*/ }
+
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    word-break: keep-all;
-    font: normal normal 24px calibri;
+    font: bold normal 22px calibri;
     /*changed*/
-    color: #ffffff;
-    max-width: 920px;
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 20px;
     /*changed*/
-    padding: 0px 60px 10px 60px; } }
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 24px;
+    /*changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 20px;
+    /*changed*/
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 24px;
+    /*changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 22px;
+    /*changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 1420px;
+    /*changed*/
+    margin: 4px auto 4px auto;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 16px;
+    /*To be changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 22px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 16px;
+    /*To be changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 22px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 20px;
+    /*changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 26px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 24px;
+    /*changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 30px;
+    /*changed*/ } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Page Header*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Page Content*/
+/*Search area*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  .pageContentWrapFlex {
-    position: relative;
+  #searchWrapper {
     display: flex;
-    overflow: visible;
-    box-sizing: border-box;
     flex-flow: column nowrap;
     /*To be changed*/
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: auto;
-    margin: 20px 0px 0px 0px; }
+    padding: 5px;
+    align-content: space-between;
+    /*To be removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
 
-  /*Policy details side*/
-  .policyDetailsItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible; }
-
-  /*_Policy date details*/
-  .policyDateDetailsWrap {
+  .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
+    margin: 5px 0px;
+    /*To be changed*/ }
+
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 250px;
+    /*To be changed*/
+    justify-content: space-between;
+    align-items: center; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 16px calibri;
+    /*To be changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
     margin: 0px 5px; }
 
-  .policyDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: italic normal 14px calibri;
-    /*To be changed*/
-    color: #303238; }
-
-  .policyUpToDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font: normal normal 12px calibri;
-    /*To be changed*/
-    color: #303238; }
-
-  /*_Policy date details*/
-  /*_Policy big label*/
-  .policyBigLabelTxt {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 20px calibri;
-    /*To be changed*/
-    color: #303238;
-    margin: 25px 5px; }
-
-  /*_Policy big label*/
-  /*_Policy Paragraph*/
-  .policyParagraph-Class {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    margin: 0px 5px;
-    font-family: calibri;
-    font-size: 14px;
-    /*To be changed*/
-    font-style: normal;
-    color: #303238; }
-
-  /*_Policy Paragraph*/
-  /*_Accept terms and agreement*/
-  .policyAgreeTermsWrap {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    margin: 15px 5px;
-    text-align: center; }
-
-  .agreeTermsCheckbox-Class {
-    display: inline-block;
-    max-width: 100%; }
-
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 14px; }
-
-  label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 12px;
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
     --cusCheckboxFStyle: normal;
     --cusCheckboxFWeight: normal;
-    --custCheckboxFMTSize: 15px;
-    --custCheckboxFLDSize: 18px;
-    --cusCheckboxColor: black; }
+    --custCheckboxFSize: 14px;
+    /*To be changed*/
+    --cusCheckboxColor: #535F80; }
 
-  .enabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
-    --normBtnBorderColor: #237DB6;
-    --normBtnBgColor: #237DB6;
-    --normBtnHovActBgColor: #0E8EF1; }
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 18px;
+    /*To be changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
 
-  .disabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
-    --normBtnBorderColor: gray;
-    --normBtnBgColor: gray;
-    --normBtnHovActBgColor: gray; }
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: auto;
+    /*To be changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
 
-  /*_Accept terms and agreement*/
-  /*Policy details side*/ }
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto; }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 22px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 12px;
+    /*To be changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    left: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 300px;
+    /*To be changed*/
+    --dateRangeCalLiteWrapTop: 45px;
+    /*To be changed*/
+    left: 0;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 12px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 12px;
+    /*To be changed*/ } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  .pageContentWrapFlex {
-    position: relative;
+  #searchWrapper {
     display: flex;
-    overflow: visible;
-    box-sizing: border-box;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     /*To be changed*/
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: auto;
-    margin: 20px 0px 0px 0px; }
+    padding: 5px;
+    /*align-content: space-between; removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
 
-  /*Policy details side*/
-  .policyDetailsItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible; }
-
-  /*_Policy date details*/
-  .policyDateDetailsWrap {
+  .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
+    margin: 5px;
+    /*changed*/ }
+
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    /*changed*/
+    justify-content: space-between;
+    align-items: center; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 16px calibri;
+    /*To be changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
     margin: 0px 5px; }
 
-  .policyDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: italic normal 14px calibri;
-    /*To be changed*/
-    color: #303238; }
-
-  .policyUpToDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font: normal normal 12px calibri;
-    /*To be changed*/
-    color: #303238; }
-
-  /*_Policy date details*/
-  /*_Policy big label*/
-  .policyBigLabelTxt {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 20px calibri;
-    /*To be changed*/
-    color: #303238;
-    margin: 25px 5px; }
-
-  /*_Policy big label*/
-  /*_Policy Paragraph*/
-  .policyParagraph-Class {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    margin: 0px 5px;
-    font-family: calibri;
-    font-size: 14px;
-    /*To be changed*/
-    font-style: normal;
-    color: #303238; }
-
-  /*_Policy Paragraph*/
-  /*_Accept terms and agreement*/
-  .policyAgreeTermsWrap {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    margin: 15px 5px;
-    text-align: center; }
-
-  .agreeTermsCheckbox-Class {
-    display: inline-block;
-    max-width: 100%; }
-
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 14px; }
-
-  label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 12px;
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
     --cusCheckboxFStyle: normal;
     --cusCheckboxFWeight: normal;
-    --custCheckboxFMTSize: 15px;
-    --custCheckboxFLDSize: 18px;
-    --cusCheckboxColor: black; }
+    --custCheckboxFSize: 14px;
+    /*To be changed*/
+    --cusCheckboxColor: #535F80; }
 
-  .enabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
-    --normBtnBorderColor: #237DB6;
-    --normBtnBgColor: #237DB6;
-    --normBtnHovActBgColor: #0E8EF1; }
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 18px;
+    /*To be changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
 
-  .disabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
-    --normBtnBorderColor: gray;
-    --normBtnBgColor: gray;
-    --normBtnHovActBgColor: gray; }
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 200px;
+    /*changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
 
-  /*_Accept terms and agreement*/
-  /*Policy details side*/ }
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 22px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 12px;
+    /*To be changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 450px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 45.5px;
+    /*changed*/
+    right: 0;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 12px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 12px;
+    /*To be changed*/ } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  .pageContentWrapFlex {
-    position: relative;
+  #searchWrapper {
     display: flex;
-    overflow: visible;
-    box-sizing: border-box;
     flex-flow: row nowrap;
-    /*changed*/
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 1080px;
-    /*changed*/
-    margin: 20px auto 0px auto; }
+    /*To be changed*/
+    padding: 5px;
+    /*align-content: space-between; removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
 
-  /*Policy details side*/
-  .policyDetailsItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible; }
-
-  /*_Policy date details*/
-  .policyDateDetailsWrap {
+  .searchWrapperItem-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
+    margin: 5px;
+    /*changed*/ }
+
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    /*changed*/
+    justify-content: space-between;
+    align-items: center; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 20px calibri;
+    /*changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
     margin: 0px 5px; }
 
-  .policyDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    word-break: keep-all;
-    font: italic normal 16px calibri;
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 18px;
     /*changed*/
-    color: #303238; }
+    --cusCheckboxColor: #535F80; }
 
-  .policyUpToDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font: normal normal 14px calibri;
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 22px;
     /*changed*/
-    color: #303238; }
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
 
-  /*_Policy date details*/
-  /*_Policy big label*/
-  .policyBigLabelTxt {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 30px calibri;
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 300px;
     /*changed*/
-    color: #303238;
-    margin: 25px 5px; }
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
 
-  /*_Policy big label*/
-  /*_Policy Paragraph*/
-  .policyParagraph-Class {
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 18px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 16px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 24px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 14px;
+    /*changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 550px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 47px;
+    /*changed*/
+    right: 0;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 14px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 14px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    /*To be changed*/
+    padding: 5px;
+    /*align-content: space-between; removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
+
+  .searchWrapperItem-Class {
     position: relative;
-    overflow: visible;
     box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    margin: 0px 5px;
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
+
+  #filterClientItemWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    /*changed*/
+    justify-content: space-between;
+    align-items: center; }
+
+  .searchAreaLabelTxt-Class {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    margin-right: 7px;
+    font: bold normal 20px calibri;
+    /*changed*/
+    color: #494C55; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass {
+    margin: 0px 5px; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 18px;
+    /*changed*/
+    --cusCheckboxColor: #535F80; }
+
+  #filterClientItemWrap .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 22px;
+    /*changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #535F80; }
+
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 300px;
+    /*changed*/
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownBorderRadius: 4px; }
+
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 18px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass {
+    --selectDropdownFSize: 16px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 26px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 16px;
+    /*changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 700px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 49px;
+    /*changed*/
+    right: 0;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 18px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 16px;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Data one table*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
+
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
+
+  #dataOneTableWrap table td {
+    color: #535F80; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
+
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
+
+  #dataOneTableWrap table td {
+    color: #535F80; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
     font-family: calibri;
     font-size: 16px;
     /*changed*/
-    font-style: normal;
-    color: #303238; }
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
 
-  /*_Policy Paragraph*/
-  /*_Accept terms and agreement*/
-  .policyAgreeTermsWrap {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    margin: 15px 5px;
-    text-align: center; }
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
 
-  .agreeTermsCheckbox-Class {
-    display: inline-block;
-    max-width: 100%; }
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
 
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 16px; }
-
-  label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 14px;
-    --cusCheckboxFStyle: normal;
-    --cusCheckboxFWeight: normal;
-    --custCheckboxFMTSize: 15px;
-    --custCheckboxFLDSize: 18px;
-    --cusCheckboxColor: black; }
-
-  .enabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 14px;
-    --normBtnWidth: 150px;
-    --normBtnBorderColor: #237DB6;
-    --normBtnBgColor: #237DB6;
-    --normBtnHovActBgColor: #0E8EF1; }
-
-  .disabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 14px;
-    --normBtnWidth: 150px;
-    --normBtnBorderColor: gray;
-    --normBtnBgColor: gray;
-    --normBtnHovActBgColor: gray; }
-
-  /*_Accept terms and agreement*/
-  /*Policy details side*/ }
+  #dataOneTableWrap table td {
+    color: #535F80; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
-  .pageContentWrapFlex {
-    position: relative;
-    display: flex;
-    overflow: visible;
-    box-sizing: border-box;
-    flex-flow: row nowrap;
-    /*changed*/
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 1080px;
-    /*changed*/
-    margin: 20px auto 0px auto; }
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
 
-  /*Policy details side*/
-  .policyDetailsItem {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible; }
-
-  /*_Policy date details*/
-  .policyDateDetailsWrap {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    margin: 0px 5px; }
-
-  .policyDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font: italic normal 18px calibri;
-    /*changed*/
-    color: #303238; }
-
-  .policyUpToDateTxt {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: normal;
-    font: normal normal 16px calibri;
-    /*changed*/
-    color: #303238; }
-
-  /*_Policy date details*/
-  /*_Policy big label*/
-  .policyBigLabelTxt {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    font: normal normal 40px calibri;
-    /*changed*/
-    color: #303238;
-    margin: 25px 5px; }
-
-  /*_Policy big label*/
-  /*_Policy Paragraph*/
-  .policyParagraph-Class {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: keep-all;
-    margin: 0px 5px;
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
     font-family: calibri;
     font-size: 18px;
     /*changed*/
-    font-style: normal;
-    color: #303238; }
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
 
-  /*_Policy Paragraph*/
-  /*_Accept terms and agreement*/
-  .policyAgreeTermsWrap {
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    margin: 15px 5px;
-    text-align: center; }
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
 
-  .agreeTermsCheckbox-Class {
-    display: inline-block;
-    max-width: 100%; }
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
 
-  .boxme_RoClass {
-    --cusCheckboxWidthHeight: 18px; }
-
-  label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 16px;
-    --cusCheckboxFStyle: normal;
-    --cusCheckboxFWeight: normal;
-    --custCheckboxFMTSize: 15px;
-    --custCheckboxFLDSize: 18px;
-    --cusCheckboxColor: black; }
-
-  .enabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 16px;
-    --normBtnWidth: 150px;
-    --normBtnBorderColor: #237DB6;
-    --normBtnBgColor: #237DB6;
-    --normBtnHovActBgColor: #0E8EF1; }
-
-  .disabledBtn-Class {
-    --normBtnPadding: 7px;
-    --normBtnBorderWidth: 1px;
-    --normBtnRadius: 7px;
-    --normBtnFWeight: normal;
-    --normBtnFcolor: #ffffff;
-    --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 16px;
-    --normBtnWidth: 150px;
-    --normBtnBorderColor: gray;
-    --normBtnBgColor: gray;
-    --normBtnHovActBgColor: gray; }
-
-  /*_Accept terms and agreement*/
-  /*Policy details side*/ }
+  #dataOneTableWrap table td {
+    color: #535F80; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
-/*Page Content*/
+/*Data one table*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=Page_DataOne.css.map */

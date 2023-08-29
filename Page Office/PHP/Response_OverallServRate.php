@@ -25,7 +25,9 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Prep variables*/
-
+	if(isset($_SESSION["officeId"]) && $_SESSION["officeId"] != 0){
+		$officeId = $_SESSION["officeId"];
+	}
 	/*Prep variables*/
 
 

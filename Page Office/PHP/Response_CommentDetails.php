@@ -2,6 +2,7 @@
 /*Dependency PHP Codes*/
 declare(strict_types=1);
 date_default_timezone_set('Asia/Manila');
+session_start();
 $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
@@ -21,6 +22,13 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$overallFromDate = $_POST["overallFromDate"];
 	$overallToDate = $_POST["overallToDate"];
 	/*Query string*/
+
+
+	/*Prep variables*/
+	if(isset($_SESSION["officeId"]) && $_SESSION["officeId"] != 0){
+		$officeId = $_SESSION["officeId"];
+	}
+	/*Prep variables*/
 	
 
 	/*Prep response*/

@@ -117,6 +117,8 @@ function valueOverallServRate(){
 		}
 	});
 }
+
+
 /*Assign value for checkboxFilterInternal and checkboxFilterExternal*/
 function valueCheckboxClientype(){
 	checkboxFilterInternal.checked = true;

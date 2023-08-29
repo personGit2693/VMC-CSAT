@@ -1,0 +1,359 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Library*/
+@mixin normButtonFsize_MT_Style{
+	--normBtnFSize: 16px;
+}
+@mixin normButtonFsize_Laptop_Style{
+	--normBtnFSize: 18px;
+}
+@mixin normButtonFsize_Desktop_Style{
+	--normBtnFSize: 20px;
+}
+/*Rogrid Library*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+@mixin searchWrapper_Mobile_Style{
+	display: flex;
+	flex-flow: column nowrap; /*To be changed*/		
+	padding: 5px;
+	align-content: space-between; /*To be removed*/
+	background-color: #ffffff;
+	margin-top: 20px;
+}
+@mixin searchWrapper_TLD_Style{
+	display: flex;
+	flex-flow: row nowrap; /*To be changed*/
+	padding: 5px;	
+	/*align-content: space-between; removed*/
+	background-color: #ffffff;
+	margin-top: 20px;
+}
+
+
+@mixin searchWrapperItem_Mobile_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 5px 0px; /*To be changed*/
+}
+@mixin searchWrapperItem_TLD_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 5px; /*changed*/
+}
+
+
+@mixin filterClientItemWrap_Mobile_Style{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 250px; /*To be changed*/
+	justify-content: space-between;
+	align-items: center;	
+}
+@mixin filterClientItemWrap_TLD_Style{
+	display: flex;
+	flex-flow: row nowrap;
+	width: auto; /*changed*/
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+@mixin searchAreaLabelTxt_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 16px calibri; /*To be changed*/
+	color: #494C55;
+}
+@mixin searchAreaLabelTxt_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 20px calibri; /*changed*/
+	color: #494C55;
+}
+@mixin searchAreaLabelTxt_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 24px calibri; /*To be changed*/
+	color: #494C55;
+}
+
+
+@mixin filterClientCusCheckBoxPaper_Style{
+	margin: 0px 5px;
+}
+
+
+@mixin filterClientCusCheckBoxLabel_MT_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 14px; /*To be changed*/
+	--cusCheckboxColor: #535F80;
+}
+@mixin filterClientCusCheckBoxLabel_Laptop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 18px; /*changed*/
+	--cusCheckboxColor: #535F80;
+}
+@mixin filterClientCusCheckBoxLabel_Desktop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 22px; /*changed*/
+	--cusCheckboxColor: #535F80;
+}
+
+
+@mixin filterClientCusCheckboxMe_MT_Style{
+	--cusCheckboxWidthHeight: 18px; /*To be changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+@mixin filterClientCusCheckboxMe_Laptop_Style{
+	--cusCheckboxWidthHeight: 22px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+@mixin filterClientCusCheckboxMe_Desktop_Style{
+	--cusCheckboxWidthHeight: 24px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+
+
+@mixin selDropdownPointOfEntryItem_Mobile_Style{
+	--selectDropdownWidth: auto; /*To be changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+@mixin selDropdownPointOfEntryItem_Tablet_Style{
+	--selectDropdownWidth: 200px; /*changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+@mixin selDropdownPointOfEntryItem_Laptop_Style{
+	--selectDropdownWidth: 300px; /*changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+@mixin selDropdownPointOfEntryItem_Desktop_Style{
+	--selectDropdownWidth: 400px; /*changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+
+
+@mixin selectDropdownIconSize_MT_Style{
+	--selectDropdownIconSize: 16px; /*To be changed*/
+}
+@mixin selectDropdownIconSize_Laptop_Style{
+	--selectDropdownIconSize: 18px; /*changed*/
+}
+@mixin selectDropdownIconSize_Desktop_Style{
+	--selectDropdownIconSize: 20px; /*changed*/
+}
+
+
+@mixin selectDropdownF_MT_Style{
+	--selectDropdownFSize: 14px; /*To be changed*/	
+}
+@mixin selectDropdownF_Laptop_Style{
+	--selectDropdownFSize: 16px; /*changed*/	
+}
+@mixin selectDropdownF_Desktop_Style{
+	--selectDropdownFSize: 18px; /*changed*/
+}
+
+
+@mixin selectDropdownChevronSize_MT_Style{
+	--selectDropdownChevronSize: 23px; /*To be changed*/
+}
+@mixin selectDropdownChevronSize_Laptop_Style{
+	--selectDropdownChevronSize: 25px; /*changed*/
+}
+@mixin selectDropdownChevronSize_Desktop_Style{
+	--selectDropdownChevronSize: 27px; /*changed*/
+}
+
+
+@mixin dateRangeOneItemWrap_Mobile_Style{
+	width: auto;	
+}
+@mixin dateRangeOneItemWrap_TLD_Style{
+	width: auto;
+	margin-left: auto; /*Added*/
+}
+
+
+@mixin dateRangeOneIcon_MT_RoStyle{
+	--dateRangeIconSize: 22px; /*To be changed*/
+}
+@mixin dateRangeOneIcon_Laptop_RoStyle{
+	--dateRangeIconSize: 24px; /*changed*/
+}
+@mixin dateRangeOneIcon_Desktop_RoStyle{
+	--dateRangeIconSize: 26px; /*changed*/
+}
+
+
+@mixin dateRangeOneText_MT_Style{
+	--dateRangeFSize: 12px; /*To be changed*/
+	--dateRangeFColor: #285FF3;
+}
+@mixin dateRangeOneText_Laptop_Style{
+	--dateRangeFSize: 14px; /*changed*/
+	--dateRangeFColor: #285FF3;
+}
+@mixin dateRangeOneText_Desktop_Style{
+	--dateRangeFSize: 16px; /*changed*/
+	--dateRangeFColor: #285FF3;
+}
+
+
+@mixin dateRangeOneTooltipArrow_Mobile_Style{
+	--dateRangeTooltipColor: #8394B7;	
+	left: 0;
+}
+@mixin dateRangeOneTooltipArrow_TLD_Style{
+	--dateRangeTooltipColor: #8394B7;	
+	right: 0;
+}
+
+
+@mixin dateRangeOneCalLiteWrap_Mobile_Style{
+	--dateRangeCalLiteWrapWidth: 300px; /*To be changed*/
+	--dateRangeCalLiteWrapTop: 45px; /*To be changed*/
+	left: 0; /*To be changed*/
+}
+@mixin dateRangeOneCalLiteWrap_Tablet_Style{
+	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
+	--dateRangeCalLiteWrapTop: 45.5px; /*changed*/
+	right: 0; /*changed*/
+}
+@mixin dateRangeOneCalLiteWrap_Laptop_Style{
+	--dateRangeCalLiteWrapWidth: 550px; /*changed*/
+	--dateRangeCalLiteWrapTop: 47px; /*changed*/
+	right: 0; /*changed*/
+}
+@mixin dateRangeOneCalLiteWrap_Desktop_Style{
+	--dateRangeCalLiteWrapWidth: 700px; /*changed*/
+	--dateRangeCalLiteWrapTop: 49px; /*changed*/
+	right: 0; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteHeadTxt_MT_Style{
+	--calendarHeadTxtFSize: 12px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadTxt_Laptop_Style{
+	--calendarHeadTxtFSize: 14px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadTxt_Desktop_Style{
+	--calendarHeadTxtFSize: 16px; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteHeadBtn_MT_Style{
+	--calendarHeadBtnWidthHeight: 14px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadBtn_Laptop_Style{
+	--calendarHeadBtnWidthHeight: 16px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadBtn_Desktop_Style{
+	--calendarHeadBtnWidthHeight: 18px; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteDayTxt_MT_Style{
+	--calendarDayTxtFSize: 12px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteDayTxt_Laptop_Style{
+	--calendarDayTxtFSize: 14px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteDayTxt_Desktop_Style{
+	--calendarDayTxtFSize: 16px; /*changed*/
+}
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Data one table*/
+@mixin dataOneTableWrap_Style{
+	display: block;
+	padding: 5px;	
+	background-color: #ffffff;
+}
+
+
+@mixin dataOneTable_MT_Style{
+	width: 100%;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 14px; /*To be changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;
+	margin:10px 0px;	
+}
+@mixin dataOneTable_Laptop_Style{
+	width: 100%;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 10px 0px;
+}
+@mixin dataOneTable_Desktop_Style{
+	width: 100%;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 18px; /*changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 10px 0px;
+}
+
+
+@mixin dataOneTableTr_Style{
+	border: 1px solid #8394B8;
+}
+
+
+@mixin dataOneTableTh_Style{
+	background-color: #20124D;
+	color: #ffffff;
+}
+
+@mixin dataOneTableTd_Style{
+	color: #535F80;	
+}
+
+/*Data one table*/
+/***********************************************************************************************************************************************************************************************************/

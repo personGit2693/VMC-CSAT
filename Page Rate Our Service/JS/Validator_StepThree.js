@@ -5,12 +5,14 @@ import {questionGroups, selectedQuestionGroups} from "../../Global JS/Values_Pag
 
 /*Validator*/
 function validatorStepThree(){
-	let validationResult = true;
+	let validationResult = false;
 
 	for(let index=0; index<questionGroups.length; index++){
 		if(selectedQuestionGroups.includes(questionGroups[index]) == false){
 			validationResult = false;
 			break;
+		}else if(selectedQuestionGroups.includes(questionGroups[index]) == true){
+			validationResult = true;			
 		}
 	}
 

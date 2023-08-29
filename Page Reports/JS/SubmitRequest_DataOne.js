@@ -1,0 +1,3 @@
+function submitRequestDataOne(){
+	gatewayDataOne();
+}
