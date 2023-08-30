@@ -40,7 +40,7 @@ function DataOneTable(){
 			`<td>`+dataOne_Array[index].educattain_value+`</td>`+
 			`<td>`+dataOne_Array[index].clientresponse_date+`</td>`+
 			`<td>`+dataOne_Array[index].office_value+`</td>`+
-			`<td>`+dataOne_Array[index].serviceAvailed+`</td>`+
+			`<td>`+dataOne_Array[index].officeservice_name+`</td>`+
 			`<td>`+dataOne_Array[index].visityear_value+`</td>`+
 		`</tr>`;
 	}

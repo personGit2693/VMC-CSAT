@@ -71,6 +71,19 @@ var overallNoRatingData_Array = [
 	["Dates", "No Rating"],
 	["yyyy/mm/dd", 0]
 ];
+
+var availedOfficeService_Array = [
+	['Services', 'Availed', {role: 'annotation'}],
+	['Request and Release of Birth Certificate and Medical Certificate of Birth Delivery for Late Registration', 5, '5'],
+	['Service Two', 200, '200'],
+	['Service Three', 10, '10'],
+	['Service Four', 100, '100'],
+	['Service Five', 70, '70'],
+	['Service Six', 75, '75'],
+	['Service Seven', 20, '20'],
+	['Service Eight', 35, '35'],
+	['Service Nine', 69, '69']
+];
 /*Prep export variables*/
 
 
@@ -289,5 +302,5 @@ window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 
 
 /*Export*/
-export {valueOverallEngagementVal, valueRespondentVal, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {availedOfficeService_Array, valueOverallEngagementVal, valueRespondentVal, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/

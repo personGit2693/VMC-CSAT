@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respondentId"]) && isset($_POST["clientResponseAge"]) && isset($_POST["ageRangeId"]) && isset($_POST["genderId"]) && isset($_POST["genderPreferenceId"]) && isset($_POST["religionId"]) && isset($_POST["educationId"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"]) && isset($_POST["freqVisitId"])){
+if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respondentId"]) && isset($_POST["clientResponseAge"]) && isset($_POST["ageRangeId"]) && isset($_POST["genderId"]) && isset($_POST["genderPreferenceId"]) && isset($_POST["religionId"]) && isset($_POST["educationId"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"]) && isset($_POST["freqVisitId"]) && isset($_POST["officeServiceId"]) && isset($_POST["contactDetails"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -26,6 +26,8 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 	$officeId = $_POST["officeId"];
 	$clientTypeId = $_POST["clientTypeId"];
 	$freqVisitId = $_POST["freqVisitId"];
+	$officeServiceId = $_POST["officeServiceId"];
+	$contactDetails = $_POST["contactDetails"];
 	/*Query string*/
 
 
@@ -83,7 +85,9 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 				educattain_id,
 				office_id,
 				clienttype_id,
-				visityear_id
+				visityear_id,
+				officeservice_id,
+				clientresponse_contactdetails
 			) 
 			VALUES (
 				:clientResponseRef,
@@ -96,7 +100,9 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 				:educationId,
 				:officeId,
 				:clientTypeId,
-				:freqVisitId
+				:freqVisitId,
+				:officeServiceId,
+				:contactDetails
 			)
 		";
 		/*_ _Prep query*/
@@ -109,11 +115,17 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 		$encodeRespondentDetails_QueryObj->bindValue(':clientResponseAge', intval($clientResponseAge), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':genderId', intval($genderId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':genderPreferenceId', intval($genderPreferenceId), PDO::PARAM_INT);
-		$encodeRespondentDetails_QueryObj->bindValue(':religionId', intval($religionId), PDO::PARAM_INT);
+		if(empty($religionId)){
+			$encodeRespondentDetails_QueryObj->bindValue(':religionId', NULL, PDO::PARAM_INT);	
+		}else if(!empty($religionId)){
+			$encodeRespondentDetails_QueryObj->bindValue(':religionId', intval($religionId), PDO::PARAM_INT);
+		}		
 		$encodeRespondentDetails_QueryObj->bindValue(':educationId', intval($educationId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':clientTypeId', intval($clientTypeId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':freqVisitId', intval($freqVisitId), PDO::PARAM_INT);
+		$encodeRespondentDetails_QueryObj->bindValue(':officeServiceId', intval($officeServiceId), PDO::PARAM_INT);
+		$encodeRespondentDetails_QueryObj->bindValue(':contactDetails', $contactDetails, PDO::PARAM_STR);
 		$execution = $encodeRespondentDetails_QueryObj->execute();
 		/*_ _Execute query*/
 
@@ -134,7 +146,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["clientResponseRef"]) || !isset($_POST["respondentId"]) || !isset($_POST["clientResponseAge"]) || !isset($_POST["ageRangeId"]) || !isset($_POST["genderId"]) || !isset($_POST["genderPreferenceId"]) || !isset($_POST["religionId"]) || !isset($_POST["educationId"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"]) || !isset($_POST["freqVisitId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["clientResponseRef"]) || !isset($_POST["respondentId"]) || !isset($_POST["clientResponseAge"]) || !isset($_POST["ageRangeId"]) || !isset($_POST["genderId"]) || !isset($_POST["genderPreferenceId"]) || !isset($_POST["religionId"]) || !isset($_POST["educationId"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"]) || !isset($_POST["freqVisitId"]) || !isset($_POST["officeServiceId"]) || !isset($_POST["contactDetails"])){
 	$encodeRespondentDetails_Resp = new stdClass();
 	$encodeRespondentDetails_Resp->execution = null;
 	$encodeRespondentDetails_Resp->globalTokenResult = null;

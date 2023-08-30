@@ -35,6 +35,7 @@ function requestDeleteEncoded(){
 			}catch(httpRequest_Error){
 				alert("Response is not an object on removing failed encoded details with reference number "+submittedRate.respondentDetails.clientResponseRef);
 				alert(httpRequest_Error);
+				alert(httpRequest.responseText);
 			}			
 		}else if(httpRequest.status != 200){
 			alert("File not found");

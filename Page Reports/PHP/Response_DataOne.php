@@ -70,30 +70,28 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 		$getDataOne_Query = "SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
 			clientresponses_tab.clientresponse_age AS 'clientresponse_age',
 			DATE_FORMAT(clientresponses_tab.clientresponse_date, '%c/%e/%Y') AS 'clientresponse_date',
+			officeservices_tab.officeservice_name AS 'officeservice_name',
 			respondents_tab.respondent_name AS 'respondent_name',
 			genders_tab.gender_abbre AS 'gender_abbre',
-			religions_tab.religion_name AS 'religion_name',
+			IFNULL(religions_tab.religion_name, '') AS 'religion_name',
 			educattains_tab.educattain_value AS 'educattain_value',
-			offices_tab.office_value AS 'office_value',
-			GROUP_CONCAT(officeservices_tab.officeservice_name SEPARATOR ' , ') AS 'serviceAvailed',
+			offices_tab.office_value AS 'office_value',			
 			visityears_tab.visityear_value AS 'visityear_value'
 			FROM clientresponses_tab 
 			INNER JOIN respondents_tab 
 			ON clientresponses_tab.respondent_id = respondents_tab.respondent_id 
 			INNER JOIN genders_tab 
-			ON clientresponses_tab.gender_id = genders_tab.gender_id 
-			INNER JOIN religions_tab 
-			ON clientresponses_tab.religion_id = religions_tab.religion_id
+			ON clientresponses_tab.gender_id = genders_tab.gender_id 			
 			INNER JOIN educattains_tab 
 			ON clientresponses_tab.educattain_id = educattains_tab.educattain_id 
 			INNER JOIN offices_tab 
-			ON clientresponses_tab.office_id = offices_tab.office_id 
-			INNER JOIN serviceresponses_tab 
-			ON clientresponses_tab.clientresponse_reference = serviceresponses_tab.clientresponse_reference 
+			ON clientresponses_tab.office_id = offices_tab.office_id 			
 			INNER JOIN officeservices_tab 
-			ON serviceresponses_tab.officeservice_id = officeservices_tab.officeservice_id
+			ON clientresponses_tab.officeservice_id = officeservices_tab.officeservice_id
 			INNER JOIN visityears_tab 
 			ON clientresponses_tab.visityear_id = visityears_tab.visityear_id 
+			LEFT JOIN religions_tab 
+			ON clientresponses_tab.religion_id = religions_tab.religion_id
 			WHERE CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dataOneFromDate, DATE) AND CONVERT(:dataOneToDate, DATE) 
 			AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
 		";
@@ -102,9 +100,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 			$getDataOne_Query .= " AND clientresponses_tab.office_id = :officeId";
 		}
 
-		$getDataOne_Query .= " GROUP BY clientresponses_tab.clientresponse_reference 
-			ORDER BY clientresponses_tab.clientresponse_date DESC;
-		"; 							
+		$getDataOne_Query .= " ORDER BY clientresponses_tab.clientresponse_date DESC;"; 							
 		/*_Prep query*/
 
 		/*_Execute query*/

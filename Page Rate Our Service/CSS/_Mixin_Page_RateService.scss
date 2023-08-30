@@ -121,41 +121,15 @@
 
 
 /*Step per field group*/
-@mixin stepSetPerFieldGroup_MT_Style{
+@mixin stepSetPerFieldGroup_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
 	font-family: calibri;
-	font-size: 13px; /*To be changed*/
+	font-size: 20px;
 	font-style: italic;
-	font-weight: bold;
-	color: black;
-	margin-top: 15px;
-}
-@mixin stepSetPerFieldGroup_Laptop_Style{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	font-family: calibri;
-	font-size: 15px; /*changed*/
-	font-style: italic;
-	font-weight: bold;
-	color: black;
-	margin-top: 15px;
-}
-@mixin stepSetPerFieldGroup_Desktop_Style{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	font-family: calibri;
-	font-size: 17px; /*changed*/
-	font-style: italic;	
 	font-weight: bold;
 	color: black;
 	margin-top: 15px;

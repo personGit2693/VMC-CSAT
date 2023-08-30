@@ -8,16 +8,11 @@ function validatorStepOne(){
 	let validationResult = false;
 
 	for(let key in submittedRate.respondentDetails){
-		if(submittedRate.respondentDetails[key] == "" && key != "clientResponseRef"){
+		if(submittedRate.respondentDetails[key] == "" && key != "clientResponseRef" && key != "religionId" && key != "contactDetails"){
 			validationResult = false;
 			break;
-		}else if(submittedRate.respondentDetails[key] != "" && key != "clientResponseRef"){
-			validationResult = true;
-
-			if(submittedRate.availedOfficeServices.length == 0){
-				validationResult = false;
-				break;
-			}
+		}else if(submittedRate.respondentDetails[key] != "" && key != "clientResponseRef" && key != "religionId" && key != "contactDetails"){
+			validationResult = true;			
 		}
 	}	
 

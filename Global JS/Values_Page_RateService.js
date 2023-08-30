@@ -1,5 +1,5 @@
 /*Import*/
-import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceCheckboxesWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap, commentsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
+import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceRadioWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap, commentsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
 import {questionDetails_Array} from "../Page Rate Our Service/JS/Request_Questions.js";
 /*Import*/
 
@@ -26,6 +26,7 @@ var clientTypeId = "";
 var serviceTypeId = "";
 var officeServiceId = "";
 var freqVisitId = "";
+var contactDetails = "";
 var awarenessRatingViaId = "";
 var visibilityRatingViaId = "";
 var helpfulnessRatingViaId = "";
@@ -46,7 +47,9 @@ var submittedRate = {
 		officeId: officeId,
 		serviceTypeId: serviceTypeId,
 		clientTypeId: clientTypeId,
-		freqVisitId: freqVisitId
+		freqVisitId: freqVisitId,
+		officeServiceId: officeServiceId,
+		contactDetails: contactDetails
 	},
 	availedOfficeServices:[],
 	ccRate:{
@@ -174,11 +177,13 @@ function valueOffice(selectedOffice_Base){
 	questionGroups = [];
 	selectedQuestionGroups = [];
 	submittedRate.comments = [];
+	contactDetails = "";	
 
 	officeId = selectedOffice_Obj.office_id;
 
 	submittedRate.respondentDetails.officeId = officeId;
-	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;;
+	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
+	submittedRate.respondentDetails.contactDetails = contactDetails;
 }
 /*Assign Value for officeId*/
 
@@ -187,28 +192,23 @@ function valueOffice(selectedOffice_Base){
 function valueServiceType(selectedServiceType_Base){
 	const selectedServiceType_Obj = JSON.parse(atob(selectedServiceType_Base));
 
-	submittedRate.availedOfficeServices = [];
+	officeServiceId = "";
 
 	serviceTypeId = selectedServiceType_Obj.serviceTypeId;
 
 	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
+	submittedRate.respondentDetails.officeServiceId = officeServiceId;	
 }
 /*Assign Value for serviceTypeId*/
 
 
 /*Assign Value for officeServiceId*/
-function valueOfficeServices(selectedOfficeService_Base, officeServiceCheckbox){
+function valueOfficeService(selectedOfficeService_Base){
 	const selectedOfficeService_Obj = JSON.parse(atob(selectedOfficeService_Base));
 
 	officeServiceId = selectedOfficeService_Obj.officeservice_id;
-	
-	if(officeServiceCheckbox.checked === true){
-		submittedRate.availedOfficeServices.push(officeServiceId);
-	}else if(officeServiceCheckbox.checked === false){
-		submittedRate.availedOfficeServices = submittedRate.availedOfficeServices.filter(function(value, index, array){
-			return value != officeServiceId;
-		});
-	}
+
+	submittedRate.respondentDetails.officeServiceId = officeServiceId;	
 }
 /*Assign Value for officeServiceId*/
 
@@ -363,6 +363,13 @@ function valueComments(suggestionTextArea){
 /*Assign Value for comments*/
 
 
+/*Assign Value for contactDetails*/
+function valueContactDetails(contactDetailsTextArea){	
+	submittedRate.respondentDetails.contactDetails = contactDetailsTextArea.value;
+}
+/*Assign Value for contactDetails*/
+
+
 /*Assign Value for clientResponseRef*/
 function valueClientResponseRef(){
 	const toDate = new Date();
@@ -379,7 +386,7 @@ window.valueFloor = valueFloor;
 window.valueRespondentType = valueRespondentType;
 window.valueOffice = valueOffice;
 window.valueServiceType = valueServiceType;
-window.valueOfficeServices = valueOfficeServices;
+window.valueOfficeService = valueOfficeService;
 window.valueFreqVisit = valueFreqVisit;
 window.valueAgeRange = valueAgeRange;
 window.valueGender = valueGender;
@@ -391,6 +398,7 @@ window.valueVisibilityRating = valueVisibilityRating;
 window.valueHelpfulnessRating = valueHelpfulnessRating;
 window.valueRespondentRatings = valueRespondentRatings;
 window.valueComments = valueComments;
+window.valueContactDetails = valueContactDetails;
 window.valueClientResponseRef = valueClientResponseRef;
 /*Declare global*/
 

@@ -71,7 +71,7 @@ if(isset($_GET["rateToken"])){
 			<!--Page Header-->
 			<div class="pageHeaderWrap">
 				<div class="pageHeaderItem pageHeaderBg-Class" style="--pageHeaderBackground: url('../../src/Banner One.png')">
-					<div class="pageHeaderTxt">Client Satisfaction Measurement (CSM)</div>
+					<div class="pageHeaderTxt">Hospital Client Satisfaction System (HCSS)</div>
 					<div class="pageHeaderSubtxt" id="headerDynamicSubTxt-Id">This survey will serve as a basis to help us to improve our services for you to have a better experience in the facility because you are important to us. Any comments or suggestions you provide through this survey will be highly-appreciated and will be treated with utmost confidentiality.</div>
 				</div>								
 			</div>
@@ -147,7 +147,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Religion<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldTitle-Class">Religion</div>
 					<div class="stepSetPerFieldFlex" id="religionDropdownMenuWrap">
 						<div class="scdropdownSelBox_RoClass" id="dropdownReligion-Id">
 							<div class="scdropOptionCon_RoClass" id="dropdownReligionCon-Id">
@@ -220,7 +220,7 @@ if(isset($_GET["rateToken"])){
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Service Availed<span class="redAsterisk-Class">*</span></div>
-					<div class="stepSetPerFieldFlex" id="officeServiceCheckboxesWrap">
+					<div class="stepSetPerFieldFlex" id="officeServiceRadioWrap">
 						<!--Component-->						
 						Select Respondent, Point of Entry Department Visited and Service-Type.
 					</div>

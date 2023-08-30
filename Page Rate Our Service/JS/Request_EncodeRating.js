@@ -1,7 +1,7 @@
 /*Import*/
 import token from "../../Global JS/Token.js";
 import {requestEncodeRespondentDetails, encodeRespondentDetailsResp_Obj} from "./Request_EncodeRespondentDetails.js";
-import {requestEncodeAvailedOfficeServices, encodeAvailedOfficeServicesResp_Obj} from "./Request_EncodeAvailedOfficeServices.js";
+/*import {requestEncodeAvailedOfficeServices, encodeAvailedOfficeServicesResp_Obj} from "./Request_EncodeAvailedOfficeServices.js";*/
 import {requestEncodeCcRate, encodeCcRateResp_Obj} from "./Request_EncodeCcRate.js";
 import {requestEncodeRespondentRatings, encodeRespondentRatingsResp_Obj} from "./Request_EncodeRespondentRatings.js";
 import {requestEncodeComments, encodeCommentsResp_Obj} from "./Request_EncodeComments.js";
@@ -30,6 +30,7 @@ function requestEncodeRating(submitScoreBtn){
 
 	
 	/*Encode Availed Services*/
+	/*
 	requestEncodeAvailedOfficeServices();
 
 	if(Object.keys(encodeAvailedOfficeServicesResp_Obj).length != 0 && ("execution_Array" in encodeAvailedOfficeServicesResp_Obj) == true){
@@ -43,6 +44,7 @@ function requestEncodeRating(submitScoreBtn){
 		submitScoreBtn.disabled = false;
 		return;
 	}
+	*/
 	/*Encode Availed Services*/
 
 

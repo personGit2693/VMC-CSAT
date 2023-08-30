@@ -35,6 +35,7 @@ function requestEncodeRespondentDetails(){
 			}catch(httpRequest_Error){
 				alert("Response is not an object on encoding Respondent Details!");
 				alert(httpRequest_Error);
+				alert(httpRequest.responseText);
 			}			
 		}else if(httpRequest.status != 200){
 			alert("File not found");
@@ -53,7 +54,9 @@ function requestEncodeRespondentDetails(){
 	"&educationId="+submittedRate.respondentDetails.educationId+
 	"&officeId="+submittedRate.respondentDetails.officeId+
 	"&clientTypeId="+submittedRate.respondentDetails.clientTypeId+
-	"&freqVisitId="+submittedRate.respondentDetails.freqVisitId;
+	"&officeServiceId="+submittedRate.respondentDetails.officeServiceId+
+	"&freqVisitId="+submittedRate.respondentDetails.freqVisitId+
+	"&contactDetails="+encodeURIComponent(submittedRate.respondentDetails.contactDetails);
 	
 	httpRequest.open("POST", "Response_EncodeRespondentDetails.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

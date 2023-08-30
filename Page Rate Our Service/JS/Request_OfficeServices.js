@@ -1,5 +1,5 @@
 /*Import*/
-import renderOfficeServiceCheckbox from "./View_OfficeServiceCheckbox.js";
+import renderOfficeServiceRadio from "./View_OfficeServiceRadio.js";
 import token from "../../Global JS/Token.js";
 import {officeId, serviceTypeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
@@ -32,7 +32,7 @@ function requestOfficeServices(){
 					alert("Getting office services has execution problem");
 				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
 					officeServiceDetails_Array = httpResponse.officeServiceDetails_Array;
-					renderOfficeServiceCheckbox();						
+					renderOfficeServiceRadio();						
 				}
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting Office Services");

@@ -63,8 +63,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"]){
 	if($globalTokenResult === null){
 		/*_Encode Respondent Details on db*/		
 		/*_ _Prep query*/
-		$deleteEncoded_Query = "DELETE FROM clientresponses_tab WHERE :clientResponseRef;
-		";
+		$deleteEncoded_Query = "DELETE FROM clientresponses_tab WHERE clientresponse_reference = :clientResponseRef;";
 		/*_ _Prep query*/
 
 		/*_ _Execute query*/

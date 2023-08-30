@@ -5,6 +5,7 @@ session_start();
 date_default_timezone_set('Asia/Manila');
 $currentDateTime = date("Y-m-d H:i:s", time());
 $page_Login_Path = "../../Page Login/PHP/Page_Login.php";
+$destroySessions_Path = "../../Global PHP/DestroySessions.php";
 /*Dependency PHP Codes*/
 
 if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_SESSION["identifier"]) && isset($_SESSION["active"]) && isset($_SESSION["accToken"])){
@@ -29,11 +30,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 	if($validateAccToken_Obj->execution != true){
 		echo "Validating account token has execution problem! redirecting to login page in 5 seconds please wait...";
-		header("Refresh:5;".$page_Login_Path);
+		header("Refresh:5;".$destroySessions_Path);
 		return;
 	}else if($validateAccToken_Obj->found == 0){
 		echo "Session expired! redirecting to login page in 5 seconds please wait...";
-		header("Refresh:5;".$page_Login_Path);
+		header("Refresh:5;".$destroySessions_Path);
 		return;
 	}
 	/*Check account token*/
@@ -96,7 +97,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 					</div>
-					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
+					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
 						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
 							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/demographics_black.png'); --activeSubNavMenuIcon:url('../../src/demographics_white.png')"></div>
 							<span class="generalNavMenuText_RoClass">Summary Demographics</span>
@@ -436,6 +437,6 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	</html>
 <?php
 }else if(!isset($_SESSION["accountNumber"]) || !isset($_SESSION["officeId"]) || !isset($_SESSION["identifier"]) || !isset($_SESSION["active"]) || !isset($_SESSION["accToken"])){
-	header("location:".$page_Login_Path);	
+	header("location:".$destroySessions_Path);	
 }
 ?>

@@ -9,6 +9,16 @@ function CommentField(){
 	let elemValue = "";
 
 	let commentField = "";
+
+	if(commentQuestionDetails_Array.length > 0){
+		commentField += `<div class="stepSetPerFieldWrap commentField-Class">`+
+			`<div class="stepSetPerFieldTitle-Class">Contact Details</div>`+
+			`<div class="stepSetPerFieldFlex">`+
+				`<textarea class="suggestionTextArea-Class" placeholder="Optional" onkeyup="valueContactDetails(this)"></textarea>`+				
+			`</div>`+
+		`</div>`;
+	}
+
 	for(let index=0; index < commentQuestionDetails_Array.length; index++){
 		elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(commentQuestionDetails_Array[index]))));
 
