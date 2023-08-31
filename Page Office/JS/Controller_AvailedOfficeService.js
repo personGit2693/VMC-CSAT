@@ -1,12 +1,12 @@
 /*Import*/
-import {availedOfficeService_Array} from "../../Global JS/Values_Page_Dashboard.js";
+import {availedOfficeServiceData_Array} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
 /*Function for loading Availed Office Services Chart*/
-function loadAvailedOfficeService(drawBarChart){
+function loadAvailedOfficeServiceChart(drawBarChart){
 
-	const setChartHeight = availedOfficeService_Array.length * 50 + "";
+	const setChartHeight = availedOfficeServiceData_Array.length * 50 + "";
 
 	const barChartOption_Obj = {
 		fontSize: 12,
@@ -68,12 +68,12 @@ function loadAvailedOfficeService(drawBarChart){
 	myBarChart.load('current', {packages: ['corechart', 'bar']});
 
 	myBarChart.setOnLoadCallback(function(){
-		drawBarChart(availedOfficeService_Array, barChartOption_Obj, "availedOfficeServiceWrap");
+		drawBarChart(availedOfficeServiceData_Array, barChartOption_Obj, "availedOfficeServiceWrap");
 	});
 }
 /*Function for loading Availed Office Services Chart*/
 
 
 /*Export*/
-export default loadAvailedOfficeService;
+export default loadAvailedOfficeServiceChart;
 /*Export*/

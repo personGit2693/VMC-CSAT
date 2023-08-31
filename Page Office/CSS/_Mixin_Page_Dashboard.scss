@@ -329,35 +329,35 @@
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
-	height: 210px;	
+	height: 210px;
 }
 
 
-@mixin overallEngagementTxt_MT_Style{
+@mixin engagementLabel_MT_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	text-align: center;
 	padding: 5px;
-	font: normal bold 20px calibri; /*To be changed*/
+	font: normal bold 14px calibri; /*To be changed*/
 	color: #535F80;
 	width: 100%;
 	background-color: #ffffff;
 }
-@mixin overallEngagementTxt_Laptop_Style{
+@mixin engagementLabel_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
 	text-align: center;
 	padding: 5px;
-	font: normal bold 22px calibri; /*changed*/
+	font: normal bold 16px calibri; /*changed*/
 	color: #535F80;
 	width: 100%;
 	background-color: #ffffff;
 }
-@mixin overallEngagementTxt_Desktop_Style{
+@mixin engagementLabel_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
@@ -372,7 +372,7 @@
 }
 
 
-@mixin overallEngagementValWrap_Style{
+@mixin engagementValWrap_Style{
 	position: relative;
 	overflow: visible;
 	box-sizing: border-box;
@@ -382,7 +382,7 @@
 }
 
 
-@mixin overallEngagementVal_MT_Style{
+@mixin engagementVal_MT_Style{
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
@@ -394,7 +394,7 @@
 	margin: 0px auto 0px auto;
 	background-color: #ffffff;
 }
-@mixin overallEngagementVal_Laptop_Style{
+@mixin engagementVal_Laptop_Style{
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
@@ -406,7 +406,7 @@
 	margin: 0px auto 0px auto;
 	background-color: #ffffff;
 }
-@mixin overallEngagementVal_Desktop_Style{
+@mixin engagementVal_Desktop_Style{
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;

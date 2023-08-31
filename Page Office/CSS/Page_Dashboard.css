@@ -4325,20 +4325,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .overallEngagementTxt {
+  .engagementDetWrap .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     text-align: center;
     padding: 5px;
-    font: normal bold 20px calibri;
+    font: normal bold 14px calibri;
     /*To be changed*/
     color: #535F80;
     width: 100%;
     background-color: #ffffff; }
 
-  .engagementDetWrap .overallEngagementValWrap {
+  .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
@@ -4346,7 +4346,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     padding: 5px; }
 
-  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+  .engagementDetWrap .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -4468,20 +4468,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .overallEngagementTxt {
+  .engagementDetWrap .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     text-align: center;
     padding: 5px;
-    font: normal bold 20px calibri;
+    font: normal bold 14px calibri;
     /*To be changed*/
     color: #535F80;
     width: 100%;
     background-color: #ffffff; }
 
-  .engagementDetWrap .overallEngagementValWrap {
+  .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
@@ -4489,7 +4489,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     padding: 5px; }
 
-  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+  .engagementDetWrap .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -4611,20 +4611,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .overallEngagementTxt {
+  .engagementDetWrap .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
     text-align: center;
     padding: 5px;
-    font: normal bold 22px calibri;
+    font: normal bold 16px calibri;
     /*changed*/
     color: #535F80;
     width: 100%;
     background-color: #ffffff; }
 
-  .engagementDetWrap .overallEngagementValWrap {
+  .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
@@ -4632,7 +4632,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     padding: 5px; }
 
-  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+  .engagementDetWrap .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -4754,7 +4754,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .overallEngagementTxt {
+  .engagementDetWrap .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
@@ -4767,7 +4767,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     width: 100%;
     background-color: #ffffff; }
 
-  .engagementDetWrap .overallEngagementValWrap {
+  .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
@@ -4775,7 +4775,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     padding: 5px; }
 
-  .engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class {
+  .engagementDetWrap .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;

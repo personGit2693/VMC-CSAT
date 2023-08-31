@@ -15,8 +15,6 @@ import {requestQuestionsScores} from "./Request_QuestionsTable.js";
 import {requestCitizenCharterOneScores} from "./Request_CitizenCharterOneScores.js";
 import {requestCitizenCharterTwoScores} from "./Request_CitizenCharterTwoScores.js";
 import {requestCitizenCharterThreeScores} from "./Request_CitizenCharterThreeScores.js";
-
-import loadAvailedOfficeService from "./Controller_AvailedOfficeService.js";
 /*Import*/
 
 
@@ -49,6 +47,7 @@ requestOverallNeither();
 requestOverallDisagree();
 requestOverallStronglyDisagree();
 requestOverallNoRating();
+submitRequestAvailedOfficeService();
 
 requestPointOfEntry();
 /*Get the initial value for overall service rates response*/
@@ -57,6 +56,3 @@ requestPointOfEntry();
 /*Get the comment details*/
 requestCommentDetails();
 /*Get the comment details*/
-
-
-loadAvailedOfficeService(drawBarChart);

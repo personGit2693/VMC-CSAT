@@ -761,16 +761,16 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementTxt{
-		@include overallEngagementTxt_MT_Style;
+	.engagementDetWrap .engagementLabel{
+		@include engagementLabel_MT_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap{
-		@include overallEngagementValWrap_Style;
+	.engagementDetWrap .engagementValWrap{
+		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class{
-		@include overallEngagementVal_MT_Style;
+	.engagementDetWrap .engagementValWrap .engagementVal-Class{
+		@include engagementVal_MT_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{
@@ -832,16 +832,16 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementTxt{
-		@include overallEngagementTxt_MT_Style;
+	.engagementDetWrap .engagementLabel{
+		@include engagementLabel_MT_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap{
-		@include overallEngagementValWrap_Style;
+	.engagementDetWrap .engagementValWrap{
+		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class{
-		@include overallEngagementVal_MT_Style;
+	.engagementDetWrap .engagementValWrap .engagementVal-Class{
+		@include engagementVal_MT_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{
@@ -903,16 +903,16 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementTxt{
-		@include overallEngagementTxt_Laptop_Style;
+	.engagementDetWrap .engagementLabel{
+		@include engagementLabel_Laptop_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap{
-		@include overallEngagementValWrap_Style;
+	.engagementDetWrap .engagementValWrap{
+		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class{
-		@include overallEngagementVal_Laptop_Style;
+	.engagementDetWrap .engagementValWrap .engagementVal-Class{
+		@include engagementVal_Laptop_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{
@@ -974,16 +974,16 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementTxt{
-		@include overallEngagementTxt_Desktop_Style;
+	.engagementDetWrap .engagementLabel{
+		@include engagementLabel_Desktop_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap{
-		@include overallEngagementValWrap_Style;
+	.engagementDetWrap .engagementValWrap{
+		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .overallEngagementValWrap .overallEngagementVal-Class{
-		@include overallEngagementVal_Desktop_Style;
+	.engagementDetWrap .engagementValWrap .engagementVal-Class{
+		@include engagementVal_Desktop_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{

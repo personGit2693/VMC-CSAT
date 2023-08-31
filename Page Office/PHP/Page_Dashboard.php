@@ -196,11 +196,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="searchAreaLabelTxt-Class">Client-Type</span>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(),submitRequestCommentDetails()" autocomplete="off">
 						</div>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestCommentDetails()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(), submitRequestCommentDetails()" autocomplete="off">
 						</div>
 					</div>
 					<!--_Filter Client Type Item-->
@@ -378,8 +378,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<div class="globalWrapper" id="chartsWrapper">
 					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8394B7; --charWrapScrollbarHoverBgColor: #8394B7; border: none; background-color: #E8EFFF;">
 						<div class="engagementDetWrap">
-							<div class="overallEngagementTxt">Overall Engagement</div>
-							<div class="overallEngagementValWrap"><div class="overallEngagementVal-Class" id="overallEngagementVal-Id">0</div></div>
+							<div class="engagementLabel">Overall Engagement</div>
+							<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id">0</div></div>
 
 							<div class="respondentTotalDetWrap">
 								<div class="respondentTextIconFlex">
@@ -508,6 +508,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
 		<script type="module" src="../JS/Gateway_OverallNoRating.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
+		<script type="module" src="../JS/Gateway_AvailedOfficeService.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
 		<script type="module" src="../JS/Gateway_CommentDetails.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>

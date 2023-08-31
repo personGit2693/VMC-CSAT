@@ -1,0 +1,26 @@
+SELECT officeservices_dummytab.officeservice_name AS 'serviceName',
+IFNULL(serviceavailed_dummytab.availed, 0) AS 'availed' 
+FROM (SELECT officeservices_tab.officeservice_id AS 'officeservice_id', 
+    officeservices_tab.officeservice_name AS 'officeservice_name', 
+    officeservices_tab.office_id  AS 'office_id',
+    officeservices_tab.clienttype_id AS 'clienttype_id',
+    officeservices_tab.officeservice_reqresp AS 'officeservice_reqresp' 
+    FROM officeservices_tab 
+    INNER JOIN offices_tab 
+    ON officeservices_tab.office_id = offices_tab.office_id 
+    WHERE offices_tab.office_id = 27 
+    AND (officeservices_tab.clienttype_id = 1 OR officeservices_tab.clienttype_id = 2)
+) AS officeservices_dummytab 
+LEFT JOIN (SELECT officeservices_tab.officeservice_id AS 'officeservice_id',
+    officeservices_tab.officeservice_name AS 'officeservice_name',
+    COUNT(clientresponses_tab.officeservice_id) AS 'availed'
+    FROM officeservices_tab 
+    INNER JOIN clientresponses_tab 
+    ON officeservices_tab.officeservice_id = clientresponses_tab.officeservice_id 
+    WHERE clientresponses_tab.office_id = 27 
+    AND (clientresponses_tab.clienttype_id = 1 OR clientresponses_tab.clienttype_id = 2)
+    AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-08-01', DATE) AND  CONVERT('2023-08-31', DATE)
+    GROUP BY officeservices_tab.officeservice_name
+) AS serviceavailed_dummytab 
+ON officeservices_dummytab.officeservice_id = serviceavailed_dummytab.officeservice_id 
+ORDER BY officeservices_dummytab.officeservice_name;

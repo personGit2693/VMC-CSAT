@@ -6,6 +6,7 @@ import {overallAgree_Array} from "../Page Office/JS/Request_OverallAgree.js";
 import {overallNeither_Array} from "../Page Office/JS/Request_OverallNeither.js";
 import {overallDisagree_Array} from "../Page Office/JS/Request_OverallDisagree.js";
 import {overallStronglyDisagree_Array} from "../Page Office/JS/Request_OverallStronglyDisagree.js";
+import {availedOfficeService_Array} from "../Page Office/JS/Request_AvailedOfficeService.js";
 import {overallNoRating_Array} from "../Page Office/JS/Request_OverallNoRating.js";
 import {overallEngagement} from "../Page Office/JS/Request_OverallEngagement.js";
 import {totalRespondent} from "../Page Office/JS/Request_TotalRespondent.js";
@@ -72,17 +73,9 @@ var overallNoRatingData_Array = [
 	["yyyy/mm/dd", 0]
 ];
 
-var availedOfficeService_Array = [
+var availedOfficeServiceData_Array = [
 	['Services', 'Availed', {role: 'annotation'}],
-	['Request and Release of Birth Certificate and Medical Certificate of Birth Delivery for Late Registration', 5, '5'],
-	['Service Two', 200, '200'],
-	['Service Three', 10, '10'],
-	['Service Four', 100, '100'],
-	['Service Five', 70, '70'],
-	['Service Six', 75, '75'],
-	['Service Seven', 20, '20'],
-	['Service Eight', 35, '35'],
-	['Service Nine', 69, '69']
+	['No Services', 0, '0']
 ];
 /*Prep export variables*/
 
@@ -294,6 +287,21 @@ function valueOverallNoRating(){
 /*Assign value overallNoRatingData_Array*/
 
 
+/*Assign value availedOfficeServiceData_Array*/
+function valueAvailedOfficeService(){
+	
+	if(availedOfficeService_Array.length > 1){
+		availedOfficeServiceData_Array = availedOfficeService_Array;
+	}else if(availedOfficeService_Array.length == 1){
+		availedOfficeServiceData_Array = [
+			['Services', 'Availed', {role: 'annotation'}],
+			['No Services', 0, '0']
+		];
+	}
+}
+/*Assign value availedOfficeServiceData_Array*/
+
+
 /*Declare global*/
 window.valueClientTypeInternal = valueClientTypeInternal;
 window.valueClientTypeExternal = valueClientTypeExternal;
@@ -302,5 +310,5 @@ window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 
 
 /*Export*/
-export {availedOfficeService_Array, valueOverallEngagementVal, valueRespondentVal, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {valueAvailedOfficeService, availedOfficeServiceData_Array, valueOverallEngagementVal, valueRespondentVal, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/

@@ -1,0 +1,4 @@
+function submitRequestAvailedOfficeService(){
+	showSpinningLoad();
+	gatewayAvailedOfficeService();
+}
