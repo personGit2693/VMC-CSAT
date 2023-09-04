@@ -333,42 +333,56 @@
 }
 
 
+@mixin engagementFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: column nowrap;
+	background-color: #ffffff;
+}
+
+
+@mixin engagementItem_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
 @mixin engagementLabel_MT_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	text-align: center;
 	padding: 5px;
-	font: normal bold 14px calibri; /*To be changed*/
+	font: normal bold 20px calibri; /*To be changed*/
 	color: #535F80;
 	width: 100%;
-	background-color: #ffffff;
 }
 @mixin engagementLabel_Laptop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	text-align: center;
 	padding: 5px;
-	font: normal bold 16px calibri; /*changed*/
+	font: normal bold 22px calibri; /*changed*/
 	color: #535F80;
 	width: 100%;
-	background-color: #ffffff;
 }
 @mixin engagementLabel_Desktop_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	text-align: center;
 	padding: 5px;
 	font: normal bold 24px calibri; /*changed*/
 	color: #535F80;
 	width: 100%;
-	background-color: #ffffff;
-
 }
 
 
@@ -376,9 +390,9 @@
 	position: relative;
 	overflow: visible;
 	box-sizing: border-box;
-	background-color: #ffffff;
 	text-align: center;
-	padding: 5px;	
+	padding: 5px;
+	width: 40px;	
 }
 
 
@@ -387,36 +401,30 @@
 	display: inline-block;
 	box-sizing: border-box;
 	overflow: visible;
-	text-align: center;	
 	color: #535F80;	
-	font: normal bold 35px calibri; /*To be changed*/
+	font: normal bold 20px calibri; /*To be changed*/
 	width: auto;
 	margin: 0px auto 0px auto;
-	background-color: #ffffff;
 }
 @mixin engagementVal_Laptop_Style{
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	overflow: visible;
-	text-align: center;	
 	color: #535F80;	
-	font: normal bold 37px calibri; /*changed*/
+	font: normal bold 22px calibri; /*changed*/
 	width: auto;
 	margin: 0px auto 0px auto;
-	background-color: #ffffff;
 }
 @mixin engagementVal_Desktop_Style{
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	overflow: visible;
-	text-align: center;	
 	color: #535F80;	
-	font: normal bold 39px calibri; /*changed*/
+	font: normal bold 24px calibri; /*changed*/
 	width: auto;
 	margin: 0px auto 0px auto;
-	background-color: #ffffff;
 }
 
 

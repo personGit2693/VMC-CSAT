@@ -81,6 +81,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				INNER JOIN clientresponses_tab 
 				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
 				WHERE clientresponses_tab.office_id = :officeId 
+				AND NOT questionresponses_tab.score_id = 6 
 				AND CONVERT(questionresponses_tab.questionresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal);
 			"; 							

@@ -4325,39 +4325,52 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .engagementLabel {
+  .engagementDetWrap .engagementFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    background-color: #ffffff; }
+
+  .engagementFlex .engagementItem {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  .engagementItem .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    text-align: center;
     padding: 5px;
-    font: normal bold 14px calibri;
+    font: normal bold 20px calibri;
     /*To be changed*/
     color: #535F80;
-    width: 100%;
-    background-color: #ffffff; }
+    width: 100%; }
 
   .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
-    background-color: #ffffff;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    width: 40px; }
 
-  .engagementDetWrap .engagementValWrap .engagementVal-Class {
+  .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
     overflow: visible;
-    text-align: center;
     color: #535F80;
-    font: normal bold 35px calibri;
+    font: normal bold 20px calibri;
     /*To be changed*/
     width: auto;
-    margin: 0px auto 0px auto;
-    background-color: #ffffff; }
+    margin: 0px auto 0px auto; }
 
   .engagementDetWrap .respondentTotalDetWrap {
     position: absolute;
@@ -4468,39 +4481,52 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .engagementLabel {
+  .engagementDetWrap .engagementFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    background-color: #ffffff; }
+
+  .engagementFlex .engagementItem {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  .engagementItem .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    text-align: center;
     padding: 5px;
-    font: normal bold 14px calibri;
+    font: normal bold 20px calibri;
     /*To be changed*/
     color: #535F80;
-    width: 100%;
-    background-color: #ffffff; }
+    width: 100%; }
 
   .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
-    background-color: #ffffff;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    width: 40px; }
 
-  .engagementDetWrap .engagementValWrap .engagementVal-Class {
+  .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
     overflow: visible;
-    text-align: center;
     color: #535F80;
-    font: normal bold 35px calibri;
+    font: normal bold 20px calibri;
     /*To be changed*/
     width: auto;
-    margin: 0px auto 0px auto;
-    background-color: #ffffff; }
+    margin: 0px auto 0px auto; }
 
   .engagementDetWrap .respondentTotalDetWrap {
     position: absolute;
@@ -4611,39 +4637,52 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .engagementLabel {
+  .engagementDetWrap .engagementFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    background-color: #ffffff; }
+
+  .engagementFlex .engagementItem {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  .engagementItem .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    text-align: center;
     padding: 5px;
-    font: normal bold 16px calibri;
-    /*changed*/
+    font: normal bold 20px calibri;
+    /*To be changed*/
     color: #535F80;
-    width: 100%;
-    background-color: #ffffff; }
+    width: 100%; }
 
   .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
-    background-color: #ffffff;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    width: 40px; }
 
-  .engagementDetWrap .engagementValWrap .engagementVal-Class {
+  .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
     overflow: visible;
-    text-align: center;
     color: #535F80;
-    font: normal bold 37px calibri;
-    /*changed*/
+    font: normal bold 20px calibri;
+    /*To be changed*/
     width: auto;
-    margin: 0px auto 0px auto;
-    background-color: #ffffff; }
+    margin: 0px auto 0px auto; }
 
   .engagementDetWrap .respondentTotalDetWrap {
     position: absolute;
@@ -4754,39 +4793,52 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     height: 210px; }
 
-  .engagementDetWrap .engagementLabel {
+  .engagementDetWrap .engagementFlex {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    background-color: #ffffff; }
+
+  .engagementFlex .engagementItem {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+
+  .engagementItem .engagementLabel {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    text-align: center;
     padding: 5px;
-    font: normal bold 24px calibri;
-    /*changed*/
+    font: normal bold 20px calibri;
+    /*To be changed*/
     color: #535F80;
-    width: 100%;
-    background-color: #ffffff; }
+    width: 100%; }
 
   .engagementDetWrap .engagementValWrap {
     position: relative;
     overflow: visible;
     box-sizing: border-box;
-    background-color: #ffffff;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    width: 40px; }
 
-  .engagementDetWrap .engagementValWrap .engagementVal-Class {
+  .engagementValWrap .engagementVal-Class {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
     overflow: visible;
-    text-align: center;
     color: #535F80;
-    font: normal bold 39px calibri;
-    /*changed*/
+    font: normal bold 20px calibri;
+    /*To be changed*/
     width: auto;
-    margin: 0px auto 0px auto;
-    background-color: #ffffff; }
+    margin: 0px auto 0px auto; }
 
   .engagementDetWrap .respondentTotalDetWrap {
     position: absolute;

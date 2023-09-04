@@ -378,8 +378,13 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<div class="globalWrapper" id="chartsWrapper">
 					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8394B7; --charWrapScrollbarHoverBgColor: #8394B7; border: none; background-color: #E8EFFF;">
 						<div class="engagementDetWrap">
-							<div class="engagementLabel">Overall Engagement</div>
-							<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id">0</div></div>
+							<div class="engagementFlex">
+								<div class="engagementItem">
+									<div class="engagementLabel">Overall Engagement</div>
+									<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id">0</div></div>		
+								</div>								
+							</div>
+							
 
 							<div class="respondentTotalDetWrap">
 								<div class="respondentTextIconFlex">

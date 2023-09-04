@@ -761,7 +761,15 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .engagementLabel{
+	.engagementDetWrap .engagementFlex{
+		@include engagementFlex_Style;
+	}
+
+	.engagementFlex .engagementItem{
+		@include engagementItem_Style;
+	}
+
+	.engagementItem .engagementLabel{
 		@include engagementLabel_MT_Style;
 	}
 
@@ -769,7 +777,7 @@
 		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .engagementValWrap .engagementVal-Class{
+	.engagementValWrap .engagementVal-Class{
 		@include engagementVal_MT_Style;
 	}
 
@@ -832,7 +840,15 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .engagementLabel{
+	.engagementDetWrap .engagementFlex{
+		@include engagementFlex_Style;
+	}
+
+	.engagementFlex .engagementItem{
+		@include engagementItem_Style;
+	}
+
+	.engagementItem .engagementLabel{
 		@include engagementLabel_MT_Style;
 	}
 
@@ -840,7 +856,7 @@
 		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .engagementValWrap .engagementVal-Class{
+	.engagementValWrap .engagementVal-Class{
 		@include engagementVal_MT_Style;
 	}
 
@@ -903,16 +919,24 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .engagementLabel{
-		@include engagementLabel_Laptop_Style;
+	.engagementDetWrap .engagementFlex{
+		@include engagementFlex_Style;
+	}
+
+	.engagementFlex .engagementItem{
+		@include engagementItem_Style;
+	}
+
+	.engagementItem .engagementLabel{
+		@include engagementLabel_MT_Style;
 	}
 
 	.engagementDetWrap .engagementValWrap{
 		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .engagementValWrap .engagementVal-Class{
-		@include engagementVal_Laptop_Style;
+	.engagementValWrap .engagementVal-Class{
+		@include engagementVal_MT_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{
@@ -974,16 +998,24 @@
 		@include engagementDetWrap_Style;
 	}
 
-	.engagementDetWrap .engagementLabel{
-		@include engagementLabel_Desktop_Style;
+	.engagementDetWrap .engagementFlex{
+		@include engagementFlex_Style;
+	}
+
+	.engagementFlex .engagementItem{
+		@include engagementItem_Style;
+	}
+
+	.engagementItem .engagementLabel{
+		@include engagementLabel_MT_Style;
 	}
 
 	.engagementDetWrap .engagementValWrap{
 		@include engagementValWrap_Style;
 	}
 
-	.engagementDetWrap .engagementValWrap .engagementVal-Class{
-		@include engagementVal_Desktop_Style;
+	.engagementValWrap .engagementVal-Class{
+		@include engagementVal_MT_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{
