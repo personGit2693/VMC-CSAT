@@ -1,5 +1,5 @@
 /*Import*/
-import {selDropOfficeValue, dataOneFromDate, dataOneToDate, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "../Page Reports/JS/JSCollection_Page_DataOne.js";
+import {selDropOfficeValue, dataOneFromDate, dataOneToDate, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Page_Reports.js";
 /*Import*/
 
 

@@ -3620,7 +3620,7 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: italic normal 14px calibri;
+    font: italic normal 24px calibri;
     /*To be changed*/
     color: #303238; }
 
@@ -3629,7 +3629,7 @@ body {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    font: normal normal 12px calibri;
+    font: normal normal 24px calibri;
     /*To be changed*/
     color: #303238; }
 
@@ -3641,7 +3641,7 @@ body {
     box-sizing: border-box;
     white-space: normal;
     word-break: keep-all;
-    font: normal normal 20px calibri;
+    font: normal normal 30px calibri;
     /*To be changed*/
     color: #303238;
     margin: 25px 5px; }
@@ -3656,7 +3656,7 @@ body {
     word-break: keep-all;
     margin: 0px 5px;
     font-family: calibri;
-    font-size: 14px;
+    font-size: 20px;
     /*To be changed*/
     font-style: normal;
     color: #303238; }
@@ -3675,10 +3675,10 @@ body {
     max-width: 100%; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 14px; }
+    --cusCheckboxWidthHeight: 24px; }
 
   label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 12px;
+    --custCheckboxFSize: 24px;
     --cusCheckboxFStyle: normal;
     --cusCheckboxFWeight: normal;
     --custCheckboxFMTSize: 15px;
@@ -3692,8 +3692,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
+    --normBtnFSize: 24px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: #237DB6;
     --normBtnBgColor: #237DB6;
     --normBtnHovActBgColor: #0E8EF1; }
@@ -3705,8 +3705,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
+    --normBtnFSize: 24px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: gray;
     --normBtnBgColor: gray;
     --normBtnHovActBgColor: gray; }
@@ -3749,7 +3749,7 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: italic normal 14px calibri;
+    font: italic normal 24px calibri;
     /*To be changed*/
     color: #303238; }
 
@@ -3758,7 +3758,7 @@ body {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    font: normal normal 12px calibri;
+    font: normal normal 24px calibri;
     /*To be changed*/
     color: #303238; }
 
@@ -3770,7 +3770,7 @@ body {
     box-sizing: border-box;
     white-space: normal;
     word-break: keep-all;
-    font: normal normal 20px calibri;
+    font: normal normal 30px calibri;
     /*To be changed*/
     color: #303238;
     margin: 25px 5px; }
@@ -3785,7 +3785,7 @@ body {
     word-break: keep-all;
     margin: 0px 5px;
     font-family: calibri;
-    font-size: 14px;
+    font-size: 20px;
     /*To be changed*/
     font-style: normal;
     color: #303238; }
@@ -3804,10 +3804,10 @@ body {
     max-width: 100%; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 14px; }
+    --cusCheckboxWidthHeight: 24px; }
 
   label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 12px;
+    --custCheckboxFSize: 24px;
     --cusCheckboxFStyle: normal;
     --cusCheckboxFWeight: normal;
     --custCheckboxFMTSize: 15px;
@@ -3821,8 +3821,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
+    --normBtnFSize: 24px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: #237DB6;
     --normBtnBgColor: #237DB6;
     --normBtnHovActBgColor: #0E8EF1; }
@@ -3834,8 +3834,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 12px;
-    --normBtnWidth: 100px;
+    --normBtnFSize: 24px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: gray;
     --normBtnBgColor: gray;
     --normBtnHovActBgColor: gray; }
@@ -3879,7 +3879,7 @@ body {
     overflow: visible;
     white-space: normal;
     word-break: keep-all;
-    font: italic normal 16px calibri;
+    font: italic normal 26px calibri;
     /*changed*/
     color: #303238; }
 
@@ -3888,7 +3888,7 @@ body {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    font: normal normal 14px calibri;
+    font: normal normal 26px calibri;
     /*changed*/
     color: #303238; }
 
@@ -3900,7 +3900,7 @@ body {
     box-sizing: border-box;
     white-space: normal;
     word-break: keep-all;
-    font: normal normal 30px calibri;
+    font: normal normal 35px calibri;
     /*changed*/
     color: #303238;
     margin: 25px 5px; }
@@ -3915,7 +3915,7 @@ body {
     word-break: keep-all;
     margin: 0px 5px;
     font-family: calibri;
-    font-size: 16px;
+    font-size: 22px;
     /*changed*/
     font-style: normal;
     color: #303238; }
@@ -3934,10 +3934,10 @@ body {
     max-width: 100%; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 16px; }
+    --cusCheckboxWidthHeight: 26px; }
 
   label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 14px;
+    --custCheckboxFSize: 26px;
     --cusCheckboxFStyle: normal;
     --cusCheckboxFWeight: normal;
     --custCheckboxFMTSize: 15px;
@@ -3951,8 +3951,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 14px;
-    --normBtnWidth: 150px;
+    --normBtnFSize: 26px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: #237DB6;
     --normBtnBgColor: #237DB6;
     --normBtnHovActBgColor: #0E8EF1; }
@@ -3964,8 +3964,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 14px;
-    --normBtnWidth: 150px;
+    --normBtnFSize: 26px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: gray;
     --normBtnBgColor: gray;
     --normBtnHovActBgColor: gray; }
@@ -4008,7 +4008,7 @@ body {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    font: italic normal 18px calibri;
+    font: italic normal 28px calibri;
     /*changed*/
     color: #303238; }
 
@@ -4017,7 +4017,7 @@ body {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    font: normal normal 16px calibri;
+    font: normal normal 28px calibri;
     /*changed*/
     color: #303238; }
 
@@ -4044,7 +4044,7 @@ body {
     word-break: keep-all;
     margin: 0px 5px;
     font-family: calibri;
-    font-size: 18px;
+    font-size: 24px;
     /*changed*/
     font-style: normal;
     color: #303238; }
@@ -4063,10 +4063,10 @@ body {
     max-width: 100%; }
 
   .boxme_RoClass {
-    --cusCheckboxWidthHeight: 18px; }
+    --cusCheckboxWidthHeight: 28px; }
 
   label[for="agreeTermsCheckbox-Id"] {
-    --custCheckboxFSize: 16px;
+    --custCheckboxFSize: 28px;
     --cusCheckboxFStyle: normal;
     --cusCheckboxFWeight: normal;
     --custCheckboxFMTSize: 15px;
@@ -4080,8 +4080,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 16px;
-    --normBtnWidth: 150px;
+    --normBtnFSize: 28px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: #237DB6;
     --normBtnBgColor: #237DB6;
     --normBtnHovActBgColor: #0E8EF1; }
@@ -4093,8 +4093,8 @@ body {
     --normBtnFWeight: normal;
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
-    --normBtnFSize: 16px;
-    --normBtnWidth: 150px;
+    --normBtnFSize: 28px;
+    --normBtnWidth: auto;
     --normBtnBorderColor: gray;
     --normBtnBgColor: gray;
     --normBtnHovActBgColor: gray; }

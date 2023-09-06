@@ -9,6 +9,7 @@ export const pointOfEntryOptsArea = document.getElementById("pointOfEntryOptsAre
 export const searchPointOfEntry = document.getElementById("searchPointOfEntry-Id");
 export const selDropOfficeValue = document.getElementById("selDropOfficeValue-Id");
 export const overallEngagementVal = document.getElementById("overallEngagementVal-Id");
+export const pointOfEntryRating = document.getElementById("pointOfEntryRating-Id");
 export const respondentVal = document.getElementById("respondentVal-Id");
 export const questionsTabWrap = document.getElementById("questionsTabWrap-Id");
 export const cc1TabWrap = document.getElementById("cc1TabWrap");

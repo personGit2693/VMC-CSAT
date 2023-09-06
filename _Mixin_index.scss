@@ -49,7 +49,7 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	font: italic normal 14px calibri; /*To be changed*/
+	font: italic normal 24px calibri; /*To be changed*/
 	color: #303238;
 }
 
@@ -59,7 +59,7 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	font: italic normal 16px calibri; /*changed*/
+	font: italic normal 26px calibri; /*changed*/
 	color: #303238;
 }
 
@@ -68,7 +68,7 @@
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	font: italic normal 18px calibri; /*changed*/
+	font: italic normal 28px calibri; /*changed*/
 	color: #303238;
 }
 
@@ -79,7 +79,7 @@
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	font: normal normal 12px calibri; /*To be changed*/
+	font: normal normal 24px calibri; /*To be changed*/
 	color: #303238;
 }
 
@@ -88,7 +88,7 @@
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	font: normal normal 14px calibri; /*changed*/
+	font: normal normal 26px calibri; /*changed*/
 	color: #303238;
 }
 
@@ -97,7 +97,7 @@
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	font: normal normal 16px calibri; /*changed*/
+	font: normal normal 28px calibri; /*changed*/
 	color: #303238;
 }
 
@@ -109,7 +109,7 @@
 	box-sizing: border-box;
 	white-space: normal;
 	word-break: keep-all;
-	font: normal normal 20px calibri; /*To be changed*/
+	font: normal normal 30px calibri; /*To be changed*/
 	color: #303238;
 	margin: 25px 5px;
 }
@@ -120,7 +120,7 @@
 	box-sizing: border-box;
 	white-space: normal;
 	word-break: keep-all;
-	font: normal normal 30px calibri; /*changed*/
+	font: normal normal 35px calibri; /*changed*/
 	color: #303238;
 	margin: 25px 5px;
 }
@@ -140,21 +140,21 @@
 
 @mixin policyTxtFont_MT_Style{
 	font-family: calibri;
-	font-size: 14px; /*To be changed*/
+	font-size: 20px; /*To be changed*/
 	font-style: normal;
 	color: #303238;
 }
 
 @mixin policyTxtFont_Laptop_Style{
 	font-family: calibri;
-	font-size: 16px; /*changed*/
+	font-size: 22px; /*changed*/
 	font-style: normal;
 	color: #303238;
 }
 
 @mixin policyTxtFont_Desktop_Style{
 	font-family: calibri;
-	font-size: 18px; /*changed*/
+	font-size: 24px; /*changed*/
 	font-style: normal;
 	color: #303238;
 }
@@ -190,26 +190,26 @@
 
 
 @mixin agreeCheckboxSize_MT_Style{
-	--cusCheckboxWidthHeight: 14px;
+	--cusCheckboxWidthHeight: 24px;
 }
 @mixin agreeCheckboxSize_Laptop_Style{
-	--cusCheckboxWidthHeight: 16px;
+	--cusCheckboxWidthHeight: 26px;
 }
 @mixin agreeCheckboxSize_Desktop_Style{
-	--cusCheckboxWidthHeight: 18px;
+	--cusCheckboxWidthHeight: 28px;
 }
 
 
 
 
 @mixin agreeCheckboxFontSize_MT_Style{
-	--custCheckboxFSize: 12px;
+	--custCheckboxFSize: 24px;
 }
 @mixin agreeCheckboxFontSize_Laptop_Style{
-	--custCheckboxFSize: 14px;
+	--custCheckboxFSize: 26px;
 }
 @mixin agreeCheckboxFontSize_Desktop_Style{
-	--custCheckboxFSize: 16px;
+	--custCheckboxFSize: 28px;
 }
 
 
@@ -236,22 +236,22 @@
 
 
 @mixin rateServiceBtnFSize_MT_Style{
-	--normBtnFSize: 12px;
+	--normBtnFSize: 24px;
 }
 @mixin rateServiceBtnFSize_Laptop_Style{
-	--normBtnFSize: 14px;
+	--normBtnFSize: 26px;
 }
 @mixin rateServiceBtnFSize_Desktop_Style{
-	--normBtnFSize: 16px;
+	--normBtnFSize: 28px;
 }
 
 
 
 @mixin rateServiceBtnWidth_MT_Style{
-	--normBtnWidth: 100px;
+	--normBtnWidth: auto;
 }
 @mixin rateServiceBtnWidth_LD_Style{
-	--normBtnWidth: 150px;
+	--normBtnWidth: auto;
 }
 
 

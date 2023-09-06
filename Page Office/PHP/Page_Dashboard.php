@@ -382,6 +382,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<div class="engagementItem">
 									<div class="engagementLabel">Overall Engagement</div>
 									<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id">0</div></div>		
+								</div>
+
+								<div class="engagementItem">
+									<div class="engagementLabel">Rating</div>
+									<div class="engagementValWrap"><div class="engagementVal-Class" id="pointOfEntryRating-Id"><span style="color: red;">0% (Poor)</span></div></div>		
 								</div>								
 							</div>
 							

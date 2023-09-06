@@ -426,7 +426,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
 		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
 		<script type="text/javascript" src="../../Global JS/table2excel.js"></script>
-		<script type="module" src="../../Global JS/Values_Page_DataOne.js"></script>
+		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
 		<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js"></script>
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>

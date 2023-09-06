@@ -4348,7 +4348,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     padding: 5px;
-    font: normal bold 20px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
     color: #535F80;
     width: 100%; }
@@ -4359,7 +4359,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     text-align: center;
     padding: 5px;
-    width: 40px; }
+    width: auto;
+    flex-shrink: 0; }
 
   .engagementValWrap .engagementVal-Class {
     position: relative;
@@ -4367,7 +4368,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     color: #535F80;
-    font: normal bold 20px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
     width: auto;
     margin: 0px auto 0px auto; }
@@ -4504,7 +4505,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     padding: 5px;
-    font: normal bold 20px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
     color: #535F80;
     width: 100%; }
@@ -4515,7 +4516,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     text-align: center;
     padding: 5px;
-    width: 40px; }
+    width: auto;
+    flex-shrink: 0; }
 
   .engagementValWrap .engagementVal-Class {
     position: relative;
@@ -4523,7 +4525,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     color: #535F80;
-    font: normal bold 20px calibri;
+    font: normal bold 22px calibri;
     /*To be changed*/
     width: auto;
     margin: 0px auto 0px auto; }
@@ -4660,8 +4662,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     padding: 5px;
-    font: normal bold 20px calibri;
-    /*To be changed*/
+    font: normal bold 24px calibri;
+    /*changed*/
     color: #535F80;
     width: 100%; }
 
@@ -4671,7 +4673,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     text-align: center;
     padding: 5px;
-    width: 40px; }
+    width: auto;
+    flex-shrink: 0; }
 
   .engagementValWrap .engagementVal-Class {
     position: relative;
@@ -4679,8 +4682,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     color: #535F80;
-    font: normal bold 20px calibri;
-    /*To be changed*/
+    font: normal bold 24px calibri;
+    /*changed*/
     width: auto;
     margin: 0px auto 0px auto; }
 
@@ -4816,8 +4819,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow: visible;
     white-space: normal;
     padding: 5px;
-    font: normal bold 20px calibri;
-    /*To be changed*/
+    font: normal bold 26px calibri;
+    /*changed*/
     color: #535F80;
     width: 100%; }
 
@@ -4827,7 +4830,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     text-align: center;
     padding: 5px;
-    width: 40px; }
+    width: auto;
+    flex-shrink: 0; }
 
   .engagementValWrap .engagementVal-Class {
     position: relative;
@@ -4835,8 +4839,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     color: #535F80;
-    font: normal bold 20px calibri;
-    /*To be changed*/
+    font: normal bold 26px calibri;
+    /*changed*/
     width: auto;
     margin: 0px auto 0px auto; }
 

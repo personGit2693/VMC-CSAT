@@ -928,7 +928,7 @@
 	}
 
 	.engagementItem .engagementLabel{
-		@include engagementLabel_MT_Style;
+		@include engagementLabel_Laptop_Style;
 	}
 
 	.engagementDetWrap .engagementValWrap{
@@ -936,7 +936,7 @@
 	}
 
 	.engagementValWrap .engagementVal-Class{
-		@include engagementVal_MT_Style;
+		@include engagementVal_Laptop_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{
@@ -1007,7 +1007,7 @@
 	}
 
 	.engagementItem .engagementLabel{
-		@include engagementLabel_MT_Style;
+		@include engagementLabel_Desktop_Style;
 	}
 
 	.engagementDetWrap .engagementValWrap{
@@ -1015,7 +1015,7 @@
 	}
 
 	.engagementValWrap .engagementVal-Class{
-		@include engagementVal_MT_Style;
+		@include engagementVal_Desktop_Style;
 	}
 
 	.engagementDetWrap .respondentTotalDetWrap{

@@ -11,3 +11,6 @@ Guide Flows
 
 4. Validation condition (Validator return true or false)
 	*Submit Validation->Validator
+
+
+Connections
