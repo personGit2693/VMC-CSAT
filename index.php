@@ -77,10 +77,10 @@
 	</div>
 	<!--Loading-->
 
-	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js"></script>	
-	<script type="text/javascript" src="JsCollection_Index.js"></script>	
-	<script type="text/javascript" src="Request_GenerateRateToken.js"></script>
-	<script type="text/javascript" src="Validation_PrivacyPolicy.js"></script>
-	<script type="text/javascript" src="Portal_RateService.js"></script>
+	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js?v1"></script>	
+	<script type="text/javascript" src="JsCollection_Index.js?v1"></script>	
+	<script type="text/javascript" src="Request_GenerateRateToken.js?v1"></script>
+	<script type="text/javascript" src="Validation_PrivacyPolicy.js?v1"></script>
+	<script type="text/javascript" src="Portal_RateService.js?v1"></script>
 </body>
 </html>

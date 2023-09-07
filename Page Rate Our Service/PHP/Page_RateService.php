@@ -48,13 +48,13 @@ if(isset($_GET["rateToken"])){
 			<title>Rate Our Services</title>
 
 			<!--JQuery version-->
-			<script src="../../Global JS/Jquery_jquery-3.6.4.min.js"></script>
+			<script src="../../Global JS/Jquery_jquery-3.6.4.min.js?v1"></script>
 			<!--JQuery version-->
 
 			<!--Plugin Select2-->
 			<link rel="stylesheet" type="text/css" href="../../Global Style/Plugin_select2.min.css">
-			<script src="../../Global JS/Plugin_select2.min.js"></script>
-			<script src="../../Global JS/Init_Select2.js"></script>
+			<script src="../../Global JS/Plugin_select2.min.js?v1"></script>
+			<script src="../../Global JS/Init_Select2.js?v1"></script>
 			<!--Plugin Select2-->
 
 			<link rel="stylesheet" type="text/css" href="../CSS/Page_RateService.css">
@@ -332,40 +332,40 @@ if(isset($_GET["rateToken"])){
 			<button>-</button>
 			-->
 
-			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-			<script type="text/javascript" src="../JS/Controller_StepByStep.js"></script>
-			<script type="module" src="../JS/Validator_StepOne.js"></script>
-			<script type="text/javascript" src="../JS/SubmitValidation_StepOne.js"></script>
-			<script type="module" src="../JS/Validator_StepTwo.js"></script>
-			<script type="text/javascript" src="../JS/SubmitValidation_StepTwo.js"></script>
-			<script type="module" src="../JS/Validator_StepThree.js"></script>			
-			<script type="text/javascript" src="../JS/SubmitValidation_StepThree.js"></script>			
-			<script type="module" src="../../Global JS/Values_Page_RateService.js"></script>
-			<script type="module" src="../JS/Gateway_EncodeRating.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_EncodeRating.js"></script>
-			<script type="module" src="../JS/Gateway_Religions.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js"></script>
-			<script type="module" src="../JS/Gateway_Floors.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Floors.js"></script>
-			<script type="module" src="../JS/Gateway_Offices.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js"></script>			
-			<script type="module" src="../JS/Gateway_ServiceTypes.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js"></script>
-			<script type="module" src="../JS/Gateway_OfficeServices.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_OfficeServices.js"></script>
-			<script type="module" src="../JS/Gateway_VisibilityRates.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_VisibilityRates.js"></script>
-			<script type="module" src="../JS/Validator_RequestVisibilityRates.js"></script>
-			<script type="text/javascript" src="../JS/SubmitValidation_RequestVisibilityRates.js"></script>	
-			<script type="module" src="../JS/Gateway_HelpfulnessRates.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_HelpfulnessRates.js"></script>		
-			<script type="module" src="../JS/Validator_RequestHelpfulnessRates.js"></script>
-			<script type="text/javascript" src="../JS/SubmitValidation_RequestHelpfulnessRates.js"></script>
-			<script type="module" src="../JS/Gateway_Questions.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Questions.js"></script>		
-			<script type="module" src="../JS/Gateway_CommentQuestions.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_CommentQuestions.js"></script>
-			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			
+			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
+			<script type="text/javascript" src="../JS/Controller_StepByStep.js?v1"></script>
+			<script type="module" src="../JS/Validator_StepOne.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_StepOne.js?v1"></script>
+			<script type="module" src="../JS/Validator_StepTwo.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_StepTwo.js?v1"></script>
+			<script type="module" src="../JS/Validator_StepThree.js?v1"></script>			
+			<script type="text/javascript" src="../JS/SubmitValidation_StepThree.js?v1"></script>			
+			<script type="module" src="../../Global JS/Values_Page_RateService.js?v1"></script>
+			<script type="module" src="../JS/Gateway_EncodeRating.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_EncodeRating.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Religions.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Floors.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Floors.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Offices.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js?v1"></script>			
+			<script type="module" src="../JS/Gateway_ServiceTypes.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js?v1"></script>
+			<script type="module" src="../JS/Gateway_OfficeServices.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_OfficeServices.js?v1"></script>
+			<script type="module" src="../JS/Gateway_VisibilityRates.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_VisibilityRates.js?v1"></script>
+			<script type="module" src="../JS/Validator_RequestVisibilityRates.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_RequestVisibilityRates.js?v1"></script>	
+			<script type="module" src="../JS/Gateway_HelpfulnessRates.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_HelpfulnessRates.js?v1"></script>		
+			<script type="module" src="../JS/Validator_RequestHelpfulnessRates.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitValidation_RequestHelpfulnessRates.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Questions.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Questions.js?v1"></script>		
+			<script type="module" src="../JS/Gateway_CommentQuestions.js?v1"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_CommentQuestions.js?v1"></script>
+			<script type="module" src="../JS/Executor_Page_RateService.js?v1"></script>			
 		</body>
 		</html>
 <?php 
