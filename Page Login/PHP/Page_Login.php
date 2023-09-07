@@ -64,9 +64,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	<!--Loader-->
 
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
-	<script type="module" src="../../Global JS/Values_Page_Login.js?v1"></script>
-	<script type="module" src="../JS/Gateway_ValidateAccount.js?v1"></script>
+	<script type="module" src="../../Global JS/Values_Page_Login.js"></script>
+	<script type="module" src="../JS/Gateway_ValidateAccount.js"></script>
 	<script type="text/javascript" src="../JS/SubmitRequest_ValidateAccount.js?v1"></script>
-	<script type="module" src="../JS/Executor_Page_Login.js?v1"></script>	
+	<script type="module" src="../JS/Executor_Page_Login.js"></script>	
 </body>
 </html>

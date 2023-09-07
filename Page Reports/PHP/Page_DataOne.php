@@ -426,13 +426,13 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v1"></script>
 		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v1"></script>
 		<script type="text/javascript" src="../../Global JS/table2excel.js?v1"></script>
-		<script type="module" src="../../Global JS/Values_Page_Reports.js?v1"></script>
+		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
 		<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js?v1"></script>
-		<script type="module" src="../JS/Gateway_PointOfEntry.js?v1"></script>		
+		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js?v1"></script>
-		<script type="module" src="../JS/Gateway_DataOne.js?v1"></script>
+		<script type="module" src="../JS/Gateway_DataOne.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js?v1"></script>		
-		<script type="module" src="../JS/Executor_Page_DataOne.js?v1"></script>
+		<script type="module" src="../JS/Executor_Page_DataOne.js"></script>
 	</body>
 	</html>
 <?php

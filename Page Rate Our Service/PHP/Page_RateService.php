@@ -334,38 +334,38 @@ if(isset($_GET["rateToken"])){
 
 			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
 			<script type="text/javascript" src="../JS/Controller_StepByStep.js?v1"></script>
-			<script type="module" src="../JS/Validator_StepOne.js?v1"></script>
+			<script type="module" src="../JS/Validator_StepOne.js"></script>
 			<script type="text/javascript" src="../JS/SubmitValidation_StepOne.js?v1"></script>
-			<script type="module" src="../JS/Validator_StepTwo.js?v1"></script>
+			<script type="module" src="../JS/Validator_StepTwo.js"></script>
 			<script type="text/javascript" src="../JS/SubmitValidation_StepTwo.js?v1"></script>
-			<script type="module" src="../JS/Validator_StepThree.js?v1"></script>			
+			<script type="module" src="../JS/Validator_StepThree.js"></script>			
 			<script type="text/javascript" src="../JS/SubmitValidation_StepThree.js?v1"></script>			
-			<script type="module" src="../../Global JS/Values_Page_RateService.js?v1"></script>
-			<script type="module" src="../JS/Gateway_EncodeRating.js?v1"></script>
+			<script type="module" src="../../Global JS/Values_Page_RateService.js"></script>
+			<script type="module" src="../JS/Gateway_EncodeRating.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_EncodeRating.js?v1"></script>
-			<script type="module" src="../JS/Gateway_Religions.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Religions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js?v1"></script>
-			<script type="module" src="../JS/Gateway_Floors.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Floors.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Floors.js?v1"></script>
-			<script type="module" src="../JS/Gateway_Offices.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Offices.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js?v1"></script>			
-			<script type="module" src="../JS/Gateway_ServiceTypes.js?v1"></script>
+			<script type="module" src="../JS/Gateway_ServiceTypes.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js?v1"></script>
-			<script type="module" src="../JS/Gateway_OfficeServices.js?v1"></script>
+			<script type="module" src="../JS/Gateway_OfficeServices.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_OfficeServices.js?v1"></script>
-			<script type="module" src="../JS/Gateway_VisibilityRates.js?v1"></script>
+			<script type="module" src="../JS/Gateway_VisibilityRates.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_VisibilityRates.js?v1"></script>
-			<script type="module" src="../JS/Validator_RequestVisibilityRates.js?v1"></script>
+			<script type="module" src="../JS/Validator_RequestVisibilityRates.js"></script>
 			<script type="text/javascript" src="../JS/SubmitValidation_RequestVisibilityRates.js?v1"></script>	
-			<script type="module" src="../JS/Gateway_HelpfulnessRates.js?v1"></script>
+			<script type="module" src="../JS/Gateway_HelpfulnessRates.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_HelpfulnessRates.js?v1"></script>		
-			<script type="module" src="../JS/Validator_RequestHelpfulnessRates.js?v1"></script>
+			<script type="module" src="../JS/Validator_RequestHelpfulnessRates.js"></script>
 			<script type="text/javascript" src="../JS/SubmitValidation_RequestHelpfulnessRates.js?v1"></script>
-			<script type="module" src="../JS/Gateway_Questions.js?v1"></script>
+			<script type="module" src="../JS/Gateway_Questions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_Questions.js?v1"></script>		
-			<script type="module" src="../JS/Gateway_CommentQuestions.js?v1"></script>
+			<script type="module" src="../JS/Gateway_CommentQuestions.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_CommentQuestions.js?v1"></script>
-			<script type="module" src="../JS/Executor_Page_RateService.js?v1"></script>			
+			<script type="module" src="../JS/Executor_Page_RateService.js"></script>			
 		</body>
 		</html>
 <?php 
