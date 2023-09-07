@@ -196,11 +196,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="searchAreaLabelTxt-Class">Client-Type</span>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(),submitRequestCommentDetails()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(), submitRequestCommentDetails(), submitRequestCountPassScore()" autocomplete="off">
 						</div>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(), submitRequestCommentDetails()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(), submitRequestCommentDetails(), submitRequestCountPassScore()" autocomplete="off">
 						</div>
 					</div>
 					<!--_Filter Client Type Item-->
@@ -386,7 +386,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 								<div class="engagementItem">
 									<div class="engagementLabel">Rating</div>
-									<div class="engagementValWrap"><div class="engagementVal-Class" id="pointOfEntryRating-Id"><span style="color: red;">0% (Poor)</span></div></div>		
+									<div class="engagementValWrap"><div class="engagementVal-Class" id="pointOfEntryRating-Id"><!--Component--></div></div>		
 								</div>								
 							</div>
 							
@@ -524,6 +524,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
+		<script type="module" src="../JS/Gateway_CountPassScore.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CountPassScore.js"></script>
 		<script type="module" src="../JS/Executor_Page_Dashboard.js"></script>
 	</body>
 	</html>

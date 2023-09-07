@@ -9,26 +9,26 @@ function RatingSpan(){
 
 	let ratingSpan = "";
 
-	if(citizenCharterOneScores_Array.length > 0){
-		ratingSpan += `<table>`+
-			`<caption><b>`+citizenCharterOneScores_Array[0].ccQuestion+`</b></caption>`+
-			`<thead>`+
-				`<tr>`+
-					`<th>Number</th>`+
-					`<th>Rating Description</th>`+
-					`<th>Responses</th>`+
-				`</tr>`+
-			`</thead>`+
-		`<tbody>`;
-		for(let index=0; index < citizenCharterOneScores_Array.length; index++){
-			ratingSpan += `<tr>`+
-				`<td>`+citizenCharterOneScores_Array[index].ccNumbering+`</td>`+
-				`<td>`+citizenCharterOneScores_Array[index].ccRate+`</td>`+
-				`<td>`+citizenCharterOneScores_Array[index].responses+`</td>`+
-			`</tr>`;
+	
+	/*Compute Point of entry rating*/
+	if(overallEngagement != 0){
+		const pointOfEntryRate = (countedPassScore / overallEngagement) * 100;
+
+		if(pointOfEntryRate.toFixed(0) >= 95){
+			ratingSpan = `<span style="color: #036939;">`+pointOfEntryRate.toFixed(0)+`% (Excellent)</span>`;
+		}else if(pointOfEntryRate.toFixed(0) >= 90 && pointOfEntryRate.toFixed(0) < 95){
+			ratingSpan = `<span style="color: #036939;">`+pointOfEntryRate.toFixed(0)+`% (Very Satisfactory)</span>`;
+		}else if(pointOfEntryRate.toFixed(0) >= 85 && pointOfEntryRate.toFixed(0) < 90){
+			ratingSpan = `<span style="color: #8EC63F;">`+pointOfEntryRate.toFixed(0)+`% (Satisfactory)</span>`;
+		}else if(pointOfEntryRate.toFixed(0) >= 80 && pointOfEntryRate.toFixed(0) < 85){
+			ratingSpan = `<span style="color: #FAB042;">`+pointOfEntryRate.toFixed(0)+`% (Compliant)</span>`;
+		}else if(pointOfEntryRate.toFixed(0) >= 75 && pointOfEntryRate.toFixed(0) < 80){
+			ratingSpan = `<span style="color: #E15268;">`+pointOfEntryRate.toFixed(0)+`% (Needs Improvment)</span>`;
+		}else if(pointOfEntryRate.toFixed(0) < 75){
+			ratingSpan = `<span style="color: #BD212F;">`+pointOfEntryRate.toFixed(0)+`% (Poor)</span>`;
 		}
-		ratingSpan += `</tbody></table>`;					
 	}
+	/*Compute Point of entry rating*/
 	
 
 	if(ratingSpan == ""){

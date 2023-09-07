@@ -48,6 +48,7 @@ requestOverallDisagree();
 requestOverallStronglyDisagree();
 requestOverallNoRating();
 submitRequestAvailedOfficeService();
+submitRequestCountPassScore();
 
 requestPointOfEntry();
 /*Get the initial value for overall service rates response*/
