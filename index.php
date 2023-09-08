@@ -16,7 +16,7 @@
 	<!--Page Header-->
 	<div class="pageHeaderWrap">
 		<div class="pageHeaderItem pageHeaderBg-Class" style="--pageHeaderBackground: url('./src/Banner One.png')">
-			<div class="pageHeaderTxt">Data Provicy Policy</div>
+			<div class="pageHeaderTxt">Data Privacy Policy</div>
 			<div class="pageHeaderSubtxt">To learn more about data privacy visit Republic Act 10173 – Data Privacy Act of 2012</div>
 		</div>
 	</div>

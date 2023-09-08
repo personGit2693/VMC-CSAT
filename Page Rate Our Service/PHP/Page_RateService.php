@@ -247,11 +247,11 @@ if(isset($_GET["rateToken"])){
 			<div class="stepSets-Class">
 				<div class="stepSetTitleWrap">
 					<div class="stepSetTitle-Class">Citizen Charter of the office</div>
-					<div class="stepSetTitleDefi-Class">Please rate the level of citizen charter awareness, visibility, and Helpfulness of the office.</div>
+					<div class="stepSetTitleDefi-Class">Sagutan ang nararapat na kasagutan mo tungkol sa mga tanong Sa Citizen’s Chrater (CC). </div>
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Which of the following best describes your awareness of a CC?<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldTitle-Class">Alin sa mga sumusunod ang naglalarawan ng iyong kamalayan tungkol sa Citizen's Charter (CC)?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc1RadioBtnsWrap">
 						<!--Component-->	
 						Loading
@@ -259,7 +259,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Would you say that the CC of this office was?<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldTitle-Class">Kung alam mo ang CC (o kung ang sagot mo sa CC1 ay numero 1-3, masasabi mo ba na ang  CC ng ward / opisina na ito ay…?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc2RadioBtnsWrap">
 						<!--Component-->
 						Select CC1 first.	
@@ -267,7 +267,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">How much did the CC help you in your transaction?<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldTitle-Class">Kung alam mo ang CC (o ang sagot mo sa CC1 ay numero 1-3), gaano ka natulungan ng CC sa iyong pagpapagamot / pagpakonsulta/ transakyon?<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="cc3RadioBtnsWrap">
 						<!--Component-->
 						Select CC2 first.
