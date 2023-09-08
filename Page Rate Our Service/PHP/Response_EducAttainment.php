@@ -62,7 +62,7 @@ if(isset($_POST["token"])){
 	if($globalTokenResult === null){
 		/*_Get religions on db*/
 		/*_ _Prep query*/
-		$getEducAttainment_Query = "SELECT * FROM educattains_tab";
+		$getEducAttainment_Query = "SELECT * FROM educattains_tab ORDER BY educattain_number";
 		/*_ _Prep query*/
 
 		/*_ _Execute query*/
