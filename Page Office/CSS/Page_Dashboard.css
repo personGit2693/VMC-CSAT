@@ -4294,6 +4294,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #chartsWrapper {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     align-items: flex-start;
     background-color: #E8EFFF;
     margin-top: 15px; }
@@ -4451,6 +4452,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #chartsWrapper {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     align-items: flex-start;
     background-color: #E8EFFF;
     margin-top: 15px; }
@@ -4608,6 +4610,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #chartsWrapper {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     align-items: flex-start;
     background-color: #E8EFFF;
     margin-top: 15px; }
@@ -4765,6 +4768,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #chartsWrapper {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     align-items: flex-start;
     background-color: #E8EFFF;
     margin-top: 15px; }
