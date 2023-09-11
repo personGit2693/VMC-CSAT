@@ -22,7 +22,7 @@ function FloorRadioBtn(){
 
 	if(floorRadioBtn == ""){
 		if(buildingId == ""){
-			floorRadioBtn = "Select Building.";
+			floorRadioBtn = "Select Point of Entry Location.";
 		}else if(buildingId != ""){
 			buildingId == "No Floors found to select!"
 		}		

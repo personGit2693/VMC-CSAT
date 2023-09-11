@@ -22,11 +22,11 @@ function OfficeRadioBtn(){
 
 	if(officeRadioBtn == ""){
 		if(respondentId == "" && buildingId == "" && floorId == ""){
-			officeRadioBtn = "Select Respondent, building and floor.";
+			officeRadioBtn = "Select Respondent, Point of Entry Location and floor.";
 		}else if(respondentId == ""){
 			officeRadioBtn = "Select Respondent.";
 		}else if(buildingId == ""){
-			officeRadioBtn = "Select building.";
+			officeRadioBtn = "Select Point of Entry Location.";
 		}else if(floorId == ""){
 			officeRadioBtn = "Select floor.";
 		}else if(respondentId != "" && buildingId != "" && floorId != ""){

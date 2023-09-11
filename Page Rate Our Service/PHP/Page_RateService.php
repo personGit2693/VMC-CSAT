@@ -187,7 +187,7 @@ if(isset($_GET["rateToken"])){
 				</div>
 
 				<div class="stepSetPerFieldWrap">
-					<div class="stepSetPerFieldTitle-Class">Building<span class="redAsterisk-Class">*</span></div>
+					<div class="stepSetPerFieldTitle-Class">Point of Entry Location<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="buildingRadioBtnsWrap">
 						<!--Component-->
 						Loading...
