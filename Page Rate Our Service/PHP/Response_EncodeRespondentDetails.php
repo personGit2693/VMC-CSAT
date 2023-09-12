@@ -29,7 +29,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 	$officeServiceId = $_POST["officeServiceId"];
 	$contactDetails = $_POST["contactDetails"];
 
-	$visitorSecretKey = md5($_SERVER["REMOTE_ADDR"]);
+	$visitorSecretKey = base64_encode($_SERVER["REMOTE_ADDR"]);
 	/*Query string*/
 
 
