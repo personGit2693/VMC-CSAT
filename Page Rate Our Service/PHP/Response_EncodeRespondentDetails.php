@@ -29,7 +29,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 	$officeServiceId = $_POST["officeServiceId"];
 	$contactDetails = $_POST["contactDetails"];
 
-	$visitorIpAddress = $_SERVER["REMOTE_ADDR"];
+	$visitorSecretKey = md5($_SERVER["REMOTE_ADDR"]);
 	/*Query string*/
 
 
@@ -90,7 +90,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 				visityear_id,
 				officeservice_id,
 				clientresponse_contactdetails,
-				clientresponse_ipaddress
+				clientresponse_secretkey
 			) 
 			VALUES (
 				:clientResponseRef,
@@ -106,7 +106,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 				:freqVisitId,
 				:officeServiceId,
 				:contactDetails,
-				:visitorIpAddress
+				:visitorSecretKey
 			)
 		";
 		/*_ _Prep query*/
@@ -130,7 +130,7 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"] && isset($_POST["respon
 		$encodeRespondentDetails_QueryObj->bindValue(':freqVisitId', intval($freqVisitId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':officeServiceId', intval($officeServiceId), PDO::PARAM_INT);
 		$encodeRespondentDetails_QueryObj->bindValue(':contactDetails', $contactDetails, PDO::PARAM_STR);
-		$encodeRespondentDetails_QueryObj->bindValue(':visitorIpAddress', $visitorIpAddress, PDO::PARAM_STR);
+		$encodeRespondentDetails_QueryObj->bindValue(':visitorSecretKey', $visitorSecretKey, PDO::PARAM_STR);
 		$execution = $encodeRespondentDetails_QueryObj->execute();
 		/*_ _Execute query*/
 
