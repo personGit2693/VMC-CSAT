@@ -8,21 +8,19 @@ $page_RateService = "./Page Rate Our Service/PHP/Page_RateService.php";
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
+if(isset($_POST["validateCodeToken"]) && isset($_POST["inputCode"])){
 	/*Globals*/
-	require_once "./Global PHP/Connection.php";
-	require_once "./Global PHP/GenerateRateToken_Class.php";
-	require_once "./Global PHP/CodeDetails_Class.php";
+	require_once "./Global PHP/Connection.php";		
 	/*Globals*/
 
 
 	/*Prep return*/
-	$reqRateToken_Resp = new stdClass();
-	$reqRateToken_Resp->genRateTok = null;
-	$reqRateToken_Resp->getCodeDetails = null;
-	$reqRateToken_Resp->rateToken = null;
-	$reqRateToken_Resp->codeId = null;
-	$reqRateToken_Resp->page_RateService = $page_RateService;
+	$validateCode_Resp = new stdClass();
+	$validateCode_Resp->genRateTok = null;
+	$validateCode_Resp->getCodeDetails = null;
+	$validateCode_Resp->rateToken = null;
+	$validateCode_Resp->codeId = null;
+	$validateCode_Resp->page_RateService = $page_RateService;
 	
 	$genRateTok = null;
 	$getCodeDetails = null;
@@ -46,15 +44,15 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 
 	if($getCodeDetails_Obj->execution != true){
 		$getCodeDetails = "Getting code details has execution problem";
-		$reqRateToken_Resp->getCodeDetails = $getCodeDetails;
+		$validateCode_Resp->getCodeDetails = $getCodeDetails;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($validateCode_Resp);
 		return;
 	}else if($getCodeDetails_Obj->count == 0){
 		$getCodeDetails = "Invalid code";
-		$reqRateToken_Resp->getCodeDetails = $getCodeDetails;
+		$validateCode_Resp->getCodeDetails = $getCodeDetails;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($validateCode_Resp);
 		return;
 	}
 	/*Code validation details*/
@@ -65,41 +63,41 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 
 	if($genRateTok_Resp->genRateTok_Exec != true){
 		$genRateTok = "Generating rate token has execution problem";
-		$reqRateToken_Resp->genRateTok = $genRateTok;
+		$validateCode_Resp->genRateTok = $genRateTok;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($validateCode_Resp);
 		return;
 	}else if($genRateTok_Resp->genRateTok_Count == 0){
 		$genRateTok = "No rate token was generated";
-		$reqRateToken_Resp->genRateTok = $genRateTok;
+		$validateCode_Resp->genRateTok = $genRateTok;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($validateCode_Resp);
 		return;
 	}
 	/*Generate Rate token*/
 
 
 	/*Return response*/
-	$reqRateToken_Resp->genRateTok = $genRateTok;
-	$reqRateToken_Resp->getCodeDetails = $getCodeDetails;	
-	$reqRateToken_Resp->rateToken = $genRateTok_Resp->genRateTok_Val;
-	$reqRateToken_Resp->codeId = $getCodeDetails_Obj->details_Assoc["officecode_id"];
+	$validateCode_Resp->genRateTok = $genRateTok;
+	$validateCode_Resp->getCodeDetails = $getCodeDetails;	
+	$validateCode_Resp->rateToken = $genRateTok_Resp->genRateTok_Val;
+	$validateCode_Resp->codeId = $getCodeDetails_Obj->details_Assoc["officecode_id"];
 
-	echo json_encode($reqRateToken_Resp);
+	echo json_encode($validateCode_Resp);
 	/*Return response*/
 
-}else if(!isset($_POST["requestRateToken_Gate"]) || !isset($_POST["inputCode"])){	
+}else if(!isset($_POST["validateCodeToken"]) || !isset($_POST["inputCode"])){	
 	/*Return response*/
 	if(!isset($_SERVER["HTTP_REFERER"])){
 		header("location:".$landingPage_EndUser);
 	}else if(isset($_SERVER["HTTP_REFERER"])){
-		$reqRateToken_Resp = new stdClass();
-		$reqRateToken_Resp->genRateTok = null;
-		$reqRateToken_Resp->getCodeDetails = null;
-		$reqRateToken_Resp->rateToken = null;
-		$reqRateToken_Resp->codeId = null;
+		$validateCode_Resp = new stdClass();
+		$validateCode_Resp->genRateTok = null;
+		$validateCode_Resp->getCodeDetails = null;
+		$validateCode_Resp->rateToken = null;
+		$validateCode_Resp->codeId = null;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($validateCode_Resp);
 	}	
 	/*Return response*/
 }

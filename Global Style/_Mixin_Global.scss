@@ -481,3 +481,138 @@
 }
 /*Global Office Page Header*/
 /***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Library*/
+
+/*_Modal*/
+@mixin modalmeGeneralProps_Style{
+	--modalHeight: auto;
+	--modalBorderColor: #008080;
+	--modalBodyBgColor: #ffffff;	
+	--modalTop: 70px;
+
+	/*--modalWidth: declare to element;*/
+}
+
+
+@mixin modalHeadGeneralProps_Style{
+	--modalHeaderBgColor: #008080;
+	--modalHeaderFSize: 16px; /*To be changed*/
+	--modalHeaderFColor: #ffffff;
+}
+
+
+@mixin modalHeadTxtGeneralProps_Style{
+	--modalHeaderFColor: #ffffff;
+}
+
+
+@mixin modalHeadTxt_MT_Style{
+	--modalHeaderFSize: 16px; /*To be changed*/	
+}
+@mixin modalHeadTxt_Laptop_Style{
+	--modalHeaderFSize: 18px; /*changed*/
+}
+@mixin modalHeadTxt_Desktop_Style{
+	--modalHeaderFSize: 20px; /*changed*/
+}
+
+
+@mixin modalHeadClose_MT_Style{
+	--modalCloseIconSize: 16px; /*To be changed*/
+}
+@mixin modalHeadClose_Laptop_Style{
+	--modalCloseIconSize: 18px; /*changed*/
+}	
+@mixin modalHeadClose_Desktop_Style{
+	--modalCloseIconSize: 20px; /*changed*/
+}					
+/*_Modal*/
+
+
+/*_Input field*/
+@mixin cusInputGeneralProps_Style{
+	--customInputColor: black;
+}
+
+
+@mixin customInputFSize_MT_Style{
+	--customInputFSize: 15px; /*To be changed*/
+}
+@mixin customInputFSize_Laptop_Style{
+	--customInputFSize: 17px; /*changed*/
+}
+@mixin customInputFSize_Desktop_Style{
+	--customInputFSize: 19px; /*changed*/
+}
+
+
+@mixin customInputAnimFSize_MT_Style{
+	--customInputAnimFSize: 12px; /*To be changed*/
+}
+@mixin customInputAnimFSize_Laptop_Style{
+	--customInputAnimFSize: 14px; /*changed*/
+}
+@mixin customInputAnimFSize_Desktop_Style{
+	--customInputAnimFSize: 16px; /*changed*/
+}
+/*_Input field*/
+
+
+/*_Normal Button*/
+@mixin normBtnGeneralProps_Style{
+	--normBtnWidth: auto;
+	--normBtnPadding: 7px;
+	--normBtnBorderWidth: 1px;
+	--normBtnBorderColor: #285FF3;
+	--normBtnRadius: 4px;
+	--normBtnFWeight: normal;	
+	--normBtnBgColor: #285FF3;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	--normBtnHovActBgColor: #1B85BD;
+}
+
+
+@mixin normBtnFSize_MT_Style{
+	--normBtnFSize: 16px; /*To be changed*/
+}
+@mixin normBtnFSize_Laptop_Style{
+	--normBtnFSize: 18px; /*changed*/
+}
+@mixin normBtnFSize_Desktop_Style{
+	--normBtnFSize: 20px; /*changed*/
+}
+/*_Normal Button*/
+
+
+/*_Notification*/
+@mixin notiFSize_MT_Style{
+	--notiFSize: 16px; /*To be changed*/
+}
+@mixin notiFSize_Laptop_Style{
+	--notiFSize: 18px; /*changed*/
+}
+@mixin notiFSize_Desktop_Style{
+	--notiFSize: 20px; /*changed*/
+}
+
+
+@mixin notiCloseIconSize_MT_Style{
+	--notiCloseIconWidthHeight: 16px; /*To be changed*/
+}
+@mixin notiCloseIconSize_Laptop_Style{
+	--notiCloseIconWidthHeight: 18px; /*changed*/
+}
+@mixin notiCloseIconSize_Desktop_Style{
+	--notiCloseIconWidthHeight: 20px; /*changed*/
+}
+/*_Notification*/
+
+/*Rogrid Library*/
+/***********************************************************************************************************************************************************************************************************/
