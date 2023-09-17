@@ -10,22 +10,18 @@ $page_RateService = "./Page Rate Our Service/PHP/Page_RateService.php";
 
 if(isset($_POST["validateCodeToken"]) && isset($_POST["inputCode"])){
 	/*Globals*/
-	require_once "./Global PHP/Connection.php";		
+	require_once "./Global PHP/Connection.php";
+	require_once "./Global PHP/CodeDetails_Class.php";
 	/*Globals*/
 
 
 	/*Prep return*/
 	$validateCode_Resp = new stdClass();
-	$validateCode_Resp->genRateTok = null;
-	$validateCode_Resp->getCodeDetails = null;
-	$validateCode_Resp->rateToken = null;
-	$validateCode_Resp->codeId = null;
-	$validateCode_Resp->page_RateService = $page_RateService;
+	$validateCode_Resp->execution = null;
+	$validateCode_Resp->count = null;
 	
-	$genRateTok = null;
-	$getCodeDetails = null;
-	$rateToken = null;
-	$codeId = null;
+	$execution = null;
+	$count = null;
 	/*Prep return*/
 
 
@@ -42,60 +38,28 @@ if(isset($_POST["validateCodeToken"]) && isset($_POST["inputCode"])){
 	/*Code validation details*/
 	$getCodeDetails_Obj = getCodeDetails($vmcCsat_Conn, $inputCode);
 
-	if($getCodeDetails_Obj->execution != true){
-		$getCodeDetails = "Getting code details has execution problem";
-		$validateCode_Resp->getCodeDetails = $getCodeDetails;
-
-		echo json_encode($validateCode_Resp);
-		return;
-	}else if($getCodeDetails_Obj->count == 0){
-		$getCodeDetails = "Invalid code";
-		$validateCode_Resp->getCodeDetails = $getCodeDetails;
-
-		echo json_encode($validateCode_Resp);
-		return;
-	}
+	$execution = $getCodeDetails_Obj->execution;
+	$count = $getCodeDetails_Obj->count;
 	/*Code validation details*/
 
 
-	/*Generate Rate token*/
-	$genRateTok_Resp = generateRateToken($vmcCsat_Conn, $getCodeDetails_Obj->details_Assoc["officecode_id"]);
-
-	if($genRateTok_Resp->genRateTok_Exec != true){
-		$genRateTok = "Generating rate token has execution problem";
-		$validateCode_Resp->genRateTok = $genRateTok;
-
-		echo json_encode($validateCode_Resp);
-		return;
-	}else if($genRateTok_Resp->genRateTok_Count == 0){
-		$genRateTok = "No rate token was generated";
-		$validateCode_Resp->genRateTok = $genRateTok;
-
-		echo json_encode($validateCode_Resp);
-		return;
-	}
-	/*Generate Rate token*/
-
-
 	/*Return response*/
-	$validateCode_Resp->genRateTok = $genRateTok;
-	$validateCode_Resp->getCodeDetails = $getCodeDetails;	
-	$validateCode_Resp->rateToken = $genRateTok_Resp->genRateTok_Val;
-	$validateCode_Resp->codeId = $getCodeDetails_Obj->details_Assoc["officecode_id"];
+	$validateCode_Resp->execution = $execution;
+	$validateCode_Resp->count = $count;	
 
 	echo json_encode($validateCode_Resp);
 	/*Return response*/
 
-}else if(!isset($_POST["validateCodeToken"]) || !isset($_POST["inputCode"])){	
+}else if(!isset($_POST["validateCodeToken"]) || !isset($_POST["inputCode"])){
+	
 	/*Return response*/
 	if(!isset($_SERVER["HTTP_REFERER"])){
 		header("location:".$landingPage_EndUser);
 	}else if(isset($_SERVER["HTTP_REFERER"])){
+
 		$validateCode_Resp = new stdClass();
-		$validateCode_Resp->genRateTok = null;
-		$validateCode_Resp->getCodeDetails = null;
-		$validateCode_Resp->rateToken = null;
-		$validateCode_Resp->codeId = null;
+		$validateCode_Resp->execution = null;
+		$validateCode_Resp->count = null;
 
 		echo json_encode($validateCode_Resp);
 	}	

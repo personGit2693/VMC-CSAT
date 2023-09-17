@@ -62,7 +62,7 @@
 					<input type="checkbox" id="agreeTermsCheckbox-Id" onchange="checkCusCheckBox(this), switchRateOurServBtn()" autocomplete="off">
 				</div>
 
-				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto;" onclick="redirectToRateServ()">Rate our service</button>
+				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto; visibility: hidden;" onclick="redirectToRateServ()">Rate our service</button>
 			</div>
 			<!--_ _Accept terms and agreement-->			
 		</div>		
@@ -102,11 +102,11 @@
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js?v1"></script>	
 	<script type="text/javascript" src="JsCollection_Index.js?v1"></script>	
 	<script type="text/javascript" src="Controller_UnhideRateOurServiceBtn.js?v1"></script>
-	<script type="text/javascript" src="Request_ValidateCode.js?v1"></script>
-	<script type="text/javascript" src="Request_GenerateRateToken.js?v1"></script>
+	<!--<script type="text/javascript" src="Request_ValidateCode.js?v1"></script>-->
+	<!--<script type="text/javascript" src="Request_GenerateRateToken.js?v1"></script>-->
 	<script type="text/javascript" src="Validation_PrivacyPolicy.js?v1"></script>	
-	<script type="text/javascript" src="Portal_ValidateCode.js?v1"></script>
-	<script type="text/javascript" src="Portal_RateService.js?v1"></script>
+	<script type="module" src="Portal_ValidateCode.js?v1"></script>
+	<script type="module" src="Portal_RateService.js?v1"></script>
 	<script type="text/javascript" src="Executor_Index.js?v1"></script>
 </body>
 </html>
