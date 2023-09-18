@@ -224,7 +224,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
 						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry()">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -254,7 +254,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 									<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('../../src/calendaricon blue.png');"></div>
 									<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
 								</div>
-								<div class="dateRangeTooltipArrow_RoClass"></div>					
+								<div class="dateRangeTooltipArrow_RoClass"></div>
 							</div>
 							<!--_ _ _Date Range-->
 							<!--_ _ _Date Range Calendar Lite Wrap-->

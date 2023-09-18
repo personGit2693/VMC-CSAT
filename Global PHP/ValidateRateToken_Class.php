@@ -19,10 +19,13 @@ function validateRateToken(object $vmcCsat_Conn, string $rateToken){
 
 	/*Check if token exist on db*/
 	/*_Prep query*/
-	$validateRateTok_Query = "SELECT rateservice_token_value 
+	$validateRateTok_Query = "SELECT rateservice_tokens_tab.rateservice_token_value AS 'rateservice_token_value'
 	FROM rateservice_tokens_tab 
-	WHERE rateservice_token_value = :rateToken
-	AND rateservice_token_expiration >= CONVERT(:datetimeToday, DATETIME);";
+	INNER JOIN officescodes_tab 
+	ON rateservice_tokens_tab.officecode_code = officescodes_tab.officecode_code
+	WHERE rateservice_tokens_tab.rateservice_token_value = :rateToken
+	AND rateservice_tokens_tab.rateservice_token_expiration >= CONVERT(:datetimeToday, DATETIME)
+	AND officescodes_tab.officecode_active = 1;";
 	/*_Prep query*/
 
 	/*_Execute query*/

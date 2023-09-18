@@ -21,14 +21,14 @@ function OfficeServiceRadio(){
 	}
 
 	if(officeServiceRadio == ""){
-		if(serviceTypeId == "" && respondentId == "" && officeId == ""){
-			officeServiceRadio = "Select Respondent, Point of Entry Department Visited and Service-Type.";
-		}else if(serviceTypeId == ""){
-			officeServiceRadio = "Select Service-Type.";
+		if(respondentId == "" && serviceTypeId == ""){
+			officeServiceRadio = "Select Respondent and Service-Type.";
 		}else if(respondentId == ""){
 			officeServiceRadio = "Select Respondent.";
+		}else if(serviceTypeId == ""){
+			officeServiceRadio = "Select Service-Type.";
 		}else if(officeId == ""){
-			officeServiceRadio = "Select Point of Entry Department Visited.";
+			officeServiceRadio = "No value on Point of Entry.";
 		}else if(serviceTypeId != "" && respondentId != "" && officeId != ""){
 			officeServiceRadio = "No Services found to select!";
 		}		

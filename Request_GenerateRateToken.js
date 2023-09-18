@@ -2,7 +2,7 @@ import {inputCode} from "./JSCollection_IndexModule.js";
 
 
 /*Prep Export variables*/
-let codeDetails = {};
+var codeDetails_Base = null;
 /*Prep Export variables*/
 
 
@@ -20,8 +20,8 @@ const requestRateToken = () => {
 				}else if(reqRateToken_Resp.genRateTok != null){					
 					alert(reqRateToken_Resp.genRateTok);
 				}else if(reqRateToken_Resp.getCodeDetails == null && reqRateToken_Resp.genRateTok == null){
-					codeDetails = reqRateToken_Resp.codeDetails;
-					window.location.href = reqRateToken_Resp.page_RateService+"?rateToken="+reqRateToken_Resp.rateToken;
+					codeDetails_Base = btoa(unescape(encodeURIComponent(JSON.stringify(reqRateToken_Resp.codeDetails))));
+					window.location.href = reqRateToken_Resp.page_RateService+"?rateToken="+reqRateToken_Resp.rateToken+"&codeDetailsBase="+codeDetails_Base;
 				}				
 			}catch(requestRateToken_Error){
 				alert(requestRateToken_Error);
@@ -49,5 +49,5 @@ const requestRateToken = () => {
 
 
 /*Export*/
-export {codeDetails, requestRateToken};
+export {codeDetails_Base, requestRateToken};
 /*Export*/

@@ -1,7 +1,7 @@
 /*Import*/
 import renderServiceTypeRadioBtn from "./View_ServiceTypeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
+import {respondentId, officeId, clientTypeId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 
@@ -44,6 +44,7 @@ function requestServiceTypes(){
 	}
 
 	const queryString = "token="+token+
+	"&respondentId="+respondentId+
 	"&officeId="+officeId+
 	"&clientTypeId="+clientTypeId;
 	
