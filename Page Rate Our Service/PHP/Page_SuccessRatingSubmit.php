@@ -67,7 +67,7 @@ if(isset($_GET["token"])){
 	<html>
 	<head>
 		<title>Submit Request Result</title>
-		<link rel="stylesheet" type="text/css" href="../CSS/Page_SuccessRatingSubmit.css?v2">
+		<link rel="stylesheet" type="text/css" href="../CSS/Page_SuccessRatingSubmit.css">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<meta charset="utf-16">
