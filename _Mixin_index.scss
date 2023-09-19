@@ -25,11 +25,13 @@
 }
 
 
+
 @mixin policyDetailsItem_Style{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 }
+
 
 
 @mixin policyDateDetailsWrapper{
@@ -38,6 +40,7 @@
 	overflow: visible;
 	margin: 0px 5px;
 }
+
 
 
 @mixin policyDateTxt_MT_Style{
@@ -70,6 +73,7 @@
 }
 
 
+
 @mixin policyUpToDateTxt_MT_Style{
 	position: relative;
 	box-sizing: border-box;
@@ -96,6 +100,7 @@
 	font: normal normal 28px calibri; /*changed*/
 	color: #303238;
 }
+
 
 
 @mixin policyBigLabelTxt_MT_Style{
@@ -132,6 +137,7 @@
 }
 
 
+
 @mixin policyTxtFont_MT_Style{
 	font-family: calibri;
 	font-size: 20px; /*To be changed*/
@@ -154,6 +160,7 @@
 }
 
 
+
 @mixin policyParagraph_Style{
 	position: relative;
 	overflow: visible;
@@ -162,6 +169,7 @@
 	word-break: keep-all;
 	margin: 0px 5px;
 }
+
 
 
 @mixin policyAgreeTermsWrap_Style{
@@ -180,6 +188,7 @@
 }
 
 
+
 @mixin agreeCheckboxSize_MT_Style{
 	--cusCheckboxWidthHeight: 24px;
 }
@@ -189,6 +198,8 @@
 @mixin agreeCheckboxSize_Desktop_Style{
 	--cusCheckboxWidthHeight: 28px;
 }
+
+
 
 
 @mixin agreeCheckboxFontSize_MT_Style{
@@ -202,6 +213,7 @@
 }
 
 
+
 @mixin agreeCheckboxLabel_Style{
 	--cusCheckboxFStyle: normal;
 	--cusCheckboxFWeight: normal;
@@ -209,6 +221,7 @@
 	--custCheckboxFLDSize: 18px;
 	--cusCheckboxColor: black;
 }
+
 
 
 @mixin rateServiceBtn_Style{
@@ -219,6 +232,7 @@
 	--normBtnFcolor: #ffffff;
 	--normBtnHovActFColor: #ffffff;
 }
+
 
 
 @mixin rateServiceBtnFSize_MT_Style{
@@ -232,12 +246,14 @@
 }
 
 
+
 @mixin rateServiceBtnWidth_MT_Style{
 	--normBtnWidth: auto;
 }
 @mixin rateServiceBtnWidth_LD_Style{
 	--normBtnWidth: auto;
 }
+
 
 
 @mixin rateServiceEnabledBtn_Style{
@@ -247,54 +263,11 @@
 }
 
 
+
 @mixin rateServiceDisabledBtn_Style{
 	--normBtnBorderColor: gray;
 	--normBtnBgColor: gray;
 	--normBtnHovActBgColor: gray;
 }
-
-
-@mixin enterCodeModal_Mobile_Style{
-	--modalWidth: 75%; /*To be changed*/
-}
-@mixin enterCodeModal_TLD_Style{
-	--modalWidth: 350px; /*changed*/
-}
-
-
-@mixin fieldsWrapFlex_Style{
-	position: relative;
-	display: flex;
-	overflow: visible;
-	box-sizing: border-box;
-	flex-flow: column nowrap;
-	align-items: center;
-}
-
-
-@mixin messageGeneralProps_Style{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	margin-bottom: 5px;
-	word-break: keep-all;
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	text-align: center;
-}
-
-
-@mixin messageFSize_MT_Style{
-	font-size: 16px; /*To be changed*/	
-}
-@mixin messageFSize_Laptop_Style{
-	font-size: 18px; /*changed*/	
-}
-@mixin messageFSize_Desktop_Style{
-	font-size: 20px; /*changed*/	
-}
-
 /*Page Content*/
 /***********************************************************************************************************************************************************************************************************/
