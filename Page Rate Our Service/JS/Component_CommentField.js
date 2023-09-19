@@ -32,10 +32,12 @@ function CommentField(){
 	}
 
 	if(commentField == ""){
-		if(respondentId == ""){
+		if(respondentId == "" && officeId == ""){
+			commentField = "Select Respondent and Point of Entry.";	
+		}else if(respondentId == ""){
 			commentField = "Select Respondent.";	
 		}else if(officeId == ""){
-			commentField = "No value on Point of Entry.";
+			commentField = "Select Point of Entry.";
 		}else if(respondentId != "" && officeId != ""){
 			commentField = "No Fields to provide your comments and suggestions!";
 		}		

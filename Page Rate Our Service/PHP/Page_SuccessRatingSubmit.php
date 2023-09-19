@@ -11,13 +11,11 @@ if(isset($_GET["token"])){
 	/*Globals*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
-	require_once "../../Global PHP/BurnCode_Class.php";
 	/*Globals*/
 
 
 	/*Query string*/
 	$token = $_GET["token"];
-	$codeDetails_Obj = json_decode(base64_decode($_SESSION["codeDetailsBase"]));
 	/*Query string*/
 
 
@@ -43,24 +41,6 @@ if(isset($_GET["token"])){
 		return;
 	}
 	/*Validate global token*/
-
-
-	/*Burn code token*/
-	$codeId = $codeDetails_Obj->officecode_code;
-	$burnCode_Obj = burnCode($vmcCsat_Conn, $codeId);
-
-	if($burnCode_Obj->execution){
-		if($burnCode_Obj->count != 0){
-			/*Unset session*/
-			unset($_SESSION["codeDetailsBase"]);
-			/*Unset session*/
-		}else if($burnCode_Obj->count == 0){
-			exit("No code token was burned!");
-		}
-	}else if(!$burnCode_Obj->execution){
-		exit("Burning code token has execution problem!");
-	}
-	/*Burn code token*/
 ?>
 
 	<!DOCTYPE html>

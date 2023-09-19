@@ -1,5 +1,5 @@
 /*Import*/
-import {serviceTypeRadioBtnsWrap, officeServiceRadioWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap, commentsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
+import {floorRadioBtnsWrap, officeRadioBtnsWrap, serviceTypeRadioBtnsWrap, officeServiceRadioWrap, cc2RadioBtnsWrap, cc3RadioBtnsWrap, questionsWrap, commentsWrap} from "../Page Rate Our Service/JS/JsCollection_Page_RateService.js";
 import {questionDetails_Array} from "../Page Rate Our Service/JS/Request_Questions.js";
 /*Import*/
 
@@ -19,6 +19,8 @@ var genderPreferenceId = "";
 var religionId = "";
 var educationId = "";
 var visityearId = "";
+var buildingId = "";
+var floorId = "";
 var officeId = "";
 var clientTypeId = "";
 var serviceTypeId = "";
@@ -30,7 +32,6 @@ var visibilityRatingViaId = "";
 var helpfulnessRatingViaId = "";
 var questionGroups = [];
 var selectedQuestionGroups = [];
-var codeDetails_Obj = {};
 
 
 var submittedRate = {
@@ -60,17 +61,6 @@ var submittedRate = {
 	comments:[]
 };
 /*Prep export variables*/
-
-
-/*Assign Value for codeDetails_Obj and officeId*/
-function valueCodeDetailsObj(codeDetails_Base){
-	codeDetails_Obj = JSON.parse(atob(codeDetails_Base));
-
-	officeId = codeDetails_Obj.office_id;
-
-	submittedRate.respondentDetails.officeId = officeId;
-}
-/*Assign Value for codeDetails_Obj and officeId*/
 
 
 /*Assign Value for ageRangeId*/
@@ -139,20 +129,63 @@ function valueEducAttain(selectedEducAttain_Base){
 /*Assign Value for educationId*/
 
 
+/*Assign Value for buildingId*/
+function valueBuilding(selectedBuilding_Base){
+	const selectedBuilding_Obj = JSON.parse(atob(selectedBuilding_Base));
+
+	floorId = "";	
+	buildingId = selectedBuilding_Obj.building_id;	
+}
+/*Assign Value for buildingId*/
+
+
+/*Assign Value for floorId*/
+function valueFloor(selectedFloor_Base){
+	const selectedFloor_Obj = JSON.parse(atob(selectedFloor_Base));
+
+	officeId = "";
+
+	floorId = selectedFloor_Obj.floorId;
+
+	submittedRate.respondentDetails.officeId = officeId;
+}
+/*Assign Value for floorId*/
+
+
 /*Assign Value for clientTypeId, respondentId*/
 function valueRespondentType(selectedRespondentType_Base){
-	const selectedRespondentType_Obj = JSON.parse(atob(selectedRespondentType_Base));	
-	
-	serviceTypeId = "";
+	const selectedRespondentType_Obj = JSON.parse(atob(selectedRespondentType_Base));
 
+	officeId = "";
+	
 	respondentId = selectedRespondentType_Obj.respondent_id;
 	clientTypeId = selectedRespondentType_Obj.clienttype_id;	
 
 	submittedRate.respondentDetails.respondentId = respondentId;
-	submittedRate.respondentDetails.clientTypeId = clientTypeId;
-	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
+	submittedRate.respondentDetails.clientTypeId = clientTypeId;	
+	submittedRate.respondentDetails.officeId = officeId;
 }
 /*Assign Value for clientTypeId, respondentId*/
+
+
+/*Assign Value for officeId*/
+function valueOffice(selectedOffice_Base){
+	const selectedOffice_Obj = JSON.parse(atob(selectedOffice_Base));
+
+	serviceTypeId = "";	
+	submittedRate.respondentRatings = [];
+	questionGroups = [];
+	selectedQuestionGroups = [];
+	submittedRate.comments = [];
+	contactDetails = "";	
+
+	officeId = selectedOffice_Obj.office_id;
+
+	submittedRate.respondentDetails.officeId = officeId;
+	submittedRate.respondentDetails.serviceTypeId = serviceTypeId;
+	submittedRate.respondentDetails.contactDetails = contactDetails;
+}
+/*Assign Value for officeId*/
 
 
 /*Assign Value for serviceTypeId*/
@@ -348,7 +381,10 @@ function valueClientResponseRef(){
 
 
 /*Declare global*/
+window.valueBuilding = valueBuilding;
+window.valueFloor = valueFloor;
 window.valueRespondentType = valueRespondentType;
+window.valueOffice = valueOffice;
 window.valueServiceType = valueServiceType;
 window.valueOfficeService = valueOfficeService;
 window.valueFreqVisit = valueFreqVisit;
@@ -368,5 +404,5 @@ window.valueClientResponseRef = valueClientResponseRef;
 
 
 /*Export*/
-export {valueCodeDetailsObj, codeDetails_Obj, respondentId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId, valuePopRespondentRatings, questionGroups, selectedQuestionGroups};
+export {respondentId, buildingId, floorId, officeId, clientTypeId, serviceTypeId, officeServiceId, freqVisitId, submittedRate, awarenessRatingViaId, visibilityRatingViaId, valuePopRespondentRatings, questionGroups, selectedQuestionGroups};
 /*Export*/

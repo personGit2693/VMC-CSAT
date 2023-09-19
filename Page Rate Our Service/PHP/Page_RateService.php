@@ -6,7 +6,7 @@ date_default_timezone_set('Asia/Manila');
 $landingPage_EndUser = "../../index.php";
 /*Dependency PHP Codes*/
 
-if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
+if(isset($_GET["rateToken"])){
 	/*Globals*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/ValidateRateToken_Class.php";
@@ -15,7 +15,6 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
 
 	/*Query string*/
 	$rateToken = $_GET["rateToken"];
-	$_SESSION["codeDetailsBase"] = $_GET["codeDetailsBase"];
 	/*Query string*/
 
 
@@ -178,6 +177,7 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
 				</div>
 				-->
 
+
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Educational Attainment<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="educAttainmentRadioBtnsWrap">
@@ -186,41 +186,35 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
 					</div>
 				</div>
 
-				<!--
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Point of Entry Location<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="buildingRadioBtnsWrap">
-						Component
+						<!--Component-->
 						Loading...
 					</div>
 				</div>
-				-->
 
-				<!--
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Floor<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="floorRadioBtnsWrap">
-						Component
+						<!--Component-->
 						Select building.
 					</div>
 				</div>
-				-->
 
-				<!--
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Point of Entry Department Visited<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="officeRadioBtnsWrap">
-						Component
+						<!--Component-->						
 						Select Respondent, building and floor.
 					</div>
 				</div>
-				-->
 
 				<div class="stepSetPerFieldWrap">
 					<div class="stepSetPerFieldTitle-Class">Service-Type<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="serviceTypeRadioBtnsWrap">
 						<!--Component-->
-						Select Respondent
+						Select Respondent and Point of Entry Department Visited.
 					</div>
 				</div>
 
@@ -228,7 +222,7 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
 					<div class="stepSetPerFieldTitle-Class">Service Availed<span class="redAsterisk-Class">*</span></div>
 					<div class="stepSetPerFieldFlex" id="officeServiceRadioWrap">
 						<!--Component-->						
-						Select Respondent and Service-Type.
+						Select Respondent, Point of Entry Department Visited and Service-Type.
 					</div>
 				</div>
 
@@ -350,7 +344,11 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
 			<script type="module" src="../JS/Gateway_EncodeRating.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_EncodeRating.js?v2"></script>
 			<script type="module" src="../JS/Gateway_Religions.js"></script>
-			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js?v2"></script>						
+			<script type="text/javascript" src="../JS/SubmitRequest_Religions.js?v2"></script>
+			<script type="module" src="../JS/Gateway_Floors.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Floors.js?v2"></script>
+			<script type="module" src="../JS/Gateway_Offices.js"></script>
+			<script type="text/javascript" src="../JS/SubmitRequest_Offices.js?v2"></script>			
 			<script type="module" src="../JS/Gateway_ServiceTypes.js"></script>
 			<script type="text/javascript" src="../JS/SubmitRequest_ServiceTypes.js?v2"></script>
 			<script type="module" src="../JS/Gateway_OfficeServices.js"></script>
@@ -372,7 +370,7 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"])){
 		</html>
 <?php 
 	}
-}else if(!isset($_GET["rateToken"]) || !isset($_GET["codeDetailsBase"])){
+}else if(!isset($_GET["rateToken"])){
 	echo "No generated token!";
 	header("Refresh:4;".$landingPage_EndUser);
 }

@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["respondentId"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"])){
+if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeId"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -17,7 +17,6 @@ if(isset($_POST["token"]) && isset($_POST["respondentId"]) && isset($_POST["offi
 	$token = $_POST["token"];
 	$officeId = $_POST["officeId"];
 	$clientTypeId = $_POST["clientTypeId"];
-	$respondentId = $_POST["respondentId"];
 	/*Query string*/
 
 
@@ -71,11 +70,8 @@ if(isset($_POST["token"]) && isset($_POST["respondentId"]) && isset($_POST["offi
 			FROM officeservices_tab 
 			INNER JOIN servicetypes_tab 
 			ON officeservices_tab.servicetype_id = servicetypes_tab.servicetype_id 
-			INNER JOIN respondenttags_tab 
-			ON officeservices_tab.office_id = respondenttags_tab.office_id 
 			WHERE officeservices_tab.office_id = :officeId 
-			AND officeservices_tab.clienttype_id = :clientTypeId 
-			AND respondenttags_tab.respondent_id = :respondentId;
+			AND officeservices_tab.clienttype_id = :clientTypeId;
 		";
 		/*_ _Prep query*/
 
@@ -83,7 +79,6 @@ if(isset($_POST["token"]) && isset($_POST["respondentId"]) && isset($_POST["offi
 		$getServiceType_QueryObj = $vmcCsat_Conn->prepare($getServiceType_Query);		
 		$getServiceType_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 		$getServiceType_QueryObj->bindValue(':clientTypeId', intval($clientTypeId), PDO::PARAM_INT);
-		$getServiceType_QueryObj->bindValue(':respondentId', intval($respondentId), PDO::PARAM_INT);
 		$execution = $getServiceType_QueryObj->execute();
 		/*_ _Execute query*/
 
@@ -106,7 +101,7 @@ if(isset($_POST["token"]) && isset($_POST["respondentId"]) && isset($_POST["offi
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["respondentId"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeId"])){
 	$getServiceTypes_Resp = new stdClass();
 	$getServiceTypes_Resp->execution = null;
 	$getServiceTypes_Resp->globalTokenResult = null;

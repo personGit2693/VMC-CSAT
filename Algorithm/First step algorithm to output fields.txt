@@ -15,23 +15,6 @@
 	Point Of Entry
 	Service-Type (Trigger)
 
-● Set of questions algorithm	 
+● Set of questions algorithm	
 	Respondent
 	Point Of Entry (Trigger)
-
-
-
-Version 2
-
-● Service-Type algorithm
-	Respondent (Trigger)
-	Point Of Entry
-
-● Office Services algorithm
-	Respondent
-	Point Of Entry
-	Service-Type (Trigger)
-
-● Set of questions algorithm	
-	Respondent (Trigger)
-	Point Of Entry 
