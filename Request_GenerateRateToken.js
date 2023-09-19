@@ -1,27 +1,21 @@
-import {inputCode} from "./JSCollection_IndexModule.js";
-
-
-/*Prep Export variables*/
-let codeDetails = {};
-/*Prep Export variables*/
-
-
 /*Function for submitting request for generate rate token*/
 const requestRateToken = () => {
-	
+	showSpinningLoad();
+
 	/*Receive Response*/
 	requestRateToken_Xhttp.onload = function(){
-		if(requestRateToken_Xhttp.status == 200){									
+		if(requestRateToken_Xhttp.status == 200){
+			removeSpinningLoad();
+						
 			try{				
 				const reqRateToken_Resp = JSON.parse(requestRateToken_Xhttp.responseText);				
 
-				if(reqRateToken_Resp.getCodeDetails != null){
-					alert(reqRateToken_Resp.getCodeDetails);
-				}else if(reqRateToken_Resp.genRateTok != null){					
+				if(reqRateToken_Resp.genRateTok != null){					
 					alert(reqRateToken_Resp.genRateTok);
-				}else if(reqRateToken_Resp.getCodeDetails == null && reqRateToken_Resp.genRateTok == null){
-					codeDetails = reqRateToken_Resp.codeDetails;
-					window.location.href = reqRateToken_Resp.page_RateService+"?rateToken="+reqRateToken_Resp.rateToken;
+				}else if(reqRateToken_Resp.getCodeDetails != null){
+					alert(reqRateToken_Resp.getCodeDetails);
+				}else if(reqRateToken_Resp.genRateTok == null && reqRateToken_Resp.getCodeDetails == null){
+					window.location.href = reqRateToken_Resp.page_RateService+"?rateToken="+reqRateToken_Resp.rateToken+"&codeId="+reqRateToken_Resp.codeId;
 				}				
 			}catch(requestRateToken_Error){
 				alert(requestRateToken_Error);
@@ -46,8 +40,3 @@ const requestRateToken = () => {
 	/*Send Request*/
 }
 /*Function for submitting request for generate rate token*/
-
-
-/*Export*/
-export {codeDetails, requestRateToken};
-/*Export*/

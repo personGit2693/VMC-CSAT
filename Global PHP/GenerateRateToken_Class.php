@@ -1,7 +1,7 @@
 <?php
 
 /*Function for generating Rate Service Token*/
-function generateRateToken(object $vmcCsat_Conn, string $codeId){
+function generateRateToken(object $vmcCsat_Conn, int $codeId){
 	/*Prep return*/
 	$genRateTok_Resp = new stdClass();
 	$genRateTok_Resp->genRateTok_Count = 0;
@@ -27,7 +27,7 @@ function generateRateToken(object $vmcCsat_Conn, string $codeId){
 	$genRateToken_Query = "INSERT INTO rateservice_tokens_tab (
 		rateservice_token_value, 
 		rateservice_token_expiration,
-		officecode_code
+		officecode_id
 		) VALUES (
 			:generated_Token, 		
 			DATE_ADD(CONVERT(:getDateToday, DATETIME), INTERVAL 1 DAY),
@@ -40,7 +40,7 @@ function generateRateToken(object $vmcCsat_Conn, string $codeId){
 	$genRateToken_QueryObj = $vmcCsat_Conn->prepare($genRateToken_Query);
 	$genRateToken_QueryObj->bindValue(':generated_Token', $generated_Token, PDO::PARAM_STR);
 	$genRateToken_QueryObj->bindValue(':getDateToday', date('Y-m-d H:i:s', time()), PDO::PARAM_STR);
-	$genRateToken_QueryObj->bindValue(':codeId', $codeId, PDO::PARAM_STR);
+	$genRateToken_QueryObj->bindValue(':codeId', intval($codeId), PDO::PARAM_INT);
 
 	$genRateTok_Exec = $genRateToken_QueryObj->execute();
 	/*_Execute query*/

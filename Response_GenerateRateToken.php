@@ -21,13 +21,13 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 	$reqRateToken_Resp->genRateTok = null;
 	$reqRateToken_Resp->getCodeDetails = null;
 	$reqRateToken_Resp->rateToken = null;
-	$reqRateToken_Resp->codeDetails = null;
+	$reqRateToken_Resp->codeId = null;
 	$reqRateToken_Resp->page_RateService = $page_RateService;
 	
 	$genRateTok = null;
 	$getCodeDetails = null;
 	$rateToken = null;
-	$codeDetails = null;
+	$codeId = null;
 	/*Prep return*/
 
 
@@ -61,7 +61,7 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 
 
 	/*Generate Rate token*/
-	$genRateTok_Resp = generateRateToken($vmcCsat_Conn, $getCodeDetails_Obj->details_Assoc["officecode_code"]);
+	$genRateTok_Resp = generateRateToken($vmcCsat_Conn, $getCodeDetails_Obj->details_Assoc["officecode_id"]);
 
 	if($genRateTok_Resp->genRateTok_Exec != true){
 		$genRateTok = "Generating rate token has execution problem";
@@ -83,7 +83,7 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 	$reqRateToken_Resp->genRateTok = $genRateTok;
 	$reqRateToken_Resp->getCodeDetails = $getCodeDetails;	
 	$reqRateToken_Resp->rateToken = $genRateTok_Resp->genRateTok_Val;
-	$reqRateToken_Resp->codeDetails = $getCodeDetails_Obj->details_Assoc;
+	$reqRateToken_Resp->codeId = $getCodeDetails_Obj->details_Assoc["officecode_id"];
 
 	echo json_encode($reqRateToken_Resp);
 	/*Return response*/
@@ -97,7 +97,7 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 		$reqRateToken_Resp->genRateTok = null;
 		$reqRateToken_Resp->getCodeDetails = null;
 		$reqRateToken_Resp->rateToken = null;
-		$reqRateToken_Resp->codeDetails = null;
+		$reqRateToken_Resp->codeId = null;
 
 		echo json_encode($reqRateToken_Resp);
 	}	
