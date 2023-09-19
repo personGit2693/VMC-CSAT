@@ -6,7 +6,7 @@
 	Building 
 	Floor (Trigger)
 
-● Service-Type algorithm
+● Service-Type algorithm	
 	Respondent
 	Point Of Entry (Trigger)
 

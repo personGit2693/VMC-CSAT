@@ -233,6 +233,22 @@ body{
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
+
+
+	/*Enter code modal*/
+	.enterCodeModal-Class{
+		@include enterCodeModal_Mobile_Style;
+	}
+
+	.enterCodeModal-Class .fieldsWrapFlex{
+		@include fieldsWrapFlex_Style;
+	}
+
+	.fieldsWrapFlex .message-Class{
+		@include messageGeneralProps_Style;
+		@include messageFSize_MT_Style;
+	}
+	/*Enter code modal*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -313,6 +329,22 @@ body{
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
+
+
+	/*Enter code modal*/
+	.enterCodeModal-Class{
+		@include enterCodeModal_TLD_Style;
+	}
+
+	.enterCodeModal-Class .fieldsWrapFlex{
+		@include fieldsWrapFlex_Style;
+	}
+
+	.fieldsWrapFlex .message-Class{
+		@include messageGeneralProps_Style;
+		@include messageFSize_MT_Style;
+	}
+	/*Enter code modal*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -394,6 +426,22 @@ body{
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
+
+
+	/*Enter code modal*/
+	.enterCodeModal-Class{
+		@include enterCodeModal_TLD_Style;
+	}
+
+	.enterCodeModal-Class .fieldsWrapFlex{
+		@include fieldsWrapFlex_Style;
+	}
+
+	.fieldsWrapFlex .message-Class{
+		@include messageGeneralProps_Style;
+		@include messageFSize_Laptop_Style;
+	}
+	/*Enter code modal*/
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -474,9 +522,274 @@ body{
 	}
 	/*_Accept terms and agreement*/
 	/*Policy details side*/
+
+
+	/*Enter code modal*/
+	.enterCodeModal-Class{
+		@include enterCodeModal_TLD_Style;
+	}
+
+	.enterCodeModal-Class .fieldsWrapFlex{
+		@include fieldsWrapFlex_Style;
+	}
+
+	.fieldsWrapFlex .message-Class{
+		@include messageGeneralProps_Style;
+		@include messageFSize_Desktop_Style;
+	}
+	/*Enter code modal*/
 }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Page Content*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Library*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_MT_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_MT_Style;
+	}
+	/*Modal*/
+
+
+	/*Input field*/
+	.cusInputs_RoClass, .cusInputs_RoClass input, .cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include cusInputGeneralProps_Style;
+	}
+
+	.cusInputs_RoClass input{
+		@include customInputFSize_MT_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include customInputAnimFSize_MT_Style;
+	}
+	/*Input field*/
+
+
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_MT_Style;
+	}
+	/*Normal Button*/
+
+
+	/*Notification*/
+	.notifyMessItem_Suc_RoClass, .notifyMessItem_Failed_RoClass{
+		@include notiFSize_MT_Style;
+	}
+
+	.notifyCloseItem_Suc_RoClass, .notifyCloseItem_Failed_RoClass{
+		@include notiCloseIconSize_MT_Style;
+	}
+	/*Notification*/
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_MT_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_MT_Style;
+	}
+	/*Modal*/
+
+
+	/*Input field*/
+	.cusInputs_RoClass, .cusInputs_RoClass input, .cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include cusInputGeneralProps_Style;
+	}
+
+	.cusInputs_RoClass input{
+		@include customInputFSize_MT_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include customInputAnimFSize_MT_Style;
+	}
+	/*Input field*/
+
+
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_MT_Style;
+	}
+	/*Normal Button*/
+
+
+	/*Notification*/
+	.notifyMessItem_Suc_RoClass, .notifyMessItem_Failed_RoClass{
+		@include notiFSize_MT_Style;
+	}
+
+	.notifyCloseItem_Suc_RoClass, .notifyCloseItem_Failed_RoClass{
+		@include notiCloseIconSize_MT_Style;
+	}
+	/*Notification*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_Laptop_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_Laptop_Style;
+	}
+	/*Modal*/
+
+
+	/*Input field*/
+	.cusInputs_RoClass, .cusInputs_RoClass input, .cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include cusInputGeneralProps_Style;
+	}
+
+	.cusInputs_RoClass input{
+		@include customInputFSize_Laptop_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include customInputAnimFSize_Laptop_Style;
+	}
+	/*Input field*/
+
+
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_Laptop_Style;
+	}
+	/*Normal Button*/
+
+
+	/*Notification*/
+	.notifyMessItem_Suc_RoClass, .notifyMessItem_Failed_RoClass{
+		@include notiFSize_Laptop_Style;
+	}
+
+	.notifyCloseItem_Suc_RoClass, .notifyCloseItem_Failed_RoClass{
+		@include notiCloseIconSize_Laptop_Style;
+	}
+	/*Notification*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_Desktop_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_Desktop_Style;
+	}
+	/*Modal*/
+
+
+	/*Input field*/
+	.cusInputs_RoClass, .cusInputs_RoClass input, .cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include cusInputGeneralProps_Style;
+	}
+
+	.cusInputs_RoClass input{
+		@include customInputFSize_Desktop_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass, .cusInputs_RoClass .upPlaceholdme_RoClass{
+		@include customInputAnimFSize_Desktop_Style;
+	}
+	/*Input field*/
+
+
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_Desktop_Style;
+	}
+	/*Normal Button*/
+
+
+	/*Notification*/
+	.notifyMessItem_Suc_RoClass, .notifyMessItem_Failed_RoClass{
+		@include notiFSize_Desktop_Style;
+	}
+
+	.notifyCloseItem_Suc_RoClass, .notifyCloseItem_Failed_RoClass{
+		@include notiCloseIconSize_Desktop_Style;
+	}
+	/*Notification*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/

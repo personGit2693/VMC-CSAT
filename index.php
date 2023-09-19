@@ -77,10 +77,36 @@
 	</div>
 	<!--Loading-->
 
+
+	<!--Modals-->
+	<div class="modalmeCon_RoClass" style="--topOnBlurrer: 1;">
+		<div class="modalme_RoClass enterCodeModal-Class">
+			<div class="modalHeader_RoClass">
+				<div class="modalHeadTxt_RoClass">Provide the code</div>
+			</div>
+			<div class="modalBody_RoClass">
+				<div class="fieldsWrapFlex">
+					<div id="notiEnterCodeModal-Id" style="width: 100%;"></div>
+					<div class="message-Class">Hingin po ang code sa opisina na nais ninyong bigyan ng grado.</div>
+					<div class="cusInputs_RoClass" style="width: 100%;">					
+						<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" id="inputCode-Id" onkeyup="checkInputCodeEnter(event)" required>
+						<div class="placeholdme_RoClass">Enter code</div>
+					</div>
+					<button class="normButton_RoClass" style="margin-top: 5px;" onclick="checkInputCode()">Verify Code</button>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<!--Modals-->
+
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js?v1"></script>	
 	<script type="text/javascript" src="JsCollection_Index.js?v1"></script>	
+	<script type="text/javascript" src="Controller_UnhideRateOurServiceBtn.js?v1"></script>
+	<script type="text/javascript" src="Request_ValidateCode.js?v1"></script>
 	<script type="text/javascript" src="Request_GenerateRateToken.js?v1"></script>
-	<script type="text/javascript" src="Validation_PrivacyPolicy.js?v1"></script>
+	<script type="text/javascript" src="Validation_PrivacyPolicy.js?v1"></script>	
+	<script type="text/javascript" src="Portal_ValidateCode.js?v1"></script>
 	<script type="text/javascript" src="Portal_RateService.js?v1"></script>
+	<script type="text/javascript" src="Executor_Index.js?v1"></script>
 </body>
 </html>
