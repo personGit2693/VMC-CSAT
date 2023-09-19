@@ -68,7 +68,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<title>Data One Report</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link rel="stylesheet" type="text/css" href="../CSS/Page_DataOne.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Page_DataOne.css?v1">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">
 	</head>
 	<body>
@@ -421,17 +421,17 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		</div>	
 		<!--Loading Indicator-->
 
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v1"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v1"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v1"></script>
-		<script type="text/javascript" src="../../Global JS/table2excel.js?v1"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v2"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v2"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v2"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v2"></script>
+		<script type="text/javascript" src="../../Global JS/table2excel.js?v2"></script>
 		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
-		<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js?v1"></script>
+		<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js?v2"></script>
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
-		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js?v1"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js?v2"></script>
 		<script type="module" src="../JS/Gateway_DataOne.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js?v1"></script>		
+		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js?v2"></script>		
 		<script type="module" src="../JS/Executor_Page_DataOne.js"></script>
 	</body>
 	</html>

@@ -4438,6 +4438,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-position: center;
     flex-shrink: 0; }
 
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 16px;
+    /*To be changed*/
+    margin: 0px 5px 0px auto; }
+
   .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
     position: relative;
     box-sizing: border-box;
@@ -4596,6 +4611,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-position: center;
     flex-shrink: 0; }
 
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 16px;
+    /*To be changed*/
+    margin: 0px 5px 0px auto; }
+
   .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
     position: relative;
     box-sizing: border-box;
@@ -4753,6 +4783,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 18px;
+    /*changed*/
+    margin: 0px 5px 0px auto; }
 
   .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
     position: relative;
@@ -4922,6 +4967,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     /*changed*/
     color: #535F80;
     text-align: center; }
+
+  .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 20px;
+    /*changed*/
+    margin: 0px 5px 0px auto; }
 
   .chartWrap-Class {
     overflow: visible;
