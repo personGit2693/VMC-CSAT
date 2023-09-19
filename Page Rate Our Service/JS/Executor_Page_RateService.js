@@ -11,12 +11,8 @@ import {requestBuildings} from "./Request_Buildings.js";
 import {requestFreqVisits} from "./Request_FreqVisits.js";
 import {requestAwarenessRates} from "./Request_AwarenessRates.js";
 import {requestScores} from "./Request_Scores.js";
-
-import {codeDetails} from "../../Request_GenerateRateToken.js";
 /*Import*/
 
-
-alert(codeDetails.office_id);
 
 /*To Highlight step one*/
 nextStep("stepByStepItem-Class", "headerDynamicSubTxt-Id", "stepSets-Class");
@@ -65,7 +61,7 @@ requestAwarenessRates();
 
 
 /*To render buildings*/
-requestBuildings();
+/*requestBuildings();*/
 /*To render buildings*/
 
 

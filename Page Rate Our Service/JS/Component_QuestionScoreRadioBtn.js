@@ -55,12 +55,10 @@ function QuestionScoreRadioBtn(){
 	}
 
 	if(questionScoreRadioBtn == ""){
-		if(respondentId == "" && officeId == ""){
-			questionScoreRadioBtn = "Select Respondent and Point of Entry.";	
-		}else if(respondentId == ""){
+		if(respondentId == ""){
 			questionScoreRadioBtn = "Select Respondent.";	
 		}else if(officeId == ""){
-			questionScoreRadioBtn = "Select Point of Entry.";
+			questionScoreRadioBtn = "No value on Point of Entry.";
 		}else if(respondentId != "" && officeId != ""){
 			questionScoreRadioBtn = "No set if questions found to select!";
 		}		

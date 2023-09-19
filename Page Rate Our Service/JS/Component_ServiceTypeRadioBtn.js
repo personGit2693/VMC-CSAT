@@ -21,12 +21,10 @@ function ServiceTypeRadioBtn(){
 	}
 
 	if(serviceTypeRadioBtn == ""){
-		if(respondentId == "" && officeId == ""){
-			serviceTypeRadioBtn = "Select Respondent and Point of Entry Department Visited.";
-		}else if(respondentId == ""){
-			serviceTypeRadioBtn = "Select Respondent.";
+		if(respondentId == ""){
+			serviceTypeRadioBtn = "Select Respondent";
 		}else if(officeId == ""){
-			serviceTypeRadioBtn = "Select Point of Entry Department Visited.";
+			serviceTypeRadioBtn = "No value on Point of Entry.";
 		}else if(respondentId != "" && officeId != ""){
 			serviceTypeRadioBtn = "No Service-Type found to select!";
 		}		
