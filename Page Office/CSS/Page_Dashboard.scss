@@ -795,6 +795,12 @@
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class{
 		@include respondentIcon_MT_Style;
+	}
+
+	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_MT_Style;
+		@include genCodeBtnGeneralProps_Style;
 	}	
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentVal-Class{
@@ -874,6 +880,12 @@
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class{
 		@include respondentIcon_MT_Style;
+	}
+
+	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_MT_Style;
+		@include genCodeBtnGeneralProps_Style;
 	}	
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentVal-Class{
@@ -953,6 +965,12 @@
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .respondentIcon-Class{
 		@include respondentIcon_Laptop_Style;
+	}
+
+	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_Laptop_Style;
+		@include genCodeBtnGeneralProps_Style;
 	}	
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentVal-Class{
@@ -1036,6 +1054,12 @@
 
 	.engagementDetWrap .respondentTotalDetWrap .respondentVal-Class{
 		@include respondentVal_Desktop_Style;
+	}
+
+	.engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_Desktop_Style;
+		@include genCodeBtnGeneralProps_Style;
 	}
 
 	.chartWrap-Class{

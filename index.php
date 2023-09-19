@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>VMC CSAT</title>
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="stylesheet" type="text/css" href="./index.css?v2">
 	<link rel="shortcut icon" href="./src/vmclogo.png">		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 	<meta charset="utf-16">
@@ -99,14 +99,12 @@
 	</div>
 	<!--Modals-->
 
-	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js?v1"></script>	
-	<script type="text/javascript" src="JsCollection_Index.js?v1"></script>	
-	<script type="text/javascript" src="Controller_UnhideRateOurServiceBtn.js?v1"></script>
-	<!--<script type="text/javascript" src="Request_ValidateCode.js?v1"></script>-->
-	<!--<script type="text/javascript" src="Request_GenerateRateToken.js?v1"></script>-->
-	<script type="text/javascript" src="Validation_PrivacyPolicy.js?v1"></script>	
-	<script type="module" src="Portal_ValidateCode.js?v1"></script>
-	<script type="module" src="Portal_RateService.js?v1"></script>
-	<script type="text/javascript" src="Executor_Index.js?v1"></script>
+	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js?v2"></script>	
+	<script type="text/javascript" src="JsCollection_Index.js?v2"></script>	
+	<script type="text/javascript" src="Controller_UnhideRateOurServiceBtn.js?v2"></script>	
+	<script type="text/javascript" src="Validation_PrivacyPolicy.js?v2"></script>	
+	<script type="module" src="Portal_ValidateCode.js"></script>
+	<script type="module" src="Portal_RateService.js"></script>
+	<script type="text/javascript" src="Executor_Index.js?v2"></script>
 </body>
 </html>
