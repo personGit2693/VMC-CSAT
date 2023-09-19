@@ -14,7 +14,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 <html>
 <head>
 	<title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="../CSS/Page_Login.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/Page_Login.css?v2">
 	<link rel="shortcut icon" href="../../src/vmclogo.png">		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 	<meta charset="utf-16">
@@ -63,10 +63,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	</div>
 	<!--Loader-->
 
-	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v2"></script>
 	<script type="module" src="../../Global JS/Values_Page_Login.js"></script>
 	<script type="module" src="../JS/Gateway_ValidateAccount.js"></script>
-	<script type="text/javascript" src="../JS/SubmitRequest_ValidateAccount.js?v1"></script>
+	<script type="text/javascript" src="../JS/SubmitRequest_ValidateAccount.js?v2"></script>
 	<script type="module" src="../JS/Executor_Page_Login.js"></script>	
 </body>
 </html>
