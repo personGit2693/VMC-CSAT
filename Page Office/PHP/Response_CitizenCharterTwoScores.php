@@ -102,7 +102,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				    AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
 					AND CONVERT(ccresponses_tab.ccresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
 				    AND ccquestionsrates_tab.ccquestion_id = 'CC2' 
-				    GROUP BY ccresponses_tab.ccquestionsrate_id
+				    GROUP BY ccquestionsrate_id
 				) AS ccscores_tab 
 				ON cc2questions_tab.ccquestionsrate_id = ccscores_tab.ccquestionsrate_id;			
 			"; 							
