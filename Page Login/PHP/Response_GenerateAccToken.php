@@ -36,7 +36,7 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"])){
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($generateAccToken_Resp);
+		echo json_encode($generateAccToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -49,13 +49,13 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"])){
 		$globalTokenResult = "Validating global token has execution problem!";
 		$generateAccToken_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($generateAccToken_Resp);
+		echo json_encode($generateAccToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$generateAccToken_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($generateAccToken_Resp);
+		echo json_encode($generateAccToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -107,7 +107,7 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"])){
 		$generateAccToken_Resp->tokenCreated = $tokenCreated;
 		$generateAccToken_Resp->accToken = $accToken;
 
-		echo json_encode($generateAccToken_Resp);
+		echo json_encode($generateAccToken_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -118,6 +118,6 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"])){
 	$generateAccToken_Resp->tokenCreated = 0;
 	$generateAccToken_Resp->accToken = null;
 
-	echo json_encode($generateAccToken_Resp);
+	echo json_encode($generateAccToken_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

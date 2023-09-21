@@ -36,7 +36,7 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"]) && isset($_POST["passIn
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($checkCredential_Resp);
+		echo json_encode($checkCredential_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -49,13 +49,13 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"]) && isset($_POST["passIn
 		$globalTokenResult = "Validating global token has execution problem!";
 		$checkCredential_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($checkCredential_Resp);
+		echo json_encode($checkCredential_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$checkCredential_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($checkCredential_Resp);
+		echo json_encode($checkCredential_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -95,7 +95,7 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"]) && isset($_POST["passIn
 		$checkCredential_Resp->globalTokenResult = $globalTokenResult;
 		$checkCredential_Resp->validAccount = $validAccount;
 
-		echo json_encode($checkCredential_Resp);
+		echo json_encode($checkCredential_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -105,6 +105,6 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"]) && isset($_POST["passIn
 	$checkCredential_Resp->globalTokenResult = null;
 	$checkCredential_Resp->validAccount = 0;
 
-	echo json_encode($checkCredential_Resp);
+	echo json_encode($checkCredential_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

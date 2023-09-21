@@ -46,7 +46,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($getCitizenCharterTwoScores_Resp);
+		echo json_encode($getCitizenCharterTwoScores_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -59,22 +59,23 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$globalTokenResult = "Validating global token has execution problem!";
 		$getCitizenCharterTwoScores_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($getCitizenCharterTwoScores_Resp);
+		echo json_encode($getCitizenCharterTwoScores_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$getCitizenCharterTwoScores_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($getCitizenCharterTwoScores_Resp);
+		echo json_encode($getCitizenCharterTwoScores_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
 
 
 	/*Valid global token*/
-	if($globalTokenResult === null){		
+	if($globalTokenResult === null){
+
 		/*Get Questions scores*/
-		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($overallFromDate) && !empty($overallToDate))){		
+		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($overallFromDate) && !empty($overallToDate))){	
 			/*_Prep query*/
 			$getCitizenCharterTwoScores_Query = "
 				SELECT cc2questions_tab.ccquestion_question AS 'ccQuestion',
@@ -102,7 +103,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				    AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
 					AND CONVERT(ccresponses_tab.ccresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
 				    AND ccquestionsrates_tab.ccquestion_id = 'CC2' 
-				    GROUP BY ccquestionsrate_id
+				    GROUP BY ccresponses_tab.ccquestionsrate_id
 				) AS ccscores_tab 
 				ON cc2questions_tab.ccquestionsrate_id = ccscores_tab.ccquestionsrate_id;			
 			"; 							
@@ -134,7 +135,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$getCitizenCharterTwoScores_Resp->globalTokenResult = $globalTokenResult;
 		$getCitizenCharterTwoScores_Resp->citizenCharterTwoScores_Array = $citizenCharterTwoScores_Array;
 
-		echo json_encode($getCitizenCharterTwoScores_Resp);
+		echo json_encode($getCitizenCharterTwoScores_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -144,6 +145,6 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$getCitizenCharterTwoScores_Resp->globalTokenResult = null;
 	$getCitizenCharterTwoScores_Resp->citizenCharterTwoScores_Array = array();
 
-	echo json_encode($getCitizenCharterTwoScores_Resp);
+	echo json_encode($getCitizenCharterTwoScores_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

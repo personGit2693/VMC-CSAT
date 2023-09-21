@@ -38,7 +38,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($getDataOne_Resp);
+		echo json_encode($getDataOne_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -51,13 +51,13 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 		$globalTokenResult = "Validating global token has execution problem!";
 		$getDataOne_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($getDataOne_Resp);
+		echo json_encode($getDataOne_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$getDataOne_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($getDataOne_Resp);
+		echo json_encode($getDataOne_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -133,7 +133,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 		$getDataOne_Resp->globalTokenResult = $globalTokenResult;
 		$getDataOne_Resp->dataOne_Array = $dataOne_Array;
 
-		echo json_encode($getDataOne_Resp);
+		echo json_encode($getDataOne_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -143,6 +143,6 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 	$getDataOne_Resp->globalTokenResult = null;
 	$getDataOne_Resp->dataOne_Array = array();
 
-	echo json_encode($getDataOne_Resp);
+	echo json_encode($getDataOne_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

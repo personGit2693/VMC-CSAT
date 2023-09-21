@@ -47,7 +47,7 @@ if(isset($_POST["validateCodeToken"]) && isset($_POST["inputCode"])){
 	$validateCode_Resp->execution = $execution;
 	$validateCode_Resp->count = $count;	
 
-	echo json_encode($validateCode_Resp);
+	echo json_encode($validateCode_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 
 }else if(!isset($_POST["validateCodeToken"]) || !isset($_POST["inputCode"])){
@@ -61,7 +61,7 @@ if(isset($_POST["validateCodeToken"]) && isset($_POST["inputCode"])){
 		$validateCode_Resp->execution = null;
 		$validateCode_Resp->count = null;
 
-		echo json_encode($validateCode_Resp);
+		echo json_encode($validateCode_Resp, JSON_NUMERIC_CHECK);
 	}	
 	/*Return response*/
 }

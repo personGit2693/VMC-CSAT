@@ -46,7 +46,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($countTotalRespondent_Resp);
+		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -59,13 +59,13 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$globalTokenResult = "Validating global token has execution problem!";
 		$countTotalRespondent_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($countTotalRespondent_Resp);
+		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$countTotalRespondent_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($countTotalRespondent_Resp);
+		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -110,7 +110,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$countTotalRespondent_Resp->globalTokenResult = $globalTokenResult;
 		$countTotalRespondent_Resp->totalRespondent = $totalRespondent;
 
-		echo json_encode($countTotalRespondent_Resp);
+		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -120,6 +120,6 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$countTotalRespondent_Resp->globalTokenResult = null;
 	$countTotalRespondent_Resp->totalRespondent = 0;
 
-	echo json_encode($countTotalRespondent_Resp);
+	echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

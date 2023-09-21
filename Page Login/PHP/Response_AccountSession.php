@@ -38,7 +38,7 @@ if(isset($_POST["token"]) && isset($_POST["accountNumber"]) && isset($_POST["off
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($accountSession_Resp);
+		echo json_encode($accountSession_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -51,13 +51,13 @@ if(isset($_POST["token"]) && isset($_POST["accountNumber"]) && isset($_POST["off
 		$globalTokenResult = "Validating global token has execution problem!";
 		$accountSession_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($accountSession_Resp);
+		echo json_encode($accountSession_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$accountSession_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($accountSession_Resp);
+		echo json_encode($accountSession_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -82,7 +82,7 @@ if(isset($_POST["token"]) && isset($_POST["accountNumber"]) && isset($_POST["off
 		$accountSession_Resp->execution = $execution;
 		$accountSession_Resp->globalTokenResult = $globalTokenResult;				
 
-		echo json_encode($accountSession_Resp);
+		echo json_encode($accountSession_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -91,6 +91,6 @@ if(isset($_POST["token"]) && isset($_POST["accountNumber"]) && isset($_POST["off
 	$accountSession_Resp->execution = null;
 	$accountSession_Resp->globalTokenResult = null;	
 
-	echo json_encode($accountSession_Resp);
+	echo json_encode($accountSession_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

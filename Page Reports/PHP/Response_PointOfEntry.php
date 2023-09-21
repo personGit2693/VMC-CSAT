@@ -34,7 +34,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($getPointOfEntry_Resp);
+		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -47,13 +47,13 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 		$globalTokenResult = "Validating global token has execution problem!";
 		$getPointOfEntry_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($getPointOfEntry_Resp);
+		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$getPointOfEntry_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($getPointOfEntry_Resp);
+		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -99,7 +99,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 		$getPointOfEntry_Resp->globalTokenResult = $globalTokenResult;
 		$getPointOfEntry_Resp->pointOfEntry_Array = $pointOfEntry_Array;
 
-		echo json_encode($getPointOfEntry_Resp);
+		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -109,6 +109,6 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 	$getPointOfEntry_Resp->globalTokenResult = null;
 	$getPointOfEntry_Resp->pointOfEntry_Array = array();
 
-	echo json_encode($getPointOfEntry_Resp);
+	echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

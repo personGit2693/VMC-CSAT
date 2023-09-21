@@ -47,7 +47,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($countOverallDisagree_Resp);
+		echo json_encode($countOverallDisagree_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -60,13 +60,13 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$globalTokenResult = "Validating global token has execution problem!";
 		$countOverallDisagree_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($countOverallDisagree_Resp);
+		echo json_encode($countOverallDisagree_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$countOverallDisagree_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($countOverallDisagree_Resp);
+		echo json_encode($countOverallDisagree_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -117,7 +117,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$countOverallDisagree_Resp->globalTokenResult = $globalTokenResult;
 		$countOverallDisagree_Resp->overallDisagree_Array = $overallDisagree_Array;
 
-		echo json_encode($countOverallDisagree_Resp);
+		echo json_encode($countOverallDisagree_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -128,6 +128,6 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$countOverallDisagree_Resp->globalTokenResult = null;
 	$countOverallDisagree_Resp->overallDisagree_Array = array();
 
-	echo json_encode($countOverallDisagree_Resp);
+	echo json_encode($countOverallDisagree_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

@@ -47,7 +47,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($countOverallNoRating_Resp);
+		echo json_encode($countOverallNoRating_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -60,13 +60,13 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$globalTokenResult = "Validating global token has execution problem!";
 		$countOverallNoRating_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($countOverallNoRating_Resp);
+		echo json_encode($countOverallNoRating_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$countOverallNoRating_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($countOverallNoRating_Resp);
+		echo json_encode($countOverallNoRating_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -117,7 +117,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		$countOverallNoRating_Resp->globalTokenResult = $globalTokenResult;
 		$countOverallNoRating_Resp->overallNoRating_Array = $overallNoRating_Array;
 
-		echo json_encode($countOverallNoRating_Resp);
+		echo json_encode($countOverallNoRating_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}
 	/*Valid global token*/
@@ -128,6 +128,6 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$countOverallNoRating_Resp->globalTokenResult = null;
 	$countOverallNoRating_Resp->overallNoRating_Array = array();
 
-	echo json_encode($countOverallNoRating_Resp);
+	echo json_encode($countOverallNoRating_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

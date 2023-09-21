@@ -40,7 +40,7 @@ function requestCitizenCharterOneScores(){
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting citizen charter one scores");
 				alert(httpRequest_Error);
-				alert(httpResponse);
+				alert(httpResponse.responseText);
 			}			
 		}else if(httpRequest.status != 200){
 			alert("File not found");

@@ -18,13 +18,13 @@ var citizenCharterTwoScores_Array = [];
 
 
 /*Get Citizen Charter Two Scores*/
-function requestCitizenCharterTwoScores(){
-	
+function requestCitizenCharterTwoScores(){	
+
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
-			try{
+			try{				
 				httpResponse = JSON.parse(httpRequest.responseText);
-
+				
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
 				}else if(httpResponse.globalTokenResult !== null){
@@ -43,7 +43,7 @@ function requestCitizenCharterTwoScores(){
 				alert(httpRequest.responseText);
 			}			
 		}else if(httpRequest.status != 200){
-			alert("File not found");
+			alert(httpRequest.statusText);
 		}
 	}
 

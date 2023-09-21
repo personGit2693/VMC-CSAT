@@ -68,7 +68,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<title>CSAT Dashboard</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link rel="stylesheet" type="text/css" href="../CSS/Page_Dashboard.css?v2">
+		<link rel="stylesheet" type="text/css" href="../CSS/Page_Dashboard.css">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">
 	</head>
 	<body>
@@ -488,47 +488,47 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		</div>	
 		<!--Loading Indicator-->
 
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v3"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v3"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v3"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v3"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
 		<script type="module" src="../../Global JS/Values_Page_Dashboard.js"></script>
 		<script type="module" src="../JS/Gateway_GenerateOfficeCode_PageDashboard.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_GenerateOfficeCode.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_GenerateOfficeCode.js"></script>
 		<script type="module" src="../JS/Gateway_CitizenCharterThreeScores.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterThreeScores.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterThreeScores.js"></script>
 		<script type="module" src="../JS/Gateway_CitizenCharterTwoScores.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterTwoScores.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterTwoScores.js"></script>
 		<script type="module" src="../JS/Gateway_CitizenCharterOneScores.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterOneScores.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterOneScores.js"></script>
 		<script type="module" src="../JS/Gateway_QuestionsTable.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsTable.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsTable.js"></script>
 		<script type="module" src="../JS/Gateway_OverallEngagement.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallEngagement.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallEngagement.js"></script>
 		<script type="module" src="../JS/Gateway_TotalRespondent.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_TotalRespondent.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_TotalRespondent.js"></script>
 		<script type="module" src="../JS/Gateway_OverallServRate.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallServRate.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallServRate.js"></script>
 		<script type="module" src="../JS/Gateway_OverallStronglyAgree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyAgree.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyAgree.js"></script>
 		<script type="module" src="../JS/Gateway_OverallAgree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallAgree.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallAgree.js"></script>
 		<script type="module" src="../JS/Gateway_OverallNeither.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallNeither.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallNeither.js"></script>
 		<script type="module" src="../JS/Gateway_OverallDisagree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallDisagree.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallDisagree.js"></script>
 		<script type="module" src="../JS/Gateway_OverallStronglyDisagree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
 		<script type="module" src="../JS/Gateway_OverallNoRating.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
 		<script type="module" src="../JS/Gateway_AvailedOfficeService.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_AvailedOfficeService.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
 		<script type="module" src="../JS/Gateway_CommentDetails.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<script type="module" src="../JS/Gateway_CountPassScore.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CountPassScore.js?v3"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CountPassScore.js"></script>
 		<script type="module" src="../JS/Executor_Page_Dashboard.js"></script>
 	</body>
 	</html>

@@ -44,7 +44,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 
 	/*Check connection*/
 	if($serverConnection != null){
-		echo json_encode($genOfficeCode_Resp);
+		echo json_encode($genOfficeCode_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Check connection*/
@@ -57,13 +57,13 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 		$globalTokenResult = "Validating global token has execution problem!";
 		$genOfficeCode_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($genOfficeCode_Resp);
+		echo json_encode($genOfficeCode_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($validateGlobalToken_Obj->counted === 0){
 		$globalTokenResult = "Token can't be found!";
 		$genOfficeCode_Resp->globalTokenResult = $globalTokenResult;
 
-		echo json_encode($genOfficeCode_Resp);
+		echo json_encode($genOfficeCode_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Validate global token*/
@@ -108,7 +108,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 		$genOfficeCode_Resp->count = $count;
 		$genOfficeCode_Resp->generatedOfficeCode = $generatedOfficeCode;
 
-		echo json_encode($genOfficeCode_Resp);
+		echo json_encode($genOfficeCode_Resp, JSON_NUMERIC_CHECK);
 		/*Return response*/
 	}
 	/*Valid global token*/
@@ -119,6 +119,6 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 	$genOfficeCode_Resp->generatedOfficeCode = null;
 	$genOfficeCode_Resp->globalTokenResult = null;
 
-	echo json_encode($genOfficeCode_Resp);
+	echo json_encode($genOfficeCode_Resp, JSON_NUMERIC_CHECK);
 }
 ?>

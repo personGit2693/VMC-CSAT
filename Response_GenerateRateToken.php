@@ -48,13 +48,13 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 		$getCodeDetails = "Getting code details has execution problem";
 		$reqRateToken_Resp->getCodeDetails = $getCodeDetails;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($reqRateToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($getCodeDetails_Obj->count == 0){
 		$getCodeDetails = "Invalid code";
 		$reqRateToken_Resp->getCodeDetails = $getCodeDetails;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($reqRateToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Code validation details*/
@@ -67,13 +67,13 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 		$genRateTok = "Generating rate token has execution problem";
 		$reqRateToken_Resp->genRateTok = $genRateTok;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($reqRateToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}else if($genRateTok_Resp->genRateTok_Count == 0){
 		$genRateTok = "No rate token was generated";
 		$reqRateToken_Resp->genRateTok = $genRateTok;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($reqRateToken_Resp, JSON_NUMERIC_CHECK);
 		return;
 	}
 	/*Generate Rate token*/
@@ -85,7 +85,7 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 	$reqRateToken_Resp->rateToken = $genRateTok_Resp->genRateTok_Val;
 	$reqRateToken_Resp->codeDetails = $getCodeDetails_Obj->details_Assoc;
 
-	echo json_encode($reqRateToken_Resp);
+	echo json_encode($reqRateToken_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 
 }else if(!isset($_POST["requestRateToken_Gate"]) || !isset($_POST["inputCode"])){	
@@ -99,7 +99,7 @@ if(isset($_POST["requestRateToken_Gate"]) && isset($_POST["inputCode"])){
 		$reqRateToken_Resp->rateToken = null;
 		$reqRateToken_Resp->codeDetails = null;
 
-		echo json_encode($reqRateToken_Resp);
+		echo json_encode($reqRateToken_Resp, JSON_NUMERIC_CHECK);
 	}	
 	/*Return response*/
 }
