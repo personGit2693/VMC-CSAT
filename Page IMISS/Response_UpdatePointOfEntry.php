@@ -6,16 +6,16 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["newPointOfEntryName"]) && isset($_POST["officeId"])){
+if(isset($_POST["token"]) && isset($_POST["newPointOfEntry"]) && isset($_POST["officeId"])){
 	/*Required Files*/
 	require_once "../Global PHP/Connection.php";
 	require_once "../Global PHP/CheckGlobalToken_Class.php";
-	require_once "../Global PHP/UpdateQuestion_Class.php";
+	require_once "../Global PHP/UpdatePointOfEntry_Class.php";
 	/*Required Files*/
 
 
 	/*Query string*/
-	$newPointOfEntryName = $_POST["newPointOfEntryName"];
+	$newPointOfEntry = $_POST["newPointOfEntry"];
 	$officeId = $_POST["officeId"];
 	$token = $_POST["token"];
 	/*Query string*/
@@ -64,18 +64,18 @@ if(isset($_POST["token"]) && isset($_POST["newPointOfEntryName"]) && isset($_POS
 	/*Validate global token*/
 
 
-	/*Update question*/
+	/*Update point of entry*/
 	if($globalTokenResult == null){
-		$updatePointOfEntry_Obj = updatePointOfEntry($vmcCsat_Conn, $officeId, $newPointOfEntryName);
+		$updatePointOfEntry_Obj = updatePointOfEntry($vmcCsat_Conn, intval($officeId), $newPointOfEntry);
 
 		if($updatePointOfEntry_Obj->execution != true){
-			$updatePointOfEntryResult = "Updating question has execution problem!";
+			$updatePointOfEntryResult = "Updating point of entry name has execution problem!";
 			$updatePointOfEntry_Resp->updatePointOfEntryResult = $updatePointOfEntryResult;
 
 			echo json_encode($updatePointOfEntry_Resp, JSON_NUMERIC_CHECK);
 			return;
 		}else if($updatePointOfEntry_Obj->count == 0){
-			$updatePointOfEntryResult = "No question has been updated.";
+			$updatePointOfEntryResult = "No point of entry has been updated.";
 			$updatePointOfEntry_Resp->updatePointOfEntryResult = $updatePointOfEntryResult;
 
 			echo json_encode($updatePointOfEntry_Resp, JSON_NUMERIC_CHECK);
@@ -90,9 +90,9 @@ if(isset($_POST["token"]) && isset($_POST["newPointOfEntryName"]) && isset($_POS
 		echo json_encode($updatePointOfEntry_Resp, JSON_NUMERIC_CHECK);
 		/*_Return response*/
 	}	
-	/*Update question*/	
+	/*Update point of entry*/	
 	
-}else if(!isset($_POST["token"]) || !isset($_POST["newPointOfEntryName"]) || !isset($_POST["officeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["newPointOfEntry"]) || !isset($_POST["officeId"])){
 	$updatePointOfEntry_Resp = new stdClass();
 	$updatePointOfEntry_Resp->updatePointOfEntryResult = "unknown";
 	$updatePointOfEntry_Resp->globalTokenResult = "unknown";		

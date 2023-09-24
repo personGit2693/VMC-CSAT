@@ -13,7 +13,7 @@ var httpResponse = null;
 
 
 /*Updating Point of Entry*/
-const requestUpdatePointOfEntry = (newPointOfEntry, officeId) => {
+const requestUpdateCcName = (newCitizenCharterName, citizenCharterId) => {
 	
 	/*Receive Response*/
 	httpRequest.onload = function(){
@@ -25,13 +25,13 @@ const requestUpdatePointOfEntry = (newPointOfEntry, officeId) => {
 					alert(httpResponse.serverConnection);
 				}else if(httpResponse.globalTokenResult != null){					
 					alert(httpResponse.globalTokenResult);
-				}else if(httpResponse.updatePointOfEntryResult != null){					
-					alert(httpResponse.updatePointOfEntryResult);
-				}else if(httpResponse.serverConnection == null && httpResponse.globalTokenResult == null && httpResponse.updatePointOfEntryResult == null){					
+				}else if(httpResponse.updateCcNameResult != null){					
+					alert(httpResponse.updateCcNameResult);
+				}else if(httpResponse.serverConnection == null && httpResponse.globalTokenResult == null && httpResponse.updateCcNameResult == null){					
 					alert("Updated!");
 				}				
-			}catch(requestUpdatePointOfEntry_Error){
-				alert(requestUpdatePointOfEntry_Error);
+			}catch(requestUpdateCcName_Error){
+				alert(requestUpdateCcName_Error);
 				alert(httpRequest.responseText);					
 			}			
 		}else if(httpRequest.status != 200){
@@ -43,10 +43,10 @@ const requestUpdatePointOfEntry = (newPointOfEntry, officeId) => {
 
 	/*Send Request*/
 	const stringQuery = "token="+token+
-	"&newPointOfEntry="+encodeURIComponent(newPointOfEntry.value)+
-	"&officeId="+encodeURIComponent(officeId.value);	
+	"&newCitizenCharterName="+encodeURIComponent(newCitizenCharterName.value)+
+	"&citizenCharterId="+encodeURIComponent(citizenCharterId.value);	
 
-	httpRequest.open("POST", "Response_UpdatePointOfEntry.php", false);
+	httpRequest.open("POST", "Response_UpdateCcName.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(stringQuery);
 	/*Send Request*/
@@ -55,5 +55,5 @@ const requestUpdatePointOfEntry = (newPointOfEntry, officeId) => {
 
 
 /*Export*/
-export {requestUpdatePointOfEntry};
+export {requestUpdateCcName};
 /*Export*/
