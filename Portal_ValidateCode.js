@@ -1,5 +1,5 @@
 /*Import*/
-import {inputCode} from "./JSCollection_IndexModule.js";
+import {inputCode, verifyCodeBtn} from "./JSCollection_IndexModule.js";
 import {requestValidateCode, validCode} from "./Request_ValidateCode.js";
 /*Import*/
 
@@ -9,7 +9,7 @@ const checkInputCode = () =>{
 
 	if(inputCode.value != ""){
 		showSpinningLoad();
-		requestValidateCode();
+		requestValidateCode(verifyCodeBtn);
 		removeSpinningLoad();
 
 		if(validCode == true){

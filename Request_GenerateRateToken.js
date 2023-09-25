@@ -1,34 +1,46 @@
 import {inputCode} from "./JSCollection_IndexModule.js";
 
 
+/*Prep variables*/
+const httpRequest = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+var httpResponse = null;
+/*Prep variables*/
+
+
 /*Prep Export variables*/
 var codeDetails_Base = null;
 /*Prep Export variables*/
 
 
 /*Function for submitting request for generate rate token*/
-const requestRateToken = () => {
+const requestRateToken = (buttonElemUsed) => {
 	
-	/*Receive Response*/
-	requestRateToken_Xhttp.onload = function(){
-		if(requestRateToken_Xhttp.status == 200){									
-			try{				
-				const reqRateToken_Resp = JSON.parse(requestRateToken_Xhttp.responseText);				
+	buttonElemUsed.disabled = true;
 
-				if(reqRateToken_Resp.getCodeDetails != null){
-					alert(reqRateToken_Resp.getCodeDetails);
-				}else if(reqRateToken_Resp.genRateTok != null){					
-					alert(reqRateToken_Resp.genRateTok);
-				}else if(reqRateToken_Resp.getCodeDetails == null && reqRateToken_Resp.genRateTok == null){
-					codeDetails_Base = btoa(unescape(encodeURIComponent(JSON.stringify(reqRateToken_Resp.codeDetails))));
-					window.location.href = reqRateToken_Resp.page_RateService+"?rateToken="+reqRateToken_Resp.rateToken+"&codeDetailsBase="+codeDetails_Base;
+	/*Receive Response*/
+	httpRequest.onload = function(){
+		if(httpRequest.status == 200){									
+			try{				
+				const httpResponse = JSON.parse(httpRequest.responseText);				
+
+				if(httpResponse.getCodeDetails != null){
+					alert(httpResponse.getCodeDetails);
+					buttonElemUsed.disabled = false;
+				}else if(httpResponse.genRateTok != null){					
+					alert(httpResponse.genRateTok);
+					buttonElemUsed.disabled = false;
+				}else if(httpResponse.getCodeDetails == null && httpResponse.genRateTok == null){
+					codeDetails_Base = btoa(unescape(encodeURIComponent(JSON.stringify(httpResponse.codeDetails))));
+					window.location.href = httpResponse.page_RateService+"?rateToken="+httpResponse.rateToken+"&codeDetailsBase="+codeDetails_Base;
 				}				
 			}catch(requestRateToken_Error){
 				alert(requestRateToken_Error);
-				alert(requestRateToken_Xhttp.responseText);					
+				alert(httpRequest.responseText);
+				buttonElemUsed.disabled = false;					
 			}			
-		}else if(requestRateToken_Xhttp.status != 200){
-			alert(requestRateToken_Xhttp.statusText);
+		}else if(httpRequest.status != 200){
+			alert(httpRequest.statusText);
+			buttonElemUsed.disabled = false;
 		}		
 	}
 	/*Receive Response*/
@@ -40,9 +52,9 @@ const requestRateToken = () => {
 	const requestRateToken_StringQuery = "requestRateToken_Gate="+requestRateToken_Gate
 	+"&inputCode="+encodeURIComponent(inputCode.value);	
 
-	requestRateToken_Xhttp.open("POST", "Response_GenerateRateToken.php", false);
-	requestRateToken_Xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	requestRateToken_Xhttp.send(requestRateToken_StringQuery);
+	httpRequest.open("POST", "Response_GenerateRateToken.php", false);
+	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	httpRequest.send(requestRateToken_StringQuery);
 	/*Send Request*/
 }
 /*Function for submitting request for generate rate token*/

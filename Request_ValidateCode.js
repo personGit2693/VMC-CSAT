@@ -3,34 +3,46 @@ import {inputCode} from "./JSCollection_IndexModule.js";
 /*Import*/
 
 
+/*Prep variables*/
+const httpRequest = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+var httpResponse = null;
+/*Prep variables*/
+
+
 /*Prep export variables*/
 let validCode = false;
 /*Prep export variables*/
 
 
 /*Submitting request for validating code*/
-const requestValidateCode = () => {
+const requestValidateCode = (buttonElemUsed) => {
+
+	buttonElemUsed.disabled = true;
 
 	/*Receive Response*/
-	validateCode_Xhttp.onload = function(){
-		if(validateCode_Xhttp.status == 200){			
+	httpRequest.onload = function(){
+		if(httpRequest.status == 200){			
 			try{				
-				const validateCode_Resp = JSON.parse(validateCode_Xhttp.responseText);				
+				const httpResponse = JSON.parse(httpRequest.responseText);				
 
-				if(validateCode_Resp.execution != true){					
+				if(httpResponse.execution != true){					
 					alert("Validating code has execution problem!");
-				}else if(validateCode_Resp.count == 0){
+					buttonElemUsed.disabled = false;
+				}else if(httpResponse.count == 0){
 					notifyNodeBox(false, "Invalid code", "notiEnterCodeModal-Id");
-				}else if(validateCode_Resp.execution == true && validateCode_Resp.count != 0){
+					buttonElemUsed.disabled = false;
+				}else if(httpResponse.execution == true && httpResponse.count != 0){
 					validCode = true;
 					notifyNodeBox(true, "Please proceed", "notiEnterCodeModal-Id");					
 				}				
 			}catch(requestRateToken_Error){
 				alert(requestRateToken_Error);
-				alert(validateCode_Xhttp.responseText);					
+				alert(httpRequest.responseText);
+				buttonElemUsed.disabled = false;					
 			}			
-		}else if(validateCode_Xhttp.status != 200){
-			alert(validateCode_Xhttp.statusText);
+		}else if(httpRequest.status != 200){
+			alert(httpRequest.statusText);
+			buttonElemUsed.disabled = false;
 		}		
 	}
 	/*Receive Response*/
@@ -42,9 +54,9 @@ const requestValidateCode = () => {
 	const validateCode_StringQuery = "validateCodeToken="+validateCodeToken
 	+"&inputCode="+encodeURIComponent(inputCode.value);	
 
-	validateCode_Xhttp.open("POST", "Response_ValidateCode.php", false);
-	validateCode_Xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	validateCode_Xhttp.send(validateCode_StringQuery);
+	httpRequest.open("POST", "Response_ValidateCode.php", false);
+	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	httpRequest.send(validateCode_StringQuery);
 	/*Send Request*/
 }
 /*Submitting request for validating code*/

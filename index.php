@@ -62,7 +62,7 @@
 					<input type="checkbox" id="agreeTermsCheckbox-Id" onchange="checkCusCheckBox(this), switchRateOurServBtn()" autocomplete="off">
 				</div>
 
-				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto; visibility: hidden;" onclick="redirectToRateServ()">Rate our service</button>
+				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto; visibility: hidden;" onclick="redirectToRateServ(this)">Rate our service</button>
 			</div>
 			<!--_ _Accept terms and agreement-->			
 		</div>		
@@ -92,7 +92,7 @@
 						<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" id="inputCode-Id" onkeyup="checkInputCodeEnter(event)" autocomplete="off" required>
 						<div class="placeholdme_RoClass">Enter code</div>
 					</div>
-					<button class="normButton_RoClass" style="margin-top: 5px;" onclick="checkInputCode()">Verify Code</button>
+					<button class="normButton_RoClass" id="verifyCodeBtn-Id" style="margin-top: 5px;" onclick="checkInputCode()">Verify Code</button>
 				</div>
 			</div>			
 		</div>
