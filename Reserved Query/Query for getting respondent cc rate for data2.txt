@@ -1,0 +1,34 @@
+SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
+ccquestionsrates_tab.ccquestion_id AS 'ccquestion_id',
+ccquestionsrates_tab.ccquestionsrate_rate AS 'ccquestionsrate_rate' 
+FROM clientresponses_tab 
+INNER JOIN ccresponses_tab 
+ON clientresponses_tab.clientresponse_reference = ccresponses_tab.clientresponse_reference 
+INNER JOIN ccquestionsrates_tab 
+ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
+WHERE clientresponses_tab.office_id = 11 
+AND clientresponses_tab.clienttype_id = 2
+AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-20', DATE) AND CONVERT('2023-09-30', DATE) 
+ORDER BY clientresponses_tab.clientresponse_reference, ccquestionsrates_tab.ccquestion_id;
+
+[
+	[	
+		2023-VMCCSAT-820101129704,
+		[
+			{ccNo:CC1, ccClientRate:1},
+			{ccNo:CC2, ccClientRate:1},
+			{ccNo:CC3, ccClientRate:1}
+		]
+	],
+	[	
+		2023-VMCCSAT-82010399218,
+		[
+			{ccNo:CC1, ccClientRate:4},
+			{ccNo:CC2, ccClientRate:0},
+			{ccNo:CC3, ccClientRate:0}
+		]
+	]
+]
+
+[0][1][0].ccNo
+[0][1][0].ccClientRate

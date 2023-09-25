@@ -1,0 +1,15 @@
+SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
+questions_tab.question_number AS 'question_number',
+scores_tab.score_value AS 'score_value'
+FROM clientresponses_tab 
+INNER JOIN questionresponses_tab 
+ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference 
+INNER JOIN questions_tab 
+ON questionresponses_tab.question_id = questions_tab.question_id 
+INNER JOIN scores_tab 
+ON questionresponses_tab.score_id = scores_tab.score_id 
+WHERE clientresponses_tab.office_id = 11 
+AND clientresponses_tab.clienttype_id = 2
+AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-20', DATE) AND CONVERT('2023-09-30', DATE) 
+AND questions_tab.question_datatwo = 1
+ORDER BY clientresponses_tab.clientresponse_reference, questions_tab.question_number;
