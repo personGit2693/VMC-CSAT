@@ -92,14 +92,14 @@
 						<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" id="inputCode-Id" onkeyup="checkInputCodeEnter(event)" autocomplete="off" required>
 						<div class="placeholdme_RoClass">Enter code</div>
 					</div>
-					<button class="normButton_RoClass" id="verifyCodeBtn-Id" style="margin-top: 5px;" onclick="checkInputCode()">Verify Code</button>
+					<button class="normButton_RoClass" id="verifyCodeBtn-Id" style="margin-top: 5px;" onclick="checkInputCode(this)">Verify Code</button>
 				</div>
 			</div>			
 		</div>
 	</div>
 	<!--Modals-->
 
-	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js"></script>	
+	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js"></script>	
 	<script type="text/javascript" src="JsCollection_Index.js"></script>	
 	<script type="text/javascript" src="Controller_UnhideRateOurServiceBtn.js"></script>	
 	<script type="text/javascript" src="Validation_PrivacyPolicy.js"></script>	

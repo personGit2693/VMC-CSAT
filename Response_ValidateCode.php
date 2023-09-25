@@ -21,7 +21,7 @@ if(isset($_POST["validateCodeToken"]) && isset($_POST["inputCode"])){
 	$validateCode_Resp->count = null;
 	
 	$execution = null;
-	$count = null;
+	$count = 0;
 	/*Prep return*/
 
 

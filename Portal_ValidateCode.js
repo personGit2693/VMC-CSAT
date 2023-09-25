@@ -1,18 +1,23 @@
 /*Import*/
-import {inputCode, verifyCodeBtn} from "./JSCollection_IndexModule.js";
-import {requestValidateCode, validCode} from "./Request_ValidateCode.js";
+import {inputCode} from "./JSCollection_IndexModule.js";
+import {requestValidateCode, validCode, requestValidateCode_Obj} from "./Request_ValidateCode.js";
 /*Import*/
 
 
 /*Validate code*/
-const checkInputCode = () =>{
+const checkInputCode = (buttonElemUsed) =>{
 
 	if(inputCode.value != ""){
 		showSpinningLoad();
-		requestValidateCode(verifyCodeBtn);
+		requestValidateCode(buttonElemUsed);
 		removeSpinningLoad();
 
-		if(validCode == true){
+		if(requestValidateCode_Obj.execution != true){
+			notifyNodeBox(false, "Validating code has execution problem!", "notiEnterCodeModal-Id");
+		}else if(requestValidateCode_Obj.count == 0){
+			notifyNodeBox(false, "Invalid code", "notiEnterCodeModal-Id");
+		}else if(requestValidateCode_Obj.execution == true && requestValidateCode_Obj.count != 0 && validCode == true){
+			notifyNodeBox(true, "Please proceed", "notiEnterCodeModal-Id");	
 			showRateOurServiceBtn();
 		}
 	}else if(inputCode.value == ""){

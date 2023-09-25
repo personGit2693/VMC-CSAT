@@ -49,12 +49,12 @@ const requestRateToken = (buttonElemUsed) => {
 	/*Send Request*/
 	const requestRateToken_Gate = "DkosdJIOJSDA0221";
 
-	const requestRateToken_StringQuery = "requestRateToken_Gate="+requestRateToken_Gate
-	+"&inputCode="+encodeURIComponent(inputCode.value);	
+	const stringQuery = "requestRateToken_Gate="+requestRateToken_Gate+
+	"&inputCode="+encodeURIComponent(inputCode.value);	
 
 	httpRequest.open("POST", "Response_GenerateRateToken.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(requestRateToken_StringQuery);
+	httpRequest.send(stringQuery);
 	/*Send Request*/
 }
 /*Function for submitting request for generate rate token*/

@@ -11,6 +11,7 @@ var httpResponse = null;
 
 /*Prep export variables*/
 let validCode = false;
+let requestValidateCode_Obj = {execution:null, count:0};
 /*Prep export variables*/
 
 
@@ -25,15 +26,13 @@ const requestValidateCode = (buttonElemUsed) => {
 			try{				
 				const httpResponse = JSON.parse(httpRequest.responseText);				
 
-				if(httpResponse.execution != true){					
-					alert("Validating code has execution problem!");
+				if(httpResponse.execution != true){										
 					buttonElemUsed.disabled = false;
-				}else if(httpResponse.count == 0){
-					notifyNodeBox(false, "Invalid code", "notiEnterCodeModal-Id");
+				}else if(httpResponse.count == 0){					
 					buttonElemUsed.disabled = false;
 				}else if(httpResponse.execution == true && httpResponse.count != 0){
 					validCode = true;
-					notifyNodeBox(true, "Please proceed", "notiEnterCodeModal-Id");					
+					requestValidateCode_Obj = httpResponse;
 				}				
 			}catch(requestRateToken_Error){
 				alert(requestRateToken_Error);
@@ -41,7 +40,7 @@ const requestValidateCode = (buttonElemUsed) => {
 				buttonElemUsed.disabled = false;					
 			}			
 		}else if(httpRequest.status != 200){
-			alert(httpRequest.statusText);
+			alert(httpRequest.statusText);			
 			buttonElemUsed.disabled = false;
 		}		
 	}
@@ -51,14 +50,14 @@ const requestValidateCode = (buttonElemUsed) => {
 	/*Send Request*/
 	const validateCodeToken = "DkosdJIOJSDA0221";
 
-	const validateCode_StringQuery = "validateCodeToken="+validateCodeToken
-	+"&inputCode="+encodeURIComponent(inputCode.value);	
+	const stringQuery = "validateCodeToken="+validateCodeToken+
+	"&inputCode="+encodeURIComponent(inputCode.value);	
 
 	httpRequest.open("POST", "Response_ValidateCode.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(validateCode_StringQuery);
+	httpRequest.send(stringQuery);
 	/*Send Request*/
 }
 /*Submitting request for validating code*/
 
-export {requestValidateCode, validCode};
+export {requestValidateCode, validCode, requestValidateCode_Obj};
