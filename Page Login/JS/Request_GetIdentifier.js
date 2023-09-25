@@ -41,7 +41,7 @@ function requestGetIdentifier(){
 				alert(httpRequest_Error);
 			}			
 		}else if(httpRequest.status != 200){
-			alert("File not found");
+			alert(httpRequest.statusText);
 		}
 	}
 

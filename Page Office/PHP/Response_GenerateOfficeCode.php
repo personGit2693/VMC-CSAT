@@ -24,6 +24,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 	if(isset($_SESSION["officeId"]) && $_SESSION["officeId"] != 0){
 		$officeId = $_SESSION["officeId"];
 	}
+
+	//$accountNumber = mb_strtoupper(substr($_SESSION["accountNumber"], 0, 3));
 	/*Prep variables*/
 
 
