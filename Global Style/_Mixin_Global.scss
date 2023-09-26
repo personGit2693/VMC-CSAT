@@ -279,7 +279,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Global Side Nav*/
 
-/*_Side Nav Header*/
+/*_ Side Nav Header*/
 @mixin globalSideNavHeader_Style{
 	position: relative;
 	display: block;
@@ -356,10 +356,10 @@
 	color: #303238;
 	margin-bottom: 7px;
 }
-/*_Side Nav Header*/
+/*_ Side Nav Header*/
 
 
-/*_Navigation Menu*/
+/*_ Navigation Menu*/
 @mixin globalMainNavMenu_MT_Style{
 	--mainNavMenuFSize: 16px; /*To be changed*/
 	--mainNavMenuBgColor: transparent;
@@ -445,7 +445,7 @@
 @mixin globalChevronSize_Desktop_Style{
 	--chevronIconSize: 22px; /*changed*/
 }
-/*_Navigation Menu*/
+/*_ Navigation Menu*/
 
 /*Global Side Nav*/
 /***********************************************************************************************************************************************************************************************************/
@@ -489,7 +489,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
 
-/*_Modal*/
+/*_ Modal*/
 @mixin modalmeGeneralProps_Style{
 	--modalHeight: auto;
 	--modalBorderColor: #008080;
@@ -532,10 +532,10 @@
 @mixin modalHeadClose_Desktop_Style{
 	--modalCloseIconSize: 20px; /*changed*/
 }					
-/*_Modal*/
+/*_ Modal*/
 
 
-/*_Input field*/
+/*_ Input field*/
 @mixin cusInputGeneralProps_Style{
 	--customInputColor: black;
 }
@@ -561,10 +561,10 @@
 @mixin customInputAnimFSize_Desktop_Style{
 	--customInputAnimFSize: 16px; /*changed*/
 }
-/*_Input field*/
+/*_ Input field*/
 
 
-/*_Normal Button*/
+/*_ Normal Button*/
 @mixin normBtnGeneralProps_Style{
 	--normBtnWidth: auto;
 	--normBtnPadding: 7px;
@@ -588,10 +588,10 @@
 @mixin normBtnFSize_Desktop_Style{
 	--normBtnFSize: 20px; /*changed*/
 }
-/*_Normal Button*/
+/*_ Normal Button*/
 
 
-/*_Notification*/
+/*_ Notification*/
 @mixin notiFSize_MT_Style{
 	--notiFSize: 16px; /*To be changed*/
 }
@@ -612,7 +612,126 @@
 @mixin notiCloseIconSize_Desktop_Style{
 	--notiCloseIconWidthHeight: 20px; /*changed*/
 }
-/*_Notification*/
+/*_ Notification*/
+
+
+/*_ Select Dropdown*/
+
+/*_ _ selectDropdownWrap_RoClass*/
+@mixin selectDropdownWrapClass_Style{
+	--selectDropdownBorderWidth: 2px;	
+	--selectDropdownBorderRadius: 4px;
+	/*--selectDropdownWidth: value; declare to element*/
+}
+/*_ _ selectDropdownWrap_RoClass*/
+
+
+/*_ _ selectDropdownWrap_RoClass, searchOpts_RoClass*/
+@mixin selectDropdownBorderColor_Style{
+	--selectDropdownBorderColor: #285FF3;
+}
+/*_ _ selectDropdownWrap_RoClass, searchOpts_RoClass*/
+
+
+/*_ _ displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass*/
+@mixin selectDropdownBgColor_Style{
+	--selectDropdownBgColor: #ffffff;
+}
+/*_ _ displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass*/
+
+
+/*_ _ displayedSelectedIcon_RoClass, optIcon_RoClass*/
+@mixin selectDropdownIconSize_Mobile_Style{
+	--selectDropdownIconSize: 16px; /*To be changed*/
+}
+@mixin selectDropdownIconSize_Tablet_Style{
+	--selectDropdownIconSize: 16px; /*To be changed*/
+}
+@mixin selectDropdownIconSize_Laptop_Style{
+	--selectDropdownIconSize: 18px; /*changed*/
+}
+@mixin selectDropdownIconSize_Desktop_Style{
+	--selectDropdownIconSize: 20px; /*changed*/
+}
+/*_ _ displayedSelectedIcon_RoClass, optIcon_RoClass*/
+
+
+/*_ _ displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
+@mixin selectDropdownFSize_Mobile_Style{
+	--selectDropdownFSize: 14px; /*To be changed*/
+}
+@mixin selectDropdownFSize_Tablet_Style{
+	--selectDropdownFSize: 14px; /*To be changed*/
+}
+@mixin selectDropdownFSize_Laptop_Style{
+	--selectDropdownFSize: 16px; /*changed*/
+}
+@mixin selectDropdownFSize_Desktop_Style{
+	--selectDropdownFSize: 18px; /*changed*/
+}
+/*_ _ displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
+
+
+/*_ _ displayedSelectedText_RoClass, optText_RoClass*/
+@mixin selectDropdownFColor_Style{
+	--selectDropdownFColor: #494C55;
+}
+/*_ _ displayedSelectedText_RoClass, optText_RoClass*/
+
+
+/*_ _ displayedSelectedChevron_RoClass*/
+@mixin selectDropdownChevronSize_Mobile_Style{
+	--selectDropdownChevronSize: 23px; /*To be changed*/
+}
+@mixin selectDropdownChevronSize_Tablet_Style{
+	--selectDropdownChevronSize: 23px; /*To be changed*/
+}
+@mixin selectDropdownChevronSize_Laptop_Style{
+	--selectDropdownChevronSize: 25px; /*changed*/
+}
+@mixin selectDropdownChevronSize_Desktop_Style{
+	--selectDropdownChevronSize: 27px; /*changed*/
+}
+/*_ _ displayedSelectedChevron_RoClass*/
+
+
+/*_ _ searchOpts_RoClass*/
+@mixin searchOptsClass_Style{
+	--searchOptsBgColor: #ffffff;
+	--searchOptsFColor: #494C55;
+}
+/*_ _ searchOpts_RoClass*/
+
+
+/*_ _ selectDropdownOpt_RoClass*/
+@mixin selectDropdownOptClass_Style{
+	--hoverOptBgColor: #8394B8;
+	--hoverOptFColor: #285FF3;
+}
+/*_ _ selectDropdownOpt_RoClass*/
+
+
+/*_ _ selectDropdownOptionsWrap_RoClass*/
+@mixin selectDropdownOptionsWrapClass_Style{
+	--optWrapThumbBgColor: #285FF3;
+}
+
+
+@mixin selectDropdownScrollSize_Mobile_Style{
+	--selectDropdownScrollSize: 4px; /*To be changed*/
+}
+@mixin selectDropdownScrollSize_Tablet_Style{
+	--selectDropdownScrollSize: 4px; /*To be changed*/
+}
+@mixin selectDropdownScrollSize_Laptop_Style{
+	--selectDropdownScrollSize: 6px; /*changed*/
+}
+@mixin selectDropdownScrollSize_Desktop_Style{
+	--selectDropdownScrollSize: 8px; /*changed*/
+}
+/*_ _ selectDropdownOptionsWrap_RoClass*/
+
+/*_ Select Dropdown*/
 
 /*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/

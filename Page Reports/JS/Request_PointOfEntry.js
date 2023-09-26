@@ -15,7 +15,7 @@ var pointOfEntry_Array = [];
 
 
 /*Get Point Of Entry*/
-function requestPointOfEntry(searchPointOfEntry, renderPointOfEntryOption){
+function requestPointOfEntry(searchPointOfEntry, functions_Array){
 	
 	httpRequest.onreadystatechange = function(){
 		if(this.status == 200 && this.readyState == 4){
@@ -30,7 +30,13 @@ function requestPointOfEntry(searchPointOfEntry, renderPointOfEntryOption){
 					alert("Getting Point Of Entry execution problem!");				
 				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
 					pointOfEntry_Array = httpResponse.pointOfEntry_Array;
-					renderPointOfEntryOption();									
+
+					/*Invoke all functions in functions_Array*/
+					for(let index=0; index < functions_Array.length; index++){
+						const perFunction = functions_Array[index];
+						perFunction();
+					}
+					/*Invoke all functions in functions_Array*/
 				}
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting Point Of Entry!");
@@ -41,7 +47,7 @@ function requestPointOfEntry(searchPointOfEntry, renderPointOfEntryOption){
 	}
 
 	const queryString = "token="+token+
-	"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry.value);
+	"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry);
 
 	httpRequest.open("POST", "Response_PointOfEntry.php", true);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

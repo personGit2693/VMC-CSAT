@@ -4,7 +4,6 @@ declare(strict_types=1);
 session_start();
 date_default_timezone_set('Asia/Manila');
 $currentDateTime = date("Y-m-d H:i:s", time());
-$page_Login_Path = "../../Page Login/PHP/Page_Login.php";
 $destroySessions_Path = "../../Global PHP/DestroySessions.php";
 /*Dependency PHP Codes*/
 
@@ -91,30 +90,19 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Setup Questions</span>
-					</a>
-
+					</a>					
+					
 					<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 					</div>
-					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/demographics_black.png'); --activeSubNavMenuIcon:url('../../src/demographics_white.png')"></div>
-							<span class="generalNavMenuText_RoClass">Summary Demographics</span>
-						</a>
-						<a href="../../Page Reports/PHP/Page_DataOne.php" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/DataIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/DataIcon_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Data One</span>
-						</a>
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/DataIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/DataIcon_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Data Two</span>
-						</a>
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
+					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">						
+						<a href="../../Page Reports/PHP/Page_HCESReports.php" class="subNavMenu_RoClass subNavMenu-Class">					
 							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/CollatedData_Black.png'); --activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Collated Data</span>
+							<span class="generalNavMenuText_RoClass">HCES Reports</span>
 						</a>
-
+						
+						<!--
 						<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 							<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Analysis</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
@@ -141,7 +129,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
 							</a>
 						</div>
+						-->
 					</div>
+					-->					
 				<?php
 				}
 				?>	

@@ -15,7 +15,7 @@ var dataOne_Array = [];
 
 
 /*Get Data One Report*/
-function requestDataOne(selectedOffice_Obj, clientTypeInternal, clientTypeExternal, dataOneFromDate, dataOneToDate, renderDataOneTable){
+function requestDataOne(officeId, dataOneFromDate, dataOneToDate, functions_Array){
 	
 	httpRequest.onreadystatechange = function(){
 		if(this.status == 200 && this.readyState == 4){
@@ -30,7 +30,13 @@ function requestDataOne(selectedOffice_Obj, clientTypeInternal, clientTypeExtern
 					alert("Getting Data One Report execution problem!");				
 				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
 					dataOne_Array = httpResponse.dataOne_Array;
-					renderDataOneTable();									
+
+					/*Invoke all functions in functions_Array*/
+					for(let index=0; index < functions_Array.length; index++){
+						const perFunction = functions_Array[index];
+						perFunction();
+					}
+					/*Invoke all functions in functions_Array*/													
 				}
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting Data One Report!");
@@ -41,11 +47,9 @@ function requestDataOne(selectedOffice_Obj, clientTypeInternal, clientTypeExtern
 	}
 
 	const queryString = "token="+token+
-	"&officeId="+selectedOffice_Obj.office_id+
-	"&clientTypeInternal="+clientTypeInternal+
-	"&clientTypeExternal="+clientTypeExternal+
-	"&dataOneFromDate="+dataOneFromDate.value+
-	"&dataOneToDate="+dataOneToDate.value;
+	"&officeId="+officeId+	
+	"&dataOneFromDate="+dataOneFromDate+
+	"&dataOneToDate="+dataOneToDate;
 
 	httpRequest.open("POST", "Response_DataOne.php", true);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

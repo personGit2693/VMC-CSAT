@@ -13,3 +13,30 @@ AND clientresponses_tab.clienttype_id = 2
 AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-20', DATE) AND CONVERT('2023-09-30', DATE) 
 AND questions_tab.question_datatwo = 1
 ORDER BY clientresponses_tab.clientresponse_reference, questions_tab.question_number;
+
+[
+	[
+		2023-VMCCSAT-820101129704,
+		[
+			{questionNo:1, score:5},
+			{questionNo:2, score:5},
+			{questionNo:3, score:5},
+			{questionNo:4, score:5},
+			{questionNo:5, score:5},
+		]
+	],
+	[
+		2023-VMCCSAT-82010399218,
+		[
+			{questionNo:1, score:5},
+			{questionNo:2, score:3},
+			{questionNo:3, score:1},
+			{questionNo:4, score:2},
+			{questionNo:5, score:0},
+		]
+	]
+]
+
+[1][0]
+[1][1][4].questionNo
+[1][1][4].score

@@ -30,5 +30,6 @@ ORDER BY clientresponses_tab.clientresponse_reference, ccquestionsrates_tab.ccqu
 	]
 ]
 
+[0][1]
 [0][1][0].ccNo
 [0][1][0].ccClientRate

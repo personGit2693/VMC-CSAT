@@ -6,8 +6,10 @@ import {requestPointOfEntry} from "./Request_PointOfEntry.js";
 
 
 /*Gateway*/
+const functions_Array = [renderPointOfEntryOption];
+
 const gatewayPointOfEntry = () =>{
-	requestPointOfEntry(searchPointOfEntry, renderPointOfEntryOption);
+	requestPointOfEntry(searchPointOfEntry.value, functions_Array);
 }
 /*Gateway*/
 

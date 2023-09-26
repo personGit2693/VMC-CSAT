@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["dataOneFromDate"]) && isset($_POST["dataOneToDate"])){
+if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dataOneFromDate"]) && isset($_POST["dataOneToDate"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -15,9 +15,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 
 	/*Query string*/
 	$token = $_POST["token"];
-	$officeId = $_POST["officeId"];		
-	$clientTypeInternal = $_POST["clientTypeInternal"];
-	$clientTypeExternal = $_POST["clientTypeExternal"];
+	$officeId = $_POST["officeId"];			
 	$dataOneFromDate = $_POST["dataOneFromDate"];
 	$dataOneToDate = $_POST["dataOneToDate"];
 	/*Query string*/
@@ -93,7 +91,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 			LEFT JOIN religions_tab 
 			ON clientresponses_tab.religion_id = religions_tab.religion_id
 			WHERE CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dataOneFromDate, DATE) AND CONVERT(:dataOneToDate, DATE) 
-			AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
+			AND clientresponses_tab.clienttype_id = 2
 		";
 
 		if($officeId != 0){
@@ -107,9 +105,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 		$getDataOne_QueryObj = $vmcCsat_Conn->prepare($getDataOne_Query);		
 
 		$getDataOne_QueryObj->bindValue(':dataOneFromDate', $dataOneFromDate, PDO::PARAM_STR);
-		$getDataOne_QueryObj->bindValue(':dataOneToDate', $dataOneToDate, PDO::PARAM_STR);
-		$getDataOne_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
-		$getDataOne_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
+		$getDataOne_QueryObj->bindValue(':dataOneToDate', $dataOneToDate, PDO::PARAM_STR);		
 
 		if($officeId != 0){
 			$getDataOne_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
@@ -137,7 +133,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["clientTy
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["dataOneFromDate"]) || !isset($_POST["dataOneToDate"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || !isset($_POST["dataOneFromDate"]) || !isset($_POST["dataOneToDate"])){
 	$getDataOne_Resp = new stdClass();
 	$getDataOne_Resp->execution = null;
 	$getDataOne_Resp->globalTokenResult = null;

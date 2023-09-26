@@ -4,7 +4,6 @@ declare(strict_types=1);
 session_start();
 date_default_timezone_set('Asia/Manila');
 $currentDateTime = date("Y-m-d H:i:s", time());
-$page_Login_Path = "../../Page Login/PHP/Page_Login.php";
 $destroySessions_Path = "../../Global PHP/DestroySessions.php";
 /*Dependency PHP Codes*/
 
@@ -68,7 +67,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<title>Data One Report</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link rel="stylesheet" type="text/css" href="../CSS/Page_DataOne.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Page_HCESReports.css">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">
 	</head>
 	<body>
@@ -91,30 +90,19 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Setup Questions</span>
-					</a>
-
+					</a>					
+					
 					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 					</div>
 					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/demographics_black.png'); --activeSubNavMenuIcon:url('../../src/demographics_white.png')"></div>
-							<span class="generalNavMenuText_RoClass">Summary Demographics</span>
-						</a>
 						<a href="" class="activeSubNavMenu_RoClass subNavMenu-Class">					
-							<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/DataIcon_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Data One</span>
-						</a>
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/DataIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/DataIcon_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Data Two</span>
-						</a>
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/CollatedData_Black.png'); --activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Collated Data</span>
+							<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">HCES Reports</span>
 						</a>
 
+						<!--
 						<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 							<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Analysis</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
@@ -141,7 +129,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
 							</a>
 						</div>
+						-->
 					</div>
+					-->
 				<?php
 				}
 				?>	
@@ -191,7 +181,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<!--Search area-->
 				<div class="globalWrapper" id="searchWrapper" style="z-index: 1;">
 
-					<!--_Filter Client Type Item-->				
+					<!--_Filter Client Type Item-->
+					<!--				
 					<div class="searchWrapperItem-Class" id="filterClientItemWrap">
 						<span class="searchAreaLabelTxt-Class">Client-Type</span>
 						<div class="cusCheckBoxPaper_RoClass">
@@ -203,6 +194,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestDataOne()" autocomplete="off">
 						</div>
 					</div>
+					-->
 					<!--_Filter Client Type Item-->
 
 					<!--_Select Point of Entry-->
@@ -261,7 +253,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="dateRangeCalLiteWrap_RoClass">
 								<!--_ _ _ _Date Range Calendar Lite To-->						
 								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dataOneReportCalLite-Class" id="dateRangeFrom">
-									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dataOneFromDate-Id">
+									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="hcesReportsFromDate-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
 											<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
@@ -314,7 +306,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 								<!--_ _ _ _Date Range Calendar Lite To-->
 								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dataOneReportCalLite-Class" id="dateRangeTo">
-									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dataOneToDate-Id">
+									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="hcesReportsToDate-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
 											<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
@@ -423,16 +415,15 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>		
 		<script type="text/javascript" src="../../Global JS/table2excel.js"></script>
 		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
-		<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js"></script>
-		<script type="module" src="../JS/Gateway_PointOfEntry_PageDataOne.js"></script>		
+		<!--<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js"></script>-->
+		<script type="module" src="../JS/Gateway_PointOfEntry_PageHCESReports.js"></script>		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
-		<script type="module" src="../JS/Gateway_DataOne_PageDataOne.js"></script>
+		<script type="module" src="../JS/Gateway_DataOne_PageHCESReports.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>		
-		<script type="module" src="../JS/Executor_Page_DataOne.js"></script>
+		<script type="module" src="../JS/Executor_Page_HCESReports.js"></script>
 	</body>
 	</html>
 <?php

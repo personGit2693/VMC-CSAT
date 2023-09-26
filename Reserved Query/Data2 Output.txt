@@ -1,0 +1,36 @@
+[
+	[	
+		2023-VMCCSAT-820101129704,
+		[
+			{ccNo:CC1, ccClientRate:1},
+			{ccNo:CC2, ccClientRate:1},
+			{ccNo:CC3, ccClientRate:1}
+		],
+		[
+			{questionNo:1, score:5},
+			{questionNo:2, score:5},
+			{questionNo:3, score:5},
+			{questionNo:4, score:5},
+			{questionNo:5, score:5},
+		]
+	],
+	[	
+		2023-VMCCSAT-82010399218,
+		[
+			{ccNo:CC1, ccClientRate:4},
+			{ccNo:CC2, ccClientRate:0},
+			{ccNo:CC3, ccClientRate:0}
+		],
+		[
+			{questionNo:1, score:5},
+			{questionNo:2, score:3},
+			{questionNo:3, score:1},
+			{questionNo:4, score:2},
+			{questionNo:5, score:0},
+		]
+	]
+]
+
+
+How to add
+[0][] = [1][1]

@@ -1,8 +1,5 @@
 /*Import*/
-import {valueCheckboxClientype, valueDateRangeOne} from "../../Global JS/Values_Page_Reports.js";
-import {searchPointOfEntry} from "../../Global JS/JSCollection_Page_Reports.js";
-import renderPointOfEntryOption from "./View_PointOfEntryOption.js";
-import {requestPointOfEntry} from "./Request_PointOfEntry.js";
+import {valueDateRangeOne} from "../../Global JS/Values_Page_Reports.js";
 /*Import*/
 
 
@@ -17,10 +14,9 @@ renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rog
 /*Render calendar lite in date range*/
 
 
-/*Assign Initial Values for filter client-type and date range*/
-valueCheckboxClientype();
+/*Assign Initial Values for date range*/
 valueDateRangeOne();
-/*Assign Initial Values for filter client-type and date range*/
+/*Assign Initial Values for date range*/
 
 
 /*Populate point of entry dropdown menu*/
@@ -29,5 +25,5 @@ submitRequestPointOfEntry();
 
 
 /*Get data one*/
-submitRequestDataOne();
+//submitRequestDataOne();
 /*Get data one*/
