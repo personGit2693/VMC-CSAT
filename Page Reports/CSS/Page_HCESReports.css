@@ -3397,419 +3397,1245 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Login Section Style Section*/
-/*Login Section Style Section*/
+/*Rogrid Library*/
+/*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*VMC logo wrapper Section*/
-/*VMC logo wrapper Section*/
+/*Global top navigation*/
+/*Global top navigation*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Images Style Section*/
-/*Images Style Section*/
+/*Search area*/
+/*Search area*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*username & password custom inputs margin Style Section*/
-/*username & password custom inputs margin Style Section*/
+/*Data one table*/
+/*Data one table*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --customInputColor: black;
-  --customInputFSize: 22px;
-  --customInputAnimFSize: 16px;
-  --footerBgColor: #285FF3;
-  --footerFSize: 14px;
-  --footerFColor: #ffffff;
-  --spinnerWidthHeight: 75px; }
+  /*Navigation*/
+  --generalNavMenuPadding: 12px;
+  /*Navigation*/
+  /*Date Range*/
+  --dateRangeBorderRadius: 4px;
+  --dateRangeBorderWidth: 2px;
+  --dateRangeBorderColor: #285FF3;
+  --dateRangePadding: 4px;
+  --dateRangeCalLiteBorderColor: #8394B7;
+  /*Date Range*/
+  /*Spinner loading*/
+  --spinnerWidthHeight: 68px;
+  /*Spinner loading*/ }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Login Mobile Section*/
+/*Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
 @media all and (max-width: 641px) {
-  div#loginSection {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
     position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    width: auto;
-    /*To be changed*/
-    top: none;
-    /*To be changed*/
-    left: none;
-    /*To be changed*/
-    transform: none;
-    /*To be changed*/ }
-
-  /*Vmc Logo Section*/
-  div#loginSection > div#vmcLogoWrap {
-    position: relative;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px; }
-
-  div#loginSection > div#vmcLogoWrap > img {
     display: block;
     box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
     width: 100%;
-    height: 100%; }
+    margin-top: 7px; }
 
-  /*Vmc Logo Section*/
-  /*Login Win Section*/
-  div#loginSection > div#loginWin_ID {
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    padding: 20px;
-    box-shadow: none;
-    /*To be changed*/ }
-
-  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    font: normal bold 28px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 90px;
+    /*To be changed*/
+    width: 90px;
     /*To be changed*/ }
 
-  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    font: normal normal 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: bold normal 18px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 16px;
+    /*To be changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 20px;
     /*To be changed*/ }
 
-  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
-    margin-top: 35px; }
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
 
-  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
-    margin-top: 25px; }
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 25px;
-    padding: 7px;
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 16px;
     /*To be changed*/
-    font: normal bold 22px calibri;
-    border: none;
-    border-radius: 12px;
-    background-color: #25990B;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.1s linear 0s; }
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
-    background-color: #208403; }
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 20px;
+    /*To be changed*/ }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
-    background-color: #0071BF; }
+  .chevronSize-Class {
+    --chevronIconSize: 18px;
+    /*To be changed*/ }
 
-  /*Login Win Section*/ }
-/*Login Mobile Section*/
+  /*Side Nav Menu*/ }
+/*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Login Tablet Section*/
+/*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  div#loginSection {
-    position: absolute;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 480px;
-    /*changed*/
-    top: 40%;
-    /*changed*/
-    left: 50%;
-    /*changed*/
-    transform: translate(-50%, -50%);
-    /*changed*/ }
-
-  /*Vmc Logo Section*/
-  div#loginSection > div#vmcLogoWrap {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
     position: relative;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px; }
-
-  div#loginSection > div#vmcLogoWrap > img {
     display: block;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%; }
-
-  /*Vmc Logo Section*/
-  /*Login Win Section*/
-  div#loginSection > div#loginWin_ID {
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 2px gray;
-    /*changed*/ }
-
-  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    font: normal bold 28px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*To be changed*/ }
-
-  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
-    position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    font: normal normal 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*To be changed*/ }
-
-  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
-    margin-top: 35px; }
-
-  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
-    margin-top: 25px; }
-
-  div#loginSection > div#loginWin_ID > .signInBtn-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    white-space: nowrap;
-    overflow: hidden;
     width: 100%;
-    margin-top: 25px;
-    padding: 7px;
+    margin-top: 7px; }
+
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 90px;
     /*To be changed*/
-    font: normal bold 22px calibri;
-    border: none;
-    border-radius: 12px;
-    background-color: #25990B;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.1s linear 0s; }
+    width: 90px;
+    /*To be changed*/ }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
-    background-color: #208403; }
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    font: bold normal 18px calibri;
+    /*To be changed*/
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
-    background-color: #0071BF; }
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 16px;
+    /*To be changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
 
-  /*Login Win Section*/ }
-/*Login Tablet Section*/
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
+
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
+
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 20px;
+    /*To be changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 18px;
+    /*To be changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Login Login Laptop Section*/
+/*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  div#loginSection {
-    position: absolute;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 480px;
-    /*changed*/
-    top: 40%;
-    /*changed*/
-    left: 50%;
-    /*changed*/
-    transform: translate(-50%, -50%);
-    /*changed*/ }
-
-  /*Vmc Logo Section*/
-  div#loginSection > div#vmcLogoWrap {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
     position: relative;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px; }
-
-  div#loginSection > div#vmcLogoWrap > img {
     display: block;
     box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
     width: 100%;
-    height: 100%; }
+    margin-top: 7px; }
 
-  /*Vmc Logo Section*/
-  /*Login Win Section*/
-  div#loginSection > div#loginWin_ID {
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 2px gray;
-    /*changed*/ }
-
-  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    font: normal bold 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 92px;
+    /*changed*/
+    width: 92px;
     /*changed*/ }
 
-  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    font: normal normal 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: bold normal 20px calibri;
+    /*changed*/
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 18px;
+    /*changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 22px;
     /*changed*/ }
 
-  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
-    margin-top: 35px; }
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
 
-  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
-    margin-top: 25px; }
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 25px;
-    padding: 10px;
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 18px;
     /*changed*/
-    font: normal bold 22px calibri;
-    border: none;
-    border-radius: 12px;
-    background-color: #25990B;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.1s linear 0s; }
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
-    background-color: #208403; }
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 22px;
+    /*changed*/ }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
-    background-color: #0071BF; }
+  .chevronSize-Class {
+    --chevronIconSize: 20px;
+    /*changed*/ }
 
-  /*Login Win Section*/ }
-/*Login Laptop Section*/
+  /*Side Nav Menu*/ }
+/*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Login Desktop Section*/
+/*Desktop*/
 @media all and (min-width: 1601px) {
-  div#loginSection {
-    position: absolute;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 500px;
-    /*changed*/
-    top: 40%;
-    /*changed*/
-    left: 50%;
-    /*changed*/
-    transform: translate(-50%, -50%);
-    /*changed*/ }
-
-  /*Vmc Logo Section*/
-  div#loginSection > div#vmcLogoWrap {
+  /*Side Nav Header*/
+  .sideNavHeader-Class {
     position: relative;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px; }
-
-  div#loginSection > div#vmcLogoWrap > img {
     display: block;
     box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
     width: 100%;
-    height: 100%; }
+    margin-top: 7px; }
 
-  /*Vmc Logo Section*/
-  /*Login Win Section*/
-  div#loginSection > div#loginWin_ID {
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 2px gray;
-    /*changed*/ }
-
-  div#loginSection > div#loginWin_ID > div#signInTxt_ID {
+  .sideNavHeader-Class .sideNavHeaderIcon-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    white-space: nowrap;
-    width: auto;
-    font: normal bold 35px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px auto;
+    height: 94px;
+    /*changed*/
+    width: 94px;
     /*changed*/ }
 
-  div#loginSection > div#loginWin_ID > div#stayTxt_ID {
+  .sideNavHeader-Class .sideNavHeaderTxt-Class {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    word-break: keep-all;
-    width: auto;
-    font: normal normal 19px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: bold normal 22px calibri;
+    /*changed*/
+    text-align: center;
+    color: #303238;
+    margin-bottom: 7px; }
+
+  /*Side Nav Header*/
+  /*Side Nav Menu*/
+  .mainNavMenu-Class {
+    --mainNavMenuFSize: 20px;
+    /*changed*/
+    --mainNavMenuBgColor: transparent;
+    --mainNavMenuFColor: #303238;
+    --hoverMainNavMenuBgColor: #247F4F;
+    --hoverMainNavMenuFColor: #ffffff; }
+
+  .mainNavIconSize-Class {
+    --mainNavMenuIconSize: 24px;
     /*changed*/ }
 
-  div#loginSection > div#loginWin_ID > div#usernameInputWrap {
-    margin-top: 35px; }
+  .subNavMenuWrapLevelOne-Class {
+    --subNavMenuWrapBgColor: #E6E6E6; }
 
-  div#loginSection > div#loginWin_ID > div#passwordInputWrap {
-    margin-top: 25px; }
+  .subNavMenuWrapLevelTwo-Class {
+    --subNavMenuWrapBgColor: #d9d4d4; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 25px;
-    padding: 10px;
+  .subNavMenu-Class {
+    --subNavMenuBgColor: transparent;
+    --subNavMenuFSize: 20px;
     /*changed*/
-    font: normal bold 22px calibri;
-    border: none;
-    border-radius: 12px;
-    background-color: #25990B;
-    color: #ffffff;
+    --subNavMenuFColor: #303238;
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavIconSize-Class {
+    --subNavMenuIconSize: 24px;
+    /*changed*/ }
+
+  .chevronSize-Class {
+    --chevronIconSize: 22px;
+    /*changed*/ }
+
+  /*Side Nav Menu*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Side Nav*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 100%;
+    /*To be changed*/
+    margin: 4px 0px 4px 0px;
+    /*To be changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .globalWrapper {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    border: 1px solid transparent;
+    width: 1420px;
+    /*changed*/
+    margin: 4px auto 4px auto;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Global wrapper Declaration*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 16px;
+    /*To be changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 22px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 16px;
+    /*To be changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 22px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 20px;
+    /*changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 26px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .projTitleTxt_RoClass, .userLoginDetails_RoClass {
+    --projectTitleTextFSize: 24px;
+    /*changed*/
+    --projectTitleTextFColor: #303238; }
+
+  .userLoginIconWrap_RoClass {
+    --projectTitleUserIconSize: 30px;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Global top navigation*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .topNavWrapFlex {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 5px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: #ffffff; }
+
+  .topNavWrapFlexItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    margin: 0px 10px;
+    padding: 7px;
+    border-radius: 7px;
+    color: #303238;
+    border: 1px solid #303238;
     cursor: pointer;
-    transition: background-color 0.1s linear 0s; }
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    font-style: normal;
+    font-weight: normal; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:hover {
-    background-color: #208403; }
+  .activeTopNavWrapFlexItem-Class {
+    color: #ffffff;
+    background-color: #285FF3; }
 
-  div#loginSection > div#loginWin_ID > .signInBtn-Class:active {
-    background-color: #0071BF; }
+  .topNavWrapFlexItem:hover {
+    color: #ffffff;
+    background-color: #285FF3; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .topNavWrapFlex {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 5px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: #ffffff; }
 
-  /*Login Win Section*/ }
-/*Login Desktop Section*/
+  .topNavWrapFlexItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    margin: 0px 10px;
+    padding: 7px;
+    border-radius: 7px;
+    color: #303238;
+    border: 1px solid #303238;
+    cursor: pointer;
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  .activeTopNavWrapFlexItem-Class {
+    color: #ffffff;
+    background-color: #285FF3; }
+
+  .topNavWrapFlexItem:hover {
+    color: #ffffff;
+    background-color: #285FF3; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .topNavWrapFlex {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 5px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: #ffffff; }
+
+  .topNavWrapFlexItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    margin: 0px 10px;
+    padding: 7px;
+    border-radius: 7px;
+    color: #303238;
+    border: 1px solid #303238;
+    cursor: pointer;
+    font-family: calibri;
+    font-size: 18px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  .activeTopNavWrapFlexItem-Class {
+    color: #ffffff;
+    background-color: #285FF3; }
+
+  .topNavWrapFlexItem:hover {
+    color: #ffffff;
+    background-color: #285FF3; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .topNavWrapFlex {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 5px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: #ffffff; }
+
+  .topNavWrapFlexItem {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    margin: 0px 10px;
+    padding: 7px;
+    border-radius: 7px;
+    color: #303238;
+    border: 1px solid #303238;
+    cursor: pointer;
+    font-family: calibri;
+    font-size: 20px;
+    /*changed*/
+    font-style: normal;
+    font-weight: normal; }
+
+  .activeTopNavWrapFlexItem-Class {
+    color: #ffffff;
+    background-color: #285FF3; }
+
+  .topNavWrapFlexItem:hover {
+    color: #ffffff;
+    background-color: #285FF3; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Global top navigation*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    /*To be changed*/
+    padding: 5px;
+    align-content: space-between;
+    /*To be removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 5px 0px;
+    /*To be changed*/ }
+
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: auto;
+    /*changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto; }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 22px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 12px;
+    /*To be changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    left: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 300px;
+    /*To be changed*/
+    --dateRangeCalLiteWrapTop: 45px;
+    /*To be changed*/
+    left: 0;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 12px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 12px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    /*To be changed*/
+    padding: 5px;
+    /*align-content: space-between; removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
+
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 200px;
+    /*changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 22px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 12px;
+    /*To be changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 450px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 45.5px;
+    /*changed*/
+    right: 0;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 12px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 14px;
+    /*To be changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 12px;
+    /*To be changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    /*To be changed*/
+    padding: 5px;
+    /*align-content: space-between; removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
+
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 300px;
+    /*changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 24px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 14px;
+    /*changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 550px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 47px;
+    /*changed*/
+    right: 0;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 14px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 14px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  #searchWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    /*To be changed*/
+    padding: 5px;
+    /*align-content: space-between; removed*/
+    background-color: #ffffff;
+    margin-top: 20px; }
+
+  .searchWrapperItem-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 5px;
+    /*changed*/ }
+
+  #selDropdownPointOfEntryItem-Id {
+    --selectDropdownWidth: 400px;
+    /*changed*/ }
+
+  #dateRangeOneItemWrap {
+    width: auto;
+    margin-left: auto;
+    /*Added*/ }
+
+  #dateRangeOneWrap-Id .dateRangeIcon_RoClass {
+    --dateRangeIconSize: 26px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .dateRangeText_RoClass {
+    --dateRangeFSize: 16px;
+    /*changed*/
+    --dateRangeFColor: #285FF3; }
+
+  #dateRangeOneWrap-Id .dateRangeTooltipArrow_RoClass {
+    --dateRangeTooltipColor: #8394B7;
+    right: 0; }
+
+  #dateRangeOneWrap-Id .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 700px;
+    /*changed*/
+    --dateRangeCalLiteWrapTop: 49px;
+    /*changed*/
+    right: 0;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteMonthText_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteYearText_RoClass {
+    --calendarHeadTxtFSize: 16px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteButton_RoClass {
+    --calendarHeadBtnWidthHeight: 18px;
+    /*changed*/ }
+
+  #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysTxt_RoClass, #dateRangeOneWrap-Id .calLite_RoClass .calLiteDaysIndex_RoClass {
+    --calendarDayTxtFSize: 16px;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Data one table*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
+
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
+
+  #dataOneTableWrap table td {
+    color: #535F80; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
+
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
+
+  #dataOneTableWrap table td {
+    color: #535F80; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 16px;
+    /*changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
+
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
+
+  #dataOneTableWrap table td {
+    color: #535F80; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  #dataOneTableWrap {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataOneTableWrap table {
+    width: 100%;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 18px;
+    /*changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataOneTableWrap table tr {
+    border: 1px solid #8394B8; }
+
+  #dataOneTableWrap table th {
+    background-color: #20124D;
+    color: #ffffff; }
+
+  #dataOneTableWrap table td {
+    color: #535F80; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Data one table*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Library*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Select Dropdown*/
+  .selectDropdownWrap_RoClass {
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderRadius: 4px;
+    /*--selectDropdownWidth: value; declare to element*/
+    --selectDropdownBorderColor: #285FF3; }
+
+  .searchOpts_RoClass {
+    --searchOptsBgColor: #ffffff;
+    --searchOptsFColor: #494C55;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownFSize: 14px;
+    /*To be changed*/ }
+
+  .displayedSelectedFlex_RoClass {
+    --selectDropdownBgColor: #ffffff; }
+
+  .selectDropdownOptionsWrap_RoClass {
+    --selectDropdownBgColor: #ffffff;
+    --optWrapThumbBgColor: #285FF3;
+    --selectDropdownScrollSize: 4px;
+    /*To be changed*/ }
+
+  .displayedSelectedIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .optText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
+  .selectDropdownOpt_RoClass {
+    --hoverOptBgColor: #8394B8;
+    --hoverOptFColor: #285FF3; }
+
+  /*Select Dropdown*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Select Dropdown*/
+  .selectDropdownWrap_RoClass {
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderRadius: 4px;
+    /*--selectDropdownWidth: value; declare to element*/
+    --selectDropdownBorderColor: #285FF3; }
+
+  .searchOpts_RoClass {
+    --searchOptsBgColor: #ffffff;
+    --searchOptsFColor: #494C55;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownFSize: 14px;
+    /*To be changed*/ }
+
+  .displayedSelectedFlex_RoClass {
+    --selectDropdownBgColor: #ffffff; }
+
+  .selectDropdownOptionsWrap_RoClass {
+    --selectDropdownBgColor: #ffffff;
+    --optWrapThumbBgColor: #285FF3;
+    --selectDropdownScrollSize: 4px;
+    /*To be changed*/ }
+
+  .displayedSelectedIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .optText_RoClass {
+    --selectDropdownFSize: 14px;
+    /*To be changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 23px;
+    /*To be changed*/ }
+
+  .selectDropdownOpt_RoClass {
+    --hoverOptBgColor: #8394B8;
+    --hoverOptFColor: #285FF3; }
+
+  /*Select Dropdown*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Select Dropdown*/
+  .selectDropdownWrap_RoClass {
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderRadius: 4px;
+    /*--selectDropdownWidth: value; declare to element*/
+    --selectDropdownBorderColor: #285FF3; }
+
+  .searchOpts_RoClass {
+    --searchOptsBgColor: #ffffff;
+    --searchOptsFColor: #494C55;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownFSize: 16px;
+    /*changed*/ }
+
+  .displayedSelectedFlex_RoClass {
+    --selectDropdownBgColor: #ffffff; }
+
+  .selectDropdownOptionsWrap_RoClass {
+    --selectDropdownBgColor: #ffffff;
+    --optWrapThumbBgColor: #285FF3;
+    --selectDropdownScrollSize: 6px;
+    /*changed*/ }
+
+  .displayedSelectedIcon_RoClass {
+    --selectDropdownIconSize: 18px;
+    /*changed*/ }
+
+  .optIcon_RoClass {
+    --selectDropdownIconSize: 18px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass {
+    --selectDropdownFSize: 16px;
+    /*changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .optText_RoClass {
+    --selectDropdownFSize: 16px;
+    /*changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 25px;
+    /*changed*/ }
+
+  .selectDropdownOpt_RoClass {
+    --hoverOptBgColor: #8394B8;
+    --hoverOptFColor: #285FF3; }
+
+  /*Select Dropdown*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Select Dropdown*/
+  .selectDropdownWrap_RoClass {
+    --selectDropdownBorderWidth: 2px;
+    --selectDropdownBorderRadius: 4px;
+    /*--selectDropdownWidth: value; declare to element*/
+    --selectDropdownBorderColor: #285FF3; }
+
+  .searchOpts_RoClass {
+    --searchOptsBgColor: #ffffff;
+    --searchOptsFColor: #494C55;
+    --selectDropdownBorderColor: #285FF3;
+    --selectDropdownFSize: 18px;
+    /*changed*/ }
+
+  .displayedSelectedFlex_RoClass {
+    --selectDropdownBgColor: #ffffff; }
+
+  .selectDropdownOptionsWrap_RoClass {
+    --selectDropdownBgColor: #ffffff;
+    --optWrapThumbBgColor: #285FF3;
+    --selectDropdownScrollSize: 8px;
+    /*changed*/ }
+
+  .displayedSelectedIcon_RoClass {
+    --selectDropdownIconSize: 20px;
+    /*changed*/ }
+
+  .optIcon_RoClass {
+    --selectDropdownIconSize: 20px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass {
+    --selectDropdownFSize: 18px;
+    /*changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .optText_RoClass {
+    --selectDropdownFSize: 18px;
+    /*changed*/
+    --selectDropdownFColor: #494C55; }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 27px;
+    /*changed*/ }
+
+  .selectDropdownOpt_RoClass {
+    --hoverOptBgColor: #8394B8;
+    --hoverOptFColor: #285FF3; }
+
+  /*Select Dropdown*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=Page_Login.css.map */
+/*# sourceMappingURL=Page_HCESReports.css.map */

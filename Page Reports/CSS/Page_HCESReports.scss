@@ -372,6 +372,112 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Global top navigation*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.topNavWrapFlex{
+		@include globalTopNavWrap_Style;
+		@include topNavWrapFlex_Style;
+	}
+
+	.topNavWrapFlexItem{
+		@include topNavWrapFlexItem_Style;
+		@include topNavWrapFont_Mobile_Style;
+	}
+
+	.activeTopNavWrapFlexItem-Class{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+
+	.topNavWrapFlexItem:hover{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.topNavWrapFlex{
+		@include globalTopNavWrap_Style;
+		@include topNavWrapFlex_Style;
+	}
+
+	.topNavWrapFlexItem{
+		@include topNavWrapFlexItem_Style;
+		@include topNavWrapFont_Tablet_Style;
+	}
+
+	.activeTopNavWrapFlexItem-Class{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+
+	.topNavWrapFlexItem:hover{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.topNavWrapFlex{
+		@include globalTopNavWrap_Style;
+		@include topNavWrapFlex_Style;
+	}
+
+	.topNavWrapFlexItem{
+		@include topNavWrapFlexItem_Style;
+		@include topNavWrapFont_Laptop_Style;
+	}
+
+	.activeTopNavWrapFlexItem-Class{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+
+	.topNavWrapFlexItem:hover{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.topNavWrapFlex{
+		@include globalTopNavWrap_Style;
+		@include topNavWrapFlex_Style;
+	}
+
+	.topNavWrapFlexItem{
+		@include topNavWrapFlexItem_Style;
+		@include topNavWrapFont_Desktop_Style;
+	}
+
+	.activeTopNavWrapFlexItem-Class{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+
+	.topNavWrapFlexItem:hover{
+		@include activeTopNavWrapFlexItem_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Global top navigation*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 
 
 /***********************************************************************************************************************************************************************************************************/

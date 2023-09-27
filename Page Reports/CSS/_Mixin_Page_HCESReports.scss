@@ -17,6 +17,68 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Global top navigation*/
+@mixin topNavWrapFlex_Style{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	background-color: #ffffff;
+}
+
+
+@mixin topNavWrapFlexItem_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	margin: 0px 10px;
+	padding: 7px;
+	border-radius: 7px;
+	color: #303238;
+	border: 1px solid #303238;
+	cursor: pointer;
+}
+
+
+@mixin topNavWrapFont_Mobile_Style{
+	font-family: calibri;
+	font-size: 14px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;	
+} 
+@mixin topNavWrapFont_Tablet_Style{
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+@mixin topNavWrapFont_Laptop_Style{
+	font-family: calibri;
+	font-size: 18px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+@mixin topNavWrapFont_Desktop_Style{
+	font-family: calibri;
+	font-size: 20px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+@mixin activeTopNavWrapFlexItem_Style{
+	color: #ffffff;
+	background-color: #285FF3;
+}
+/*Global top navigation*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Search area*/
 @mixin searchWrapper_Mobile_Style{
 	display: flex;

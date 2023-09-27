@@ -1,6 +1,6 @@
 /*Import*/
 import {pointOfEntryOptsArea} from "../../Global JS/JSCollection_Page_Reports.js";
-import PointOfEntryOption from "./Component_PointOfEntryOption.js";
+import PointOfEntryOption from "./Component_PointOfEntryOption_PageHCESReports_SearchArea.js";
 /*Import*/
 
 

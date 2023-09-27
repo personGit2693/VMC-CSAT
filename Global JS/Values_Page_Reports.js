@@ -1,5 +1,5 @@
 /*Import*/
-import {selDropOfficeValue, dataOneFromDate, dataOneToDate, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Page_Reports.js";
+import {selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Page_Reports.js";
 /*Import*/
 
 
@@ -28,7 +28,7 @@ function valueCheckboxClientype(){
 /*_Assign value for checkboxFilterInternal and checkboxFilterExternal*/
 
 
-/*_Assign default value for dataOneFromDate and dataOneToDate (Filter Whole Month)*/
+/*_Assign default value for dateRangeOneCalLiteFromVal and dateRangeOneCalLiteToVal (Filter Whole Month)*/
 function valueDateRangeOne(){
 	const todayDate = new Date();
 	let todayDateYear = todayDate.getFullYear();
@@ -50,14 +50,14 @@ function valueDateRangeOne(){
 		day = todayDateDay;
 	}
 
-	dataOneFromDate.value = todayDateYear+"-"+month+"-01";
+	dateRangeOneCalLiteFromVal.value = todayDateYear+"-"+month+"-01";
 
-	dataOneToDate.value = todayDateYear+"-"+month+"-"+new Date(todayDateYear, todayDateMonth, 0).getDate();
+	dateRangeOneCalLiteToVal.value = todayDateYear+"-"+month+"-"+new Date(todayDateYear, todayDateMonth, 0).getDate();
 
-	setDateRangeFromText(dateRangeOne, dataOneFromDate);
-	setDateRangeToText(dateRangeOne, dataOneToDate);
+	setDateRangeFromText(dateRangeOne, dateRangeOneCalLiteFromVal);
+	setDateRangeToText(dateRangeOne, dateRangeOneCalLiteToVal);
 }
-/*_Assign default value for dataOneFromDate and dataOneToDate (Filter Whole Month)*/
+/*_Assign default value for dateRangeOneCalLiteFromVal and dateRangeOneCalLiteToVal (Filter Whole Month)*/
 
 
 /*_Assign value clientTypeInternal*/

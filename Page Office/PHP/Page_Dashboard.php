@@ -131,7 +131,6 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						</div>
 						-->
 					</div>
-					-->					
 				<?php
 				}
 				?>	
