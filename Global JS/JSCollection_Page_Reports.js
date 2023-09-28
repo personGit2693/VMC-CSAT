@@ -8,4 +8,5 @@ export const pointOfEntryOptsArea = document.getElementById("pointOfEntryOptsAre
 export const searchPointOfEntry = document.getElementById("searchPointOfEntry-Id");
 export const selDropOfficeValue = document.getElementById("selDropOfficeValue-Id");
 export const dataOneTableWrap = document.getElementById("dataOneTableWrap");
+export const topNavWrapFlexItem = document.getElementsByClassName("topNavWrapFlexItem");
 /*Elements*/

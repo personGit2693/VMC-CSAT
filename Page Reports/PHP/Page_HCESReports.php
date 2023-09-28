@@ -180,11 +180,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 				<!--Reports navigation-->
 				<div class="topNavWrapFlex">
-					<div class="topNavWrapFlexItem">Report 1</div>
-					<div class="topNavWrapFlexItem">Report 2</div>
-					<div class="topNavWrapFlexItem">Report 3</div>
-					<div class="topNavWrapFlexItem">Report 4</div>
-					<div class="topNavWrapFlexItem">Report 5</div>
+					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class" onclick="controllerTopNavigation(event, this)">Report 1</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 2</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 3</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 4</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 5</div>
 				</div>
 				<!--Reports navigation-->
 
@@ -429,8 +429,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>		
 		<script type="text/javascript" src="../../Global JS/table2excel.js"></script>
 		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
+		<script type="module" src="../JS/Controller_ReportsTopNavigation_PageHCESReports.js"></script>
 		<!--<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js"></script>-->
-		<script type="module" src="../JS/Gateway_PointOfEntry_PageHCESReports.js"></script>		
+		<script type="module" src="../JS/Gateway_Point OfEntry_PageHCESReports.js"></script>		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<!--<script type="module" src="../JS/Gateway_DataOne_PageHCESReports.js"></script>-->
 		<!--<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>-->		
