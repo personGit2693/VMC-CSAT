@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dataOneFromDate"]) && isset($_POST["dataOneToDate"])){
+if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -16,8 +16,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dataOneF
 	/*Query string*/
 	$token = $_POST["token"];
 	$officeId = $_POST["officeId"];			
-	$dataOneFromDate = $_POST["dataOneFromDate"];
-	$dataOneToDate = $_POST["dataOneToDate"];
+	$dateFrom = $_POST["dateFrom"];
+	$dateTo = $_POST["dateTo"];
 	/*Query string*/
 
 
@@ -90,7 +90,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dataOneF
 			ON clientresponses_tab.visityear_id = visityears_tab.visityear_id 
 			LEFT JOIN religions_tab 
 			ON clientresponses_tab.religion_id = religions_tab.religion_id
-			WHERE CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dataOneFromDate, DATE) AND CONVERT(:dataOneToDate, DATE) 
+			WHERE CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 
 			AND clientresponses_tab.clienttype_id = 2
 		";
 
@@ -104,8 +104,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dataOneF
 		/*_Execute query*/
 		$getDataOne_QueryObj = $vmcCsat_Conn->prepare($getDataOne_Query);		
 
-		$getDataOne_QueryObj->bindValue(':dataOneFromDate', $dataOneFromDate, PDO::PARAM_STR);
-		$getDataOne_QueryObj->bindValue(':dataOneToDate', $dataOneToDate, PDO::PARAM_STR);		
+		$getDataOne_QueryObj->bindValue(':dateFrom', $dateFrom, PDO::PARAM_STR);
+		$getDataOne_QueryObj->bindValue(':dateTo', $dateTo, PDO::PARAM_STR);		
 
 		if($officeId != 0){
 			$getDataOne_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
@@ -133,7 +133,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dataOneF
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || !isset($_POST["dataOneFromDate"]) || !isset($_POST["dataOneToDate"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["officeId"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"])){
 	$getDataOne_Resp = new stdClass();
 	$getDataOne_Resp->execution = null;
 	$getDataOne_Resp->globalTokenResult = null;

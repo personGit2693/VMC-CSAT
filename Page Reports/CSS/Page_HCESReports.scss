@@ -702,7 +702,7 @@
 @media all and (max-width:641px){
 	#dataOneTableWrap{
 		@include dataOneTableWrap_Style;
-	}
+	}	
 
 	#dataOneTableWrap table{
 		@include dataOneTable_MT_Style;
@@ -817,6 +817,14 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_MT_Style;
+	}
+	/*Normal Button*/
+
+
 	/*Select Dropdown*/
 	.selectDropdownWrap_RoClass{
 		@include selectDropdownWrapClass_Style;
@@ -873,6 +881,14 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_MT_Style;
+	}
+	/*Normal Button*/
+
+
 	/*Select Dropdown*/
 	.selectDropdownWrap_RoClass{
 		@include selectDropdownWrapClass_Style;
@@ -929,6 +945,14 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_Laptop_Style;
+	}
+	/*Normal Button*/
+
+
 	/*Select Dropdown*/
 	.selectDropdownWrap_RoClass{
 		@include selectDropdownWrapClass_Style;
@@ -985,6 +1009,14 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
+	/*Normal Button*/
+	.normButton_RoClass{
+		@include normBtnGeneralProps_Style;
+		@include normBtnFSize_Desktop_Style;
+	}
+	/*Normal Button*/
+
+
 	/*Select Dropdown*/
 	.selectDropdownWrap_RoClass{
 		@include selectDropdownWrapClass_Style;

@@ -15,7 +15,7 @@ var dataOne_Array = [];
 
 
 /*Get Data One Report*/
-function requestDataOne(officeId, dataOneFromDate, dataOneToDate, functions_Array){
+function requestDataOne(officeId, dateFrom, dateTo, functions_Array){
 	
 	httpRequest.onreadystatechange = function(){
 		if(this.status == 200 && this.readyState == 4){
@@ -48,8 +48,8 @@ function requestDataOne(officeId, dataOneFromDate, dataOneToDate, functions_Arra
 
 	const queryString = "token="+token+
 	"&officeId="+officeId+	
-	"&dataOneFromDate="+dataOneFromDate+
-	"&dataOneToDate="+dataOneToDate;
+	"&dateFrom="+dateFrom+
+	"&dateTo="+dateTo;
 
 	httpRequest.open("POST", "Response_DataOne.php", true);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

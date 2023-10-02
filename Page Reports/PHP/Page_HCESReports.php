@@ -180,11 +180,15 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 				<!--Reports navigation-->
 				<div class="topNavWrapFlex">
-					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class" onclick="controllerTopNavigation(event, this)">Report 1</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 2</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 3</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 4</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Report 5</div>
+					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controllerTopNavigation(event, this)">Data One</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Data Two</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Summary Demographics</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Collated Data</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q1-Q7</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q8-Q12</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q13-Q28</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Responsiveness Analysis</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">ARTA Analysis</div>
 				</div>
 				<!--Reports navigation-->
 
@@ -263,7 +267,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<!--_ _ _Date Range Calendar Lite Wrap-->
 							<div class="dateRangeCalLiteWrap_RoClass">
 								<!--_ _ _ _Date Range Calendar Lite To-->						
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOneCalLiteFrom-Class" id="dateRangeOneCalLiteFrom">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageReports-Class" id="dateRangeOneCalLiteFrom">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteFromVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -316,7 +320,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<!--_ _ _ _Date Range Calendar Lite To-->
 
 								<!--_ _ _ _Date Range Calendar Lite To-->
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOneCalLiteTo-Class" id="dateRangeOneCalLiteTo">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageReports-Class" id="dateRangeOneCalLiteTo">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteToVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -378,10 +382,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 
 				<!--Data one table-->
-				<div class="globalWrapper" id="dataOneTableWrap">
-					<!--Component
+				<div class="globalWrapper reportsWrapper-Class" id="dataOneTableWrap">
+					<!--Component					
 					<button class="normButton_RoClass" onclick="exportDataOneToExcel(this)">Download as Excel File</button>
-
 					<table>
 						<thead>
 							<tr>
@@ -411,7 +414,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							</tr>
 						</tbody>						
 					</table>
-					-->
+					-->					
 				</div>
 				<!--Data one table-->				
 			</div> 
@@ -424,18 +427,39 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		</div>	
 		<!--Loading Indicator-->
 
+
+		<!--Javascripts-->
+		<!--_Dependencies-->
 		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>		
 		<script type="text/javascript" src="../../Global JS/table2excel.js"></script>
+		<!--_Dependencies-->
+
+		<!--_Value holder-->
 		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
-		<script type="module" src="../JS/Controller_ReportsTopNavigation_PageHCESReports.js"></script>
-		<!--<script type="text/javascript" src="../JS/Controller_DataOneToExcel.js"></script>-->
-		<script type="module" src="../JS/Gateway_Point OfEntry_PageHCESReports.js"></script>		
+		<!--_Value holder-->
+
+		<!--_Controller-->		
+		<script type="module" src="../JS/Controller_ReportsTopNavigation.js"></script>
+		<script type="text/javascript" src="../JS/Controller_PointOfEntryOption.js"></script>
+		<script type="text/javascript" src="../JS/Controller_DataOneTable.js"></script>	
+		<!--_Controller-->
+
+		<!--_Gateway-->
+		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
+		<script type="module" src="../JS/Gateway_DataOne.js"></script>
+		<!--_Gateway-->	
+		
+		<!--_Submit holder-->		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
-		<!--<script type="module" src="../JS/Gateway_DataOne_PageHCESReports.js"></script>-->
-		<!--<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>-->		
+		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>
+		<!--_Submit holder-->
+		
+		<!--_Executor-->	
 		<script type="module" src="../JS/Executor_Page_HCESReports.js"></script>
+		<!--_Executor-->
+		<!--Javascripts-->		
 	</body>
 	</html>
 <?php

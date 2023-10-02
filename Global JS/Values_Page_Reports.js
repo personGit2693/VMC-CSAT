@@ -86,7 +86,7 @@ function valueClientTypeExternal(){
 
 /*_Assign value for selectedOffice_Obj*/
 function valueSelectedOfficeObj(){
-	selectedOffice_Obj = JSON.parse(atob(selDropOfficeValue.value));
+	selectedOffice_Obj = decodeURIComponent(escape(JSON.parse(atob(selDropOfficeValue.value))));
 }
 /*_Assign value for selectedOffice_Obj*/
 

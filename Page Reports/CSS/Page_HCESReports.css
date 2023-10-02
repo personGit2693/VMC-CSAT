@@ -3397,11 +3397,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Rogrid Library*/
-/*Rogrid Library*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
 /*Global top navigation*/
 /*Global top navigation*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3877,7 +3872,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     padding: 5px;
-    border: 1px solid yellow;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -3889,12 +3883,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    margin: 0px 10px;
+    margin: 10px;
     padding: 7px;
     border-radius: 7px;
     color: #303238;
     border: 1px solid #303238;
     cursor: pointer;
+    text-align: center;
     font-family: calibri;
     font-size: 14px;
     /*To be changed*/
@@ -3918,7 +3913,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     padding: 5px;
-    border: 1px solid yellow;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -3930,12 +3924,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    margin: 0px 10px;
+    margin: 10px;
     padding: 7px;
     border-radius: 7px;
     color: #303238;
     border: 1px solid #303238;
     cursor: pointer;
+    text-align: center;
     font-family: calibri;
     font-size: 16px;
     /*changed*/
@@ -3959,7 +3954,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     padding: 5px;
-    border: 1px solid yellow;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -3971,12 +3965,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    margin: 0px 10px;
+    margin: 10px;
     padding: 7px;
     border-radius: 7px;
     color: #303238;
     border: 1px solid #303238;
     cursor: pointer;
+    text-align: center;
     font-family: calibri;
     font-size: 18px;
     /*changed*/
@@ -4000,7 +3995,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     padding: 5px;
-    border: 1px solid yellow;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -4012,12 +4006,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     box-sizing: border-box;
     overflow: visible;
     white-space: normal;
-    margin: 0px 10px;
+    margin: 10px;
     padding: 7px;
     border-radius: 7px;
     color: #303238;
     border: 1px solid #303238;
     cursor: pointer;
+    text-align: center;
     font-family: calibri;
     font-size: 20px;
     /*changed*/
@@ -4418,6 +4413,22 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Normal Button*/
+  .normButton_RoClass {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 16px;
+    /*To be changed*/ }
+
+  /*Normal Button*/
   /*Select Dropdown*/
   .selectDropdownWrap_RoClass {
     --selectDropdownBorderWidth: 2px;
@@ -4473,6 +4484,22 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Normal Button*/
+  .normButton_RoClass {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 16px;
+    /*To be changed*/ }
+
+  /*Normal Button*/
   /*Select Dropdown*/
   .selectDropdownWrap_RoClass {
     --selectDropdownBorderWidth: 2px;
@@ -4528,6 +4555,22 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Normal Button*/
+  .normButton_RoClass {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 18px;
+    /*changed*/ }
+
+  /*Normal Button*/
   /*Select Dropdown*/
   .selectDropdownWrap_RoClass {
     --selectDropdownBorderWidth: 2px;
@@ -4583,6 +4626,22 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Normal Button*/
+  .normButton_RoClass {
+    --normBtnWidth: auto;
+    --normBtnPadding: 7px;
+    --normBtnBorderWidth: 1px;
+    --normBtnBorderColor: #285FF3;
+    --normBtnRadius: 4px;
+    --normBtnFWeight: normal;
+    --normBtnBgColor: #285FF3;
+    --normBtnFcolor: #ffffff;
+    --normBtnHovActFColor: #ffffff;
+    --normBtnHovActBgColor: #1B85BD;
+    --normBtnFSize: 20px;
+    /*changed*/ }
+
+  /*Normal Button*/
   /*Select Dropdown*/
   .selectDropdownWrap_RoClass {
     --selectDropdownBorderWidth: 2px;

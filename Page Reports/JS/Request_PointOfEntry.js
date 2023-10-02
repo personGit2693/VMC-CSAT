@@ -19,7 +19,7 @@ function requestPointOfEntry(searchPointOfEntry, functions_Array){
 	
 	httpRequest.onreadystatechange = function(){
 		if(this.status == 200 && this.readyState == 4){
-			try{
+			try{				
 				httpResponse = JSON.parse(this.responseText);
 
 				if(httpResponse.serverConnection !== null){

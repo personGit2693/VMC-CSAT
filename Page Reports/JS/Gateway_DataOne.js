@@ -1,6 +1,6 @@
 /*Import*/
 import {selectedOffice_Obj} from "../../Global JS/Values_Page_Reports.js";
-import {dataOneFromDate, dataOneToDate} from "../../Global JS/JSCollection_Page_Reports.js";
+import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Page_Reports.js";
 import renderDataOneTable from "./View_DataOneTable.js";
 import {requestDataOne} from "./Request_DataOne.js";
 /*Import*/
@@ -10,7 +10,7 @@ import {requestDataOne} from "./Request_DataOne.js";
 const functions_Array = [renderDataOneTable];
 
 const gatewayDataOne = () =>{
-	requestDataOne(selectedOffice_Obj.office_id, dataOneFromDate.value, dataOneToDate.value, functions_Array);
+	requestDataOne(selectedOffice_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, functions_Array);
 }
 /*Gateway*/
 
