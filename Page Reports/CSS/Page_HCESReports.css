@@ -3410,6 +3410,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Data one table*/
 /*Data one table*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Data two table*/
+/*Data two table*/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -4305,7 +4310,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 10px 0px; }
 
   #dataOneTableWrap table tr {
-    border: 1px solid #8394B8; }
+    border: 1px solid black; }
 
   #dataOneTableWrap table th {
     background-color: #20124D;
@@ -4335,7 +4340,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 10px 0px; }
 
   #dataOneTableWrap table tr {
-    border: 1px solid #8394B8; }
+    border: 1px solid black; }
 
   #dataOneTableWrap table th {
     background-color: #20124D;
@@ -4365,7 +4370,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 10px 0px; }
 
   #dataOneTableWrap table tr {
-    border: 1px solid #8394B8; }
+    border: 1px solid black; }
 
   #dataOneTableWrap table th {
     background-color: #20124D;
@@ -4395,7 +4400,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     margin: 10px 0px; }
 
   #dataOneTableWrap table tr {
-    border: 1px solid #8394B8; }
+    border: 1px solid black; }
 
   #dataOneTableWrap table th {
     background-color: #20124D;
@@ -4406,6 +4411,154 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Data one table*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Data two table*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  #dataTwoTableWrap {
+    display: none;
+    overflow: auto;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataTwoTableWrap table {
+    width: auto;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataTwoTableWrap table th {
+    padding: 5px; }
+
+  .ccHeader-Class {
+    background-color: #EAD1DC; }
+
+  .q1q7Header-Class {
+    background-color: #C5E0B3; }
+
+  .q8q12Header-Class {
+    background-color: #FBE196; }
+
+  .q13q28Header-Class {
+    background-color: #D9E2F3; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  #dataTwoTableWrap {
+    display: none;
+    overflow: auto;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataTwoTableWrap table {
+    width: auto;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 12px;
+    /*To be changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataTwoTableWrap table th {
+    padding: 5px; }
+
+  .ccHeader-Class {
+    background-color: #EAD1DC; }
+
+  .q1q7Header-Class {
+    background-color: #C5E0B3; }
+
+  .q8q12Header-Class {
+    background-color: #FBE196; }
+
+  .q13q28Header-Class {
+    background-color: #D9E2F3; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  #dataTwoTableWrap {
+    display: none;
+    overflow: auto;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataTwoTableWrap table {
+    width: auto;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataTwoTableWrap table th {
+    padding: 5px; }
+
+  .ccHeader-Class {
+    background-color: #EAD1DC; }
+
+  .q1q7Header-Class {
+    background-color: #C5E0B3; }
+
+  .q8q12Header-Class {
+    background-color: #FBE196; }
+
+  .q13q28Header-Class {
+    background-color: #D9E2F3; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  #dataTwoTableWrap {
+    display: none;
+    overflow: auto;
+    padding: 5px;
+    background-color: #ffffff; }
+
+  #dataTwoTableWrap table {
+    width: auto;
+    table-layout: fixed;
+    font-family: calibri;
+    font-size: 14px;
+    /*changed*/
+    box-shadow: 0px 0px 5px #8394B8;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0px; }
+
+  #dataTwoTableWrap table th {
+    padding: 5px; }
+
+  .ccHeader-Class {
+    background-color: #EAD1DC; }
+
+  .q1q7Header-Class {
+    background-color: #C5E0B3; }
+
+  .q8q12Header-Class {
+    background-color: #FBE196; }
+
+  .q13q28Header-Class {
+    background-color: #D9E2F3; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Data two table*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

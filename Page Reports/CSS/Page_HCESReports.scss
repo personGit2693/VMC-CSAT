@@ -809,6 +809,152 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Data two table*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	#dataTwoTableWrap{
+		@include dataTwoTableWrap_Style;
+	}	
+
+	#dataTwoTableWrap table{
+		@include dataTwoTable_MT_Style;
+	}
+
+	#dataTwoTableWrap table th{
+		@include dataTwoTableTh_Style;
+	}
+
+	.ccHeader-Class{
+		@include ccHeader_Style;
+	}
+
+	.q1q7Header-Class{
+		@include q1q7Header_Style;
+	}
+
+	.q8q12Header-Class{
+		@include q8q12Header_Style;
+	}
+
+	.q13q28Header-Class{
+		@include q13q28Header_Style;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	#dataTwoTableWrap{
+		@include dataTwoTableWrap_Style;
+	}	
+
+	#dataTwoTableWrap table{
+		@include dataTwoTable_MT_Style;
+	}
+
+	#dataTwoTableWrap table th{
+		@include dataTwoTableTh_Style;
+	}
+
+	.ccHeader-Class{
+		@include ccHeader_Style;
+	}
+
+	.q1q7Header-Class{
+		@include q1q7Header_Style;
+	}
+
+	.q8q12Header-Class{
+		@include q8q12Header_Style;
+	}
+
+	.q13q28Header-Class{
+		@include q13q28Header_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	#dataTwoTableWrap{
+		@include dataTwoTableWrap_Style;
+	}	
+
+	#dataTwoTableWrap table{
+		@include dataTwoTable_Laptop_Style;
+	}
+
+	#dataTwoTableWrap table th{
+		@include dataTwoTableTh_Style;
+	}
+
+	.ccHeader-Class{
+		@include ccHeader_Style;
+	}
+
+	.q1q7Header-Class{
+		@include q1q7Header_Style;
+	}
+
+	.q8q12Header-Class{
+		@include q8q12Header_Style;
+	}
+
+	.q13q28Header-Class{
+		@include q13q28Header_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	#dataTwoTableWrap{
+		@include dataTwoTableWrap_Style;
+	}	
+
+	#dataTwoTableWrap table{
+		@include dataTwoTable_Laptop_Style;
+	}
+
+	#dataTwoTableWrap table th{
+		@include dataTwoTableTh_Style;
+	}
+
+	.ccHeader-Class{
+		@include ccHeader_Style;
+	}
+
+	.q1q7Header-Class{
+		@include q1q7Header_Style;
+	}
+
+	.q8q12Header-Class{
+		@include q8q12Header_Style;
+	}
+
+	.q13q28Header-Class{
+		@include q13q28Header_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Data two table*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 
 
 /***********************************************************************************************************************************************************************************************************/

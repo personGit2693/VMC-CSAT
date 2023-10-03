@@ -8,8 +8,8 @@ INNER JOIN ccquestionsrates_tab
 ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
 WHERE clientresponses_tab.office_id = 11 
 AND clientresponses_tab.clienttype_id = 2
-AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-20', DATE) AND CONVERT('2023-09-30', DATE) 
-ORDER BY clientresponses_tab.clientresponse_reference, ccquestionsrates_tab.ccquestion_id;
+AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-01', DATE) AND CONVERT('2023-09-30', DATE) 
+ORDER BY clientresponses_tab.clientresponse_date DESC;
 
 [
 	[	

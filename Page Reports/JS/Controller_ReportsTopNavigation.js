@@ -1,5 +1,5 @@
 /*Import*/
-import {reportsWrapper, topNavWrapFlexItem, dataOneTableWrap} from "../../Global JS/JSCollection_Page_Reports.js";
+import {reportsWrapper, topNavWrapFlexItem, dataOneTableWrap, dataTwoTableWrap} from "../../Global JS/JSCollection_Page_Reports.js";
 /*Import*/
 
 
@@ -25,6 +25,12 @@ function controllerTopNavigation(e, selTopNavWrapFlexItem){
 				dataOneTableWrap.style.display = "block";
 			}
 			/*_Display data one*/
+
+			/*_Display data two*/
+			if(selTopNavWrapFlexItem.classList.contains("dataTwoNavigation-Class") == true){
+				dataTwoTableWrap.style.display = "block";
+			}
+			/*_Display data two*/
 		}
 	}
 	/*Highlight selected topNavWrapFlexItem*/	

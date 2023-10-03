@@ -64,7 +64,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>Data One Report</title>
+		<title>HCES Reports</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
 		<link rel="stylesheet" type="text/css" href="../CSS/Page_HCESReports.css">
@@ -181,7 +181,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<!--Reports navigation-->
 				<div class="topNavWrapFlex">
 					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controllerTopNavigation(event, this)">Data One</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Data Two</div>
+					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controllerTopNavigation(event, this)">Data Two</div>
 					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Summary Demographics</div>
 					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Collated Data</div>
 					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q1-Q7</div>
@@ -416,7 +416,125 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					</table>
 					-->					
 				</div>
-				<!--Data one table-->				
+				<!--Data one table-->
+
+
+				<!--Data two table-->
+				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">				
+					<button class="normButton_RoClass" onclick="controllerDataOneTable(this)">Download as Excel File</button>
+					<table>
+						<thead>
+							<tr>
+								<th>Control No.</th>
+								<th class="ccHeader-Class">CC1</th>
+								<th class="ccHeader-Class">CC2</th>
+								<th class="ccHeader-Class">CC3</th>
+								<th class="q1q7Header-Class">Q1</th>
+								<th class="q1q7Header-Class">Q2</th>
+								<th class="q1q7Header-Class">Q3</th>
+								<th class="q1q7Header-Class">Q4 SQD3</th>
+								<th class="q1q7Header-Class">Q5 SQD2</th>
+								<th class="q1q7Header-Class">Q6 SQD4</th>
+								<th class="q1q7Header-Class">Q7 SQD1</th>
+								<th class="q8q12Header-Class">Q8</th>
+								<th class="q8q12Header-Class">Q9</th>
+								<th class="q8q12Header-Class">Q10</th>
+								<th class="q8q12Header-Class">Q11 SQD8</th>
+								<th class="q8q12Header-Class">Q12 SQD5</th>
+								<th class="q13q28Header-Class">Q13 SQD7</th>
+								<th class="q13q28Header-Class">Q14 SQD7</th>
+								<th class="q13q28Header-Class">Q15 SQD7</th>
+								<th class="q13q28Header-Class">Q16 SQD7</th>
+								<th class="q13q28Header-Class">Q17 SQD7</th>
+								<th class="q13q28Header-Class">Q18 SQD7</th>
+								<th class="q13q28Header-Class">Q19 SQD7</th>
+								<th class="q13q28Header-Class">Q20 SQD7</th>
+								<th class="q13q28Header-Class">Q21 SQD7</th>
+								<th class="q13q28Header-Class">Q22 SQD7</th>
+								<th class="q13q28Header-Class">Q23 SQD7</th>
+								<th class="q13q28Header-Class">Q24 SQD7</th>
+								<th class="q13q28Header-Class">Q25 SQD7</th>
+								<th class="q13q28Header-Class">Q26 SQD7</th>
+								<th class="q13q28Header-Class">Q27 SQD6</th>
+								<th class="q13q28Header-Class">Q28 SQD0</th>
+								<th>AVE SQD7</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>							
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--Data two table-->
 			</div> 
 		</div>
 
@@ -449,11 +567,13 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Gateway-->
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
 		<script type="module" src="../JS/Gateway_DataOne.js"></script>
+		<script type="module" src="../JS/Gateway_CcDataTwo.js"></script>
 		<!--_Gateway-->	
 		
 		<!--_Submit holder-->		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CcDataTwo.js"></script>
 		<!--_Submit holder-->
 		
 		<!--_Executor-->	

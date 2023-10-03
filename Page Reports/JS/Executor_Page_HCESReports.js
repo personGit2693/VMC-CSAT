@@ -27,3 +27,8 @@ submitRequestPointOfEntry();
 /*Get data one*/
 submitRequestDataOne();
 /*Get data one*/
+
+
+/*Get CC Data Two*/
+submitRequestCcDataTwo();
+/*Get CC Data Two*/

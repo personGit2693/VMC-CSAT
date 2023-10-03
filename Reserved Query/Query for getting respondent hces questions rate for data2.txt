@@ -10,9 +10,8 @@ INNER JOIN scores_tab
 ON questionresponses_tab.score_id = scores_tab.score_id 
 WHERE clientresponses_tab.office_id = 11 
 AND clientresponses_tab.clienttype_id = 2
-AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-20', DATE) AND CONVERT('2023-09-30', DATE) 
-AND questions_tab.question_datatwo = 1
-ORDER BY clientresponses_tab.clientresponse_reference, questions_tab.question_number;
+AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT('2023-09-01', DATE) AND CONVERT('2023-09-30', DATE) 
+ORDER BY clientresponses_tab.clientresponse_date DESC, questions_tab.question_number ASC;
 
 [
 	[

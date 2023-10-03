@@ -270,3 +270,80 @@
 
 /*Data one table*/
 /***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Data two table*/
+@mixin dataTwoTableWrap_Style{
+	display: none;
+	overflow: auto;
+	padding: 5px;	
+	background-color: #ffffff;
+}
+
+
+@mixin dataTwoTable_MT_Style{
+	width: auto;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 12px; /*To be changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;
+	margin:10px 0px;	
+}
+@mixin dataTwoTable_Laptop_Style{
+	width: auto;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 14px; /*changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 10px 0px;
+}
+@mixin dataTwoTable_Desktop_Style{
+	width: auto;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 10px 0px;
+}
+
+
+@mixin dataTwoTableTh_Style{
+	padding: 5px;
+}
+
+
+@mixin ccHeader_Style{
+	background-color: #EAD1DC;
+}
+
+
+@mixin q1q7Header_Style{
+	background-color: #C5E0B3;
+}
+
+
+@mixin q8q12Header_Style{
+	background-color: #FBE196;
+}
+
+
+@mixin q13q28Header_Style{
+	background-color: #D9E2F3;
+}
+
+
+@mixin dataOneTableTr_Style{
+	border: 1px solid black;
+}
+/*Data two table*/
+/***********************************************************************************************************************************************************************************************************/
