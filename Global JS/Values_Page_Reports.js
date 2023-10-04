@@ -1,6 +1,8 @@
 /*Import*/
 import {selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Page_Reports.js";
 import {ccDataTwo_Array} from "../Page Reports/JS/Request_CcDataTwo.js";
+import {questionsDataTwo_Array} from "../Page Reports/JS/Request_QuestionsDataTwo.js";
+import renderDataTwoTable from "../Page Reports/JS/View_DataTwoTable.js";
 /*Import*/
 
 
@@ -29,8 +31,7 @@ function valueDataTwo(){
 	/*Reset value*/	
 	dataTwo_Array = [];
 	/*Reset value*/
-
-	/*Create respondentRateDetails_Array and respondentCcRateDetails_Array*/
+	
 	let currentRefNo = "";
 	for(let index=0; index < ccDataTwo_Array.length; index++){
 		if(currentRefNo != ccDataTwo_Array[index].clientresponse_reference){						
@@ -38,9 +39,9 @@ function valueDataTwo(){
 			if(respondentRateDetails_Array.length != 0){
 				respondentQuestionRateDetails_Array = [];
 
-				for(let indexOne=0; indexOne < questionDataTwo_Array.length; indexOne++){
-					if(currentRefNo == questionDataTwo_Array[indexOne].clientresponse_reference){						
-						let respondentQuestionRateDetails_Obj = {questionNo: questionDataTwo_Array[indexOne].question_number, score: questionDataTwo_Array[indexOne].score_value};			 
+				for(let indexOne=0; indexOne < questionsDataTwo_Array.length; indexOne++){
+					if(currentRefNo == questionsDataTwo_Array[indexOne].clientresponse_reference){						
+						let respondentQuestionRateDetails_Obj = {questionNo: questionsDataTwo_Array[indexOne].question_number, score: questionsDataTwo_Array[indexOne].score_value};			 
 						respondentQuestionRateDetails_Array.push(respondentQuestionRateDetails_Obj); 
 					}
 				}
@@ -48,7 +49,7 @@ function valueDataTwo(){
 				respondentRateDetails_Array.push(respondentCcRateDetails_Array);
 				respondentRateDetails_Array.push(respondentQuestionRateDetails_Array);
 
-				dataTwo_Array.push(respondentRateDetails_Array);
+				dataTwo_Array.push(respondentRateDetails_Array);				
 			}			
 
 			currentRefNo = ccDataTwo_Array[index].clientresponse_reference;
@@ -62,10 +63,12 @@ function valueDataTwo(){
 			respondentRateDetails_Array.push(currentRefNo);
 		}else if(currentRefNo == ccDataTwo_Array[index].clientresponse_reference){			
 			let respondentCcRateDetails_Obj = {ccNo: ccDataTwo_Array[index].ccquestion_id, ccClientRate: ccDataTwo_Array[index].ccquestionsrate_rate};			
-			respondentCcRateDetails_Array.push(respondentCcRateDetails_Obj);
+			respondentCcRateDetails_Array.push(respondentCcRateDetails_Obj);			
 		}
 	}
-	/*Create respondentRateDetails_Array and respondentCcRateDetails_Array*/
+
+	console.log(JSON.stringify(dataTwo_Array));
+	renderDataTwoTable();
 }
 /*_Assign value for dataTwo_Array*/
 
@@ -154,5 +157,5 @@ window.valueDataTwo = valueDataTwo;
 
 
 /*Export*/
-export {clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
+export {dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
 /*Export*/

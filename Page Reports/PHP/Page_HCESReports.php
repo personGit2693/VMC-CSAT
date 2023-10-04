@@ -420,7 +420,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 
 				<!--Data two table-->
-				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">				
+				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">
+				<!--Component				
 					<button class="normButton_RoClass" onclick="controllerDataOneTable(this)">Download as Excel File</button>
 					<table>
 						<thead>
@@ -532,7 +533,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<td>1</td>
 							</tr>
 						</tbody>
-					</table>
+					</table>-->
 				</div>
 				<!--Data two table-->
 			</div> 
@@ -568,12 +569,14 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
 		<script type="module" src="../JS/Gateway_DataOne.js"></script>
 		<script type="module" src="../JS/Gateway_CcDataTwo.js"></script>
+		<script type="module" src="../JS/Gateway_QuestionsDataTwo.js"></script>
 		<!--_Gateway-->	
 		
 		<!--_Submit holder-->		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_CcDataTwo.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsDataTwo.js"></script>
 		<!--_Submit holder-->
 		
 		<!--_Executor-->	

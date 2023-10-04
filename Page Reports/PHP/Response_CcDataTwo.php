@@ -73,7 +73,10 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			ON clientresponses_tab.clientresponse_reference = ccresponses_tab.clientresponse_reference 
 			INNER JOIN ccquestionsrates_tab 
 			ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
-			WHERE clientresponses_tab.clienttype_id = 2
+			INNER JOIN officestag_tab 
+			ON clientresponses_tab.office_id = officestag_tab.office_id 
+			WHERE clientresponses_tab.clienttype_id = 2 
+			AND officestag_tab.form_id = 12 
 			AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 		
 		";
 
@@ -81,7 +84,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			$getCcDataTwo_Query .= " AND clientresponses_tab.office_id = :officeId";
 		}
 
-		$getCcDataTwo_Query .= " ORDER BY clientresponses_tab.clientresponse_date DESC;"; 							
+		$getCcDataTwo_Query .= " ORDER BY clientresponses_tab.clientresponse_date DESC"; 							
 		/*_Prep query*/
 
 		/*_Execute query*/

@@ -14,13 +14,13 @@ var ccDataTwo_Array = [];
 /*Export variables*/
 
 
-/*Get Data Two Report*/
+/*Get CC Data Two Report*/
 function requestCcDataTwo(officeId, dateFrom, dateTo){
 	
-	httpRequest.onreadystatechange = function(){
-		if(this.status == 200 && this.readyState == 4){
+	httpRequest.onload = function(){
+		if(httpRequest.status == 200){
 			try{
-				httpResponse = JSON.parse(this.responseText);
+				httpResponse = JSON.parse(httpRequest.responseText);
 
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
@@ -34,8 +34,10 @@ function requestCcDataTwo(officeId, dateFrom, dateTo){
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting CC Data Two!");
 				alert(httpRequest_Error);
-				alert(this.responseText);
+				alert(httpRequest.responseText);
 			}			
+		}else if(httpRequest.status != 200){
+			alert(httpRequest.statusText);
 		}
 	}
 
@@ -44,11 +46,11 @@ function requestCcDataTwo(officeId, dateFrom, dateTo){
 	"&dateFrom="+dateFrom+
 	"&dateTo="+dateTo;
 
-	httpRequest.open("POST", "Response_CcDataTwo.php", true);
+	httpRequest.open("POST", "Response_CcDataTwo.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);
 };
-/*Get Data Two Report*/
+/*Get CC Data Two Report*/
 
 
 /*Export*/

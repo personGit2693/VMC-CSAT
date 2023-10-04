@@ -1,7 +1,5 @@
 /*Import*/
-import renderOfficeRadioBtn from "./View_OfficeRadioBtn.js";
 import token from "../../Global JS/Token.js";
-import {respondentId, buildingId, floorId} from "../../Global JS/Values_Page_RateService.js";
 /*Import*/
 
 
@@ -12,13 +10,13 @@ var httpResponse = null;
 
 
 /*Export variables*/
-var officeDetails_Array = [];
+var questionsDataTwo_Array = [];
 /*Export variables*/
 
 
-/*Get office details*/
-function requestOffices(){
-
+/*Get Questions Data Two Report*/
+function requestQuestionsDataTwo(officeId, dateFrom, dateTo){
+	
 	httpRequest.onload = function(){
 		if(httpRequest.status == 200){
 			try{
@@ -29,14 +27,14 @@ function requestOffices(){
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting floors has execution problem");
-				}else if(httpResponse.serverConnection === null && httpResponse.execution === true && httpResponse.globalTokenResult === null){
-					officeDetails_Array = httpResponse.officeDetails_Array;
-					renderOfficeRadioBtn();						
+					alert("Getting Questions Data Two execution problem!");				
+				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
+					questionsDataTwo_Array = httpResponse.questionsDataTwo_Array;													
 				}
 			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Offices");
+				alert("Response is not an object on getting Questions Data Two!");
 				alert(httpRequest_Error);
+				alert(httpRequest.responseText);
 			}			
 		}else if(httpRequest.status != 200){
 			alert(httpRequest.statusText);
@@ -44,17 +42,17 @@ function requestOffices(){
 	}
 
 	const queryString = "token="+token+
-	"&respondentId="+respondentId+
-	"&buildingId="+buildingId+
-	"&floorId="+floorId;
-	
-	httpRequest.open("POST", "../PHP/Response_Offices.php", false);
+	"&officeId="+officeId+	
+	"&dateFrom="+dateFrom+
+	"&dateTo="+dateTo;
+
+	httpRequest.open("POST", "Response_QuestionsDataTwo.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString); 	
-}
-/*Get office details*/
+	httpRequest.send(queryString);
+};
+/*Get Questions Data Two Report*/
 
 
 /*Export*/
-export {requestOffices ,officeDetails_Array};
+export {requestQuestionsDataTwo, questionsDataTwo_Array};
 /*Export*/
