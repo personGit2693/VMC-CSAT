@@ -29,6 +29,7 @@ submitRequestDataOne();
 /*Get data one*/
 
 
-/*Get CC Data Two*/
+/*Get Data Two*/
 submitRequestCcDataTwo();
-/*Get CC Data Two*/
+valueDataTwo();
+/*Get Data Two*/

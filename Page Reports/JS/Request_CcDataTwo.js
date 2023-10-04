@@ -15,7 +15,7 @@ var ccDataTwo_Array = [];
 
 
 /*Get Data Two Report*/
-function requestCcDataTwo(officeId, dateFrom, dateTo, functions_Array){
+function requestCcDataTwo(officeId, dateFrom, dateTo){
 	
 	httpRequest.onreadystatechange = function(){
 		if(this.status == 200 && this.readyState == 4){
@@ -29,14 +29,7 @@ function requestCcDataTwo(officeId, dateFrom, dateTo, functions_Array){
 				}else if(httpResponse.execution !== true){
 					alert("Getting CC Data Two execution problem!");				
 				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
-					ccDataTwo_Array = httpResponse.ccDataTwo_Array;
-
-					/*Invoke all functions in functions_Array*/
-					for(let index=0; index < functions_Array.length; index++){
-						const perFunction = functions_Array[index];
-						perFunction();
-					}
-					/*Invoke all functions in functions_Array*/													
+					ccDataTwo_Array = httpResponse.ccDataTwo_Array;													
 				}
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting CC Data Two!");

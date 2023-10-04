@@ -267,7 +267,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<!--_ _ _Date Range Calendar Lite Wrap-->
 							<div class="dateRangeCalLiteWrap_RoClass">
 								<!--_ _ _ _Date Range Calendar Lite To-->						
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageReports-Class" id="dateRangeOneCalLiteFrom">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageHCESReports-Class" id="dateRangeOneCalLiteFrom">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteFromVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -320,7 +320,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<!--_ _ _ _Date Range Calendar Lite To-->
 
 								<!--_ _ _ _Date Range Calendar Lite To-->
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageReports-Class" id="dateRangeOneCalLiteTo">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageHCESReports-Class" id="dateRangeOneCalLiteTo">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteToVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
