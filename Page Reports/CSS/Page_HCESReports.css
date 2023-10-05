@@ -4294,12 +4294,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Mobile*/
 @media all and (max-width: 641px) {
   #dataOneTableWrap {
+    overflow: auto;
     display: block;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataOneTableWrap table {
-    width: 100%;
+    width: auto;
     table-layout: fixed;
     font-family: calibri;
     font-size: 14px;
@@ -4308,6 +4310,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataOneTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataOneTableWrap table tr {
     border: 1px solid black; }
@@ -4324,12 +4330,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
   #dataOneTableWrap {
+    overflow: auto;
     display: block;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataOneTableWrap table {
-    width: 100%;
+    width: auto;
     table-layout: fixed;
     font-family: calibri;
     font-size: 14px;
@@ -4338,6 +4346,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataOneTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataOneTableWrap table tr {
     border: 1px solid black; }
@@ -4354,12 +4366,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
   #dataOneTableWrap {
+    overflow: auto;
     display: block;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataOneTableWrap table {
-    width: 100%;
+    width: auto;
     table-layout: fixed;
     font-family: calibri;
     font-size: 16px;
@@ -4368,6 +4382,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataOneTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataOneTableWrap table tr {
     border: 1px solid black; }
@@ -4384,12 +4402,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Desktop*/
 @media all and (min-width: 1601px) {
   #dataOneTableWrap {
+    overflow: auto;
     display: block;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataOneTableWrap table {
-    width: 100%;
+    width: auto;
     table-layout: fixed;
     font-family: calibri;
     font-size: 18px;
@@ -4398,6 +4418,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataOneTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataOneTableWrap table tr {
     border: 1px solid black; }
@@ -4420,8 +4444,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #dataTwoTableWrap {
     display: none;
     overflow: auto;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataTwoTableWrap table {
     width: auto;
@@ -4433,6 +4458,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataTwoTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataTwoTableWrap table th {
     padding: 5px; }
@@ -4456,8 +4485,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #dataTwoTableWrap {
     display: none;
     overflow: auto;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataTwoTableWrap table {
     width: auto;
@@ -4469,6 +4499,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataTwoTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataTwoTableWrap table th {
     padding: 5px; }
@@ -4492,8 +4526,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #dataTwoTableWrap {
     display: none;
     overflow: auto;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataTwoTableWrap table {
     width: auto;
@@ -4505,6 +4540,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataTwoTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataTwoTableWrap table th {
     padding: 5px; }
@@ -4528,8 +4567,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #dataTwoTableWrap {
     display: none;
     overflow: auto;
-    padding: 5px;
-    background-color: #ffffff; }
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px; }
 
   #dataTwoTableWrap table {
     width: auto;
@@ -4541,6 +4581,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
+
+  #dataTwoTableWrap table thead {
+    position: sticky;
+    top: 0; }
 
   #dataTwoTableWrap table th {
     padding: 5px; }

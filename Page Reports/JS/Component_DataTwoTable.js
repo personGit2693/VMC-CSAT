@@ -13,7 +13,7 @@ function DataTwoTable(){
 			`<table>`+
 				`<thead>`+
 					`<tr>`+
-						`<th>Control No.</th>`+
+						`<th style="background-color: #ffffff;">Control No.</th>`+
 						`<th class="ccHeader-Class">CC1</th>`+
 						`<th class="ccHeader-Class">CC2</th>`+
 						`<th class="ccHeader-Class">CC3</th>`+
@@ -45,58 +45,73 @@ function DataTwoTable(){
 						`<th class="q13q28Header-Class">Q26 SQD7</th>`+
 						`<th class="q13q28Header-Class">Q27 SQD6</th>`+
 						`<th class="q13q28Header-Class">Q28 SQD0</th>`+
-						`<th>AVE SQD7</th>`+
+						`<th style="background-color: #ffffff;">AVE SQD7</th>`+
 					`</tr>`+
 				`</thead>`+
 				`<tbody>`;
-	}
-	
-	for(let index=0; index < 35; index++){		
 
-		const controlNo = index + 1;
+		for(let index=0; index < dataTwo_Array.length; index++){		
+			/*
+			if(index == 767){
+				alert(JSON.stringify(dataTwo_Array[index]));
+			}
+			*/
+			const controlNo = index + 1;
 
-		const averageSQD7 = dataTwo_Array[index][2][12].score + dataTwo_Array[index][2][13].score + dataTwo_Array[index][2][14].score + dataTwo_Array[index][2][15].score + dataTwo_Array[index][2][16].score + dataTwo_Array[index][2][17].score + dataTwo_Array[index][2][18].score + dataTwo_Array[index][2][19].score + dataTwo_Array[index][2][20].score + dataTwo_Array[index][2][21].score + dataTwo_Array[index][2][22].score + dataTwo_Array[index][2][23].score + dataTwo_Array[index][2][24].score + dataTwo_Array[index][2][25].score / 14;
-		
-		dataTwoTable += `<tr>`+
-			`<td>`+controlNo+`</td>`+
-			`<td>`+dataTwo_Array[index][1][0].ccClientRate+`</td>`+
-			`<td>`+dataTwo_Array[index][1][1].ccClientRate+`</td>`+
-			`<td>`+dataTwo_Array[index][1][2].ccClientRate+`</td>`+
-			`<td>`+dataTwo_Array[index][2][0].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][1].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][2].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][3].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][4].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][5].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][6].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][7].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][8].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][9].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][10].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][11].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][12].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][13].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][14].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][15].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][16].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][17].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][18].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][19].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][20].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][21].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][22].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][23].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][24].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][25].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][26].score+`</td>`+
-			`<td>`+dataTwo_Array[index][2][27].score+`</td>`+
-			`<td>`+averageSQD7.toFixed(2)+`</td>`+
-		`</tr>`;
-	}
+			let sumSQD7Score = 0;
+			let sqd7Denominator = 0;
 
-	if(dataTwo_Array.length > 0){
+			for(let indexOne=12; indexOne <=25 ; indexOne++){
+				sumSQD7Score += dataTwo_Array[index][2][indexOne].score;
+
+				if(dataTwo_Array[index][2][indexOne].score != 0){
+					sqd7Denominator++;
+				}
+
+			}
+
+			const averageSQD7 = sumSQD7Score / sqd7Denominator;
+			
+			dataTwoTable += `<tr>`+
+				`<td>`+controlNo+`</td>`+
+				`<td>`+dataTwo_Array[index][1][0].ccClientRate+`</td>`+
+				`<td>`+dataTwo_Array[index][1][1].ccClientRate+`</td>`+
+				`<td>`+dataTwo_Array[index][1][2].ccClientRate+`</td>`+
+				`<td>`+dataTwo_Array[index][2][0].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][1].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][2].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][3].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][4].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][5].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][6].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][7].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][8].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][9].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][10].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][11].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][12].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][13].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][14].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][15].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][16].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][17].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][18].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][19].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][20].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][21].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][22].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][23].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][24].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][25].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][26].score+`</td>`+
+				`<td>`+dataTwo_Array[index][2][27].score+`</td>`+
+				`<td>`+averageSQD7.toFixed(2)+`</td>`+
+			`</tr>`;
+		}
+
 		dataTwoTable += `</tbody></table>`;
 	}
+	
 
 	if(dataTwoTable == ""){
 		dataTwoTable = "No Result";

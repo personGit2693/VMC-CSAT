@@ -1,5 +1,6 @@
 /*Import*/
 import {selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Page_Reports.js";
+import {dataOne_Array} from "../Page Reports/JS/Request_DataOne.js";
 import {ccDataTwo_Array} from "../Page Reports/JS/Request_CcDataTwo.js";
 import {questionsDataTwo_Array} from "../Page Reports/JS/Request_QuestionsDataTwo.js";
 import renderDataTwoTable from "../Page Reports/JS/View_DataTwoTable.js";
@@ -7,9 +8,7 @@ import renderDataTwoTable from "../Page Reports/JS/View_DataTwoTable.js";
 
 
 /*Prep variables*/
-let respondentRateDetails_Array = [];
-let respondentCcRateDetails_Array = [];
-let respondentQuestionRateDetails_Array = [];
+
 /*Prep variables*/
 
 
@@ -28,10 +27,56 @@ var dataTwo_Array = [];
 /*_Assign value for dataTwo_Array*/
 function valueDataTwo(){
 
-	/*Reset value*/	
+	/*Reset value*/
+	let respondentReferenceNo_Array = [];	
 	dataTwo_Array = [];
 	/*Reset value*/
+
+	/*Collect respondent reference number*/
+	for(let index=0; index<dataOne_Array.length; index++){
+		if(respondentReferenceNo_Array.includes(dataOne_Array[index].clientresponse_reference) == false){
+			respondentReferenceNo_Array.push(dataOne_Array[index].clientresponse_reference);
+		}
+	}
+	/*Collect respondent reference number*/
+
+	/*dataTwo_Array arrangement*/
+	for(let index=0; index<respondentReferenceNo_Array.length; index++){
+		let respondentRateDetails_Array = [];
+		let respondentCcRateDetails_Array = [];
+		let respondentQuestionRateDetails_Array = [];
+
+		/*_Setting up the respondentCcRateDetails_Array or Respondent CC Data Two*/		
+		for(let indexOne=0; indexOne<ccDataTwo_Array.length; indexOne++){
+			if(respondentReferenceNo_Array[index] == ccDataTwo_Array[indexOne].clientresponse_reference){
+				const respondentCcRateDetails_Obj = {ccNo: ccDataTwo_Array[indexOne].ccquestion_id, ccClientRate: ccDataTwo_Array[indexOne].ccquestionsrate_rate};
+				respondentCcRateDetails_Array.push(respondentCcRateDetails_Obj);
+			}
+		}
+		/*_Setting up the respondentCcRateDetails_Array or Respondent CC Data Two*/
+
+		/*_Setting up the respondentQuestionRateDetails_Array or Respondent Questions Data Two*/
+		for(let indexOne=0; indexOne<questionsDataTwo_Array.length; indexOne++){
+			if(respondentReferenceNo_Array[index] == questionsDataTwo_Array[indexOne].clientresponse_reference){
+				const respondentQuestionRateDetails_Obj = {questionNo: questionsDataTwo_Array[indexOne].question_number, score: questionsDataTwo_Array[indexOne].score_value};
+				respondentQuestionRateDetails_Array.push(respondentQuestionRateDetails_Obj);
+			}
+		}
+		/*_Setting up the respondentQuestionRateDetails_Array or Respondent Questions Data Two*/
+
+		/*_Inserting into dataTwo_Array as value*/
+		respondentRateDetails_Array.push(respondentReferenceNo_Array[index]);
+		respondentRateDetails_Array.push(respondentCcRateDetails_Array);
+		respondentRateDetails_Array.push(respondentQuestionRateDetails_Array);
+		dataTwo_Array.push(respondentRateDetails_Array);
+		/*_Inserting into dataTwo_Array as value*/
+	}
+	/*dataTwo_Array arrangement*/
+
+	console.log(JSON.stringify(dataTwo_Array));
+	renderDataTwoTable();
 	
+	/*
 	let currentRefNo = "";
 	for(let index=0; index < ccDataTwo_Array.length; index++){
 		if(currentRefNo != ccDataTwo_Array[index].clientresponse_reference){						
@@ -69,6 +114,7 @@ function valueDataTwo(){
 
 	console.log(JSON.stringify(dataTwo_Array));
 	renderDataTwoTable();
+	*/
 }
 /*_Assign value for dataTwo_Array*/
 

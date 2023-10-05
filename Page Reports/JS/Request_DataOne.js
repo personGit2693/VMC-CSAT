@@ -17,10 +17,10 @@ var dataOne_Array = [];
 /*Get Data One Report*/
 function requestDataOne(officeId, dateFrom, dateTo, functions_Array){
 	
-	httpRequest.onreadystatechange = function(){
-		if(this.status == 200 && this.readyState == 4){
+	httpRequest.onload = function(){
+		if(httpRequest.status == 200){
 			try{
-				httpResponse = JSON.parse(this.responseText);
+				httpResponse = JSON.parse(httpRequest.responseText);
 
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
@@ -41,8 +41,10 @@ function requestDataOne(officeId, dateFrom, dateTo, functions_Array){
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting Data One Report!");
 				alert(httpRequest_Error);
-				alert(this.responseText);
+				alert(httpRequest.responseText);
 			}			
+		}else if(httpRequest.status != 200){
+			alert(httpRequest.statusText);
 		}
 	}
 
@@ -51,7 +53,7 @@ function requestDataOne(officeId, dateFrom, dateTo, functions_Array){
 	"&dateFrom="+dateFrom+
 	"&dateTo="+dateTo;
 
-	httpRequest.open("POST", "Response_DataOne.php", true);
+	httpRequest.open("POST", "Response_DataOne.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);
 };

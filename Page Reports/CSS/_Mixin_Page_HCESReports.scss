@@ -216,14 +216,16 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Data one table*/
 @mixin dataOneTableWrap_Style{
+	overflow: auto;
 	display: block;
-	padding: 5px;	
+	padding: 0px 5px;	
 	background-color: #ffffff;
+	max-height: 500px;
 }
 
 
 @mixin dataOneTable_MT_Style{
-	width: 100%;
+	width: auto;
 	table-layout: fixed;
 	font-family: calibri;
 	font-size: 14px; /*To be changed*/
@@ -233,7 +235,7 @@
 	margin:10px 0px;	
 }
 @mixin dataOneTable_Laptop_Style{
-	width: 100%;
+	width: auto;
 	table-layout: fixed;
 	font-family: calibri;
 	font-size: 16px; /*changed*/
@@ -243,7 +245,7 @@
 	margin: 10px 0px;
 }
 @mixin dataOneTable_Desktop_Style{
-	width: 100%;
+	width: auto;
 	table-layout: fixed;
 	font-family: calibri;
 	font-size: 18px; /*changed*/
@@ -251,6 +253,12 @@
 	border-collapse: collapse;
 	text-align: center;	
 	margin: 10px 0px;
+}
+
+
+@mixin dataOneTableThead_Style{
+	position: sticky;
+	top:0;
 }
 
 
@@ -280,8 +288,9 @@
 @mixin dataTwoTableWrap_Style{
 	display: none;
 	overflow: auto;
-	padding: 5px;	
+	padding: 0px 5px;	
 	background-color: #ffffff;
+	max-height: 500px;
 }
 
 
@@ -314,6 +323,12 @@
 	border-collapse: collapse;
 	text-align: center;	
 	margin: 10px 0px;
+}
+
+
+@mixin dataTwoTableThead_Style{
+	position: sticky;
+	top:0;
 }
 
 

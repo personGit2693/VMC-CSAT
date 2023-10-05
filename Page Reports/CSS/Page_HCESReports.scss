@@ -708,6 +708,10 @@
 		@include dataOneTable_MT_Style;
 	}
 
+	#dataOneTableWrap table thead{
+		@include dataOneTableThead_Style;
+	}
+
 	#dataOneTableWrap table tr{
 		@include dataOneTableTr_Style;
 	}
@@ -733,6 +737,10 @@
 
 	#dataOneTableWrap table{
 		@include dataOneTable_MT_Style;
+	}
+
+	#dataOneTableWrap table thead{
+		@include dataOneTableThead_Style;
 	}
 
 	#dataOneTableWrap table tr{
@@ -762,6 +770,10 @@
 		@include dataOneTable_Laptop_Style;
 	}
 
+	#dataOneTableWrap table thead{
+		@include dataOneTableThead_Style;
+	}
+
 	#dataOneTableWrap table tr{
 		@include dataOneTableTr_Style;
 	}
@@ -787,6 +799,10 @@
 
 	#dataOneTableWrap table{
 		@include dataOneTable_Desktop_Style;
+	}
+
+	#dataOneTableWrap table thead{
+		@include dataOneTableThead_Style;
 	}
 
 	#dataOneTableWrap table tr{
@@ -822,6 +838,10 @@
 		@include dataTwoTable_MT_Style;
 	}
 
+	#dataTwoTableWrap table thead{
+		@include dataTwoTableThead_Style;
+	}
+
 	#dataTwoTableWrap table th{
 		@include dataTwoTableTh_Style;
 	}
@@ -855,6 +875,10 @@
 
 	#dataTwoTableWrap table{
 		@include dataTwoTable_MT_Style;
+	}
+
+	#dataTwoTableWrap table thead{
+		@include dataTwoTableThead_Style;
 	}
 
 	#dataTwoTableWrap table th{
@@ -892,6 +916,10 @@
 		@include dataTwoTable_Laptop_Style;
 	}
 
+	#dataTwoTableWrap table thead{
+		@include dataTwoTableThead_Style;
+	}
+
 	#dataTwoTableWrap table th{
 		@include dataTwoTableTh_Style;
 	}
@@ -925,6 +953,10 @@
 
 	#dataTwoTableWrap table{
 		@include dataTwoTable_Laptop_Style;
+	}
+
+	#dataTwoTableWrap table thead{
+		@include dataTwoTableThead_Style;
 	}
 
 	#dataTwoTableWrap table th{
