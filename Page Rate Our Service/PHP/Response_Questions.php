@@ -71,7 +71,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeId"]) && isset($_POST["offi
 			questions_tab.questionsgroup_id AS 'questionsgroup_id',
 			questions_tab.question_active AS 'question_active', 
 			IfNull(questionsgroups_tab.questionsgroup_value, '') AS 'questionsgroup_value',
-			IfNull(questionsgroups_tab.questionsgroup_desc, '') AS 'questionsgroup_desc'
+			IfNull(questionsgroups_tab.questionsgroup_desc, '') AS 'questionsgroup_desc',
+			IfNull(questionshide_tab.question_id, 0) AS 'hide_question_id'
 			FROM offices_tab 
 			INNER JOIN officestag_tab 
 			ON offices_tab.office_id = officestag_tab.office_id
@@ -82,7 +83,9 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeId"]) && isset($_POST["offi
 			INNER JOIN questions_tab 
 			ON questionstag_tab.question_id = questions_tab.question_id 
 			LEFT JOIN questionsgroups_tab 
-			ON questions_tab.questionsgroup_id = questionsgroups_tab.questionsgroup_id
+			ON questions_tab.questionsgroup_id = questionsgroups_tab.questionsgroup_id 
+			LEFT JOIN questionshide_tab 
+			ON questions_tab.question_id = questionshide_tab.question_id AND offices_tab.office_id = questionshide_tab.office_id
 			WHERE offices_tab.office_id = :officeId 
 			AND forms_tab.clienttype_id = :clientTypeId 
 			AND NOT questions_tab.dimension_id = 10 

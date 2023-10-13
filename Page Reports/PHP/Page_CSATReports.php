@@ -64,10 +64,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>HCES Reports</title>
+		<title>CSAT Reports</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link rel="stylesheet" type="text/css" href="../CSS/Page_HCESReports.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Page_CSATReports.css">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">
 	</head>
 	<body>
@@ -90,8 +90,14 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Setup Questions</span>
+					</a>
+
+					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
+						<span class="generalNavMenuText_RoClass">Reports</span>
 					</a>					
 					
+					<!--
 					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
@@ -102,7 +108,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<span class="generalNavMenuText_RoClass">HCES Reports</span>
 						</a>
 
-						<!--
+						
 						<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 							<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Analysis</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
@@ -128,9 +134,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
 								<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
 							</a>
-						</div>
-						-->
-					</div>					
+						</div>						
+					</div>	
+					-->				
 				<?php
 				}
 				?>	
@@ -559,6 +565,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
 		<!--_Value holder-->
 
+		<!--_Renderer-->
+		<script type="module" src="../JS/Renderer_DataTwoTable.js"></script>
+		<!--_Renderer-->
+
 		<!--_Controller-->		
 		<script type="module" src="../JS/Controller_ReportsTopNavigation.js"></script>
 		<script type="text/javascript" src="../JS/Controller_PointOfEntryOption.js"></script>
@@ -580,7 +590,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Submit holder-->
 		
 		<!--_Executor-->	
-		<script type="module" src="../JS/Executor_Page_HCESReports.js"></script>
+		<script type="module" src="../JS/Executor_Page_CSATReports.js"></script>
 		<!--_Executor-->
 		<!--Javascripts-->		
 	</body>

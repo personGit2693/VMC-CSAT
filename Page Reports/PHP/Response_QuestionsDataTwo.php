@@ -79,7 +79,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			ON clientresponses_tab.office_id = officestag_tab.office_id
 			WHERE clientresponses_tab.clienttype_id = 2 
 			AND officestag_tab.form_id = 12 
-			AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)			 	
+			AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)	
+			AND questions_tab.question_active = 1 
 		";
 
 		if($officeId != 0){

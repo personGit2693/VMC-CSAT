@@ -256,7 +256,7 @@ function valuePopRespondentRatings(){
 
 		submittedRate.respondentRatings.push(preQuestionValue_Obj);
 
-		if(questionGroups.includes(value.questionsgroup_id) == false){
+		if(questionGroups.includes(value.questionsgroup_id) == false && value.hide_question_id == 0){
 			questionGroups.push(value.questionsgroup_id);
 		}		
 	});

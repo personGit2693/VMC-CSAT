@@ -16,6 +16,10 @@ function QuestionScoreRadioBtn(){
 
 	let questionScoreRadioBtn = "";
 	for(let index=0; index < questionDetails_Array.length; index++){
+		if(questionDetails_Array[index].hide_question_id != 0){
+			continue;
+		}
+		
 		const questionResponseRate_Obj = {};
 		questionResponseRate_Obj.questionId = questionDetails_Array[index].question_id;
 		questionResponseRate_Obj.questionGroupId = questionDetails_Array[index].questionsgroup_id;

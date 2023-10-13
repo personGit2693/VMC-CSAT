@@ -10,6 +10,7 @@ function controllerPointOfEntryOption(selectedPointOfEntryOpt, selectDropdownHei
 	submitRequestCcDataTwo();
 	submitRequestQuestionsDataTwo();
 	valueDataTwo();
+	outputDataTwoTable();
 
 	removeSpinningLoad();
 }

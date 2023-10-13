@@ -74,47 +74,6 @@ function valueDataTwo(){
 	/*dataTwo_Array arrangement*/
 
 	console.log(JSON.stringify(dataTwo_Array));
-	renderDataTwoTable();
-	
-	/*
-	let currentRefNo = "";
-	for(let index=0; index < ccDataTwo_Array.length; index++){
-		if(currentRefNo != ccDataTwo_Array[index].clientresponse_reference){						
-
-			if(respondentRateDetails_Array.length != 0){
-				respondentQuestionRateDetails_Array = [];
-
-				for(let indexOne=0; indexOne < questionsDataTwo_Array.length; indexOne++){
-					if(currentRefNo == questionsDataTwo_Array[indexOne].clientresponse_reference){						
-						let respondentQuestionRateDetails_Obj = {questionNo: questionsDataTwo_Array[indexOne].question_number, score: questionsDataTwo_Array[indexOne].score_value};			 
-						respondentQuestionRateDetails_Array.push(respondentQuestionRateDetails_Obj); 
-					}
-				}
-
-				respondentRateDetails_Array.push(respondentCcRateDetails_Array);
-				respondentRateDetails_Array.push(respondentQuestionRateDetails_Array);
-
-				dataTwo_Array.push(respondentRateDetails_Array);				
-			}			
-
-			currentRefNo = ccDataTwo_Array[index].clientresponse_reference;
-
-			respondentRateDetails_Array = [];
-
-			respondentCcRateDetails_Array = [];
-			let respondentCcRateDetails_Obj = {ccNo: ccDataTwo_Array[index].ccquestion_id, ccClientRate: ccDataTwo_Array[index].ccquestionsrate_rate};			
-			respondentCcRateDetails_Array.push(respondentCcRateDetails_Obj);
-
-			respondentRateDetails_Array.push(currentRefNo);
-		}else if(currentRefNo == ccDataTwo_Array[index].clientresponse_reference){			
-			let respondentCcRateDetails_Obj = {ccNo: ccDataTwo_Array[index].ccquestion_id, ccClientRate: ccDataTwo_Array[index].ccquestionsrate_rate};			
-			respondentCcRateDetails_Array.push(respondentCcRateDetails_Obj);			
-		}
-	}
-
-	console.log(JSON.stringify(dataTwo_Array));
-	renderDataTwoTable();
-	*/
 }
 /*_Assign value for dataTwo_Array*/
 
