@@ -270,6 +270,8 @@
 @mixin dataOneTableTh_Style{
 	background-color: #20124D;
 	color: #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
 }
 
 @mixin dataOneTableTd_Style{

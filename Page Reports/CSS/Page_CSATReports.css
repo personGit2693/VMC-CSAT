@@ -4320,7 +4320,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   #dataOneTableWrap table th {
     background-color: #20124D;
-    color: #ffffff; }
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff; }
 
   #dataOneTableWrap table td {
     color: #535F80; } }
@@ -4356,7 +4358,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   #dataOneTableWrap table th {
     background-color: #20124D;
-    color: #ffffff; }
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff; }
 
   #dataOneTableWrap table td {
     color: #535F80; } }
@@ -4392,7 +4396,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   #dataOneTableWrap table th {
     background-color: #20124D;
-    color: #ffffff; }
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff; }
 
   #dataOneTableWrap table td {
     color: #535F80; } }
@@ -4428,7 +4434,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   #dataOneTableWrap table th {
     background-color: #20124D;
-    color: #ffffff; }
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff; }
 
   #dataOneTableWrap table td {
     color: #535F80; } }

@@ -237,7 +237,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
 						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry()" autocomplete="off">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controllerPointOfEntrySearch()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -567,10 +567,12 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 		<!--_Renderer-->
 		<script type="module" src="../JS/Renderer_DataTwoTable.js"></script>
+		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->		
 		<script type="module" src="../JS/Controller_ReportsTopNavigation.js"></script>
+		<script type="text/javascript" src="../JS/Controller_PointOfEntrySearch.js"></script>
 		<script type="text/javascript" src="../JS/Controller_PointOfEntryOption.js"></script>
 		<script type="text/javascript" src="../JS/Controller_DataOneTable.js"></script>	
 		<!--_Controller-->

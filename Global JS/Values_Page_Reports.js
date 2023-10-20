@@ -72,8 +72,6 @@ function valueDataTwo(){
 		/*_Inserting into dataTwo_Array as value*/
 	}
 	/*dataTwo_Array arrangement*/
-
-	console.log(JSON.stringify(dataTwo_Array));
 }
 /*_Assign value for dataTwo_Array*/
 

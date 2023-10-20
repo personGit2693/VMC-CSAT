@@ -21,6 +21,7 @@ valueDateRangeOne();
 
 /*Populate point of entry dropdown menu*/
 submitRequestPointOfEntry();
+outputPointOfEntryOption();
 /*Populate point of entry dropdown menu*/
 
 
@@ -33,4 +34,5 @@ submitRequestDataOne();
 submitRequestCcDataTwo();
 submitRequestQuestionsDataTwo();
 valueDataTwo();
+outputDataTwoTable();
 /*Get Data Two*/

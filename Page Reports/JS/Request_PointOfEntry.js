@@ -15,41 +15,45 @@ var pointOfEntry_Array = [];
 
 
 /*Get Point Of Entry*/
-function requestPointOfEntry(searchPointOfEntry, functions_Array){
+function requestPointOfEntry(searchPointOfEntry){
 	
-	httpRequest.onreadystatechange = function(){
-		if(this.status == 200 && this.readyState == 4){
+	httpRequest.onload = function(){
+		if(httpRequest.status == 200){
 			try{				
-				httpResponse = JSON.parse(this.responseText);
+				httpResponse = JSON.parse(httpRequest.responseText);
 
 				if(httpResponse.serverConnection !== null){
 					alert(httpResponse.serverConnection);
 				}else if(httpResponse.globalTokenResult !== null){
 					alert(httpResponse.globalTokenResult);
 				}else if(httpResponse.execution !== true){
-					alert("Getting Point Of Entry execution problem!");				
+					alert("Getting Point Of Entry execution problem!");
 				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
 					pointOfEntry_Array = httpResponse.pointOfEntry_Array;
 
-					/*Invoke all functions in functions_Array*/
+					/*Invoke all functions in functions_Array*/	
+					/*				
 					for(let index=0; index < functions_Array.length; index++){
 						const perFunction = functions_Array[index];
 						perFunction();
 					}
+					*/					
 					/*Invoke all functions in functions_Array*/
 				}
 			}catch(httpRequest_Error){
 				alert("Response is not an object on getting Point Of Entry!");
 				alert(httpRequest_Error);
-				alert(this.responseText);
+				alert(httpRequest.responseText);
 			}			
+		}else if(httpRequest.status != 200){
+			alert(httpRequest.statusText);
 		}
 	}
 
 	const queryString = "token="+token+
 	"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry);
 
-	httpRequest.open("POST", "Response_PointOfEntry.php", true);
+	httpRequest.open("POST", "Response_PointOfEntry.php", false);
 	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	httpRequest.send(queryString);
 };
