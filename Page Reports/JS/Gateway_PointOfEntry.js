@@ -7,8 +7,19 @@ import {requestPointOfEntry} from "./Request_PointOfEntry.js";
 /*Gateway*/
 /*const functions_Array = [outputPointOfEntryOption];*/
 
-const gatewayPointOfEntry = () =>{
-	requestPointOfEntry(searchPointOfEntry.value);
+async function gatewayPointOfEntry(){
+
+	const gatewayPromise = new Promise(function(resolve){		
+
+		requestPointOfEntry(searchPointOfEntry.value)
+		.then((requestPromise) =>{
+			if(requestPromise === true){
+				resolve(true);
+			}
+		});
+	});
+
+	return await gatewayPromise;
 }
 /*Gateway*/
 

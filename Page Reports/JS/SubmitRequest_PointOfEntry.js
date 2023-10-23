@@ -1,3 +1,8 @@
 function submitRequestPointOfEntry(){
-	gatewayPointOfEntry();
+	gatewayPointOfEntry()
+	.then((gatewayPromise) =>{
+		if(gatewayPromise === true){
+			outputPointOfEntryOption();
+		}
+	});
 }

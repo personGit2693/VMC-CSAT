@@ -13,4 +13,16 @@ Guide Flows
 	*Submit Validation->Validator
 
 
-Connections
+
+Version 2
+
+1. For front-end
+	1.1 Component (Create the element)
+	1.2 View (Select a parent where the component will be created inside of it)
+	1.3 Renderer (Output the component to the page)
+	1.4 Controller (An event listener composed by various functions which will be invoked if the component has event)
+
+2. For back-end
+	2.1 SubmitRequest (An event listener to trigger the Gateway)
+	2.2 Gateway (A function to communicate to Request and trigger it)
+	2.3 Request (A function to communcate to the server and the response receiver)

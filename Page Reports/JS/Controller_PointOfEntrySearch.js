@@ -1,6 +1,6 @@
 /*When searching for point of entry*/
 function controllerPointOfEntrySearch(){
 	submitRequestPointOfEntry();
-	outputPointOfEntryOption();	
+	//outputPointOfEntryOption();	
 }
 /*When searching for point of entry*/

@@ -21,7 +21,7 @@ valueDateRangeOne();
 
 /*Populate point of entry dropdown menu*/
 submitRequestPointOfEntry();
-outputPointOfEntryOption();
+//outputPointOfEntryOption();
 /*Populate point of entry dropdown menu*/
 
 
