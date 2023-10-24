@@ -17,7 +17,7 @@ var pointOfEntry_Array = [];
 /*Get Point Of Entry*/
 async function requestPointOfEntry(searchPointOfEntry){
 	
-	const thisPromise = new Promise(function(resolve){	
+	const requestPromise = new Promise(function(resolve){	
 
 		httpRequest.onload = function(){
 			if(httpRequest.status == 200){
@@ -52,7 +52,7 @@ async function requestPointOfEntry(searchPointOfEntry){
 		httpRequest.send(queryString);
 	});
 
-	return await thisPromise;
+	return await requestPromise;
 };
 /*Get Point Of Entry*/
 
