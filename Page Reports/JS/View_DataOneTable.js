@@ -5,7 +5,7 @@ import DataOneTable from "./Component_DataOneTable.js";
 
 
 /*Render*/
-function renderDataOneTable(){
+function renderDataOneTable(){	
 	dataOneTableWrap.innerHTML = DataOneTable();
 }
 /*Render*/

@@ -1,3 +1,8 @@
 function submitRequestCcDataTwo(){
-	gatewayCcDataTwo();
+	gatewayCcDataTwo()
+	.then((gatewayPromise) => {
+		if(gatewayPromise === true){
+			submitRequestQuestionsDataTwo(outputDataTwoTable);
+		}		
+	});
 }

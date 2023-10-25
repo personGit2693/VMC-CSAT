@@ -1,8 +1,8 @@
-function submitRequestPointOfEntry(){
+function submitRequestPointOfEntry(renderer_Param){
 	gatewayPointOfEntry()
 	.then((gatewayPromise) =>{
 		if(gatewayPromise === true){
-			outputPointOfEntryOption();
+			renderer_Param();
 		}
 	});
 }

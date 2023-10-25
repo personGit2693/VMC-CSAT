@@ -5,12 +5,9 @@ function controllerPointOfEntryOption(selectedPointOfEntryOpt, selectDropdownHei
 	displaySelectedOpt(selectedPointOfEntryOpt, selectDropdownHeight);
 	valueSelectedOfficeObj();	
 
-	submitRequestDataOne();	
+	submitRequestDataOne(outputDataOneTable);	
 
 	submitRequestCcDataTwo();
-	submitRequestQuestionsDataTwo();
-	valueDataTwo();
-	outputDataTwoTable();
 
 	removeSpinningLoad();
 }

@@ -15,47 +15,46 @@ var dataOne_Array = [];
 
 
 /*Get Data One Report*/
-function requestDataOne(officeId, dateFrom, dateTo, functions_Array){
+async function requestDataOne(officeId, dateFrom, dateTo){
 	
-	httpRequest.onload = function(){
-		if(httpRequest.status == 200){
-			try{
-				httpResponse = JSON.parse(httpRequest.responseText);
+	const requestPromise = new Promise(function(resolve){
 
-				if(httpResponse.serverConnection !== null){
-					alert(httpResponse.serverConnection);
-				}else if(httpResponse.globalTokenResult !== null){
-					alert(httpResponse.globalTokenResult);
-				}else if(httpResponse.execution !== true){
-					alert("Getting Data One Report execution problem!");				
-				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
-					dataOne_Array = httpResponse.dataOne_Array;
+		httpRequest.onload = function(){
+			if(httpRequest.status == 200){
+				try{
+					httpResponse = JSON.parse(httpRequest.responseText);
 
-					/*Invoke all functions in functions_Array*/
-					for(let index=0; index < functions_Array.length; index++){
-						const perFunction = functions_Array[index];
-						perFunction();
+					if(httpResponse.serverConnection !== null){
+						alert(httpResponse.serverConnection);
+					}else if(httpResponse.globalTokenResult !== null){
+						alert(httpResponse.globalTokenResult);
+					}else if(httpResponse.execution !== true){
+						alert("Getting Data One Report execution problem!");				
+					}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
+						dataOne_Array = httpResponse.dataOne_Array;
+						resolve(true);
 					}
-					/*Invoke all functions in functions_Array*/													
-				}
-			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Data One Report!");
-				alert(httpRequest_Error);
-				alert(httpRequest.responseText);
-			}			
-		}else if(httpRequest.status != 200){
-			alert(httpRequest.statusText);
+				}catch(httpRequest_Error){
+					alert("Response is not an object on getting Data One Report!");
+					alert(httpRequest_Error);
+					alert(httpRequest.responseText);
+				}			
+			}else if(httpRequest.status != 200){
+				alert(httpRequest.statusText);
+			}
 		}
-	}
 
-	const queryString = "token="+token+
-	"&officeId="+officeId+	
-	"&dateFrom="+dateFrom+
-	"&dateTo="+dateTo;
+		const queryString = "token="+token+
+		"&officeId="+officeId+	
+		"&dateFrom="+dateFrom+
+		"&dateTo="+dateTo;  
 
-	httpRequest.open("POST", "Response_DataOne.php", false);
-	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString);
+		httpRequest.open("POST", "Response_DataOne.php", true);
+		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		httpRequest.send(queryString);
+	});
+
+	return await requestPromise;
 };
 /*Get Data One Report*/
 

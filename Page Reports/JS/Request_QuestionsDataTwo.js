@@ -15,40 +15,46 @@ var questionsDataTwo_Array = [];
 
 
 /*Get Questions Data Two Report*/
-function requestQuestionsDataTwo(officeId, dateFrom, dateTo){
+async function requestQuestionsDataTwo(officeId, dateFrom, dateTo){
 	
-	httpRequest.onload = function(){
-		if(httpRequest.status == 200){
-			try{
-				httpResponse = JSON.parse(httpRequest.responseText);
+	const requestPromise = new Promise(function(resolve){
 
-				if(httpResponse.serverConnection !== null){
-					alert(httpResponse.serverConnection);
-				}else if(httpResponse.globalTokenResult !== null){
-					alert(httpResponse.globalTokenResult);
-				}else if(httpResponse.execution !== true){
-					alert("Getting Questions Data Two execution problem!");				
-				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
-					questionsDataTwo_Array = httpResponse.questionsDataTwo_Array;													
-				}
-			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Questions Data Two!");
-				alert(httpRequest_Error);
-				alert(httpRequest.responseText);
-			}			
-		}else if(httpRequest.status != 200){
-			alert(httpRequest.statusText);
+		httpRequest.onload = function(){
+			if(httpRequest.status == 200){
+				try{
+					httpResponse = JSON.parse(httpRequest.responseText);
+
+					if(httpResponse.serverConnection !== null){
+						alert(httpResponse.serverConnection);
+					}else if(httpResponse.globalTokenResult !== null){
+						alert(httpResponse.globalTokenResult);
+					}else if(httpResponse.execution !== true){
+						alert("Getting Questions Data Two execution problem!");				
+					}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
+						questionsDataTwo_Array = httpResponse.questionsDataTwo_Array;
+						resolve(true);													
+					}
+				}catch(httpRequest_Error){
+					alert("Response is not an object on getting Questions Data Two!");
+					alert(httpRequest_Error);
+					alert(httpRequest.responseText);
+				}			
+			}else if(httpRequest.status != 200){
+				alert(httpRequest.statusText);
+			}
 		}
-	}
 
-	const queryString = "token="+token+
-	"&officeId="+officeId+	
-	"&dateFrom="+dateFrom+
-	"&dateTo="+dateTo;
+		const queryString = "token="+token+
+		"&officeId="+officeId+	
+		"&dateFrom="+dateFrom+
+		"&dateTo="+dateTo;
 
-	httpRequest.open("POST", "Response_QuestionsDataTwo.php", false);
-	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString);
+		httpRequest.open("POST", "Response_QuestionsDataTwo.php", true);
+		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		httpRequest.send(queryString);
+	});
+
+	return await requestPromise;
 };
 /*Get Questions Data Two Report*/
 

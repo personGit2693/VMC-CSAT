@@ -20,19 +20,15 @@ valueDateRangeOne();
 
 
 /*Populate point of entry dropdown menu*/
-submitRequestPointOfEntry();
-//outputPointOfEntryOption();
+submitRequestPointOfEntry(outputPointOfEntryOption);
 /*Populate point of entry dropdown menu*/
 
 
 /*Get data one*/
-submitRequestDataOne();
+submitRequestDataOne(outputDataOneTable);
 /*Get data one*/
 
 
 /*Get Data Two*/
 submitRequestCcDataTwo();
-submitRequestQuestionsDataTwo();
-valueDataTwo();
-outputDataTwoTable();
 /*Get Data Two*/

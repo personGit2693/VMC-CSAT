@@ -12,7 +12,7 @@ async function gatewayPointOfEntry(){
 	const gatewayPromise = new Promise(function(resolve){		
 
 		requestPointOfEntry(searchPointOfEntry.value)
-		.then((requestPromise) =>{
+		.then((requestPromise) => {
 			if(requestPromise === true){
 				resolve(true);
 			}

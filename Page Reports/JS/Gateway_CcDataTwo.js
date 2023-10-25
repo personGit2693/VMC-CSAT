@@ -6,8 +6,19 @@ import {requestCcDataTwo} from "./Request_CcDataTwo.js";
 
 
 /*Gateway*/
-const gatewayCcDataTwo = () =>{
-	requestCcDataTwo(selectedOffice_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value);
+async function gatewayCcDataTwo(){
+
+	const gatewayPromise = new Promise(function(resolve){
+
+		requestCcDataTwo(selectedOffice_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value)
+		.then((requestPromise) => {
+			if(requestPromise === true){
+				resolve(true);
+			}
+		});
+	});
+
+	return await gatewayPromise;
 }
 /*Gateway*/
 

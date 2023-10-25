@@ -566,6 +566,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Value holder-->
 
 		<!--_Renderer-->
+		<script type="module" src="../JS/Renderer_DataOneTable.js"></script>
 		<script type="module" src="../JS/Renderer_DataTwoTable.js"></script>
 		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
 		<!--_Renderer-->

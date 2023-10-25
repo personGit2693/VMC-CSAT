@@ -6,8 +6,19 @@ import {requestQuestionsDataTwo} from "./Request_QuestionsDataTwo.js";
 
 
 /*Gateway*/
-const gatewayQuestionsDataTwo = () =>{
-	requestQuestionsDataTwo(selectedOffice_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value);
+async function gatewayQuestionsDataTwo(){
+	
+	const gatewayPromise = new Promise(function(resolve){
+
+		requestQuestionsDataTwo(selectedOffice_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value)
+		.then((requestPromise) => {
+			if(requestPromise === true){
+				resolve(true);
+			}
+		});
+	});
+
+	return await gatewayPromise;
 }
 /*Gateway*/
 
