@@ -23,8 +23,8 @@ document.body.addEventListener("click", closeSelectDropdownOpts, true);
 /*Call required function for Select Dropdown Rogrid*/
 
 /*Render calendar lite in date range*/
-renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "dateRangeFrom");
-renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "dateRangeTo");
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "dateRangeOneCalLiteFrom");
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "dateRangeOneCalLiteTo");
 /*Render calendar lite in date range*/
 
 
@@ -32,7 +32,7 @@ renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rog
 valueCheckboxClientype();
 valueDateRangeOne();
 
-requestOverallEngagement();
+submitRequestOverallEngagement(renderOverallEngagementVal);
 requestTotalRespondent();
 
 requestQuestionsScores();

@@ -273,7 +273,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<!--_ _ _Date Range Calendar Lite Wrap-->
 							<div class="dateRangeCalLiteWrap_RoClass">
 								<!--_ _ _ _Date Range Calendar Lite To-->						
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageHCESReports-Class" id="dateRangeOneCalLiteFrom">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageCsatReports-Class" id="dateRangeOneCalLiteFrom">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteFromVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -326,7 +326,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<!--_ _ _ _Date Range Calendar Lite To-->
 
 								<!--_ _ _ _Date Range Calendar Lite To-->
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageHCESReports-Class" id="dateRangeOneCalLiteTo">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageCsatReports-Class" id="dateRangeOneCalLiteTo">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteToVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -585,12 +585,12 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Gateway_QuestionsDataTwo.js"></script>
 		<!--_Gateway-->	
 		
-		<!--_Submit holder-->		
+		<!--_Submit Request Holder-->		
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_CcDataTwo.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsDataTwo.js"></script>
-		<!--_Submit holder-->
+		<!--_Submit Request Holder-->
 		
 		<!--_Executor-->	
 		<script type="module" src="../JS/Executor_Page_CSATReports.js"></script>

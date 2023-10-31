@@ -7,7 +7,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["overallFromDate"]) && isset($_POST["overallToDate"])){
+if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -19,8 +19,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$clientTypeInternal = $_POST["clientTypeInternal"];
 	$clientTypeExternal = $_POST["clientTypeExternal"];
 	$officeId = $_POST["officeId"];
-	$overallFromDate = $_POST["overallFromDate"];
-	$overallToDate = $_POST["overallToDate"];
+	$dateFrom = $_POST["dateFrom"];
+	$dateTo = $_POST["dateTo"];
 	/*Query string*/
 
 
@@ -74,7 +74,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Valid global token*/
 	if($globalTokenResult === null){		
 		/*Count Overall Engagement*/
-		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($overallFromDate) && !empty($overallToDate))){		
+		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($dateFrom) && !empty($dateTo))){		
 			/*_Prep query*/
 			$countOverallEngagement_Query = "SELECT COUNT(questionresponses_tab.questionresponse_id) AS 'overallEngagement' 
 				FROM questionresponses_tab 
@@ -82,7 +82,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
 				WHERE clientresponses_tab.office_id = :officeId 
 				AND NOT questionresponses_tab.score_id = 6 
-				AND CONVERT(questionresponses_tab.questionresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				AND CONVERT(questionresponses_tab.questionresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal);
 			"; 							
 			/*_Prep query*/
@@ -92,8 +92,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			$countOverallEngagement_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$countOverallEngagement_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$countOverallEngagement_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
-			$countOverallEngagement_QueryObj->bindValue(':overallFromDate', $overallFromDate, PDO::PARAM_STR);
-			$countOverallEngagement_QueryObj->bindValue(':overallToDate', $overallToDate, PDO::PARAM_STR);
+			$countOverallEngagement_QueryObj->bindValue(':dateFrom', $dateFrom, PDO::PARAM_STR);
+			$countOverallEngagement_QueryObj->bindValue(':dateTo', $dateTo, PDO::PARAM_STR);
 			$execution = $countOverallEngagement_QueryObj->execute();
 			/*_Execute query*/
 
@@ -117,7 +117,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["overallFromDate"]) || !isset($_POST["overallToDate"]) || !isset($_POST["officeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"]) || !isset($_POST["officeId"])){
 	$countOverallEngagement_Resp = new stdClass();
 	$countOverallEngagement_Resp->execution = null;
 	$countOverallEngagement_Resp->globalTokenResult = null;

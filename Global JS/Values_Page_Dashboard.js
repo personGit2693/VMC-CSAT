@@ -1,5 +1,5 @@
 /*Import*/
-import {respondentVal, overallEngagementVal, selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, overallFromDate, overallToDate} from "../Page Office/JS/JSCollection_Page_Dashboard.js";
+import {selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./JSCollection_Page_Dashboard.js";
 import {overallServRate_Array} from "../Page Office/JS/Request_OverallServRate.js";
 import {overallStronglyAgree_Array} from "../Page Office/JS/Request_OverallStronglyAgree.js";
 import {overallAgree_Array} from "../Page Office/JS/Request_OverallAgree.js";
@@ -8,8 +8,6 @@ import {overallDisagree_Array} from "../Page Office/JS/Request_OverallDisagree.j
 import {overallStronglyDisagree_Array} from "../Page Office/JS/Request_OverallStronglyDisagree.js";
 import {availedOfficeService_Array} from "../Page Office/JS/Request_AvailedOfficeService.js";
 import {overallNoRating_Array} from "../Page Office/JS/Request_OverallNoRating.js";
-import {overallEngagement} from "../Page Office/JS/Request_OverallEngagement.js";
-import {totalRespondent} from "../Page Office/JS/Request_TotalRespondent.js";
 /*Import*/
 
 
@@ -80,20 +78,6 @@ var availedOfficeServiceData_Array = [
 /*Prep export variables*/
 
 
-/*Assign value respondentVal*/
-function valueRespondentVal(){
-	respondentVal.innerText = totalRespondent;
-}
-/*Assign value respondentVal*/
-
-
-/*Assign value overallEngagementVal*/
-function valueOverallEngagementVal(){
-	overallEngagementVal.innerText = overallEngagement;
-}
-/*Assign value overallEngagementVal*/
-
-
 /*Assign value for selectedOffice_Obj*/
 function valueSelectedOfficeObj(){
 	selectedOffice_Obj = JSON.parse(atob(selDropOfficeValue.value));
@@ -135,7 +119,7 @@ function valueCheckboxClientype(){
 /*Assign value for checkboxFilterInternal and checkboxFilterExternal*/
 
 
-/*Assign default value for overallFromDate and overallToDate (Filter Whole Month)*/
+/*Assign default value for dateRangeOneCalLiteFromVal and dateRangeOneCalLiteToVal (Filter Whole Month)*/
 function valueDateRangeOne(){
 	const todayDate = new Date();
 	let todayDateYear = todayDate.getFullYear();
@@ -157,14 +141,14 @@ function valueDateRangeOne(){
 		day = todayDateDay;
 	}
 
-	overallFromDate.value = todayDateYear+"-"+month+"-01";
+	dateRangeOneCalLiteFromVal.value = todayDateYear+"-"+month+"-01";
 
-	overallToDate.value = todayDateYear+"-"+month+"-"+new Date(todayDateYear, todayDateMonth, 0).getDate();
+	dateRangeOneCalLiteToVal.value = todayDateYear+"-"+month+"-"+new Date(todayDateYear, todayDateMonth, 0).getDate();
 
-	setDateRangeFromText(dateRangeOne, overallFromDate);
-	setDateRangeToText(dateRangeOne, overallToDate);
+	setDateRangeFromText(dateRangeOne, dateRangeOneCalLiteFromVal);
+	setDateRangeToText(dateRangeOne, dateRangeOneCalLiteToVal);
 }
-/*Assign default value for overallFromDate and overallToDate (Filter Whole Month)*/
+/*Assign default value for dateRangeOneCalLiteFromVal and dateRangeOneCalLiteToVal (Filter Whole Month)*/
 
 
 /*Assign value clientTypeInternal*/
@@ -310,5 +294,5 @@ window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 
 
 /*Export*/
-export {valueAvailedOfficeService, availedOfficeServiceData_Array, valueOverallEngagementVal, valueRespondentVal, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/
