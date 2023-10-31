@@ -496,11 +496,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Value holder-->
 
 		<!--_Renderer-->
-
+		<script type="module" src="../JS/Renderer_OverallEngagementVal.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->
-
+		
 		<!--_Controller-->
 
 		<!--_Gateway-->
