@@ -51,11 +51,13 @@ function DataTwoTable(){
 				`<tbody>`;
 
 		for(let index=0; index < dataTwo_Array.length; index++){		
-			/*
-			if(index == 767){
+			/*alert(dataTwo_Array.length);
+			
+			if(index == 86){
 				alert(JSON.stringify(dataTwo_Array[index]));
 			}
 			*/
+			
 			const controlNo = index + 1;
 
 			let sumSQD7Score = 0;
