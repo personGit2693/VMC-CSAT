@@ -391,7 +391,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 									<div class="respondentIcon-Class"></div>
 									<button class="normButton_RoClass genCodeBtn-Class" onclick="submitGenerateOfficeCode()">Generate code</button>
 								</div>
-								<div class="respondentVal-Class" id="respondentVal-Id">0</div>
+								<div class="respondentVal-Class" id="respondentVal-Id">Loading...</div>
 							</div>
 						</div>
 					</div>
@@ -497,6 +497,13 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 		<!--_Renderer-->
 		<script type="module" src="../JS/Renderer_OverallEngagementVal.js"></script>
+		<script type="module" src="../JS/Renderer_RespondentVal.js"></script>
+		<script type="module" src="../JS/Renderer_RatingSpan.js"></script>
+		<script type="module" src="../JS/Renderer_QuestionsTable.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterOneTable.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterTwoTable.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterThreeTable.js"></script>
+		<script type="module" src="../JS/Renderer_OverallServRatePieChart.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->

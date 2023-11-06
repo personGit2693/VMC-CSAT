@@ -4,7 +4,7 @@ import {overallServRateData_Array} from "../../Global JS/Values_Page_Dashboard.j
 
 
 /*Function for loading Overall Client Satisfaction Pie Chart*/
-function loadOverallServRatePieChart(){
+function outputOverallServRatePieChart(){
 
 	const pieChartOption_Obj = {
 		fontSize: 12,
@@ -51,6 +51,6 @@ function loadOverallServRatePieChart(){
 /*Function for loading Overall Client Satisfaction Pie Chart*/
 
 
-/*Export*/
-export default loadOverallServRatePieChart;
-/*Export*/
+/*Declare global*/
+window.outputOverallServRatePieChart = outputOverallServRatePieChart;
+/*Declare global*/

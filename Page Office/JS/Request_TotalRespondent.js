@@ -32,7 +32,7 @@ async function requestTotalRespondent(officeId, clientTypeInternal, clientTypeEx
 						alert(httpResponse.globalTokenResult);
 					}else if(httpResponse.execution === false){
 						alert("Counting total respondent has execution problem!");
-					}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && overallFromDate.value !== "" && overallToDate.value !== ""){
+					}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && dateFrom !== "" && dateTo !== ""){
 						alert("Counting total respondent has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						totalRespondent = httpResponse.totalRespondent;
@@ -50,11 +50,11 @@ async function requestTotalRespondent(officeId, clientTypeInternal, clientTypeEx
 
 
 		const queryString = "token="+token+
-		"&officeId="+selectedOffice_Obj.office_id+
+		"&officeId="+officeId+
 		"&clientTypeInternal="+clientTypeInternal+
 		"&clientTypeExternal="+clientTypeExternal+
-		"&overallFromDate="+overallFromDate.value+
-		"&overallToDate="+overallToDate.value;
+		"&dateFrom="+dateFrom+
+		"&dateTo="+dateTo;
 
 		httpRequest.open("POST", "Response_TotalRespondent.php", true);
 		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

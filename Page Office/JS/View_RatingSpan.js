@@ -1,5 +1,5 @@
 /*Import*/
-import {pointOfEntryRating} from "./JSCollection_Page_Dashboard.js";
+import {pointOfEntryRating} from "../../Global JS/JSCollection_Page_Dashboard.js";
 import RatingSpan from "./Component_RatingSpan.js";
 /*Import*/
 

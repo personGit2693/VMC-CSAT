@@ -1,7 +1,7 @@
 /*Import*/
-import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-import renderCitizenCharterTwoTable from "./View_CitizenCharterTwoTable.js";
+//import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
+//import renderCitizenCharterTwoTable from "./View_CitizenCharterTwoTable.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -18,46 +18,51 @@ var citizenCharterTwoScores_Array = [];
 
 
 /*Get Citizen Charter Two Scores*/
-function requestCitizenCharterTwoScores(){	
+async function requestCitizenCharterTwoScores(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){	
 
-	httpRequest.onload = function(){
-		if(httpRequest.status == 200){
-			try{				
-				httpResponse = JSON.parse(httpRequest.responseText);
-				
-				if(httpResponse.serverConnection !== null){
-					alert(httpResponse.serverConnection);
-				}else if(httpResponse.globalTokenResult !== null){
-					alert(httpResponse.globalTokenResult);
-				}else if(httpResponse.execution === false){
-					alert("Getting citizen charter two scores has execution problem!");
-				}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && overallFromDate.value !== "" && overallToDate.value !== ""){
-					alert("Getting citizen charter two scores has never been executed!");
-				}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){	
-					citizenCharterTwoScores_Array = httpResponse.citizenCharterTwoScores_Array;
-					renderCitizenCharterTwoTable();					
-				}
-			}catch(httpRequest_Error){
-				alert("Response is not an object on getting citizen charter two scores");
-				alert(httpRequest_Error);
-				alert(httpRequest.responseText);
-			}			
-		}else if(httpRequest.status != 200){
-			alert(httpRequest.statusText);
+	const requestPromise = new Promise(function(resolve){
+
+		httpRequest.onload = function(){
+			if(httpRequest.status == 200){
+				try{				
+					httpResponse = JSON.parse(httpRequest.responseText);
+					
+					if(httpResponse.serverConnection !== null){
+						alert(httpResponse.serverConnection);
+					}else if(httpResponse.globalTokenResult !== null){
+						alert(httpResponse.globalTokenResult);
+					}else if(httpResponse.execution === false){
+						alert("Getting citizen charter two scores has execution problem!");
+					}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && dateFrom !== "" && dateTo !== ""){
+						alert("Getting citizen charter two scores has never been executed!");
+					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){	
+						citizenCharterTwoScores_Array = httpResponse.citizenCharterTwoScores_Array;
+						resolve(true);					
+					}
+				}catch(httpRequest_Error){
+					alert("Response is not an object on getting citizen charter two scores");
+					alert(httpRequest_Error);
+					alert(httpRequest.responseText);
+				}			
+			}else if(httpRequest.status != 200){
+				alert(httpRequest.statusText+" on Request_CitizenCharterTwoScores.js");
+			}
 		}
-	}
 
 
-	const queryString = "token="+token+
-	"&officeId="+selectedOffice_Obj.office_id+
-	"&clientTypeInternal="+clientTypeInternal+
-	"&clientTypeExternal="+clientTypeExternal+
-	"&overallFromDate="+overallFromDate.value+
-	"&overallToDate="+overallToDate.value;
+		const queryString = "token="+token+
+		"&officeId="+officeId+
+		"&clientTypeInternal="+clientTypeInternal+
+		"&clientTypeExternal="+clientTypeExternal+
+		"&dateFrom="+dateFrom+
+		"&dateTo="+dateTo;
 
-	httpRequest.open("POST", "Response_CitizenCharterTwoScores.php", false);
-	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString);
+		httpRequest.open("POST", "Response_CitizenCharterTwoScores.php", true);
+		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		httpRequest.send(queryString);
+	});
+
+	return await requestPromise;
 };
 /*Get Citizen Charter Two Scores*/
 

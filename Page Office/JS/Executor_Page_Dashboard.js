@@ -32,15 +32,15 @@ renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rog
 valueCheckboxClientype();
 valueDateRangeOne();
 
-submitRequestOverallEngagement(renderOverallEngagementVal);
-requestTotalRespondent();
+submitRequestOverallEngagement(outputOverallEngagementVal);
+submitRequestTotalRespondent(outputRespondentVal);
 
-requestQuestionsScores();
-requestCitizenCharterOneScores();
-requestCitizenCharterTwoScores();
-requestCitizenCharterThreeScores();
+submitRequestQuestionsTable(outputQuestionsTable);
+submitRequestCitizenCharterOneScores(outputCitizenCharterOneTable);
+submitRequestCitizenCharterTwoScores(outputCitizenCharterTwoTable);
+submitRequestCitizenCharterThreeScores(outputCitizenCharterThreeTable);
 
-requestOverallServRate();
+submitRequestOverallServRate(outputOverallServRatePieChart);
 requestOverallStronglyAgree();
 requestOverallAgree();
 requestOverallNeither();

@@ -32,7 +32,7 @@ async function requestOverallEngagement(officeId, clientTypeInternal, clientType
 						alert(httpResponse.globalTokenResult);
 					}else if(httpResponse.execution === false){
 						alert("Counting overall engagement has execution problem!");
-					}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && dateRangeOneCalLiteFromVal.value !== "" && dateRangeOneCalLiteToVal.value !== ""){
+					}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && dateFrom !== "" && dateTo !== ""){
 						alert("Counting overall engagement has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallEngagement = httpResponse.overallEngagement;

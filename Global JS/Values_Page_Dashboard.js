@@ -290,6 +290,7 @@ function valueAvailedOfficeService(){
 window.valueClientTypeInternal = valueClientTypeInternal;
 window.valueClientTypeExternal = valueClientTypeExternal;
 window.valueSelectedOfficeObj = valueSelectedOfficeObj;
+window.valueOverallServRate = valueOverallServRate;
 /*Declare global*/
 
 

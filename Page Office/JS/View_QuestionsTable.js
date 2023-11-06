@@ -1,5 +1,5 @@
 /*Import*/
-import {questionsTabWrap} from "./JSCollection_Page_Dashboard.js";
+import {questionsTabWrap} from "../../Global JS/JSCollection_Page_Dashboard.js";
 import QuestionsTable from "./Component_QuestionsTable.js";
 /*Import*/
 

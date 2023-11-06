@@ -1,5 +1,5 @@
 /*Import*/
-import {cc3TabWrap} from "./JSCollection_Page_Dashboard.js";
+import {cc3TabWrap} from "../../Global JS/JSCollection_Page_Dashboard.js";
 import CitizenCharterThreeTable from "./Component_CitizenCharterThreeTable.js";
 /*Import*/
 

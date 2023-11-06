@@ -7,7 +7,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["overallFromDate"]) && isset($_POST["overallToDate"])){
+if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -19,8 +19,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$clientTypeInternal = $_POST["clientTypeInternal"];
 	$clientTypeExternal = $_POST["clientTypeExternal"];
 	$officeId = $_POST["officeId"];
-	$overallFromDate = $_POST["overallFromDate"];
-	$overallToDate = $_POST["overallToDate"];
+	$dateFrom = $_POST["dateFrom"];
+	$dateTo = $_POST["dateTo"];
 	/*Query string*/
 
 
@@ -74,7 +74,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Valid global token*/
 	if($globalTokenResult === null){		
 		/*Get Questions scores*/
-		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($overallFromDate) && !empty($overallToDate))){		
+		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($dateFrom) && !empty($dateTo))){		
 			/*_Prep query*/
 			$getQuestionsScores_Query = "SELECT officeQuestions_tab.question_id AS 'questionId', 
 				officeQuestions_tab.question_value AS 'questionValue',
@@ -110,7 +110,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				            WHERE questionresponses_tab.score_id = 1 
 				           	AND clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				            GROUP BY questionresponses_tab.question_id
 				          ) AS totalStronglyAgreeResp_tab
 				ON officeQuestions_tab.question_id = totalStronglyAgreeResp_tab.question_id
@@ -123,7 +123,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				            WHERE questionresponses_tab.score_id = 2 
 				           	AND clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				            GROUP BY questionresponses_tab.question_id
 				          ) AS totalAgreeResp_tab
 				ON officeQuestions_tab.question_id = totalAgreeResp_tab.question_id
@@ -136,7 +136,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				            WHERE questionresponses_tab.score_id = 3 
 				           	AND clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				            GROUP BY questionresponses_tab.question_id
 				          ) AS totalNeitherResp_tab
 				ON officeQuestions_tab.question_id = totalNeitherResp_tab.question_id
@@ -149,7 +149,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				            WHERE questionresponses_tab.score_id = 4 
 				           	AND clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				            GROUP BY questionresponses_tab.question_id
 				          ) AS totalDisagreeResp_tab
 				ON officeQuestions_tab.question_id = totalDisagreeResp_tab.question_id
@@ -162,7 +162,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				            WHERE questionresponses_tab.score_id = 5 
 				           	AND clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				            GROUP BY questionresponses_tab.question_id
 				          ) AS totalStronglyDisagreeResp_tab
 				ON officeQuestions_tab.question_id = totalStronglyDisagreeResp_tab.question_id
@@ -175,7 +175,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				            WHERE questionresponses_tab.score_id = 6 
 				           	AND clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE)
+				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
 				            GROUP BY questionresponses_tab.question_id
 				          ) AS totalNoRatingResp_tab
 				ON officeQuestions_tab.question_id = totalNoRatingResp_tab.question_id
@@ -188,8 +188,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			$getQuestionsScores_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$getQuestionsScores_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$getQuestionsScores_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
-			$getQuestionsScores_QueryObj->bindValue(':overallFromDate', $overallFromDate, PDO::PARAM_STR);
-			$getQuestionsScores_QueryObj->bindValue(':overallToDate', $overallToDate, PDO::PARAM_STR);
+			$getQuestionsScores_QueryObj->bindValue(':dateFrom', $dateFrom, PDO::PARAM_STR);
+			$getQuestionsScores_QueryObj->bindValue(':dateTo', $dateTo, PDO::PARAM_STR);
 			$execution = $getQuestionsScores_QueryObj->execute();
 			/*_Execute query*/
 
@@ -213,7 +213,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["overallFromDate"]) || !isset($_POST["overallToDate"]) || !isset($_POST["officeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"]) || !isset($_POST["officeId"])){
 	$getQuestionsScore_Resp = new stdClass();
 	$getQuestionsScore_Resp->execution = null;
 	$getQuestionsScore_Resp->globalTokenResult = null;
