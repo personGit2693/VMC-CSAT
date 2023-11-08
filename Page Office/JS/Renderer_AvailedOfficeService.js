@@ -4,7 +4,7 @@ import {availedOfficeServiceData_Array} from "../../Global JS/Values_Page_Dashbo
 
 
 /*Function for loading Availed Office Services Chart*/
-function loadAvailedOfficeServiceChart(drawBarChart){
+function outputAvailedOfficeServiceChart(){
 
 	const setChartHeight = availedOfficeServiceData_Array.length * 50 + "";
 
@@ -74,6 +74,6 @@ function loadAvailedOfficeServiceChart(drawBarChart){
 /*Function for loading Availed Office Services Chart*/
 
 
-/*Export*/
-export default loadAvailedOfficeServiceChart;
-/*Export*/
+/*Declare global*/
+window.outputAvailedOfficeServiceChart = outputAvailedOfficeServiceChart;
+/*Declare global*/

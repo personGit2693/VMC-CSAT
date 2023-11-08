@@ -291,6 +291,13 @@ window.valueClientTypeInternal = valueClientTypeInternal;
 window.valueClientTypeExternal = valueClientTypeExternal;
 window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 window.valueOverallServRate = valueOverallServRate;
+window.valueOverallStronglyAgree = valueOverallStronglyAgree;
+window.valueOverallAgree = valueOverallAgree;
+window.valueOverallNeither = valueOverallNeither;
+window.valueOverallDisagree = valueOverallDisagree;
+window.valueOverallStronglyDisagree = valueOverallStronglyDisagree;
+window.valueOverallNoRating = valueOverallNoRating;
+window.valueAvailedOfficeService = valueAvailedOfficeService;
 /*Declare global*/
 
 

@@ -1,18 +1,18 @@
 /*Import*/
-import {overallStronglyAgreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
+import {overallAgreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
-/*Function for loading Overall Strongly Agree Line Chart*/
-function loadOverallStronglyAgreeLineChart(){
+/*Function for loading Overall Agree Line Chart*/
+function outputOverallAgreeLineChart(){
 	
-	const setChartWidth = overallStronglyAgreeData_Array.length * 100 + "";
+	const setChartWidth = overallAgreeData_Array.length * 100 + "";
 
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Daily Total Strongly Agree',
-		curveType: 'function',				
+		title: 'Daily Total Agree',
+		curveType: 'function',		
 		titleTextStyle:{
 			color: "#494C55",
 			fontSize: 16,
@@ -46,7 +46,7 @@ function loadOverallStronglyAgreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}
+			}			
 		},
 		vAxis: {
 			title: 'Total Response',
@@ -56,9 +56,12 @@ function loadOverallStronglyAgreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}			
+			}
 		},
-		colors:["#036939"]		
+		colors:["#8EC63F"],
+		tooltip:{
+			ignoreBounds: true
+		}		
 	};
 
 
@@ -67,12 +70,12 @@ function loadOverallStronglyAgreeLineChart(){
 	myLineChart.load('current', {packages: ['corechart', 'line']});
 
 	myLineChart.setOnLoadCallback(function(){
-		drawAreaChart(overallStronglyAgreeData_Array, lineChartOption_Obj, "overallStronglyAgreeLineChartWrap");
+		drawAreaChart(overallAgreeData_Array, lineChartOption_Obj, "overallAgreeLineChartWrap");
 	});
 }
-/*Function for loading Overall Strongly Agree Line Chart*/
+/*Function for loading Overall Agree Line Chart*/
 
 
-/*Export*/
-export default loadOverallStronglyAgreeLineChart;
-/*Export*/
+/*Declare global*/
+window.outputOverallAgreeLineChart = outputOverallAgreeLineChart;
+/*Declare global*/

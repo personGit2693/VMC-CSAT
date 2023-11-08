@@ -1,5 +1,11 @@
 function submitGenerateOfficeCode(){
+	
 	showSpinningLoad();
-	gatewayGenerateOfficeCode();
-	removeSpinningLoad();
+
+	gatewayGenerateOfficeCode()
+	.then(gatewayPromise => {
+		if(gatewayPromise === true){
+			removeSpinningLoad();						
+		}
+	});	
 }

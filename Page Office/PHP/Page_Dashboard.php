@@ -190,11 +190,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="searchAreaLabelTxt-Class">Client-Type</span>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(), submitRequestCommentDetails(), submitRequestCountPassScore()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), controllerSearchArea()" autocomplete="off">
 						</div>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestCitizenCharterThreeScores(), submitRequestCitizenCharterTwoScores(), submitRequestCitizenCharterOneScores(), submitRequestTotalRespondent(), submitRequestQuestionsTable(), submitRequestOverallEngagement(), submitRequestOverallServRate(), submitRequestOverallStronglyAgree(), submitRequestOverallAgree(), submitRequestOverallNeither(), submitRequestOverallDisagree(), submitRequestOverallStronglyDisagree(), submitRequestOverallNoRating(), submitRequestAvailedOfficeService(), submitRequestCommentDetails(), submitRequestCountPassScore()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), controllerSearchArea()" autocomplete="off">
 						</div>
 					</div>
 					<!--_Filter Client Type Item-->
@@ -218,7 +218,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
 						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry()" autocomplete="off">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry(outputPointOfEntryOption)" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -504,14 +504,23 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_CitizenCharterTwoTable.js"></script>
 		<script type="module" src="../JS/Renderer_CitizenCharterThreeTable.js"></script>
 		<script type="module" src="../JS/Renderer_OverallServRatePieChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallAgreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallNeitherLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallDisagreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallNoRatingLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_AvailedOfficeService.js"></script>
+		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
+		<script type="module" src="../JS/Renderer_CommentDetails.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->
-		
+		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->
-		<script type="module" src="../JS/Gateway_GenerateOfficeCode_PageDashboard.js"></script>
+		<script type="module" src="../JS/Gateway_GenerateOfficeCode.js"></script>
 		<script type="module" src="../JS/Gateway_CitizenCharterThreeScores.js"></script>
 		<script type="module" src="../JS/Gateway_CitizenCharterTwoScores.js"></script>
 		<script type="module" src="../JS/Gateway_CitizenCharterOneScores.js"></script>

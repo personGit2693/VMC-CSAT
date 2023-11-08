@@ -1,6 +1,6 @@
 /*Import*/
-import {searchPointOfEntry} from "./JSCollection_Page_Dashboard.js";
-import renderPointOfEntryOption from "./View_PointOfEntryOption.js";
+//import {searchPointOfEntry} from "./JSCollection_Page_Dashboard.js";
+//import renderPointOfEntryOption from "./View_PointOfEntryOption.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -17,37 +17,45 @@ var pointOfEntry_Array = [];
 
 
 /*Get Point Of Entry*/
-function requestPointOfEntry(){
+async function requestPointOfEntry(searchPointOfEntry){
 	
-	httpRequest.onreadystatechange = function(){
-		if(this.status == 200 && this.readyState == 4){
-			try{				
-				httpResponse = JSON.parse(this.responseText);
+	const requestPromise = new Promise(function(resolve){
 
-				if(httpResponse.serverConnection !== null){
-					alert(httpResponse.serverConnection);
-				}else if(httpResponse.globalTokenResult !== null){
-					alert(httpResponse.globalTokenResult);
-				}else if(httpResponse.execution !== true){
-					alert("Getting Point Of Entry execution problem!");				
-				}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
-					pointOfEntry_Array = httpResponse.pointOfEntry_Array;
-					renderPointOfEntryOption();									
-				}
-			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Point Of Entry!");
-				alert(httpRequest_Error);
-				alert(this.responseText);
-			}			
+		httpRequest.onload = function(){
+			if(httpRequest.status == 200){
+				try{				
+					httpResponse = JSON.parse(httpRequest.responseText);
+
+					if(httpResponse.serverConnection !== null){
+						alert(httpResponse.serverConnection);
+					}else if(httpResponse.globalTokenResult !== null){
+						alert(httpResponse.globalTokenResult);
+					}else if(httpResponse.execution !== true){
+						alert("Getting Point Of Entry execution problem!");				
+					}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
+						pointOfEntry_Array = httpResponse.pointOfEntry_Array;
+						resolve(true);
+						//renderPointOfEntryOption();									
+					}
+				}catch(httpRequest_Error){
+					alert("Response is not an object on getting Point Of Entry!");
+					alert(httpRequest_Error);
+					alert(httpRequest.responseText);
+				}			
+			}else if(httpRequest.status != 200){
+				alert(httpRequest.statusText+" on Request_PointOfEntry.js");
+			}
 		}
-	}
 
-	const queryString = "token="+token+
-	"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry.value);
+		const queryString = "token="+token+
+		"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry.value);
 
-	httpRequest.open("POST", "Response_PointOfEntry.php", true);
-	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString);
+		httpRequest.open("POST", "Response_PointOfEntry.php", true);
+		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		httpRequest.send(queryString);
+	});
+
+	return await requestPromise;
 };
 /*Get Point Of Entry*/
 

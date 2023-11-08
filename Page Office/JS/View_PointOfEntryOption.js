@@ -1,5 +1,5 @@
 /*Import*/
-import {pointOfEntryOptsArea} from "./JSCollection_Page_Dashboard.js";
+import {pointOfEntryOptsArea} from "../../Global JS/JSCollection_Page_Dashboard.js";
 import PointOfEntryOption from "./Component_PointOfEntryOption.js";
 /*Import*/
 

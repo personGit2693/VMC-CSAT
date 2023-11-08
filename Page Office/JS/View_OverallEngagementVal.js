@@ -1,5 +1,5 @@
 /*Import*/
-import {overallEngagementVal} from "../../Global JS/JSCollection_Page_Reports.js";
+import {overallEngagementVal} from "../../Global JS/JSCollection_Page_Dashboard.js";
 import OverallEngagementVal from "./Component_OverallEngagementVal.js";
 /*Import*/
 

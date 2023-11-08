@@ -7,7 +7,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["overallFromDate"]) && isset($_POST["overallToDate"])){
+if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -19,8 +19,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$clientTypeInternal = $_POST["clientTypeInternal"];
 	$clientTypeExternal = $_POST["clientTypeExternal"];
 	$officeId = $_POST["officeId"];
-	$overallFromDate = $_POST["overallFromDate"];
-	$overallToDate = $_POST["overallToDate"];
+	$dateFrom = $_POST["dateFrom"];
+	$dateTo = $_POST["dateTo"];
 	/*Query string*/
 
 
@@ -75,7 +75,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Valid global token*/
 	if($globalTokenResult === null){		
 		/*Count Overall Strongly Agree*/
-		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($overallFromDate) && !empty($overallToDate))){		
+		if((!empty($clientTypeInternal) || !empty($clientTypeExternal)) && (!empty($dateFrom) && !empty($dateTo))){		
 			/*_Prep query*/
 			$countOverallStronglyAgree_Query = "SELECT CONVERT(questionresponse_datetime, DATE) AS 'Dates',
 				COUNT(questionresponses_tab.questionresponse_id) AS 'Strongly Agree' 
@@ -84,7 +84,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
 				WHERE clientresponses_tab.office_id = :officeId 
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal) 
-				AND CONVERT(questionresponse_datetime, DATE) BETWEEN CONVERT(:overallFromDate, DATE) AND CONVERT(:overallToDate, DATE) 
+				AND CONVERT(questionresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 
 				AND questionresponses_tab.score_id = 1 
 				GROUP BY CONVERT(questionresponse_datetime, DATE) 
 				ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
@@ -96,8 +96,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			$countOverallStronglyAgree_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$countOverallStronglyAgree_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$countOverallStronglyAgree_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
-			$countOverallStronglyAgree_QueryObj->bindValue(':overallFromDate', $overallFromDate, PDO::PARAM_STR);
-			$countOverallStronglyAgree_QueryObj->bindValue(':overallToDate', $overallToDate, PDO::PARAM_STR);
+			$countOverallStronglyAgree_QueryObj->bindValue(':dateFrom', $dateFrom, PDO::PARAM_STR);
+			$countOverallStronglyAgree_QueryObj->bindValue(':dateTo', $dateTo, PDO::PARAM_STR);
 			$execution = $countOverallStronglyAgree_QueryObj->execute();
 			/*_Execute query*/
 
@@ -121,7 +121,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["overallFromDate"]) || !isset($_POST["overallToDate"]) || !isset($_POST["officeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"]) || !isset($_POST["officeId"])){
 	$countOverallStronglyAgree_Resp = new stdClass();
 	$countOverallStronglyAgree_Resp->execution = null;
 	$countOverallStronglyAgree_Resp->globalTokenResult = null;

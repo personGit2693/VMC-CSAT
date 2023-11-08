@@ -1,18 +1,18 @@
 /*Import*/
-import {overallStronglyDisagreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
+import {overallNeitherData_Array} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
-/*Function for loading Overall Strongly Disagree Line Chart*/
-function loadOverallStronglyDisagreeLineChart(){
+/*Function for loading Overall Neither Chart*/
+function outputOverallNeitherLineChart(){
 	
-	const setChartWidth = overallStronglyDisagreeData_Array.length * 100 + "";
+	const setChartWidth = overallNeitherData_Array.length * 100 + "";
 
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Daily Total Strongly Disagree',
-		curveType: 'function',				
+		title: 'Daily Total Neither Agree nor Disagree',
+		curveType: 'function',		
 		titleTextStyle:{
 			color: "#494C55",
 			fontSize: 16,
@@ -46,7 +46,7 @@ function loadOverallStronglyDisagreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}
+			}			
 		},
 		vAxis: {
 			title: 'Total Response',
@@ -56,9 +56,9 @@ function loadOverallStronglyDisagreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}			
+			}
 		},
-		colors:["#BD212F"]		
+		colors:["#FAB142"]		
 	};
 
 
@@ -67,12 +67,12 @@ function loadOverallStronglyDisagreeLineChart(){
 	myLineChart.load('current', {packages: ['corechart', 'line']});
 
 	myLineChart.setOnLoadCallback(function(){
-		drawAreaChart(overallStronglyDisagreeData_Array, lineChartOption_Obj, "overallStronglyDisagreeLineChartWrap");
+		drawAreaChart(overallNeitherData_Array, lineChartOption_Obj, "overallNeitherLineChartWrap");
 	});
 }
-/*Function for loading Overall Strongly Disagree Line Chart*/
+/*Function for loading Overall Neither Chart*/
 
 
-/*Export*/
-export default loadOverallStronglyDisagreeLineChart;
-/*Export*/
+/*Declare global*/
+window.outputOverallNeitherLineChart = outputOverallNeitherLineChart;
+/*Declare global*/

@@ -1,5 +1,5 @@
 /*Import*/
-import {commentSectionWrap} from "./JSCollection_Page_Dashboard.js";
+import {commentSectionWrap} from "../../Global JS/JSCollection_Page_Dashboard.js";
 import CommentDetails from "./Component_CommentDetails.js";
 /*Import*/
 

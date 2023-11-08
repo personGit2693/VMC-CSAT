@@ -6,7 +6,7 @@ import {requestTotalRespondent} from "./Request_TotalRespondent.js";
 
 
 /*Gateway*/
-const gatewayTotalRespondent = () =>{
+async function gatewayTotalRespondent(){
 
 	const gatewayPromise = new Promise(function(resolve){
 

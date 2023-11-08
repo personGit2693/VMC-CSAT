@@ -1,18 +1,18 @@
 /*Import*/
-import {overallAgreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
+import {overallNoRatingData_Array} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
-/*Function for loading Overall Agree Line Chart*/
-function loadOverallAgreeLineChart(){
+/*Function for loading Overall No Rating Chart*/
+function outputOverallNoRatingLineChart(){
 	
-	const setChartWidth = overallAgreeData_Array.length * 100 + "";
+	const setChartWidth = overallNoRatingData_Array.length * 100 + "";
 
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Daily Total Agree',
-		curveType: 'function',		
+		title: 'Daily Total No Rating',
+		curveType: 'function',				
 		titleTextStyle:{
 			color: "#494C55",
 			fontSize: 16,
@@ -46,7 +46,7 @@ function loadOverallAgreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}			
+			}
 		},
 		vAxis: {
 			title: 'Total Response',
@@ -56,12 +56,9 @@ function loadOverallAgreeLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}
+			}			
 		},
-		colors:["#8EC63F"],
-		tooltip:{
-			ignoreBounds: true
-		}		
+		colors:["#92A2AA"]		
 	};
 
 
@@ -70,12 +67,12 @@ function loadOverallAgreeLineChart(){
 	myLineChart.load('current', {packages: ['corechart', 'line']});
 
 	myLineChart.setOnLoadCallback(function(){
-		drawAreaChart(overallAgreeData_Array, lineChartOption_Obj, "overallAgreeLineChartWrap");
+		drawAreaChart(overallNoRatingData_Array, lineChartOption_Obj, "overallNoRatingLineChartWrap");
 	});
 }
-/*Function for loading Overall Agree Line Chart*/
+/*Function for loading Overall No Rating Chart*/
 
 
-/*Export*/
-export default loadOverallAgreeLineChart;
-/*Export*/
+/*Declare global*/
+window.outputOverallNoRatingLineChart = outputOverallNoRatingLineChart;
+/*Declare global*/

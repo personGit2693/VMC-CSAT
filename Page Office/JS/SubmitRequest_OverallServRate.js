@@ -4,7 +4,7 @@ function submitRequestOverallServRate(renderer_Param){
 	.then(gatewayPromise => {
 		if(gatewayPromise === true){
 			valueOverallServRate();
-			renderer_Param();			
+			renderer_Param();					
 		}
 	});
 }

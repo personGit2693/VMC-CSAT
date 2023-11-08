@@ -1,7 +1,7 @@
 /*Import*/
-import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-import renderCommentDetails from "./View_CommentDetails.js";
+//import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
+//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
+//import renderCommentDetails from "./View_CommentDetails.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -18,46 +18,52 @@ var commentDetails_Array = [];
 
 
 /*Get Comment Details*/
-function requestCommentDetails(){
+async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
-	httpRequest.onload = function(){
-		if(httpRequest.status == 200){
-			try{
-				httpResponse = JSON.parse(httpRequest.responseText);
+	const requestPromise = new Promise(function(resolve){
 
-				if(httpResponse.serverConnection !== null){
-					alert(httpResponse.serverConnection);
-				}else if(httpResponse.globalTokenResult !== null){
-					alert(httpResponse.globalTokenResult);
-				}else if(httpResponse.execution === false){
-					alert("Getting Comment Details has execution problem!");
-				}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && overallFromDate.value !== "" && overallToDate.value !== ""){
-					alert("Getting Comment Details has never been executed!");
-				}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
-					commentDetails_Array = httpResponse.commentDetails_Array;
-					renderCommentDetails();									
-				}
-			}catch(httpRequest_Error){
-				alert("Response is not an object on getting Comment Details");
-				alert(httpRequest_Error);
-				alert(httpRequest.responseText);
-			}			
-		}else if(httpRequest.status != 200){
-			alert("File not found");
+		httpRequest.onload = function(){
+			if(httpRequest.status == 200){
+				try{
+					httpResponse = JSON.parse(httpRequest.responseText);
+
+					if(httpResponse.serverConnection !== null){
+						alert(httpResponse.serverConnection);
+					}else if(httpResponse.globalTokenResult !== null){
+						alert(httpResponse.globalTokenResult);
+					}else if(httpResponse.execution === false){
+						alert("Getting Comment Details has execution problem!");
+					}else if(httpResponse.execution === null && (clientTypeInternal !== "" || clientTypeExternal !== "") && dateFrom !== "" && dateTo !== ""){
+						alert("Getting Comment Details has never been executed!");
+					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
+						commentDetails_Array = httpResponse.commentDetails_Array;
+						resolve(true);
+						//renderCommentDetails();									
+					}
+				}catch(httpRequest_Error){
+					alert("Response is not an object on getting Comment Details");
+					alert(httpRequest_Error);
+					alert(httpRequest.responseText);
+				}			
+			}else if(httpRequest.status != 200){
+				alert(httpRequest.statusText+" on Request_CommentDetails.js");
+			}
 		}
-	}
 
 
-	const queryString = "token="+token+
-	"&officeId="+selectedOffice_Obj.office_id+
-	"&clientTypeInternal="+clientTypeInternal+
-	"&clientTypeExternal="+clientTypeExternal+
-	"&overallFromDate="+overallFromDate.value+
-	"&overallToDate="+overallToDate.value;
+		const queryString = "token="+token+
+		"&officeId="+officeId+
+		"&clientTypeInternal="+clientTypeInternal+
+		"&clientTypeExternal="+clientTypeExternal+
+		"&dateFrom="+dateFrom+
+		"&dateTo="+dateTo;
 
-	httpRequest.open("POST", "Response_CommentDetails.php", false);
-	httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	httpRequest.send(queryString);
+		httpRequest.open("POST", "Response_CommentDetails.php", true);
+		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		httpRequest.send(queryString);
+	});
+
+	return await requestPromise;
 };
 /*Get Comment Details*/
 

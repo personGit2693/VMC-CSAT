@@ -1,18 +1,18 @@
 /*Import*/
-import {overallNoRatingData_Array} from "../../Global JS/Values_Page_Dashboard.js";
+import {overallDisagreeData_Array} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
-/*Function for loading Overall No Rating Chart*/
-function loadOverallNoRatingLineChart(){
+/*Function for loading Overall Disagree Chart*/
+function outputOverallDisagreeLineChart(){
 	
-	const setChartWidth = overallNoRatingData_Array.length * 100 + "";
+	const setChartWidth = overallDisagreeData_Array.length * 100 + "";
 
 	const lineChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Daily Total No Rating',
-		curveType: 'function',				
+		title: 'Daily Total Disagree',
+		curveType: 'function',		
 		titleTextStyle:{
 			color: "#494C55",
 			fontSize: 16,
@@ -46,7 +46,7 @@ function loadOverallNoRatingLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}
+			}			
 		},
 		vAxis: {
 			title: 'Total Response',
@@ -56,9 +56,9 @@ function loadOverallNoRatingLineChart(){
 			},
 			titleTextStyle:{
 				color: "#494C55"
-			}			
+			}
 		},
-		colors:["#92A2AA"]		
+		colors:["#E35B6F"]		
 	};
 
 
@@ -67,12 +67,12 @@ function loadOverallNoRatingLineChart(){
 	myLineChart.load('current', {packages: ['corechart', 'line']});
 
 	myLineChart.setOnLoadCallback(function(){
-		drawAreaChart(overallNoRatingData_Array, lineChartOption_Obj, "overallNoRatingLineChartWrap");
+		drawAreaChart(overallDisagreeData_Array, lineChartOption_Obj, "overallDisagreeLineChartWrap");
 	});
 }
-/*Function for loading Overall No Rating Chart*/
+/*Function for loading Overall Disagree Chart*/
 
 
-/*Export*/
-export default loadOverallNoRatingLineChart;
-/*Export*/
+/*Declare global*/
+window.outputOverallDisagreeLineChart = outputOverallDisagreeLineChart;
+/*Declare global*/
