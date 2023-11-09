@@ -18,5 +18,6 @@ function controllerSearchArea(){
 	submitRequestOverallNoRating(outputOverallNoRatingLineChart);
 	submitRequestAvailedOfficeService(outputAvailedOfficeServiceChart);
 
+	valueResetCommentDeep();
 	submitRequestCommentDetails(outputCommentDetails);	
 }

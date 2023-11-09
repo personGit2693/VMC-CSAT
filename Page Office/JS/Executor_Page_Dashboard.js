@@ -7,6 +7,7 @@ import {valueCheckboxClientype, valueDateRangeOne}from "../../Global JS/Values_P
 document.body.addEventListener("click", closeSelectDropdownOpts, true);
 /*Call required function for Select Dropdown Rogrid*/
 
+
 /*Render calendar lite in date range*/
 renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "dateRangeOneCalLiteFrom");
 renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "dateRangeOneCalLiteTo");
@@ -16,7 +17,7 @@ renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rog
 /*Assign initial value for search client-type checkboxes and daterange*/
 valueCheckboxClientype();
 valueDateRangeOne();
-/*Get the initial value for overall service rates response*/
+/*Assign initial value for search client-type checkboxes and daterange*/
 
 
 /*Populate data viewing*/

@@ -7,7 +7,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
+if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST["clientTypeExternal"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"]) && isset($_POST["commentStartIndex"]) && isset($_POST["commentDisplay"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -21,6 +21,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	$officeId = $_POST["officeId"];
 	$dateFrom = $_POST["dateFrom"];
 	$dateTo = $_POST["dateTo"];
+	$commentStartIndex = $_POST["commentStartIndex"];
+	$commentDisplay = $_POST["commentDisplay"];
 	/*Query string*/
 
 
@@ -86,8 +88,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				questions_tab.question_value AS 'question',
 				commentsresponses_tab.commentresponse_value AS 'comment',
 				commentsresponses_tab.commentresponse_datetime AS 'datetime',
-				allcountedscores_tab.allCountedScore AS 'allCountedScore',
-				allpassscore_tab.allPassScore AS 'allPassScore'
+				IFNULL(allcountedscores_tab.allCountedScore, 0) AS 'allCountedScore',
+				IFNULL(allpassscore_tab.allPassScore, 0) AS 'allPassScore'
 				FROM clientresponses_tab 
 				INNER JOIN offices_tab 
 				ON clientresponses_tab.office_id = offices_tab.office_id 
@@ -103,36 +105,25 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				ON clientresponses_tab.clientresponse_reference = commentsresponses_tab.clientresponse_reference
 				INNER JOIN questions_tab 
 				ON commentsresponses_tab.question_id = questions_tab.question_id 
-				INNER JOIN (SELECT questionresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				    IFNULL(questionresponses_tab2.allCountedScore, 0) AS 'allCountedScore' 
-				    FROM questionresponses_tab 
-				    LEFT JOIN (SELECT clientresponse_reference, 
-				        COUNT(questionresponse_id) AS 'allCountedScore' 
-				        FROM questionresponses_tab  
-				        WHERE NOT score_id = 6
-				        GROUP BY clientresponse_reference) 
-				    AS questionresponses_tab2 
-				    ON questionresponses_tab.clientresponse_reference = questionresponses_tab2.clientresponse_reference 
-				    GROUP BY questionresponses_tab.clientresponse_reference) 
+				LEFT JOIN (SELECT clientresponse_reference AS 'clientresponse_reference', 
+					COUNT(questionresponse_id) AS 'allCountedScore' 
+				    FROM questionresponses_tab  
+					WHERE NOT score_id = 6
+					GROUP BY clientresponse_reference) 				   
 				AS allcountedscores_tab 
 				ON clientresponses_tab.clientresponse_reference = allcountedscores_tab.clientresponse_reference
-				INNER JOIN (SELECT questionresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				    IFNULL(questionresponses_tab2.allPassScore, 0) AS 'allPassScore' 
-				    FROM questionresponses_tab 
-				    LEFT JOIN (SELECT clientresponse_reference, 
-				        COUNT(questionresponse_id) AS 'allPassScore' 
-				        FROM questionresponses_tab  
-				        WHERE score_id = 1 OR score_id = 2
-				        GROUP BY clientresponse_reference)
-				    AS questionresponses_tab2 
-				    ON questionresponses_tab.clientresponse_reference = questionresponses_tab2.clientresponse_reference 
-				    GROUP BY questionresponses_tab.clientresponse_reference) 
+				LEFT JOIN (SELECT clientresponse_reference AS 'clientresponse_reference', 
+					COUNT(questionresponse_id) AS 'allPassScore' 
+					FROM questionresponses_tab  
+					WHERE score_id = 1 OR score_id = 2
+					GROUP BY clientresponse_reference)				    
 				AS allpassscore_tab 
 				ON clientresponses_tab.clientresponse_reference = allpassscore_tab.clientresponse_reference
 				WHERE clientresponses_tab.office_id = :officeId 
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
 				AND CONVERT(commentsresponses_tab.commentresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 
-				ORDER BY commentsresponses_tab.commentresponse_datetime DESC;
+				ORDER BY commentsresponses_tab.commentresponse_datetime DESC 
+				LIMIT :commentStartIndex, :commentDisplay;
 			"; 							
 			/*_Prep query*/
 
@@ -143,6 +134,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			$getCommentDetails_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
 			$getCommentDetails_QueryObj->bindValue(':dateFrom', $dateFrom, PDO::PARAM_STR);
 			$getCommentDetails_QueryObj->bindValue(':dateTo', $dateTo, PDO::PARAM_STR);
+			$getCommentDetails_QueryObj->bindValue(':commentStartIndex', intval($commentStartIndex), PDO::PARAM_INT);
+			$getCommentDetails_QueryObj->bindValue(':commentDisplay', intval($commentDisplay), PDO::PARAM_INT);
 			$execution = $getCommentDetails_QueryObj->execute();
 			/*_Execute query*/
 
@@ -166,7 +159,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"]) || !isset($_POST["officeId"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["clientTypeInternal"]) || !isset($_POST["clientTypeExternal"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"]) || !isset($_POST["officeId"]) || !isset($_POST["commentStartIndex"]) || !isset($_POST["commentDisplay"])){
 	$getCommentDetails_Resp = new stdClass();
 	$getCommentDetails_Resp->execution = null;
 	$getCommentDetails_Resp->globalTokenResult = null;

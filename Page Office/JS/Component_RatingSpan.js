@@ -23,7 +23,7 @@ function RatingSpan(){
 		}else if(pointOfEntryRate.toFixed(0) >= 80 && pointOfEntryRate.toFixed(0) < 85){
 			ratingSpan = `<span style="color: #FAB042;">`+pointOfEntryRate.toFixed(0)+`% (Compliant)</span>`;
 		}else if(pointOfEntryRate.toFixed(0) >= 75 && pointOfEntryRate.toFixed(0) < 80){
-			ratingSpan = `<span style="color: #E15268;">`+pointOfEntryRate.toFixed(0)+`% (Needs Improvment)</span>`;
+			ratingSpan = `<span style="color: #E15268;">`+pointOfEntryRate.toFixed(0)+`% (Needs Improvement)</span>`;
 		}else if(pointOfEntryRate.toFixed(0) < 75){
 			ratingSpan = `<span style="color: #BD212F;">`+pointOfEntryRate.toFixed(0)+`% (Poor)</span>`;
 		}

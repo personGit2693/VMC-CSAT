@@ -22,6 +22,13 @@ var clientTypeExternal = 2;
 
 var selectedOffice_Obj = {office_id:0};
 
+var commentDeep = 500;
+var commentPage = 1;
+var commentStartIndex = 0;
+var commentDisplay = 7;
+var emptyCommentValue = true;
+var haveCommentSiblings = false;
+
 var overallServRateDataColumn_Array = [
 	[0, 'FillerOnly'],
 	[1,'Strongly Agree'],
@@ -76,6 +83,31 @@ var availedOfficeServiceData_Array = [
 	['No Services', 0, '0']
 ];
 /*Prep export variables*/
+
+
+/*Reset value commentDeep and commentStartIndex and commentPage*/
+function valueResetCommentDeep(){
+	commentDeep = 500;
+	commentStartIndex = 0;
+	commentPage = 1;
+	commentSectionWrap.scrollTop = 0;	
+}
+/*Reset value commentDeep and commentStartIndex and commentPage*/
+
+
+/*Assign value commentDeep and commentStartIndex and commentPage*/
+function valueCommentDeep(commentSectionWrap){
+			
+	if(commentSectionWrap.scrollTop > commentDeep){
+		commentDeep += 500;
+
+		commentStartIndex = (commentPage - 1) * commentDisplay;
+		commentPage++;
+		
+		submitRequestCommentDetails(outputAppendCommentDetails);	
+	}
+}
+/*Assign value commentDeep and commentStartIndex and commentPage*/
 
 
 /*Assign value for selectedOffice_Obj*/
@@ -298,9 +330,11 @@ window.valueOverallDisagree = valueOverallDisagree;
 window.valueOverallStronglyDisagree = valueOverallStronglyDisagree;
 window.valueOverallNoRating = valueOverallNoRating;
 window.valueAvailedOfficeService = valueAvailedOfficeService;
+window.valueCommentDeep = valueCommentDeep;
+window.valueResetCommentDeep = valueResetCommentDeep;
 /*Declare global*/
 
 
 /*Export*/
-export {valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/

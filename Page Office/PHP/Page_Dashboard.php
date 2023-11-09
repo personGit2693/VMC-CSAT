@@ -468,7 +468,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<div class="globalWrapper" id="commentSectionTextWrap">
 					<div class="commentSectionText-Class">Comment Section</div>
 				</div>
-				<div class="globalWrapper" id="commentSectionWrap">
+				<div class="globalWrapper" id="commentSectionWrap" onscroll="valueCommentDeep(this)">
 					No comment yet!
 				</div>
 				<!--Comment Section-->
@@ -513,6 +513,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_AvailedOfficeService.js"></script>
 		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
 		<script type="module" src="../JS/Renderer_CommentDetails.js"></script>
+		<script type="module" src="../JS/Renderer_AppendCommentDetails.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->

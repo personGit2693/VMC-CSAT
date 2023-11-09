@@ -18,7 +18,7 @@ var commentDetails_Array = [];
 
 
 /*Get Comment Details*/
-async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
+async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay){
 	
 	const requestPromise = new Promise(function(resolve){
 
@@ -38,7 +38,6 @@ async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExt
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						commentDetails_Array = httpResponse.commentDetails_Array;
 						resolve(true);
-						//renderCommentDetails();									
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting Comment Details");
@@ -56,7 +55,9 @@ async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExt
 		"&clientTypeInternal="+clientTypeInternal+
 		"&clientTypeExternal="+clientTypeExternal+
 		"&dateFrom="+dateFrom+
-		"&dateTo="+dateTo;
+		"&dateTo="+dateTo+
+		"&commentStartIndex="+commentStartIndex+
+		"&commentDisplay="+commentDisplay;
 
 		httpRequest.open("POST", "Response_CommentDetails.php", true);
 		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
