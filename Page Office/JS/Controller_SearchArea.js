@@ -1,5 +1,7 @@
 function controllerSearchArea(){
 
+	valueResetCommentDeep();
+	
 	submitRequestOverallEngagement(outputOverallEngagementVal);
 	
 	submitRequestTotalRespondent(outputRespondentVal);
@@ -17,7 +19,6 @@ function controllerSearchArea(){
 	submitRequestOverallStronglyDisagree(outputOverallStronglyDisagreeLineChart);
 	submitRequestOverallNoRating(outputOverallNoRatingLineChart);
 	submitRequestAvailedOfficeService(outputAvailedOfficeServiceChart);
-
-	valueResetCommentDeep();
+	
 	submitRequestCommentDetails(outputCommentDetails);	
 }

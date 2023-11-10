@@ -25,7 +25,7 @@ var selectedOffice_Obj = {office_id:0};
 var commentDeep = 500;
 var commentPage = 1;
 var commentStartIndex = 0;
-var commentDisplay = 7;
+var commentDisplay = 10;
 var emptyCommentValue = true;
 var haveCommentSiblings = false;
 
