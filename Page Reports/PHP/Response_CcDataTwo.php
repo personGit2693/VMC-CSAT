@@ -72,11 +72,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			INNER JOIN ccresponses_tab 
 			ON clientresponses_tab.clientresponse_reference = ccresponses_tab.clientresponse_reference 
 			INNER JOIN ccquestionsrates_tab 
-			ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 
-			INNER JOIN officestag_tab 
-			ON clientresponses_tab.office_id = officestag_tab.office_id 
-			WHERE clientresponses_tab.clienttype_id = 2 
-			AND officestag_tab.form_id = 12 
+			ON ccresponses_tab.ccquestionsrate_id = ccquestionsrates_tab.ccquestionsrate_id 			
+			WHERE clientresponses_tab.clienttype_id = 2 			
 			AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 
 		";
 

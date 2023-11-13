@@ -74,11 +74,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			INNER JOIN questions_tab 
 			ON questionresponses_tab.question_id = questions_tab.question_id 
 			INNER JOIN scores_tab 
-			ON questionresponses_tab.score_id = scores_tab.score_id 
-			INNER JOIN officestag_tab 
-			ON clientresponses_tab.office_id = officestag_tab.office_id
-			WHERE clientresponses_tab.clienttype_id = 2 
-			AND officestag_tab.form_id = 12 
+			ON questionresponses_tab.score_id = scores_tab.score_id 			
+			WHERE clientresponses_tab.clienttype_id = 2 			
 			AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)	
 			AND questions_tab.question_active = 1 
 		";

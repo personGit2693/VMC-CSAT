@@ -83,9 +83,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			INNER JOIN educattains_tab 
 			ON clientresponses_tab.educattain_id = educattains_tab.educattain_id 
 			INNER JOIN offices_tab 
-			ON clientresponses_tab.office_id = offices_tab.office_id 
-			INNER JOIN officestag_tab 
-			ON clientresponses_tab.office_id = officestag_tab.office_id 			
+			ON clientresponses_tab.office_id = offices_tab.office_id 			
 			INNER JOIN officeservices_tab 
 			ON clientresponses_tab.officeservice_id = officeservices_tab.officeservice_id
 			INNER JOIN visityears_tab 
@@ -93,8 +91,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 			LEFT JOIN religions_tab 
 			ON clientresponses_tab.religion_id = religions_tab.religion_id
 			WHERE CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 
-			AND clientresponses_tab.clienttype_id = 2 
-			AND officestag_tab.form_id = 12 
+			AND clientresponses_tab.clienttype_id = 2 			
 		";
 
 		if($officeId != 0){
