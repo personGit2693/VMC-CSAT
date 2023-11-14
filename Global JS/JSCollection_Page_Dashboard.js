@@ -15,4 +15,5 @@ export const questionsTabWrap = document.getElementById("questionsTabWrap-Id");
 export const cc1TabWrap = document.getElementById("cc1TabWrap");
 export const cc2TabWrap = document.getElementById("cc2TabWrap");
 export const cc3TabWrap = document.getElementById("cc3TabWrap");
+export const bookmark = document.getElementsByClassName("bookmark-Class");
 /*Elements*/

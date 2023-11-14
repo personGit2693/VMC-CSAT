@@ -79,23 +79,23 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="sideNavHeaderTxt-Class">VMC CSAT</div>
 					</div>
 
-					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
+					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
 						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Dashboard</span>
 					</a>
 
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Questions</span>
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/question list.png'); --activeMainNavMenuIcon:url('../../src/question list white.png')"></div>
+						<span class="generalNavMenuText_RoClass">Questions Rating</span>
 					</a>
 
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Citizen Charters</span>
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
 					</a>
 
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeMainNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Comments</span>
 					</a>
 
