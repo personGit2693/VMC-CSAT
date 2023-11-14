@@ -84,13 +84,30 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="generalNavMenuText_RoClass">Dashboard</span>
 					</a>
 
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Questions</span>
+					</a>
+
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Citizen Charters</span>
+					</a>
+
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Comments</span>
+					</a>
+
 				<?php
 				if(in_array($accessLevels["reportsNav"], $accountAccess)){					
 				?>
+					<!--
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Setup Questions</span>
 					</a>
+					-->
 
 					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
@@ -187,14 +204,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<!--Reports navigation-->
 				<div class="topNavWrapFlex">
 					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controllerTopNavigation(event, this)">Data One</div>
-					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controllerTopNavigation(event, this)">Data Two</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Summary Demographics</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Collated Data</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q1-Q7</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q8-Q12</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Analysis Q13-Q28</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Responsiveness Analysis</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">ARTA Analysis</div>
+					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controllerTopNavigation(event, this)">Data Two</div>					
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Comments</div>
+					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">CSM Report</div>					
 				</div>
 				<!--Reports navigation-->
 

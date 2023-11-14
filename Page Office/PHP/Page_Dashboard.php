@@ -84,18 +84,35 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="generalNavMenuText_RoClass">Dashboard</span>
 					</a>
 
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Questions</span>
+					</a>
+
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Citizen Charters</span>
+					</a>
+
+					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Comments</span>
+					</a>
+
 				<?php
 				if(in_array($accessLevels["reportsNav"], $accountAccess)){					
 				?>
+					<!--
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Setup Questions</span>
 					</a>
+					-->	
 
 					<a href="../../Page Reports/PHP/Page_CSATReports.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span>
-					</a>					
+					</a>									
 					
 					<!--
 					<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
