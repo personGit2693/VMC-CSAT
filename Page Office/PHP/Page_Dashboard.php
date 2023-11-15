@@ -64,7 +64,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>CSAT Dashboard</title>
+		<title>CSAT Monitoring</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
 		<link rel="stylesheet" type="text/css" href="../CSS/Page_Dashboard.css">
@@ -79,22 +79,22 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="sideNavHeaderTxt-Class">VMC CSAT</div>
 					</div>
 
-					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
+					<a href="#chartsWrapper" class="activeMainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
+						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Bar Graph Black.png'); --activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Dashboard</span>
 					</a>
 
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="#questionsTabWrap-Id" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/question list.png'); --activeMainNavMenuIcon:url('../../src/question list white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Questions Rating</span>
 					</a>
 
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="#ccTabWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
 					</a>
 
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="#commentSectionTextWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeMainNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Comments</span>
 					</a>
@@ -457,7 +457,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<!--_Questions table-->
 					
 					<!--_CC Table-->
-					<div class="summaryResponsesItem-Class">
+					<div class="summaryResponsesItem-Class" id="ccTabWrap">
 						<!--_ _CC1 table-->
 						<div id="cc1TabWrap">
 							<!--Component-->
@@ -535,6 +535,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 		<!--_Controller-->
 		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
+		<script type="module" src="../JS/Controller_Bookmark.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->

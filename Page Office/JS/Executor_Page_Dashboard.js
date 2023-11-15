@@ -1,5 +1,5 @@
 /*Import*/
-import {valueCheckboxClientype, valueDateRangeOne}from "../../Global JS/Values_Page_Dashboard.js";
+import {valueCheckboxClientype, valueDateRangeOne} from "../../Global JS/Values_Page_Dashboard.js";
 /*Import*/
 
 
