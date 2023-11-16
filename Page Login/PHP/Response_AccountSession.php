@@ -28,7 +28,7 @@ if(isset($_POST["token"]) && isset($_POST["accountNumber"]) && isset($_POST["off
 	$accountSession_Resp = new stdClass();
 	$accountSession_Resp->execution = null;
 	$accountSession_Resp->globalTokenResult = null;		
-	$accountSession_Resp->endpoint = "../../Page Office/PHP/Page_Dashboard.php";
+	$accountSession_Resp->endpoint = "../../Module Office/PHP/Page_RatingMonitoring.php";
 	$accountSession_Resp->serverConnection = $serverConnection;
 
 	$execution = null;	

@@ -394,58 +394,77 @@
 }
 
 
-@mixin globalSubNavMenuWrapLevelOne_Style{
-	--subNavMenuWrapBgColor: #E6E6E6;
-}
-@mixin globalSubNavMenuWrapLevelTwo_Style{
-	--subNavMenuWrapBgColor: #d9d4d4;
-}
-
-
-@mixin globalSubNavMenu_MT_Style{	
-	--subNavMenuBgColor: transparent;
-	--subNavMenuFSize: 16px; /*To be changed*/
-	--subNavMenuFColor: #303238;
-	--hoverSubNavMenuBgColor: #247F4F;
-	--hoverSubNavMenuFColor: #ffffff;
-}
-@mixin globalSubNavMenu_Laptop_Style{
-	--subNavMenuBgColor: transparent;
-	--subNavMenuFSize: 18px; /*changed*/
-	--subNavMenuFColor: #303238;
-	--hoverSubNavMenuBgColor: #247F4F;
-	--hoverSubNavMenuFColor: #ffffff;
-}
-@mixin globalSubNavMenu_Desktop_Style{
-	--subNavMenuBgColor: transparent;
-	--subNavMenuFSize: 20px; /*changed*/
-	--subNavMenuFColor: #303238;
-	--hoverSubNavMenuBgColor: #247F4F;
-	--hoverSubNavMenuFColor: #ffffff;
-}
-
-
-@mixin globalSubNavIconSize_MT_Style{
+/*_ _subNavMenuIconWrap_RoClass, activeSubNavMenuIconWrap_RoClass*/
+@mixin globalSubNavMenuIconWrap_Mobile_Style{
 	--subNavMenuIconSize: 20px; /*To be changed*/
 }
-@mixin globalSubNavIconSize_Laptop_Style{
+@mixin globalSubNavMenuIconWrap_Tablet_Style{
+	--subNavMenuIconSize: 20px; /*To be changed*/
+}
+@mixin globalSubNavMenuIconWrap_Laptop_Style{
 	--subNavMenuIconSize: 22px; /*changed*/
 }
-@mixin globalSubNavIconSize_Desktop_Style{
+@mixin globalSubNavMenuIconWrap_Desktop_Style{
 	--subNavMenuIconSize: 24px; /*changed*/
 }
+/*_ _subNavMenuIconWrap_RoClass, activeSubNavMenuIconWrap_RoClass*/
 
 
-@mixin globalChevronSize_MT_Style{
+/*_ _subNavMenuWrap_RoClass (For first level)*/
+@mixin globalSubNavMenuWrapOne_Style{
+	--subNavMenuWrapBgColor: #E6E6E6;
+}
+/*_ _subNavMenuWrap_RoClass (For first level)*/
+
+
+/*_ _subNavMenu_RoClass*/
+@mixin globalSubNavMenu_Style{
+	--subNavMenuBgColor: transparent; 	
+	--subNavMenuFColor: #303238;	
+}
+/*_ _subNavMenu_RoClass*/
+
+
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+@mixin globalSubNavMenuFSize_Mobile_Style{
+	--subNavMenuFSize: 16px; /*To be changed*/
+}
+@mixin globalSubNavMenuFSize_Tablet_Style{
+	--subNavMenuFSize: 16px; /*To be changed*/
+}
+@mixin globalSubNavMenuFSize_Laptop_Style{
+	--subNavMenuFSize: 18px; /*changed*/
+}
+@mixin globalSubNavMenuFSize_Desktop_Style{
+	--subNavMenuFSize: 20px; /*changed*/
+}
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+
+
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+@mixin globalHoverSubNavMenu_Style{
+	--hoverSubNavMenuBgColor: #247F4F;
+	--hoverSubNavMenuFColor: #ffffff;
+}
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+
+
+/*_ _chevronIconWrap_RoClass*/
+@mixin globalChevronIconWrap_Mobile_Style{
 	--chevronIconSize: 18px; /*To be changed*/
 }
-@mixin globalChevronSize_Laptop_Style{
+@mixin globalChevronIconWrap_Tablet_Style{
+	--chevronIconSize: 18px; /*To be changed*/
+}
+@mixin globalChevronIconWrap_Laptop_Style{
 	--chevronIconSize: 20px; /*changed*/
 }
-@mixin globalChevronSize_Desktop_Style{
+@mixin globalChevronIconWrap_Desktop_Style{
 	--chevronIconSize: 22px; /*changed*/
 }
-/*_ Navigation Menu*/
+/*_ _chevronIconWrap_RoClass*/
+
+/*_Navigation Menu*/
 
 /*Global Side Nav*/
 /***********************************************************************************************************************************************************************************************************/

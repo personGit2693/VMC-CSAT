@@ -64,10 +64,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>CSAT Reports</title>
+		<title>CSAT Rating Monitoring</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link rel="stylesheet" type="text/css" href="../CSS/Page_CSATReports.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Page_RatingMonitoring.css">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">
 	</head>
 	<body>
@@ -79,23 +79,49 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="sideNavHeaderTxt-Class">VMC CSAT</div>
 					</div>
 
-					<a href="../../Module Office/PHP/Page_RatingMonitoring.php" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Monitoring Black.png'); --activeMainNavMenuIcon:url('../../src/Monitoring White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Rating Monitoring</span>
-					</a>
+					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
+						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/Monitoring White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Rating Monitoring</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png" /></div>
+					</div>
+					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass">
+						<a href="#chartsWrapper" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/Bar Graph Black.png'); --activeSubNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Score Charts</span>
+						</a>
+
+						<a href="#questionsTabWrap-Id" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/question list.png'); --activeSubNavMenuIcon:url('../../src/question list white.png')"></div>
+							<span class="generalNavMenuText_RoClass">Questions Rating</span>
+						</a>
+
+						<a href="#ccTabWrap" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
+						</a>
+
+						<a href="#commentSectionTextWrap" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeSubNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
+							<span class="generalNavMenuText_RoClass">Comments</span>
+						</a>
+					</div>
 
 					<!--
-					<a href="../../Page Office/PHP/Page_Dashboard.php#questionsTabWrap-Id" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="#chartsWrapper" class="activeMainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
+						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Bar Graph Black.png'); --activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
+						<span class="generalNavMenuText_RoClass">Scores Charts</span>
+					</a>
+
+					<a href="#questionsTabWrap-Id" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/question list.png'); --activeMainNavMenuIcon:url('../../src/question list white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Questions Rating</span>
 					</a>
 
-					<a href="../../Page Office/PHP/Page_Dashboard.php#ccTabWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="#ccTabWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
 					</a>
 
-					<a href="../../Page Office/PHP/Page_Dashboard.php#commentSectionTextWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="#commentSectionTextWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeMainNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Comments</span>
 					</a>
@@ -109,24 +135,24 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Setup Questions</span>
 					</a>
-					-->
+					-->	
 
-					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
+					<a href="../../Page Reports/PHP/Page_CSATReports.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span>
-					</a>					
+					</a>									
 					
 					<!--
-					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
+					<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
+						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
 					</div>
-					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
-						<a href="" class="activeSubNavMenu_RoClass subNavMenu-Class">					
-							<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
+					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">						
+						<a href="../../Page Reports/PHP/Page_HCESReports.php" class="subNavMenu_RoClass subNavMenu-Class">					
+							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/CollatedData_Black.png'); --activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
 							<span class="generalNavMenuText_RoClass">HCES Reports</span>
 						</a>
-
+						
 						
 						<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
 							<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
@@ -154,12 +180,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
 							</a>
 						</div>						
-					</div>	
-					-->				
+					</div>
+					-->
 				<?php
 				}
 				?>	
-
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/GearIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/GearIcon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Settings</span>
@@ -202,34 +227,21 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				</div>
 				<!--Page title-->
 
-
-				<!--Reports navigation-->
-				<div class="topNavWrapFlex">
-					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controllerTopNavigation(event, this)">Data One</div>
-					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controllerTopNavigation(event, this)">Data Two</div>					
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Comments</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">CSM Report</div>					
-				</div>
-				<!--Reports navigation-->
-
-
 				<!--Search area-->
 				<div class="globalWrapper" id="searchWrapper" style="z-index: 1;">
 
-					<!--_Filter Client Type Item-->
-					<!--				
+					<!--_Filter Client Type Item-->				
 					<div class="searchWrapperItem-Class" id="filterClientItemWrap">
 						<span class="searchAreaLabelTxt-Class">Client-Type</span>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestDataOne()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), controllerSearchArea()" autocomplete="off">
 						</div>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestDataOne()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), controllerSearchArea()" autocomplete="off">
 						</div>
 					</div>
-					-->
 					<!--_Filter Client Type Item-->
 
 					<!--_Select Point of Entry-->
@@ -251,7 +263,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
 						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controllerPointOfEntrySearch()" autocomplete="off">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry(outputPointOfEntryOption)" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -281,13 +293,13 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 									<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('../../src/calendaricon blue.png');"></div>
 									<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
 								</div>
-								<div class="dateRangeTooltipArrow_RoClass"></div>					
+								<div class="dateRangeTooltipArrow_RoClass"></div>
 							</div>
 							<!--_ _ _Date Range-->
 							<!--_ _ _Date Range Calendar Lite Wrap-->
 							<div class="dateRangeCalLiteWrap_RoClass">
-								<!--_ _ _ _Date Range Calendar Lite To-->						
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageCsatReports-Class" id="dateRangeOneCalLiteFrom">
+								<!--_ _ _ _Date Range Calendar Lite From-->						
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageDashboard-Class" id="dateRangeOneCalLiteFrom">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteFromVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -337,10 +349,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 										</div>
 									</div>
 								</div>
-								<!--_ _ _ _Date Range Calendar Lite To-->
+								<!--_ _ _ _Date Range Calendar Lite From-->
 
 								<!--_ _ _ _Date Range Calendar Lite To-->
-								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageCsatReports-Class" id="dateRangeOneCalLiteTo">
+								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageDashboard-Class" id="dateRangeOneCalLiteTo">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteToVal-Id">
 									<div class="calLiteHead_RoClass">
 										<div class="calLiteMonthHead_RoClass">
@@ -398,164 +410,113 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					</div>
 					<!--_Date Range Item-->
 				</div>
-				<!--Search area-->				
+				<!--Search area-->
 
 
-				<!--Data one table-->
-				<div class="globalWrapper reportsWrapper-Class" id="dataOneTableWrap">
-					<!--Component					
-					<button class="normButton_RoClass" onclick="exportDataOneToExcel(this)">Download as Excel File</button>
-					<table>
-						<thead>
-							<tr>
-								<th>Control No.</th>
-								<th>RESPONDENT</th>
-								<th>AGE</th>
-								<th>SEX</th>
-								<th>RELIGION</th>
-								<th>LEVEL OF EDUCATION</th>
-								<th>DATE OF CONSULT/ VISIT</th>
-								<th>DEPARTMENT/ OFFICE VISITED</th>
-								<th>SERVICE AVAILED</th>
-								<th>FREQUENCY OF VISIT</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Companion</td>
-								<td>30</td>
-								<td>M</td>
-								<td>None</td>
-								<td>Primary</td>
-								<td>Admitting</td>
-								<td>Admission of Patients</td>
-								<td>First Time</td>								
-							</tr>
-						</tbody>						
-					</table>
-					-->					
+				<!--Charts-->
+				<div class="globalWrapper" id="chartsWrapper">
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8394B7; --charWrapScrollbarHoverBgColor: #8394B7; border: none; background-color: #E8EFFF;">
+						<div class="engagementDetWrap">
+							<div class="engagementFlex">
+								<div class="engagementItem">
+									<div class="engagementLabel">Overall Engagement</div>
+									<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id">Loading...</div></div>		
+								</div>
+
+								<div class="engagementItem">
+									<div class="engagementLabel">Rating</div>
+									<div class="engagementValWrap"><div class="engagementVal-Class" id="pointOfEntryRating-Id"><!--Component--></div></div>		
+								</div>								
+							</div>
+							
+
+							<div class="respondentTotalDetWrap">
+								<div class="respondentTextIconFlex">
+									<div class="respondentText-Class">Total Respondent</div>
+									<div class="respondentIcon-Class"></div>
+									<button class="normButton_RoClass genCodeBtn-Class" onclick="submitGenerateOfficeCode()">Generate code</button>
+								</div>
+								<div class="respondentVal-Class" id="respondentVal-Id">Loading...</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#0E8EF1; --charWrapScrollbarHoverBgColor: #0C86EE;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallServRatePieChartWrap"></div>
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#036939; --charWrapScrollbarHoverBgColor: #036939;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallStronglyAgreeLineChartWrap"></div>
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#8EC63F; --charWrapScrollbarHoverBgColor: #8EC63F;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallAgreeLineChartWrap"></div>	
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#FAB142; --charWrapScrollbarHoverBgColor: #FAB142;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallNeitherLineChartWrap"></div>
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#E35B6F; --charWrapScrollbarHoverBgColor: #E35B6F;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallDisagreeLineChartWrap"></div>
+					</div>				
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#BD212F; --charWrapScrollbarHoverBgColor: #BD212F;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallStronglyDisagreeLineChartWrap"></div>
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#92A2AA; --charWrapScrollbarHoverBgColor: #92A2AA;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="overallNoRatingLineChartWrap"></div>
+					</div>
+
+					<div class="chartWrapWrapper-Class" style="--charWrapScrollbarBgColor:#073763; --charWrapScrollbarHoverBgColor: #073763;">
+						<div class="chartWrap_RoClass chartWrap-Class" id="availedOfficeServiceWrap"></div>
+					</div>								
 				</div>
-				<!--Data one table-->
+				<!--Charts-->
 
 
-				<!--Data two table-->
-				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">
-				<!--Component				
-					<button class="normButton_RoClass" onclick="controllerDataOneTable(this)">Download as Excel File</button>
-					<table>
-						<thead>
-							<tr>
-								<th>Control No.</th>
-								<th class="ccHeader-Class">CC1</th>
-								<th class="ccHeader-Class">CC2</th>
-								<th class="ccHeader-Class">CC3</th>
-								<th class="q1q7Header-Class">Q1</th>
-								<th class="q1q7Header-Class">Q2</th>
-								<th class="q1q7Header-Class">Q3</th>
-								<th class="q1q7Header-Class">Q4 SQD3</th>
-								<th class="q1q7Header-Class">Q5 SQD2</th>
-								<th class="q1q7Header-Class">Q6 SQD4</th>
-								<th class="q1q7Header-Class">Q7 SQD1</th>
-								<th class="q8q12Header-Class">Q8</th>
-								<th class="q8q12Header-Class">Q9</th>
-								<th class="q8q12Header-Class">Q10</th>
-								<th class="q8q12Header-Class">Q11 SQD8</th>
-								<th class="q8q12Header-Class">Q12 SQD5</th>
-								<th class="q13q28Header-Class">Q13 SQD7</th>
-								<th class="q13q28Header-Class">Q14 SQD7</th>
-								<th class="q13q28Header-Class">Q15 SQD7</th>
-								<th class="q13q28Header-Class">Q16 SQD7</th>
-								<th class="q13q28Header-Class">Q17 SQD7</th>
-								<th class="q13q28Header-Class">Q18 SQD7</th>
-								<th class="q13q28Header-Class">Q19 SQD7</th>
-								<th class="q13q28Header-Class">Q20 SQD7</th>
-								<th class="q13q28Header-Class">Q21 SQD7</th>
-								<th class="q13q28Header-Class">Q22 SQD7</th>
-								<th class="q13q28Header-Class">Q23 SQD7</th>
-								<th class="q13q28Header-Class">Q24 SQD7</th>
-								<th class="q13q28Header-Class">Q25 SQD7</th>
-								<th class="q13q28Header-Class">Q26 SQD7</th>
-								<th class="q13q28Header-Class">Q27 SQD6</th>
-								<th class="q13q28Header-Class">Q28 SQD0</th>
-								<th>AVE SQD7</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-						</tbody>
-					</table>-->
+				<!--Questions and cc table-->
+				<div class="globalWrapper summaryResponsesFlex">
+					<!--_Questions table-->
+					<div class="summaryResponsesItem-Class" id="questionsTabWrap-Id">
+						<!--Component-->
+					</div>
+					<!--_Questions table-->
+					
+					<!--_CC Table-->
+					<div class="summaryResponsesItem-Class" id="ccTabWrap">
+						<!--_ _CC1 table-->
+						<div id="cc1TabWrap">
+							<!--Component-->
+						</div>
+						<!--_ _CC1 table-->
+
+						<!--_ _CC2 table-->
+						<div id="cc2TabWrap">
+							<!--Component-->
+						</div>
+						<!--_ _CC2 table-->
+
+						<!--_ _CC3 table-->
+						<div id="cc3TabWrap">
+							<!--Component-->
+						</div>
+						<!--_ _CC3 table-->
+					</div>
+					<!--_CC Table-->
 				</div>
-				<!--Data two table-->
+				<!--Questions and cc table-->
+
+
+				<!--Comment Section-->
+				<div class="globalWrapper" id="commentSectionTextWrap">
+					<div class="commentSectionText-Class">Comment Section</div>
+				</div>
+				<div class="globalWrapper" id="commentSectionWrap" onscroll="valueCommentDeep(this)">
+					No comment yet!
+				</div>
+				<!--Comment Section-->
 			</div> 
 		</div>
 
@@ -571,45 +532,86 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Dependencies-->
 		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>		
-		<script type="text/javascript" src="../../Global JS/table2excel.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
 		<!--_Dependencies-->
 
 		<!--_Value holder-->
-		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
+		<script type="module" src="../../Global JS/Values_Module_Office.js"></script>
 		<!--_Value holder-->
 
 		<!--_Renderer-->
-		<script type="module" src="../JS/Renderer_DataOneTable.js"></script>
-		<script type="module" src="../JS/Renderer_DataTwoTable.js"></script>
+		<script type="module" src="../JS/Renderer_OverallEngagementVal.js"></script>
+		<script type="module" src="../JS/Renderer_RespondentVal.js"></script>
+		<script type="module" src="../JS/Renderer_RatingSpan.js"></script>
+		<script type="module" src="../JS/Renderer_QuestionsTable.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterOneTable.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterTwoTable.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterThreeTable.js"></script>
+		<script type="module" src="../JS/Renderer_OverallServRatePieChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallAgreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallNeitherLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallDisagreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_OverallNoRatingLineChart.js"></script>
+		<script type="module" src="../JS/Renderer_AvailedOfficeService.js"></script>
 		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
+		<script type="module" src="../JS/Renderer_CommentDetails.js"></script>
+		<script type="module" src="../JS/Renderer_AppendCommentDetails.js"></script>
 		<!--_Renderer-->
 
-		<!--_Controller-->		
-		<script type="module" src="../JS/Controller_ReportsTopNavigation.js"></script>
-		<script type="text/javascript" src="../JS/Controller_PointOfEntrySearch.js"></script>
-		<script type="text/javascript" src="../JS/Controller_PointOfEntryOption.js"></script>
-		<script type="text/javascript" src="../JS/Controller_DataOneTable.js"></script>	
+		<!--_Controller-->
+		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
+		<script type="module" src="../JS/Controller_Bookmark.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->
-		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>		
-		<script type="module" src="../JS/Gateway_DataOne.js"></script>
-		<script type="module" src="../JS/Gateway_CcDataTwo.js"></script>
-		<script type="module" src="../JS/Gateway_QuestionsDataTwo.js"></script>
-		<!--_Gateway-->	
-		
+		<script type="module" src="../JS/Gateway_GenerateOfficeCode.js"></script>
+		<script type="module" src="../JS/Gateway_CitizenCharterThreeScores.js"></script>
+		<script type="module" src="../JS/Gateway_CitizenCharterTwoScores.js"></script>
+		<script type="module" src="../JS/Gateway_CitizenCharterOneScores.js"></script>
+		<script type="module" src="../JS/Gateway_QuestionsTable.js"></script>
+		<script type="module" src="../JS/Gateway_OverallEngagement.js"></script>
+		<script type="module" src="../JS/Gateway_TotalRespondent.js"></script>
+		<script type="module" src="../JS/Gateway_OverallServRate.js"></script>
+		<script type="module" src="../JS/Gateway_OverallStronglyAgree.js"></script>
+		<script type="module" src="../JS/Gateway_OverallAgree.js"></script>
+		<script type="module" src="../JS/Gateway_OverallNeither.js"></script>
+		<script type="module" src="../JS/Gateway_OverallDisagree.js"></script>
+		<script type="module" src="../JS/Gateway_OverallStronglyDisagree.js"></script>
+		<script type="module" src="../JS/Gateway_OverallNoRating.js"></script>
+		<script type="module" src="../JS/Gateway_AvailedOfficeService.js"></script>
+		<script type="module" src="../JS/Gateway_CommentDetails.js"></script>
+		<script type="module" src="../JS/Gateway_PointOfEntry.js"></script>
+		<script type="module" src="../JS/Gateway_CountPassScore.js"></script>
+		<!--_Gateway-->
+
 		<!--_Submit Request Holder-->		
+		<script type="text/javascript" src="../JS/SubmitRequest_GenerateOfficeCode.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterThreeScores.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterTwoScores.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterOneScores.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsTable.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallEngagement.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_TotalRespondent.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallServRate.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyAgree.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallAgree.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallNeither.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallDisagree.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CcDataTwo.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsDataTwo.js"></script>
+		<script type="text/javascript" src="../JS/SubmitRequest_CountPassScore.js"></script>
 		<!--_Submit Request Holder-->
-		
-		<!--_Executor-->	
-		<script type="module" src="../JS/Executor_Page_CSATReports.js"></script>
+
 		<!--_Executor-->
-		<!--Javascripts-->		
+		<script type="module" src="../JS/Executor_Page_RatingMonitoring.js"></script>
+		<!--_Executor-->
+		<!--Javascripts-->			
 	</body>
 	</html>
 <?php
