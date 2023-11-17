@@ -5254,9 +5254,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #commentSectionWrap {
     display: block;
     overflow: auto;
-    height: 500px;
+    max-height: 500px;
     background-color: #ffffff;
     margin-top: 0px;
+    padding: 7px;
     font: normal normal 13px calibri;
     /*To be changed*/
     color: #494C55; }
@@ -5421,9 +5422,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #commentSectionWrap {
     display: block;
     overflow: auto;
-    height: 500px;
+    max-height: 500px;
     background-color: #ffffff;
     margin-top: 0px;
+    padding: 7px;
     font: normal normal 13px calibri;
     /*To be changed*/
     color: #494C55; }
@@ -5588,9 +5590,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #commentSectionWrap {
     display: block;
     overflow: auto;
-    height: 500px;
+    max-height: 500px;
     background-color: #ffffff;
     margin-top: 0px;
+    padding: 7px;
     font: normal normal 16px calibri;
     /*changed*/
     color: #494C55; }
@@ -5755,9 +5758,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #commentSectionWrap {
     display: block;
     overflow: auto;
-    height: 500px;
+    max-height: 500px;
     background-color: #ffffff;
     margin-top: 0px;
+    padding: 7px;
     font: normal normal 18px calibri;
     /*changed*/
     color: #494C55; }

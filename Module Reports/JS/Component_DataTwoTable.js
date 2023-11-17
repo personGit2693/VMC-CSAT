@@ -1,5 +1,5 @@
 /*Import*/
-import {dataTwo_Array} from "../../Global JS/Values_Page_Reports.js";
+import {dataTwo_Array} from "../../Global JS/Values_Module_Reports.js";
 /*Import*/
 
 

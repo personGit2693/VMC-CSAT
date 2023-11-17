@@ -576,7 +576,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Dependencies-->
 
 		<!--_Value holder-->
-		<script type="module" src="../../Global JS/Values_Page_Reports.js"></script>
+		<script type="module" src="../../Global JS/Values_Module_Reports.js"></script>
 		<!--_Value holder-->
 
 		<!--_Renderer-->

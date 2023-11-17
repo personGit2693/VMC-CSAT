@@ -1,9 +1,9 @@
 /*Import*/
-import {selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Page_Reports.js";
-import {dataOne_Array} from "../Page Reports/JS/Request_DataOne.js";
-import {ccDataTwo_Array} from "../Page Reports/JS/Request_CcDataTwo.js";
-import {questionsDataTwo_Array} from "../Page Reports/JS/Request_QuestionsDataTwo.js";
-import renderDataTwoTable from "../Page Reports/JS/View_DataTwoTable.js";
+import {selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Module_Reports.js";
+import {dataOne_Array} from "../Module Reports/JS/Request_DataOne.js";
+import {ccDataTwo_Array} from "../Module Reports/JS/Request_CcDataTwo.js";
+import {questionsDataTwo_Array} from "../Module Reports/JS/Request_QuestionsDataTwo.js";
+import renderDataTwoTable from "../Module Reports/JS/View_DataTwoTable.js";
 /*Import*/
 
 

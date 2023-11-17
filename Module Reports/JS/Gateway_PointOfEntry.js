@@ -1,5 +1,5 @@
 /*Import*/
-import {searchPointOfEntry} from "../../Global JS/JSCollection_Page_Reports.js";
+import {searchPointOfEntry} from "../../Global JS/JSCollection_Module_Reports.js";
 import {requestPointOfEntry} from "./Request_PointOfEntry.js";
 /*Import*/
 

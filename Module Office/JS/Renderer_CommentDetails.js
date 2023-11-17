@@ -5,6 +5,7 @@ import renderCommentDetails from "./View_CommentDetails.js";
 
 /*Output component*/
 function outputCommentDetails(){
+	
 	renderCommentDetails();
 }
 /*Output component*/

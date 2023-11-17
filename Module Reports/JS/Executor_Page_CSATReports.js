@@ -1,5 +1,5 @@
 /*Import*/
-import {valueDateRangeOne} from "../../Global JS/Values_Page_Reports.js";
+import {valueDateRangeOne} from "../../Global JS/Values_Module_Reports.js";
 /*Import*/
 
 

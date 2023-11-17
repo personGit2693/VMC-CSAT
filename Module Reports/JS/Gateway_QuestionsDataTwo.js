@@ -1,6 +1,6 @@
 /*Import*/
-import {selectedOffice_Obj} from "../../Global JS/Values_Page_Reports.js";
-import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Page_Reports.js";
+import {selectedOffice_Obj} from "../../Global JS/Values_Module_Reports.js";
+import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Module_Reports.js";
 import {requestQuestionsDataTwo} from "./Request_QuestionsDataTwo.js";
 /*Import*/
 

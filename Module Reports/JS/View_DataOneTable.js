@@ -1,5 +1,5 @@
 /*Import*/
-import {dataOneTableWrap} from "../../Global JS/JSCollection_Page_Reports.js";
+import {dataOneTableWrap} from "../../Global JS/JSCollection_Module_Reports.js";
 import DataOneTable from "./Component_DataOneTable.js";
 /*Import*/
 

@@ -1,5 +1,5 @@
 /*Import*/
-import {selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./JSCollection_Module_Office.js";
+import {commentSectionWrap, selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./JSCollection_Module_Office.js";
 import {overallServRate_Array} from "../Module Office/JS/Request_OverallServRate.js";
 import {overallStronglyAgree_Array} from "../Module Office/JS/Request_OverallStronglyAgree.js";
 import {overallAgree_Array} from "../Module Office/JS/Request_OverallAgree.js";
@@ -12,7 +12,8 @@ import {overallNoRating_Array} from "../Module Office/JS/Request_OverallNoRating
 
 
 /*Prep variables*/
-
+var commentDeep = 500;
+var commentPage = 1;
 /*Prep variables*/
 
 
@@ -22,12 +23,8 @@ var clientTypeExternal = 2;
 
 var selectedOffice_Obj = {office_id:0};
 
-var commentDeep = 500;
-var commentPage = 1;
 var commentStartIndex = 0;
 var commentDisplay = 10;
-var emptyCommentValue = true;
-var haveCommentSiblings = false;
 
 var overallServRateDataColumn_Array = [
 	[0, 'FillerOnly'],
@@ -37,7 +34,7 @@ var overallServRateDataColumn_Array = [
 	[4,'Disagree'],
 	[5,'Strongly Disagree'],
 	[6,'No Rating']
-];
+	];
 var overallServRateData_Array = [
 	['Rating', 'Responses'],
 	['Strongly Agree', 0],
@@ -46,47 +43,48 @@ var overallServRateData_Array = [
 	['Disagree', 0],
 	['Strongly Disagree', 0],
 	['No Rating', 0]
-];
+	];
 
 var overallStronglyAgreeData_Array = [
 	["Dates", "Strongly Agree"],
 	["yyyy/mm/dd", 0]
-];
+	];
 
 var overallAgreeData_Array = [
 	["Dates", "Agree"],
 	["yyyy/mm/dd", 0]
-];
+	];
 
 var overallNeitherData_Array = [
 	["Dates", "Neither Agree nor Disagree"],
 	["yyyy/mm/dd", 0]
-];
+	];
 
 var overallDisagreeData_Array = [
 	["Dates", "Disagree"],
 	["yyyy/mm/dd", 0]
-];
+	];
 
 var overallStronglyDisagreeData_Array = [
 	["Dates", "Strongly Disagree"],
 	["yyyy/mm/dd", 0]
-];
+	];
 
 var overallNoRatingData_Array = [
 	["Dates", "No Rating"],
 	["yyyy/mm/dd", 0]
-];
+	];
 
 var availedOfficeServiceData_Array = [
 	['Services', 'Availed', {role: 'annotation'}],
 	['No Services', 0, '0']
-];
+	];
 /*Prep export variables*/
 
 
 /*Reset value commentDeep and commentStartIndex and commentPage*/
 function valueResetCommentDeep(){
+
 	commentDeep = 500;
 	commentStartIndex = 0;
 	commentPage = 1;
@@ -96,15 +94,16 @@ function valueResetCommentDeep(){
 
 
 /*Assign value commentDeep and commentStartIndex and commentPage*/
-function valueCommentDeep(commentSectionWrap){
-			
-	if(commentSectionWrap.scrollTop > commentDeep){
+function valueCommentDeep(commentSectionWrap_Param){
+
+	if(commentSectionWrap_Param.scrollTop > commentDeep){		
+
 		commentDeep += 500;
 
 		commentStartIndex = (commentPage - 1) * commentDisplay;
 		commentPage++;
-		
-		submitRequestCommentDetails(outputAppendCommentDetails);	
+
+		submitRequestCommentDetails(outputAppendCommentDetails);		
 	}
 }
 /*Assign value commentDeep and commentStartIndex and commentPage*/
@@ -128,7 +127,7 @@ function valueOverallServRate(){
 		['Disagree', 0],
 		['Strongly Disagree', 0],
 		['No Rating', 0]
-	];
+		];
 	/*Reset*/
 
 	overallServRate_Array.forEach(function(value, index, array){
@@ -216,7 +215,7 @@ function valueOverallStronglyAgree(){
 		overallStronglyAgreeData_Array = [
 			["Dates", "Strongly Agree"],
 			["yyyy/mm/dd", 0]
-		];
+			];
 	}
 	/*If no counted Overall strongly agree*/	
 }
@@ -232,7 +231,7 @@ function valueOverallAgree(){
 		overallAgreeData_Array = [
 			["Dates", "Agree"],
 			["yyyy/mm/dd", 0]
-		];
+			];
 	}
 	/*If no counted Overall agree*/	
 }
@@ -248,7 +247,7 @@ function valueOverallNeither(){
 		overallNeitherData_Array = [
 			["Dates", "Neither Agree nor Disagree"],
 			["yyyy/mm/dd", 0]
-		];
+			];
 	}
 	/*If no counted Overall neither*/	
 }
@@ -264,7 +263,7 @@ function valueOverallDisagree(){
 		overallDisagreeData_Array = [
 			["Dates", "Disagree"],
 			["yyyy/mm/dd", 0]
-		];
+			];
 	}
 	/*If no counted Overall Disagree*/	
 }
@@ -280,7 +279,7 @@ function valueOverallStronglyDisagree(){
 		overallStronglyDisagreeData_Array = [
 			["Dates", "Strongly Disagree"],
 			["yyyy/mm/dd", 0]
-		];
+			];
 	}
 	/*If no counted Overall Strongly Disagree*/
 }
@@ -296,7 +295,7 @@ function valueOverallNoRating(){
 		overallNoRatingData_Array = [
 			["Dates", "No Rating"],
 			["yyyy/mm/dd", 0]
-		];
+			];
 	}
 	/*If no counted Overall No Rating*/	
 }
@@ -312,7 +311,7 @@ function valueAvailedOfficeService(){
 		availedOfficeServiceData_Array = [
 			['Services', 'Availed', {role: 'annotation'}],
 			['No Services', 0, '0']
-		];
+			];
 	}
 }
 /*Assign value availedOfficeServiceData_Array*/

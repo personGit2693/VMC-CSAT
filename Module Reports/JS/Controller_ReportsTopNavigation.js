@@ -1,5 +1,5 @@
 /*Import*/
-import {reportsWrapper, topNavWrapFlexItem, dataOneTableWrap, dataTwoTableWrap} from "../../Global JS/JSCollection_Page_Reports.js";
+import {reportsWrapper, topNavWrapFlexItem, dataOneTableWrap, dataTwoTableWrap} from "../../Global JS/JSCollection_Module_Reports.js";
 /*Import*/
 
 
