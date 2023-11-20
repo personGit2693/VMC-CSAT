@@ -603,7 +603,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CommentDetails.js"></script>
+		<script type="module" src="../JS/SubmitRequest_CommentDetails.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_CountPassScore.js"></script>
 		<!--_Submit Request Holder-->

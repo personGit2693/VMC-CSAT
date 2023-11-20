@@ -20,7 +20,19 @@
 /*_ Side Nav Header*/
 /*_ Side Nav Header*/
 /*_ Navigation Menu*/
-/*_ Navigation Menu*/
+/*_ _subNavMenuIconWrap_RoClass, activeSubNavMenuIconWrap_RoClass*/
+/*_ _subNavMenuIconWrap_RoClass, activeSubNavMenuIconWrap_RoClass*/
+/*_ _subNavMenuWrap_RoClass (For first level)*/
+/*_ _subNavMenuWrap_RoClass (For first level)*/
+/*_ _subNavMenu_RoClass*/
+/*_ _subNavMenu_RoClass*/
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+/*_ _subNavMenu_RoClass, activeSubNavMenu_RoClass*/
+/*_ _chevronIconWrap_RoClass*/
+/*_ _chevronIconWrap_RoClass*/
+/*_Navigation Menu*/
 /*Global Side Nav*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3490,25 +3502,28 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuIconSize: 20px;
     /*To be changed*/ }
 
-  .subNavMenuWrapLevelOne-Class {
+  .subNavMenuWrap_RoClass {
     --subNavMenuWrapBgColor: #E6E6E6; }
 
-  .subNavMenuWrapLevelTwo-Class {
-    --subNavMenuWrapBgColor: #d9d4d4; }
-
-  .subNavMenu-Class {
+  .subNavMenuWrap_RoClass .subNavMenu_RoClass {
     --subNavMenuBgColor: transparent;
+    --subNavMenuFColor: #303238;
     --subNavMenuFSize: 16px;
     /*To be changed*/
-    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
-  .subNavIconSize-Class {
+  .subNavMenuWrap_RoClass .activeSubNavMenu_RoClass {
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass {
     --subNavMenuIconSize: 20px;
     /*To be changed*/ }
 
-  .chevronSize-Class {
+  .chevronIconWrap_RoClass {
     --chevronIconSize: 18px;
     /*To be changed*/ }
 
@@ -3566,25 +3581,28 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuIconSize: 20px;
     /*To be changed*/ }
 
-  .subNavMenuWrapLevelOne-Class {
+  .subNavMenuWrap_RoClass {
     --subNavMenuWrapBgColor: #E6E6E6; }
 
-  .subNavMenuWrapLevelTwo-Class {
-    --subNavMenuWrapBgColor: #d9d4d4; }
-
-  .subNavMenu-Class {
+  .subNavMenuWrap_RoClass .subNavMenu_RoClass {
     --subNavMenuBgColor: transparent;
+    --subNavMenuFColor: #303238;
     --subNavMenuFSize: 16px;
     /*To be changed*/
-    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
-  .subNavIconSize-Class {
+  .subNavMenuWrap_RoClass .activeSubNavMenu_RoClass {
+    --subNavMenuFSize: 16px;
+    /*To be changed*/
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass {
     --subNavMenuIconSize: 20px;
     /*To be changed*/ }
 
-  .chevronSize-Class {
+  .chevronIconWrap_RoClass {
     --chevronIconSize: 18px;
     /*To be changed*/ }
 
@@ -3642,25 +3660,28 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuIconSize: 22px;
     /*changed*/ }
 
-  .subNavMenuWrapLevelOne-Class {
+  .subNavMenuWrap_RoClass {
     --subNavMenuWrapBgColor: #E6E6E6; }
 
-  .subNavMenuWrapLevelTwo-Class {
-    --subNavMenuWrapBgColor: #d9d4d4; }
-
-  .subNavMenu-Class {
+  .subNavMenuWrap_RoClass .subNavMenu_RoClass {
     --subNavMenuBgColor: transparent;
+    --subNavMenuFColor: #303238;
     --subNavMenuFSize: 18px;
     /*changed*/
-    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
-  .subNavIconSize-Class {
+  .subNavMenuWrap_RoClass .activeSubNavMenu_RoClass {
+    --subNavMenuFSize: 18px;
+    /*changed*/
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass {
     --subNavMenuIconSize: 22px;
     /*changed*/ }
 
-  .chevronSize-Class {
+  .chevronIconWrap_RoClass {
     --chevronIconSize: 20px;
     /*changed*/ }
 
@@ -3718,25 +3739,28 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --mainNavMenuIconSize: 24px;
     /*changed*/ }
 
-  .subNavMenuWrapLevelOne-Class {
+  .subNavMenuWrap_RoClass {
     --subNavMenuWrapBgColor: #E6E6E6; }
 
-  .subNavMenuWrapLevelTwo-Class {
-    --subNavMenuWrapBgColor: #d9d4d4; }
-
-  .subNavMenu-Class {
+  .subNavMenuWrap_RoClass .subNavMenu_RoClass {
     --subNavMenuBgColor: transparent;
+    --subNavMenuFColor: #303238;
     --subNavMenuFSize: 20px;
     /*changed*/
-    --subNavMenuFColor: #303238;
     --hoverSubNavMenuBgColor: #247F4F;
     --hoverSubNavMenuFColor: #ffffff; }
 
-  .subNavIconSize-Class {
+  .subNavMenuWrap_RoClass .activeSubNavMenu_RoClass {
+    --subNavMenuFSize: 20px;
+    /*changed*/
+    --hoverSubNavMenuBgColor: #247F4F;
+    --hoverSubNavMenuFColor: #ffffff; }
+
+  .subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass {
     --subNavMenuIconSize: 24px;
     /*changed*/ }
 
-  .chevronSize-Class {
+  .chevronIconWrap_RoClass {
     --chevronIconSize: 22px;
     /*changed*/ }
 

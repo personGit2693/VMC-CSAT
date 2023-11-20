@@ -65,24 +65,27 @@
 		@include globalMainNavIconSize_MT_Style;
 	}
 
-	.subNavMenuWrapLevelOne-Class{
-		@include globalSubNavMenuWrapLevelOne_Style;
+	.subNavMenuWrap_RoClass{
+		@include globalSubNavMenuWrapOne_Style;
+	}	
+
+	.subNavMenuWrap_RoClass .subNavMenu_RoClass{
+		@include globalSubNavMenu_Style;
+		@include globalSubNavMenuFSize_Mobile_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenuWrapLevelTwo-Class{
-		@include globalSubNavMenuWrapLevelTwo_Style;
+	.subNavMenuWrap_RoClass .activeSubNavMenu_RoClass{
+		@include globalSubNavMenuFSize_Mobile_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenu-Class{
-		@include globalSubNavMenu_MT_Style;
+	.subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass{
+		@include globalSubNavMenuIconWrap_Mobile_Style;
 	}
 
-	.subNavIconSize-Class{
-		@include globalSubNavIconSize_MT_Style;
-	}
-
-	.chevronSize-Class{
-		@include globalChevronSize_MT_Style;
+	.chevronIconWrap_RoClass{
+		@include globalChevronIconWrap_Mobile_Style;
 	}
 	/*Side Nav Menu*/
 }
@@ -117,24 +120,27 @@
 		@include globalMainNavIconSize_MT_Style;
 	}
 
-	.subNavMenuWrapLevelOne-Class{
-		@include globalSubNavMenuWrapLevelOne_Style;
+	.subNavMenuWrap_RoClass{
+		@include globalSubNavMenuWrapOne_Style;
+	}	
+
+	.subNavMenuWrap_RoClass .subNavMenu_RoClass{
+		@include globalSubNavMenu_Style;
+		@include globalSubNavMenuFSize_Tablet_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenuWrapLevelTwo-Class{
-		@include globalSubNavMenuWrapLevelTwo_Style;
+	.subNavMenuWrap_RoClass .activeSubNavMenu_RoClass{
+		@include globalSubNavMenuFSize_Tablet_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenu-Class{
-		@include globalSubNavMenu_MT_Style;
+	.subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass{
+		@include globalSubNavMenuIconWrap_Tablet_Style;
 	}
 
-	.subNavIconSize-Class{
-		@include globalSubNavIconSize_MT_Style;
-	}
-
-	.chevronSize-Class{
-		@include globalChevronSize_MT_Style;
+	.chevronIconWrap_RoClass{
+		@include globalChevronIconWrap_Tablet_Style;
 	}
 	/*Side Nav Menu*/
 }
@@ -169,24 +175,27 @@
 		@include globalMainNavIconSize_Laptop_Style;
 	}
 
-	.subNavMenuWrapLevelOne-Class{
-		@include globalSubNavMenuWrapLevelOne_Style;
+	.subNavMenuWrap_RoClass{
+		@include globalSubNavMenuWrapOne_Style;
+	}	
+
+	.subNavMenuWrap_RoClass .subNavMenu_RoClass{
+		@include globalSubNavMenu_Style;
+		@include globalSubNavMenuFSize_Laptop_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenuWrapLevelTwo-Class{
-		@include globalSubNavMenuWrapLevelTwo_Style;
+	.subNavMenuWrap_RoClass .activeSubNavMenu_RoClass{
+		@include globalSubNavMenuFSize_Laptop_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenu-Class{
-		@include globalSubNavMenu_Laptop_Style;
+	.subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass{
+		@include globalSubNavMenuIconWrap_Laptop_Style;
 	}
 
-	.subNavIconSize-Class{
-		@include globalSubNavIconSize_Laptop_Style;
-	}
-
-	.chevronSize-Class{
-		@include globalChevronSize_Laptop_Style;
+	.chevronIconWrap_RoClass{
+		@include globalChevronIconWrap_Laptop_Style;
 	}
 	/*Side Nav Menu*/
 }
@@ -221,24 +230,27 @@
 		@include globalMainNavIconSize_Desktop_Style;
 	}
 
-	.subNavMenuWrapLevelOne-Class{
-		@include globalSubNavMenuWrapLevelOne_Style;
+	.subNavMenuWrap_RoClass{
+		@include globalSubNavMenuWrapOne_Style;
 	}
 
-	.subNavMenuWrapLevelTwo-Class{
-		@include globalSubNavMenuWrapLevelTwo_Style;
+	.subNavMenuWrap_RoClass .subNavMenu_RoClass{
+		@include globalSubNavMenu_Style;
+		@include globalSubNavMenuFSize_Desktop_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavMenu-Class{
-		@include globalSubNavMenu_Desktop_Style;
+	.subNavMenuWrap_RoClass .activeSubNavMenu_RoClass{
+		@include globalSubNavMenuFSize_Desktop_Style;
+		@include globalHoverSubNavMenu_Style;
 	}
 
-	.subNavIconSize-Class{
-		@include globalSubNavIconSize_Desktop_Style;
+	.subNavMenu_RoClass .subNavMenuIconWrap_RoClass, .activeSubNavMenu_RoClass .activeSubNavMenuIconWrap_RoClass{
+		@include globalSubNavMenuIconWrap_Desktop_Style;
 	}
 
-	.chevronSize-Class{
-		@include globalChevronSize_Desktop_Style;
+	.chevronIconWrap_RoClass{
+		@include globalChevronIconWrap_Desktop_Style;
 	}
 	/*Side Nav Menu*/
 }

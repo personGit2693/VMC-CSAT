@@ -8,6 +8,7 @@ import {overallDisagree_Array} from "../Module Office/JS/Request_OverallDisagree
 import {overallStronglyDisagree_Array} from "../Module Office/JS/Request_OverallStronglyDisagree.js";
 import {availedOfficeService_Array} from "../Module Office/JS/Request_AvailedOfficeService.js";
 import {overallNoRating_Array} from "../Module Office/JS/Request_OverallNoRating.js";
+import {blockRequest} from "../Module Office/JS/SubmitRequest_CommentDetails.js";
 /*Import*/
 
 
@@ -88,7 +89,7 @@ function valueResetCommentDeep(){
 	commentDeep = 500;
 	commentStartIndex = 0;
 	commentPage = 1;
-	commentSectionWrap.scrollTop = 0;	
+	commentSectionWrap.innerHTML = "";
 }
 /*Reset value commentDeep and commentStartIndex and commentPage*/
 
@@ -96,14 +97,17 @@ function valueResetCommentDeep(){
 /*Assign value commentDeep and commentStartIndex and commentPage*/
 function valueCommentDeep(commentSectionWrap_Param){
 
-	if(commentSectionWrap_Param.scrollTop > commentDeep){		
+	if(blockRequest === false){
+		
+		if(commentSectionWrap_Param.scrollTop > commentDeep){		
 
-		commentDeep += 500;
+			commentDeep += 500;
 
-		commentStartIndex = (commentPage - 1) * commentDisplay;
-		commentPage++;
-
-		submitRequestCommentDetails(outputAppendCommentDetails);		
+			commentStartIndex = (commentPage - 1) * commentDisplay;
+			commentPage++;
+			
+			submitRequestCommentDetails(outputAppendCommentDetails);
+		}
 	}
 }
 /*Assign value commentDeep and commentStartIndex and commentPage*/

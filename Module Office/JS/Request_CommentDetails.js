@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import renderCommentDetails from "./View_CommentDetails.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -19,7 +16,7 @@ var commentDetails_Array = [];
 
 /*Get Comment Details*/
 async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay){
-	
+
 	const requestPromise = new Promise(function(resolve){
 
 		httpRequest.onload = function(){
