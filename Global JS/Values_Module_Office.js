@@ -8,7 +8,7 @@ import {overallDisagree_Array} from "../Module Office/JS/Request_OverallDisagree
 import {overallStronglyDisagree_Array} from "../Module Office/JS/Request_OverallStronglyDisagree.js";
 import {availedOfficeService_Array} from "../Module Office/JS/Request_AvailedOfficeService.js";
 import {overallNoRating_Array} from "../Module Office/JS/Request_OverallNoRating.js";
-import {blockRequest} from "../Module Office/JS/SubmitRequest_CommentDetails.js";
+import {blockRequest as blockRequest_CommentDetails} from "../Module Office/JS/SubmitRequest_CommentDetails.js";
 /*Import*/
 
 
@@ -97,7 +97,7 @@ function valueResetCommentDeep(){
 /*Assign value commentDeep and commentStartIndex and commentPage*/
 function valueCommentDeep(commentSectionWrap_Param){
 
-	if(blockRequest === false){
+	if(blockRequest_CommentDetails === false){
 		
 		if(commentSectionWrap_Param.scrollTop > commentDeep){		
 
