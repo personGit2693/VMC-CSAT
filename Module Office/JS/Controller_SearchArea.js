@@ -20,5 +20,5 @@ function controllerSearchArea(){
 	submitRequestOverallNoRating(outputOverallNoRatingLineChart);
 	submitRequestAvailedOfficeService(outputAvailedOfficeServiceChart);
 	
-	submitRequestCommentDetails(outputCommentDetails);	
+	submitRequestCommentDetails(outputCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");	
 }

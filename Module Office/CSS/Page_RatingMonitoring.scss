@@ -1309,6 +1309,10 @@
 	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
 		@include commentDatetime_MT_Style;
 	}
+
+	#commentSectionLoader-Id .boxLoaderIcon_RoClass{
+		@include boxLoaderIconSize_Mobile_Style;
+	}
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1392,6 +1396,10 @@
 
 	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
 		@include commentDatetime_MT_Style;
+	}
+
+	#commentSectionLoader-Id .boxLoaderIcon_RoClass{
+		@include boxLoaderIconSize_Tablet_Style;
 	}
 }
 /*Tablet*/
@@ -1477,6 +1485,10 @@
 	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
 		@include commentDatetime_Laptop_Style;
 	}
+
+	#commentSectionLoader-Id .boxLoaderIcon_RoClass{
+		@include boxLoaderIconSize_Laptop_Style;
+	}
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1560,6 +1572,10 @@
 
 	#commentSectionWrap .commentDetailsWrap .commentedDatetime-Class{
 		@include commentDatetime_Desktop_Style;
+	}
+
+	#commentSectionLoader-Id .boxLoaderIcon_RoClass{
+		@include boxLoaderIconSize_Desktop_Style;
 	}
 }
 /*Desktop*/

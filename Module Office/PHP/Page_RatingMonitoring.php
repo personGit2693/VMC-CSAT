@@ -512,6 +512,14 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 				<!--Comment Section-->
 				<div class="globalWrapper" id="commentSectionTextWrap">
 					<div class="commentSectionText-Class">Comment Section</div>
+					
+					<!--Comment Section Box Loader
+					<div class="boxLoaderWrap_RoClass" id="commentSectionLoader-Id">
+						<div class="boxLoaderIcon_RoClass">
+							<img src="../../src/Spinner.gif">
+						</div>
+					</div>
+					Comment Section Box Loader-->
 				</div>
 				<div class="globalWrapper" id="commentSectionWrap" onscroll="valueCommentDeep(this)">
 					No comment yet!
@@ -559,6 +567,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
 		<script type="module" src="../JS/Renderer_CommentDetails.js"></script>
 		<script type="module" src="../JS/Renderer_AppendCommentDetails.js"></script>
+		<script type="module" src="../JS/Renderer_CommentSectionLoader.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->

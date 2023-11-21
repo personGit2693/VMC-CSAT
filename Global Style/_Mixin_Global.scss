@@ -767,5 +767,25 @@
 
 /*_ Select Dropdown*/
 
+
+/*_Box Loader*/
+
+/*_ _boxLoaderIcon_RoClass*/
+@mixin boxLoaderIconSize_Mobile_Style{
+	--boxLoaderIconSize: 60px; /*To be changed*/
+}
+@mixin boxLoaderIconSize_Tablet_Style{
+	--boxLoaderIconSize: 60px; /*To be changed*/
+}
+@mixin boxLoaderIconSize_Laptop_Style{
+	--boxLoaderIconSize: 65px; /*changed*/
+}
+@mixin boxLoaderIconSize_Desktop_Style{
+	--boxLoaderIconSize: 70px; /*changed*/
+}
+/*_ _boxLoaderIcon_RoClass*/
+
+/*_Box Loader*/
+
 /*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/

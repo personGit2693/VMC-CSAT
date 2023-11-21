@@ -99,14 +99,13 @@ function valueCommentDeep(commentSectionWrap_Param){
 
 	if(blockRequest_CommentDetails === false){
 		
-		if(commentSectionWrap_Param.scrollTop > commentDeep){		
-
-			commentDeep += 500;
-
-			commentStartIndex = (commentPage - 1) * commentDisplay;
+		if((commentSectionWrap_Param.scrollTop + commentSectionWrap_Param.offsetHeight) >= commentSectionWrap_Param.scrollHeight){		
+			alert("test");
 			commentPage++;
+
+			commentStartIndex = (commentPage - 1) * commentDisplay;			
 			
-			submitRequestCommentDetails(outputAppendCommentDetails);
+			submitRequestCommentDetails(outputAppendCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");
 		}
 	}
 }
