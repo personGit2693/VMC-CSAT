@@ -420,7 +420,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="engagementFlex">
 								<div class="engagementItem">
 									<div class="engagementLabel">Overall Engagement</div>
-									<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id">Loading...</div></div>		
+									<div class="engagementValWrap"><div class="engagementVal-Class" id="overallEngagementVal-Id"><!--Component--></div></div>		
 								</div>
 
 								<div class="engagementItem">
@@ -568,6 +568,19 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_CommentDetails.js"></script>
 		<script type="module" src="../JS/Renderer_AppendCommentDetails.js"></script>
 		<script type="module" src="../JS/Renderer_CommentSectionLoader.js"></script>
+		<script type="module" src="../JS/Renderer_AvailedOfficeServiceLoader.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterOneTableLoader.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterThreeTableLoader.js"></script>
+		<script type="module" src="../JS/Renderer_CitizenCharterTwoTableLoader.js"></script>
+		<script type="module" src="../JS/Renderer_RatingSpanLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallEngagementValLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallAgreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallDisagreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallNeitherLineChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallNoRatingLineChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallServRatePieChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChartLoader.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->
@@ -597,24 +610,24 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Gateway-->
 
 		<!--_Submit Request Holder-->		
-		<script type="text/javascript" src="../JS/SubmitRequest_GenerateOfficeCode.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterThreeScores.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterTwoScores.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CitizenCharterOneScores.js"></script>
+		<script type="module" src="../JS/SubmitRequest_GenerateOfficeCode.js"></script>
+		<script type="module" src="../JS/SubmitRequest_CitizenCharterThreeScores.js"></script>
+		<script type="module" src="../JS/SubmitRequest_CitizenCharterTwoScores.js"></script>
+		<script type="module" src="../JS/SubmitRequest_CitizenCharterOneScores.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsTable.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallEngagement.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallEngagement.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_TotalRespondent.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallServRate.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyAgree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallAgree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallNeither.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallDisagree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_OverallNoRating.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallServRate.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallStronglyAgree.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallAgree.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallNeither.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallDisagree.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallStronglyDisagree.js"></script>
+		<script type="module" src="../JS/SubmitRequest_OverallNoRating.js"></script>
+		<script type="module" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
 		<script type="module" src="../JS/SubmitRequest_CommentDetails.js"></script>
 		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CountPassScore.js"></script>
+		<script type="module" src="../JS/SubmitRequest_CountPassScore.js"></script>
 		<!--_Submit Request Holder-->
 
 		<!--_Executor-->

@@ -13,7 +13,6 @@ import {blockRequest as blockRequest_CommentDetails} from "../Module Office/JS/S
 
 
 /*Prep variables*/
-var commentDeep = 500;
 var commentPage = 1;
 /*Prep variables*/
 
@@ -83,18 +82,17 @@ var availedOfficeServiceData_Array = [
 /*Prep export variables*/
 
 
-/*Reset value commentDeep and commentStartIndex and commentPage*/
+/*Reset value commentStartIndex and commentPage*/
 function valueResetCommentDeep(){
-
-	commentDeep = 500;
+	
 	commentStartIndex = 0;
 	commentPage = 1;
 	commentSectionWrap.innerHTML = "";
 }
-/*Reset value commentDeep and commentStartIndex and commentPage*/
+/*Reset value commentStartIndex and commentPage*/
 
 
-/*Assign value commentDeep and commentStartIndex and commentPage*/
+/*Assign value commentStartIndex and commentPage*/
 function valueCommentDeep(commentSectionWrap_Param){
 
 	if(blockRequest_CommentDetails === false){
@@ -109,7 +107,7 @@ function valueCommentDeep(commentSectionWrap_Param){
 		}
 	}
 }
-/*Assign value commentDeep and commentStartIndex and commentPage*/
+/*Assign value commentStartIndex and commentPage*/
 
 
 /*Assign value for selectedOffice_Obj*/

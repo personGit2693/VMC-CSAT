@@ -16,4 +16,12 @@ export const cc1TabWrap = document.getElementById("cc1TabWrap");
 export const cc2TabWrap = document.getElementById("cc2TabWrap");
 export const cc3TabWrap = document.getElementById("cc3TabWrap");
 export const bookmark = document.getElementsByClassName("bookmark-Class");
+export const overallServRatePieChartWrap = document.getElementById("overallServRatePieChartWrap");
+export const overallStronglyAgreeLineChartWrap = document.getElementById("overallStronglyAgreeLineChartWrap");
+export const overallAgreeLineChartWrap = document.getElementById("overallAgreeLineChartWrap");
+export const overallNeitherLineChartWrap = document.getElementById("overallNeitherLineChartWrap");
+export const overallDisagreeLineChartWrap = document.getElementById("overallDisagreeLineChartWrap");
+export const overallStronglyDisagreeLineChartWrap = document.getElementById("overallStronglyDisagreeLineChartWrap");
+export const overallNoRatingLineChartWrap = document.getElementById("overallNoRatingLineChartWrap");
+export const availedOfficeServiceWrap = document.getElementById("availedOfficeServiceWrap");
 /*Elements*/

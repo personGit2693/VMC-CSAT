@@ -2,27 +2,28 @@
 
 /*Import*/
 
+
 /*Export variables*/
 let blockRequest = false;
 /*Export variables*/
 
 
 /*Submit function*/
-function submitRequestCommentDetails(renderer_Param, boxLoader_Param, boxLoader_Id){
+function submitRequestCommentDetails(renderer_Param, loader_Param, boxLoader_Id){
 
 	if(blockRequest === false){
 
 		blockRequest = true;
-		boxLoader_Param();		
+		loader_Param();		
 
 		gatewayCommentDetails()
 		.then(gatewayPromise => {		
 
 			if(gatewayPromise === true){
 
-				document.getElementById(boxLoader_Id).remove();
-				blockRequest = false;												
-				renderer_Param();					
+				document.getElementById(boxLoader_Id).remove();															
+				renderer_Param();
+				blockRequest = false;					
 			}
 		});
 	}

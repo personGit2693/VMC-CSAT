@@ -2,23 +2,23 @@ function controllerSearchArea(){
 
 	valueResetCommentDeep();
 	
-	submitRequestOverallEngagement(outputOverallEngagementVal);
+	submitRequestOverallEngagement(outputOverallEngagementVal, outputOverallEngagementValLoader, "overallEngagementValLoader-Id");
 	
 	submitRequestTotalRespondent(outputRespondentVal);
 
-	submitRequestQuestionsTable(outputQuestionsTable);
-	submitRequestCitizenCharterOneScores(outputCitizenCharterOneTable);
-	submitRequestCitizenCharterTwoScores(outputCitizenCharterTwoTable);
-	submitRequestCitizenCharterThreeScores(outputCitizenCharterThreeTable);		
+	submitRequestQuestionsTable(outputQuestionsTable);	
+	submitRequestCitizenCharterOneScores(outputCitizenCharterOneTable, outputCitizenCharterOneTableLoader, "citizenCharterOneTableLoader-Id");	
+	submitRequestCitizenCharterTwoScores(outputCitizenCharterTwoTable, outputCitizenCharterTwoTableLoader, "citizenCharterTwoTableLoader-Id");
+	submitRequestCitizenCharterThreeScores(outputCitizenCharterThreeTable, outputCitizenCharterThreeTableLoader, "citizenCharterThreeTableLoader-Id");
 
-	submitRequestOverallServRate(outputOverallServRatePieChart);
-	submitRequestOverallStronglyAgree(outputOverallStronglyAgreeLineChart);
-	submitRequestOverallAgree(outputOverallAgreeLineChart);
-	submitRequestOverallNeither(outputOverallNeitherLineChart);
-	submitRequestOverallDisagree(outputOverallDisagreeLineChart);
-	submitRequestOverallStronglyDisagree(outputOverallStronglyDisagreeLineChart);
-	submitRequestOverallNoRating(outputOverallNoRatingLineChart);
-	submitRequestAvailedOfficeService(outputAvailedOfficeServiceChart);
+	submitRequestOverallServRate(outputOverallServRatePieChart, outputOverallServRatePieChartLoader, "overallServRatePieChartLoader-Id");
+	submitRequestOverallStronglyAgree(outputOverallStronglyAgreeLineChart, outputOverallStronglyAgreeLineChartLoader, "overallStronglyAgreeLineChartLoader-Id");
+	submitRequestOverallAgree(outputOverallAgreeLineChart, outputOverallAgreeLineChartLoader, "overallAgreeLineChartLoader-Id");
+	submitRequestOverallNeither(outputOverallNeitherLineChart, outputOverallNeitherLineChartLoader, "overallNeitherLineChartLoader-Id");
+	submitRequestOverallDisagree(outputOverallDisagreeLineChart, outputOverallDisagreeLineChartLoader, "overallDisagreeLineChartLoader-Id");
+	submitRequestOverallStronglyDisagree(outputOverallStronglyDisagreeLineChart, outputOverallStronglyDisagreeLineChartLoader, "overallStronglyDisagreeLineChartLoader-Id");
+	submitRequestOverallNoRating(outputOverallNoRatingLineChart, outputOverallNoRatingLineChartLoader, "overallNoRatingLineChartLoader-Id");
+	submitRequestAvailedOfficeService(outputAvailedOfficeServiceChart, outputAvailedOfficeServiceLoader, "availedOfficeServiceLoader-Id");
 	
 	submitRequestCommentDetails(outputCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");	
 }
