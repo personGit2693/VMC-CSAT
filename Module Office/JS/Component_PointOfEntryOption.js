@@ -17,10 +17,6 @@ function PointOfEntryOption(){
 		`</div>`;
 	}
 
-	if(pointOfEntryOption == ""){
-		pointOfEntryOption = "No Result";
-	}
-
 	return pointOfEntryOption;
 }
 /*Component*/

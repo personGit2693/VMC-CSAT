@@ -5,6 +5,7 @@ import renderPointOfEntryOption from "./View_PointOfEntryOption.js";
 
 /*Output component*/
 function outputPointOfEntryOption(){
+	
 	renderPointOfEntryOption();
 }
 /*Output component*/

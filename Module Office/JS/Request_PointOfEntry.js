@@ -1,6 +1,4 @@
 /*Import*/
-//import {searchPointOfEntry} from "./JSCollection_Page_Dashboard.js";
-//import renderPointOfEntryOption from "./View_PointOfEntryOption.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -17,7 +15,7 @@ var pointOfEntry_Array = [];
 
 
 /*Get Point Of Entry*/
-async function requestPointOfEntry(searchPointOfEntry){
+async function requestPointOfEntry(searchPointOfEntry, pointOfEntryOptStartIndex, pointOfEntryOptDisplay){
 	
 	const requestPromise = new Promise(function(resolve){
 
@@ -48,7 +46,10 @@ async function requestPointOfEntry(searchPointOfEntry){
 		}
 
 		const queryString = "token="+token+
-		"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry.value);
+		"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry.value)+
+		"&startIn="+pointOfEntryOptStartIndex+
+		"&maxDisplayRow="+pointOfEntryOptDisplay;
+
 
 		httpRequest.open("POST", "Response_PointOfEntry.php", true);
 		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

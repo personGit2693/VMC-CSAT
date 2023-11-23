@@ -262,8 +262,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
-						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="submitRequestPointOfEntry(outputPointOfEntryOption)" autocomplete="off">
+						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="valuePointOfEntryDeep(this)">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controllerSearchPointOfEntry()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -581,10 +581,12 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_OverallServRatePieChartLoader.js"></script>
 		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChartLoader.js"></script>
 		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Renderer_PointOfEntryOptionLoader.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->
 		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
+		<script type="module" src="../JS/Controller_SearchPointOfEntry.js"></script>
 		<script type="module" src="../JS/Controller_Bookmark.js"></script>
 		<!--_Controller-->
 
@@ -626,7 +628,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/SubmitRequest_OverallNoRating.js"></script>
 		<script type="module" src="../JS/SubmitRequest_AvailedOfficeService.js"></script>
 		<script type="module" src="../JS/SubmitRequest_CommentDetails.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
+		<script type="module" src="../JS/SubmitRequest_PointOfEntry.js"></script>
 		<script type="module" src="../JS/SubmitRequest_CountPassScore.js"></script>
 		<!--_Submit Request Holder-->
 

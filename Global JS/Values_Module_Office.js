@@ -1,5 +1,5 @@
 /*Import*/
-import {commentSectionWrap, selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./JSCollection_Module_Office.js";
+import {pointOfEntryOptsArea, commentSectionWrap, selDropOfficeValue, checkboxFilterInternal, checkboxFilterExternal, dateRangeOne, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./JSCollection_Module_Office.js";
 import {overallServRate_Array} from "../Module Office/JS/Request_OverallServRate.js";
 import {overallStronglyAgree_Array} from "../Module Office/JS/Request_OverallStronglyAgree.js";
 import {overallAgree_Array} from "../Module Office/JS/Request_OverallAgree.js";
@@ -9,11 +9,13 @@ import {overallStronglyDisagree_Array} from "../Module Office/JS/Request_Overall
 import {availedOfficeService_Array} from "../Module Office/JS/Request_AvailedOfficeService.js";
 import {overallNoRating_Array} from "../Module Office/JS/Request_OverallNoRating.js";
 import {blockRequest as blockRequest_CommentDetails} from "../Module Office/JS/SubmitRequest_CommentDetails.js";
+import {blockRequest as blockRequest_PointOfEntry} from "../Module Office/JS/SubmitRequest_PointOfEntry.js";
 /*Import*/
 
 
 /*Prep variables*/
 var commentPage = 1;
+var pointOfEntryOptPage = 1;
 /*Prep variables*/
 
 
@@ -25,6 +27,9 @@ var selectedOffice_Obj = {office_id:0};
 
 var commentStartIndex = 0;
 var commentDisplay = 10;
+
+var pointOfEntryOptStartIndex = 0;
+var pointOfEntryOptDisplay = 10;
 
 var overallServRateDataColumn_Array = [
 	[0, 'FillerOnly'],
@@ -80,6 +85,34 @@ var availedOfficeServiceData_Array = [
 	['No Services', 0, '0']
 	];
 /*Prep export variables*/
+
+
+/*Reset value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
+function valueResetSearchPointOfEntry(){
+	
+	pointOfEntryOptStartIndex = 0;
+	pointOfEntryOptPage = 1;
+	pointOfEntryOptsArea.innerHTML = "";
+}
+/*Reset value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
+
+
+/*Assign value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
+function valuePointOfEntryDeep(pointOfEntryOptsArea_Param){
+
+	if(blockRequest_PointOfEntry === false){
+		
+		if((pointOfEntryOptsArea_Param.scrollTop + pointOfEntryOptsArea_Param.offsetHeight) >= pointOfEntryOptsArea_Param.scrollHeight){		
+			
+			pointOfEntryOptPage++;
+
+			pointOfEntryOptStartIndex = (pointOfEntryOptPage - 1) * pointOfEntryOptDisplay;			
+			
+			submitRequestPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id");
+		}
+	}
+}
+/*Assign value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
 
 
 /*Reset value commentStartIndex and commentPage*/
@@ -332,9 +365,11 @@ window.valueOverallNoRating = valueOverallNoRating;
 window.valueAvailedOfficeService = valueAvailedOfficeService;
 window.valueCommentDeep = valueCommentDeep;
 window.valueResetCommentDeep = valueResetCommentDeep;
+window.valueResetSearchPointOfEntry = valueResetSearchPointOfEntry;
+window.valuePointOfEntryDeep = valuePointOfEntryDeep;
 /*Declare global*/
 
 
 /*Export*/
-export {commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {pointOfEntryOptDisplay, pointOfEntryOptStartIndex, commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/
