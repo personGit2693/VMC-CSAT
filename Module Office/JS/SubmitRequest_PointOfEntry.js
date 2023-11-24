@@ -8,6 +8,7 @@ let blockRequest = false;
 /*Export variables*/
 
 
+/*Submit function*/
 function submitRequestPointOfEntry(renderer_Param, loader_Param, boxLoader_Id){	
 
 	if(blockRequest === false){
@@ -20,13 +21,18 @@ function submitRequestPointOfEntry(renderer_Param, loader_Param, boxLoader_Id){
 
 			if(gatewayPromise === true){
 
-				document.getElementById(boxLoader_Id).remove();			
+				if(document.getElementById(boxLoader_Id) !== null){
+					
+					document.getElementById(boxLoader_Id).remove();
+				}
+							
 				renderer_Param();
 				blockRequest = false;			
 			}
 		});
 	}
 }
+/*Submit function*/
 
 
 /*Declaire global*/

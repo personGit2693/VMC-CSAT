@@ -27,5 +27,4 @@ controllerSearchArea();
 
 /*Populate search point of entry*/
 controllerSearchPointOfEntry();
-//submitRequestPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id");
 /*Populate search point of entry*/

@@ -100,17 +100,15 @@ function valueResetSearchPointOfEntry(){
 /*Assign value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
 function valuePointOfEntryDeep(pointOfEntryOptsArea_Param){
 
-	if(blockRequest_PointOfEntry === false){
-		
-		if((pointOfEntryOptsArea_Param.scrollTop + pointOfEntryOptsArea_Param.offsetHeight) >= pointOfEntryOptsArea_Param.scrollHeight){		
+	if((pointOfEntryOptsArea_Param.scrollTop + pointOfEntryOptsArea_Param.offsetHeight) >= pointOfEntryOptsArea_Param.scrollHeight){		
 			
-			pointOfEntryOptPage++;
+		pointOfEntryOptPage++;
 
-			pointOfEntryOptStartIndex = (pointOfEntryOptPage - 1) * pointOfEntryOptDisplay;			
+		pointOfEntryOptStartIndex = (pointOfEntryOptPage - 1) * pointOfEntryOptDisplay;			
 			
-			submitRequestPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id");
-		}
+		submitRequestPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id");
 	}
+
 }
 /*Assign value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
 
@@ -127,18 +125,16 @@ function valueResetCommentDeep(){
 
 /*Assign value commentStartIndex and commentPage*/
 function valueCommentDeep(commentSectionWrap_Param){
-
-	if(blockRequest_CommentDetails === false){
 		
-		if((commentSectionWrap_Param.scrollTop + commentSectionWrap_Param.offsetHeight) >= commentSectionWrap_Param.scrollHeight){		
+	if((commentSectionWrap_Param.scrollTop + commentSectionWrap_Param.offsetHeight) >= commentSectionWrap_Param.scrollHeight){		
 			
-			commentPage++;
+		commentPage++;
 
-			commentStartIndex = (commentPage - 1) * commentDisplay;			
+		commentStartIndex = (commentPage - 1) * commentDisplay;			
 			
-			submitRequestCommentDetails(outputAppendCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");
-		}
+		submitRequestCommentDetails(outputAppendCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");
 	}
+	
 }
 /*Assign value commentStartIndex and commentPage*/
 

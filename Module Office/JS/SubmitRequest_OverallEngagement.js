@@ -19,10 +19,14 @@ function submitRequestOverallEngagement(renderer_Param, loader_Param, boxLoader_
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
-				document.getElementById(boxLoader_Id).remove();
-				blockRequest = false;
+				if(document.getElementById(boxLoader_Id) !== null){
+					
+					document.getElementById(boxLoader_Id).remove();
+				}
+
 				renderer_Param();			
 				submitRequestCountPassScore(outputRatingSpan, outputRatingSpanLoader, "ratingSpanLoader-Id");			
+				blockRequest = false;
 			}
 		});
 	}

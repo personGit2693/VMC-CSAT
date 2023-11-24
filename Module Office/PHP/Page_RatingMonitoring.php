@@ -436,7 +436,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 									<div class="respondentIcon-Class"></div>
 									<button class="normButton_RoClass genCodeBtn-Class" onclick="submitGenerateOfficeCode()">Generate code</button>
 								</div>
-								<div class="respondentVal-Class" id="respondentVal-Id">Loading...</div>
+								<div class="respondentVal-Class" id="respondentVal-Id"><!--Component--></div>
 							</div>
 						</div>
 					</div>
@@ -582,11 +582,14 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChartLoader.js"></script>
 		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChartLoader.js"></script>
 		<script type="module" src="../JS/Renderer_PointOfEntryOptionLoader.js"></script>
+		<script type="module" src="../JS/Renderer_RespondentValLoader.js"></script>
+		<script type="module" src="../JS/Renderer_QuestionsTableLoader.js"></script>
+		<script type="module" src="../JS/SubmitRequest_TotalRespondent.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->
 		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
-		<script type="module" src="../JS/Controller_SearchPointOfEntry.js"></script>
+		<script type="text/javascript" src="../JS/Controller_SearchPointOfEntry.js"></script>
 		<script type="module" src="../JS/Controller_Bookmark.js"></script>
 		<!--_Controller-->
 
@@ -616,9 +619,9 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/SubmitRequest_CitizenCharterThreeScores.js"></script>
 		<script type="module" src="../JS/SubmitRequest_CitizenCharterTwoScores.js"></script>
 		<script type="module" src="../JS/SubmitRequest_CitizenCharterOneScores.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsTable.js"></script>
+		<script type="module" src="../JS/SubmitRequest_QuestionsTable.js"></script>
 		<script type="module" src="../JS/SubmitRequest_OverallEngagement.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_TotalRespondent.js"></script>
+		<script type="module" src="../JS/SubmitRequest_TotalRespondent.js"></script>
 		<script type="module" src="../JS/SubmitRequest_OverallServRate.js"></script>
 		<script type="module" src="../JS/SubmitRequest_OverallStronglyAgree.js"></script>
 		<script type="module" src="../JS/SubmitRequest_OverallAgree.js"></script>

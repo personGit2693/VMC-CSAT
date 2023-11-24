@@ -19,10 +19,15 @@ function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id){
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
-				document.getElementById(boxLoader_Id).remove();
-				blockRequest = false;
+				if(document.getElementById(boxLoader_Id) !== null){
+					
+					document.getElementById(boxLoader_Id).remove();
+				}
+
+				
 				valueOverallAgree();
 				renderer_Param();						
+				blockRequest = false;
 			}
 		});
 	}

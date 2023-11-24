@@ -21,7 +21,11 @@ function submitRequestOverallStronglyAgree(renderer_Param, loader_Param, boxLoad
 
 			if(gatewayPromise === true){
 
-				document.getElementById(boxLoader_Id).remove();				
+				if(document.getElementById(boxLoader_Id) !== null){
+					
+					document.getElementById(boxLoader_Id).remove();
+				}
+								
 				valueOverallStronglyAgree();
 				renderer_Param();
 				blockRequest = false;					

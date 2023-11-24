@@ -4,9 +4,9 @@ function controllerSearchArea(){
 	
 	submitRequestOverallEngagement(outputOverallEngagementVal, outputOverallEngagementValLoader, "overallEngagementValLoader-Id");
 	
-	submitRequestTotalRespondent(outputRespondentVal);
+	submitRequestTotalRespondent(outputRespondentVal, outputRespondentValLoader, "respondentValLoader-Id");
 
-	submitRequestQuestionsTable(outputQuestionsTable);	
+	submitRequestQuestionsTable(outputQuestionsTable, outputQuestionsTableLoader, "questionsTableLoader-Id");	
 	submitRequestCitizenCharterOneScores(outputCitizenCharterOneTable, outputCitizenCharterOneTableLoader, "citizenCharterOneTableLoader-Id");	
 	submitRequestCitizenCharterTwoScores(outputCitizenCharterTwoTable, outputCitizenCharterTwoTableLoader, "citizenCharterTwoTableLoader-Id");
 	submitRequestCitizenCharterThreeScores(outputCitizenCharterThreeTable, outputCitizenCharterThreeTableLoader, "citizenCharterThreeTableLoader-Id");
@@ -19,6 +19,6 @@ function controllerSearchArea(){
 	submitRequestOverallStronglyDisagree(outputOverallStronglyDisagreeLineChart, outputOverallStronglyDisagreeLineChartLoader, "overallStronglyDisagreeLineChartLoader-Id");
 	submitRequestOverallNoRating(outputOverallNoRatingLineChart, outputOverallNoRatingLineChartLoader, "overallNoRatingLineChartLoader-Id");
 	submitRequestAvailedOfficeService(outputAvailedOfficeServiceChart, outputAvailedOfficeServiceLoader, "availedOfficeServiceLoader-Id");
-	
-	submitRequestCommentDetails(outputCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");	
+
+	submitRequestCommentDetails(outputCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");
 }

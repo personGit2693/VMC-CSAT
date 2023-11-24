@@ -8,6 +8,7 @@ let blockRequest = false;
 /*Export variables*/
 
 
+/*Submit function*/
 function submitRequestOverallStronglyDisagree(renderer_Param, loader_Param, boxLoader_Id){
 	
 	if(blockRequest === false){
@@ -19,7 +20,11 @@ function submitRequestOverallStronglyDisagree(renderer_Param, loader_Param, boxL
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
-				document.getElementById(boxLoader_Id).remove();	
+				if(document.getElementById(boxLoader_Id) !== null){
+					
+					document.getElementById(boxLoader_Id).remove();
+				}
+					
 				valueOverallStronglyDisagree();
 				renderer_Param();
 				blockRequest = false;					
@@ -27,6 +32,8 @@ function submitRequestOverallStronglyDisagree(renderer_Param, loader_Param, boxL
 		});
 	}
 }
+/*Submit function*/
+
 
 /*Declaire global*/
 window.submitRequestOverallStronglyDisagree = submitRequestOverallStronglyDisagree;
