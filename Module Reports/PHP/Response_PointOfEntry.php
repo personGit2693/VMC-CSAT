@@ -6,7 +6,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
-if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
+if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST["startIn"]) && isset($_POST["maxDisplayRow"])){
 	/*Required Files*/
 	require_once "../../Global PHP/Connection.php";
 	require_once "../../Global PHP/CheckGlobalToken_Class.php";
@@ -15,7 +15,9 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 
 	/*Query string*/
 	$token = $_POST["token"];
-	$searchPointOfEntry = $_POST["searchPointOfEntry"];		
+	$searchPointOfEntry = $_POST["searchPointOfEntry"];
+	$startIn = $_POST["startIn"];
+	$maxDisplayRow = $_POST["maxDisplayRow"];		
 	/*Query string*/
 
 
@@ -71,7 +73,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 			";
 		}
 
-		$getPointOfEntry_Query .= " ORDER BY office_value;"; 							
+		$getPointOfEntry_Query .= " ORDER BY office_value LIMIT :startIn, :maxDisplayRow;"; 							
 		/*_Prep query*/
 
 		/*_Execute query*/
@@ -80,6 +82,8 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 		if(!empty($searchPointOfEntry)){
 			$getPointOfEntry_QueryObj->bindValue(':searchPointOfEntry', '%'.$searchPointOfEntry.'%', PDO::PARAM_STR);
 		}
+		$getPointOfEntry_QueryObj->bindValue(':startIn', intval($startIn), PDO::PARAM_INT);
+		$getPointOfEntry_QueryObj->bindValue(':maxDisplayRow', intval($maxDisplayRow), PDO::PARAM_INT);
 
 		$execution = $getPointOfEntry_QueryObj->execute();
 		/*_Execute query*/
@@ -103,7 +107,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"])){
 		/*_Return response*/
 	}
 	/*Valid global token*/
-}else if(!isset($_POST["token"]) || !isset($_POST["searchPointOfEntry"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["searchPointOfEntry"]) || !isset($_POST["startIn"]) || !isset($_POST["maxDisplayRow"])){
 	$getPointOfEntry_Resp = new stdClass();
 	$getPointOfEntry_Resp->execution = null;
 	$getPointOfEntry_Resp->globalTokenResult = null;

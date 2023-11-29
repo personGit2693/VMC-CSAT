@@ -9,7 +9,7 @@ function DataOneTable(){
 	let dataOneTable = "";
 
 	if(dataOne_Array.length > 0){
-		dataOneTable += `<button class="normButton_RoClass" onclick="controllerDataOneTable(this)">Download as Excel File</button>`+
+		dataOneTable += `<button class="normButton_RoClass" onclick="controllerDownloadAsExcelButton(this)">Download as Excel File</button>`+
 			`<table>`+
 				`<thead>`+
 					`<tr>`+

@@ -4,6 +4,7 @@ export const checkboxFilterExternal = document.getElementById("checkboxFilterExt
 export const dateRangeOne = document.getElementById("dateRangeOne-Id");
 export const dateRangeOneCalLiteFromVal = document.getElementById("dateRangeOneCalLiteFromVal-Id");
 export const dateRangeOneCalLiteToVal = document.getElementById("dateRangeOneCalLiteToVal-Id");
+export const pointOfEntryOptsWrap = document.getElementById("pointOfEntryOptsWrap");
 export const pointOfEntryOptsArea = document.getElementById("pointOfEntryOptsArea-Id");
 export const searchPointOfEntry = document.getElementById("searchPointOfEntry-Id");
 export const selDropOfficeValue = document.getElementById("selDropOfficeValue-Id");

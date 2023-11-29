@@ -1,5 +1,5 @@
 /*Import*/
-import {selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Module_Reports.js";
+import {pointOfEntryOptsArea, selDropOfficeValue, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal, dateRangeOne, checkboxFilterInternal, checkboxFilterExternal} from "./JSCollection_Module_Reports.js";
 import {dataOne_Array} from "../Module Reports/JS/Request_DataOne.js";
 import {ccDataTwo_Array} from "../Module Reports/JS/Request_CcDataTwo.js";
 import {questionsDataTwo_Array} from "../Module Reports/JS/Request_QuestionsDataTwo.js";
@@ -8,7 +8,7 @@ import renderDataTwoTable from "../Module Reports/JS/View_DataTwoTable.js";
 
 
 /*Prep variables*/
-
+var searchPointOfEntryPage  = 1;
 /*Prep variables*/
 
 
@@ -19,10 +19,32 @@ var clientTypeExternal = 2;
 var selectedOffice_Obj = {office_id:0};
 
 var dataTwo_Array = [];
+
+var searchPointOfEntryStartIndex  = 0;
+var searchPointOfEntryDisplay  = 10;
 /*Prep export variables*/
 
 
 /*Assign values*/
+
+/*_Reset value of searchPointOfEntryPage, searchPointOfEntryStartIndex and empty the child of pointOfEntryOptsArea*/
+function valueResetSearchPointOfEntry(){
+
+	searchPointOfEntryPage = 1;
+	searchPointOfEntryStartIndex = 0;
+	pointOfEntryOptsArea.innerHTML = "";
+}
+/*_Reset value of searchPointOfEntryPage, searchPointOfEntryStartIndex and empty the child of pointOfEntryOptsArea*/
+
+
+/*_Assign value searchPointOfEntryStartIndex and increment searchPointOfEntryPage*/
+function valuePointOfEntryOptStartIndex(){
+
+	searchPointOfEntryPage++;
+	searchPointOfEntryStartIndex = (searchPointOfEntryPage - 1) * searchPointOfEntryDisplay;
+}
+/*_Assign value searchPointOfEntryStartIndex and increment searchPointOfEntryPage*/
+
 
 /*_Assign value for dataTwo_Array*/
 function valueDataTwo(){
@@ -160,5 +182,5 @@ window.valueDataTwo = valueDataTwo;
 
 
 /*Export*/
-export {dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
+export {valuePointOfEntryOptStartIndex, valueResetSearchPointOfEntry, searchPointOfEntryDisplay, searchPointOfEntryStartIndex, dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
 /*Export*/

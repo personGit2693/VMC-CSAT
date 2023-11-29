@@ -6,7 +6,7 @@ import PointOfEntryOption from "./Component_PointOfEntryOption.js";
 
 /*Render*/
 function renderPointOfEntryOption(){
-	pointOfEntryOptsArea.innerHTML = PointOfEntryOption();
+	pointOfEntryOptsArea.innerHTML += PointOfEntryOption();
 }
 /*Render*/
 

@@ -1,19 +1,20 @@
 /*Import*/
 import {searchPointOfEntry} from "../../Global JS/JSCollection_Module_Reports.js";
 import {requestPointOfEntry} from "./Request_PointOfEntry.js";
+import {searchPointOfEntryStartIndex, searchPointOfEntryDisplay} from "../../Global JS/Values_Module_Reports.js";
 /*Import*/
 
 
 /*Gateway*/
-/*const functions_Array = [outputPointOfEntryOption];*/
-
 async function gatewayPointOfEntry(){
 
 	const gatewayPromise = new Promise(function(resolve){		
 
-		requestPointOfEntry(searchPointOfEntry.value)
+		requestPointOfEntry(searchPointOfEntry.value, searchPointOfEntryStartIndex, searchPointOfEntryDisplay)
 		.then((requestPromise) => {
+
 			if(requestPromise === true){
+
 				resolve(true);
 			}
 		});

@@ -250,7 +250,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
-						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;">
+						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controllerPointOfEntryScroll(this)">
 							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controllerPointOfEntrySearch()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
@@ -286,7 +286,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<!--_ _ _Date Range-->
 							<!--_ _ _Date Range Calendar Lite Wrap-->
 							<div class="dateRangeCalLiteWrap_RoClass">
-								<!--_ _ _ _Date Range Calendar Lite To-->						
+								<!--_ _ _ _Date Range Calendar Lite From-->						
 								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass dateRangeOnePageCsatReports-Class" id="dateRangeOneCalLiteFrom">
 									<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass" id="dateRangeOneCalLiteFromVal-Id">
 									<div class="calLiteHead_RoClass">
@@ -337,7 +337,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 										</div>
 									</div>
 								</div>
-								<!--_ _ _ _Date Range Calendar Lite To-->
+								<!--_ _ _ _Date Range Calendar Lite From-->
 
 								<!--_ _ _ _Date Range Calendar Lite To-->
 								<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass dateRangeOnePageCsatReports-Class" id="dateRangeOneCalLiteTo">
@@ -583,13 +583,17 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_DataOneTable.js"></script>
 		<script type="module" src="../JS/Renderer_DataTwoTable.js"></script>
 		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
+		<script type="module" src="../JS/Renderer_TableReportsLoader.js"></script>
+		<script type="module" src="../JS/Renderer_PointOfEntryOptionLoader.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->		
 		<script type="module" src="../JS/Controller_ReportsTopNavigation.js"></script>
-		<script type="text/javascript" src="../JS/Controller_PointOfEntrySearch.js"></script>
+		<script type="module" src="../JS/Controller_PointOfEntrySearch.js"></script>
 		<script type="text/javascript" src="../JS/Controller_PointOfEntryOption.js"></script>
-		<script type="text/javascript" src="../JS/Controller_DataOneTable.js"></script>	
+		<script type="text/javascript" src="../JS/Controller_DownloadAsExcelButton.js"></script>			
+		<script type="module" src="../JS/Controller_SearchArea.js"></script>
+		<script type="module" src="../JS/Controller_PointOfEntryScroll.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->
@@ -600,10 +604,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Gateway-->	
 		
 		<!--_Submit Request Holder-->		
-		<script type="text/javascript" src="../JS/SubmitRequest_PointOfEntry.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_DataOne.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_CcDataTwo.js"></script>
-		<script type="text/javascript" src="../JS/SubmitRequest_QuestionsDataTwo.js"></script>
+		<script type="module" src="../JS/SubmitRequest_PointOfEntry.js"></script>
+		<script type="module" src="../JS/SubmitRequest_DataOne.js"></script>
+		<script type="module" src="../JS/SubmitRequest_CcDataTwo.js"></script>
+		<script type="module" src="../JS/SubmitRequest_QuestionsDataTwo.js"></script>
 		<!--_Submit Request Holder-->
 		
 		<!--_Executor-->	

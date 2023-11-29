@@ -20,15 +20,10 @@ valueDateRangeOne();
 
 
 /*Populate point of entry dropdown menu*/
-submitRequestPointOfEntry(outputPointOfEntryOption);
+controllerPointOfEntrySearch();
 /*Populate point of entry dropdown menu*/
 
 
-/*Get data one*/
-submitRequestDataOne(outputDataOneTable);
-/*Get data one*/
-
-
-/*Get Data Two*/
-submitRequestCcDataTwo();
-/*Get Data Two*/
+/*Get data one, data two*/
+controllerSearchArea();
+/*Get data one, data two*/

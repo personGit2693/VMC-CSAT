@@ -15,7 +15,7 @@ var pointOfEntry_Array = [];
 
 
 /*Get Point Of Entry*/
-async function requestPointOfEntry(searchPointOfEntry){
+async function requestPointOfEntry(searchPointOfEntry, searchPointOfEntryStartIndex, searchPointOfEntryDisplay){
 	
 	const requestPromise = new Promise(function(resolve){	
 
@@ -45,7 +45,9 @@ async function requestPointOfEntry(searchPointOfEntry){
 		}
 
 		const queryString = "token="+token+
-		"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry);
+		"&searchPointOfEntry="+encodeURIComponent(searchPointOfEntry)+
+		"&startIn="+searchPointOfEntryStartIndex+
+		"&maxDisplayRow="+searchPointOfEntryDisplay;
 
 		httpRequest.open("POST", "Response_PointOfEntry.php", true);
 		httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
