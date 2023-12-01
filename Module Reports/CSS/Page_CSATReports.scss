@@ -1061,6 +1061,10 @@
 
 	.selectDropdownOpt_RoClass{
 		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Mobile_Style;
 	}	
 	/*Select Dropdown*/
 }
@@ -1125,6 +1129,10 @@
 
 	.selectDropdownOpt_RoClass{
 		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Tablet_Style;
 	}	
 	/*Select Dropdown*/
 }
@@ -1189,6 +1197,10 @@
 
 	.selectDropdownOpt_RoClass{
 		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Laptop_Style;
 	}	
 	/*Select Dropdown*/
 }
@@ -1253,6 +1265,10 @@
 
 	.selectDropdownOpt_RoClass{
 		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Desktop_Style;
 	}	
 	/*Select Dropdown*/
 }

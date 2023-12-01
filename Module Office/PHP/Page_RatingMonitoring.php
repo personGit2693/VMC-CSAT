@@ -260,6 +260,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '180px')">
 							<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
 							<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
+							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controllerSearchPointOfEntryResetButton(), controllerSearchArea()"></div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
 						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="valuePointOfEntryDeep(this)">
@@ -584,13 +585,13 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Renderer_PointOfEntryOptionLoader.js"></script>
 		<script type="module" src="../JS/Renderer_RespondentValLoader.js"></script>
 		<script type="module" src="../JS/Renderer_QuestionsTableLoader.js"></script>
-		<script type="module" src="../JS/SubmitRequest_TotalRespondent.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->
 		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
 		<script type="text/javascript" src="../JS/Controller_SearchPointOfEntry.js"></script>
 		<script type="module" src="../JS/Controller_Bookmark.js"></script>
+		<script type="module" src="../JS/Controller_SearchPointOfEntryResetButton.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->

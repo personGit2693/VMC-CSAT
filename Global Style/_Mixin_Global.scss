@@ -765,6 +765,22 @@
 }
 /*_ _ selectDropdownOptionsWrap_RoClass*/
 
+
+/*_ _displayedSelectedResetBtn_RoClass*/
+@mixin selectDropdownResetBtnSize_Mobile_Style{
+	--selectDropdownResetBtnSize: 23px; /*To be changed*/
+}
+@mixin selectDropdownResetBtnSize_Tablet_Style{
+	--selectDropdownResetBtnSize: 23px; /*To be changed*/
+}
+@mixin selectDropdownResetBtnSize_Laptop_Style{
+	--selectDropdownResetBtnSize: 25px; /*changed*/
+}
+@mixin selectDropdownResetBtnSize_Desktop_Style{
+	--selectDropdownResetBtnSize: 27px; /*changed*/
+}
+/*_ _displayedSelectedResetBtn_RoClass*/
+
 /*_ Select Dropdown*/
 
 

@@ -511,6 +511,10 @@
 
 	.displayedSelectedChevron_RoClass{
 		@include selectDropdownChevronSize_MT_Style;
+	}
+
+	.displayedSelectedFlex_RoClass .displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Mobile_Style;
 	}	
 
 	#dateRangeOneItemWrap{
@@ -596,6 +600,10 @@
 		@include selectDropdownChevronSize_MT_Style;
 	}
 
+	.displayedSelectedFlex_RoClass .displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Tablet_Style;
+	}
+
 	#dateRangeOneItemWrap{
 		@include dateRangeOneItemWrap_TLD_Style;
 	}
@@ -679,6 +687,10 @@
 		@include selectDropdownChevronSize_MT_Style;
 	}
 
+	.displayedSelectedFlex_RoClass .displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Laptop_Style;
+	}
+
 	#dateRangeOneItemWrap{
 		@include dateRangeOneItemWrap_TLD_Style;
 	}
@@ -760,6 +772,10 @@
 
 	.displayedSelectedChevron_RoClass{
 		@include selectDropdownChevronSize_MT_Style;
+	}
+
+	.displayedSelectedFlex_RoClass .displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Desktop_Style;
 	}
 
 	#dateRangeOneItemWrap{

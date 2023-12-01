@@ -27,6 +27,14 @@ var searchPointOfEntryDisplay  = 10;
 
 /*Assign values*/
 
+
+/*Reset value of selectedOffice_Obj*/
+function valueResetSelectedOfficeObj(){
+	selectedOffice_Obj = {office_id:0};
+}
+/*Reset value of selectedOffice_Obj*/
+
+
 /*_Reset value of searchPointOfEntryPage, searchPointOfEntryStartIndex and empty the child of pointOfEntryOptsArea*/
 function valueResetSearchPointOfEntry(){
 
@@ -166,7 +174,7 @@ function valueClientTypeExternal(){
 
 /*_Assign value for selectedOffice_Obj*/
 function valueSelectedOfficeObj(){
-	selectedOffice_Obj = JSON.parse(atob(selDropOfficeValue.value));	
+	selectedOffice_Obj = JSON.parse(atob(selDropOfficeValue.value));
 }
 /*_Assign value for selectedOffice_Obj*/
 
@@ -176,11 +184,10 @@ function valueSelectedOfficeObj(){
 /*Declare global*/
 window.valueClientTypeInternal = valueClientTypeInternal;
 window.valueClientTypeExternal = valueClientTypeExternal;
-window.valueSelectedOfficeObj = valueSelectedOfficeObj;
 window.valueDataTwo = valueDataTwo;
 /*Declare global*/
 
 
 /*Export*/
-export {valuePointOfEntryOptStartIndex, valueResetSearchPointOfEntry, searchPointOfEntryDisplay, searchPointOfEntryStartIndex, dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
+export {valueSelectedOfficeObj, valueResetSelectedOfficeObj, valuePointOfEntryOptStartIndex, valueResetSearchPointOfEntry, searchPointOfEntryDisplay, searchPointOfEntryStartIndex, dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
 /*Export*/

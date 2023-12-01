@@ -77,6 +77,8 @@
 /*_ _ selectDropdownOpt_RoClass*/
 /*_ _ selectDropdownOptionsWrap_RoClass*/
 /*_ _ selectDropdownOptionsWrap_RoClass*/
+/*_ _displayedSelectedResetBtn_RoClass*/
+/*_ _displayedSelectedResetBtn_RoClass*/
 /*_ Select Dropdown*/
 /*_Box Loader*/
 /*_ _boxLoaderIcon_RoClass*/
@@ -1619,6 +1621,20 @@ button.iconBtn_RoClass {
   font-size: var(--selectDropdownFSize);
   color: var(--selectDropdownFColor);
   margin-left: 4px; }
+
+.selectDropdownWrap_RoClass .displayedSelectedResetBtn_RoClass {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--selectDropdownResetBtnIcon);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownResetBtnSize);
+  height: var(--selectDropdownResetBtnSize);
+  flex-shrink: 0; }
 
 .selectDropdownWrap_RoClass .displayedSelectedChevron_RoClass {
   position: relative;
@@ -4768,6 +4784,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --hoverOptBgColor: #8394B8;
     --hoverOptFColor: #285FF3; }
 
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 23px;
+    /*To be changed*/ }
+
   /*Select Dropdown*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -4838,6 +4858,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .selectDropdownOpt_RoClass {
     --hoverOptBgColor: #8394B8;
     --hoverOptFColor: #285FF3; }
+
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 23px;
+    /*To be changed*/ }
 
   /*Select Dropdown*/ }
 /*Tablet*/
@@ -4910,6 +4934,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --hoverOptBgColor: #8394B8;
     --hoverOptFColor: #285FF3; }
 
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 25px;
+    /*changed*/ }
+
   /*Select Dropdown*/ }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -4980,6 +5008,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   .selectDropdownOpt_RoClass {
     --hoverOptBgColor: #8394B8;
     --hoverOptFColor: #285FF3; }
+
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 27px;
+    /*changed*/ }
 
   /*Select Dropdown*/ }
 /*Desktop*/

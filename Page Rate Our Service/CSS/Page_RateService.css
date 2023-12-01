@@ -1620,6 +1620,20 @@ button.iconBtn_RoClass {
   color: var(--selectDropdownFColor);
   margin-left: 4px; }
 
+.selectDropdownWrap_RoClass .displayedSelectedResetBtn_RoClass {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--selectDropdownResetBtnIcon);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownResetBtnSize);
+  height: var(--selectDropdownResetBtnSize);
+  flex-shrink: 0; }
+
 .selectDropdownWrap_RoClass .displayedSelectedChevron_RoClass {
   position: relative;
   box-sizing: border-box;

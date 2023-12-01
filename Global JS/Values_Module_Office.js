@@ -87,6 +87,13 @@ var availedOfficeServiceData_Array = [
 /*Prep export variables*/
 
 
+/*Reset value of selectedOffice_Obj*/
+function valueResetSelectedOfficeObj(){
+	selectedOffice_Obj = {office_id:0};
+}
+/*Reset value of selectedOffice_Obj*/
+
+
 /*Reset value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
 function valueResetSearchPointOfEntry(){
 	
@@ -367,5 +374,5 @@ window.valuePointOfEntryDeep = valuePointOfEntryDeep;
 
 
 /*Export*/
-export {pointOfEntryOptDisplay, pointOfEntryOptStartIndex, commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {valueResetSelectedOfficeObj, pointOfEntryOptDisplay, pointOfEntryOptStartIndex, commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/

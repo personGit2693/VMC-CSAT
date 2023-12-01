@@ -30,7 +30,7 @@ async function requestDataOne(officeId, dateFrom, dateTo){
 						alert(httpResponse.globalTokenResult);
 					}else if(httpResponse.execution !== true){
 						alert("Getting Data One Report execution problem!");				
-					}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
+					}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){						
 						dataOne_Array = httpResponse.dataOne_Array;
 						resolve(true);
 					}
