@@ -10,6 +10,7 @@ async function gatewayGenerateOfficeCode(officeId){
 
 		requestGenerateOfficeCode(officeId)
 		.then(requestPromise => {
+			
 			if(requestPromise === true){
 
 				if(generatedOfficeCode != null && generatedOfficeCode != ""){

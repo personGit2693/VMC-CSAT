@@ -1,5 +1,5 @@
 /*Import*/
-import gatewayCitizenCharterThreeScores "./Gateway_CitizenCharterThreeScores.js";
+import gatewayCitizenCharterThreeScores from "./Gateway_CitizenCharterThreeScores.js";
 /*Import*/
 
 

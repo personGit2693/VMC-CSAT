@@ -10,7 +10,9 @@ async function gatewayCommentDetails(officeId, clientTypeInternal, clientTypeExt
 		
 		requestCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay)
 		.then(requestPromise => {
+
 			if(requestPromise === true){
+				
 				resolve(true);
 			}
 		});	

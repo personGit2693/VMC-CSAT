@@ -8,7 +8,7 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id, requiredFunction, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
+function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
@@ -25,7 +25,7 @@ function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id, r
 				}
 
 				
-				requiredFunction();
+				assignValue();
 				renderer_Param();						
 				blockRequest = false;
 			}

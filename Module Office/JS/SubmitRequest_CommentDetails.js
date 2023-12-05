@@ -16,7 +16,7 @@ function submitRequestCommentDetails(renderer_Param, loader_Param, boxLoader_Id,
 		blockRequest = true;
 		loader_Param();		
 
-		gatewayCommentDetails()
+		gatewayCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay)
 		.then(gatewayPromise => {		
 
 			if(gatewayPromise === true){

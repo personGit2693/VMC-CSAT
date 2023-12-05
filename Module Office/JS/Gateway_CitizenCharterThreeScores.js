@@ -10,6 +10,7 @@ async function gatewayCitizenCharterThreeScores(officeId, clientTypeInternal, cl
 
 		requestCitizenCharterThreeScores(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(requestPromise => {
+			
 			if(requestPromise === true){
 				
 				resolve(true);

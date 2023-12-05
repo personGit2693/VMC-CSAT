@@ -8,7 +8,7 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallDisagree(renderer_Param, loader_Param, boxLoader_Id, requiredFunction, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
+function submitRequestOverallDisagree(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -24,7 +24,7 @@ function submitRequestOverallDisagree(renderer_Param, loader_Param, boxLoader_Id
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				requiredFunction();
+				assignValue();
 				renderer_Param();
 				blockRequest = false;			
 			}

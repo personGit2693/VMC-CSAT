@@ -9,7 +9,7 @@ let blockRequest = false;
 
 
 /*Submit function*/
-function submitRequestAvailedOfficeService(renderer_Param, loader_Param, boxLoader_Id, valueAvailedOfficeService, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
+function submitRequestAvailedOfficeService(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
@@ -26,7 +26,7 @@ function submitRequestAvailedOfficeService(renderer_Param, loader_Param, boxLoad
 					document.getElementById(boxLoader_Id).remove();
 				}
 				
-				valueAvailedOfficeService();				
+				assignValue();				
 				renderer_Param();			
 				blockRequest = false;
 			}

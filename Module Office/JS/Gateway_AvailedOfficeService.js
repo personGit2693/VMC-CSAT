@@ -12,6 +12,7 @@ async function gatewayAvailedOfficeService(officeId, clientTypeInternal, clientT
 		.then(requestPromise => {
 
 			if(requestPromise === true){
+				
 				resolve(true);
 			}
 		});	
