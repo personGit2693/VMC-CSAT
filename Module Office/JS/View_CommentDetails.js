@@ -5,7 +5,7 @@ import CommentDetails from "./Component_CommentDetails.js";
 
 
 /*Render*/
-function renderCommentDetails(){
+function viewCommentDetails(){
 
 	commentSectionWrap.innerHTML = CommentDetails();
 }
@@ -13,5 +13,5 @@ function renderCommentDetails(){
 
 
 /*Export*/
-export default renderCommentDetails;
+export default viewCommentDetails;
 /*Export*/

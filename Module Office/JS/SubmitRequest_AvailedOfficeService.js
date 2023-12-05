@@ -9,22 +9,26 @@ let blockRequest = false;
 
 
 /*Submit function*/
-function submitRequestAvailedOfficeService(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestAvailedOfficeService(renderer_Param, loader_Param, boxLoader_Id, valueAvailedOfficeService, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayAvailedOfficeService()
+		gatewayAvailedOfficeService(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 
-			if(gatewayPromise === true){
+			if(gatewayPromise === true){				
 
-				valueAvailedOfficeService();
-				document.getElementById(boxLoader_Id).remove();
-				blockRequest = false;
+				if(document.getElementById(boxLoader_Id) !== null){
+					
+					document.getElementById(boxLoader_Id).remove();
+				}
+				
+				valueAvailedOfficeService();				
 				renderer_Param();			
+				blockRequest = false;
 			}
 		});
 	}
@@ -38,5 +42,5 @@ window.submitRequestAvailedOfficeService = submitRequestAvailedOfficeService;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestAvailedOfficeService, blockRequest};
 /*Export*/

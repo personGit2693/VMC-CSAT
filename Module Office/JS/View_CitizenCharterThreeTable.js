@@ -5,12 +5,12 @@ import CitizenCharterThreeTable from "./Component_CitizenCharterThreeTable.js";
 
 
 /*Render*/
-function renderCitizenCharterThreeTable(){
+function viewCitizenCharterThreeTable(){
 	cc3TabWrap.innerHTML = CitizenCharterThreeTable();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderCitizenCharterThreeTable;
+export default viewCitizenCharterThreeTable;
 /*Export*/

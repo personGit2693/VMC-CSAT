@@ -5,7 +5,7 @@ import OverallStronglyAgreeLineChartLoader from "./Component_OverallStronglyAgre
 
 
 /*Render*/
-function renderOverallStronglyAgreeLineChartLoader(){
+function viewOverallStronglyAgreeLineChartLoader(){
 
 	overallStronglyAgreeLineChartWrap.innerHTML = OverallStronglyAgreeLineChartLoader();
 }
@@ -13,5 +13,5 @@ function renderOverallStronglyAgreeLineChartLoader(){
 
 
 /*Export*/
-export default renderOverallStronglyAgreeLineChartLoader;
+export default viewOverallStronglyAgreeLineChartLoader;
 /*Export*/

@@ -5,12 +5,12 @@ import AppendCommentDetails from "./Component_AppendCommentDetails.js";
 
 
 /*Render*/
-function renderAppendCommentDetails(){
+function viewAppendCommentDetails(){
 	commentSectionWrap.innerHTML += AppendCommentDetails();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderAppendCommentDetails;
+export default viewAppendCommentDetails;
 /*Export*/

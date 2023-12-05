@@ -39,5 +39,5 @@ window.submitRequestCountPassScore = submitRequestCountPassScore;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestCountPassScore, blockRequest};
 /*Export*/

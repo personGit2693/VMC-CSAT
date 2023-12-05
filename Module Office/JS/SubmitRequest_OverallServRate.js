@@ -1,5 +1,5 @@
 /*Import*/
-
+import {valueOverallServRate} from "../../Global JS/Values_Module_Office.js";
 /*Import*/
 
 
@@ -39,5 +39,5 @@ window.submitRequestOverallServRate = submitRequestOverallServRate;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestOverallServRate, blockRequest};
 /*Export*/

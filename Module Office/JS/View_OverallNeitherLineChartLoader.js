@@ -5,7 +5,7 @@ import OverallNeitherLineChartLoader from "./Component_OverallNeitherLineChartLo
 
 
 /*Render*/
-function renderOverallNeitherLineChartLoader(){
+function viewOverallNeitherLineChartLoader(){
 
 	overallNeitherLineChartWrap.innerHTML = OverallNeitherLineChartLoader();
 }
@@ -13,5 +13,5 @@ function renderOverallNeitherLineChartLoader(){
 
 
 /*Export*/
-export default renderOverallNeitherLineChartLoader;
+export default viewOverallNeitherLineChartLoader;
 /*Export*/

@@ -5,7 +5,7 @@ import CitizenCharterOneTableLoader from "./Component_CitizenCharterOneTableLoad
 
 
 /*Render*/
-function renderCitizenCharterOneTableLoader(){
+function viewCitizenCharterOneTableLoader(){
 
 	cc1TabWrap.innerHTML = CitizenCharterOneTableLoader();
 }
@@ -13,5 +13,5 @@ function renderCitizenCharterOneTableLoader(){
 
 
 /*Export*/
-export default renderCitizenCharterOneTableLoader;
+export default viewCitizenCharterOneTableLoader;
 /*Export*/

@@ -5,12 +5,12 @@ import OverallEngagementVal from "./Component_OverallEngagementVal.js";
 
 
 /*Render*/
-function renderOverallEngagementVal(){
+function viewOverallEngagementVal(){
 	overallEngagementVal.innerHTML = OverallEngagementVal();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderOverallEngagementVal;
+export default viewOverallEngagementVal;
 /*Export*/

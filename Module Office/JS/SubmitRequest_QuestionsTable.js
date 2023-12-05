@@ -41,5 +41,5 @@ window.submitRequestQuestionsTable = submitRequestQuestionsTable;
 
 
 /*Export*/
-export {blockRequest};
+export {blockRequest, submitRequestQuestionsTable};
 /*Export*/

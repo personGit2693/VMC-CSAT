@@ -5,12 +5,12 @@ import CitizenCharterOneTable from "./Component_CitizenCharterOneTable.js";
 
 
 /*Render*/
-function renderCitizenCharterOneTable(){
+function viewCitizenCharterOneTable(){
 	cc1TabWrap.innerHTML = CitizenCharterOneTable();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderCitizenCharterOneTable;
+export default viewCitizenCharterOneTable;
 /*Export*/

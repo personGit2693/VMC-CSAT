@@ -22,6 +22,7 @@ async function requestCommentDetails(officeId, clientTypeInternal, clientTypeExt
 		httpRequest.onload = function(){
 			if(httpRequest.status == 200){
 				try{
+
 					httpResponse = JSON.parse(httpRequest.responseText);
 
 					if(httpResponse.serverConnection !== null){

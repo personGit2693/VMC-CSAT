@@ -36,4 +36,4 @@ How to add
 [0][] = [1][1]
 
 Remove 2023-VMCCSAT-92685912741
-edit comment with "á" character
+edit comment with "á" and "Ã" and "à" character

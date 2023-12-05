@@ -1,5 +1,5 @@
 /*Import*/
-
+import {valueOverallStronglyAgree} from "../../Global JS/Values_Module_Office.js";
 /*Import*/
 
 
@@ -42,5 +42,5 @@ window.submitRequestOverallStronglyAgree = submitRequestOverallStronglyAgree;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestOverallStronglyAgree, blockRequest};
 /*Export*/

@@ -1,5 +1,5 @@
 /*Import*/
-
+import {valueOverallNoRating} from "../../Global JS/Values_Module_Office.js";
 /*Import*/
 
 
@@ -39,5 +39,5 @@ window.submitRequestOverallNoRating = submitRequestOverallNoRating;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestOverallNoRating, blockRequest};
 /*Export*/

@@ -1,5 +1,5 @@
 /*Import*/
-
+import {valueOverallNeither} from "../../Global JS/Values_Module_Office.js";
 /*Import*/
 
 
@@ -39,5 +39,5 @@ window.submitRequestOverallNeither = submitRequestOverallNeither;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestOverallNeither, blockRequest};
 /*Export*/

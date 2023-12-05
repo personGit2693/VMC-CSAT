@@ -12,13 +12,11 @@ function submitGenerateOfficeCode(){
 	
 	if(blockRequest === false){
 
-		showSpinningLoad();
-
 		gatewayGenerateOfficeCode()
 		.then(gatewayPromise => {
+			
 			if(gatewayPromise === true){
 
-				removeSpinningLoad();
 				blockRequest = false;
 			}
 		});	
@@ -32,5 +30,5 @@ window.submitGenerateOfficeCode = submitGenerateOfficeCode;
 
 
 /*Export*/
-export {blockRequest};
+export {submitGenerateOfficeCode, blockRequest};
 /*Export*/

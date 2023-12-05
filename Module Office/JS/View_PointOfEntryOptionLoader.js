@@ -5,7 +5,7 @@ import PointOfEntryOptionLoader from "./Component_PointOfEntryOptionLoader.js";
 
 
 /*Render*/
-function renderPointOfEntryOptionLoader(){
+function viewPointOfEntryOptionLoader(){
 
 	pointOfEntryOptsArea.innerHTML += PointOfEntryOptionLoader();
 }
@@ -13,5 +13,5 @@ function renderPointOfEntryOptionLoader(){
 
 
 /*Export*/
-export default renderPointOfEntryOptionLoader;
+export default viewPointOfEntryOptionLoader;
 /*Export*/

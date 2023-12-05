@@ -5,7 +5,7 @@ import CommentSectionLoader from "./Component_CommentSectionLoader.js";
 
 
 /*Render*/
-function renderCommentSectionLoader(){
+function viewCommentSectionLoader(){
 
 	commentSectionWrap.innerHTML += CommentSectionLoader();
 }
@@ -13,5 +13,5 @@ function renderCommentSectionLoader(){
 
 
 /*Export*/
-export default renderCommentSectionLoader;
+export default viewCommentSectionLoader;
 /*Export*/

@@ -5,7 +5,7 @@ import OverallServRatePieChartLoader from "./Component_OverallServRatePieChartLo
 
 
 /*Render*/
-function renderOverallServRatePieChartLoader(){
+function viewOverallServRatePieChartLoader(){
 
 	overallServRatePieChartWrap.innerHTML = OverallServRatePieChartLoader();
 }
@@ -13,5 +13,5 @@ function renderOverallServRatePieChartLoader(){
 
 
 /*Export*/
-export default renderOverallServRatePieChartLoader;
+export default viewOverallServRatePieChartLoader;
 /*Export*/

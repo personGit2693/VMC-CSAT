@@ -5,7 +5,7 @@ import QuestionsTableLoader from "./Component_QuestionsTableLoader.js";
 
 
 /*Render*/
-function renderQuestionsTableLoader(){
+function viewQuestionsTableLoader(){
 	
 	questionsTabWrap.innerHTML = QuestionsTableLoader();
 }
@@ -13,5 +13,5 @@ function renderQuestionsTableLoader(){
 
 
 /*Export*/
-export default renderQuestionsTableLoader;
+export default viewQuestionsTableLoader;
 /*Export*/

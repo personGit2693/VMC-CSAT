@@ -5,7 +5,7 @@ import AvailedOfficeServiceLoader from "./Component_AvailedOfficeServiceLoader.j
 
 
 /*Render*/
-function renderAvailedOfficeServiceLoader(){
+function viewAvailedOfficeServiceLoader(){
 
 	availedOfficeServiceWrap.innerHTML = AvailedOfficeServiceLoader();
 }
@@ -13,5 +13,5 @@ function renderAvailedOfficeServiceLoader(){
 
 
 /*Export*/
-export default renderAvailedOfficeServiceLoader;
+export default viewAvailedOfficeServiceLoader;
 /*Export*/

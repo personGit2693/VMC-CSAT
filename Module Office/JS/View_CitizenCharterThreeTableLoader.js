@@ -5,7 +5,7 @@ import CitizenCharterThreeTableLoader from "./Component_CitizenCharterThreeTable
 
 
 /*Render*/
-function renderCitizenCharterThreeTableLoader(){
+function viewCitizenCharterThreeTableLoader(){
 
 	cc3TabWrap.innerHTML = CitizenCharterThreeTableLoader();
 }
@@ -13,5 +13,5 @@ function renderCitizenCharterThreeTableLoader(){
 
 
 /*Export*/
-export default renderCitizenCharterThreeTableLoader;
+export default viewCitizenCharterThreeTableLoader;
 /*Export*/

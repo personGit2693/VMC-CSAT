@@ -41,5 +41,5 @@ window.submitRequestCommentDetails = submitRequestCommentDetails;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestCommentDetails, blockRequest};
 /*Export*/

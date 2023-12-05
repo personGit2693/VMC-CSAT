@@ -1,5 +1,5 @@
 /*Import*/
-
+import {valueOverallStronglyDisagree} from "../../Global JS/Values_Module_Office.js";
 /*Import*/
 
 
@@ -41,5 +41,5 @@ window.submitRequestOverallStronglyDisagree = submitRequestOverallStronglyDisagr
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestOverallStronglyDisagree, blockRequest};
 /*Export*/

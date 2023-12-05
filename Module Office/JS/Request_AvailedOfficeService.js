@@ -1,7 +1,4 @@
 /*Import*/
-//import {valueAvailedOfficeService, selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadAvailedOfficeServiceChart from "./Controller_AvailedOfficeService.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 

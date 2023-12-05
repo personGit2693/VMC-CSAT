@@ -5,7 +5,7 @@ import OverallEngagementValLoader from "./Component_OverallEngagementValLoader.j
 
 
 /*Render*/
-function renderOverallEngagementValLoader(){
+function viewOverallEngagementValLoader(){
 
 	overallEngagementVal.innerHTML = OverallEngagementValLoader();
 }
@@ -13,5 +13,5 @@ function renderOverallEngagementValLoader(){
 
 
 /*Export*/
-export default renderOverallEngagementValLoader;
+export default viewOverallEngagementValLoader;
 /*Export*/

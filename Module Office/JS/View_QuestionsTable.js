@@ -5,12 +5,12 @@ import QuestionsTable from "./Component_QuestionsTable.js";
 
 
 /*Render*/
-function renderQuestionsTable(){
+function viewQuestionsTable(){
 	questionsTabWrap.innerHTML = QuestionsTable();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderQuestionsTable;
+export default viewQuestionsTable;
 /*Export*/

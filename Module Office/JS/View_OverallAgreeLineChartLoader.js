@@ -5,7 +5,7 @@ import OverallAgreeLineChartLoader from "./Component_OverallAgreeLineChartLoader
 
 
 /*Render*/
-function renderOverallAgreeLineChartLoader(){
+function viewOverallAgreeLineChartLoader(){
 
 	overallAgreeLineChartWrap.innerHTML = OverallAgreeLineChartLoader();
 }
@@ -13,5 +13,5 @@ function renderOverallAgreeLineChartLoader(){
 
 
 /*Export*/
-export default renderOverallAgreeLineChartLoader;
+export default viewOverallAgreeLineChartLoader;
 /*Export*/

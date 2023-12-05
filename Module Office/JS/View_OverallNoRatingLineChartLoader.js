@@ -5,7 +5,7 @@ import OverallNoRatingLineChartLoader from "./Component_OverallNoRatingLineChart
 
 
 /*Render*/
-function renderOverallNoRatingLineChartLoader(){
+function viewOverallNoRatingLineChartLoader(){
 
 	overallNoRatingLineChartWrap.innerHTML = OverallNoRatingLineChartLoader();
 }
@@ -13,5 +13,5 @@ function renderOverallNoRatingLineChartLoader(){
 
 
 /*Export*/
-export default renderOverallNoRatingLineChartLoader;
+export default viewOverallNoRatingLineChartLoader;
 /*Export*/

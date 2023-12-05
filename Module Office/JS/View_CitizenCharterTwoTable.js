@@ -5,12 +5,12 @@ import CitizenCharterTwoTable from "./Component_CitizenCharterTwoTable.js";
 
 
 /*Render*/
-function renderCitizenCharterTwoTable(){
+function viewCitizenCharterTwoTable(){
 	cc2TabWrap.innerHTML = CitizenCharterTwoTable();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderCitizenCharterTwoTable;
+export default viewCitizenCharterTwoTable;
 /*Export*/

@@ -38,5 +38,5 @@ window.submitRequestTotalRespondent = submitRequestTotalRespondent;
 
 
 /*Export*/
-export {blockRequest};
+export {blockRequest, submitRequestTotalRespondent};
 /*Export*/

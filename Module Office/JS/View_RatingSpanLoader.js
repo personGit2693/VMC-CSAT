@@ -5,7 +5,7 @@ import RatingSpanLoader from "./Component_RatingSpanLoader.js";
 
 
 /*Render*/
-function renderRatingSpanLoader(){
+function viewRatingSpanLoader(){
 
 	pointOfEntryRating.innerHTML = RatingSpanLoader();
 }
@@ -13,5 +13,5 @@ function renderRatingSpanLoader(){
 
 
 /*Export*/
-export default renderRatingSpanLoader;
+export default viewRatingSpanLoader;
 /*Export*/

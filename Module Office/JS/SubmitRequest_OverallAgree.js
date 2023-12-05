@@ -1,5 +1,5 @@
 /*Import*/
-
+import {valueOverallAgree} from "../../Global JS/Values_Module_Office.js";
 /*Import*/
 
 
@@ -40,5 +40,5 @@ window.submitRequestOverallAgree = submitRequestOverallAgree;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestOverallAgree, blockRequest};
 /*Export*/

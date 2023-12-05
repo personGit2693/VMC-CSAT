@@ -5,7 +5,7 @@ import RespondentValLoader from "./Component_RespondentValLoader.js";
 
 
 /*Render*/
-function renderRespondentValLoader(){
+function viewRespondentValLoader(){
 	
 	respondentVal.innerHTML = RespondentValLoader();
 }
@@ -13,5 +13,5 @@ function renderRespondentValLoader(){
 
 
 /*Export*/
-export default renderRespondentValLoader;
+export default viewRespondentValLoader;
 /*Export*/

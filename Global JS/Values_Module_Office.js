@@ -95,7 +95,7 @@ function valueResetSelectedOfficeObj(){
 
 
 /*Reset value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
-function valueResetSearchPointOfEntry(){
+function valueResetSearchPointOfEntryOption(){
 	
 	pointOfEntryOptStartIndex = 0;
 	pointOfEntryOptPage = 1;
@@ -105,23 +105,18 @@ function valueResetSearchPointOfEntry(){
 
 
 /*Assign value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
-function valuePointOfEntryDeep(pointOfEntryOptsArea_Param){
+function valueSearchPointOfEntryOptStartIndex(){
+		
+	pointOfEntryOptPage++;
 
-	if((pointOfEntryOptsArea_Param.scrollTop + pointOfEntryOptsArea_Param.offsetHeight) >= pointOfEntryOptsArea_Param.scrollHeight){		
-			
-		pointOfEntryOptPage++;
-
-		pointOfEntryOptStartIndex = (pointOfEntryOptPage - 1) * pointOfEntryOptDisplay;			
-			
-		submitRequestPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id");
-	}
+	pointOfEntryOptStartIndex = (pointOfEntryOptPage - 1) * pointOfEntryOptDisplay;					
 
 }
 /*Assign value pointOfEntryOptStartIndex and pointOfEntryOptPage*/
 
 
 /*Reset value commentStartIndex and commentPage*/
-function valueResetCommentDeep(){
+function valueResetCommentSection(){
 	
 	commentStartIndex = 0;
 	commentPage = 1;
@@ -131,23 +126,18 @@ function valueResetCommentDeep(){
 
 
 /*Assign value commentStartIndex and commentPage*/
-function valueCommentDeep(commentSectionWrap_Param){
-		
-	if((commentSectionWrap_Param.scrollTop + commentSectionWrap_Param.offsetHeight) >= commentSectionWrap_Param.scrollHeight){		
-			
-		commentPage++;
+function valueCommentStartIndex(){
+					
+	commentPage++;
 
-		commentStartIndex = (commentPage - 1) * commentDisplay;			
-			
-		submitRequestCommentDetails(outputAppendCommentDetails, outputCommentSectionLoader, "commentSectionLoader-Id");
-	}
-	
+	commentStartIndex = (commentPage - 1) * commentDisplay;			
 }
 /*Assign value commentStartIndex and commentPage*/
 
 
 /*Assign value for selectedOffice_Obj*/
 function valueSelectedOfficeObj(){
+
 	selectedOffice_Obj = JSON.parse(atob(selDropOfficeValue.value));
 }
 /*Assign value for selectedOffice_Obj*/
@@ -179,6 +169,7 @@ function valueOverallServRate(){
 
 /*Assign value for checkboxFilterInternal and checkboxFilterExternal*/
 function valueCheckboxClientype(){
+
 	checkboxFilterInternal.checked = true;
 	checkboxFilterExternal.checked = true;
 	checkCusCheckBox(checkboxFilterInternal);
@@ -189,6 +180,7 @@ function valueCheckboxClientype(){
 
 /*Assign default value for dateRangeOneCalLiteFromVal and dateRangeOneCalLiteToVal (Filter Whole Month)*/
 function valueDateRangeOne(){
+
 	const todayDate = new Date();
 	let todayDateYear = todayDate.getFullYear();
 	let todayDateMonth = todayDate.getMonth()+1;
@@ -354,25 +346,6 @@ function valueAvailedOfficeService(){
 /*Assign value availedOfficeServiceData_Array*/
 
 
-/*Declare global*/
-window.valueClientTypeInternal = valueClientTypeInternal;
-window.valueClientTypeExternal = valueClientTypeExternal;
-window.valueSelectedOfficeObj = valueSelectedOfficeObj;
-window.valueOverallServRate = valueOverallServRate;
-window.valueOverallStronglyAgree = valueOverallStronglyAgree;
-window.valueOverallAgree = valueOverallAgree;
-window.valueOverallNeither = valueOverallNeither;
-window.valueOverallDisagree = valueOverallDisagree;
-window.valueOverallStronglyDisagree = valueOverallStronglyDisagree;
-window.valueOverallNoRating = valueOverallNoRating;
-window.valueAvailedOfficeService = valueAvailedOfficeService;
-window.valueCommentDeep = valueCommentDeep;
-window.valueResetCommentDeep = valueResetCommentDeep;
-window.valueResetSearchPointOfEntry = valueResetSearchPointOfEntry;
-window.valuePointOfEntryDeep = valuePointOfEntryDeep;
-/*Declare global*/
-
-
 /*Export*/
-export {valueResetSelectedOfficeObj, pointOfEntryOptDisplay, pointOfEntryOptStartIndex, commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
+export {valueCommentStartIndex, valueSelectedOfficeObj, valueSearchPointOfEntryOptStartIndex, valueResetSearchPointOfEntryOption, valueClientTypeExternal, valueResetCommentSection, valueClientTypeInternal, valueResetSelectedOfficeObj, pointOfEntryOptDisplay, pointOfEntryOptStartIndex, commentDisplay, commentStartIndex, valueAvailedOfficeService, availedOfficeServiceData_Array, selectedOffice_Obj, overallNoRatingData_Array, valueOverallNoRating, overallStronglyDisagreeData_Array, valueOverallStronglyDisagree, valueOverallDisagree, overallDisagreeData_Array, valueOverallNeither, overallNeitherData_Array, valueOverallAgree, valueCheckboxClientype, valueDateRangeOne, clientTypeInternal, clientTypeExternal, valueOverallServRate, overallServRateData_Array, valueOverallStronglyAgree, overallStronglyAgreeData_Array, overallAgreeData_Array};
 /*Export*/

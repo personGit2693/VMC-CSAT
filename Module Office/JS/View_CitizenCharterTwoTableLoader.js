@@ -5,7 +5,7 @@ import CitizenCharterTwoTableLoader from "./Component_CitizenCharterTwoTableLoad
 
 
 /*Render*/
-function renderCitizenCharterTwoTableLoader(){
+function viewCitizenCharterTwoTableLoader(){
 
 	cc2TabWrap.innerHTML = CitizenCharterTwoTableLoader();
 }
@@ -13,5 +13,5 @@ function renderCitizenCharterTwoTableLoader(){
 
 
 /*Export*/
-export default renderCitizenCharterTwoTableLoader;
+export default viewCitizenCharterTwoTableLoader;
 /*Export*/

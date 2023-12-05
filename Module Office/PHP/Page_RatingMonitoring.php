@@ -84,104 +84,35 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="generalNavMenuText_RoClass">Rating Monitoring</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png" /></div>
 					</div>
 					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass">
-						<a href="#chartsWrapper" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+						<a href="#chartsWrapper" class="subNavMenu_RoClass bookmark-Class" onclick="controller_Ahref_HightlightBookmark(this)">					
 							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/Bar Graph Black.png'); --activeSubNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Score Charts</span>
 						</a>
 
-						<a href="#questionsTabWrap-Id" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+						<a href="#questionsTabWrap-Id" class="subNavMenu_RoClass bookmark-Class" onclick="controller_Ahref_HightlightBookmark(this)">					
 							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/question list.png'); --activeSubNavMenuIcon:url('../../src/question list white.png')"></div>
 							<span class="generalNavMenuText_RoClass">Questions Rating</span>
 						</a>
 
-						<a href="#ccTabWrap" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+						<a href="#ccTabWrap" class="subNavMenu_RoClass bookmark-Class" onclick="controller_Ahref_HightlightBookmark(this)">					
 							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
 						</a>
 
-						<a href="#commentSectionTextWrap" class="subNavMenu_RoClass bookmark-Class" onclick="controllerBookmark(this)">					
+						<a href="#commentSectionTextWrap" class="subNavMenu_RoClass bookmark-Class" onclick="controller_Ahref_HightlightBookmark(this)">					
 							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeSubNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Comments</span>
 						</a>
-					</div>
-
-					<!--
-					<a href="#chartsWrapper" class="activeMainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Bar Graph Black.png'); --activeMainNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Scores Charts</span>
-					</a>
-
-					<a href="#questionsTabWrap-Id" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/question list.png'); --activeMainNavMenuIcon:url('../../src/question list white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Questions Rating</span>
-					</a>
-
-					<a href="#ccTabWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
-					</a>
-
-					<a href="#commentSectionTextWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class" onclick="controllerBookmark(this)">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeMainNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Comments</span>
-					</a>
-					-->
+					</div>					
 
 				<?php
 				if(in_array($accessLevels["reportsNav"], $accountAccess)){					
 				?>
-					<!--
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Setup Questions</span>
-					</a>
-					-->	
 
 					<a href="../../Module Reports/PHP/Page_CSATReports.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span>
-					</a>									
-					
-					<!--
-					<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
-					</div>
-					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">						
-						<a href="../../Page Reports/PHP/Page_HCESReports.php" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/CollatedData_Black.png'); --activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">HCES Reports</span>
-						</a>
-						
-						
-						<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-							<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Analysis</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
-						</div>
-						<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelTwo-Class">
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ResponsiveAnal_Black.png'); --activeSubNavMenuIcon:url('../../src/ResponsiveAnal_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Responsiveness Analysis</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Analysis Q1-Q7</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Analysis Q8-Q12</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Analysis Q3-Q28</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
-							</a>
-						</div>						
-					</div>
-					-->
+					</a>					
 				<?php
 				}
 				?>	
@@ -193,24 +124,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<a href="../../Global PHP/DestroySessions.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/logouticon black.png'); --activeMainNavMenuIcon:url('../../src/logouticon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Logout</span>
-					</a>
-		
-					<!--
-					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
-						<span class="generalNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
-					</div>
-					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-							<span class="generalNavMenuText_RoClass">navigation 4.1</span>
-						</a>
-						<a href="" class="activeSubNavMenu_RoClass subNavMenu-Class">					
-							<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-							<span class="generalNavMenuText_RoClass">navigation 4.2</span>
-						</a>
-					</div>
-					-->
+					</a>					
 				</div>
 			</div>
 			<div class="mainmecha_RoClass" style="--mainBodyBgColor:#E8EFFF;">
@@ -235,11 +149,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<span class="searchAreaLabelTxt-Class">Client-Type</span>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), controllerSearchArea()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), controller_InputCheckbox_SearchFilterInternal(), controller_SearchArea_SubmitAllRequest()" autocomplete="off">
 						</div>
 						<div class="cusCheckBoxPaper_RoClass">
 							<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), controllerSearchArea()" autocomplete="off">
+							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), controller_InputCheckbox_SearchFilterExternal(), controller_SearchArea_SubmitAllRequest()" autocomplete="off">
 						</div>
 					</div>
 					<!--_Filter Client Type Item-->
@@ -260,11 +174,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '180px')">
 							<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
 							<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
-							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controllerSearchPointOfEntryResetButton(), controllerSearchArea()"></div>
+							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controller_divResetBtn_ResetSearchSelectedOffice(), controller_SearchArea_SubmitAllRequest()"></div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
-						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="valuePointOfEntryDeep(this)">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controllerSearchPointOfEntry()" autocomplete="off">
+						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controller_divOptionsWrap_SearchAppendPointOfEntry(this)">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controller_InputText_SearchFindPointOfEntry()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -435,7 +349,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 								<div class="respondentTextIconFlex">
 									<div class="respondentText-Class">Total Respondent</div>
 									<div class="respondentIcon-Class"></div>
-									<button class="normButton_RoClass genCodeBtn-Class" onclick="submitGenerateOfficeCode()">Generate code</button>
+									<button class="normButton_RoClass genCodeBtn-Class" onclick="controller_Button_GenerateOfficeCode()">Generate code</button>
 								</div>
 								<div class="respondentVal-Class" id="respondentVal-Id"><!--Component--></div>
 							</div>
@@ -522,7 +436,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					</div>
 					Comment Section Box Loader-->
 				</div>
-				<div class="globalWrapper" id="commentSectionWrap" onscroll="valueCommentDeep(this)">
+				<div class="globalWrapper" id="commentSectionWrap" onscroll="controller_DivCommentSectionWrap_AppendComments(this)">
 					No comment yet!
 				</div>
 				<!--Comment Section-->
@@ -549,49 +463,54 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../../Global JS/Values_Module_Office.js"></script>
 		<!--_Value holder-->
 
-		<!--_Renderer-->
-		<script type="module" src="../JS/Renderer_OverallEngagementVal.js"></script>
-		<script type="module" src="../JS/Renderer_RespondentVal.js"></script>
-		<script type="module" src="../JS/Renderer_RatingSpan.js"></script>
-		<script type="module" src="../JS/Renderer_QuestionsTable.js"></script>
-		<script type="module" src="../JS/Renderer_CitizenCharterOneTable.js"></script>
-		<script type="module" src="../JS/Renderer_CitizenCharterTwoTable.js"></script>
-		<script type="module" src="../JS/Renderer_CitizenCharterThreeTable.js"></script>
-		<script type="module" src="../JS/Renderer_OverallServRatePieChart.js"></script>
-		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChart.js"></script>
-		<script type="module" src="../JS/Renderer_OverallAgreeLineChart.js"></script>
-		<script type="module" src="../JS/Renderer_OverallNeitherLineChart.js"></script>
-		<script type="module" src="../JS/Renderer_OverallDisagreeLineChart.js"></script>
-		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChart.js"></script>
-		<script type="module" src="../JS/Renderer_OverallNoRatingLineChart.js"></script>
-		<script type="module" src="../JS/Renderer_AvailedOfficeService.js"></script>
-		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
-		<script type="module" src="../JS/Renderer_CommentDetails.js"></script>
-		<script type="module" src="../JS/Renderer_AppendCommentDetails.js"></script>
-		<script type="module" src="../JS/Renderer_CommentSectionLoader.js"></script>
-		<script type="module" src="../JS/Renderer_AvailedOfficeServiceLoader.js"></script>
-		<script type="module" src="../JS/Renderer_CitizenCharterOneTableLoader.js"></script>
-		<script type="module" src="../JS/Renderer_CitizenCharterThreeTableLoader.js"></script>
-		<script type="module" src="../JS/Renderer_CitizenCharterTwoTableLoader.js"></script>
-		<script type="module" src="../JS/Renderer_RatingSpanLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallEngagementValLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallAgreeLineChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallDisagreeLineChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallNeitherLineChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallNoRatingLineChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallServRatePieChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallStronglyAgreeLineChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_OverallStronglyDisagreeLineChartLoader.js"></script>
-		<script type="module" src="../JS/Renderer_PointOfEntryOptionLoader.js"></script>
-		<script type="module" src="../JS/Renderer_RespondentValLoader.js"></script>
-		<script type="module" src="../JS/Renderer_QuestionsTableLoader.js"></script>
-		<!--_Renderer-->
+		<!--_Output-->
+		<script type="module" src="../JS/Output_OverallEngagementVal.js"></script>
+		<script type="module" src="../JS/Output_RespondentVal.js"></script>
+		<script type="module" src="../JS/Output_RatingSpan.js"></script>
+		<script type="module" src="../JS/Output_QuestionsTable.js"></script>
+		<script type="module" src="../JS/Output_CitizenCharterOneTable.js"></script>
+		<script type="module" src="../JS/Output_CitizenCharterTwoTable.js"></script>
+		<script type="module" src="../JS/Output_CitizenCharterThreeTable.js"></script>
+		<script type="module" src="../JS/Output_OverallServRatePieChart.js"></script>
+		<script type="module" src="../JS/Output_OverallStronglyAgreeLineChart.js"></script>
+		<script type="module" src="../JS/Output_OverallAgreeLineChart.js"></script>
+		<script type="module" src="../JS/Output_OverallNeitherLineChart.js"></script>
+		<script type="module" src="../JS/Output_OverallDisagreeLineChart.js"></script>
+		<script type="module" src="../JS/Output_OverallStronglyDisagreeLineChart.js"></script>
+		<script type="module" src="../JS/Output_OverallNoRatingLineChart.js"></script>
+		<script type="module" src="../JS/Output_AvailedOfficeService.js"></script>
+		<script type="module" src="../JS/Output_PointOfEntryOption.js"></script>
+		<script type="module" src="../JS/Output_CommentDetails.js"></script>
+		<script type="module" src="../JS/Output_AppendCommentDetails.js"></script>
+		<script type="module" src="../JS/Output_CommentSectionLoader.js"></script>
+		<script type="module" src="../JS/Output_AvailedOfficeServiceLoader.js"></script>
+		<script type="module" src="../JS/Output_CitizenCharterOneTableLoader.js"></script>
+		<script type="module" src="../JS/Output_CitizenCharterThreeTableLoader.js"></script>
+		<script type="module" src="../JS/Output_CitizenCharterTwoTableLoader.js"></script>
+		<script type="module" src="../JS/Output_RatingSpanLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallEngagementValLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallAgreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallDisagreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallNeitherLineChartLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallNoRatingLineChartLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallServRatePieChartLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallStronglyAgreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Output_OverallStronglyDisagreeLineChartLoader.js"></script>
+		<script type="module" src="../JS/Output_PointOfEntryOptionLoader.js"></script>
+		<script type="module" src="../JS/Output_RespondentValLoader.js"></script>
+		<script type="module" src="../JS/Output_QuestionsTableLoader.js"></script>
+		<!--_Output-->
 
 		<!--_Controller-->
-		<script type="text/javascript" src="../JS/Controller_SearchArea.js"></script>
-		<script type="text/javascript" src="../JS/Controller_SearchPointOfEntry.js"></script>
-		<script type="module" src="../JS/Controller_Bookmark.js"></script>
-		<script type="module" src="../JS/Controller_SearchPointOfEntryResetButton.js"></script>
+		<script type="module" src="../JS/Controller_SearchArea_SubmitAllRequest.js"></script>
+		<script type="module" src="../JS/Controller_InputText_SearchFindPointOfEntry.js"></script>
+		<script type="module" src="../JS/Controller_Ahref_HighlightBookmark.js"></script>
+		<script type="module" src="../JS/Controller_DivResetBtn_ResetSearchSelectedOffice.js"></script>
+		<script type="module" src="../JS/Controller_InputCheckbox_SearchFilterInternal.js"></script>
+		<script type="module" src="../JS/Controller_InputCheckbox_SearchFilterExternal.js"></script>
+		<script type="module" src="../JS/Controller_DivOption_SearchAssignSelectedOffice.js"></script>
+		<script type="module" src="../JS/Controller_Button_GenerateOfficeCode.js"></script>
+		<script type="module" src="../JS/controller_DivCommentSectionWrap_AppendComments.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->

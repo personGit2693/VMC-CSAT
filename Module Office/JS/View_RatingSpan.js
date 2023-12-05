@@ -5,12 +5,12 @@ import RatingSpan from "./Component_RatingSpan.js";
 
 
 /*Render*/
-function renderRatingSpan(){
+function viewRatingSpan(){
 	pointOfEntryRating.innerHTML = RatingSpan();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderRatingSpan;
+export default viewRatingSpan;
 /*Export*/

@@ -1,5 +1,7 @@
 /*Import*/
 import {valueCheckboxClientype, valueDateRangeOne} from "../../Global JS/Values_Module_Office.js";
+import controller_SearchArea_SubmitAllRequest from "./Controller_SearchArea_SubmitAllRequest.js";
+import controller_InputText_SearchFindPointOfEntry from "./Controller_InputText_SearchFindPointOfEntry.js";
 /*Import*/
 
 
@@ -21,10 +23,10 @@ valueDateRangeOne();
 
 
 /*Populate data viewing*/
-controllerSearchArea();
+controller_SearchArea_SubmitAllRequest();
 /*Populate data viewing*/
 
 
 /*Populate search point of entry*/
-controllerSearchPointOfEntry();
+controller_InputText_SearchFindPointOfEntry();
 /*Populate search point of entry*/

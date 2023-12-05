@@ -39,5 +39,5 @@ window.submitRequestCitizenCharterThreeScores = submitRequestCitizenCharterThree
 
 
 /*Export*/
-export {blockRequest};
+export {blockRequest, submitRequestCitizenCharterThreeScores};
 /*Export*/

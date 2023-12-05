@@ -39,5 +39,5 @@ window.submitRequestOverallEngagement = submitRequestOverallEngagement;
 
 
 /*Export*/
-export {blockRequest};
+export {blockRequest, submitRequestOverallEngagement};
 /*Export*/

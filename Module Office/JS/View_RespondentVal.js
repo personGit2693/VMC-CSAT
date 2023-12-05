@@ -5,12 +5,12 @@ import RespondentVal from "./Component_RespondentVal.js";
 
 
 /*Render*/
-function renderRespondentVal(){
+function viewRespondentVal(){
 	respondentVal.innerHTML = RespondentVal();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderRespondentVal;
+export default viewRespondentVal;
 /*Export*/
