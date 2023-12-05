@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallStronglyAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallStronglyAgreeLineChart from "./Controller_OverallStronglyAgreeLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallStronglyAgree(officeId, clientTypeInternal, clientT
 						alert("Getting Overall Strongly Agree has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallStronglyAgree_Array = httpResponse.overallStronglyAgree_Array;
-						resolve(true);
-						//valueOverallStronglyAgree();
-						//loadOverallStronglyAgreeLineChart();					
+						resolve(true);										
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting overall Strongly Agree");

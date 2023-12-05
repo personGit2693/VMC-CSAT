@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallDisagree} from "../../Global JS/Values_Module_Office.js";
+import gatewayOverallDisagree from "./Gateway_OverallDisagree.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallDisagree(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestOverallDisagree(renderer_Param, loader_Param, boxLoader_Id, requiredFunction, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayOverallDisagree()
+		gatewayOverallDisagree(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
@@ -24,7 +24,7 @@ function submitRequestOverallDisagree(renderer_Param, loader_Param, boxLoader_Id
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				valueOverallDisagree();
+				requiredFunction();
 				renderer_Param();
 				blockRequest = false;			
 			}

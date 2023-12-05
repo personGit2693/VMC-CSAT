@@ -1,15 +1,14 @@
 /*Import*/
-import {selectedOffice_Obj} from "../../Global JS/Values_Module_Office.js";
 import {requestGenerateOfficeCode, generatedOfficeCode} from "./Request_GenerateOfficeCode.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayGenerateOfficeCode(){
+async function gatewayGenerateOfficeCode(officeId){
 
 	const gatewayPromise = new Promise(function(resolve){
 
-		requestGenerateOfficeCode(selectedOffice_Obj.office_id)
+		requestGenerateOfficeCode(officeId)
 		.then(requestPromise => {
 			if(requestPromise === true){
 
@@ -30,3 +29,8 @@ async function gatewayGenerateOfficeCode(){
 /*Declare global*/
 window.gatewayGenerateOfficeCode = gatewayGenerateOfficeCode;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayGenerateOfficeCode;
+/*Export*/

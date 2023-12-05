@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallStronglyDisagree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallStronglyDisagreeLineChart from "./Controller_OverallStronglyDisagreeLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallStronglyDisagree(officeId, clientTypeInternal, clie
 						alert("Getting Overall Strongly Disagree has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallStronglyDisagree_Array = httpResponse.overallStronglyDisagree_Array;
-						resolve(true);
-						//valueOverallStronglyDisagree();
-						//loadOverallStronglyDisagreeLineChart();									
+						resolve(true);														
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting overall Strongly Disagree");

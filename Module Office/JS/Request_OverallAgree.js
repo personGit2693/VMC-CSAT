@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallAgree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallAgreeLineChart from "./Controller_OverallAgreeLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallAgree(officeId, clientTypeInternal, clientTypeExter
 						alert("Getting Overall Agree has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallAgree_Array = httpResponse.overallAgree_Array;
-						resolve(true);
-						//valueOverallAgree();
-						//loadOverallAgreeLineChart();					
+						resolve(true);						
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting overall Agree");

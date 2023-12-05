@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallNoRating} from "../../Global JS/Values_Module_Office.js";
+import gatewayOverallNoRating from "./Gateway_OverallNoRating.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallNoRating(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestOverallNoRating(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayOverallNoRating()
+		gatewayOverallNoRating(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
@@ -24,7 +24,7 @@ function submitRequestOverallNoRating(renderer_Param, loader_Param, boxLoader_Id
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				valueOverallNoRating();
+				assignValue();
 				renderer_Param();				
 				blockRequest = false;
 			}

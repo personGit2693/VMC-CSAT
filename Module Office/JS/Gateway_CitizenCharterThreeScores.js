@@ -1,18 +1,17 @@
 /*Import*/
-import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Module_Office.js";
-import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Module_Office.js";
 import {requestCitizenCharterThreeScores} from "./Request_CitizenCharterThreeScores.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayCitizenCharterThreeScores(){
+async function gatewayCitizenCharterThreeScores(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	const gatewayPromise = new Promise(function(resolve){
 
-		requestCitizenCharterThreeScores(selectedOffice_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value)
+		requestCitizenCharterThreeScores(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(requestPromise => {
 			if(requestPromise === true){
+				
 				resolve(true);
 			}
 		});
@@ -26,3 +25,8 @@ async function gatewayCitizenCharterThreeScores(){
 /*Declare global*/
 window.gatewayCitizenCharterThreeScores = gatewayCitizenCharterThreeScores;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayCitizenCharterThreeScores;
+/*Export*/

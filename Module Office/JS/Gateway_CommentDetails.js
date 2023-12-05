@@ -1,16 +1,14 @@
 /*Import*/
-import {commentDisplay, commentStartIndex, selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Module_Office.js";
-import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Module_Office.js";
 import {requestCommentDetails} from "./Request_CommentDetails.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayCommentDetails(){
+async function gatewayCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay){
 	
 	const gatewayPromise = new Promise(function(resolve){
 		
-		requestCommentDetails(selectedOffice_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, commentStartIndex, commentDisplay)
+		requestCommentDetails(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay)
 		.then(requestPromise => {
 			if(requestPromise === true){
 				resolve(true);
@@ -26,3 +24,8 @@ async function gatewayCommentDetails(){
 /*Declare global*/
 window.gatewayCommentDetails = gatewayCommentDetails;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayCommentDetails;
+/*Export*/

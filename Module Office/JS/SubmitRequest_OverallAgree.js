@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallAgree} from "../../Global JS/Values_Module_Office.js";
+import gatewayOverallAgree from "./Gateway_OverallAgree.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id, requiredFunction, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayOverallAgree()
+		gatewayOverallAgree(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
@@ -25,7 +25,7 @@ function submitRequestOverallAgree(renderer_Param, loader_Param, boxLoader_Id){
 				}
 
 				
-				valueOverallAgree();
+				requiredFunction();
 				renderer_Param();						
 				blockRequest = false;
 			}

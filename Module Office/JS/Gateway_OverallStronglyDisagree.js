@@ -1,18 +1,18 @@
 /*Import*/
-import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Module_Office.js";
-import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Module_Office.js";
 import {requestOverallStronglyDisagree} from "./Request_OverallStronglyDisagree.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayOverallStronglyDisagree(){
+async function gatewayOverallStronglyDisagree(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	const gatewayPromise = new Promise(function(resolve){
 
-		requestOverallStronglyDisagree(selectedOffice_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value)
+		requestOverallStronglyDisagree(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(requestPromise => {
+
 			if(requestPromise === true){
+				
 				resolve(true);
 			}
 		});	
@@ -26,3 +26,8 @@ async function gatewayOverallStronglyDisagree(){
 /*Declare global*/
 window.gatewayOverallStronglyDisagree = gatewayOverallStronglyDisagree;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayOverallStronglyDisagree;
+/*Export*/

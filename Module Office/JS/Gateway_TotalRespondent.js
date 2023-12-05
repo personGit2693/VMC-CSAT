@@ -1,18 +1,18 @@
 /*Import*/
-import {selectedOffice_Obj, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Module_Office.js";
-import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Module_Office.js";
 import {requestTotalRespondent} from "./Request_TotalRespondent.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayTotalRespondent(){
+async function gatewayTotalRespondent(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	const gatewayPromise = new Promise(function(resolve){
 
-		requestTotalRespondent(selectedOffice_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value)
+		requestTotalRespondent(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(requestPromise => {
+
 			if(requestPromise === true){
+
 				resolve(true);
 			}
 		});
@@ -26,3 +26,8 @@ async function gatewayTotalRespondent(){
 /*Declare global*/
 window.gatewayTotalRespondent = gatewayTotalRespondent;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayTotalRespondent;
+/*Export*/

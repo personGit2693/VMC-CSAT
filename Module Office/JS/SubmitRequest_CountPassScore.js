@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayCountPassScore from "./Gateway_CountPassScore.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestCountPassScore(renderer_Param, loader_Param, boxLoader_Id){	
+function submitRequestCountPassScore(renderer_Param, loader_Param, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){	
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayCountPassScore()
+		gatewayCountPassScore(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			
 			if(gatewayPromise === true){

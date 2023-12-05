@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayGenerateOfficeCode from "./Gateway_GenerateOfficeCode.js";
 /*Import*/
 
 
@@ -8,11 +8,11 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitGenerateOfficeCode(){
+function submitGenerateOfficeCode(officeId){
 	
 	if(blockRequest === false){
 
-		gatewayGenerateOfficeCode()
+		gatewayGenerateOfficeCode(officeId)
 		.then(gatewayPromise => {
 			
 			if(gatewayPromise === true){

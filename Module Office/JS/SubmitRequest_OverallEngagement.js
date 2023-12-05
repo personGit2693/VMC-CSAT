@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayOverallEngagement from "./Gateway_OverallEngagement.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallEngagement(renderer_Param, loader_Param, boxLoader_Id){	
+function submitRequestOverallEngagement(renderer_Param, loader_Param, boxLoader_Id, submitRequestCountPassScore, outputRatingSpan, outputRatingSpanLoader, ratingSpanLoaderId, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){	
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayOverallEngagement()
+		gatewayOverallEngagement(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
@@ -24,8 +24,8 @@ function submitRequestOverallEngagement(renderer_Param, loader_Param, boxLoader_
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				renderer_Param();			
-				submitRequestCountPassScore(outputRatingSpan, outputRatingSpanLoader, "ratingSpanLoader-Id");			
+				submitRequestCountPassScore(outputRatingSpan, outputRatingSpanLoader, ratingSpanLoaderId, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo);
+				renderer_Param();										
 				blockRequest = false;
 			}
 		});

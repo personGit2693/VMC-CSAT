@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallServRate, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallServRatePieChart from "./Controller_OverallServRatePieChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallServRate(officeId, clientTypeInternal, clientTypeEx
 						alert("Getting Overall Client Satisfaction has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallServRate_Array = httpResponse.overallServRate_Array;
-						resolve(true);
-						//valueOverallServRate();
-						//loadOverallServRatePieChart();
+						resolve(true);						
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting Overall Client Satisfaction");

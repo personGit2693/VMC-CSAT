@@ -25,3 +25,8 @@ async function gatewayAvailedOfficeService(officeId, clientTypeInternal, clientT
 /*Declare global*/
 window.gatewayAvailedOfficeService = gatewayAvailedOfficeService;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayAvailedOfficeService;
+/*Export*/

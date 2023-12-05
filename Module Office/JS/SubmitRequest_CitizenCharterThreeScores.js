@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayCitizenCharterThreeScores "./Gateway_CitizenCharterThreeScores.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestCitizenCharterThreeScores(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestCitizenCharterThreeScores(renderer_Param, loader_Param, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayCitizenCharterThreeScores()
+		gatewayCitizenCharterThreeScores(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 
 			if(gatewayPromise === true){

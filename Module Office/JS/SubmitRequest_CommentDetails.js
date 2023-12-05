@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayCommentDetails from "./Gateway_CommentDetails.js";
 /*Import*/
 
 
@@ -9,7 +9,7 @@ let blockRequest = false;
 
 
 /*Submit function*/
-function submitRequestCommentDetails(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestCommentDetails(renderer_Param, loader_Param, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, commentStartIndex, commentDisplay){
 
 	if(blockRequest === false){
 

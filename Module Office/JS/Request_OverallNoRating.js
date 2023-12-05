@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallNoRating, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallNoRatingLineChart from "./Controller_OverallNoRatingLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallNoRating(officeId, clientTypeInternal, clientTypeEx
 						alert("Getting Overall No Rating has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallNoRating_Array = httpResponse.overallNoRating_Array;
-						resolve(true);
-						//valueOverallNoRating();
-						//loadOverallNoRatingLineChart();					
+						resolve(true);										
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting overall No Rating");

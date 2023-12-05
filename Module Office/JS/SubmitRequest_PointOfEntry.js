@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayPointOfEntry from "./Gateway_PointOfEntry.js";
 /*Import*/
 
 
@@ -9,14 +9,14 @@ let blockRequest = false;
 
 
 /*Submit function*/
-function submitRequestPointOfEntry(renderer_Param, loader_Param, boxLoader_Id){	
+function submitRequestPointOfEntry(renderer_Param, loader_Param, boxLoader_Id, searchPointOfEntry, pointOfEntryOptStartIndex, pointOfEntryOptDisplay){	
 
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayPointOfEntry()
+		gatewayPointOfEntry(searchPointOfEntry, pointOfEntryOptStartIndex, pointOfEntryOptDisplay)
 		.then(gatewayPromise => {
 
 			if(gatewayPromise === true){

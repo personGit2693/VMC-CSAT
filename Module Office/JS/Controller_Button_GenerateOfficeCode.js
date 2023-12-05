@@ -1,4 +1,5 @@
 /*Import*/
+import {selectedOffice_Obj} from "../../Global JS/Values_Module_Office.js";
 import {submitGenerateOfficeCode} from "./SubmitRequest_GenerateOfficeCode.js";
 /*Import*/
 
@@ -6,7 +7,7 @@ import {submitGenerateOfficeCode} from "./SubmitRequest_GenerateOfficeCode.js";
 /*Controller for invoking submitGenerateOfficeCode*/
 function controller_Button_GenerateOfficeCode(){
 
-	submitGenerateOfficeCode();
+	submitGenerateOfficeCode(selectedOffice_Obj.office_id);
 }
 /*Controller for invoking submitGenerateOfficeCode*/
 

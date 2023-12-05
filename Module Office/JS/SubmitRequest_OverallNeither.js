@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallNeither} from "../../Global JS/Values_Module_Office.js";
+import gatewayOverallNeither from "./Gateway_OverallNeither.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallNeither(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestOverallNeither(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayOverallNeither()
+		gatewayOverallNeither(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
@@ -24,7 +24,7 @@ function submitRequestOverallNeither(renderer_Param, loader_Param, boxLoader_Id)
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				valueOverallNeither();
+				assignValue();
 				renderer_Param();
 				blockRequest = false;
 			}

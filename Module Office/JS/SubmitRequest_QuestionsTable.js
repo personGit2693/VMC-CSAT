@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayQuestionsTable from "./Gateway_QuestionsTable.js";
 /*Import*/
 
 
@@ -9,14 +9,14 @@ let blockRequest = false;
 
 
 /*Submit function*/
-function submitRequestQuestionsTable(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestQuestionsTable(renderer_Param, loader_Param, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();	
 
-		gatewayQuestionsTable()
+		gatewayQuestionsTable(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 
 			if(gatewayPromise === true){

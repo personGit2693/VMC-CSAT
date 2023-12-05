@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallDisagree, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallDisagreeLineChart from "./Controller_OverallDisagreeLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallDisagree(officeId, clientTypeInternal, clientTypeEx
 						alert("Getting Overall Disagree has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallDisagree_Array = httpResponse.overallDisagree_Array;
-						resolve(true);
-						//valueOverallDisagree();
-						//loadOverallDisagreeLineChart();					
+						resolve(true);						
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting overall Disagree");

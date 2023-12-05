@@ -510,7 +510,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Controller_InputCheckbox_SearchFilterExternal.js"></script>
 		<script type="module" src="../JS/Controller_DivOption_SearchAssignSelectedOffice.js"></script>
 		<script type="module" src="../JS/Controller_Button_GenerateOfficeCode.js"></script>
-		<script type="module" src="../JS/controller_DivCommentSectionWrap_AppendComments.js"></script>
+		<script type="module" src="../JS/Controller_DivCommentSectionWrap_AppendComments.js"></script>
+		<script type="module" src="../JS/Controller_DivOptionsWrap_SearchAppendPointOfEntry.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->

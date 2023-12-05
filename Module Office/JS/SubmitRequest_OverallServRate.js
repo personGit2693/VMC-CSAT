@@ -1,5 +1,5 @@
 /*Import*/
-import {valueOverallServRate} from "../../Global JS/Values_Module_Office.js";
+import gatewayOverallServRate from "./Gateway_OverallServRate.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestOverallServRate(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestOverallServRate(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayOverallServRate()
+		gatewayOverallServRate(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo)
 		.then(gatewayPromise => {
 			if(gatewayPromise === true){
 
@@ -24,7 +24,7 @@ function submitRequestOverallServRate(renderer_Param, loader_Param, boxLoader_Id
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				valueOverallServRate();
+				assignValue();
 				renderer_Param();					
 				blockRequest = false;
 			}

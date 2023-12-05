@@ -1,7 +1,4 @@
 /*Import*/
-//import {selectedOffice_Obj, valueOverallNeither, clientTypeInternal, clientTypeExternal} from "../../Global JS/Values_Page_Dashboard.js";
-//import {overallFromDate, overallToDate} from "./JSCollection_Page_Dashboard.js";
-//import loadOverallNeitherLineChart from "./Controller_OverallNeitherLineChart.js";
 import token from "../../Global JS/Token.js";
 /*Import*/
 
@@ -37,9 +34,7 @@ async function requestOverallNeither(officeId, clientTypeInternal, clientTypeExt
 						alert("Getting Overall Neither Agree nor Disagree has never been executed!");
 					}else if(httpResponse.serverConnection === null && httpResponse.execution !== false && httpResponse.globalTokenResult === null){
 						overallNeither_Array = httpResponse.overallNeither_Array;
-						resolve(true);
-						//valueOverallNeither();
-						//loadOverallNeitherLineChart();					
+						resolve(true);										
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting overall Neither Agree nor Disagree");

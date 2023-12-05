@@ -1,12 +1,10 @@
 /*Import*/
-import {pointOfEntryOptStartIndex, pointOfEntryOptDisplay} from "../../Global JS/Values_Module_Office.js";
-import {searchPointOfEntry} from "../../Global JS/JSCollection_Module_Office.js";
 import {requestPointOfEntry} from "./Request_PointOfEntry.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayPointOfEntry(){
+async function gatewayPointOfEntry(searchPointOfEntry, pointOfEntryOptStartIndex, pointOfEntryOptDisplay){
 
 	const gatewayPromise = new Promise(function(resolve){
 		
@@ -27,3 +25,8 @@ async function gatewayPointOfEntry(){
 /*Declare global*/
 window.gatewayPointOfEntry = gatewayPointOfEntry;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayPointOfEntry;
+/*Export*/

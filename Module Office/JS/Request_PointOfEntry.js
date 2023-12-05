@@ -32,8 +32,7 @@ async function requestPointOfEntry(searchPointOfEntry, pointOfEntryOptStartIndex
 						alert("Getting Point Of Entry execution problem!");				
 					}else if(httpResponse.serverConnection === null && httpResponse.globalTokenResult === null && httpResponse.execution === true){
 						pointOfEntry_Array = httpResponse.pointOfEntry_Array;
-						resolve(true);
-						//renderPointOfEntryOption();									
+						resolve(true);														
 					}
 				}catch(httpRequest_Error){
 					alert("Response is not an object on getting Point Of Entry!");
