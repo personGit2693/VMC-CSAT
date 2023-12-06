@@ -1,11 +1,12 @@
 /*Import*/
-import renderPointOfEntryOption from "./View_PointOfEntryOption.js";
+import viewPointOfEntryOption from "./View_PointOfEntryOption.js";
 /*Import*/
 
 
 /*Output component*/
 function outputPointOfEntryOption(){
-	renderPointOfEntryOption();
+	
+	viewPointOfEntryOption();
 }
 /*Output component*/
 
@@ -13,3 +14,8 @@ function outputPointOfEntryOption(){
 /*Declare global*/
 window.outputPointOfEntryOption = outputPointOfEntryOption;
 /*Declare global*/
+
+
+/*Export*/
+export default outputPointOfEntryOption;
+/*Export*/

@@ -1,18 +1,18 @@
 /*Import*/
-import {selectedOffice_Obj} from "../../Global JS/Values_Module_Reports.js";
-import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "../../Global JS/JSCollection_Module_Reports.js";
 import {requestQuestionsDataTwo} from "./Request_QuestionsDataTwo.js";
 /*Import*/
 
 
 /*Gateway*/
-async function gatewayQuestionsDataTwo(){
+async function gatewayQuestionsDataTwo(officeId, dateFrom, dateTo){
 	
 	const gatewayPromise = new Promise(function(resolve){
 
-		requestQuestionsDataTwo(selectedOffice_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value)
+		requestQuestionsDataTwo(officeId, dateFrom, dateTo)
 		.then((requestPromise) => {
+
 			if(requestPromise === true){
+				
 				resolve(true);
 			}
 		});
@@ -26,3 +26,8 @@ async function gatewayQuestionsDataTwo(){
 /*Declare global*/
 window.gatewayQuestionsDataTwo = gatewayQuestionsDataTwo;
 /*Declare global*/
+
+
+/*Export*/
+export default gatewayQuestionsDataTwo;
+/*Export*/

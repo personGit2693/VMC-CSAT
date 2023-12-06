@@ -1,10 +1,11 @@
 /*Import*/
 import {valueResetSearchPointOfEntry} from "../../Global JS/Values_Module_Reports.js";
+import {submitRequestPointOfEntry} from "./SubmitRequest_PointOfEntry.js";
 /*Import*/
 
 
 /*When searching for point of entry*/
-function controllerPointOfEntrySearch(){
+function controller_InputText_SearchFindPointOfEntry(){
 	
 	valueResetSearchPointOfEntry();
 
@@ -14,5 +15,10 @@ function controllerPointOfEntrySearch(){
 
 
 /*Declare Global*/
-window.controllerPointOfEntrySearch = controllerPointOfEntrySearch;
+window.controller_InputText_SearchFindPointOfEntry = controller_InputText_SearchFindPointOfEntry;
 /*Declare Global*/
+
+
+/*Export*/
+export default controller_InputText_SearchFindPointOfEntry;
+/*Export*/

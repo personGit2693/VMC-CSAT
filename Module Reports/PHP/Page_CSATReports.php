@@ -82,84 +82,17 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<a href="../../Module Office/PHP/Page_RatingMonitoring.php" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Monitoring Black.png'); --activeMainNavMenuIcon:url('../../src/Monitoring White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Rating Monitoring</span>
-					</a>
-
-					<!--
-					<a href="../../Page Office/PHP/Page_Dashboard.php#questionsTabWrap-Id" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/question list.png'); --activeMainNavMenuIcon:url('../../src/question list white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Questions Rating</span>
-					</a>
-
-					<a href="../../Page Office/PHP/Page_Dashboard.php#ccTabWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Citizen Charters Rating</span>
-					</a>
-
-					<a href="../../Page Office/PHP/Page_Dashboard.php#commentSectionTextWrap" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Comment_Icon_Black.png'); --activeMainNavMenuIcon:url('../../src/Comment_Icon_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Comments</span>
-					</a>
-					-->
-
+					</a>					
 				<?php
 				if(in_array($accessLevels["reportsNav"], $accountAccess)){					
-				?>
-					<!--
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
-						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/newFile_Black.png'); --activeMainNavMenuIcon:url('../../src/newFile_White.png')"></div>
-						<span class="generalNavMenuText_RoClass">Setup Questions</span>
-					</a>
-					-->
-
+				?>					
 					<a href="" class="activeMainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span>
 					</a>					
-					
-					<!--
-					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Reports</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
-					</div>
-					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
-						<a href="" class="activeSubNavMenu_RoClass subNavMenu-Class">					
-							<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/CollatedData_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">HCES Reports</span>
-						</a>
-
-						
-						<div class="mainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-							<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/AnalyticsIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/AnalyticsIcon_White.png')"></div>
-							<span class="generalNavMenuText_RoClass">Analysis</span><div class="chevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
-						</div>
-						<div style="max-height: 0px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelTwo-Class">
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ResponsiveAnal_Black.png'); --activeSubNavMenuIcon:url('../../src/ResponsiveAnal_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Responsiveness Analysis</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Analysis Q1-Q7</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Analysis Q8-Q12</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/QuarterlyReportIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/QuarterlyReportIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">Analysis Q3-Q28</span>
-							</a>
-							<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-								<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/ARTAIcon_Black.png'); --activeSubNavMenuIcon:url('../../src/ARTAIcon_White.png')"></div>
-								<span class="generalNavMenuText_RoClass">ARTA Analysis</span>
-							</a>
-						</div>						
-					</div>	
-					-->				
 				<?php
 				}
 				?>	
-
 					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/GearIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/GearIcon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Settings</span>
@@ -168,24 +101,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 					<a href="../../Global PHP/DestroySessions.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/logouticon black.png'); --activeMainNavMenuIcon:url('../../src/logouticon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Logout</span>
-					</a>
-		
-					<!--
-					<div class="activeMainNavMenu_RoClass mainNavMenu-Class" onclick="collapseMenu(this)">					
-						<div class="activeMainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--activeMainNavMenuIcon:url('../../src/bookcontacticongreen.png')"></div>
-						<span class="generalNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass chevronSize-Class"><img src="../../src/Chevron Right.png" /></div>
-					</div>
-					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass subNavMenuWrapLevelOne-Class">
-						<a href="" class="subNavMenu_RoClass subNavMenu-Class">					
-							<div class="subNavMenuIconWrap_RoClass subNavIconSize-Class" style="--subNavMenuIcon:url('../../src/abouticonwhite.png'); --activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-							<span class="generalNavMenuText_RoClass">navigation 4.1</span>
-						</a>
-						<a href="" class="activeSubNavMenu_RoClass subNavMenu-Class">					
-							<div class="activeSubNavMenuIconWrap_RoClass subNavIconSize-Class" style="--activeSubNavMenuIcon:url('../../src/abouticongreen.png')"></div>
-							<span class="generalNavMenuText_RoClass">navigation 4.2</span>
-						</a>
-					</div>
-					-->
+					</a>							
 				</div>
 			</div>
 			<div class="mainmecha_RoClass" style="--mainBodyBgColor:#E8EFFF;">
@@ -205,32 +121,16 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 				<!--Reports navigation-->
 				<div class="topNavWrapFlex">
-					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controllerTopNavigation(event, this)">Data One</div>
-					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controllerTopNavigation(event, this)">Data Two</div>					
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">Comments</div>
-					<div class="topNavWrapFlexItem" onclick="controllerTopNavigation(event, this)">CSM Report</div>					
+					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controller_DivTopNavigation_DisplaySelectedReportTable(event, this)">Data One</div>
+					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controller_DivTopNavigation_DisplaySelectedReportTable(event, this)">Data Two</div>					
+					<div class="topNavWrapFlexItem" onclick="controller_DivTopNavigation_DisplaySelectedReportTable(event, this)">Comments</div>
+					<div class="topNavWrapFlexItem" onclick="controller_DivTopNavigation_DisplaySelectedReportTable(event, this)">CSM Report</div>					
 				</div>
 				<!--Reports navigation-->
 
 
 				<!--Search area-->
-				<div class="globalWrapper" id="searchWrapper" style="z-index: 1;">
-
-					<!--_Filter Client Type Item-->
-					<!--				
-					<div class="searchWrapperItem-Class" id="filterClientItemWrap">
-						<span class="searchAreaLabelTxt-Class">Client-Type</span>
-						<div class="cusCheckBoxPaper_RoClass">
-							<label for="checkboxFilterInternal-Id">Internal:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterInternal-Id" onchange="checkCusCheckBox(this), valueClientTypeInternal(), submitRequestDataOne()" autocomplete="off">
-						</div>
-						<div class="cusCheckBoxPaper_RoClass">
-							<label for="checkboxFilterExternal-Id">External:<div class="boxme_RoClass"><img src="../../src/green check.png"></div></label>
-							<input type="checkbox" id="checkboxFilterExternal-Id" onchange="checkCusCheckBox(this), valueClientTypeExternal(), submitRequestDataOne()" autocomplete="off">
-						</div>
-					</div>
-					-->
-					<!--_Filter Client Type Item-->
+				<div class="globalWrapper" id="searchWrapper" style="z-index: 1;">					
 
 					<!--_Select Point of Entry-->
 				<?php
@@ -248,11 +148,11 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 						<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '180px')">
 							<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
 							<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
-							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controllerSearchPointOfEntryResetButton(), controllerSearchArea()"></div>
+							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controller_DivResetButton_SearchResetPointOfEntry(), controller_SearchArea_SubmitSomeRequest()"></div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
-						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controllerPointOfEntryScroll(this)">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controllerPointOfEntrySearch()" autocomplete="off">
+						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controller_DivOptionsWrap_SearchFindPointOfEntry(this)">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controller_InputText_SearchFindPointOfEntry()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 								<!--
@@ -404,157 +304,14 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 				<!--Data one table-->
 				<div class="globalWrapper reportsWrapper-Class" id="dataOneTableWrap">
-					<!--Component					
-					<button class="normButton_RoClass" onclick="exportDataOneToExcel(this)">Download as Excel File</button>
-					<table>
-						<thead>
-							<tr>
-								<th>Control No.</th>
-								<th>RESPONDENT</th>
-								<th>AGE</th>
-								<th>SEX</th>
-								<th>RELIGION</th>
-								<th>LEVEL OF EDUCATION</th>
-								<th>DATE OF CONSULT/ VISIT</th>
-								<th>DEPARTMENT/ OFFICE VISITED</th>
-								<th>SERVICE AVAILED</th>
-								<th>FREQUENCY OF VISIT</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Companion</td>
-								<td>30</td>
-								<td>M</td>
-								<td>None</td>
-								<td>Primary</td>
-								<td>Admitting</td>
-								<td>Admission of Patients</td>
-								<td>First Time</td>								
-							</tr>
-						</tbody>						
-					</table>
-					-->					
+					<!--Component-->					
 				</div>
 				<!--Data one table-->
 
 
 				<!--Data two table-->
 				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">
-				<!--Component				
-					<button class="normButton_RoClass" onclick="controllerDataOneTable(this)">Download as Excel File</button>
-					<table>
-						<thead>
-							<tr>
-								<th>Control No.</th>
-								<th class="ccHeader-Class">CC1</th>
-								<th class="ccHeader-Class">CC2</th>
-								<th class="ccHeader-Class">CC3</th>
-								<th class="q1q7Header-Class">Q1</th>
-								<th class="q1q7Header-Class">Q2</th>
-								<th class="q1q7Header-Class">Q3</th>
-								<th class="q1q7Header-Class">Q4 SQD3</th>
-								<th class="q1q7Header-Class">Q5 SQD2</th>
-								<th class="q1q7Header-Class">Q6 SQD4</th>
-								<th class="q1q7Header-Class">Q7 SQD1</th>
-								<th class="q8q12Header-Class">Q8</th>
-								<th class="q8q12Header-Class">Q9</th>
-								<th class="q8q12Header-Class">Q10</th>
-								<th class="q8q12Header-Class">Q11 SQD8</th>
-								<th class="q8q12Header-Class">Q12 SQD5</th>
-								<th class="q13q28Header-Class">Q13 SQD7</th>
-								<th class="q13q28Header-Class">Q14 SQD7</th>
-								<th class="q13q28Header-Class">Q15 SQD7</th>
-								<th class="q13q28Header-Class">Q16 SQD7</th>
-								<th class="q13q28Header-Class">Q17 SQD7</th>
-								<th class="q13q28Header-Class">Q18 SQD7</th>
-								<th class="q13q28Header-Class">Q19 SQD7</th>
-								<th class="q13q28Header-Class">Q20 SQD7</th>
-								<th class="q13q28Header-Class">Q21 SQD7</th>
-								<th class="q13q28Header-Class">Q22 SQD7</th>
-								<th class="q13q28Header-Class">Q23 SQD7</th>
-								<th class="q13q28Header-Class">Q24 SQD7</th>
-								<th class="q13q28Header-Class">Q25 SQD7</th>
-								<th class="q13q28Header-Class">Q26 SQD7</th>
-								<th class="q13q28Header-Class">Q27 SQD6</th>
-								<th class="q13q28Header-Class">Q28 SQD0</th>
-								<th>AVE SQD7</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>							
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-						</tbody>
-					</table>-->
+				<!--Component-->
 				</div>
 				<!--Data two table-->
 			</div> 
@@ -581,21 +338,22 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<!--_Value holder-->
 
 		<!--_Renderer-->
-		<script type="module" src="../JS/Renderer_DataOneTable.js"></script>
-		<script type="module" src="../JS/Renderer_DataTwoTable.js"></script>
-		<script type="module" src="../JS/Renderer_PointOfEntryOption.js"></script>
-		<script type="module" src="../JS/Renderer_TableReportsLoader.js"></script>
-		<script type="module" src="../JS/Renderer_PointOfEntryOptionLoader.js"></script>
+		<script type="module" src="../JS/Output_DataOneTable.js"></script>
+		<script type="module" src="../JS/Output_DataTwoTable.js"></script>
+		<script type="module" src="../JS/Output_PointOfEntryOption.js"></script>
+		<script type="module" src="../JS/Output_DataTwoTableLoader.js"></script>
+		<script type="module" src="../JS/Output_PointOfEntryOptionLoader.js"></script>
+		<script type="module" src="../JS/Output_DataOneTableLoader.js"></script>
 		<!--_Renderer-->
 
 		<!--_Controller-->		
-		<script type="module" src="../JS/Controller_ReportsTopNavigation.js"></script>
-		<script type="module" src="../JS/Controller_PointOfEntrySearch.js"></script>
-		<script type="module" src="../JS/Controller_PointOfEntryOption.js"></script>
-		<script type="text/javascript" src="../JS/Controller_DownloadAsExcelButton.js"></script>			
-		<script type="module" src="../JS/Controller_SearchArea.js"></script>
-		<script type="module" src="../JS/Controller_PointOfEntryScroll.js"></script>
-		<script type="module" src="../JS/Controller_SearchPointOfEntryResetButton.js"></script>
+		<script type="module" src="../JS/Controller_DivTopNavigation_DisplaySelectedReportTable.js"></script>
+		<script type="module" src="../JS/Controller_InputText_SearchFindPointOfEntry.js"></script>		
+		<script type="module" src="../JS/Controller_Button_DownloadAsExcel.js"></script>			
+		<script type="module" src="../JS/Controller_SearchArea_SubmitSomeRequest.js"></script>
+		<script type="module" src="../JS/Controller_DivOptionsWrap_SearchFindPointOfEntry.js"></script>
+		<script type="module" src="../JS/Controller_DivResetButton_SearchResetPointOfEntry.js"></script>
+		<script type="module" src="../JS/Controller_DivOption_SearchAssignPointOfEntryValue.js"></script>
 		<!--_Controller-->
 
 		<!--_Gateway-->

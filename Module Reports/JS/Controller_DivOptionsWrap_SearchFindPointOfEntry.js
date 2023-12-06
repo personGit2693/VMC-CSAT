@@ -1,10 +1,11 @@
 /*Import*/
 import {valuePointOfEntryOptStartIndex} from "../../Global JS/Values_Module_Reports.js";
+import {submitRequestPointOfEntry} from "./SubmitRequest_PointOfEntry.js";
 /*Import*/
 
 
 /*When scrolling for point of entry*/
-function controllerPointOfEntryScroll(pointOfEntryOptsWrap_Param){
+function controller_DivOptionsWrap_SearchFindPointOfEntry(pointOfEntryOptsWrap_Param){
 	
 	if((pointOfEntryOptsWrap_Param.scrollTop + pointOfEntryOptsWrap_Param.offsetHeight) >= pointOfEntryOptsWrap_Param.scrollHeight){
 
@@ -17,5 +18,10 @@ function controllerPointOfEntryScroll(pointOfEntryOptsWrap_Param){
 
 
 /*Declare Global*/
-window.controllerPointOfEntryScroll = controllerPointOfEntryScroll;
+window.controller_DivOptionsWrap_SearchFindPointOfEntry = controller_DivOptionsWrap_SearchFindPointOfEntry;
 /*Declare Global*/
+
+
+/*Export*/
+export default controller_DivOptionsWrap_SearchFindPointOfEntry;
+/*Export*/

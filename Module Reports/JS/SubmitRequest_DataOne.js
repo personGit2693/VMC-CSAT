@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayDataOne from "./Gateway_DataOne.js";
 /*Import*/
 
 
@@ -8,9 +8,9 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestDataOne(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestDataOne(renderer_Param, loader_Param, boxLoader_Id, officeId, dateFrom, dateTo){
 	
-	gatewayDataOne()
+	gatewayDataOne(officeId, dateFrom, dateTo)
 	.then((gatewayPromise) => {
 
 		blockRequest = true;
@@ -37,5 +37,5 @@ window.submitRequestDataOne = submitRequestDataOne;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestDataOne, blockRequest};
 /*Export*/

@@ -4,7 +4,7 @@ import {reportsWrapper, topNavWrapFlexItem, dataOneTableWrap, dataTwoTableWrap} 
 
 
 /*When user select from top navigation*/
-function controllerTopNavigation(e, selTopNavWrapFlexItem){
+function controller_DivTopNavigation_DisplaySelectedReportTable(e, selTopNavWrapFlexItem){
 
 	/*Set hide all reportsWrapper*/
 	for(let index=0; index < reportsWrapper.length; index++){
@@ -39,5 +39,10 @@ function controllerTopNavigation(e, selTopNavWrapFlexItem){
 
 
 /*Declare global*/
-window.controllerTopNavigation = controllerTopNavigation;
+window.controller_DivTopNavigation_DisplaySelectedReportTable = controller_DivTopNavigation_DisplaySelectedReportTable;
 /*Declare global*/
+
+
+/*Export*/
+export default controller_DivTopNavigation_DisplaySelectedReportTable;
+/*Export*/

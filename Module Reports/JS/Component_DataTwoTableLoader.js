@@ -4,21 +4,21 @@
 
 
 /*Component*/
-function TableReportsLoader(){
+function DataTwoTableLoader(){
 
 	const loaderGifPath = "../../src/Spinner.gif";
 
-	let tableReportsLoader = `<div class="boxLoaderWrap_RoClass" id="tableReportsLoader-Id" style="display:flex">`+
+	let dataTwoTableLoader = `<div class="boxLoaderWrap_RoClass" id="dataTwoTableLoader-Id" style="display:flex">`+
 		`<div class="boxLoaderIcon_RoClass">`+
 			`<img src="`+loaderGifPath+`">`+
 		`</div>`+
 	`</div>`;
 
-	return tableReportsLoader;
+	return dataTwoTableLoader;
 }
 /*Component*/
 
 
 /*Export*/
-export default TableReportsLoader;
+export default DataTwoTableLoader;
 /*Export*/

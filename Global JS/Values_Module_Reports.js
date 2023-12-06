@@ -182,12 +182,10 @@ function valueSelectedOfficeObj(){
 
 
 /*Declare global*/
-window.valueClientTypeInternal = valueClientTypeInternal;
-window.valueClientTypeExternal = valueClientTypeExternal;
-window.valueDataTwo = valueDataTwo;
+
 /*Declare global*/
 
 
 /*Export*/
-export {valueSelectedOfficeObj, valueResetSelectedOfficeObj, valuePointOfEntryOptStartIndex, valueResetSearchPointOfEntry, searchPointOfEntryDisplay, searchPointOfEntryStartIndex, dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
+export {valueDataTwo, valueSelectedOfficeObj, valueResetSelectedOfficeObj, valuePointOfEntryOptStartIndex, valueResetSearchPointOfEntry, searchPointOfEntryDisplay, searchPointOfEntryStartIndex, dataTwo_Array, clientTypeInternal, clientTypeExternal, selectedOffice_Obj, valueCheckboxClientype, valueDateRangeOne};
 /*Export*/

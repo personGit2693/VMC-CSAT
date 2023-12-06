@@ -5,12 +5,13 @@ import DataTwoTable from "./Component_DataTwoTable.js";
 
 
 /*Render*/
-function renderDataTwoTable(){
+function viewDataTwoTable(){
+	
 	dataTwoTableWrap.innerHTML = DataTwoTable();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderDataTwoTable;
+export default viewDataTwoTable;
 /*Export*/

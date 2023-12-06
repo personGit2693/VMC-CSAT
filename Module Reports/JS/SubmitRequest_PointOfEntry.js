@@ -40,5 +40,5 @@ window.submitRequestPointOfEntry = submitRequestPointOfEntry;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestPointOfEntry, blockRequest};
 /*Export*/

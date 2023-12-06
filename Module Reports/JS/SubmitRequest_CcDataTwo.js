@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayCcDataTwo from "./Gateway_CcDataTwo.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestCcDataTwo(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestCcDataTwo(renderer_Param, loader_Param, boxLoader_Id, assignValue, submitRequestQuestionsDataTwo, officeId, dateFrom, dateTo){
 	
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayCcDataTwo()
+		gatewayCcDataTwo(officeId, dateFrom, dateTo)
 		.then((gatewayPromise) => {
 
 			if(gatewayPromise === true){				
@@ -25,7 +25,7 @@ function submitRequestCcDataTwo(renderer_Param, loader_Param, boxLoader_Id){
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				submitRequestQuestionsDataTwo(renderer_Param, loader_Param, boxLoader_Id);
+				submitRequestQuestionsDataTwo(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, dateFrom, dateTo);
 				
 				blockRequest = false;
 			}		
@@ -40,5 +40,5 @@ window.submitRequestCcDataTwo = submitRequestCcDataTwo;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestCcDataTwo, blockRequest};
 /*Export*/

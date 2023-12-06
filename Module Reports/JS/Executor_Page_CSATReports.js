@@ -1,5 +1,7 @@
 /*Import*/
 import {valueDateRangeOne} from "../../Global JS/Values_Module_Reports.js";
+import controller_InputText_SearchFindPointOfEntry from "./Controller_InputText_SearchFindPointOfEntry.js";
+import controller_SearchArea_SubmitSomeRequest from "./Controller_SearchArea_SubmitSomeRequest.js";
 /*Import*/
 
 
@@ -20,10 +22,10 @@ valueDateRangeOne();
 
 
 /*Populate point of entry dropdown menu*/
-controllerPointOfEntrySearch();
+controller_InputText_SearchFindPointOfEntry();
 /*Populate point of entry dropdown menu*/
 
 
 /*Get data one, data two*/
-controllerSearchArea();
+controller_SearchArea_SubmitSomeRequest();
 /*Get data one, data two*/

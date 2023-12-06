@@ -177,7 +177,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controller_divResetBtn_ResetSearchSelectedOffice(), controller_SearchArea_SubmitAllRequest()"></div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
-						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controller_divOptionsWrap_SearchAppendPointOfEntry(this)">
+						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controller_DivResetBtn_SearchResetSelectedOffice(this)">
 							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controller_InputText_SearchFindPointOfEntry()" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
@@ -505,7 +505,7 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 		<script type="module" src="../JS/Controller_SearchArea_SubmitAllRequest.js"></script>
 		<script type="module" src="../JS/Controller_InputText_SearchFindPointOfEntry.js"></script>
 		<script type="module" src="../JS/Controller_Ahref_HighlightBookmark.js"></script>
-		<script type="module" src="../JS/Controller_DivResetBtn_ResetSearchSelectedOffice.js"></script>
+		<script type="module" src="../JS/Controller_DivResetBtn_SearchResetSelectedOffice.js"></script>
 		<script type="module" src="../JS/Controller_InputCheckbox_SearchFilterInternal.js"></script>
 		<script type="module" src="../JS/Controller_InputCheckbox_SearchFilterExternal.js"></script>
 		<script type="module" src="../JS/Controller_DivOption_SearchAssignSelectedOffice.js"></script>

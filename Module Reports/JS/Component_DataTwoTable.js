@@ -9,7 +9,7 @@ function DataTwoTable(){
 	let dataTwoTable = "";
 
 	if(dataTwo_Array.length > 0){
-		dataTwoTable += `<button class="normButton_RoClass" onclick="controllerDownloadAsExcelButton(this)">Download as Excel File</button>`+
+		dataTwoTable += `<button class="normButton_RoClass" onclick="controller_Button_DownloadAsExcel(this)">Download as Excel File</button>`+
 			`<table>`+
 				`<thead>`+
 					`<tr>`+

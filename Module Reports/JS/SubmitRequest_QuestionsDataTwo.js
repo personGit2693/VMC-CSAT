@@ -1,5 +1,5 @@
 /*Import*/
-
+import gatewayQuestionsDataTwo from "./Gateway_QuestionsDataTwo.js";
 /*Import*/
 
 
@@ -8,14 +8,14 @@ let blockRequest = false;
 /*Export variables*/
 
 
-function submitRequestQuestionsDataTwo(renderer_Param, loader_Param, boxLoader_Id){
+function submitRequestQuestionsDataTwo(renderer_Param, loader_Param, boxLoader_Id, assignValue, officeId, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
 		blockRequest = true;
 		loader_Param();
 
-		gatewayQuestionsDataTwo()
+		gatewayQuestionsDataTwo(officeId, dateFrom, dateTo)
 		.then((gatewayPromise) => {
 
 			if(gatewayPromise === true){
@@ -25,7 +25,7 @@ function submitRequestQuestionsDataTwo(renderer_Param, loader_Param, boxLoader_I
 					document.getElementById(boxLoader_Id).remove();
 				}
 
-				valueDataTwo();
+				assignValue();
 				renderer_Param();
 
 				blockRequest = false;
@@ -41,5 +41,5 @@ window.submitRequestQuestionsDataTwo = submitRequestQuestionsDataTwo;
 
 
 /*Export*/
-export {blockRequest};
+export {submitRequestQuestionsDataTwo, blockRequest};
 /*Export*/

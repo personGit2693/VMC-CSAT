@@ -5,12 +5,13 @@ import DataOneTable from "./Component_DataOneTable.js";
 
 
 /*Render*/
-function renderDataOneTable(){	
+function viewDataOneTable(){
+	
 	dataOneTableWrap.innerHTML = DataOneTable();
 }
 /*Render*/
 
 
 /*Export*/
-export default renderDataOneTable;
+export default viewDataOneTable;
 /*Export*/

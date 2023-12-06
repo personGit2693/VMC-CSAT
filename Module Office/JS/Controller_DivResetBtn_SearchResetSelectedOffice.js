@@ -4,7 +4,7 @@ import {valueResetSelectedOfficeObj} from "../../Global JS/Values_Module_Office.
 
 
 /*Controller for invoking valueResetSelectedOfficeObj*/
-function controller_divResetBtn_ResetSearchSelectedOffice(){
+function controller_DivResetBtn_SearchResetSelectedOffice(){
 
 	valueResetSelectedOfficeObj();
 }
@@ -12,10 +12,10 @@ function controller_divResetBtn_ResetSearchSelectedOffice(){
 
 
 /*Declare Global*/
-window.controller_divResetBtn_ResetSearchSelectedOffice = controller_divResetBtn_ResetSearchSelectedOffice
+window.controller_DivResetBtn_SearchResetSelectedOffice = controller_DivResetBtn_SearchResetSelectedOffice
 /*Declare Global*/
 
 
 /*Export*/
-export default controller_divResetBtn_ResetSearchSelectedOffice;
+export default controller_DivResetBtn_SearchResetSelectedOffice;
 /*Export*/

@@ -1,11 +1,12 @@
 /*Import*/
-import renderDataTwoTable from "./View_DataTwoTable.js";
+import viewDataTwoTable from "./View_DataTwoTable.js";
 /*Import*/
 
 
 /*Output component*/
 function outputDataTwoTable(){
-	renderDataTwoTable();
+
+	viewDataTwoTable();
 }
 /*Output component*/
 
@@ -13,3 +14,8 @@ function outputDataTwoTable(){
 /*Declare global*/
 window.outputDataTwoTable = outputDataTwoTable;
 /*Declare global*/
+
+
+/*Export*/
+export default outputDataTwoTable;
+/*Export*/

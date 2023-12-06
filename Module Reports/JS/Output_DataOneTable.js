@@ -1,11 +1,12 @@
 /*Import*/
-import renderDataOneTable from "./View_DataOneTable.js";
+import viewDataOneTable from "./View_DataOneTable.js";
 /*Import*/
 
 
 /*Output component*/
 function outputDataOneTable(){
-	renderDataOneTable();
+
+	viewDataOneTable();
 }
 /*Output component*/
 
@@ -13,3 +14,8 @@ function outputDataOneTable(){
 /*Declare global*/
 window.outputDataOneTable = outputDataOneTable;
 /*Declare global*/
+
+
+/*Export*/
+export default outputDataOneTable;
+/*Export*/
