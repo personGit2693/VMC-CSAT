@@ -1,0 +1,385 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
+@mixin stepSets_MT_Style{
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto; /*To be changed*/
+	margin: 35px 0px 0px 0px; /*To be changed*/
+	padding: 10px;
+	background-color: #ffffff;
+	background-image: url("../../src/sampleformbg.jpg");
+	background-position: center;
+	background-size: contain;
+}
+@mixin stepSets_LD_Style{
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 1080px; /*changed*/
+	margin: 35px auto 0px auto; /*changed*/
+	padding: 10px;
+	background-color: #ffffff;
+	border-radius: 5px; /*Added*/
+	box-shadow: 0px 0px 5px gray;
+	background-image: url("../../src/sampleformbg.jpg");	
+	background-position: center;
+	background-size: contain;
+}
+/*Step sets*/
+
+
+/*Step title*/
+@mixin stepSetTitleWrap_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-bottom: 17px;
+}
+
+
+@mixin stepSetTitle_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: black;
+	font-family: calibri;
+	font-size: 35px; /*To be changed*/
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+@mixin stepSetTitle_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: black;
+	font-family: calibri;
+	font-size: 37px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+@mixin stepSetTitle_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: black;
+	font-family: calibri;
+	font-size: 39px; /*changed*/
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+
+@mixin stepSetTitleDefi_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: #303238;
+	font-family: calibri;
+	font-size: 18px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+@mixin stepSetTitleDefi_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: #303238;
+	font-family: calibri;
+	font-size: 20px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+@mixin stepSetTitleDefi_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	color: #303238;
+	font-family: calibri;
+	font-size: 22px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+}
+/*Step title*/
+
+
+/*Step per field group*/
+@mixin stepSetPerFieldGroup_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	font-family: calibri;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+	margin-top: 15px;
+}
+/*Step per field group*/
+
+
+/*Step per field*/
+@mixin messageFont_Style{
+	font-family: calibri;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: bold;
+	color: red;
+}
+
+
+@mixin stepSetPerFieldWrap_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 30px 0px;
+}
+
+
+@mixin stepSetPerFieldTitleCenter_Style{
+	text-align: center;
+}
+
+
+@mixin stepSetPerFieldTitle_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	margin-bottom: 3px;
+	font-family: calibri;
+	font-size: 22px; 
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+
+@mixin stepSetPerFieldFlex_Mobile_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: column nowrap; /*To be changed*/
+	justify-content: flex-start;	
+}
+@mixin stepSetPerFieldFlex_TLD_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row wrap; /*changed*/
+	justify-content: flex-start;
+	align-content: flex-start; /*Added*/
+}
+/*Step per field*/
+
+
+/*Step per field buttons wrapper*/
+@mixin stepSetBtnsFlex_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+/*Step per field buttons wrapper*/
+
+
+/*Comments and suggestion textarea*/
+@mixin suggestionTextArea_Mobile_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 15px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: auto; /*To be changed*/
+	height: 70px;
+}
+@mixin suggestionTextArea_Tablet_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 17px; /*To be changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: 100%; /*changed*/
+	height: 70px;
+}
+@mixin suggestionTextArea_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 19px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: 100%; /*changed*/
+	height: 70px;
+}
+@mixin suggestionTextArea_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	font-family: calibri;
+	font-size: 21px; /*changed*/
+	font-style: normal;
+	font-weight: normal;
+	width: 100%; /*changed*/
+	height: 70px;
+}
+/*Comments and suggestion textarea*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Input text Field Framework*/
+
+/*Input text Field Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Radio Input Framework*/
+@mixin radioCheckFlex_Mobile_RoClass{
+	margin: 5px 0px 0px 5px; /*To be changed*/
+}
+@mixin radioCheckFlex_TLD_RoClass{
+	margin: 5px 20px 0px 5px; /*changed*/
+}
+
+
+@mixin customRadioCheck_Style{
+	--cusRadioWidthHeight: 18px;
+}
+
+
+@mixin radioCheckTxtLabel_Style{
+	--cusRadioFsize: 22px;
+}
+
+
+@mixin radioCheckIconLabel_Style{
+	--radioIconLabelWidthHeight: 105px;
+}
+/*Radio Input Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Checkbox Input Framework*/
+@mixin cusCheckbox_Mobile_RoClass{
+	margin: 5px 0px 0px 0px; /*To be changed*/
+}
+@mixin cusCheckbox_TLD_RoClass{
+	margin: 5px 20px 0px 0px; /*changed*/
+}
+
+
+@mixin cusCheckboxCheck_Style{
+	--cusCheckboxWidthHeight: 18px;
+}
+
+
+@mixin cusCheckboxTxtLabel_Style{
+	--custCheckboxFSize: 22px;
+}
+/*Checkbox Input Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Dropdown Menu Framework*/
+@mixin dropdown_Mobile_Style{
+	--cusDropZIndex: 1;
+	width: auto; /*To be changed*/
+}
+@mixin dropdown_TLD_Style{
+	--cusDropZIndex: 1;
+	width: 310px; /*changed*/
+}
+
+
+@mixin dropdownFSize_Style{	
+	--cusDropFsize: 22px;
+}
+
+
+@mixin dropdownArrowSize_Style{
+	--cusDropArrowWidthHeight: 22px;
+}
+/*Dropdown Menu Framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Button Framework*/
+@mixin proceedBtn_Style{
+	margin: 5px;
+	--normBtnBorderColor: #1B85BD;
+	--normBtnBgColor: #1B85BD;		
+	--normBtnHovActBgColor: #2760A7;
+}
+
+
+@mixin backBtn_Style{
+	margin: 5px;
+	--normBtnBorderColor: #FC5050;
+	--normBtnBgColor: #FC5050;
+	--normBtnHovActBgColor: #E22D41;
+}
+
+
+@mixin buttonFSize_MT_Style{
+	--normBtnFSize: 18px;
+}
+@mixin buttonFSize_Laptop_Style{
+	--normBtnFSize: 22px;
+}
+@mixin buttonFSize_Desktop_Style{
+	--normBtnFSize: 26px;
+}
+/*Button Framework*/
+/***********************************************************************************************************************************************************************************************************/

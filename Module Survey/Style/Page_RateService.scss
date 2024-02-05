@@ -1,0 +1,1193 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+@import "../../Global Style/Global_Style";
+@import "../../Global Style/Rostrap_Global";
+@import "Mixin_Page_RateService";
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root{
+	/*Input text Framework*/
+	--customInputColor: #303238;
+	--customInputFSize: 22px;
+	--customInputAnimFSize: 16px;
+	/*Input text Framework*/
+
+
+	/*Radio Input Framework*/	
+	--cusRadioBorderWidth: 1px;
+	--cusRadioBorderColor: gray;
+	--cusRadioBgColor: transparent;
+	--cusRadioFWeight: normal;	
+	--cusRadioFColor: #303238;
+	/*Radio Input Framework*/
+
+
+	/*Checkbox Input Framework*/
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--cusCheckboxColor: #303238;	
+	--cusCheckboxBorderWidth: 1px;
+	--cusCheckboxBorderColor: gray;
+	/*Checkbox Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	--cusDropBorderWidth: 1px;
+	--cusDropBorderColor: gray;
+	--cusDropBgColor: transparent;
+	--cusDropSelFColor: #303238;
+	--cusDropSearchBorderWidth: 1px;
+	--cusDropSearchBorderColor: gray;
+	--cusDropSearchFColor: #303238;
+	--cusDropSearchBgColor: #ffffff;
+	--cusDropOptWrapBorderWidth: 1px;
+	--cusDropOptWrapBorderColor: green;
+	--cusDropOptWrapBgColor: #ffffff;
+	--cusDropOptWrapHeight: 180px;
+	--cusDropOptWrapScrollColor: green;
+	--cusDropOptWrapScrollHovColor: green;
+	--cusDropOptLabColor: #303238;
+	--cusDropOptHovLabBgColor: #DEE1E6;	
+	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	--normBtnWidth: auto;
+	--normBtnPadding: 8px;
+	--normBtnBorderWidth: 1px;
+	--normBtnRadius: 4px;
+	--normBtnFWeight: normal;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	/*Button Framework*/
+}
+
+body{
+	background-color: #E8EFFF;
+	background-image: url("../../src/sampleformbg.jpg");	
+	background-position: center;
+	background-size: contain;
+}
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Rogrid Dropdown*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.selectDropdownWrap_RoClass{
+		@include selectDropdownWrapClass_Style;
+		@include selectDropdownBorderColor_Style;
+		--selectDropdownWidth: auto; /*To be changed*/		
+	}
+
+	.searchOpts_RoClass{
+		@include selectDropdownBorderColor_Style;
+		@include selectDropdownFSize_Mobile_Style;
+		@include searchOptsClass_Style;
+		--selectDropdownFSize: 18px; /*To be changed*/
+	}
+
+	.displayedSelectedFlex_RoClass{
+		@include selectDropdownBgColor_Style;
+		--selectDropdownBgColor: transparent;
+	}
+
+	.selectDropdownOptionsWrap_RoClass{
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownOptionsWrapClass_Style;
+		@include selectDropdownScrollSize_Mobile_Style;
+	}
+
+	.displayedSelectedIcon_RoClass{
+		@include selectDropdownIconSize_Mobile_Style;
+		--selectDropdownIconSize: 18px; /*To be changed*/
+	}
+
+	.optIcon_RoClass{
+		@include selectDropdownIconSize_Mobile_Style;
+		--selectDropdownIconSize: 18px; /*To be changed*/
+	}
+
+	.displayedSelectedText_RoClass{
+		@include selectDropdownFSize_Mobile_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 18px; /*To be changed*/
+	}
+
+	.optText_RoClass{
+		@include selectDropdownFSize_Mobile_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 18px; /*To be changed*/
+	}
+
+	.selectDropdownOpt_RoClass{
+		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Mobile_Style;
+		--selectDropdownResetBtnSize: 23px; /*To be changed*/
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.selectDropdownWrap_RoClass{
+		@include selectDropdownWrapClass_Style;
+		@include selectDropdownBorderColor_Style;
+		--selectDropdownWidth: 100%; /*changed*/
+	}
+
+	.searchOpts_RoClass{
+		@include selectDropdownBorderColor_Style;
+		@include selectDropdownFSize_Tablet_Style;
+		@include searchOptsClass_Style;
+		--selectDropdownFSize: 18px; /*To be changed*/
+	}
+
+	.displayedSelectedFlex_RoClass{
+		@include selectDropdownBgColor_Style;
+		--selectDropdownBgColor: transparent;
+	}
+
+	.selectDropdownOptionsWrap_RoClass{
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownOptionsWrapClass_Style;
+		@include selectDropdownScrollSize_Tablet_Style;
+	}
+
+	.displayedSelectedIcon_RoClass{
+		@include selectDropdownIconSize_Tablet_Style;
+		--selectDropdownIconSize: 18px; /*To be changed*/
+	}
+
+	.optIcon_RoClass{
+		@include selectDropdownIconSize_Tablet_Style;
+		--selectDropdownIconSize: 18px; /*To be changed*/
+	}
+
+	.displayedSelectedText_RoClass{
+		@include selectDropdownFSize_Tablet_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 18px; /*To be changed*/
+	}
+
+	.optText_RoClass{
+		@include selectDropdownFSize_Tablet_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 18px; /*To be changed*/
+	}
+
+	.selectDropdownOpt_RoClass{
+		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Tablet_Style;
+		--selectDropdownResetBtnSize: 23px; /*To be changed*/
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.selectDropdownWrap_RoClass{		
+		@include selectDropdownWrapClass_Style;
+		@include selectDropdownBorderColor_Style;
+		--selectDropdownWidth: 270px; /*changed*/
+	}
+
+	.searchOpts_RoClass{
+		@include selectDropdownBorderColor_Style;
+		@include selectDropdownFSize_Laptop_Style;
+		@include searchOptsClass_Style;
+		--selectDropdownFSize: 20px; /*changed*/
+	}
+
+	.displayedSelectedFlex_RoClass{
+		@include selectDropdownBgColor_Style;
+		--selectDropdownBgColor: transparent;
+	}
+
+	.selectDropdownOptionsWrap_RoClass{
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownOptionsWrapClass_Style;
+		@include selectDropdownScrollSize_Laptop_Style;
+	}
+
+	.displayedSelectedIcon_RoClass{
+		@include selectDropdownIconSize_Laptop_Style;
+		--selectDropdownIconSize: 20px; /*changed*/
+	}
+
+	.optIcon_RoClass{
+		@include selectDropdownIconSize_Laptop_Style;
+		--selectDropdownIconSize: 20px; /*changed*/
+	}
+
+	.displayedSelectedText_RoClass{
+		@include selectDropdownFSize_Laptop_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 20px; /*changed*/
+	}
+
+	.optText_RoClass{
+		@include selectDropdownFSize_Laptop_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 20px; /*changed*/
+	}
+
+	.selectDropdownOpt_RoClass{
+		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Laptop_Style;
+		--selectDropdownResetBtnSize: 25px; /*changed*/
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.selectDropdownWrap_RoClass{
+		@include selectDropdownWrapClass_Style;
+		@include selectDropdownBorderColor_Style;
+		--selectDropdownWidth: 280px; /*changed*/
+	}
+
+	.searchOpts_RoClass{
+		@include selectDropdownBorderColor_Style;
+		@include selectDropdownFSize_Desktop_Style;
+		@include searchOptsClass_Style;
+		--selectDropdownFSize: 22px; /*changed*/
+	}
+
+	.displayedSelectedFlex_RoClass{
+		@include selectDropdownBgColor_Style;
+		--selectDropdownBgColor: transparent;
+	}
+
+	.selectDropdownOptionsWrap_RoClass{
+		@include selectDropdownBgColor_Style;
+		@include selectDropdownOptionsWrapClass_Style;
+		@include selectDropdownScrollSize_Desktop_Style;
+	}
+
+	.displayedSelectedIcon_RoClass{
+		@include selectDropdownIconSize_Desktop_Style;
+		--selectDropdownIconSize: 22px; /*changed*/
+	}
+
+	.optIcon_RoClass{
+		@include selectDropdownIconSize_Desktop_Style;
+		--selectDropdownIconSize: 22px; /*changed*/
+	}
+
+	.displayedSelectedText_RoClass{
+		@include selectDropdownFSize_Desktop_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 22px; /*changed*/
+	}
+
+	.optText_RoClass{
+		@include selectDropdownFSize_Desktop_Style;
+		@include selectDropdownFColor_Style;
+		--selectDropdownFSize: 22px; /*changed*/
+	}
+
+	.selectDropdownOpt_RoClass{
+		@include selectDropdownOptClass_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Desktop_Style;
+		--selectDropdownResetBtnSize: 27px; /*changed*/
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Rogrid Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Page Header*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.pageHeaderWrap{
+		@include globalPageHeaderWrap_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
+		@include globalPageHeaderTxt_MT_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderSubtxt{
+		@include globalPageHeaderSubTxt_MT_Style;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.pageHeaderWrap{
+		@include globalPageHeaderWrap_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
+		@include globalPageHeaderTxt_MT_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderSubtxt{
+		@include globalPageHeaderSubTxt_MT_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.pageHeaderWrap{
+		@include globalPageHeaderWrap_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
+		@include globalPageHeaderTxt_Laptop_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderSubtxt{
+		@include globalPageHeaderSubTxt_Laptop_Style;
+	}	
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.pageHeaderWrap{
+		@include globalPageHeaderWrap_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderItem{
+		@include globalPageHeaderItem_Style;
+	}
+
+	.pageHeaderBg-Class{
+		@include pageHeaderBackground_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderTxt{
+		@include globalPageHeaderTxt_Desktop_Style;
+	}
+
+	.pageHeaderWrap .pageHeaderSubtxt{
+		@include globalPageHeaderSubTxt_Desktop_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Step by step future framework*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){	
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_MT_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_MT_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}	
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_MT_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_MT_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_Laptop_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_Laptop_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.stepByStepFlex-Class{
+		@include globalStepByStepFlex_Style;
+	}
+
+	.stepByStepLine-Class{
+		@include globalStepByStepLine_Style;
+	}
+
+	.stepByStepLineLight-Class{
+		@include globalStepByStepLineLight_Style;
+	}
+
+	.stepByStepItem-Class{
+		@include globalStepByStepItem_Style;
+	}
+
+	.stepNumber-Class{
+		@include globalStepNumber_Desktop_Style;
+	}
+
+	.stepNumberLight-Class{
+		@include globalStepNumberLight_Style;
+	}
+
+	.stepDefi-Class{
+		@include globalStepDefi_Desktop_Style;
+	}
+
+	.stepDefiLight-Class{
+		@include globalStepDefiLight_Style;
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Step by step future framework*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Asterisk*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.redAsterisk-Class{
+	color: red;
+}
+
+.greenAsterisk-Class{
+	color: green;
+}
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Asterisk*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Step sets*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_MT_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_MT_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_MT_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_Style;				
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_Mobile_Style;
+		@include messageFont_Style;
+	}
+	/*Step per field*/
+
+
+	/*Step per field buttons wrapper*/
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+		@include messageFont_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_Style;
+	}
+	/*Set of questions wrapper*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_Mobile_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_Mobile_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_Mobile_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdown_Mobile_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_Style;
+	}
+	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include buttonFSize_MT_Style;
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include buttonFSize_MT_Style;
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_MT_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_MT_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_MT_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_TLD_Style;
+		@include messageFont_Style;
+	}
+	/*Step per field*/
+
+
+	/*Step per field buttons wrapper*/
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_Style;
+	}
+	/*Set of questions wrapper*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_Laptop_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_TLD_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_TLD_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdown_TLD_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_Style;
+	}
+	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include buttonFSize_MT_Style;
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include buttonFSize_MT_Style;
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_LD_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_Laptop_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_Laptop_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_TLD_Style;
+		@include messageFont_Style;
+	}
+	/*Step per field*/
+
+
+	/*Step per field buttons wrapper*/
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_Style;
+	}
+	/*Set of questions wrapper*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_Laptop_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_TLD_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_TLD_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdown_TLD_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_Style;
+	}
+	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include buttonFSize_Laptop_Style;
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include buttonFSize_Laptop_Style;
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	/*Step set itself*/
+	.stepSets-Class{
+		@include stepSets_LD_Style;
+	}
+	/*Step set itself*/
+
+
+	/*Step title*/
+	.stepSets-Class>.stepSetTitleWrap{
+		@include stepSetTitleWrap_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitle-Class{
+		@include stepSetTitle_Desktop_Style;
+	}
+
+	.stepSets-Class>.stepSetTitleWrap>.stepSetTitleDefi-Class{
+		@include stepSetTitleDefi_Desktop_Style;
+	}
+	/*Step title*/
+
+
+	/*Step per field group*/
+	.stepSetPerFieldGroup-Class{
+		@include stepSetPerFieldGroup_Style;
+	}
+	/*Step per field group*/
+
+
+	/*Step per field*/
+	.stepSetPerFieldWrap{
+		@include stepSetPerFieldWrap_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldTitle-Class{
+		@include stepSetPerFieldTitle_Style;
+	}
+
+	.stepSetPerFieldWrap>.stepSetPerFieldFlex{
+		@include stepSetPerFieldFlex_TLD_Style;
+		@include messageFont_Style;
+	}
+	/*Step per field*/
+
+
+	/*Step per field buttons wrapper*/
+	.stepSetPerFieldWrap>.stepSetBtnsFlex{
+		@include stepSetBtnsFlex_Style;
+	}
+	/*Step per field buttons wrapper*/
+
+
+	/*Set of questions wrapper*/
+	.questionsWrap-Class{
+		@include messageFont_Style;
+	}
+	/*Set of questions wrapper*/
+
+
+	/*Comments and suggestion textarea*/
+	.suggestionTextArea-Class{
+		@include suggestionTextArea_Desktop_Style;
+	}
+	/*Comments and suggestion textarea*/
+
+
+	/*Radio Input Framework*/
+	.radioCheckFlex_RoClass{
+		@include radioCheckFlex_TLD_RoClass;
+	}
+
+	.customRadioCheck_RoClass{
+		@include customRadioCheck_Style;
+	}
+
+	.radioCheckTxtLabel_RoClass{
+		@include radioCheckTxtLabel_Style;
+	}
+
+	.radioCheckIconLabel_RoClass{
+		@include radioCheckIconLabel_Style;
+	}
+	/*Radio Input Framework*/
+
+
+	/*Checkbox Input Framework*/
+	.cusCheckBoxPaper_RoClass{
+		@include cusCheckbox_TLD_RoClass;
+	}
+
+	.cusCheckBoxPaper_RoClass>label{
+		@include cusCheckboxTxtLabel_Style;
+	}
+
+	.boxme_RoClass{
+		@include cusCheckboxCheck_Style;
+	}
+	/*Checkbox Input Framework*/
+
+
+	/*Dropdown Menu Framework*/
+	#dropdownReligion-Id{
+		@include dropdown_TLD_Style;
+	}
+
+	#dropdownReligion-Id{
+		@include dropdown_TLD_Style;
+	}
+
+	.scdropdownSelBox_RoClass, .scdropSearchboxWrap_RoClass, .scdropOptionCon_RoClass{
+		@include dropdownFSize_Style;
+	}
+
+	.scdropSelected_RoClass>span{
+		@include dropdownArrowSize_Style;
+	}
+	/*Dropdown Menu Framework*/
+
+
+	/*Button Framework*/
+	.proceedBtn-Class{
+		@include buttonFSize_Desktop_Style;
+		@include proceedBtn_Style;
+	}
+
+	.backBtn-Class{
+		@include buttonFSize_Desktop_Style;
+		@include backBtn_Style;
+	}
+	/*Button Framework*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Step sets*/
+/***********************************************************************************************************************************************************************************************************/

@@ -2,6 +2,7 @@
 
 /*Function for getting account access level*/
 function accountAccessLevel(object $vmcCsat_Conn, string $accountNumber){
+	
 	/*Prep return*/
 	$accountAccessLevel_Resp = new stdClass();
 	$accountAccessLevel_Resp->accountAccess = array();

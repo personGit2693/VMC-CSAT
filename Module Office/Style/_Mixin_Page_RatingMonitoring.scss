@@ -1,0 +1,1076 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Search area*/
+@mixin searchWrapper_Mobile_Style{
+	display: flex;
+	flex-flow: column nowrap; /*To be changed*/		
+	padding: 5px;
+	align-content: space-between; /*To be removed*/
+	background-color: #ffffff;
+	margin-top: 20px;
+}
+@mixin searchWrapper_TLD_Style{
+	display: flex;
+	flex-flow: row nowrap; /*To be changed*/
+	padding: 5px;	
+	/*align-content: space-between; removed*/
+	background-color: #ffffff;
+	margin-top: 20px;
+}
+
+
+@mixin searchWrapperItem_Mobile_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 5px 0px; /*To be changed*/
+}
+@mixin searchWrapperItem_TLD_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	margin: 5px; /*changed*/
+}
+
+
+@mixin filterClientItemWrap_Mobile_Style{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 250px; /*To be changed*/
+	justify-content: space-between;
+	align-items: center;	
+}
+@mixin filterClientItemWrap_TLD_Style{
+	display: flex;
+	flex-flow: row nowrap;
+	width: auto; /*changed*/
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+@mixin searchAreaLabelTxt_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 16px calibri; /*To be changed*/
+	color: #494C55;
+}
+@mixin searchAreaLabelTxt_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 20px calibri; /*changed*/
+	color: #494C55;
+}
+@mixin searchAreaLabelTxt_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	margin-right: 7px;
+	font: bold normal 24px calibri; /*To be changed*/
+	color: #494C55;
+}
+
+
+@mixin filterClientCusCheckBoxPaper_Style{
+	margin: 0px 5px;
+}
+
+
+@mixin filterClientCusCheckBoxLabel_MT_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 14px; /*To be changed*/
+	--cusCheckboxColor: #535F80;
+}
+@mixin filterClientCusCheckBoxLabel_Laptop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 18px; /*changed*/
+	--cusCheckboxColor: #535F80;
+}
+@mixin filterClientCusCheckBoxLabel_Desktop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 22px; /*changed*/
+	--cusCheckboxColor: #535F80;
+}
+
+
+@mixin filterClientCusCheckboxMe_MT_Style{
+	--cusCheckboxWidthHeight: 18px; /*To be changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+@mixin filterClientCusCheckboxMe_Laptop_Style{
+	--cusCheckboxWidthHeight: 22px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+@mixin filterClientCusCheckboxMe_Desktop_Style{
+	--cusCheckboxWidthHeight: 24px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #535F80;
+}
+
+
+@mixin selDropdownPointOfEntryItem_Mobile_Style{
+	--selectDropdownWidth: auto; /*To be changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+@mixin selDropdownPointOfEntryItem_Tablet_Style{
+	--selectDropdownWidth: 200px; /*changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+@mixin selDropdownPointOfEntryItem_Laptop_Style{
+	--selectDropdownWidth: 300px; /*changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+@mixin selDropdownPointOfEntryItem_Desktop_Style{
+	--selectDropdownWidth: 400px; /*changed*/
+	--selectDropdownBorderWidth: 2px;
+	--selectDropdownBorderColor: #285FF3;
+	--selectDropdownBorderRadius: 4px;
+}
+
+
+@mixin selectDropdownIconSize_MT_Style{
+	--selectDropdownIconSize: 16px; /*To be changed*/
+}
+@mixin selectDropdownIconSize_Laptop_Style{
+	--selectDropdownIconSize: 18px; /*changed*/
+}
+@mixin selectDropdownIconSize_Desktop_Style{
+	--selectDropdownIconSize: 20px; /*changed*/
+}
+
+
+@mixin selectDropdownF_MT_Style{
+	--selectDropdownFSize: 14px; /*To be changed*/	
+}
+@mixin selectDropdownF_Laptop_Style{
+	--selectDropdownFSize: 16px; /*changed*/	
+}
+@mixin selectDropdownF_Desktop_Style{
+	--selectDropdownFSize: 18px; /*changed*/
+}
+
+
+@mixin selectDropdownChevronSize_MT_Style{
+	--selectDropdownChevronSize: 23px; /*To be changed*/
+}
+@mixin selectDropdownChevronSize_Laptop_Style{
+	--selectDropdownChevronSize: 25px; /*changed*/
+}
+@mixin selectDropdownChevronSize_Desktop_Style{
+	--selectDropdownChevronSize: 27px; /*changed*/
+}
+
+
+@mixin dateRangeOneItemWrap_Mobile_Style{
+	width: auto;	
+}
+@mixin dateRangeOneItemWrap_TLD_Style{
+	width: auto;
+	margin-left: auto; /*Added*/
+}
+
+
+@mixin dateRangeOneIcon_MT_RoStyle{
+	--dateRangeIconSize: 22px; /*To be changed*/
+}
+@mixin dateRangeOneIcon_Laptop_RoStyle{
+	--dateRangeIconSize: 24px; /*changed*/
+}
+@mixin dateRangeOneIcon_Desktop_RoStyle{
+	--dateRangeIconSize: 26px; /*changed*/
+}
+
+
+@mixin dateRangeOneText_MT_Style{
+	--dateRangeFSize: 12px; /*To be changed*/
+	--dateRangeFColor: #285FF3;
+}
+@mixin dateRangeOneText_Laptop_Style{
+	--dateRangeFSize: 14px; /*changed*/
+	--dateRangeFColor: #285FF3;
+}
+@mixin dateRangeOneText_Desktop_Style{
+	--dateRangeFSize: 16px; /*changed*/
+	--dateRangeFColor: #285FF3;
+}
+
+
+@mixin dateRangeOneTooltipArrow_Mobile_Style{
+	--dateRangeTooltipColor: #8394B7;	
+	left: 0;
+}
+@mixin dateRangeOneTooltipArrow_TLD_Style{
+	--dateRangeTooltipColor: #8394B7;	
+	right: 0;
+}
+
+
+@mixin dateRangeOneCalLiteWrap_Mobile_Style{
+	--dateRangeCalLiteWrapWidth: 300px; /*To be changed*/
+	--dateRangeCalLiteWrapTop: 45px; /*To be changed*/
+	left: 0; /*To be changed*/
+}
+@mixin dateRangeOneCalLiteWrap_Tablet_Style{
+	--dateRangeCalLiteWrapWidth: 450px; /*changed*/
+	--dateRangeCalLiteWrapTop: 45.5px; /*changed*/
+	right: 0; /*changed*/
+}
+@mixin dateRangeOneCalLiteWrap_Laptop_Style{
+	--dateRangeCalLiteWrapWidth: 550px; /*changed*/
+	--dateRangeCalLiteWrapTop: 47px; /*changed*/
+	right: 0; /*changed*/
+}
+@mixin dateRangeOneCalLiteWrap_Desktop_Style{
+	--dateRangeCalLiteWrapWidth: 700px; /*changed*/
+	--dateRangeCalLiteWrapTop: 49px; /*changed*/
+	right: 0; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteHeadTxt_MT_Style{
+	--calendarHeadTxtFSize: 12px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadTxt_Laptop_Style{
+	--calendarHeadTxtFSize: 14px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadTxt_Desktop_Style{
+	--calendarHeadTxtFSize: 16px; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteHeadBtn_MT_Style{
+	--calendarHeadBtnWidthHeight: 14px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadBtn_Laptop_Style{
+	--calendarHeadBtnWidthHeight: 16px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteHeadBtn_Desktop_Style{
+	--calendarHeadBtnWidthHeight: 18px; /*changed*/
+}
+
+
+@mixin dateRangeOneWrapCalLiteDayTxt_MT_Style{
+	--calendarDayTxtFSize: 12px; /*To be changed*/
+}
+@mixin dateRangeOneWrapCalLiteDayTxt_Laptop_Style{
+	--calendarDayTxtFSize: 14px; /*changed*/
+}
+@mixin dateRangeOneWrapCalLiteDayTxt_Desktop_Style{
+	--calendarDayTxtFSize: 16px; /*changed*/
+}
+/*Search area*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Charts*/
+@mixin chartsWrapper_Style{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: #E8EFFF;
+	margin-top: 15px;
+}
+
+
+@mixin chartWrapWrapper_Style{
+	position: relative;	
+	overflow: auto;
+	box-sizing: border-box;
+	background-color: #ffffff;	
+	margin: 8px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 390px;
+	height: auto;
+	border-radius: 4px;
+	border: 1px solid #8394B7;
+}
+
+
+@mixin chartWrapWrapper_Scrollbar_Style{
+	width: 7px;
+	height: 7px;
+}
+@mixin chartWrapWrapper_Track_Style{
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+@mixin chartWrapper_Thumb_Style{
+	background: var(--charWrapScrollbarBgColor); 
+	border-radius: 10px;
+}
+@mixin chartWrapWrapper_ThumbHover_Style{
+	background: var(--charWrapScrollbarHoverBgColor); 
+}
+
+
+@mixin engagementDetWrap_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	height: 210px;
+}
+
+
+@mixin engagementFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: column nowrap;
+	background-color: #ffffff;
+}
+
+
+@mixin engagementItem_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+@mixin engagementLabel_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding: 5px;
+	font: normal bold 22px calibri; /*To be changed*/
+	color: #535F80;
+	width: 100%;
+}
+@mixin engagementLabel_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding: 5px;
+	font: normal bold 24px calibri; /*changed*/
+	color: #535F80;
+	width: 100%;
+}
+@mixin engagementLabel_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding: 5px;
+	font: normal bold 26px calibri; /*changed*/
+	color: #535F80;
+	width: 100%;
+}
+
+
+@mixin engagementValWrap_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 5px;
+	width: auto;
+	flex-shrink: 0;	
+}
+
+
+@mixin engagementVal_MT_Style{
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: visible;
+	color: #535F80;	
+	font: normal bold 22px calibri; /*To be changed*/
+	width: auto;
+	margin: 0px auto 0px auto;
+}
+@mixin engagementVal_Laptop_Style{
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: visible;
+	color: #535F80;	
+	font: normal bold 24px calibri; /*changed*/
+	width: auto;
+	margin: 0px auto 0px auto;
+}
+@mixin engagementVal_Desktop_Style{
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: visible;
+	color: #535F80;	
+	font: normal bold 26px calibri; /*changed*/
+	width: auto;
+	margin: 0px auto 0px auto;
+}
+
+
+@mixin overallEngagementVal{
+
+	-webkit-animation-name: newOverallEngagementVal;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+
+	animation-name: newOverallEngagementVal;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+
+@mixin respondentTotalDetWrap_Style{
+	position: absolute;		
+	box-sizing: border-box;
+	overflow: visible;
+	bottom: 0px;
+	color: #535F80;
+	width: 100%;
+	background-color: #ffffff;
+	border-left: 2px solid #285FF3;
+	border-right: 2px solid #285FF3;
+}
+
+
+@mixin respondentTextIconFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+
+@mixin respondentText_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding: 5px;
+	font: normal normal 20px calibri; /*To be changed*/
+	color: #535F80;		
+}
+@mixin respondentText_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding: 5px;
+	font: normal normal 22px calibri; /*changed*/
+	color: #535F80;		
+}
+@mixin respondentText_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding: 5px;
+	font: normal normal 24px calibri; /*changed*/
+	color: #535F80;		
+}
+
+
+@mixin respondentIcon_MT_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	width: 50px; /*To be changed*/
+	height: 50px; /*To be changed*/		
+	background-color: transparent;
+	background-image: url("../../src/respondent_blue.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	flex-shrink: 0;
+}
+@mixin respondentIcon_Laptop_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	width: 52px; /*changed*/
+	height: 52px; /*changed*/		
+	background-color: transparent;
+	background-image: url("../../src/respondent_blue.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	flex-shrink: 0;
+}
+@mixin respondentIcon_Desktop_Style{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;
+	width: 54px; /*changed*/
+	height: 54px; /*changed*/		
+	background-color: transparent;
+	background-image: url("../../src/respondent_blue.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	flex-shrink: 0;
+}
+
+
+@mixin genCodeBtnGeneralProps_Style{
+	margin: 0px 5px 0px auto;
+}
+
+
+@mixin respondentVal_MT_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding-left: 5px;
+	font: normal bold 26px calibri; /*To be changed*/
+	color: #535F80;
+	text-align: center;
+}
+@mixin respondentVal_Laptop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding-left: 5px;
+	font: normal bold 28px calibri; /*changed*/
+	color: #535F80;
+	text-align: center;
+}
+@mixin respondentVal_Desktop_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	padding-left: 5px;
+	font: normal bold 30px calibri; /*changed*/
+	color: #535F80;
+	text-align: center;
+}
+
+
+@mixin chartWrap_Style{
+	overflow: visible;	
+	--chartWrapWidth: auto;
+	--chartWrapHeight: 210px; 
+	--chartWrapBorderWidth: 1px;
+	--chartWrapBorderStyle: solid;
+	--chartWrapBorderColor: transparent;
+	--chartWrapBorderRadius: 0px;
+}
+/*Charts*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Questions and cc table*/
+@mixin summaryResponsesFlex_Style{
+	display: block;
+	padding: 5px;	
+	background-color: #ffffff;
+}
+
+
+
+@mixin summaryResponsesItem_MT_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	width: auto;
+	margin: 5px 0px;
+	font: normal normal 13px calibri; /*To be changed*/
+	text-align: center;
+	color: #494C55;	
+}
+@mixin summaryResponsesItem_Laptop_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	width: auto;
+	margin: 5px 0px;
+	font: normal normal 15px calibri; /*changed*/
+	text-align: center;
+	color: #494C55;	
+}
+@mixin summaryResponsesItem_Desktop_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	width: auto;
+	margin: 5px 0px;
+	font: normal normal 17px calibri; /*changed*/
+	text-align: center;
+	color: #494C55;	
+}
+
+
+@mixin summaryResponsesItemTable_MT_Style{
+	width: 100%;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 14px; /*To be changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;
+	margin:10px 0px;	
+}
+@mixin summaryResponsesItemTable_Laptop_Style{
+	width: 100%;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 16px; /*changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 10px 0px;
+}
+@mixin summaryResponsesItemTable_Desktop_Style{
+	width: 100%;
+	table-layout: fixed;
+	font-family: calibri;
+	font-size: 18px; /*changed*/
+	box-shadow: 0px 0px 5px #8394B8;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 10px 0px;
+}
+
+
+@mixin summaryResponsesItemTableTr_Style{
+	border: 1px solid #8394B8;
+}
+
+
+@mixin summaryResponsesItemTableTh_Style{
+	background-color: #20124D;
+	color: #ffffff;
+}
+
+@mixin summaryResponsesItemTableTd_Style{
+	color: #535F80;	
+}
+/*Questions and cc table*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Comment Section*/
+@mixin commentSectionTextWrap_Style{
+	background-color: #ffffff;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+
+@mixin commentSectionText_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 17px calibri; /*To be changed*/
+	margin: 5px;
+	color: #494C55;
+}
+@mixin commentSectionText_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 19px calibri; /*changed*/
+	margin: 5px;
+	color: #494C55;
+}
+@mixin commentSectionText_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 21px calibri; /*changed*/
+	margin: 5px;
+	color: #494C55;
+}
+
+
+@mixin commentSectionWrap_Style{
+	display: block;
+	overflow: auto;	
+	height: 500px;
+	background-color: #ffffff;
+	margin-top: 0px;
+	padding: 7px;
+}
+
+
+@mixin noCommentText_MT_Style{
+	font: normal normal 13px calibri; /*To be changed*/
+	color: #494C55;
+}
+@mixin noCommentText_Laptop_Style{
+	font: normal normal 16px calibri; /*changed*/
+	color: #494C55;
+}
+@mixin noCommentText_Desktop_Style{
+	font: normal normal 18px calibri; /*changed*/
+	color: #494C55;
+}
+
+
+@mixin commentSection_Scrollbar_Style{
+	width: 7px;
+	height: 7px;
+}
+
+
+@mixin commentSection_Track_Style{
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+
+
+@mixin commentSection_Thumb_Style{
+	background: #1B85BD;
+	border-radius: 10px;
+}
+
+
+@mixin commentSection_ThumbHover_Style{
+	background: #1B85BD;
+}
+
+
+@mixin commentDetailsWrap_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	white-space: normal;
+	box-sizing: border-box;
+	padding: 5px;
+	margin: 5px;
+}
+
+
+@mixin commentDetailsWrapOdd_Style{
+	background-color: #ffffff;
+	border: 0.5px solid #DEE1E6;
+}
+
+
+@mixin commentDetailsWrapEven_Style{
+	background-color: #f2f2f2;
+	border: 0.5px solid #DEE1E6;
+}
+
+
+@mixin commentHeaderFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+@mixin commentIcon_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	background-image: url("../../src/Comment_Icon_Black.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	background-origin: padding-box;
+	height: 20px; /*To be changed*/
+	width: 20px; /*To be changed*/
+	flex-shrink: 0;
+	flex-grow: 0;	
+}
+@mixin commentIcon_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	background-image: url("../../src/Comment_Icon_Black.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	background-origin: padding-box;
+	height: 22px; /*changed*/
+	width: 22px; /*changed*/
+	flex-shrink: 0;
+	flex-grow: 0;	
+}
+@mixin commentIcon_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	background-image: url("../../src/Comment_Icon_Black.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	background-origin: padding-box;
+	height: 24px; /*changed*/
+	width: 24px; /*changed*/
+	flex-shrink: 0;
+	flex-grow: 0;	
+}
+
+
+@mixin commentRefNo_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 15px calibri; /*To be changed*/
+	width: 100%;
+	color: #494C55;
+}
+@mixin commentRefNo_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 17px calibri; /*changed*/
+	width: 100%;
+	color: #494C55;
+}
+@mixin commentRefNo_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 19px calibri; /*changed*/
+	width: 100%;
+	color: #494C55;
+}
+
+
+@mixin commentRating_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 15px calibri; /*To be changed*/
+	color: #535F80;
+	flex-shrink: 0;
+}
+@mixin commentRating_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 17px calibri; /*changed*/
+	color: #535F80;
+	flex-shrink: 0;
+}
+@mixin commentRating_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 19px calibri; /*changed*/
+	color: #535F80;
+	flex-shrink: 0;
+}
+
+
+@mixin commentRespDetFlex_Style{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+
+@mixin commentRespDetItem_MT_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	width: auto;
+	border: 2px solid #1B85BD;
+	border-radius: 5px;
+	color: #1B85BD;
+	background-color: #ffffff;
+	font: normal normal 13px calibri; /*To be changed*/
+	margin: 3px 7px 0px 7px;
+	text-align: center;
+	padding: 5px;
+}
+@mixin commentRespDetItem_Laptop_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	width: auto;
+	border: 2px solid #1B85BD;
+	border-radius: 5px;
+	color: #1B85BD;
+	background-color: #ffffff;
+	font: normal normal 15px calibri; /*changed*/
+	margin: 3px 7px 0px 7px;
+	text-align: center;
+	padding: 5px;
+}
+@mixin commentRespDetItem_Desktop_Style{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	width: auto;
+	border: 2px solid #1B85BD;
+	border-radius: 5px;
+	color: #1B85BD;
+	background-color: #ffffff;
+	font: normal normal 17px calibri; /*changed*/
+	margin: 3px 7px 0px 7px;
+	text-align: center;
+	padding: 5px;
+}
+
+
+@mixin commentQuestion_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 15px calibri; /*To be changed*/
+	color: #494C55;
+	margin-top: 3px;
+}
+@mixin commentQuestion_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 17px calibri; /*changed*/
+	color: #494C55;
+	margin-top: 3px;
+}
+@mixin commentQuestion_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 19px calibri; /*changed*/
+	color: #494C55;
+	margin-top: 3px;
+}
+
+
+@mixin commentAnswer_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 15px calibri; /*To be changed*/
+	color: #535F80;
+}
+@mixin commentAnswer_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 17px calibri; /*changed*/
+	color: #535F80;
+}
+@mixin commentAnswer_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal normal 19px calibri; /*changed*/
+	color: #535F80;
+}
+
+
+@mixin commentDatetime_MT_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 14px calibri; /*To be changed*/
+	color: #535F80;
+	margin-top: 4px;
+}
+@mixin commentDatetime_Laptop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 16px calibri; /*changed*/
+	color: #535F80;
+	margin-top: 4px;
+}
+@mixin commentDatetime_Desktop_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font: normal bold 18px calibri; /*changed*/
+	color: #535F80;
+	margin-top: 4px;
+}
+/*Comment Section*/
+/***********************************************************************************************************************************************************************************************************/

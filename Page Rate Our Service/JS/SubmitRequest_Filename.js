@@ -1,3 +1,0 @@
-const submitRequestFunction = () =>{
-	gatewayFunction();
-}

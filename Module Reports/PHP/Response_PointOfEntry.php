@@ -6,10 +6,16 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
+/*Global Required Files*/
+require_once "../../Global PHP/Global_Connection.php";
+require_once "../../Global PHP/CheckGlobalToken_Class.php";
+/*Global Required Files*/
+
+
 if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST["startIn"]) && isset($_POST["maxDisplayRow"])){
+	
 	/*Required Files*/
-	require_once "../../Global PHP/Connection.php";
-	require_once "../../Global PHP/CheckGlobalToken_Class.php";
+	
 	/*Required Files*/
 
 
@@ -21,12 +27,17 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 	/*Query string*/
 
 
+	/*Prep Variables*/
+	$dbConnection = connectToDb("vmc_csat");
+	/*Prep Variables*/
+
+
 	/*Prep response*/
 	$getPointOfEntry_Resp = new stdClass();
 	$getPointOfEntry_Resp->execution = null;
 	$getPointOfEntry_Resp->globalTokenResult = null;
 	$getPointOfEntry_Resp->pointOfEntry_Array = array();
-	$getPointOfEntry_Resp->serverConnection = $serverConnection;
+	$getPointOfEntry_Resp->serverConnection = $dbConnection->serverConnection;
 
 	$execution = null;	
 	$globalTokenResult = null;
@@ -35,30 +46,49 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 
 	/*Check connection*/
-	if($serverConnection != null){
+	if($dbConnection->serverConnection != null){
+
 		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
 	}
 	/*Check connection*/
 
 
-	/*Validate global token*/
-	$validateGlobalToken_Obj = validateGlobalToken($vmcCsat_Conn, $token);
+	/*Validate token*/
+	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
+
 		$globalTokenResult = "Validating global token has execution problem!";
 		$getPointOfEntry_Resp->globalTokenResult = $globalTokenResult;
 
 		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
+
 	}else if($validateGlobalToken_Obj->counted === 0){
+
 		$globalTokenResult = "Token can't be found!";
 		$getPointOfEntry_Resp->globalTokenResult = $globalTokenResult;
 
 		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
 	}
-	/*Validate global token*/
+	/*Validate token*/
 
 
 	/*Valid global token*/
@@ -77,7 +107,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$getPointOfEntry_QueryObj = $vmcCsat_Conn->prepare($getPointOfEntry_Query);		
+		$getPointOfEntry_QueryObj = $dbConnection->selectedPdoConn->prepare($getPointOfEntry_Query);		
 
 		if(!empty($searchPointOfEntry)){
 			$getPointOfEntry_QueryObj->bindValue(':searchPointOfEntry', '%'.$searchPointOfEntry.'%', PDO::PARAM_STR);

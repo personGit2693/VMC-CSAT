@@ -7,31 +7,58 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 $destroySessions_Path = "../../Global PHP/DestroySessions.php";
 /*Dependency PHP Codes*/
 
-if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_SESSION["identifier"]) && isset($_SESSION["active"]) && isset($_SESSION["accToken"])){
+
+/*Global Required Files*/
+require_once "../../Global PHP/Global_Connection.php";
+require_once "../../Global PHP/CheckGlobalToken_Class.php";
+require_once "../../Global PHP/CheckAccountToken_Class.php";
+require_once "../../Global PHP/OfficeDetails_Class.php";
+require_once "../../Global PHP/AccountAccessLevel_Class.php";
+/*Global Required Files*/
+
+
+if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_active"]) && isset($_SESSION["accToken"])){
+	
 	/*Required Files*/
-	require_once "../../Global PHP/Connection.php";
-	require_once "../../Global PHP/CheckAccountToken_Class.php";
-	require_once "../../Global PHP/OfficeDetails_Class.php";	
-	require_once "../../Global PHP/AccountAccessLevel_Class.php";
+	
 	/*Required Files*/
+
+
+	/*Query string*/
+
+	/*Query string*/
+	
+
+	/*Prep Variables*/
+	$dbConnection = connectToDb("vmc_csat");
+	/*Prep Variables*/
 
 
 	/*Check connection*/
-	if($serverConnection != null){
-		echo $serverConnection;
+	if($dbConnection->serverConnection != null){
+
+		echo "Connection Problem!";
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
 	}
 	/*Check connection*/
 
 
 	/*Check account token*/
-	$validateAccToken_Obj = validateAccToken($vmcCsat_Conn, $_SESSION["accToken"], $_SESSION["accountNumber"]);
+	$validateAccToken_Obj = validateAccToken($dbConnection->selectedPdoConn, $_SESSION["accToken"], $_SESSION["account_number"]);
 
 	if($validateAccToken_Obj->execution != true){
+
 		echo "Validating account token has execution problem! redirecting to login page in 5 seconds please wait...";
 		header("Refresh:5;".$destroySessions_Path);
 		return;
+
 	}else if($validateAccToken_Obj->found == 0){
+
 		echo "Session expired! redirecting to login page in 5 seconds please wait...";
 		header("Refresh:5;".$destroySessions_Path);
 		return;
@@ -40,9 +67,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 
 	/*Get office details*/
-	$officeDetails_Obj = officeDetails($vmcCsat_Conn, intval($_SESSION["officeId"]));
+	$officeDetails_Obj = officeDetails($dbConnection->selectedPdoConn, intval($_SESSION["office_id"]));
 
 	if($officeDetails_Obj->execution != true){
+
 		echo "Getting office details has execution problem!";
 		return;
 	}
@@ -50,9 +78,10 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 
 	/*Get account access level*/
-	$accountAccessLevel_Obj = accountAccessLevel($vmcCsat_Conn, $_SESSION["accountNumber"]);
+	$accountAccessLevel_Obj = accountAccessLevel($dbConnection->selectedPdoConn, $_SESSION["account_number"]);
 
 	if($accountAccessLevel_Obj->execution != true){
+
 		echo "Getting account access level has execution problem!";
 		return;
 	}
@@ -377,7 +406,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 	</body>
 	</html>
 <?php
-}else if(!isset($_SESSION["accountNumber"]) || !isset($_SESSION["officeId"]) || !isset($_SESSION["identifier"]) || !isset($_SESSION["active"]) || !isset($_SESSION["accToken"])){
+}else if(!isset($_SESSION["account_number"]) || !isset($_SESSION["office_id"]) || !isset($_SESSION["account_identifier"]) || !isset($_SESSION["account_active"]) || !isset($_SESSION["accToken"])){
+	
 	header("location:".$destroySessions_Path);	
 }
 ?>

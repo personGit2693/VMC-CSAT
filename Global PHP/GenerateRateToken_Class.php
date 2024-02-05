@@ -2,6 +2,7 @@
 
 /*Function for generating Rate Service Token*/
 function generateRateToken(object $vmcCsat_Conn, string $codeId){
+	
 	/*Prep return*/
 	$genRateTok_Resp = new stdClass();
 	$genRateTok_Resp->genRateTok_Count = 0;

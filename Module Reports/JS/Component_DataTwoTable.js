@@ -51,19 +51,20 @@ function DataTwoTable(){
 				`<tbody>`;
 
 		for(let index=0; index < dataTwo_Array.length; index++){		
-			/*alert(dataTwo_Array.length);
-			
-			if(index == 86){
-				alert(JSON.stringify(dataTwo_Array[index]));
-			}
-			*/
 			
 			const controlNo = index + 1;
 
 			let sumSQD7Score = 0;
 			let sqd7Denominator = 0;
 
-			for(let indexOne=12; indexOne <=25 ; indexOne++){
+			/*
+			if(index == 7){
+				console.log(dataTwo_Array[index][0]);
+			}
+			*/			
+
+			for(let indexOne=12; indexOne <=25 ; indexOne++){				
+
 				sumSQD7Score += dataTwo_Array[index][2][indexOne].score;
 
 				if(dataTwo_Array[index][2][indexOne].score != 0){

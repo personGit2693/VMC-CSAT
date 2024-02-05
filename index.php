@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>VMC CSAT</title>
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="stylesheet" type="text/css" href="./Module Index/Style/index.css">
 	<link rel="shortcut icon" href="./src/vmclogo.png">		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 	<meta charset="utf-16">
@@ -15,7 +15,7 @@
 
 	<!--Page Header-->
 	<div class="pageHeaderWrap">
-		<div class="pageHeaderItem pageHeaderBg-Class" style="--pageHeaderBackground: url('./src/Banner One.png')">
+		<div class="pageHeaderItem pageHeaderBg-Class" style="--pageHeaderBackground: url('../../src/Banner One.png')">
 			<div class="pageHeaderTxt">Data Privacy Policy</div>
 			<div class="pageHeaderSubtxt">To learn more about data privacy visit Republic Act 10173 – Data Privacy Act of 2012</div>
 		</div>
@@ -59,10 +59,10 @@
 			<div class="policyAgreeTermsWrap">
 				<div class="cusCheckBoxPaper_RoClass agreeTermsCheckbox-Class">
 					<label for="agreeTermsCheckbox-Id">I agree to the Terms of Use and Data Privacy Policy:<div class="boxme_RoClass"><img src="./src/checkIcon.png"></div></label>
-					<input type="checkbox" id="agreeTermsCheckbox-Id" onchange="checkCusCheckBox(this), switchRateOurServBtn()" autocomplete="off">
+					<input type="checkbox" id="agreeTermsCheckbox-Id" onchange="checkCusCheckBox(this), controller_InputCheckbox_EnableRateOurServBtn()" autocomplete="off">
 				</div>
 
-				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto; visibility: hidden;" onclick="redirectToRateServ(this)">Rate our service</button>
+				<button class="normButton_RoClass" id="rateOurServBtn-Id" style="margin: 5px auto; visibility: hidden;" onclick="controller_Btn_ProceedToSurvey()">Rate our service</button>
 			</div>
 			<!--_ _Accept terms and agreement-->			
 		</div>		
@@ -89,22 +89,31 @@
 					<div id="notiEnterCodeModal-Id" style="width: 100%;"></div>
 					<div class="message-Class">Hingin po ang code sa opisina na nais ninyong bigyan ng grado.</div>
 					<div class="cusInputs_RoClass" style="width: 100%;">					
-						<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" id="inputCode-Id" onkeyup="checkInputCodeEnter(event)" autocomplete="off" required>
+						<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" id="inputCode-Id" onkeyup="controller_InputText_CheckInputCode(event)" autocomplete="off" required>
 						<div class="placeholdme_RoClass">Enter code</div>
 					</div>
-					<button class="normButton_RoClass" id="verifyCodeBtn-Id" style="margin-top: 5px;" onclick="checkInputCode(this)">Verify Code</button>
+					<button class="normButton_RoClass" id="verifyCodeBtn-Id" style="margin-top: 5px;" onclick="controller_Btn_CheckInputCode()">Verify Code</button>
 				</div>
 			</div>			
 		</div>
 	</div>
 	<!--Modals-->
 
-	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js"></script>	
-	<script type="text/javascript" src="JsCollection_Index.js"></script>	
-	<script type="text/javascript" src="Controller_UnhideRateOurServiceBtn.js"></script>	
-	<script type="text/javascript" src="Validation_PrivacyPolicy.js"></script>	
-	<script type="module" src="Portal_ValidateCode.js"></script>
-	<script type="module" src="Portal_RateService.js"></script>
-	<script type="text/javascript" src="Executor_Index.js"></script>
+	<!--Javascripts-->
+	<!--_Dependencies-->
+	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js"></script>
+	<!--_Dependencies-->
+
+	<!--_Controllers-->
+	<script type="module" src="Module Index/Client Side/Controller_InputCheckbox_EnableRateOurServBtn.js"></script>
+	<script type="module" src="Module Index/Client Side/Controller_InputText_CheckInputCode.js"></script>
+	<script type="module" src="Module Index/Client Side/Controller_Btn_CheckInputCode.js"></script>
+	<script type="module" src="Module Index/Client Side/Controller_Btn_ProceedToSurvey.js"></script>
+	<!--_Controllers-->
+
+	<!--_Executer-->
+	<script type="module" src="Module Index/Client Side/Executor_Index.js"></script>
+	<!--_Executer-->
+	<!--Javascripts-->	
 </body>
 </html>

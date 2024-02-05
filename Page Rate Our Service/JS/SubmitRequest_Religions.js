@@ -1,3 +1,0 @@
-const submitRequestReligions = () =>{
-	gatewayReligions();	
-}

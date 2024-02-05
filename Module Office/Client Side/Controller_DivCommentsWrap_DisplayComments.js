@@ -1,0 +1,31 @@
+/*Import*/
+import {valueCommentStartIndex, commentDisplay, commentStartIndex, stronglyAgree_Id, agree_Id, noRating_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
+import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
+import {submitComments} from "./SubmitRequest_Comments.js";
+import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
+import outputCommentDiv from "./Output_CommentDiv.js";
+import outputCommentDivLoader from "./Output_CommentDivLoader.js";
+/*Import*/
+
+
+/*Controller*/
+function controller_DivCommentsWrap_DisplayComments(commentSectionWrap){
+
+	if((commentSectionWrap.scrollTop + commentSectionWrap.offsetHeight) >= commentSectionWrap.scrollHeight){
+
+		valueCommentStartIndex();
+
+		submitComments(outputCommentDiv, outputCommentDivLoader, "commentDivLoader-Id", selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex, submitNewRespondentNotifier, currentNewRespondent);
+	}	
+}
+/*Controller*/
+
+
+/*Declare Global*/
+window.controller_DivCommentsWrap_DisplayComments = controller_DivCommentsWrap_DisplayComments;
+/*Declare Global*/
+
+
+/*Export*/
+export default controller_DivCommentsWrap_DisplayComments;
+/*Export*/

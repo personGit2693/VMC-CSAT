@@ -6,10 +6,16 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Dependency PHP Codes*/
 
 
+/*Global Required Files*/
+require_once "../../Global PHP/Global_Connection.php";
+require_once "../../Global PHP/CheckGlobalToken_Class.php";
+/*Global Required Files*/
+
+
 if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
+	
 	/*Required Files*/
-	require_once "../../Global PHP/Connection.php";
-	require_once "../../Global PHP/CheckGlobalToken_Class.php";
+	
 	/*Required Files*/
 
 
@@ -21,12 +27,17 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 	/*Query string*/
 
 
+	/*Prep Variables*/
+	$dbConnection = connectToDb("vmc_csat");
+	/*Prep Variables*/
+
+
 	/*Prep response*/
 	$getQuestionsDataTwo_Resp = new stdClass();
 	$getQuestionsDataTwo_Resp->execution = null;
 	$getQuestionsDataTwo_Resp->globalTokenResult = null;
 	$getQuestionsDataTwo_Resp->questionsDataTwo_Array = array();
-	$getQuestionsDataTwo_Resp->serverConnection = $serverConnection;
+	$getQuestionsDataTwo_Resp->serverConnection = $dbConnection->serverConnection;
 
 	$execution = null;	
 	$globalTokenResult = null;
@@ -35,30 +46,49 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 
 
 	/*Check connection*/
-	if($serverConnection != null){
+	if($dbConnection->serverConnection != null){
+
 		echo json_encode($getQuestionsDataTwo_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
 	}
 	/*Check connection*/
 
 
-	/*Validate global token*/
-	$validateGlobalToken_Obj = validateGlobalToken($vmcCsat_Conn, $token);
+	/*Validate token*/
+	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
+
 		$globalTokenResult = "Validating global token has execution problem!";
 		$getQuestionsDataTwo_Resp->globalTokenResult = $globalTokenResult;
 
 		echo json_encode($getQuestionsDataTwo_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
+
 	}else if($validateGlobalToken_Obj->counted === 0){
+
 		$globalTokenResult = "Token can't be found!";
 		$getQuestionsDataTwo_Resp->globalTokenResult = $globalTokenResult;
 
 		echo json_encode($getQuestionsDataTwo_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$dbConnection = null;
+		/*_Disconnect*/
+
 		return;
 	}
-	/*Validate global token*/
+	/*Validate token*/
 
 
 	/*Valid global token*/
@@ -88,7 +118,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$getQuestionsDataTwo_QueryObj = $vmcCsat_Conn->prepare($getQuestionsDataTwo_Query);		
+		$getQuestionsDataTwo_QueryObj = $dbConnection->selectedPdoConn->prepare($getQuestionsDataTwo_Query);		
 
 		$getQuestionsDataTwo_QueryObj->bindValue(':dateFrom', $dateFrom, PDO::PARAM_STR);
 		$getQuestionsDataTwo_QueryObj->bindValue(':dateTo', $dateTo, PDO::PARAM_STR);		

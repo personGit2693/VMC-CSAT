@@ -2,6 +2,7 @@
 
 /*Burning generated code and rate token*/
 function burnCode(object $vmcCsat_Conn, string $codeId){
+	
 	/*Prep return*/
 	$burnCode_Resp = new stdClass();
 	$burnCode_Resp->execution = null;
