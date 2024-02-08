@@ -39,11 +39,13 @@ if(isset($_POST["token"]) && isset($_POST["currentNewRespondent"])){
 	$newRespondentNotifier_Resp->serverConnection = $dbConnection->serverConnection;
 	$newRespondentNotifier_Resp->validToken = null;
 	$newRespondentNotifier_Resp->execution = null;	
-	$newRespondentNotifier_Resp->newUpdate = false;	
+	$newRespondentNotifier_Resp->newUpdate = false;
+	$newRespondentNotifier_Resp->newRespondent = 0;
 
 	$validToken = null;
 	$execution = null;		
 	$newUpdate = false;	
+	$newRespondent = 0;
 	/*Prep response*/
 
 
@@ -100,16 +102,17 @@ if(isset($_POST["token"]) && isset($_POST["currentNewRespondent"])){
 				/*_Filing*/
 
 				/*_Fetching*/
-				$detectedNewRespondent = count($readin);
+				$newRespondent = $detectedNewRespondent = count($readin);
 				/*_Fetching*/
 
 				/*_Checking*/
 				if($detectedNewRespondent != $currentNewRespondent){
 
-					$newUpdate = true;
+					$newUpdate = true;					
 					break;
 				}
 				/*_Checking*/
+				/*Get New Updates*/	
 
 			}else if(!file_exists($newRespondentFile)){
 
@@ -122,7 +125,7 @@ if(isset($_POST["token"]) && isset($_POST["currentNewRespondent"])){
 			sleep(1);
 			/*Sleep mode*/		
 		}		
-		/*Get New Updates*/		
+			
 	}
 
 
@@ -134,6 +137,7 @@ if(isset($_POST["token"]) && isset($_POST["currentNewRespondent"])){
 	/*Return response*/
 	$newRespondentNotifier_Resp->execution = $execution;
 	$newRespondentNotifier_Resp->newUpdate = $newUpdate;
+	$newRespondentNotifier_Resp->newRespondent = $newRespondent;
 
 	echo json_encode($newRespondentNotifier_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
@@ -145,7 +149,8 @@ if(isset($_POST["token"]) && isset($_POST["currentNewRespondent"])){
 	$newRespondentNotifier_Resp->serverConnection = null;
 	$newRespondentNotifier_Resp->validToken = null;
 	$newRespondentNotifier_Resp->execution = null;	
-	$newRespondentNotifier_Resp->newUpdate = null;	
+	$newRespondentNotifier_Resp->newUpdate = null;
+	$newRespondentNotifier_Resp->newRespondent = null;	
 
 	echo json_encode($newRespondentNotifier_Resp, JSON_NUMERIC_CHECK);
 }

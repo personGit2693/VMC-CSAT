@@ -9,6 +9,7 @@ function DataTwoTable(){
 	let dataTwoTable = "";
 
 	if(dataTwo_Array.length > 0){
+		
 		dataTwoTable += `<button class="normButton_RoClass" onclick="controller_Button_DownloadAsExcel(this)">Download as Excel File</button>`+
 			`<table>`+
 				`<thead>`+
@@ -68,6 +69,7 @@ function DataTwoTable(){
 				sumSQD7Score += dataTwo_Array[index][2][indexOne].score;
 
 				if(dataTwo_Array[index][2][indexOne].score != 0){
+
 					sqd7Denominator++;
 				}
 
@@ -114,11 +116,7 @@ function DataTwoTable(){
 
 		dataTwoTable += `</tbody></table>`;
 	}
-	
-
-	if(dataTwoTable == ""){
-		dataTwoTable = "No Result";
-	}
+		
 
 	return dataTwoTable;
 }

@@ -1,5 +1,5 @@
 /*Import*/
-import gatewayComments from "./Gateway_Comments.js";
+import gatewayDataOne from "./Gateway_DataOne.js";
 /*Import*/
 
 
@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitComments(output, boxLoader, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex){
+function submitDataOne(output, boxLoader, boxLoader_Id, external_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -17,7 +17,7 @@ function submitComments(output, boxLoader, boxLoader_Id, officeId, clientTypeInt
 
 		boxLoader();
 
-		gatewayComments(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex)
+		gatewayDataOne(external_clientTypeId, office_id, dateFrom, dateTo)
 		.then(gatewayPromise => {
 
 			if(document.getElementById(boxLoader_Id) !== null){
@@ -39,10 +39,10 @@ function submitComments(output, boxLoader, boxLoader_Id, officeId, clientTypeInt
 
 
 /*Declare global*/
-window.submitComments = submitComments;
+window.submitDataOne = submitDataOne;
 /*Declare global*/
 
 
 /*Export*/
-export {submitComments, blockRequest};
+export {submitDataOne, blockRequest};
 /*Export*/

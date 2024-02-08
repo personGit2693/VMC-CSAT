@@ -14,12 +14,12 @@ function submitNewRespondentNotifier(currentNewRespondent){
 
 	if(blockRequest === false){
 
-		blockRequest = true;
+		blockRequest = true;		
 
 		gatewayNewRespondentNotifier(currentNewRespondent)
 		.then(gatewayPromise => {
 			
-			if(gatewayPromise === true){								
+			if(gatewayPromise === true){												
 
 				controller_Document_GetNewRespondent();
 			}

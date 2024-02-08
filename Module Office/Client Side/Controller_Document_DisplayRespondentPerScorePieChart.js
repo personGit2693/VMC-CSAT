@@ -9,7 +9,7 @@ import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier
 
 /*Controller*/
 function controller_Document_DisplayRespondentPerScorePieChart(){
-
+	
 	submitRespondentPerScore(outputRespondentPerScorePieChart, valueRespondentPerScoreDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, submitNewRespondentNotifier, currentNewRespondent);
 }
 /*Controller*/

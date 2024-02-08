@@ -19,7 +19,7 @@ function submitGetNewRespondent(assignValue, controllers_Array){
 		gatewayGetNewRespondent()
 		.then(gatewayPromise => {
 			
-			if(gatewayPromise === true){								
+			if(gatewayPromise === true){				
 
 				assignValue(countedNewRespondent);
 

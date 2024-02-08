@@ -9,7 +9,7 @@ function outputRespondentPerScorePieChart(){
 	const pieChartOption_Obj = {
 		fontSize: 12,
 		fontName: "Calibri",
-		title: 'Overall Client Satisfaction',		
+		title: 'Respondents Per Score',		
 		titleTextStyle:{
 			color: "#494C55",
 			fontSize: 16,

@@ -16,7 +16,7 @@ function submitRespondentPerScore(output, assignValue, clientTypeInternal, clien
 
 		blockRequest = true;
 
-		/*boxLoader();*/
+		/*boxLoader();*/		
 
 		gatewayRespondentPerScore(clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo)
 		.then(gatewayPromise => {
@@ -33,7 +33,7 @@ function submitRespondentPerScore(output, assignValue, clientTypeInternal, clien
 
 			if(gatewayPromise === true){								
 
-				output();
+				output();				
 
 				notifierNewRespondent(currentNewRespondent);
 			}

@@ -9,25 +9,27 @@ import token from "../../Global Client Side/Token.js";
 
 
 /*Export variables*/
-var newUpdate = null;
-var newRespondent = null;
+var respondentCcRatingDetails_Array = null;
 /*Export variables*/
 
 
-/*Get New Respondent*/
-async function requestNewRespondentNotifier(currentNewRespondent){
+/*Get Respondent Cc Rating Details*/
+async function requestRespondentCcRates(external_clientTypeId, office_id, dateFrom, dateTo){
 	
 	const requestPromise = new Promise(function(resolve){
 		
 		/*Form data*/
 		const fData = new FormData(); 
 		fData.append("token", token);
-		fData.append("currentNewRespondent", currentNewRespondent)		
+		fData.append("external_clientTypeId", external_clientTypeId);
+		fData.append("office_id", office_id);
+		fData.append("dateFrom", dateFrom);
+		fData.append("dateTo", dateTo);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_NewRespondentNotifier.php", {method: "POST", body: fData})
+		fetch("../Server Side/Response_RespondentCcRates.php", {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {
 
@@ -45,12 +47,11 @@ async function requestNewRespondentNotifier(currentNewRespondent){
 
 			}else if(parseObj.execution !== true){
 
-				console.log("Execution Problem in Request New Respondent Notifier!");
+				console.log("Execution Problem in Request Respondent Cc Rates!");
 
 			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
 
-				newUpdate = parseObj.newUpdate;
-				newRespondent = parseObj.newRespondent;
+				respondentCcRatingDetails_Array = parseObj.respondentCcRatingDetails_Array;
 
 				resolve(true);
 			}
@@ -62,9 +63,9 @@ async function requestNewRespondentNotifier(currentNewRespondent){
 
 	return await requestPromise;
 };
-/*Get New Respondent*/
+/*Get Respondent Cc Rating Details*/
 
 
 /*Export*/
-export {newRespondent, requestNewRespondentNotifier, newUpdate};
+export {requestRespondentCcRates, respondentCcRatingDetails_Array};
 /*Export*/

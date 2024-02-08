@@ -174,14 +174,14 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				}
 				?>
 						<input type="hidden" class="selectedOptValue_RoClass" value="" id="selDropOfficeValue-Id">					
-						<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '180px')">
+						<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '250px')">
 							<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/office-building.png');"></div>
 							<div class="displayedSelectedText_RoClass">Select Point of Entry</div>
-							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick=""></div>
+							<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/office-building.png', 'Select Point of Entry'), controller_DivOption_ResetSelectedOffice(), controller_SearchArea_DisplayTables()"></div>
 							<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down_hover.png');"></div>						
 						</div>
-						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="">
-							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="" autocomplete="off">
+						<div class="selectDropdownOptionsWrap_RoClass" id="pointOfEntryOptsWrap" style="border: 1px solid #285FF3;" onscroll="controller_DivOptionWrap_DisplayMorePointOfEntry(this)">
+							<input type="text" placeholder="Search Here" class="searchOpts_RoClass" id="searchPointOfEntry-Id" onkeyup="controller_InputText_AssignSearchAreaSearchPointOfEntry(this.value)" autocomplete="off">
 							<div class="selectDropdownOptsArea_RoClass" id="pointOfEntryOptsArea-Id">
 								<!--Component-->
 							</div>
@@ -352,6 +352,12 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 		<!--_Controller-->
 		<script type="module" src="../Client Side/Controller_Div_DisplaySelectedReportTable.js"></script>
+		<script type="module" src="../Client Side/Controller_InputText_AssignSearchAreaSearchPointOfEntry.js"></script>
+		<script type="module" src="../Client Side/Controller_DivOptionWrap_DisplayMorePointOfEntry.js"></script>
+		<script type="module" src="../Client Side/Controller_DivOption_AssignSelectedOffice.js"></script>
+		<script type="module" src="../Client Side/Controller_DivOption_ResetSelectedOffice.js"></script>
+		<script type="module" src="../Client Side/Controller_SearchArea_DisplayTables.js"></script>
+		<script type="module" src="../Client Side/Controller_Button_DownloadAsExcel.js"></script>
 		<!--_Controller-->
 		
 		<!--_Executor-->	
