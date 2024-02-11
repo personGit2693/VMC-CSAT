@@ -1,5 +1,6 @@
 /*Import*/
 import gatewayDataOne from "./Gateway_DataOne.js";
+import {dataOne_Array} from "./Request_DataOne.js";
 /*Import*/
 
 
@@ -9,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitDataOne(output, boxLoader, boxLoader_Id, external_clientTypeId, office_id, dateFrom, dateTo){
+function submitDataOne(output, boxLoader, boxLoader_Id, valueReferenceNoArray, external_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -27,6 +28,8 @@ function submitDataOne(output, boxLoader, boxLoader_Id, external_clientTypeId, o
 
 			
 			if(gatewayPromise === true){								
+
+				valueReferenceNoArray(dataOne_Array);
 
 				output();				
 			}
