@@ -321,14 +321,14 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 				<!--Data one table-->
 				<div class="globalWrapper reportsWrapper-Class" id="dataOneTableWrap">
-					Data 1					
+					<!--Component-->
 				</div>
 				<!--Data one table-->
 
 
 				<!--Data two table-->
 				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">
-				Data 2
+				<!--Component-->
 				</div>
 				<!--Data two table-->
 			</div> 

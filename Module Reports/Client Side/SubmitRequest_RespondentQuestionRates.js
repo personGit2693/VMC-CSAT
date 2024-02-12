@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitRespondentQuestionRates(output, boxLoader, boxLoader_Id, valueRespondentsQuestionsRatingsArray, questionActive, external_clientTypeId, office_id, dateFrom, dateTo){
+function submitRespondentQuestionRates(output, boxLoader, boxLoader_Id, valueRespondentsQuestionsRatingsArray, valueRespondentRatingsDetailsArray, questionActive, external_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -30,6 +30,8 @@ function submitRespondentQuestionRates(output, boxLoader, boxLoader_Id, valueRes
 			if(gatewayPromise === true){								
 
 				valueRespondentsQuestionsRatingsArray(respondentQuestionRateDetails_Array);
+
+				valueRespondentRatingsDetailsArray();
 
 				output();
 			}

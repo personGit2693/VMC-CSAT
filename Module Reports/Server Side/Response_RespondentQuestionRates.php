@@ -12,7 +12,7 @@ require_once "../../Global PHP/CheckGlobalToken_Class.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["token"]) && isset($_POST["external_clientTypeId"]) && isset($_POST["questionActive"]) && isset($_POST["officeId"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
+if(isset($_POST["token"]) && isset($_POST["external_clientTypeId"]) && isset($_POST["questionActive"]) && isset($_POST["office_id"]) && isset($_POST["dateFrom"]) && isset($_POST["dateTo"])){
 	
 	/*Required Files*/
 	
@@ -21,7 +21,7 @@ if(isset($_POST["token"]) && isset($_POST["external_clientTypeId"]) && isset($_P
 
 	/*Query string*/
 	$token = $_POST["token"];
-	$officeId = $_POST["officeId"];			
+	$office_id = $_POST["office_id"];			
 	$dateFrom = $_POST["dateFrom"];
 	$dateTo = $_POST["dateTo"];
 	$external_clientTypeId = $_POST["external_clientTypeId"];
@@ -113,8 +113,8 @@ if(isset($_POST["token"]) && isset($_POST["external_clientTypeId"]) && isset($_P
 			AND questions_tab.question_active = :questionActive 
 		";
 
-		if($officeId != 0){
-			$getQuestionsDataTwo_Query .= " AND clientresponses_tab.office_id = :officeId";
+		if($office_id != 0){
+			$getQuestionsDataTwo_Query .= " AND clientresponses_tab.office_id = :office_id";
 		}
 
 		$getQuestionsDataTwo_Query .= " ORDER BY clientresponses_tab.clientresponse_date DESC, questions_tab.question_number ASC"; 							
@@ -128,8 +128,8 @@ if(isset($_POST["token"]) && isset($_POST["external_clientTypeId"]) && isset($_P
 		$getQuestionsDataTwo_QueryObj->bindValue(':external_clientTypeId', intval($external_clientTypeId), PDO::PARAM_INT);
 		$getQuestionsDataTwo_QueryObj->bindValue(':questionActive', intval($questionActive), PDO::PARAM_INT);
 
-		if($officeId != 0){
-			$getQuestionsDataTwo_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
+		if($office_id != 0){
+			$getQuestionsDataTwo_QueryObj->bindValue(':office_id', intval($office_id), PDO::PARAM_INT);
 		}
 
 		$execution = $getQuestionsDataTwo_QueryObj->execute();
@@ -161,7 +161,7 @@ if(isset($_POST["token"]) && isset($_POST["external_clientTypeId"]) && isset($_P
 	/*Return response*/
 
 
-}else if(!isset($_POST["token"]) || !isset($_POST["external_clientTypeId"]) || !isset($_POST["questionActive"]) || !isset($_POST["officeId"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["external_clientTypeId"]) || !isset($_POST["questionActive"]) || !isset($_POST["office_id"]) || !isset($_POST["dateFrom"]) || !isset($_POST["dateTo"])){
 	
 	$respondentQuestionRates_Resp = new stdClass();
 	$respondentQuestionRates_Resp->validAccess = false;

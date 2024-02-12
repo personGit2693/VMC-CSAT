@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitRespondentCcRates(output, boxLoader, boxLoader_Id, valueRespondentsCcRatingsArray, submitRespondentQuestionRates, valueRespondentsQuestionsRatingsArray, questionActive, external_clientTypeId, office_id, dateFrom, dateTo){
+function submitRespondentCcRates(output, boxLoader, boxLoader_Id, valueRespondentsCcRatingsArray, submitRespondentQuestionRates, valueRespondentsQuestionsRatingsArray, valueRespondentRatingsDetailsArray, questionActive, external_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -31,7 +31,7 @@ function submitRespondentCcRates(output, boxLoader, boxLoader_Id, valueResponden
 
 				valueRespondentsCcRatingsArray(respondentCcRatingDetails_Array);
 
-				submitRespondentQuestionRates(output, boxLoader, boxLoader_Id, valueRespondentsQuestionsRatingsArray, questionActive, external_clientTypeId, office_id, dateFrom, dateTo);		
+				submitRespondentQuestionRates(output, boxLoader, boxLoader_Id, valueRespondentsQuestionsRatingsArray, valueRespondentRatingsDetailsArray, questionActive, external_clientTypeId, office_id, dateFrom, dateTo);		
 			}
 
 			blockRequest = false;

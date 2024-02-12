@@ -29,10 +29,10 @@ var respondentsQuestionsRatings_Array = [];
 
 
 /*Assign, Reset, Populate*/
-/*_Rest dataTwo_Array*/
-function restDataTwoArray(){
+/*_Reset dataTwo_Array*/
+function resetDataTwoArray(){
 
-	dataTwo_Array[];
+	dataTwo_Array = [];
 }
 /*_Reset dataTwo_Array*/
 
@@ -54,13 +54,15 @@ function resetRespondentRatingsDetailsArray(){
 
 
 /*_Assign respondentRatingsDetails_Array*/
-function valueRespondentRatingsDetailsArray(){
+function valueRespondentRatingsDetailsArray(){	
 
 	for(let index=0; index < respondentsReferenceNo_Array.length; index++){		
 
-		for(let indexOne=0; indexOne < respondentsCcRatings_Array.length; indexOne++){
+		resetRespondentRatingsDetailsArray();
+		let ccRatingsDetails_Array = [];
+		let questionsRatingsDetails_Array = [];
 
-			let ccRatingsDetails_Array = [];
+		for(let indexOne=0; indexOne < respondentsCcRatings_Array.length; indexOne++){			
 
 			if(respondentsReferenceNo_Array[index] == respondentsCcRatings_Array[indexOne].referenceNo){
 
@@ -68,9 +70,7 @@ function valueRespondentRatingsDetailsArray(){
 			}
 		}
 
-		for(let indexOne=0; indexOne < respondentsQuestionsRatings_Array.length; indexOne++){
-
-			let questionsRatingsDetails_Array = [];
+		for(let indexOne=0; indexOne < respondentsQuestionsRatings_Array.length; indexOne++){			
 
 			if(respondentsReferenceNo_Array[index] == respondentsQuestionsRatings_Array[indexOne].referenceNo){
 
@@ -129,23 +129,23 @@ function valueRespondentsCcRatingsArray(respondentsCcRatingsArray_Param){
 }
 /*_Assign respondentsCcRatings_Array*/
 
-/*_Assign respondentReferenceNo_Array*/
+/*_Assign respondentsReferenceNo_Array*/
 function valueReferenceNoArray(dataOneArray_Param){
 
 	dataOneArray_Param.forEach(function(value, index, array){
 
-		respondentReferenceNo_Array.push(value.clientresponse_reference);
+		respondentsReferenceNo_Array.push(value.clientresponse_reference);
 	})
 }
-/*_Assign respondentReferenceNo_Array*/
+/*_Assign respondentsReferenceNo_Array*/
 
 
-/*_Reset respondentReferenceNo_Array*/
+/*_Reset respondentsReferenceNo_Array*/
 function resetReferenceNoArray(){
 
-	respondentReferenceNo_Array = [];
+	respondentsReferenceNo_Array = [];
 }
-/*_Reset respondentReferenceNo_Array*/
+/*_Reset respondentsReferenceNo_Array*/
 
 
 /*_Reset selectedOffice_Obj*/
@@ -231,7 +231,8 @@ function valueSearchAreaSearchPointOfEntry(searchPointOfEntry_Param){
 
 
 /*Export*/
-export {resetRespondentRatingsDetailsArray,
+export {resetDataTwoArray,
+	resetRespondentRatingsDetailsArray,
 	valueRespondentRatingsDetailsArray,
 	respondentsQuestionsRatings_Array, 
 	valueRespondentsQuestionsRatingsArray, 
@@ -243,7 +244,7 @@ export {resetRespondentRatingsDetailsArray,
 	respondentRatingsDetails_Array, 
 	resetReferenceNoArray, 
 	valueReferenceNoArray, 
-	respondentReferenceNo_Array, 
+	respondentsReferenceNo_Array, 
 	questionActive, 
 	resetSelectedOffice, 
 	valueSelectedOffice, 
