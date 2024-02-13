@@ -33,12 +33,12 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 			<div id="stayTxt_ID">Client Satisfaction Monitoring.</div>
 
 			<div class="cusInputs_RoClass" id="usernameInputWrap">
-				<input type="text" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#285FF3')" autocomplete="off" id="usernInput-Id" required>
+				<input type="text" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#285FF3')" onkeyup="controller_InputText_CheckCredential(event)" autocomplete="off" id="usernInput-Id" required>
 				<div class="placeholdme_RoClass">Username</div>
 			</div>
 
 			<div class="cusInputs_RoClass" id="passwordInputWrap">
-				<input type="password" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#285FF3')" autocomplete="off" id="passInput-Id" required>
+				<input type="password" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#285FF3')" onkeyup="controller_InputText_CheckCredential(event)" autocomplete="off" id="passInput-Id" required>
 				<div class="placeholdme_RoClass">Password</div>
 			</div>
 						
@@ -50,8 +50,8 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 	<!--Footer Section-->
 	<hr class="linethis_RoClass">
-	<div class=footerWrap_RoClass>
-		<span class="footerTxt_RoClass">&copy; 2023 Valenzuela Medical Center. All rights reserved.</span>
+	<div class=footerWrap_RoClass id="footerWrap-Id">
+		
 	</div>
 	<!--Footer Section-->
 
@@ -71,7 +71,12 @@ if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_
 
 	<!--_Controllers-->
 	<script type="module" src="../Client Side/Controller_Btn_Login.js"></script>
+	<script type="module" src="../Client Side/Controller_InputText_CheckCredential.js"></script>	
 	<!--_Controllers-->
+
+	<!--_Executor-->
+	<script type="module" src="../Client Side/Executor_Page_Login.js"></script>
+	<!--_Executor-->
 	<!--Javascripts-->	
 </body>
 </html>

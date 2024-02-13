@@ -113,6 +113,11 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 						<span class="generalNavMenuText_RoClass">Rating Monitoring</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png" /></div>
 					</div>
 					<div style="max-height: 1000px;" class="subNavMenuWrap_RoClass">
+						<a href="#searchWrapper" class="subNavMenu_RoClass bookmark-Class" onclick="controller_Ahref_HightlightBookmark(this)">					
+							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/searchIcon black.png'); --activeSubNavMenuIcon:url('../../src/searchIcon white.png')"></div>
+							<span class="generalNavMenuText_RoClass">Search Area</span>
+						</a>
+
 						<a href="#chartsWrapper" class="subNavMenu_RoClass bookmark-Class" onclick="controller_Ahref_HightlightBookmark(this)">					
 							<div class="subNavMenuIconWrap_RoClass bookmarkIconWrap-Class" style="--subNavMenuIcon:url('../../src/Bar Graph Black.png'); --activeSubNavMenuIcon:url('../../src/Bar Graph White.png')"></div>
 							<span class="generalNavMenuText_RoClass">Score Charts</span>
@@ -138,14 +143,14 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				if(in_array($accessLevels["reportsNav"], $accountAccess)){					
 				?>
 
-					<a href="../../Module Reports/PHP/Page_CSATReports.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
+					<a href="../../Module Reports/Pages/Page_CSATReports.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/report icon.png'); --activeMainNavMenuIcon:url('../../src/report icon white.png')"></div>
 						<span class="generalNavMenuText_RoClass">Reports</span>
 					</a>					
 				<?php
 				}
 				?>	
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+					<a href="../../Module Settings/Pages/Page_AccountSettings.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/GearIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/GearIcon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Settings</span>
 					</a>

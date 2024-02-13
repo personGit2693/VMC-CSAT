@@ -1,8 +1,8 @@
 /*Import*/
-
+import controller_Document_DisplayFooter from "./Controller_Document_DisplayFooter.js";
 /*Import*/
 
 
-/*Execution*/
-
-/*Execution*/
+/*Display Footer*/
+controller_Document_DisplayFooter();
+/*Display Footer*/

@@ -108,7 +108,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 						<div class="sideNavHeaderTxt-Class">VMC CSAT</div>
 					</div>
 
-					<a href="../../Module Office/PHP/Page_RatingMonitoring.php" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
+					<a href="../../Module Office/Pages/Page_RatingMonitoring.php" class="mainNavMenu_RoClass mainNavMenu-Class bookmark-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/Monitoring Black.png'); --activeMainNavMenuIcon:url('../../src/Monitoring White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Rating Monitoring</span>
 					</a>					
@@ -122,7 +122,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				<?php
 				}
 				?>	
-					<a href="" class="mainNavMenu_RoClass mainNavMenu-Class">					
+					<a href="../../Module Settings/Pages/Page_AccountSettings.php" class="mainNavMenu_RoClass mainNavMenu-Class">					
 						<div class="mainNavMenuIconWrap_RoClass mainNavIconSize-Class" style="--mainNavMenuIcon:url('../../src/GearIcon_Black.png'); --activeMainNavMenuIcon:url('../../src/GearIcon_White.png')"></div>
 						<span class="generalNavMenuText_RoClass">Settings</span>
 					</a>
