@@ -378,6 +378,216 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Page top header Label*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.pageTopTitleLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 18px; /*To be changed*/
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 10px; /*To be changed*/
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.pageTopTitleLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 22px; /*changed*/
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 12px; /*To changed*/
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.pageTopTitleLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 25px; /*changed*/
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 16px; /*changed*/
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.pageTopTitleLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 28px; /*changed*/
+	}
+
+	.pageTopTitleLabelWrap-Class .pageTopDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 18px; /*changed*/
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Page top header Label*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Per setting title*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.titlePerSettingLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 15px; /*To be changed*/
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 8px; /*To be changed*/
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.titlePerSettingLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 17px; /*changed*/
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 10px; /*To changed*/
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.titlePerSettingLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 19px; /*changed*/
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 12px; /*changed*/
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.titlePerSettingLabelWrap-Class{
+
+		@include globalTitleLabelWrap_Style;
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class{
+
+		@include globalTitleHeaderTxt_Style;
+		--globalTitleHeaderFSize: 21px; /*changed*/
+	}
+
+	.titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class{
+
+		@include globalTitleDescription_Style;
+		--globalTitleDescriptionFSize: 14px; /*changed*/
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Per setting title*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
 
 /***********************************************************************************************************************************************************************************************************/

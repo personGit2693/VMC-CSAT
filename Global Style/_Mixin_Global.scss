@@ -521,6 +521,48 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Title label*/
+@mixin globalTitleLabelWrap_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: #ffffff;
+	padding: 13px;
+}
+
+
+@mixin globalTitleHeaderTxt_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	font-family: calibri;
+	font-weight: bold;
+	font-style: normal;
+	font-size: var(--globalTitleHeaderFSize);
+	color: black;
+	white-space: normal;
+}
+
+
+@mixin globalTitleDescription_Style{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	font-family: calibri;
+	font-weight: normal;
+	font-style: normal;
+	font-size: var(--globalTitleDescriptionFSize);
+	color: #848893;
+	white-space: normal;
+}
+/*Title label*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
 
 /*_ Modal*/

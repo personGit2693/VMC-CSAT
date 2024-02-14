@@ -146,6 +146,33 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 					</div>
 				</div>
 				<!--Page title-->								
+
+
+				<!--Settings Label-->
+				<div class="globalWrapper pageTopTitleLabelWrap-Class">
+					<div class="pageTopHeader-Class">Settings</div>
+					<div class="pageTopDesc-Class">Manage your account settings and preferences</div>
+				</div>
+				<!--Settings Label-->
+
+
+				<!--Profile Settings-->
+				<div class="globalWrapper">
+
+					<!--_Settings Title-->
+					<div class="titlePerSettingLabelWrap-Class">
+						<div class="titlePerSettingHeader-Class">Account Credentials</div>
+						<div class="titlePerSettingDesc-Class">Update the username or password of your CSAT Account</div>
+					</div>
+					<!--_Settings Title-->
+
+					<!--_Account Credentials Settings-->
+					<div id="accCredentialsSettingsWrap-Id">
+						
+					</div>
+					<!--_Account Credentials Settings-->
+				</div>
+				<!--Profile Settings-->
 			</div> 
 		</div>
 

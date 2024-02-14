@@ -49,6 +49,11 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Title label*/
+/*Title label*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
 /*_ Modal*/
 /*_ Modal*/
@@ -3945,6 +3950,312 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Page Header*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Page top header Label*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .pageTopTitleLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 18px;
+    /*To be changed*/ }
+
+  .pageTopTitleLabelWrap-Class .pageTopDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 10px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .pageTopTitleLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 22px;
+    /*changed*/ }
+
+  .pageTopTitleLabelWrap-Class .pageTopDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 12px;
+    /*To changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .pageTopTitleLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 25px;
+    /*changed*/ }
+
+  .pageTopTitleLabelWrap-Class .pageTopDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 16px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .pageTopTitleLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 28px;
+    /*changed*/ }
+
+  .pageTopTitleLabelWrap-Class .pageTopDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 18px;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Page top header Label*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Per setting title*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .titlePerSettingLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 15px;
+    /*To be changed*/ }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 8px;
+    /*To be changed*/ } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .titlePerSettingLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 17px;
+    /*changed*/ }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 10px;
+    /*To changed*/ } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .titlePerSettingLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 19px;
+    /*changed*/ }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 12px;
+    /*changed*/ } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .titlePerSettingLabelWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 13px; }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--globalTitleHeaderFSize);
+    color: black;
+    white-space: normal;
+    --globalTitleHeaderFSize: 21px;
+    /*changed*/ }
+
+  .titlePerSettingLabelWrap-Class .titlePerSettingDesc-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    font-family: calibri;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--globalTitleDescriptionFSize);
+    color: #848893;
+    white-space: normal;
+    --globalTitleDescriptionFSize: 14px;
+    /*changed*/ } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Per setting title*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
