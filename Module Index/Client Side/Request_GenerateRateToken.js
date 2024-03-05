@@ -45,7 +45,7 @@ async function requestGenerateRateToken(inputCode){
 				alert("Invalid Token!");
 
 			}else if(parseObj.execution !== true){
-
+				
 				alert("Execution Problem in Generate Rate Token!");
 
 			}else if(parseObj.newRateToken === 0){

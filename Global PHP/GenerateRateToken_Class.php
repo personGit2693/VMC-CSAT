@@ -3,6 +3,11 @@
 /*Function for generating Rate Service Token*/
 function generateRateToken(object $vmcCsat_Conn, string $codeId){
 	
+	/*Prep variables*/
+	$getDateToday = date('Y-m-d H:i:s', time());
+	/*Prep variables*/
+
+
 	/*Prep return*/
 	$genRateTok_Resp = new stdClass();
 	$genRateTok_Resp->genRateTok_Count = 0;
@@ -40,7 +45,7 @@ function generateRateToken(object $vmcCsat_Conn, string $codeId){
 	/*_Execute query*/
 	$genRateToken_QueryObj = $vmcCsat_Conn->prepare($genRateToken_Query);
 	$genRateToken_QueryObj->bindValue(':generated_Token', $generated_Token, PDO::PARAM_STR);
-	$genRateToken_QueryObj->bindValue(':getDateToday', date('Y-m-d H:i:s', time()), PDO::PARAM_STR);
+	$genRateToken_QueryObj->bindValue(':getDateToday', $getDateToday, PDO::PARAM_STR);
 	$genRateToken_QueryObj->bindValue(':codeId', $codeId, PDO::PARAM_STR);
 
 	$genRateTok_Exec = $genRateToken_QueryObj->execute();

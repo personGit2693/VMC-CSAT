@@ -100,8 +100,6 @@ function valueCommentStartIndex(){
 	comments_PageNo++;
 
 	commentStartIndex = (comments_PageNo - 1) * commentDisplay;
-
-	console.log(comments_PageNo);	
 }
 /*_Assign commentStartIndex*/
 

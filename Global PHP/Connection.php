@@ -2,7 +2,7 @@
 try{
 	$serverConnection = null;
 
-	$vmcCsat_ConString = "mysql:host=localhost;dbname=vmc_csat;";
+	$vmcCsat_ConString = "mysql:host=localhost;dbname=vmc_csat";
 	$serverUsername = "root";
 	$serverPassword = "";
 

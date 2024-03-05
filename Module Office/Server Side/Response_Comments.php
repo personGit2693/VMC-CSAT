@@ -150,7 +150,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 					COUNT(questionresponse_id) AS 'allPassScore' 
 					FROM questionresponses_tab  
 					WHERE score_id = :stronglyAgree_Id OR score_id = :agree_Id
-					GROUP BY clientresponse_reference)				    
+					GROUP BY clientresponse_reference)			    
 				AS allpassscore_tab 
 				ON clientresponses_tab.clientresponse_reference = allpassscore_tab.clientresponse_reference
 				WHERE clientresponses_tab.office_id = :officeId 
