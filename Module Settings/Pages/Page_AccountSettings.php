@@ -156,23 +156,21 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				<!--Settings Label-->
 
 
-				<!--Profile Settings-->
+				<!--Profile Settings
 				<div class="globalWrapper">
 
-					<!--_Settings Title-->
+					Settings Title					
 					<div class="titlePerSettingLabelWrap-Class">
 						<div class="titlePerSettingHeader-Class">Account Credentials</div>
 						<div class="titlePerSettingDesc-Class">Update the username or password of your CSAT Account</div>
 					</div>
-					<!--_Settings Title-->
-
-					<!--_Account Credentials Settings-->
-					<div id="accCredentialsSettingsWrap-Id">
-						
+					
+					Account Credentials Settings
+					<div id="accCredentialsSettingsWrap">
+						<div class=""></div>
 					</div>
-					<!--_Account Credentials Settings-->
 				</div>
-				<!--Profile Settings-->
+				-->
 			</div> 
 		</div>
 
@@ -187,8 +185,8 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 		<!--Javascripts-->
 		<!--_Dependencies-->
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>				
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v1"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>				
 		<!--_Dependencies-->
 
 		<!--_Controller-->

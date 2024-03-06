@@ -101,7 +101,7 @@
 
 	<!--Javascripts-->
 	<!--_Dependencies-->
-	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js"></script>
+	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js?v1"></script>
 	<!--_Dependencies-->
 
 	<!--_Controllers-->

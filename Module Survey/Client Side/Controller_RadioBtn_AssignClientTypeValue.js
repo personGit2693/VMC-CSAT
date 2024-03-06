@@ -7,7 +7,7 @@ import {resetClientTypeId, valueClientTypeId} from "./Values_Survey.js";
 function controller_RadioBtn_AssignClientTypeValue(selectedRespondent_Base, radioBtnElement){
 
 	const radioBtnElement_Checked = radioBtnElement.getAttribute("data-rogridradio-check");
-	
+
 	if(radioBtnElement_Checked == "true"){
 
 		valueClientTypeId(selectedRespondent_Base);

@@ -380,8 +380,8 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"]) && isset($_GET["
 
 			<!--Javascripts-->
 			<!--_Dependencies-->
-			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-			<script type="text/javascript" src="../../Global Client Side/Rogrid_Steps.js"></script>
+			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
+			<script type="text/javascript" src="../../Global Client Side/Rogrid_Steps.js?v1"></script>
 			<!--_Dependencies-->
 
 			<!--_Controllers-->
