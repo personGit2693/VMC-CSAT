@@ -4408,7 +4408,7 @@ body {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4417,7 +4417,7 @@ body {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 16px;
+    --normBtnFSize: 15px;
     /*To be changed*/ }
 
   /*Normal Button*/
@@ -4476,7 +4476,7 @@ body {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4485,7 +4485,7 @@ body {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 16px;
+    --normBtnFSize: 15px;
     /*To be changed*/ }
 
   /*Normal Button*/
@@ -4544,7 +4544,7 @@ body {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4553,8 +4553,8 @@ body {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 18px;
-    /*changed*/ }
+    --normBtnFSize: 15px;
+    /*To be changed*/ }
 
   /*Normal Button*/
   /*Notification*/
@@ -4612,7 +4612,7 @@ body {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4621,8 +4621,8 @@ body {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 20px;
-    /*changed*/ }
+    --normBtnFSize: 15px;
+    /*To be changed*/ }
 
   /*Normal Button*/
   /*Notification*/

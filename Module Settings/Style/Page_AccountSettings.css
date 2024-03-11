@@ -4266,7 +4266,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4275,7 +4275,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 16px;
+    --normBtnFSize: 15px;
     /*To be changed*/ }
 
   /*Normal Button*/
@@ -4341,7 +4341,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4350,7 +4350,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 16px;
+    --normBtnFSize: 15px;
     /*To be changed*/ }
 
   /*Normal Button*/
@@ -4416,7 +4416,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4425,8 +4425,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 18px;
-    /*changed*/ }
+    --normBtnFSize: 15px;
+    /*To be changed*/ }
 
   /*Normal Button*/
   /*Select Dropdown*/
@@ -4491,7 +4491,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4500,8 +4500,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 20px;
-    /*changed*/ }
+    --normBtnFSize: 15px;
+    /*To be changed*/ }
 
   /*Normal Button*/
   /*Select Dropdown*/

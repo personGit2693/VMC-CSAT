@@ -156,6 +156,20 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				<!--Settings Label-->
 
 
+				<!--Setup Ignore codes-->
+				<div class="globalWrapper">
+					<div class="titlePerSettingLabelWrap-Class">
+						<div class="titlePerSettingHeader-Class">Ignoring survey passcodes</div>
+						<div class="titlePerSettingDesc-Class">Save this device to stop asking for a passcodes while the browser is open</div>
+					</div>
+					
+					<div id="saveCodesWrap">
+						<div class=""></div>
+					</div>
+				</div>
+				<!--Setup Ignore codes-->				
+
+
 				<!--Profile Settings
 				<div class="globalWrapper">
 

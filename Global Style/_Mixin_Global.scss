@@ -643,7 +643,7 @@
 /*_ Normal Button*/
 @mixin normBtnGeneralProps_Style{
 	--normBtnWidth: auto;
-	--normBtnPadding: 7px;
+	--normBtnPadding: 4px;
 	--normBtnBorderWidth: 1px;
 	--normBtnBorderColor: #285FF3;
 	--normBtnRadius: 4px;
@@ -655,14 +655,8 @@
 }
 
 
-@mixin normBtnFSize_MT_Style{
-	--normBtnFSize: 16px; /*To be changed*/
-}
-@mixin normBtnFSize_Laptop_Style{
-	--normBtnFSize: 18px; /*changed*/
-}
-@mixin normBtnFSize_Desktop_Style{
-	--normBtnFSize: 20px; /*changed*/
+@mixin normBtnFSize_Style{
+	--normBtnFSize: 15px; /*To be changed*/
 }
 /*_ Normal Button*/
 

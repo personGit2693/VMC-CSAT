@@ -383,7 +383,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 								<div class="respondentTextIconFlex">
 									<div class="respondentText-Class">Total Respondent</div>
 									<div class="respondentIcon-Class"></div>
-									<button class="normButton_RoClass genCodeBtn-Class" onclick="controller_Btn_GenerateOfficeCode()">Generate code</button>
+									<button class="normButton_RoClass genCodeBtn-Class" onclick="controller_Btn_GenerateOfficeCode()">Generate passcode</button>
 								</div>
 								<div class="respondentVal-Class" id="respondentVal-Id"><!--Component--></div>
 							</div>

@@ -27,7 +27,7 @@ function submitGenerateOfficeCode(officeId){
 
 				}else if(generatedOfficeCode != "" && generatedOfficeCode != null){
 
-					alert("Please provide this code to the client: "+generatedOfficeCode);
+					alert("Please provide this passcode to the client: "+generatedOfficeCode);
 				}				
 			}
 

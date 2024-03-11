@@ -87,10 +87,10 @@
 			<div class="modalBody_RoClass">
 				<div class="fieldsWrapFlex">
 					<div id="notiEnterCodeModal-Id" style="width: 100%;"></div>
-					<div class="message-Class">Hingin po ang code sa opisina na nais ninyong bigyan ng grado.</div>
+					<div class="message-Class">Hingin po ang passcode sa opisina na nais ninyong bigyan ng grado.</div>
 					<div class="cusInputs_RoClass" style="width: 100%;">					
 						<input type="text" onfocusout="lowlightInWrap(this, '#303238')" onfocus="highlightInWrap(this, '#285FF3')" id="inputCode-Id" onkeyup="controller_InputText_CheckInputCode(event)" autocomplete="off" required>
-						<div class="placeholdme_RoClass">Enter code</div>
+						<div class="placeholdme_RoClass">Enter passcode</div>
 					</div>
 					<button class="normButton_RoClass" id="verifyCodeBtn-Id" style="margin-top: 5px;" onclick="controller_Btn_CheckInputCode()">Verify Code</button>
 				</div>

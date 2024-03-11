@@ -1,6 +1,6 @@
 /*Import*/
 import {inputCode} from "./Elements_Index.js";
-import controller_Btn_ShowRateOurServiceBtn from "./Controller_Btn_ShowRateOurServBtn.js";
+import controller_Document_ShowRateOurServBtn from "./Controller_Document_ShowRateOurServBtn.js";
 import {submitRequestValidateCode} from "./SubmitRequest_ValidateCode.js";
 /*Import*/
 
@@ -10,7 +10,7 @@ function controller_InputText_CheckInputCode(e){
 
 	if(e.key == "Enter"){
 
-		submitRequestValidateCode(inputCode.value, controller_Btn_ShowRateOurServiceBtn, notifyNodeBox);	
+		submitRequestValidateCode(inputCode.value, controller_Document_ShowRateOurServBtn, notifyNodeBox);	
 	}
 }
 /*Controller for invoking submitRequestValidateCode*/

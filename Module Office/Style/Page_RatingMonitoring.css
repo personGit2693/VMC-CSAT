@@ -4662,7 +4662,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4671,7 +4671,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 16px;
+    --normBtnFSize: 15px;
     /*To be changed*/
     margin: 0px 5px 0px auto; }
 
@@ -4843,7 +4843,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -4852,7 +4852,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 16px;
+    --normBtnFSize: 15px;
     /*To be changed*/
     margin: 0px 5px 0px auto; }
 
@@ -5024,7 +5024,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -5033,8 +5033,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 18px;
-    /*changed*/
+    --normBtnFSize: 15px;
+    /*To be changed*/
     margin: 0px 5px 0px auto; }
 
   .engagementDetWrap .respondentTotalDetWrap .respondentVal-Class {
@@ -5216,7 +5216,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
   .engagementDetWrap .respondentTotalDetWrap .respondentTextIconFlex .genCodeBtn-Class {
     --normBtnWidth: auto;
-    --normBtnPadding: 7px;
+    --normBtnPadding: 4px;
     --normBtnBorderWidth: 1px;
     --normBtnBorderColor: #285FF3;
     --normBtnRadius: 4px;
@@ -5225,8 +5225,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     --normBtnFcolor: #ffffff;
     --normBtnHovActFColor: #ffffff;
     --normBtnHovActBgColor: #1B85BD;
-    --normBtnFSize: 20px;
-    /*changed*/
+    --normBtnFSize: 15px;
+    /*To be changed*/
     margin: 0px 5px 0px auto; }
 
   .chartWrap-Class {
