@@ -525,8 +525,7 @@
 @mixin globalTitleLabelWrap_Style{
 	position: relative;
 	box-sizing: border-box;
-	overflow: visible;
-	background-color: #ffffff;
+	overflow: visible;	
 	padding: 13px;
 }
 
@@ -564,6 +563,56 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
+
+/*_Checkbox*/
+@mixin checkboxLabel_Mobile_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 14px; /*To be changed*/
+	--cusCheckboxColor: #565B5F;
+}
+@mixin checkboxLabel_Tablet_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 14px; /*To be changed*/
+	--cusCheckboxColor: #565B5F;
+}
+@mixin checkboxLabel_Laptop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 16px; /*changed*/
+	--cusCheckboxColor: #565B5F;
+}
+@mixin checkboxLabel_Desktop_Style{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: 18px; /*changed*/
+	--cusCheckboxColor: #565B5F;
+}
+
+
+@mixin boxmeRoClass_Mobile_Style{
+	--cusCheckboxWidthHeight: 18px; /*To be changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #565B5F;
+}
+@mixin boxmeRoClass_Tablet_Style{
+	--cusCheckboxWidthHeight: 18px; /*To be changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #565B5F;
+}
+@mixin boxmeRoClass_Laptop_Style{
+	--cusCheckboxWidthHeight: 20px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #565B5F;
+}
+@mixin boxmeRoClass_Desktop_Style{
+	--cusCheckboxWidthHeight: 22px; /*changed*/
+	--cusCheckboxBorderWidth: 1.5px;
+	--cusCheckboxBorderColor: #565B5F;
+}
+/*_Checkbox*/
+
 
 /*_ Modal*/
 @mixin modalmeGeneralProps_Style{

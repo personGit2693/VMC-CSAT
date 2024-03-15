@@ -6,6 +6,7 @@ date_default_timezone_set('Asia/Manila');
 $page_Dashboard_Path = "../../Page Office/PHP/Page_Dashboard.php";
 /*Dependency PHP Codes*/
 
+
 if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_SESSION["identifier"]) && isset($_SESSION["active"]) && isset($_SESSION["accToken"])){
 	header("location:".$page_Dashboard_Path);
 }

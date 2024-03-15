@@ -55,6 +55,8 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
+/*_Checkbox*/
+/*_Checkbox*/
 /*_ Modal*/
 /*_ Modal*/
 /*_ Input field*/
@@ -3494,6 +3496,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Setup Ignore passcodes*/
+/*Setup Ignore passcodes*/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3961,7 +3967,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
@@ -3998,7 +4003,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
@@ -4035,7 +4039,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
@@ -4072,7 +4075,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .pageTopTitleLabelWrap-Class .pageTopHeader-Class {
@@ -4114,7 +4116,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
@@ -4151,7 +4152,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
@@ -4188,7 +4188,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
@@ -4225,7 +4224,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    background-color: #ffffff;
     padding: 13px; }
 
   .titlePerSettingLabelWrap-Class .titlePerSettingHeader-Class {
@@ -4259,10 +4257,70 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Setup Ignore passcodes*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .settingsControllersWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 13px; } }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .settingsControllersWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 13px; } }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .settingsControllersWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 13px; } }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .settingsControllersWrap-Class {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    padding: 13px; } }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Setup Ignore passcodes*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Rogrid Library*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Checkbox*/
+  .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 14px;
+    /*To be changed*/
+    --cusCheckboxColor: #565B5F; }
+
+  .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 18px;
+    /*To be changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #565B5F; }
+
+  /*Checkbox*/
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
@@ -4338,6 +4396,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Checkbox*/
+  .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 14px;
+    /*To be changed*/
+    --cusCheckboxColor: #565B5F; }
+
+  .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 18px;
+    /*To be changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #565B5F; }
+
+  /*Checkbox*/
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
@@ -4413,6 +4486,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Checkbox*/
+  .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 16px;
+    /*changed*/
+    --cusCheckboxColor: #565B5F; }
+
+  .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 20px;
+    /*changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #565B5F; }
+
+  /*Checkbox*/
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;
@@ -4488,6 +4576,21 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Checkbox*/
+  .cusCheckBoxPaper_RoClass label {
+    --cusCheckboxFStyle: normal;
+    --cusCheckboxFWeight: normal;
+    --custCheckboxFSize: 18px;
+    /*changed*/
+    --cusCheckboxColor: #565B5F; }
+
+  .cusCheckBoxPaper_RoClass .boxme_RoClass {
+    --cusCheckboxWidthHeight: 22px;
+    /*changed*/
+    --cusCheckboxBorderWidth: 1.5px;
+    --cusCheckboxBorderColor: #565B5F; }
+
+  /*Checkbox*/
   /*Normal Button*/
   .normButton_RoClass {
     --normBtnWidth: auto;

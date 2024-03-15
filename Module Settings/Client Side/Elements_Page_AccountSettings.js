@@ -1,0 +1,1 @@
+export const bypassPassCode = document.getElementById("bypassPassCode-Id");

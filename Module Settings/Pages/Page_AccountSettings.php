@@ -149,25 +149,28 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 
 				<!--Settings Label-->
-				<div class="globalWrapper pageTopTitleLabelWrap-Class">
+				<div class="globalWrapper pageTopTitleLabelWrap-Class" style="background-color: #ffffff;">
 					<div class="pageTopHeader-Class">Settings</div>
 					<div class="pageTopDesc-Class">Manage your account settings and preferences</div>
 				</div>
 				<!--Settings Label-->
 
 
-				<!--Setup Ignore codes-->
-				<div class="globalWrapper">
+				<!--Setup Ignore passcodes-->
+				<div class="globalWrapper" style="background-color: #ffffff;">
 					<div class="titlePerSettingLabelWrap-Class">
 						<div class="titlePerSettingHeader-Class">Ignoring survey passcodes</div>
 						<div class="titlePerSettingDesc-Class">Save this device to stop asking for a passcodes while the browser is open</div>
 					</div>
 					
-					<div id="saveCodesWrap">
-						<div class=""></div>
+					<div class="settingsControllersWrap-Class">
+						<div class="cusCheckBoxPaper_RoClass">
+							<label for="bypassPassCode-Id"><div class="boxme_RoClass"><img src="../../src/green check.png"></div> Bypass passcodes from this device</label>
+							<input type="checkbox" id="bypassPassCode-Id" onchange="controller_RadioBtn_SetBypassDevice(this, checkCusCheckBox)" autocomplete="off">
+						</div>
 					</div>
 				</div>
-				<!--Setup Ignore codes-->				
+				<!--Setup Ignore passcodes-->				
 
 
 				<!--Profile Settings
@@ -204,7 +207,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 		<!--_Dependencies-->
 
 		<!--_Controller-->
-		
+		<script type="module" src="../Client Side/Controller_RadioBtn_SetBypassDevice.js"></script>
 		<!--_Controller-->		
 
 		<!--_Executor-->
