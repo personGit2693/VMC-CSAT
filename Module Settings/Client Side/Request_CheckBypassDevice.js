@@ -9,24 +9,23 @@ import token from "../../Global Client Side/Token.js";
 
 
 /*Export variables*/
-var setBypass = null;
+var bypassIsSet = null;
 /*Export variables*/
 
 
 /*Set bypass*/
-async function requestSetBypassDevice(bypassPassCodeChecked){	
+async function requestCheckBypassDevice(){	
 
 	const requestPromise = new Promise(function(resolve){
 		
 		/*Form data*/
 		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("bypassPassCodeChecked", bypassPassCodeChecked);		
+		fData.append("token", token);			
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_SetBypassDevice.php", {method: "POST", body: fData})
+		fetch("../Server Side/Response_CheckBypassDevice.php", {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {
 
@@ -44,11 +43,13 @@ async function requestSetBypassDevice(bypassPassCodeChecked){
 
 			}else if(parseObj.execution !== true){
 
-				console.log("Execution Problem in Request Set Bypass Device!");
+				console.log("Execution Problem in Request Check Bypass Device!");
 
 			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
 
-				setBypass = parseObj.setBypass;
+				bypassIsSet = parseObj.bypassIsSet;
+
+				console.log(bypassIsSet);
 
 				resolve(true);
 			}
@@ -64,5 +65,5 @@ async function requestSetBypassDevice(bypassPassCodeChecked){
 
 
 /*Export*/
-export {requestSetBypassDevice, setBypass};
+export {requestCheckBypassDevice, bypassIsSet};
 /*Export*/

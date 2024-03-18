@@ -211,7 +211,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 		<!--_Controller-->		
 
 		<!--_Executor-->
-		
+		<script type="module" src="../Client Side/Executor_Page_AccountSettings.js"></script>
 		<!--_Executor-->
 		<!--Javascripts-->			
 	</body>

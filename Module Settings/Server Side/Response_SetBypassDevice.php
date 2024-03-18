@@ -37,11 +37,11 @@ if(isset($_POST["token"]) && isset($_POST["bypassPassCodeChecked"])){
 	$setByPassDevice_Resp->serverConnection = $dbConnection->serverConnection;
 	$setByPassDevice_Resp->validToken = null;
 	$setByPassDevice_Resp->execution = null;	
-	$setByPassDevice_Resp->bypassIsSet = null;	
+	$setByPassDevice_Resp->setBypass = null;	
 
 	$validToken = null;
 	$execution = null;		
-	$bypassIsSet = null;	
+	$setBypass = null;	
 	/*Prep response*/
 
 
@@ -94,22 +94,23 @@ if(isset($_POST["token"]) && isset($_POST["bypassPassCodeChecked"])){
 	if($validToken === null){
 
 		/*Set bypass or not*/
-		if($bypassPassCodeChecked){
+		if(filter_var($bypassPassCodeChecked, FILTER_VALIDATE_BOOLEAN)){
 
-			$bypassIsSet = "Hello";
+			$_SESSION["setBypass"] = true;
 
-		}else if(!$bypassPassCodeChecked){
+		}else if(!filter_var($bypassPassCodeChecked, FILTER_VALIDATE_BOOLEAN)){
 
-			$bypassIsSet = "World";
+			$_SESSION["setBypass"] = false;
 		}
 
-		/*$bypassIsSet = $_SESSION["bypassIsSet"];*/
-		/*Set bypass or not*/	
+		$setBypass = $_SESSION["setBypass"];
+		/*Set bypass or not*/
 		
-		if(isset($_SESSION["bypassIsSet"])){
+				
+		if(isset($_SESSION["setBypass"])){
 
 			$execution = true;
-		}
+		}		
 	}
 
 
@@ -120,7 +121,7 @@ if(isset($_POST["token"]) && isset($_POST["bypassPassCodeChecked"])){
 
 	/*Return response*/
 	$setByPassDevice_Resp->execution = $execution;	
-	$setByPassDevice_Resp->bypassIsSet = $bypassPassCodeChecked;
+	$setByPassDevice_Resp->setBypass = $setBypass;
 
 	echo json_encode($setByPassDevice_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
@@ -132,7 +133,7 @@ if(isset($_POST["token"]) && isset($_POST["bypassPassCodeChecked"])){
 	$setByPassDevice_Resp->serverConnection = null;
 	$setByPassDevice_Resp->validToken = null;
 	$setByPassDevice_Resp->execution = null;	
-	$setByPassDevice_Resp->bypassIsSet = null;
+	$setByPassDevice_Resp->setBypass = null;
 
 	echo json_encode($setByPassDevice_Resp, JSON_NUMERIC_CHECK);
 }

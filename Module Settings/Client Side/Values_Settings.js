@@ -1,5 +1,5 @@
 /*Import*/
-
+import {bypassPassCode} from "./Elements_Page_AccountSettings.js";
 /*Import*/
 
 
@@ -15,9 +15,18 @@
 
 /*Assign, Reset, Populate*/
 
+/*_Assign bypassPassCode*/
+function assignBypassPassCode(bypassIsSet_Bool){
+
+	bypassPassCode.checked = bypassIsSet_Bool;
+}
+/*_Assign bypassPassCode*/
+
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
-
+export {
+	assignBypassPassCode
+};
 /*Export*/
