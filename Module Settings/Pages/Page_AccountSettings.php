@@ -160,7 +160,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				<div class="globalWrapper" style="background-color: #ffffff;">
 					<div class="titlePerSettingLabelWrap-Class">
 						<div class="titlePerSettingHeader-Class">Ignoring survey passcodes</div>
-						<div class="titlePerSettingDesc-Class">Save this device to stop asking for a passcodes while the browser is open</div>
+						<div class="titlePerSettingDesc-Class">Save this device for bypassing provision of passcodes while the browser is open.</div>
 					</div>
 					
 					<div class="settingsControllersWrap-Class">
@@ -189,11 +189,15 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				</div>
 				-->
 			</div> 
-		</div>
+		</div>		
 
 
-		<!--Loading Indicator-->
+		<!--Rogrid Blurrer-->
 		<div class="thisIsJapan_RoClass" style="--putOnTop: 1;"></div>
+		<!--Rogrid Blurrer-->
+
+
+		<!--Loading Indicator-->		
 		<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 1;">
 			<img src="../../src/Spinner.gif">
 		</div>	

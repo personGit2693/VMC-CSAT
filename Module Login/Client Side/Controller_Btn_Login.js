@@ -1,7 +1,7 @@
 /*Import*/
 import {usernInput, passInput} from "./Elements_Page_Login.js";
 import {submitGetIdentifier} from "./SubmitRequest_GetIdentifier.js";
-import controller_Btn_CheckCredential from "./Controller_Btn_CheckCredential.js";
+import controller_Document_CheckCredential from "./Controller_Document_CheckCredential.js";
 /*Import*/
 
 
@@ -37,7 +37,7 @@ function controller_Btn_Login(){
 	}
 	/*Check password*/
 
-	submitGetIdentifier(showSpinningLoad, removeSpinningLoad, usernInput.value, controller_Btn_CheckCredential);
+	submitGetIdentifier(showSpinningLoad, removeSpinningLoad, usernInput.value, controller_Document_CheckCredential);
 }
 /*Controller*/
 

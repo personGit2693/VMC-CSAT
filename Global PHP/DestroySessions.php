@@ -14,6 +14,7 @@ unset($_SESSION["office_id"]);
 unset($_SESSION["account_identifier"]);
 unset($_SESSION["account_active"]);
 unset($_SESSION["accToken"]);
+unset($_SESSION["setBypass"]);
 /*Unsetting or Destroing Sessions*/
 
 

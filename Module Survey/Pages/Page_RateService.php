@@ -191,13 +191,13 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"]) && isset($_GET["
 					<div class="stepSetPerFieldFlex" id="religionDropdownMenuWrap">
 						<div class="selectDropdownWrap_RoClass" style="z-index: 1;">
 							<input type="hidden" class="selectedOptValue_RoClass" id="inputRespondentReligionValue-Id">
-							<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '180px')">
+							<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '400px')">
 								<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/religion icon.png');"></div>
 								<div class="displayedSelectedText_RoClass">Select Religion</div>
 								<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Suc.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/religion icon.png', 'Select Religion'), controller_DivRemoveOptionBtn_ResetReligionValue()"></div>
 								<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Up Darkblue.png');"></div>						
 							</div>
-							<div class="selectDropdownOptionsWrap_RoClass">
+							<div class="selectDropdownOptionsWrap_RoClass" style="border: 2.5px solid #0C86EE;">
 								<input type="text" placeholder="Search Here" class="searchOpts_RoClass" onkeyup="controller_InputText_AssignSearchReligion(this.value), controller_InputText_PopulateReligionsDropdown()">
 								<div class="selectDropdownOptsArea_RoClass" id="rDropdownReligionsOptionsWrap">
 									<!--Component-->

@@ -10,6 +10,8 @@ import token from "../../Global Client Side/Token.js";
 
 /*Export variables*/
 var bypassIsSet = null;
+var officeCodeCreated = null;
+var generatedOfficeCode = null;
 /*Export variables*/
 
 
@@ -25,7 +27,7 @@ async function requestCheckBypassDevice(){
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_CheckBypassDevice.php", {method: "POST", body: fData})
+		fetch("./Module Index/Server Side/Response_CheckBypassDevice.php", {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {
 
@@ -41,13 +43,19 @@ async function requestCheckBypassDevice(){
 
 				console.log("Invalid Token!");
 
-			}else if(parseObj.execution !== true){
+			}else if(parseObj.execution_CheckBypass !== true){
 
-				console.log("Execution Problem in Request Check Bypass Device!");
+				console.log("Execution Problem in Request Check Bypass Device with checking bypass!");
 
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
+			}else if(parseObj.execution_CodeCreated === false){
+
+				console.log("Execution Problem in Request Check Bypass Device with code creation!");
+
+			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution_CheckBypass === true && parseObj.execution_CodeCreated !== false){
 
 				bypassIsSet = parseObj.bypassIsSet;
+				officeCodeCreated = parseObj.officeCodeCreated;
+				generatedOfficeCode = parseObj.generatedOfficeCode;
 
 				resolve(true);
 			}
@@ -63,5 +71,10 @@ async function requestCheckBypassDevice(){
 
 
 /*Export*/
-export {requestCheckBypassDevice, bypassIsSet};
+export {
+	requestCheckBypassDevice, 
+	bypassIsSet,
+	officeCodeCreated,
+	generatedOfficeCode
+};
 /*Export*/

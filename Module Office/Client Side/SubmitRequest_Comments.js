@@ -1,4 +1,5 @@
 /*Import*/
+import {commentDetails_Array} from "./Request_Comments.js";
 import gatewayComments from "./Gateway_Comments.js";
 /*Import*/
 
@@ -9,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitComments(output, boxLoader, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex){
+function submitComments(output, boxLoader, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex, valueCommentStartIndex, comments_PageNo){
 
 	if(blockRequest === false){
 
@@ -27,6 +28,11 @@ function submitComments(output, boxLoader, boxLoader_Id, officeId, clientTypeInt
 
 			
 			if(gatewayPromise === true){								
+
+				if(commentDetails_Array.length === 0 && comments_PageNo > 1){
+
+					valueCommentStartIndex(false);
+				}
 
 				output();				
 			}

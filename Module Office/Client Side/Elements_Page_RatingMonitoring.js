@@ -23,3 +23,4 @@ export const overallDisagreeLineChartWrap = document.getElementById("overallDisa
 export const overallStronglyDisagreeLineChartWrap = document.getElementById("overallStronglyDisagreeLineChartWrap");
 export const overallNoRatingLineChartWrap = document.getElementById("overallNoRatingLineChartWrap");
 export const availedOfficeServiceWrap = document.getElementById("availedOfficeServiceWrap");
+export const commentDivLoader = document.getElementById("commentDivLoader-Id");

@@ -4306,6 +4306,30 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Modal*/
+  .modalme_RoClass {
+    --modalHeight: auto;
+    --modalBorderColor: #008080;
+    --modalBodyBgColor: #ffffff;
+    --modalTop: 70px;
+    /*--modalWidth: declare to element;*/ }
+
+  .modalme_RoClass .modalHeader_RoClass {
+    --modalHeaderBgColor: #008080;
+    --modalHeaderFSize: 16px;
+    /*To be changed*/
+    --modalHeaderFColor: #ffffff; }
+
+  .modalHeader_RoClass .modalHeadTxt_RoClass {
+    --modalHeaderFColor: #ffffff;
+    --modalHeaderFSize: 16px;
+    /*To be changed*/ }
+
+  .modalHeader_RoClass .modalHeadClose_RoClass {
+    --modalCloseIconSize: 16px;
+    /*To be changed*/ }
+
+  /*Modal*/
   /*Checkbox*/
   .cusCheckBoxPaper_RoClass label {
     --cusCheckboxFStyle: normal;
@@ -4396,6 +4420,30 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Modal*/
+  .modalme_RoClass {
+    --modalHeight: auto;
+    --modalBorderColor: #008080;
+    --modalBodyBgColor: #ffffff;
+    --modalTop: 70px;
+    /*--modalWidth: declare to element;*/ }
+
+  .modalme_RoClass .modalHeader_RoClass {
+    --modalHeaderBgColor: #008080;
+    --modalHeaderFSize: 16px;
+    /*To be changed*/
+    --modalHeaderFColor: #ffffff; }
+
+  .modalHeader_RoClass .modalHeadTxt_RoClass {
+    --modalHeaderFColor: #ffffff;
+    --modalHeaderFSize: 16px;
+    /*To be changed*/ }
+
+  .modalHeader_RoClass .modalHeadClose_RoClass {
+    --modalCloseIconSize: 16px;
+    /*To be changed*/ }
+
+  /*Modal*/
   /*Checkbox*/
   .cusCheckBoxPaper_RoClass label {
     --cusCheckboxFStyle: normal;
@@ -4486,6 +4534,30 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Modal*/
+  .modalme_RoClass {
+    --modalHeight: auto;
+    --modalBorderColor: #008080;
+    --modalBodyBgColor: #ffffff;
+    --modalTop: 70px;
+    /*--modalWidth: declare to element;*/ }
+
+  .modalme_RoClass .modalHeader_RoClass {
+    --modalHeaderBgColor: #008080;
+    --modalHeaderFSize: 16px;
+    /*To be changed*/
+    --modalHeaderFColor: #ffffff; }
+
+  .modalHeader_RoClass .modalHeadTxt_RoClass {
+    --modalHeaderFColor: #ffffff;
+    --modalHeaderFSize: 18px;
+    /*changed*/ }
+
+  .modalHeader_RoClass .modalHeadClose_RoClass {
+    --modalCloseIconSize: 18px;
+    /*changed*/ }
+
+  /*Modal*/
   /*Checkbox*/
   .cusCheckBoxPaper_RoClass label {
     --cusCheckboxFStyle: normal;
@@ -4576,6 +4648,30 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Modal*/
+  .modalme_RoClass {
+    --modalHeight: auto;
+    --modalBorderColor: #008080;
+    --modalBodyBgColor: #ffffff;
+    --modalTop: 70px;
+    /*--modalWidth: declare to element;*/ }
+
+  .modalme_RoClass .modalHeader_RoClass {
+    --modalHeaderBgColor: #008080;
+    --modalHeaderFSize: 16px;
+    /*To be changed*/
+    --modalHeaderFColor: #ffffff; }
+
+  .modalHeader_RoClass .modalHeadTxt_RoClass {
+    --modalHeaderFColor: #ffffff;
+    --modalHeaderFSize: 20px;
+    /*changed*/ }
+
+  .modalHeader_RoClass .modalHeadClose_RoClass {
+    --modalCloseIconSize: 20px;
+    /*changed*/ }
+
+  /*Modal*/
   /*Checkbox*/
   .cusCheckBoxPaper_RoClass label {
     --cusCheckboxFStyle: normal;

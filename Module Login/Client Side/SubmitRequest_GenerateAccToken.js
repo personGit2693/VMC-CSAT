@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGenerateAccToken(showSpinningLoad, removeSpinningLoad, usernInput, controller){
+function submitGenerateAccToken(showSpinningLoad, removeSpinningLoad, usernInput, controller_Document_AccountSession){
 
 	if(blockRequest === false){
 
@@ -25,7 +25,7 @@ function submitGenerateAccToken(showSpinningLoad, removeSpinningLoad, usernInput
 
 				if(tokenCreated !== 0){
 
-					controller(showSpinningLoad, removeSpinningLoad);
+					controller_Document_AccountSession(showSpinningLoad, removeSpinningLoad);
 
 				}else if(tokenCreated === 0){
 					

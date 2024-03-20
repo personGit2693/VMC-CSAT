@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetIdentifier(showSpinningLoad, removeSpinningLoad, usernInput, controller){
+function submitGetIdentifier(showSpinningLoad, removeSpinningLoad, usernInput, controller_Document_GenerateAccToken){
 
 	if(blockRequest === false){
 
@@ -25,7 +25,7 @@ function submitGetIdentifier(showSpinningLoad, removeSpinningLoad, usernInput, c
 
 				if(found !== 0){
 
-					controller(showSpinningLoad, removeSpinningLoad);
+					controller_Document_GenerateAccToken(showSpinningLoad, removeSpinningLoad);
 
 				}else if(found === 0){
 

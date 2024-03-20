@@ -646,6 +646,26 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_MT_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_MT_Style;
+	}
+	/*Modal*/
+
+
 	/*Checkbox*/
 	.cusCheckBoxPaper_RoClass label{
 		@include checkboxLabel_Mobile_Style;
@@ -724,7 +744,27 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
+@media all and (min-width:642px) and (max-width:1080px){	
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_MT_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_MT_Style;
+	}
+	/*Modal*/
+
+
 	/*Checkbox*/
 	.cusCheckBoxPaper_RoClass label{
 		@include checkboxLabel_Tablet_Style;
@@ -804,6 +844,26 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_Laptop_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_Laptop_Style;
+	}
+	/*Modal*/
+
+
 	/*Checkbox*/
 	.cusCheckBoxPaper_RoClass label{
 		@include checkboxLabel_Laptop_Style;
@@ -883,6 +943,26 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
+	/*Modal*/
+	.modalme_RoClass{
+		@include modalmeGeneralProps_Style;
+	}
+
+	.modalme_RoClass .modalHeader_RoClass{
+		@include modalHeadGeneralProps_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadTxt_RoClass{
+		@include modalHeadTxtGeneralProps_Style;
+		@include modalHeadTxt_Desktop_Style;
+	}
+
+	.modalHeader_RoClass .modalHeadClose_RoClass{
+		@include modalHeadClose_Desktop_Style;
+	}
+	/*Modal*/
+
+
 	/*Checkbox*/
 	.cusCheckBoxPaper_RoClass label{
 		@include checkboxLabel_Desktop_Style;
@@ -892,6 +972,7 @@
 		@include boxmeRoClass_Desktop_Style;
 	}
 	/*Checkbox*/
+
 
 	/*Normal Button*/
 	.normButton_RoClass{

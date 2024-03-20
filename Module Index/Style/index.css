@@ -3832,6 +3832,9 @@ body {
     --custCheckboxFLDSize: 18px;
     --cusCheckboxColor: black; }
 
+  #rateOurServBtn-Id {
+    --normBtnFSize: 24px; }
+
   .enabledBtn-Class {
     --normBtnPadding: 7px;
     --normBtnBorderWidth: 1px;
@@ -3988,6 +3991,9 @@ body {
     --custCheckboxFMTSize: 15px;
     --custCheckboxFLDSize: 18px;
     --cusCheckboxColor: black; }
+
+  #rateOurServBtn-Id {
+    --normBtnFSize: 24px; }
 
   .enabledBtn-Class {
     --normBtnPadding: 7px;
@@ -4147,6 +4153,9 @@ body {
     --custCheckboxFLDSize: 18px;
     --cusCheckboxColor: black; }
 
+  #rateOurServBtn-Id {
+    --normBtnFSize: 26px; }
+
   .enabledBtn-Class {
     --normBtnPadding: 7px;
     --normBtnBorderWidth: 1px;
@@ -4303,6 +4312,9 @@ body {
     --custCheckboxFMTSize: 15px;
     --custCheckboxFLDSize: 18px;
     --cusCheckboxColor: black; }
+
+  #rateOurServBtn-Id {
+    --normBtnFSize: 28px; }
 
   .enabledBtn-Class {
     --normBtnPadding: 7px;

@@ -6,6 +6,8 @@ import {submitSetBypassDevice} from "./Submit_SetBypassDevice.js";
 /*Check or uncheck bypass code*/
 function controller_RadioBtn_SetBypassDevice(elem, checkCusCheckBox){
 	
+	
+	
 	submitSetBypassDevice(elem, checkCusCheckBox);
 }
 /*Check or uncheck bypass code*/

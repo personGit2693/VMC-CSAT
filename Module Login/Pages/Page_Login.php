@@ -3,11 +3,11 @@
 declare(strict_types=1);
 session_start();
 date_default_timezone_set('Asia/Manila');
-$page_Dashboard_Path = "../../Page Office/PHP/Page_Dashboard.php";
+$page_Dashboard_Path = "../../Module Office/Pages/Page_RatingMonitoring.php";
 /*Dependency PHP Codes*/
 
 
-if(isset($_SESSION["accountNumber"]) && isset($_SESSION["officeId"]) && isset($_SESSION["identifier"]) && isset($_SESSION["active"]) && isset($_SESSION["accToken"])){
+if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_active"]) && isset($_SESSION["accToken"])){
 	header("location:".$page_Dashboard_Path);
 }
 ?>

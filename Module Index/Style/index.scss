@@ -217,6 +217,10 @@ body{
 	}
 
 
+	#rateOurServBtn-Id{
+		@include rateServiceBtnFSize_MT_Style;
+	}
+
 	.enabledBtn-Class{
 		@include rateServiceBtn_Style;
 		@include rateServiceBtnFSize_MT_Style;
@@ -312,6 +316,10 @@ body{
 	label[for="agreeTermsCheckbox-Id"]{
 		@include agreeCheckboxFontSize_MT_Style;
 		@include agreeCheckboxLabel_Style
+	}
+
+	#rateOurServBtn-Id{
+		@include rateServiceBtnFSize_MT_Style;
 	}
 
 	.enabledBtn-Class{
@@ -411,6 +419,10 @@ body{
 		@include agreeCheckboxLabel_Style
 	}
 
+	#rateOurServBtn-Id{
+		@include rateServiceBtnFSize_Laptop_Style;
+	}
+
 	.enabledBtn-Class{
 		@include rateServiceBtn_Style;
 		@include rateServiceBtnFSize_Laptop_Style;
@@ -505,6 +517,10 @@ body{
 	label[for="agreeTermsCheckbox-Id"]{
 		@include agreeCheckboxFontSize_Desktop_Style;
 		@include agreeCheckboxLabel_Style
+	}
+
+	#rateOurServBtn-Id{
+		@include rateServiceBtnFSize_Desktop_Style;
 	}
 
 	.enabledBtn-Class{

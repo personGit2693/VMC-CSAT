@@ -1,5 +1,5 @@
 /*Import*/
-
+import {inputCode} from "./Elements_Index.js";
 /*Import*/
 
 
@@ -22,9 +22,16 @@ function assignProceedToRateServ(proceedToRateServ_Val){
 }
 /*_Assign proceedToRateServ*/
 
+/*_Assign inputCode*/
+function assignInputCode(generatedOfficeCode){
+
+	inputCode.value = generatedOfficeCode;
+}
+/*_Assign inputCode*/
+
 /*Assign values*/
 
 
 /*Export*/
-export {assignProceedToRateServ, proceedToRateServ};
+export {assignInputCode, assignProceedToRateServ, proceedToRateServ};
 /*Export*/

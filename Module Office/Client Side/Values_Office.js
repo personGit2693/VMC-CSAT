@@ -6,8 +6,6 @@ import {checkboxFilterExternal, checkboxFilterInternal, selectedPointOfEntry} fr
 /*Prep variables*/
 var searchArea_PointOfEntry_PageNo = 1;
 
-var comments_PageNo = 1;
-
 var scoresDetails_Array = [
 	[0, 'FillerOnly'],
 	[1,'Strongly Agree'],
@@ -43,6 +41,7 @@ var ccOne_Id = "CC1";
 var ccTwo_Id = "CC2";
 var ccThree_Id = "CC3";
 
+var comments_PageNo = 1;
 var commentStartIndex = 0;
 var commentDisplay = 10;
 
@@ -95,11 +94,23 @@ var availedOfficeService_Array = [
 
 /*Assign, Reset, Populate*/
 /*_Assign commentStartIndex*/
-function valueCommentStartIndex(){	
+function valueCommentStartIndex(newCommentFound_Bool){	
 
-	comments_PageNo++;
+	
+
+	if(newCommentFound_Bool === false){
+
+		comments_PageNo--;
+
+	}else{
+		
+		comments_PageNo++;
+	}
+	
 
 	commentStartIndex = (comments_PageNo - 1) * commentDisplay;
+
+	console.log(commentStartIndex);
 }
 /*_Assign commentStartIndex*/
 
@@ -416,5 +427,5 @@ function resetPointOfEntry_StartIndex(){
 
 
 /*Export*/
-export {resetCommentStartIndex, valueCommentStartIndex, commentDisplay, commentStartIndex, dimensionComment_Id, ccThree_Id, ccTwo_Id, ccOne_Id, availedOfficeService_Array, resetAvailedOfficeService, valueAvailedOfficeService, resetNoRatingNumberDetails, valueNoRatingNumberDetails, noRatingNumberDetails_Array, resetStronglyDisagreeNumberDetails, valueStronglyDisagreeNumberDetails, stronglyDisagreeNumberDetails_Array, stronglyDisagree_Id, resetDisagreeNumberDetails, valueDisagreeNumberDetails, disagreeNumberDetails_Array, disagree_Id, neither_Id, resetNeitherNumberDetails, valueNeitherNumberDetails, neitherNumberDetails_Array, agreeNumberDetails_Array, valueAgreeNumberDetails, resetAgreeNumberDetails, resetStronglyAgreeNumberDetails, valueStronglyAgreeNumberDetails, stronglyAgreeNumberDetails_Array, resetRespondentPerScoreDetails, valueRespondentPerScoreDetails, respondentPerScoreDetails_Array, noRating_Id, agree_Id, stronglyAgree_Id, selectedPointOfEntry_Obj, valueCurrentNewRespondent, currentNewRespondent, valueClientTypeExternal, valueClientTypeInternal, clientTypeExternal, clientTypeInternal, valueSelectedPointOfEntry, resetSelectedPointOfEntry, valuePointOfEntry_StartIndex, resetPointOfEntry_StartIndex, resetSearchPointOfEntry, pointOfEntry_Display, pointOfEntry_StartIndex, valueSearchPointOfEntry, searchPointOfEntry_Value};
+export {comments_PageNo, resetCommentStartIndex, valueCommentStartIndex, commentDisplay, commentStartIndex, dimensionComment_Id, ccThree_Id, ccTwo_Id, ccOne_Id, availedOfficeService_Array, resetAvailedOfficeService, valueAvailedOfficeService, resetNoRatingNumberDetails, valueNoRatingNumberDetails, noRatingNumberDetails_Array, resetStronglyDisagreeNumberDetails, valueStronglyDisagreeNumberDetails, stronglyDisagreeNumberDetails_Array, stronglyDisagree_Id, resetDisagreeNumberDetails, valueDisagreeNumberDetails, disagreeNumberDetails_Array, disagree_Id, neither_Id, resetNeitherNumberDetails, valueNeitherNumberDetails, neitherNumberDetails_Array, agreeNumberDetails_Array, valueAgreeNumberDetails, resetAgreeNumberDetails, resetStronglyAgreeNumberDetails, valueStronglyAgreeNumberDetails, stronglyAgreeNumberDetails_Array, resetRespondentPerScoreDetails, valueRespondentPerScoreDetails, respondentPerScoreDetails_Array, noRating_Id, agree_Id, stronglyAgree_Id, selectedPointOfEntry_Obj, valueCurrentNewRespondent, currentNewRespondent, valueClientTypeExternal, valueClientTypeInternal, clientTypeExternal, clientTypeInternal, valueSelectedPointOfEntry, resetSelectedPointOfEntry, valuePointOfEntry_StartIndex, resetPointOfEntry_StartIndex, resetSearchPointOfEntry, pointOfEntry_Display, pointOfEntry_StartIndex, valueSearchPointOfEntry, searchPointOfEntry_Value};
 /*Export*/

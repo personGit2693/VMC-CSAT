@@ -37,9 +37,9 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 	/*Prep variables*/
 	$dbConnection = connectToDb("vmc_csat");
 
-	if(isset($_SESSION["officeId"]) && $_SESSION["officeId"] != 0){
+	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
-		$officeId = $_SESSION["officeId"];
+		$officeId = $_SESSION["office_id"];
 	}
 	/*Prep variables*/
 

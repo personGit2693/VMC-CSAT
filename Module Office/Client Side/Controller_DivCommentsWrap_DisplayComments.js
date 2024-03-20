@@ -1,5 +1,5 @@
 /*Import*/
-import {valueCommentStartIndex, commentDisplay, commentStartIndex, stronglyAgree_Id, agree_Id, noRating_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal} from "./Values_Office.js";
+import {comments_PageNo, valueCommentStartIndex, commentDisplay, commentStartIndex, stronglyAgree_Id, agree_Id, noRating_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import {submitComments, blockRequest} from "./SubmitRequest_Comments.js";
 import outputCommentDiv from "./Output_CommentDiv.js";
@@ -14,9 +14,9 @@ function controller_DivCommentsWrap_DisplayComments(commentSectionWrap){
 
 		if(blockRequest === false){		
 
-			valueCommentStartIndex();
+			valueCommentStartIndex("");
 
-			submitComments(outputCommentDiv, outputCommentDivLoader, "commentDivLoader-Id", selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex);
+			submitComments(outputCommentDiv, outputCommentDivLoader, "commentDivLoader-Id", selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex, valueCommentStartIndex, comments_PageNo);
 		}
 	}	
 }

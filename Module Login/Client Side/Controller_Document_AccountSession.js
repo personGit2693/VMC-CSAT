@@ -11,7 +11,7 @@ import {accToken} from "./Request_GenerateAccToken.js";
 
 
 /*Controller*/
-function controller_Btn_AccountSession(showSpinningLoad, removeSpinningLoad){
+function controller_Document_AccountSession(showSpinningLoad, removeSpinningLoad){
 
 	submitAccountSession(showSpinningLoad, removeSpinningLoad, accountDetails_Obj, accToken);
 }
@@ -19,10 +19,10 @@ function controller_Btn_AccountSession(showSpinningLoad, removeSpinningLoad){
 
 
 /*Declare Global*/
-window.controller_Btn_AccountSession = controller_Btn_AccountSession
+window.controller_Document_AccountSession = controller_Document_AccountSession;
 /*Declare Global*/
 
 
 /*Export*/
-export default controller_Btn_AccountSession;
+export default controller_Document_AccountSession;
 /*Export*/
