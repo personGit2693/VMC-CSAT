@@ -3,6 +3,7 @@ import controller_Document_PopulateSearchAreaPointOfEntry from "./Controller_Doc
 import controller_Document_ValueDateRangeOne from "./Controller_Document_ValueDateRangeOne.js";
 import controller_Document_GetDataOne from "./Controller_Document_GetDataOne.js";
 import controller_Document_GetDataTwo from "./Controller_Document_GetDataTwo.js";
+import controller_Document_GetCsmData from "./Controller_Document_GetCsmData.js";
 /*Import*/
 
 
@@ -36,3 +37,8 @@ controller_Document_GetDataOne();
 /*Display Data Two Table*/
 controller_Document_GetDataTwo();
 /*Display Data Two Table*/
+
+
+/*Display CSM Table*/
+controller_Document_GetCsmData();
+/*Display CSM Table*/

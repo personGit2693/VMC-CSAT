@@ -5,6 +5,9 @@ import {dateRangeOne, dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from
 
 /*Prep variables*/
 var searchArea_PointOfEntryPageNo = 1;
+
+var csmRespondentDetails_Array = [];
+var csmRespondentCc_Array = [];
 /*Prep variables*/
 
 
@@ -25,10 +28,73 @@ var respondentRatingsDetails_Array = [];
 var respondentsReferenceNo_Array = [];
 var respondentsCcRatings_Array = [];
 var respondentsQuestionsRatings_Array = [];
+
+var csmDatas_Array = [];
 /*Prep export variables*/
 
 
 /*Assign, Reset, Populate*/
+/*_Reset csmRespondentCc_Array*/
+function resetCsmRespondentCc(){
+
+	csmRespondentCc_Array = [];
+}
+/*_Reset csmRespondentCc_Array*/
+
+
+/*_Assign csmRespondentCc_Array*/
+function assignCsmRespondentCc(csmRespondentsCc_Array){
+
+	csmDatas_Array.forEach(function(csmData_Array, index, array){
+
+		resetCsmRespondentCc();
+
+		csmRespondentsCc_Array.forEach(function(csmRespondentCc_Obj, index, array){
+
+			if(csmData_Array[0] === csmRespondentCc_Obj.clientresponse_reference){
+
+				csmRespondentCc_Array.push(csmRespondentCc_Obj);
+			}
+		});
+
+		csmData_Array.push(csmRespondentCc_Array);
+	});	
+}
+/*_Assign csmRespondentCc_Array*/
+
+
+/*_Reset csmDatas_Array*/
+function resetCsmData(){
+
+	csmDatas_Array = [];
+}
+/*_Reset csmDatas_Array*/
+
+
+/*_Reset csmRespondentDetails_Array*/
+function resetCsmRespondentDetails(){
+
+	csmRespondentDetails_Array = [];
+}
+/*_Reset csmRespondentDetails_Array*/
+
+
+/*_Assign csmRespondentDetails_Array*/
+function assignCsmRespondentDetails(csmRespondentsDetails_Param){
+
+	csmRespondentsDetails_Param.forEach(function(value){
+
+		resetCsmRespondentDetails();
+
+		csmRespondentDetails_Array.push(value.clientresponse_reference);
+		csmRespondentDetails_Array.push(value.office_value);
+
+		csmDatas_Array.push(csmRespondentDetails_Array);
+	});
+}
+/*_Assign csmRespondentDetails_Array*/
+
+
 /*_Reset dataTwo_Array*/
 function resetDataTwoArray(){
 
@@ -231,7 +297,13 @@ function valueSearchAreaSearchPointOfEntry(searchPointOfEntry_Param){
 
 
 /*Export*/
-export {resetDataTwoArray,
+export {
+	assignCsmRespondentCc,
+	resetCsmData,
+	csmDatas_Array,
+	assignCsmRespondentDetails,
+	resetCsmRespondentDetails,
+	resetDataTwoArray,
 	resetRespondentRatingsDetailsArray,
 	valueRespondentRatingsDetailsArray,
 	respondentsQuestionsRatings_Array, 

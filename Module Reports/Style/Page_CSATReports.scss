@@ -842,19 +842,19 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	#dataTwoTableWrap{
+	#dataTwoTableWrap, #csmDataTableWrap{
 		@include dataTwoTableWrap_Style;
 	}	
 
-	#dataTwoTableWrap table{
+	#dataTwoTableWrap table, #csmDataTableWrap table{
 		@include dataTwoTable_MT_Style;
 	}
 
-	#dataTwoTableWrap table thead{
+	#dataTwoTableWrap table thead, #csmDataTableWrap table thead{
 		@include dataTwoTableThead_Style;
 	}
 
-	#dataTwoTableWrap table th{
+	#dataTwoTableWrap table th, #csmDataTableWrap table th{
 		@include dataTwoTableTh_Style;
 	}
 
@@ -881,19 +881,19 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	#dataTwoTableWrap{
+	#dataTwoTableWrap, #csmDataTableWrap{
 		@include dataTwoTableWrap_Style;
 	}	
 
-	#dataTwoTableWrap table{
+	#dataTwoTableWrap table, #csmDataTableWrap table{
 		@include dataTwoTable_MT_Style;
 	}
 
-	#dataTwoTableWrap table thead{
+	#dataTwoTableWrap table thead, #csmDataTableWrap table thead{
 		@include dataTwoTableThead_Style;
 	}
 
-	#dataTwoTableWrap table th{
+	#dataTwoTableWrap table th, #csmDataTableWrap table th{
 		@include dataTwoTableTh_Style;
 	}
 
@@ -920,19 +920,19 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-	#dataTwoTableWrap{
+	#dataTwoTableWrap, #csmDataTableWrap{
 		@include dataTwoTableWrap_Style;
 	}	
 
-	#dataTwoTableWrap table{
-		@include dataTwoTable_Laptop_Style;
+	#dataTwoTableWrap table, #csmDataTableWrap table{
+		@include dataTwoTable_MT_Style;
 	}
 
-	#dataTwoTableWrap table thead{
+	#dataTwoTableWrap table thead, #csmDataTableWrap table thead{
 		@include dataTwoTableThead_Style;
 	}
 
-	#dataTwoTableWrap table th{
+	#dataTwoTableWrap table th, #csmDataTableWrap table th{
 		@include dataTwoTableTh_Style;
 	}
 
@@ -959,19 +959,19 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-	#dataTwoTableWrap{
+	#dataTwoTableWrap, #csmDataTableWrap{
 		@include dataTwoTableWrap_Style;
 	}	
 
-	#dataTwoTableWrap table{
-		@include dataTwoTable_Laptop_Style;
+	#dataTwoTableWrap table, #csmDataTableWrap table{
+		@include dataTwoTable_MT_Style;
 	}
 
-	#dataTwoTableWrap table thead{
+	#dataTwoTableWrap table thead, #csmDataTableWrap table thead{
 		@include dataTwoTableThead_Style;
 	}
 
-	#dataTwoTableWrap table th{
+	#dataTwoTableWrap table th, #csmDataTableWrap table th{
 		@include dataTwoTableTh_Style;
 	}
 

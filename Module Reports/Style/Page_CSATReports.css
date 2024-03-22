@@ -4561,14 +4561,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  #dataTwoTableWrap {
+  #dataTwoTableWrap, #csmDataTableWrap {
     display: none;
     overflow: auto;
     padding: 0px 5px;
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataTwoTableWrap table {
+  #dataTwoTableWrap table, #csmDataTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
@@ -4579,11 +4579,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     margin: 10px 0px; }
 
-  #dataTwoTableWrap table thead {
+  #dataTwoTableWrap table thead, #csmDataTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataTwoTableWrap table th {
+  #dataTwoTableWrap table th, #csmDataTableWrap table th {
     padding: 5px; }
 
   .ccHeader-Class {
@@ -4602,14 +4602,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  #dataTwoTableWrap {
+  #dataTwoTableWrap, #csmDataTableWrap {
     display: none;
     overflow: auto;
     padding: 0px 5px;
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataTwoTableWrap table {
+  #dataTwoTableWrap table, #csmDataTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
@@ -4620,11 +4620,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     margin: 10px 0px; }
 
-  #dataTwoTableWrap table thead {
+  #dataTwoTableWrap table thead, #csmDataTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataTwoTableWrap table th {
+  #dataTwoTableWrap table th, #csmDataTableWrap table th {
     padding: 5px; }
 
   .ccHeader-Class {
@@ -4643,29 +4643,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  #dataTwoTableWrap {
+  #dataTwoTableWrap, #csmDataTableWrap {
     display: none;
     overflow: auto;
     padding: 0px 5px;
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataTwoTableWrap table {
+  #dataTwoTableWrap table, #csmDataTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
-    font-size: 14px;
-    /*changed*/
+    font-size: 12px;
+    /*To be changed*/
     box-shadow: 0px 0px 5px #8394B8;
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
 
-  #dataTwoTableWrap table thead {
+  #dataTwoTableWrap table thead, #csmDataTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataTwoTableWrap table th {
+  #dataTwoTableWrap table th, #csmDataTableWrap table th {
     padding: 5px; }
 
   .ccHeader-Class {
@@ -4684,29 +4684,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
-  #dataTwoTableWrap {
+  #dataTwoTableWrap, #csmDataTableWrap {
     display: none;
     overflow: auto;
     padding: 0px 5px;
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataTwoTableWrap table {
+  #dataTwoTableWrap table, #csmDataTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
-    font-size: 14px;
-    /*changed*/
+    font-size: 12px;
+    /*To be changed*/
     box-shadow: 0px 0px 5px #8394B8;
     border-collapse: collapse;
     text-align: center;
     margin: 10px 0px; }
 
-  #dataTwoTableWrap table thead {
+  #dataTwoTableWrap table thead, #csmDataTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataTwoTableWrap table th {
+  #dataTwoTableWrap table th, #csmDataTableWrap table th {
     padding: 5px; }
 
   .ccHeader-Class {

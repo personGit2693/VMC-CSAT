@@ -152,8 +152,8 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				<div class="topNavWrapFlex">
 					<div class="topNavWrapFlexItem activeTopNavWrapFlexItem-Class dataOneNavigation-Class" onclick="controller_Div_DisplaySelectedReportTable(event,this)">Data One</div>
 					<div class="topNavWrapFlexItem dataTwoNavigation-Class" onclick="controller_Div_DisplaySelectedReportTable(event,this)">Data Two</div>					
-					<div class="topNavWrapFlexItem" onclick="controller_Div_DisplaySelectedReportTable(event,this)">Comments</div>
-					<div class="topNavWrapFlexItem" onclick="controller_Div_DisplaySelectedReportTable(event,this)">CSM Report</div>					
+					<div class="topNavWrapFlexItem dataCmsNavigation-Class" onclick="controller_Div_DisplaySelectedReportTable(event,this)">CSM Report</div>
+					<div class="topNavWrapFlexItem commentNavigation-Class" onclick="controller_Div_DisplaySelectedReportTable(event,this)">Comments</div>					
 				</div>
 				<!--Reports navigation-->
 
@@ -331,6 +331,55 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 				<!--Component-->
 				</div>
 				<!--Data two table-->
+
+
+				<!--CSM data table-->
+				<div class="globalWrapper reportsWrapper-Class" id="csmDataTableWrap">
+				<!--Component-->
+				<!--
+				<button class="normButton_RoClass" onclick="controller_Button_DownloadAsExcel(this)">Download as Excel File</button>
+				<table>
+					<thead>
+						<tr>
+							<th style="background-color: #ffffff;">Control No.</th>
+							<th style="background-color: #ffffff;">Point of Entry</th>
+							<th class="ccHeader-Class">CC1</th>
+							<th class="ccHeader-Class">CC2</th>
+							<th class="ccHeader-Class">CC3</th>
+							<th class="q1q7Header-Class">Q1 SQD12</th>
+							<th class="q1q7Header-Class">Q2 SQD1</th>
+							<th class="q1q7Header-Class">Q3 SQD2</th>
+							<th class="q1q7Header-Class">Q4 SQD3</th>
+							<th class="q1q7Header-Class">Q5 SQD4</th>
+							<th class="q1q7Header-Class">Q6 SQD5</th>						
+							<th class="q1q7Header-Class">Q7 SQD6</th>
+							<th class="q1q7Header-Class">Q8 SQD7</th>
+							<th class="q1q7Header-Class">Q9 SQD8</th>							
+							<th style="background-color: #ffffff;">AVERAGE</th>
+						</tr>
+					</thead>
+					<tbody>						
+						<tr>
+							<td>controlNo</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5</td>
+							<td>5.00</td>
+						</tr>
+					</tbody>
+				</table>
+				-->
+				</div>
+				<!--CSM data table-->
 			</div> 
 		</div>
 
