@@ -8,6 +8,7 @@ var searchArea_PointOfEntryPageNo = 1;
 
 var csmRespondentDetails_Array = [];
 var csmRespondentCc_Array = [];
+var csmRespondentScores_Array = [];
 /*Prep variables*/
 
 
@@ -32,8 +33,37 @@ var respondentsQuestionsRatings_Array = [];
 var csmDatas_Array = [];
 /*Prep export variables*/
 
-
 /*Assign, Reset, Populate*/
+
+/*_Reset csmRespondentScores_Array*/
+function resetCsmRespondentScores(){
+
+	csmRespondentScores_Array = [];
+}
+/*_Reset csmRespondentScores_Array*/
+
+
+/*_Assign csmRespondentScores_Array*/
+function assignCsmRespondentScores(csmRespondentsScores_Array){
+
+	csmDatas_Array.forEach(function(csmData_Array, index, array){
+
+		resetCsmRespondentScores();
+
+		csmRespondentsScores_Array.forEach(function(csmRespondentScores_Obj, index, array){
+
+			if(csmData_Array[0] === csmRespondentScores_Obj.clientresponse_reference){
+
+				csmRespondentScores_Array.push(csmRespondentScores_Obj);
+			}
+		});
+
+		csmData_Array.push(csmRespondentScores_Array);
+	});
+}
+/*_Assign csmRespondentScores_Array*/
+
+
 /*_Reset csmRespondentCc_Array*/
 function resetCsmRespondentCc(){
 
@@ -298,6 +328,7 @@ function valueSearchAreaSearchPointOfEntry(searchPointOfEntry_Param){
 
 /*Export*/
 export {
+	assignCsmRespondentScores,
 	assignCsmRespondentCc,
 	resetCsmData,
 	csmDatas_Array,

@@ -4405,6 +4405,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  #commentsTableWrap {
+    overflow: auto;
+    display: block;
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px;
+    display: none; }
+
   #dataOneTableWrap {
     overflow: auto;
     display: block;
@@ -4412,7 +4420,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataOneTableWrap table {
+  #dataOneTableWrap table, #commentsTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
@@ -4423,26 +4431,34 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     margin: 10px 0px; }
 
-  #dataOneTableWrap table thead {
+  #dataOneTableWrap table thead, #commentsTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataOneTableWrap table tr {
+  #dataOneTableWrap table tr, #commentsTableWrap table tr {
     border: 1px solid black; }
 
-  #dataOneTableWrap table th {
+  #dataOneTableWrap table th, #commentsTableWrap table th {
     background-color: #20124D;
     color: #ffffff;
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff; }
 
-  #dataOneTableWrap table td {
+  #dataOneTableWrap table td, #commentsTableWrap table td {
     color: #535F80; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  #commentsTableWrap {
+    overflow: auto;
+    display: block;
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px;
+    display: none; }
+
   #dataOneTableWrap {
     overflow: auto;
     display: block;
@@ -4450,7 +4466,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataOneTableWrap table {
+  #dataOneTableWrap table, #commentsTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
@@ -4461,26 +4477,34 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     margin: 10px 0px; }
 
-  #dataOneTableWrap table thead {
+  #dataOneTableWrap table thead, #commentsTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataOneTableWrap table tr {
+  #dataOneTableWrap table tr, #commentsTableWrap table tr {
     border: 1px solid black; }
 
-  #dataOneTableWrap table th {
+  #dataOneTableWrap table th, #commentsTableWrap table th {
     background-color: #20124D;
     color: #ffffff;
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff; }
 
-  #dataOneTableWrap table td {
+  #dataOneTableWrap table td, #commentsTableWrap table td {
     color: #535F80; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  #commentsTableWrap {
+    overflow: auto;
+    display: block;
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px;
+    display: none; }
+
   #dataOneTableWrap {
     overflow: auto;
     display: block;
@@ -4488,7 +4512,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataOneTableWrap table {
+  #dataOneTableWrap table, #commentsTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
@@ -4499,26 +4523,34 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     margin: 10px 0px; }
 
-  #dataOneTableWrap table thead {
+  #dataOneTableWrap table thead, #commentsTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataOneTableWrap table tr {
+  #dataOneTableWrap table tr, #commentsTableWrap table tr {
     border: 1px solid black; }
 
-  #dataOneTableWrap table th {
+  #dataOneTableWrap table th, #commentsTableWrap table th {
     background-color: #20124D;
     color: #ffffff;
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff; }
 
-  #dataOneTableWrap table td {
+  #dataOneTableWrap table td, #commentsTableWrap table td {
     color: #535F80; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  #commentsTableWrap {
+    overflow: auto;
+    display: block;
+    padding: 0px 5px;
+    background-color: #ffffff;
+    max-height: 500px;
+    display: none; }
+
   #dataOneTableWrap {
     overflow: auto;
     display: block;
@@ -4526,7 +4558,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     background-color: #ffffff;
     max-height: 500px; }
 
-  #dataOneTableWrap table {
+  #dataOneTableWrap table, #commentsTableWrap table {
     width: auto;
     table-layout: fixed;
     font-family: calibri;
@@ -4537,20 +4569,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     text-align: center;
     margin: 10px 0px; }
 
-  #dataOneTableWrap table thead {
+  #dataOneTableWrap table thead, #commentsTableWrap table thead {
     position: sticky;
     top: 0; }
 
-  #dataOneTableWrap table tr {
+  #dataOneTableWrap table tr, #commentsTableWrap table tr {
     border: 1px solid black; }
 
-  #dataOneTableWrap table th {
+  #dataOneTableWrap table th, #commentsTableWrap table th {
     background-color: #20124D;
     color: #ffffff;
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff; }
 
-  #dataOneTableWrap table td {
+  #dataOneTableWrap table td, #commentsTableWrap table td {
     color: #535F80; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/

@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function gatewayRespondentQuestionRates(boxLoader, boxLoader_Id, assignValue, questionActive, internal_clientTypeId, office_id, dateFrom, dateTo){
+function submitCsmRespondentsScores(output, boxLoader, boxLoader_Id, assignCsmRespondentScores, questionActive, internal_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -29,7 +29,8 @@ function gatewayRespondentQuestionRates(boxLoader, boxLoader_Id, assignValue, qu
 			
 			if(gatewayPromise === true){								
 
-				/*assign value and output CSM Data Components*/
+				assignCsmRespondentScores(csmRespondentsScores_Array);
+				output();
 			}
 
 			blockRequest = false;
@@ -40,10 +41,10 @@ function gatewayRespondentQuestionRates(boxLoader, boxLoader_Id, assignValue, qu
 
 
 /*Declare global*/
-window.gatewayRespondentQuestionRates = gatewayRespondentQuestionRates;
+window.submitCsmRespondentsScores = submitCsmRespondentsScores;
 /*Declare global*/
 
 
 /*Export*/
-export {gatewayRespondentQuestionRates, blockRequest};
+export {submitCsmRespondentsScores, blockRequest};
 /*Export*/

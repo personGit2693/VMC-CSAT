@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitRespondentCcRates(boxLoader, boxLoader_Id, assignCsmRespondentCc, submits_Obj, internal_clientTypeId, office_id, dateFrom, dateTo){
+function submitRespondentCcRates(output, boxLoader, boxLoader_Id, assignCsmRespondentCc, assignCsmRespondentScores, submits_Obj, questionActive, internal_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -29,8 +29,9 @@ function submitRespondentCcRates(boxLoader, boxLoader_Id, assignCsmRespondentCc,
 			
 			if(gatewayPromise === true){								
 
-				/*assign value and get question response*/
 				assignCsmRespondentCc(csmRespondentsCc_Array);
+
+				submits_Obj.submitCsmRespondentsScores(output, boxLoader, boxLoader_Id, assignCsmRespondentScores, questionActive, internal_clientTypeId, office_id, dateFrom, dateTo);
 			}
 
 			blockRequest = false;

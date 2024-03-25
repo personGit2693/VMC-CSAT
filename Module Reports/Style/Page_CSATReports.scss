@@ -712,27 +712,32 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
+	#commentsTableWrap{
+		@include dataOneTableWrap_Style;
+		@include commentsTableWrap_Style;
+	}	
+
 	#dataOneTableWrap{
 		@include dataOneTableWrap_Style;
 	}	
 
-	#dataOneTableWrap table{
+	#dataOneTableWrap table, #commentsTableWrap table{
 		@include dataOneTable_MT_Style;
 	}
 
-	#dataOneTableWrap table thead{
+	#dataOneTableWrap table thead, #commentsTableWrap table thead{
 		@include dataOneTableThead_Style;
 	}
 
-	#dataOneTableWrap table tr{
+	#dataOneTableWrap table tr, #commentsTableWrap table tr{
 		@include dataOneTableTr_Style;
 	}
 
-	#dataOneTableWrap table th{
+	#dataOneTableWrap table th, #commentsTableWrap table th{
 		@include dataOneTableTh_Style;
 	}
 
-	#dataOneTableWrap table td{
+	#dataOneTableWrap table td, #commentsTableWrap table td{
 		@include dataOneTableTd_Style;
 	}
 }
@@ -743,27 +748,32 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
+	#commentsTableWrap{
+		@include dataOneTableWrap_Style;
+		@include commentsTableWrap_Style;
+	}
+
 	#dataOneTableWrap{
 		@include dataOneTableWrap_Style;
 	}
 
-	#dataOneTableWrap table{
+	#dataOneTableWrap table, #commentsTableWrap table{
 		@include dataOneTable_MT_Style;
 	}
 
-	#dataOneTableWrap table thead{
+	#dataOneTableWrap table thead, #commentsTableWrap table thead{
 		@include dataOneTableThead_Style;
 	}
 
-	#dataOneTableWrap table tr{
+	#dataOneTableWrap table tr, #commentsTableWrap table tr{
 		@include dataOneTableTr_Style;
 	}
 
-	#dataOneTableWrap table th{
+	#dataOneTableWrap table th, #commentsTableWrap table th{
 		@include dataOneTableTh_Style;
 	}
 
-	#dataOneTableWrap table td{
+	#dataOneTableWrap table td, #commentsTableWrap table td{
 		@include dataOneTableTd_Style;
 	}
 }
@@ -774,27 +784,32 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+	#commentsTableWrap{
+		@include dataOneTableWrap_Style;
+		@include commentsTableWrap_Style;
+	}
+
 	#dataOneTableWrap{
 		@include dataOneTableWrap_Style;
 	}
 
-	#dataOneTableWrap table{
+	#dataOneTableWrap table, #commentsTableWrap table{
 		@include dataOneTable_Laptop_Style;
 	}
 
-	#dataOneTableWrap table thead{
+	#dataOneTableWrap table thead, #commentsTableWrap table thead{
 		@include dataOneTableThead_Style;
 	}
 
-	#dataOneTableWrap table tr{
+	#dataOneTableWrap table tr, #commentsTableWrap table tr{
 		@include dataOneTableTr_Style;
 	}
 
-	#dataOneTableWrap table th{
+	#dataOneTableWrap table th, #commentsTableWrap table th{
 		@include dataOneTableTh_Style;
 	}
 
-	#dataOneTableWrap table td{
+	#dataOneTableWrap table td, #commentsTableWrap table td{
 		@include dataOneTableTd_Style;
 	}
 }
@@ -805,27 +820,32 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
+	#commentsTableWrap{
+		@include dataOneTableWrap_Style;
+		@include commentsTableWrap_Style;
+	}
+	
 	#dataOneTableWrap{
 		@include dataOneTableWrap_Style;
 	}
 
-	#dataOneTableWrap table{
+	#dataOneTableWrap table, #commentsTableWrap table{
 		@include dataOneTable_Desktop_Style;
 	}
 
-	#dataOneTableWrap table thead{
+	#dataOneTableWrap table thead, #commentsTableWrap table thead{
 		@include dataOneTableThead_Style;
 	}
 
-	#dataOneTableWrap table tr{
+	#dataOneTableWrap table tr, #commentsTableWrap table tr{
 		@include dataOneTableTr_Style;
 	}
 
-	#dataOneTableWrap table th{
+	#dataOneTableWrap table th, #commentsTableWrap table th{
 		@include dataOneTableTh_Style;
 	}
 
-	#dataOneTableWrap table td{
+	#dataOneTableWrap table td, #commentsTableWrap table td{
 		@include dataOneTableTd_Style;
 	}
 }

@@ -12,3 +12,4 @@ export const dataTwoTableWrap = document.getElementById("dataTwoTableWrap");
 export const reportsWrapper = document.getElementsByClassName("reportsWrapper-Class");
 export const topNavWrapFlexItem = document.getElementsByClassName("topNavWrapFlexItem");
 export const csmDataTableWrap = document.getElementById("csmDataTableWrap");
+export const commentsTableWrap = document.getElementById("commentsTableWrap");

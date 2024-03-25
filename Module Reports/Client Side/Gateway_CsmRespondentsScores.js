@@ -1,5 +1,5 @@
 /*Import*/
-import {requestCsmRespondentsScores} from "./Request_RespondentQuestionRates.js";
+import {requestCsmRespondentsScores} from "./Request_CsmRespondentsScores.js";
 /*Import*/
 
 

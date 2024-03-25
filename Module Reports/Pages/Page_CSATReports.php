@@ -328,58 +328,42 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 				<!--Data two table-->
 				<div class="globalWrapper reportsWrapper-Class" id="dataTwoTableWrap">
-				<!--Component-->
+					<!--Component-->
 				</div>
 				<!--Data two table-->
 
 
 				<!--CSM data table-->
 				<div class="globalWrapper reportsWrapper-Class" id="csmDataTableWrap">
-				<!--Component-->
-				<!--
-				<button class="normButton_RoClass" onclick="controller_Button_DownloadAsExcel(this)">Download as Excel File</button>
-				<table>
-					<thead>
-						<tr>
-							<th style="background-color: #ffffff;">Control No.</th>
-							<th style="background-color: #ffffff;">Point of Entry</th>
-							<th class="ccHeader-Class">CC1</th>
-							<th class="ccHeader-Class">CC2</th>
-							<th class="ccHeader-Class">CC3</th>
-							<th class="q1q7Header-Class">Q1 SQD12</th>
-							<th class="q1q7Header-Class">Q2 SQD1</th>
-							<th class="q1q7Header-Class">Q3 SQD2</th>
-							<th class="q1q7Header-Class">Q4 SQD3</th>
-							<th class="q1q7Header-Class">Q5 SQD4</th>
-							<th class="q1q7Header-Class">Q6 SQD5</th>						
-							<th class="q1q7Header-Class">Q7 SQD6</th>
-							<th class="q1q7Header-Class">Q8 SQD7</th>
-							<th class="q1q7Header-Class">Q9 SQD8</th>							
-							<th style="background-color: #ffffff;">AVERAGE</th>
-						</tr>
-					</thead>
-					<tbody>						
-						<tr>
-							<td>controlNo</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5</td>
-							<td>5.00</td>
-						</tr>
-					</tbody>
-				</table>
-				-->
+					<!--Component-->				
 				</div>
 				<!--CSM data table-->
+
+
+				<!--Comments table-->
+				<div class="globalWrapper reportsWrapper-Class" id="commentsTableWrap">
+					<!--Component-->
+					<button class="normButton_RoClass" onclick="controller_Button_DownloadAsExcel(this)">Download as Excel File</button>
+					<table>
+						<thead>
+							<tr>
+								<th>Reference No</th>
+								<th>Questions</th>
+								<th>Answers</th>
+								<th>Timestamp</th>								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2024-VMCCSAT-11843113</td>
+								<td>Mga suhestiyon kung paano pa mapapabuti ang aming mga serbisyo</td>
+								<td>MAGAGALING AT MAAABILIDAD PO ANG LAHAT NG MANGGAGAWA SA INYONG TANGGAPAN.</td>
+								<td>2/1/2024  8:01:05 AM</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--Comments table-->
 			</div> 
 		</div>
 

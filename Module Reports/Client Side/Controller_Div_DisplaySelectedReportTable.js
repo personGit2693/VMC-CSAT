@@ -1,5 +1,5 @@
 /*Import*/
-import {csmDataTableWrap, reportsWrapper, topNavWrapFlexItem, dataOneTableWrap, dataTwoTableWrap} from "./Elements_Page_CSATReports.js";
+import {commentsTableWrap, csmDataTableWrap, reportsWrapper, topNavWrapFlexItem, dataOneTableWrap, dataTwoTableWrap} from "./Elements_Page_CSATReports.js";
 /*Import*/
 
 
@@ -40,6 +40,12 @@ function controller_Div_DisplaySelectedReportTable(e, selTopNavWrapFlexItem){
 				csmDataTableWrap.style.display = "block";
 			}
 			/*_Display csm data*/
+
+			/*_Display comments*/
+			if(selTopNavWrapFlexItem.classList.contains("commentNavigation-Class") == true){
+				commentsTableWrap.style.display = "block";
+			}
+			/*_Display comments*/
 		}
 	}
 	/*Highlight selected topNavWrapFlexItem*/	

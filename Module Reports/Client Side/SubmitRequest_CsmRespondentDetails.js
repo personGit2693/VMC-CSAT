@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitCsmRespondentDetails(boxLoader, boxLoader_Id, assignCsmRespondentDetails, assignCsmRespondentCc, submits_Obj, internal_clientTypeId, office_id, dateFrom, dateTo){
+function submitCsmRespondentDetails(output, boxLoader, boxLoader_Id, assignCsmRespondentDetails, assignCsmRespondentCc, assignCsmRespondentScores, submits_Obj, questionActive, internal_clientTypeId, office_id, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -31,7 +31,7 @@ function submitCsmRespondentDetails(boxLoader, boxLoader_Id, assignCsmRespondent
 				
 				assignCsmRespondentDetails(csmRespondentsDetails_Array);
 
-				submits_Obj.submitRespondentCcRates(boxLoader, boxLoader_Id, assignCsmRespondentCc, submits_Obj, internal_clientTypeId, office_id, dateFrom, dateTo);
+				submits_Obj.submitRespondentCcRates(output, boxLoader, boxLoader_Id, assignCsmRespondentCc, assignCsmRespondentScores, submits_Obj, questionActive, internal_clientTypeId, office_id, dateFrom, dateTo);
 			}
 
 			blockRequest = false;
