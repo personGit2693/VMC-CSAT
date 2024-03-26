@@ -4,6 +4,7 @@ import controller_Document_ValueDateRangeOne from "./Controller_Document_ValueDa
 import controller_Document_GetDataOne from "./Controller_Document_GetDataOne.js";
 import controller_Document_GetDataTwo from "./Controller_Document_GetDataTwo.js";
 import controller_Document_GetCsmData from "./Controller_Document_GetCsmData.js";
+import controller_Document_GetCommentsTable from "./Controller_Document_GetCommentsTable.js";
 /*Import*/
 
 
@@ -42,3 +43,8 @@ controller_Document_GetDataTwo();
 /*Display CSM Table*/
 controller_Document_GetCsmData();
 /*Display CSM Table*/
+
+
+/*Display Comments Table*/
+controller_Document_GetCommentsTable();
+/*Display Comments Table*/
