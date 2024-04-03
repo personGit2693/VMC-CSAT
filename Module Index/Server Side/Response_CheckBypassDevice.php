@@ -10,6 +10,7 @@ session_start();
 /*Global Required Files*/
 require_once "../../Global PHP/Global_Connection.php";
 require_once "../../Global PHP/CheckGlobalToken_Class.php";
+require_once "../../Global PHP/GeneratePasscode_Class.php";
 /*Global Required Files*/
 
 
@@ -75,7 +76,7 @@ if(isset($_POST["token"])){
 
 	if($validateGlobalToken_Obj->execution !== true){
 
-		$validToken = "Validating global token has execution_CheckBypass problem!";
+		$validToken = "Validating global token has execution problem!";
 		$checkByPassDevice_Resp->validToken = $validToken;
 
 		echo json_encode($checkByPassDevice_Resp, JSON_NUMERIC_CHECK);
@@ -110,30 +111,11 @@ if(isset($_POST["token"])){
 			$bypassIsSet = true;
 
 			/*_Generate Office Code*/	
-			/*_ _Generating*/
-			$alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			$alphanumeric_shuffled = str_shuffle($alphanumeric);
-			$alphanumeric_Half = substr($alphanumeric_shuffled, 0, 5);
-			$generatedOfficeCode = $alphanumeric_Half;
-			/*_ _Generating*/
+			$generatePasscode_Obj = generatePasscode($dbConnection->selectedPdoConn, intval($officeId));
 
-			/*_ _Prep query*/
-			$generateOfficeCode_Query = "INSERT INTO officescodes_tab (officecode_code, office_id) VALUES (:generatedOfficeCode, :officeId)"; 							
-			/*_ _Prep query*/
-
-			/*_ _Execute query*/
-			$generateOfficeCode_QueryObj = $dbConnection->selectedPdoConn->prepare($generateOfficeCode_Query);		
-			$generateOfficeCode_QueryObj->bindValue(':generatedOfficeCode', $generatedOfficeCode, PDO::PARAM_STR);			
-			$generateOfficeCode_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
-			$execution_CodeCreated = $generateOfficeCode_QueryObj->execute();
-			/*_ _Execute query*/
-
-			/*_ _Fetching*/
-			if($execution_CodeCreated){
-				
-				$officeCodeCreated = $generateOfficeCode_QueryObj->rowCount();
-			}
-			/*_ _Fetching*/			
+			$execution_CodeCreated = $generatePasscode_Obj->execution;
+			$officeCodeCreated = $generatePasscode_Obj->officeCodeCreated;
+			$generatedOfficeCode = $generatePasscode_Obj->generatedOfficeCode;
 			/*_Generate Office Code*/
 
 		}else if(!isset($_SESSION["setBypass"]) || !filter_var($_SESSION["setBypass"], FILTER_VALIDATE_BOOLEAN) || $officeId == 0){
