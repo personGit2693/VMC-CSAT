@@ -25,6 +25,7 @@ async function requestAccountSession(accountDetails_Obj, accToken){
 		fData.append("office_id", accountDetails_Obj.office_id);
 		fData.append("account_identifier", accountDetails_Obj.account_identifier);
 		fData.append("account_active", accountDetails_Obj.account_active);
+		fData.append("division_id", accountDetails_Obj.division_id);
 		fData.append("accToken", accToken);
 		/*Form data*/
 

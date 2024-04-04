@@ -99,6 +99,7 @@ if(isset($_POST["token"]) && isset($_POST["usernInput"])){
 		$getIdentifier_Query = "SELECT account_number,
 			account_identifier,
 			IFNULL(office_id, 0) AS 'office_id',
+			division_id,
 			account_active			
 			FROM accounts_tab 
 			WHERE account_number = :usernInput;

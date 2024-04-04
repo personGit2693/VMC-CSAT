@@ -13,7 +13,7 @@ require_once "../../Global PHP/CheckGlobalToken_Class.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["token"]) && isset($_POST["account_number"]) && isset($_POST["office_id"]) && isset($_POST["account_identifier"]) && isset($_POST["account_active"]) && isset($_POST["accToken"])){
+if(isset($_POST["token"]) && isset($_POST["account_number"]) && isset($_POST["office_id"]) && isset($_POST["account_identifier"]) && isset($_POST["account_active"]) && isset($_POST["accToken"]) && isset($_POST["division_id"])){
 	
 	/*Required Files*/
 	
@@ -27,6 +27,7 @@ if(isset($_POST["token"]) && isset($_POST["account_number"]) && isset($_POST["of
 	$account_identifier = $_POST["account_identifier"];
 	$account_active = $_POST["account_active"];
 	$accToken = $_POST["accToken"];
+	$division_id = $_POST["division_id"];
 	/*Query string*/
 
 
@@ -102,8 +103,9 @@ if(isset($_POST["token"]) && isset($_POST["account_number"]) && isset($_POST["of
 		$_SESSION["account_identifier"] = $account_identifier;
 		$_SESSION["account_active"] = $account_active;
 		$_SESSION["accToken"] = $accToken;
+		$_SESSION["division_id"] = $division_id;
 
-		if($_SESSION["account_number"] != "" && isset($_SESSION["account_number"]) && $_SESSION["office_id"] != "" && isset($_SESSION["office_id"]) && $_SESSION["account_identifier"] != "" && isset($_SESSION["account_identifier"]) && $_SESSION["account_active"] != "" && isset($_SESSION["account_active"]) && $_SESSION["accToken"] != "" && isset($_SESSION["accToken"])){
+		if($_SESSION["account_number"] != "" && isset($_SESSION["division_id"]) && isset($_SESSION["account_number"]) && $_SESSION["office_id"] != "" && isset($_SESSION["office_id"]) && $_SESSION["account_identifier"] != "" && isset($_SESSION["account_identifier"]) && $_SESSION["account_active"] != "" && isset($_SESSION["account_active"]) && $_SESSION["accToken"] != "" && isset($_SESSION["accToken"])){
 
 			$execution = true;
 		}
@@ -122,7 +124,7 @@ if(isset($_POST["token"]) && isset($_POST["account_number"]) && isset($_POST["of
 	echo json_encode($accountSession_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 
-}else if(!isset($_POST["token"]) || !isset($_POST["account_number"]) || !isset($_POST["office_id"]) || !isset($_POST["account_identifier"]) || !isset($_POST["account_active"]) || !isset($_POST["accToken"])){
+}else if(!isset($_POST["token"]) || !isset($_POST["account_number"]) || !isset($_POST["office_id"]) || !isset($_POST["account_identifier"]) || !isset($_POST["account_active"]) || !isset($_POST["accToken"]) || !isset($_POST["division_id"])){
 	
 	$accountSession_Resp = new stdClass();
 	$accountSession_Resp->validAccess = false;

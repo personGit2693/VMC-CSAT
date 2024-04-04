@@ -48,7 +48,7 @@ async function requestPointOfEntry(searchPointOfEntry, startIn, maxDisplayRow){
 
 				console.log("Execution Problem in Request Point of Entry!");
 
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
+			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){				
 
 				pointOfEntry_Array = parseObj.pointOfEntry_Array;
 

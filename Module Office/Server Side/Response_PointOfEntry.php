@@ -3,6 +3,7 @@
 declare(strict_types=1);
 date_default_timezone_set('Asia/Manila');
 $currentDateTime = date("Y-m-d H:i:s", time());
+session_start();
 /*Dependency PHP Codes*/
 
 
@@ -29,6 +30,8 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 	/*Prep Variables*/
 	$dbConnection = connectToDb("vmc_csat");
+
+	$division_id = intval($_SESSION["division_id"]);
 	/*Prep Variables*/
 
 
@@ -96,12 +99,16 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 		/*Get Point Of Entry*/
 		/*_Prep query*/
-		$getPointOfEntry_Query = "SELECT * FROM offices_tab";
+		$getPointOfEntry_Query = "SELECT * FROM offices_tab WHERE 1 = 1";
 
 		if(!empty($searchPointOfEntry)){
-			$getPointOfEntry_Query .= " WHERE office_value LIKE :searchPointOfEntry 
+			$getPointOfEntry_Query .= " AND office_value LIKE :searchPointOfEntry 
 				OR office_abbre LIKE :searchPointOfEntry 				
 			";
+		}
+
+		if($division_id != 9){
+			$getPointOfEntry_Query .= " AND division_id = :division_id";
 		}
 
 		$getPointOfEntry_Query .= " ORDER BY office_value LIMIT :startIn, :maxDisplayRow;"; 							
@@ -114,6 +121,11 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 			$getPointOfEntry_QueryObj->bindValue(':searchPointOfEntry', '%'.$searchPointOfEntry.'%', PDO::PARAM_STR);			
 		}
+
+		if($division_id != 9){
+			$getPointOfEntry_QueryObj->bindValue(':division_id', intval($division_id), PDO::PARAM_INT);	
+		}
+
 		$getPointOfEntry_QueryObj->bindValue(':startIn', intval($startIn), PDO::PARAM_INT);
 		$getPointOfEntry_QueryObj->bindValue(':maxDisplayRow', intval($maxDisplayRow), PDO::PARAM_INT);
 
