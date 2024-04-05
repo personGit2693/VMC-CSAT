@@ -30,9 +30,20 @@ if(isset($_POST["token"])){
 	$dbConnection = connectToDb("vmc_csat");
 
 	$officeId = 0;
-	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
+	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0 && !isset($_SESSION["unitAbbre"])){
 	
 		$officeId = $_SESSION["office_id"];
+
+	}else if(isset($_SESSION["unitAbbre"])){
+
+		if($_SESSION["unitAbbre"] === "EFMS"){
+
+			$officeId = 56;
+
+		}else if($_SESSION["unitAbbre"] === "IMISS"){
+
+			$officeId = 29;
+		}
 	}
 	/*Prep Variables*/
 
@@ -106,7 +117,7 @@ if(isset($_POST["token"])){
 	if($validToken === null){
 
 		/*Check bypass if set*/
-		if(isset($_SESSION["setBypass"]) && filter_var($_SESSION["setBypass"], FILTER_VALIDATE_BOOLEAN) && $officeId != 0){
+		if((isset($_SESSION["setBypass"]) && filter_var($_SESSION["setBypass"], FILTER_VALIDATE_BOOLEAN) && $officeId != 0) || (isset($_SESSION["unitAbbre"]))){
 
 			$bypassIsSet = true;
 
