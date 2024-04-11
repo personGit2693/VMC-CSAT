@@ -111,11 +111,6 @@ if(isset($_POST["token"]) && $_POST["clientResponseRef"]){
 		}
 		/*_Fetching result*/
 		/*Encode Respondent Details on db*/
-
-
-		/*Destroy ESRS bypass*/
-		unset($_SESSION["unitAbbre"]);
-		/*Destroy ESRS bypass*/
 	}
 	
 
