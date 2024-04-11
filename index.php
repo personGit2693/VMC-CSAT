@@ -1,3 +1,17 @@
+<?php
+/*Dependency PHP Codes*/
+declare(strict_types=1);
+date_default_timezone_set('Asia/Manila');
+$currentDateTime = date("Y-m-d H:i:s", time());
+session_start();
+/*Dependency PHP Codes*/
+
+if(isset($_GET["unit"]) && !empty($_GET["unit"])){
+
+	$_SESSION["unitAbbre"] = base64_decode($_GET["unit"]);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
