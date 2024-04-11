@@ -98,6 +98,11 @@ if(isset($_POST["token"])){
 			$dataUpdated = fwrite($fileOpen, $clientIp."\r\n");
 			fclose($fileOpen);
 			/*Encode new Respondent*/
+
+
+			/*Destroy ESRS bypass*/
+			unset($_SESSION["unitAbbre"]);
+			/*Destroy ESRS bypass*/
 		}
 	}
 
