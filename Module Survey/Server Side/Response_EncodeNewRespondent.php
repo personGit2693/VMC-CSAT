@@ -3,6 +3,7 @@
 declare(strict_types=1);
 date_default_timezone_set('Asia/Manila');
 $currentDateTime = date("Y-m-d H:i:s", time());
+session_start();
 /*Dependency PHP Codes*/
 
 
