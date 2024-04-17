@@ -12,7 +12,7 @@ function PointOfEntryOptionStack(){
 		
 		const elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(pointOfEntry_Array[index]))));
 
-		pointOfEntryOptionStack += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px'), controller_SearchArea_DisplayMonitoring()">`+
+		pointOfEntryOptionStack += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px'), controller_DivOption_AssignSelectedPointOfEntry(), controller_SearchArea_DisplayMonitoring()">`+
 			`<input type="hidden" class="optValue_RoClass" value="`+elemValue+`">`+
 			`<div class="optIcon_RoClass" style="--optIcon: url('../../src/`+pointOfEntry_Array[index].office_icon+`');"></div>`+
 			`<div class="optText_RoClass" title="`+pointOfEntry_Array[index].office_abbre+`">`+pointOfEntry_Array[index].office_value+`</div>`+

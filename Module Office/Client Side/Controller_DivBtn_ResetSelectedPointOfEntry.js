@@ -1,11 +1,12 @@
 /*Import*/
-import {resetSelectedPointOfEntry} from "./Values_Office.js";
+import {resetPointOfEntry_StartIndex, resetSelectedPointOfEntry} from "./Values_Office.js";
 /*Import*/
 
 
 /*Controller*/
 function controller_DivBtn_ResetSelectedPointOfEntry(){
 
+	resetPointOfEntry_StartIndex();
 	resetSelectedPointOfEntry();
 }
 /*Controller*/

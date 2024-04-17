@@ -98,6 +98,9 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
 		<link rel="stylesheet" type="text/css" href="../Style/Page_RatingMonitoring.css">
 		<link rel="shortcut icon" href="../../src/vmclogo.png">
+		<meta http-equiv='cache-control' content='no-cache'>
+		<meta http-equiv='expires' content='0'>
+		<meta http-equiv='pragma' content ='no-cache'>
 	</head>
 	<body>
 		<div class="rolayout_RoClass">
@@ -479,27 +482,27 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 		<!--Javascripts-->
 		<!--_Dependencies-->
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v1"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v1"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v3"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v3"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v3"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v3"></script>
 		<!--_Dependencies-->
 
 		<!--_Controller-->
-		<script type="module" src="../Client Side/Controller_InputText_SearchFindPointOfEntry.js"></script>
-		<script type="module" src="../Client Side/Controller_Ahref_HighlightBookmark.js"></script>
-		<script type="module" src="../Client Side/Controller_DivBtn_ResetSelectedPointOfEntry.js"></script>
-		<script type="module" src="../Client Side/Controller_DivOptionWrap_SearchPopulatePointOfEntry.js"></script>		
-		<script type="module" src="../Client Side/Controller_DivOption_AssignSelectedPointOfEntry.js"></script>	
-		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeInternal.js"></script>
-		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeExternal.js"></script>
-		<script type="module" src="../Client Side/Controller_SearchArea_DisplayMonitoring.js"></script>
-		<script type="module" src="../Client Side/Controller_DivCommentsWrap_DisplayComments.js"></script>
-		<script type="module" src="../Client Side/Controller_Btn_GenerateOfficeCode.js"></script>
+		<script type="module" src="../Client Side/Controller_InputText_SearchFindPointOfEntry.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_Ahref_HighlightBookmark.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_DivBtn_ResetSelectedPointOfEntry.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_DivOptionWrap_SearchPopulatePointOfEntry.js?v3"></script>		
+		<script type="module" src="../Client Side/Controller_DivOption_AssignSelectedPointOfEntry.js?v3"></script>	
+		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeInternal.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeExternal.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_SearchArea_DisplayMonitoring.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_DivCommentsWrap_DisplayComments.js?v3"></script>
+		<script type="module" src="../Client Side/Controller_Btn_GenerateOfficeCode.js?v3"></script>
 		<!--_Controller-->		
 
 		<!--_Executor-->
-		<script type="module" src="../Client Side/Executor_Page_RatingMonitoring.js"></script>
+		<script type="module" src="../Client Side/Executor_Page_RatingMonitoring.js?v3"></script>
 		<!--_Executor-->
 		<!--Javascripts-->			
 	</body>
