@@ -99,17 +99,22 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 		/*Get Point Of Entry*/
 		/*_Prep query*/
-		$getPointOfEntry_Query = "SELECT * FROM offices_tab WHERE 1 = 1";
+		if($division_id == 9){
+
+			$getPointOfEntry_Query = "SELECT * FROM offices_tab WHERE 1 = 1";
+
+		}else if($division_id != 9){
+
+			$getPointOfEntry_Query = "SELECT * FROM offices_tab WHERE division_id = :division_id";
+		}			
 
 		if(!empty($searchPointOfEntry)){
-			$getPointOfEntry_Query .= " AND office_value LIKE :searchPointOfEntry 
-				OR office_abbre LIKE :searchPointOfEntry 				
+
+			$getPointOfEntry_Query .= " AND (office_value LIKE :searchPointOfEntry 
+				OR office_abbre LIKE :searchPointOfEntry)				
 			";
 		}
 
-		if($division_id != 9){
-			$getPointOfEntry_Query .= " AND division_id = :division_id";
-		}
 
 		$getPointOfEntry_Query .= " ORDER BY office_value LIMIT :startIn, :maxDisplayRow;"; 							
 		/*_Prep query*/
@@ -117,15 +122,17 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 		/*_Execute query*/
 		$getPointOfEntry_QueryObj = $dbConnection->selectedPdoConn->prepare($getPointOfEntry_Query);		
 
+		if($division_id != 9){
+
+			$getPointOfEntry_QueryObj->bindValue(':division_id', intval($division_id), PDO::PARAM_INT);	
+		}
+
 		if(!empty($searchPointOfEntry)){
 
 			$getPointOfEntry_QueryObj->bindValue(':searchPointOfEntry', '%'.$searchPointOfEntry.'%', PDO::PARAM_STR);			
 		}
 
-		if($division_id != 9){
-			$getPointOfEntry_QueryObj->bindValue(':division_id', intval($division_id), PDO::PARAM_INT);	
-		}
-
+		
 		$getPointOfEntry_QueryObj->bindValue(':startIn', intval($startIn), PDO::PARAM_INT);
 		$getPointOfEntry_QueryObj->bindValue(':maxDisplayRow', intval($maxDisplayRow), PDO::PARAM_INT);
 

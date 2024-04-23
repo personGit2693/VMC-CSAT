@@ -408,11 +408,11 @@ function resetSearchPointOfEntry(){
 
 
 /*_Assign pointOfEntry_StartIndex*/
-function valuePointOfEntry_StartIndex(){	
-
-	pointOfEntry_StartIndex = (searchArea_PointOfEntry_PageNo - 1) * pointOfEntry_Display;
+function valuePointOfEntry_StartIndex(){		
 
 	searchArea_PointOfEntry_PageNo++;
+
+	pointOfEntry_StartIndex = (searchArea_PointOfEntry_PageNo - 1) * pointOfEntry_Display;
 }
 /*_Assign pointOfEntry_StartIndex*/
 
@@ -420,6 +420,7 @@ function valuePointOfEntry_StartIndex(){
 /*_Reset pointOfEntry_StartIndex*/
 function resetPointOfEntry_StartIndex(){
 
+	searchArea_PointOfEntry_PageNo = 1;
 	pointOfEntry_StartIndex = 0;
 }
 /*_Reset pointOfEntry_StartIndex*/

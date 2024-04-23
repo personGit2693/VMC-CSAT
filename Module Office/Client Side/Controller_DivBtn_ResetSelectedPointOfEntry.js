@@ -1,5 +1,6 @@
 /*Import*/
 import {resetPointOfEntry_StartIndex, resetSelectedPointOfEntry} from "./Values_Office.js";
+import {pointOfEntryOptsWrap} from "./Elements_Page_RatingMonitoring.js";
 /*Import*/
 
 
@@ -8,6 +9,7 @@ function controller_DivBtn_ResetSelectedPointOfEntry(){
 
 	resetPointOfEntry_StartIndex();
 	resetSelectedPointOfEntry();
+	pointOfEntryOptsWrap.scrollTop = 0;
 }
 /*Controller*/
 

@@ -1,5 +1,6 @@
 /*Import*/
 import {resetPointOfEntry_StartIndex, searchPointOfEntry_Value, pointOfEntry_StartIndex, pointOfEntry_Display, valueSearchPointOfEntry} from "./Values_Office.js";
+import {pointOfEntryOptsWrap} from "./Elements_Page_RatingMonitoring.js";
 import {submitPointOfEntry} from "./SubmitRequest_PointOfEntry.js";
 import outputPointOfEntryOption from "./Output_PointOfEntryOption.js";
 import outputPointOfEntryOptionLoader from "./Output_PointOfEntryOptionLoader.js";
@@ -10,8 +11,9 @@ import outputPointOfEntryOptionLoader from "./Output_PointOfEntryOptionLoader.js
 function controller_InputText_SearchFindPointOfEntry(searchPointOfEntryValue){
 
 	resetPointOfEntry_StartIndex();
+	pointOfEntryOptsWrap.scrollTop = 0;
 
-	valueSearchPointOfEntry(searchPointOfEntryValue);
+	valueSearchPointOfEntry(searchPointOfEntryValue);	
 
 	submitPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id", searchPointOfEntry_Value, pointOfEntry_StartIndex, pointOfEntry_Display);
 }
