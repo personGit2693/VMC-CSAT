@@ -17,12 +17,8 @@ function controller_DivOptionWrap_SearchPopulatePointOfEntry(divOptionWrap){
 	if((divOptionWrap.scrollTop + divOptionWrap.offsetHeight) >= divOptionWrap.scrollHeight){
 		
 		if(blockRequest === false){
-
-			console.log(divOptionWrap.scrollTop +" "+divOptionWrap.offsetHeight+" "+divOptionWrap.scrollHeight);
 		
 			valuePointOfEntry_StartIndex();
-
-			console.log(pointOfEntry_StartIndex);
 
 			submitPointOfEntry(outputPointOfEntryOptionStack, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id", searchPointOfEntry_Value, pointOfEntry_StartIndex, pointOfEntry_Display);	
 		}		
