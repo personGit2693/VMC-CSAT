@@ -62,7 +62,9 @@ function DataTwoTable(){
 			if(index == 7){
 				console.log(dataTwo_Array[index][0]);
 			}
-			*/			
+
+			console.log(index+" "+dataTwo_Array[index][0]);	
+			*/
 
 			for(let indexOne=12; indexOne <=25 ; indexOne++){				
 
