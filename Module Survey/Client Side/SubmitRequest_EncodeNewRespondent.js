@@ -33,11 +33,11 @@ function submitEncodeNewRespondent(showSpinningLoad, removeSpinningLoad, submitt
 
 				if(validAccess != true || serverConnection != null || validToken != null || execution != true || dataUpdated == 0){
 
-					surveyRatingSender_Obj.submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate, surveyRatingSender_Obj);
+					surveyRatingSender_Obj.submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate);
 
 				}else if (validAccess == true && serverConnection == null || validToken == null || execution == true || dataUpdated != 0){
 
-					window.location.href = endPoint;
+					surveyRatingSender_Obj.submitCheckEncodedAll(showSpinningLoad, removeSpinningLoad, submittedRate, surveyRatingSender_Obj);
 				}
 			}
 

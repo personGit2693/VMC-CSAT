@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate, surveyRatingSender_Obj){
+function submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate){
 
 	if(blockRequest === false){
 
@@ -25,7 +25,7 @@ function submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate
 
 				if(deleteEncoded_RowAffected != 0){
 
-					alert("Survey ratings did not proceed! Please report to IMISS!");
+					alert("Survey ratings did not proceed! Please try again.");
 
 				}else if(deleteEncoded_RowAffected == 0){
 

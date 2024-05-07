@@ -25,7 +25,7 @@ function submitEncodeCcRatings(showSpinningLoad, removeSpinningLoad, submittedRa
 
 				if(validAccess !== true || serverConnection !== null || validToken !== null || execution !== true){
 
-					surveyRatingSender_Obj.submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate, surveyRatingSender_Obj);					
+					surveyRatingSender_Obj.submitDeleteEncoded(showSpinningLoad, removeSpinningLoad, submittedRate);					
 
 				}else if(validAccess === true && serverConnection === null && validToken === null && execution === true){
 

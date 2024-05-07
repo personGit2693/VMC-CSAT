@@ -13,7 +13,7 @@ function connectToDb(string $connectionName){
 
 	try{
 
-		/*Connect to long_polling DB*/
+		/*Connect to VMC CSAT DB*/
 		if($connectionName === "vmc_csat"){
 		
 			$connString = "mysql:host=localhost;dbname=vmc_csat;";
@@ -22,7 +22,7 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 		}
-		/*Connect to long_polling DB*/
+		/*Connect to VMC CSAT DB*/
 
 
 		/*Return*/

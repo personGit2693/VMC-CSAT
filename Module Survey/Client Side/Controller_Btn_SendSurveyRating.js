@@ -6,6 +6,7 @@ import {submitEncodeRespondentRatings} from "./SubmitRequest_EncodeRespondentRat
 import {submitEncodeComments} from "./SubmitRequest_EncodeComments.js";
 import {submitDeleteEncoded} from "./SubmitRequest_DeleteEncoded.js";
 import {submitEncodeNewRespondent} from "./SubmitRequest_EncodeNewRespondent.js";
+import {submitCheckEncodedAll} from "./SubmitRequest_CheckEncodedAll.js";
 /*Import*/
 
 
@@ -22,6 +23,7 @@ function controller_Btn_SendSurveyRating(){
 		submitEncodeRespondentRatings: submitEncodeRespondentRatings,
 		submitEncodeComments: submitEncodeComments,
 		submitEncodeNewRespondent: submitEncodeNewRespondent,
+		submitCheckEncodedAll: submitCheckEncodedAll,
 		submitDeleteEncoded: submitDeleteEncoded		
 	};
 
