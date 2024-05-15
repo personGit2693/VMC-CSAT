@@ -103,7 +103,10 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"]) && isset($_GET["
 			<link rel="stylesheet" type="text/css" href="../Style/Page_RateService.css">
 			<link rel="shortcut icon" href="../../src/vmclogo.png">		
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">		
-			<meta charset="utf-16">			
+			<meta charset="utf-16">
+			<meta http-equiv='cache-control' content='no-cache'>
+			<meta http-equiv='expires' content='0'>
+			<meta http-equiv='pragma' content ='no-cache'>			
 		</head>
 		<body>
 			<!--Blurrer-->
