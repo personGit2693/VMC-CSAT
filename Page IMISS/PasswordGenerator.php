@@ -6,7 +6,7 @@
 	$uniqueIdentifier =  rand(1000,9999).$getHalfShuffled_Value.rand(1000,9999);
 	/*Generate Unique Identifier*/
 
-	$mypassword = "csrsurvey";
+	$mypassword = "pediadept";
 	
 	echo "Password:".$mypassword."<br/>Identifier:". $uniqueIdentifier."<br/>Encrypted Password: ".md5($mypassword.$uniqueIdentifier);
 ?>
