@@ -109,8 +109,6 @@ function valueCommentStartIndex(newCommentFound_Bool){
 	
 
 	commentStartIndex = (comments_PageNo - 1) * commentDisplay;
-
-	console.log(commentStartIndex);
 }
 /*_Assign commentStartIndex*/
 

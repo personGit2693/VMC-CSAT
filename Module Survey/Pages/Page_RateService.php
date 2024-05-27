@@ -376,7 +376,7 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"]) && isset($_GET["
 			<!--Loading-->
 			<div class="thisIsJapan_RoClass" style="--putOnTop: 1;"></div>
 			<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 1; --spinnerWidthHeight: 75px;">
-				<img src="../../src/spinner.gif">
+				<img src="../../src/Spinner.gif">
 			</div>
 			<!--Loading-->
 
@@ -388,9 +388,9 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"]) && isset($_GET["
 			<!--_Dependencies-->
 
 			<!--_Controllers-->
-			<script type="module" src="../Client Side/controller_RadioBtn_AssignRespondentValue.js?v3"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignRespondentValue.js?v3"></script>
 			<script type="module" src="../Client Side/Controller_RadioBtn_AssignClientTypeValue.js?v3"></script>
-			<script type="module" src="../Client Side/controller_RadioBtn_AssignOfficeValue.js?v3"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignOfficeValue.js?v3"></script>
 			<script type="module" src="../Client Side/Controller_RadioBtn_AssignGenderValue.js?v3"></script>
 			<script type="module" src="../Client Side/Controller_RadioBtn_AssignGenderPrefValue.js?v3"></script>
 			<script type="module" src="../Client Side/Controller_RadioBtn_AssignEducAttainValue.js?v3"></script>			
