@@ -31,7 +31,17 @@ async function requestRespondentPerScore(clientTypeInternal, clientTypeExternal,
 
 		/*Fetch method*/
 		fetch("../Server Side/Response_RespondentPerScore.php", {method: "POST", body: fData})
-		.then(res => res.json())
+		.then((res) =>{
+			
+			if(res.ok == false){
+				location.reload();
+			}
+
+			res.json();
+			res.serverConnection = "Disconnected";
+
+			return res.json();
+		})
 		.then(parseObj => {
 
 			if(parseObj.validAccess !== true){
