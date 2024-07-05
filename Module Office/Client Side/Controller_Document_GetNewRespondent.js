@@ -1,5 +1,5 @@
 /*Import*/
-import {valueCurrentNewRespondent} from "./Values_Office.js";
+import {currentNewRespondent, valueCurrentNewRespondent} from "./Values_Office.js";
 import controller_Document_CountTotalAnsweredQuestions from "./Controller_Document_CountTotalAnsweredQuestions.js";
 import {submitGetNewRespondent} from "./SubmitRequest_GetNewRespondent.js";
 import controller_Document_DisplayRespondent from "./Controller_Document_DisplayRespondent.js";
@@ -20,25 +20,60 @@ import controller_Document_DisplayCcThreeScoresTable from "./Controller_Document
 
 /*Controller*/
 function controller_Document_GetNewRespondent(){
-
-	const controllers_Array = [
-		controller_Document_CountTotalAnsweredQuestions, 
-		controller_Document_DisplayRespondent,
-		controller_Document_DisplayRespondentPerScorePieChart,
-		controller_Document_DisplayStronglyAgreeAreaChart,
-		controller_Document_DisplayAgreeAreaChart,
-		controller_Document_DisplayNeitherNumberAreaChart,
-		controller_Document_DisplayDisagreeNumberAreaChart,
-		controller_Document_DisplayStronglyDisagreeAreaChart,
-		controller_Document_DisplayNoRatingAreaChart,
-		controller_Document_DisplayAvailedOfficeServiceBarChart,
-		controller_Document_DisplayQuestionsScoresTable,
-		controller_Document_DisplayCcOneScoresTable,
-		controller_Document_DisplayCcTwoScoresTable,
-		controller_Document_DisplayCcThreeScoresTable
-	];
-
+	
+	/*
 	submitGetNewRespondent(valueCurrentNewRespondent, controllers_Array);
+	*/
+
+
+	if(typeof(EventSource) !== "undefined"){
+		
+		const controllers_Array = [
+			controller_Document_CountTotalAnsweredQuestions, 
+			controller_Document_DisplayRespondent,
+			controller_Document_DisplayRespondentPerScorePieChart,
+			controller_Document_DisplayStronglyAgreeAreaChart,
+			controller_Document_DisplayAgreeAreaChart,
+			controller_Document_DisplayNeitherNumberAreaChart,
+			controller_Document_DisplayDisagreeNumberAreaChart,
+			controller_Document_DisplayStronglyDisagreeAreaChart,
+			controller_Document_DisplayNoRatingAreaChart,
+			controller_Document_DisplayAvailedOfficeServiceBarChart,
+			controller_Document_DisplayQuestionsScoresTable,
+			controller_Document_DisplayCcOneScoresTable,
+			controller_Document_DisplayCcTwoScoresTable,
+			controller_Document_DisplayCcThreeScoresTable
+		];
+
+
+		/*EventSource Instance*/
+		let source = new EventSource("../Server Side/Response_NewRespondentNotifier.php");
+		/*EventSource Instance*/
+
+		/*Response Message*/
+		source.onmessage = function(event){
+
+			if(event.data !== currentNewRespondent){
+
+				valueCurrentNewRespondent(event.data);
+
+				controllers_Array.forEach(function(value, index, array){
+
+					value();
+				});
+			}
+		};
+		/*Response Message*/
+
+		/*Connection Problem*/
+		source.onerror = function(event){
+
+			console.log("An error occurred while attempting to connect.");
+		};
+		/*Connection Problem*/
+	}else{
+		console.log("Sorry, your browser does not support server-sent events...");
+	}
 }
 /*Controller*/
 
