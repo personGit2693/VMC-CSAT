@@ -55,7 +55,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 	$validToken = null;
 	$execution = null;		
 	$stronglyDisagreeNumberDetails_Array = array();
-	$stronglyDisagreeNumberDetails_Array[] = array("Dates", "Strongly Agree");
+	$stronglyDisagreeNumberDetails_Array[] = array("Dates", "Strongly Disagree");
 	/*Prep response*/
 
 
