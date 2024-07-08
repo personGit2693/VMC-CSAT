@@ -383,45 +383,45 @@ if(isset($_GET["rateToken"]) && isset($_GET["codeDetailsBase"]) && isset($_GET["
 
 			<!--Javascripts-->
 			<!--_Dependencies-->
-			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v3"></script>
-			<script type="text/javascript" src="../../Global Client Side/Rogrid_Steps.js?v3"></script>
+			<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v4"></script>
+			<script type="text/javascript" src="../../Global Client Side/Rogrid_Steps.js?v4"></script>
 			<!--_Dependencies-->
 
 			<!--_Controllers-->
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignRespondentValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignClientTypeValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignOfficeValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignGenderValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignGenderPrefValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignEducAttainValue.js?v3"></script>			
-			<script type="module" src="../Client Side/Controller_RadioBtn_OutputServiceTypes.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignServiceTypeValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_OutputOfficeServices.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignOfficeServiceValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignFreqVisitValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_InputText_AssignAge.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_InputText_AssignSearchReligion.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_InputText_PopulateReligionsDropdown.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Option_AssignReligionValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_DivRemoveOptionBtn_ResetReligionValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Btn_ValidateStepOne.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignAwarenessRatingValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_ListCcVisibilityRates.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignVisibilityRatingValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_ListCcHelpfulnessRates.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignHelpfulnessRatingValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Btn_ValidateStepTwo.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignRespondentRatingsValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_RadioBtn_AssignSelectedQuestionsGroupsValue.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Btn_ValidateStepThree.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Textarea_AssignContactDetails.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Textarea_AssignComments.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Btn_SendSurveyRating.js?v3"></script>
-			<script type="module" src="../Client Side/Controller_Btn_Steps.js?v3"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignRespondentValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignClientTypeValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignOfficeValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignGenderValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignGenderPrefValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignEducAttainValue.js?v4"></script>			
+			<script type="module" src="../Client Side/Controller_RadioBtn_OutputServiceTypes.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignServiceTypeValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_OutputOfficeServices.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignOfficeServiceValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignFreqVisitValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_InputText_AssignAge.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_InputText_AssignSearchReligion.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_InputText_PopulateReligionsDropdown.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Option_AssignReligionValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_DivRemoveOptionBtn_ResetReligionValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Btn_ValidateStepOne.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignAwarenessRatingValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_ListCcVisibilityRates.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignVisibilityRatingValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_ListCcHelpfulnessRates.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignHelpfulnessRatingValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Btn_ValidateStepTwo.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignRespondentRatingsValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_RadioBtn_AssignSelectedQuestionsGroupsValue.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Btn_ValidateStepThree.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Textarea_AssignContactDetails.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Textarea_AssignComments.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Btn_SendSurveyRating.js?v4"></script>
+			<script type="module" src="../Client Side/Controller_Btn_Steps.js?v4"></script>
 			<!--_Controllers-->
 
 			<!--_Executer-->
-			<script type="module" src="../Client Side/Executor_Page_RateService.js?v3"></script>
+			<script type="module" src="../Client Side/Executor_Page_RateService.js?v4"></script>
 			<!--_Executer-->
 			<!--Javascripts-->
 		</body>

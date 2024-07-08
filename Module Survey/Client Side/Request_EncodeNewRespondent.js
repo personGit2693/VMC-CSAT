@@ -31,7 +31,16 @@ async function requestEncodeNewRespondent(){
 
 		/*Fetch method*/
 		fetch("../Server Side/Response_EncodeNewRespondent.php", {method: "POST", body: fData})
-		.then(res => res.json())
+		.then(res =>{
+			
+			if(res.ok !== true){
+
+				resolve(true);
+			}else if(res.ok === true){
+
+				return res.json();
+			}
+		})
 		.then(parseObj => {
 
 			if(parseObj.validAccess !== true){
