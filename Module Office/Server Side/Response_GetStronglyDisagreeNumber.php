@@ -155,7 +155,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 
 						if($stronglyDisagreeNumberDetails_Array[$index][0] == $stronglyDisagreeNumber_Assoc["Dates"]){
 
-							$stronglyDisagreeNumberDetails_Array[$index][1] = $stronglyDisagreeNumber_Assoc["Strongly Agree"];
+							$stronglyDisagreeNumberDetails_Array[$index][1] = $stronglyDisagreeNumber_Assoc["Strongly Disagree"];
 						}
 					}					
 				}
