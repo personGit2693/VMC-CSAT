@@ -482,27 +482,27 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 		<!--Javascripts-->
 		<!--_Dependencies-->
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v7"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v7"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v7"></script>
-		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v7"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v8"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v8"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/CalendarLite.js?v8"></script>
+		<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js?v8"></script>
 		<!--_Dependencies-->
 
 		<!--_Controller-->
-		<script type="module" src="../Client Side/Controller_InputText_SearchFindPointOfEntry.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_Ahref_HighlightBookmark.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_DivBtn_ResetSelectedPointOfEntry.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_DivOptionWrap_SearchPopulatePointOfEntry.js?v7"></script>		
-		<script type="module" src="../Client Side/Controller_DivOption_AssignSelectedPointOfEntry.js?v7"></script>	
-		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeInternal.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeExternal.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_SearchArea_DisplayMonitoring.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_DivCommentsWrap_DisplayComments.js?v7"></script>
-		<script type="module" src="../Client Side/Controller_Btn_GenerateOfficeCode.js?v7"></script>
+		<script type="module" src="../Client Side/Controller_InputText_SearchFindPointOfEntry.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_Ahref_HighlightBookmark.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_DivBtn_ResetSelectedPointOfEntry.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_DivOptionWrap_SearchPopulatePointOfEntry.js?v8"></script>		
+		<script type="module" src="../Client Side/Controller_DivOption_AssignSelectedPointOfEntry.js?v8"></script>	
+		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeInternal.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_InputCheckbox_AssignClientTypeExternal.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_SearchArea_DisplayMonitoring.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_DivCommentsWrap_DisplayComments.js?v8"></script>
+		<script type="module" src="../Client Side/Controller_Btn_GenerateOfficeCode.js?v8"></script>
 		<!--_Controller-->		
 
 		<!--_Executor-->
-		<script type="module" src="../Client Side/Executor_Page_RatingMonitoring.js?v7"></script>
+		<script type="module" src="../Client Side/Executor_Page_RatingMonitoring.js?v8"></script>
 		<!--_Executor-->
 		<!--Javascripts-->			
 	</body>

@@ -63,14 +63,7 @@ function controller_Document_GetNewRespondent(){
 				});
 			}
 		};
-		/*Response Message*/
-
-		/*Connection Problem*/
-		source.onerror = function(event){
-
-			console.log("An error occurred while attempting to connect.");			
-		};
-		/*Connection Problem*/
+		/*Response Message*/		
 	}else{
 		console.log("Sorry, your browser does not support server-sent events...");
 	}
