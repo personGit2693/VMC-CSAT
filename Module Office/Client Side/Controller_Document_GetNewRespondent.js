@@ -68,7 +68,7 @@ function controller_Document_GetNewRespondent(){
 		/*Connection Problem*/
 		source.onerror = function(event){
 
-			console.log("An error occurred while attempting to connect.");
+			console.log("An error occurred while attempting to connect.");			
 		};
 		/*Connection Problem*/
 	}else{

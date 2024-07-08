@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetStronglyDisagreeNumber(output, assignValue, officeId, stronglyDisagree_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent){
+function submitGetStronglyDisagreeNumber(output, assignValue, officeId, stronglyDisagree_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -23,9 +23,7 @@ function submitGetStronglyDisagreeNumber(output, assignValue, officeId, strongly
 
 				assignValue(stronglyDisagreeNumberDetails_Array);
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

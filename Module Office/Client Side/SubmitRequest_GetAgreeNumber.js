@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetAgreeNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, agree_Id, notifierNewRespondent, currentNewRespondent){
+function submitGetAgreeNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, agree_Id){
 
 	if(blockRequest === false){
 
@@ -24,8 +24,6 @@ function submitGetAgreeNumber(output, assignValue, clientTypeInternal, clientTyp
 				assignValue(agreeNumberDetails_Array);
 
 				output();
-
-				notifierNewRespondent(currentNewRespondent);
 			}
 
 			blockRequest = false;

@@ -2,7 +2,6 @@
 import {valueStronglyAgreeNumberDetails, selectedPointOfEntry_Obj, stronglyAgree_Id, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import {submitGetStronglyAgreeNumber} from "./SubmitRequest_GetStronglyAgreeNumber.js";
-import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
 import outputStronglyAgreeNumberAreaChart from "./Output_StronglyAgreeNumberAreaChart.js";
 /*Import*/
 
@@ -10,7 +9,7 @@ import outputStronglyAgreeNumberAreaChart from "./Output_StronglyAgreeNumberArea
 /*Controller*/
 function controller_Document_DisplayStronglyAgreeAreaChart(){
 
-	submitGetStronglyAgreeNumber(outputStronglyAgreeNumberAreaChart, valueStronglyAgreeNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, stronglyAgree_Id, submitNewRespondentNotifier, currentNewRespondent);
+	submitGetStronglyAgreeNumber(outputStronglyAgreeNumberAreaChart, valueStronglyAgreeNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, stronglyAgree_Id);
 }
 /*Controller*/
 

@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetNeitherNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, neither_Id, notifierNewRespondent, currentNewRespondent){
+function submitGetNeitherNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, neither_Id){
 
 	if(blockRequest === false){
 
@@ -23,9 +23,7 @@ function submitGetNeitherNumber(output, assignValue, clientTypeInternal, clientT
 
 				assignValue(neitherNumberDetails_Array);
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

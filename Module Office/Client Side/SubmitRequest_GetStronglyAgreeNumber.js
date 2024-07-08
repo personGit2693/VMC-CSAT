@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetStronglyAgreeNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, stronglyAgree_Id, notifierNewRespondent, currentNewRespondent){
+function submitGetStronglyAgreeNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, stronglyAgree_Id){
 
 	if(blockRequest === false){
 
@@ -24,8 +24,6 @@ function submitGetStronglyAgreeNumber(output, assignValue, clientTypeInternal, c
 				assignValue(stronglyAgreeNumberDetails_Array);
 
 				output();
-
-				notifierNewRespondent(currentNewRespondent);
 			}
 
 			blockRequest = false;

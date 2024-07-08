@@ -2,7 +2,6 @@
 import {valueNoRatingNumberDetails, selectedPointOfEntry_Obj, noRating_Id, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import {submitGetNoRatingNumber} from "./SubmitRequest_GetNoRatingNumber.js";
-import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
 import outputNoRatingAreaChart from "./Output_NoRatingNumberAreaChart.js";
 /*Import*/
 
@@ -10,7 +9,7 @@ import outputNoRatingAreaChart from "./Output_NoRatingNumberAreaChart.js";
 /*Controller*/
 function controller_Document_DisplayNoRatingAreaChart(){
 
-	submitGetNoRatingNumber(outputNoRatingAreaChart, valueNoRatingNumberDetails, selectedPointOfEntry_Obj.office_id, noRating_Id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, submitNewRespondentNotifier, currentNewRespondent);
+	submitGetNoRatingNumber(outputNoRatingAreaChart, valueNoRatingNumberDetails, selectedPointOfEntry_Obj.office_id, noRating_Id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value);
 }
 /*Controller*/
 

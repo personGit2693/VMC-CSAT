@@ -3,7 +3,6 @@ import {neither_Id, selectedPointOfEntry_Obj, clientTypeExternal, clientTypeInte
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import controller_Document_CountTotalAnsweredQuestions from "./Controller_Document_CountTotalAnsweredQuestions.js";
 import {submitGetNeitherNumber} from "./SubmitRequest_GetNeitherNumber.js";
-import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
 import outputNeitherNumberAreaChart from "./Output_NeitherNumberAreaChart.js";
 /*Import*/
 
@@ -11,7 +10,7 @@ import outputNeitherNumberAreaChart from "./Output_NeitherNumberAreaChart.js";
 /*Controller*/
 function controller_Document_DisplayNeitherNumberAreaChart(){
 
-	submitGetNeitherNumber(outputNeitherNumberAreaChart, valueNeitherNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, neither_Id, submitNewRespondentNotifier, currentNewRespondent);
+	submitGetNeitherNumber(outputNeitherNumberAreaChart, valueNeitherNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, neither_Id);
 }
 /*Controller*/
 

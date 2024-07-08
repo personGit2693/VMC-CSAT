@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitCountPassScore(output, officeId, stronglyAgree_Id, agree_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent){
+function submitCountPassScore(output, officeId, stronglyAgree_Id, agree_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -20,9 +20,7 @@ function submitCountPassScore(output, officeId, stronglyAgree_Id, agree_Id, clie
 			
 			if(gatewayPromise === true){								
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

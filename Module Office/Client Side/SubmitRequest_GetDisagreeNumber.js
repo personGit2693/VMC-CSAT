@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetDisagreeNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, disagree_Id, notifierNewRespondent, currentNewRespondent){
+function submitGetDisagreeNumber(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, disagree_Id){
 
 	if(blockRequest === false){
 
@@ -23,9 +23,7 @@ function submitGetDisagreeNumber(output, assignValue, clientTypeInternal, client
 
 				assignValue(disagreeNumberDetails_Array);
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

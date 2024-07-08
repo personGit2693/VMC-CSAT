@@ -2,7 +2,6 @@
 import {ccThree_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import {submitCitizenCharterThreeScores} from "./SubmitRequest_CitizenCharterThreeScores.js";
-import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
 import outputCitizenCharterThreeScoresTable from "./Output_CitizenCharterThreeScoresTable.js";
 /*Import*/
 
@@ -10,7 +9,7 @@ import outputCitizenCharterThreeScoresTable from "./Output_CitizenCharterThreeSc
 /*Controller*/
 function controller_Document_DisplayCcThreeScoresTable(){
 
-	submitCitizenCharterThreeScores(outputCitizenCharterThreeScoresTable, selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, ccThree_Id, submitNewRespondentNotifier, currentNewRespondent);
+	submitCitizenCharterThreeScores(outputCitizenCharterThreeScoresTable, selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, ccThree_Id);
 }
 /*Controller*/
 

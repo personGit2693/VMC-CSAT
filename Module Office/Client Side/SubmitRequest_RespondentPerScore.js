@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitRespondentPerScore(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent){
+function submitRespondentPerScore(output, assignValue, clientTypeInternal, clientTypeExternal, officeId, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -33,9 +33,7 @@ function submitRespondentPerScore(output, assignValue, clientTypeInternal, clien
 
 			if(gatewayPromise === true){								
 
-				output();				
-
-				notifierNewRespondent(currentNewRespondent);
+				output();								
 			}
 
 			blockRequest = false;

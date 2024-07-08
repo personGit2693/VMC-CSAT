@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetNoRatingNumber(output, assignValue, officeId, noRating_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent){
+function submitGetNoRatingNumber(output, assignValue, officeId, noRating_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -23,9 +23,7 @@ function submitGetNoRatingNumber(output, assignValue, officeId, noRating_Id, cli
 
 				assignValue(noRatingNumberDetails_Array);
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitQuestionsScoresDetails(output, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, neither_Id, disagree_Id, stronglyDisagree_Id, dimensionComment_Id, notifierNewRespondent, currentNewRespondent){
+function submitQuestionsScoresDetails(output, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, neither_Id, disagree_Id, stronglyDisagree_Id, dimensionComment_Id){
 
 	if(blockRequest === false){
 
@@ -20,9 +20,7 @@ function submitQuestionsScoresDetails(output, officeId, clientTypeInternal, clie
 			
 			if(gatewayPromise === true){								
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

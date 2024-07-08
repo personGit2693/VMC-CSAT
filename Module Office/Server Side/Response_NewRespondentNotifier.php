@@ -16,6 +16,4 @@ $detectedNewRespondent = count($readin);
 /*Get New Updates*/	
 
 echo "data:{$detectedNewRespondent}\n\n";
-
-flush();
 ?>

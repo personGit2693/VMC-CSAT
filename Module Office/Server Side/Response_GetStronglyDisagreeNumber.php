@@ -122,7 +122,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 			/*Get Strongly Disagree Number*/
 			/*_Prep query*/
 			$stronglyDisagreeNumber_Query = "SELECT CONVERT(questionresponse_datetime, DATE) AS 'Dates',
-				COUNT(questionresponses_tab.questionresponse_id) AS 'Strongly Agree' 
+				COUNT(questionresponses_tab.questionresponse_id) AS 'Strongly Disagree' 
 				FROM questionresponses_tab 
 				INNER JOIN clientresponses_tab 
 				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 

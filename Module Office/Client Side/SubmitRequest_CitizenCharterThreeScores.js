@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitCitizenCharterThreeScores(output, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, ccThree_Id, notifierNewRespondent, currentNewRespondent){
+function submitCitizenCharterThreeScores(output, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, ccThree_Id){
 
 	if(blockRequest === false){
 
@@ -21,8 +21,6 @@ function submitCitizenCharterThreeScores(output, officeId, clientTypeInternal, c
 			if(gatewayPromise === true){								
 
 				output();
-
-				notifierNewRespondent(currentNewRespondent);
 			}
 
 			blockRequest = false;

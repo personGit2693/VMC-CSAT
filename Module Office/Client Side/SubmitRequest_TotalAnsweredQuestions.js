@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitTotalAnsweredQuestions(output, officeId, noRating_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent, controllerDisplayRating){
+function submitTotalAnsweredQuestions(output, officeId, noRating_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, controllerDisplayRating){
 
 	if(blockRequest === false){
 
@@ -32,9 +32,7 @@ function submitTotalAnsweredQuestions(output, officeId, noRating_Id, clientTypeI
 
 				output();
 
-				controllerDisplayRating();				
-
-				notifierNewRespondent(currentNewRespondent);
+				controllerDisplayRating();
 			}
 
 			blockRequest = false;

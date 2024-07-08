@@ -3,7 +3,6 @@ import {disagree_Id, selectedPointOfEntry_Obj, clientTypeExternal, clientTypeInt
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import controller_Document_CountTotalAnsweredQuestions from "./Controller_Document_CountTotalAnsweredQuestions.js";
 import {submitGetDisagreeNumber} from "./SubmitRequest_GetDisagreeNumber.js";
-import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
 import outputDisagreeNumberAreaChart from "./Output_DisagreeNumberAreaChart.js";
 /*Import*/
 
@@ -11,7 +10,7 @@ import outputDisagreeNumberAreaChart from "./Output_DisagreeNumberAreaChart.js";
 /*Controller*/
 function controller_Document_DisplayDisagreeNumberAreaChart(){
 
-	submitGetDisagreeNumber(outputDisagreeNumberAreaChart, valueDisagreeNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, disagree_Id, submitNewRespondentNotifier, currentNewRespondent);
+	submitGetDisagreeNumber(outputDisagreeNumberAreaChart, valueDisagreeNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, disagree_Id);
 }
 /*Controller*/
 

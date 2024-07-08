@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitGetOfficeServiceAvailed(output, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent){
+function submitGetOfficeServiceAvailed(output, assignValue, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -23,9 +23,7 @@ function submitGetOfficeServiceAvailed(output, assignValue, officeId, clientType
 
 				assignValue(availedOfficeService_Array);
 
-				output();
-
-				notifierNewRespondent(currentNewRespondent);
+				output();				
 			}
 
 			blockRequest = false;

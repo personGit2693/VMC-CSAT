@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitTotalRespondent(output, boxLoader, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, notifierNewRespondent, currentNewRespondent){
+function submitTotalRespondent(output, boxLoader, boxLoader_Id, officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
 
 	if(blockRequest === false){
 
@@ -28,8 +28,6 @@ function submitTotalRespondent(output, boxLoader, boxLoader_Id, officeId, client
 			if(gatewayPromise === true){								
 
 				output();
-
-				notifierNewRespondent(currentNewRespondent);				
 			}
 
 			blockRequest = false;

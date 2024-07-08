@@ -2,7 +2,6 @@
 import {ccOne_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
 import {submitCitizenCharterOneScores} from "./SubmitRequest_CitizenCharterOneScores.js";
-import {submitNewRespondentNotifier} from "./SubmitRequest_NewRespondentNotifier.js";
 import outputCitizenCharterOneScoresTable from "./Output_CitizenCharterOneScoresTable.js";
 /*Import*/
 
@@ -10,7 +9,7 @@ import outputCitizenCharterOneScoresTable from "./Output_CitizenCharterOneScores
 /*Controller*/
 function controller_Document_DisplayCcOneScoresTable(){
 
-	submitCitizenCharterOneScores(outputCitizenCharterOneScoresTable, selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, ccOne_Id, submitNewRespondentNotifier, currentNewRespondent);
+	submitCitizenCharterOneScores(outputCitizenCharterOneScoresTable, selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, ccOne_Id);
 }
 /*Controller*/
 
