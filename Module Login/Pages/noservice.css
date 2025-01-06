@@ -1,0 +1,138 @@
+html, body{
+	margin:0;
+	height:100%;
+	box-sizing:border-box;
+	overflow:auto;
+}
+
+@keyframes textshadow{
+	from{text-shadow:2px 2px rgb(247,244,244);}
+	to{text-shadow:1px 1px yellow;}
+
+}
+
+@keyframes shake{
+	0% { transform: translate(1px, 1px); transform: rotate(0deg); }
+	10% { transform: translate(-1px, -2px); transform: rotate(-1deg); }
+	20% { transform: translate(-3px, 0px); transform: rotate(1deg); }
+	30% { transform: translate(3px, 2px); transform: rotate(0deg); }
+	40% { transform: translate(1px, -1px); transform: rotate(1deg); }
+	50% { transform: translate(-1px, 2px); transform: rotate(-1deg); }
+	60% { transform: translate(-3px, 1px); transform: rotate(0deg); }
+	70% { transform: translate(3px, 1px); transform: rotate(-1deg); }
+	80% { transform: translate(-1px, -1px); transform: rotate(1deg); }
+	90% { transform: translate(1px, 2px); transform: rotate(0deg); }
+	100% { transform: translate(1px, -2px); transform: rotate(-1deg); }
+}
+
+/*Mobile*/
+@media all and (max-width:641px){
+	.wrap{
+		position:relative;
+		display:flex;
+		flex-direction:column-reverse;
+		height:100%;
+		width:100%;
+		justify-content:center;
+		align-items:center;
+		background-color:lightcoral;}
+
+	.message{
+		color:white;
+		font-size:20px;
+		animation-name:textshadow;
+		animation-duration:2s;
+		animation-iteration-count:infinite;
+	}
+	img:hover {
+		animation: shake 0.5s;
+		animation-iteration-count: infinite;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.wrap{
+		position:relative;
+		display:flex;
+		flex-direction:column;/*changed*/
+		height:100%;
+		width:100%;
+		justify-content:center;
+		align-items:center;
+		background-color:dimgray;}
+	.message{
+		color:white;
+		font-size:30px;/*changed*/
+		animation-name:textshadow;
+		animation-duration:2s;
+		animation-iteration-count:infinite;
+	}	
+	img:hover {
+		animation: shake 0.5s;
+		animation-iteration-count: infinite;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.wrap{
+		position:relative;
+		display:flex;
+		flex-direction:column-reverse;
+		height:100%;
+		width:100%;
+		justify-content:center;
+		align-items:center;
+		background-color:burlywood;}
+
+	.message{
+		color:white;
+		font-size:40px;/*changed*/
+		animation-name:textshadow;
+		animation-duration:2s;
+		animation-iteration-count:infinite;
+	}
+	img:hover {
+		animation: shake 0.5s;
+		animation-iteration-count: infinite;
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.wrap{
+		position:relative;
+		display:flex;
+		flex-direction:column-reverse;
+		height:100%;
+		width:100%;
+		justify-content:center;
+		align-items:center;
+		background-color:lightslategray;}
+
+	.message{
+		color:white;
+		font-size:50px;/*changed*/
+		animation-name:textshadow;
+		animation-duration:2s;
+		animation-iteration-count:infinite;
+	}
+	img:hover {
+		animation: shake 0.5s;
+		animation-iteration-count: infinite;
+	}
+}
+/*Desktop*/
