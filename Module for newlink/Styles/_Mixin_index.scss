@@ -1,0 +1,105 @@
+/****************************************************************************************************/
+/*General*/
+@mixin body{
+	position: relative;
+	min-height:100vh;
+
+}
+
+@mixin asterisk {	
+	box-sizing: border-box;
+}
+
+@mixin firstDivWrap_class_General_Style{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	height:100vh;
+}
+
+@mixin contentDivWrap_class_General_Style{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items: center;
+}
+
+@mixin imgWrap1_class_General_Style{
+	margin-bottom:10px;
+	min-width:150px;
+}
+
+@mixin imgWrap2_class_General_Style{
+	/*width:100px;*/
+}
+
+@mixin img{
+	width:100%;
+	object-fit:contain;
+}
+
+@mixin clickButton_class{
+	text-decoration: none;
+}
+
+@mixin clickButton_class_hover{
+	opacity:0.7;
+	width:95%;
+	text-decoration: underline;
+}
+
+@mixin msgText_class_General_Style{
+	font-family:calibri;
+}
+
+/*General*/
+/****************************************************************************************************/
+/*Announcement Message*/
+/****************************************************************************************************/
+
+@mixin msgText_class_Mobile_Style{
+	font-size:3.2vw;
+	margin-bottom:10px;
+}
+
+@mixin msgText_class_Tablet_Style{
+	font-size:3.5vw;
+	margin-bottom:10px;
+}
+
+@mixin msgText_class_Laptop_Style{
+	margin-bottom:20px;
+	font-size:3vw;
+}
+
+@mixin msgText_class_Desktop_Style{
+	font-size:3vw;
+	margin-bottom:20px;
+}
+
+/*Announcement Message*/
+/****************************************************************************************************/
+/*Announcement Image Top*/
+/****************************************************************************************************/
+
+@mixin imgWrap1_class_Mobile_Style{
+	max-width:300px;
+}
+
+@mixin imgWrap1_class_Tablet_Style{
+	max-width:350px;
+
+}
+
+@mixin imgWrap1_class_Laptop_Style{
+	max-width:400px;
+
+}
+
+@mixin imgWrap1_class_Desktop_Style{
+	max-width:450px;
+}
+/*Announcement Image Top*/
+/****************************************************************************************************/
+
+

@@ -7,7 +7,7 @@ import outputPointOfEntryOptionLoader from "./Output_PointOfEntryOptionLoader.js
 
 
 /*Controller*/
-function controller_Document_SearchPopulatePointOfEntry(){
+function controller_Doc_SearchPopulatePointOfEntry(){
 
 	submitPointOfEntry(outputPointOfEntryOption, outputPointOfEntryOptionLoader, "pointOfEntryOptionLoader-Id", searchPointOfEntry_Value, pointOfEntry_StartIndex, pointOfEntry_Display);
 }
@@ -15,10 +15,10 @@ function controller_Document_SearchPopulatePointOfEntry(){
 
 
 /*Declare Global*/
-window.controller_Document_SearchPopulatePointOfEntry = controller_Document_SearchPopulatePointOfEntry;
+window.controller_Doc_SearchPopulatePointOfEntry = controller_Doc_SearchPopulatePointOfEntry;
 /*Declare Global*/
 
 
 /*Export*/
-export default controller_Document_SearchPopulatePointOfEntry;
+export default controller_Doc_SearchPopulatePointOfEntry;
 /*Export*/

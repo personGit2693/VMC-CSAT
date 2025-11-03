@@ -1,0 +1,145 @@
+/****************************************************************************************************/
+/*Import Mixins*/
+@import "./Mixin_index";
+/*Import Mixins*/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/*General*/
+html, body {
+	@include body;	
+}
+
+*, *::before, *::after {
+	@include asterisk;
+}
+
+.firstDivWrap_class{
+	@include firstDivWrap_class_General_Style;
+	
+}
+
+.contentDivWrap_class{
+	@include contentDivWrap_class_General_Style;
+}
+
+.imgWrap1_class{
+	@include imgWrap1_class_General_Style;
+}
+
+.imgWrap1_class img{
+	@include img;
+}
+
+.imgWrap2_class{
+	/*@include imgWrap2_class_General_Style;*/
+	@include msgText_class_General_Style;
+}
+
+/*.imgWrap2_class img{
+	@include img;
+}*/
+
+.clickButton_class{
+	@include clickButton_class;
+}
+
+.clickButton_class:hover{
+	@include clickButton_class_hover;
+}
+
+.msgText_class{
+	@include msgText_class_General_Style;
+
+}
+/*General*/
+/****************************************************************************************************/
+
+
+/****************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	.msgText_class{
+		@include msgText_class_Mobile_Style;
+
+	}
+
+	.imgWrap1_class{
+		@include imgWrap1_class_Mobile_Style;
+	}
+
+	.imgWrap2_class{
+		@include msgText_class_Mobile_Style;
+	}			
+}
+/*Mobile*/
+/****************************************************************************************************/
+
+
+/****************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.msgText_class{
+		@include msgText_class_Tablet_Style;
+
+	}
+	.imgWrap1_class{
+		@include imgWrap1_class_Tablet_Style;
+	}
+	.imgWrap2_class{
+		@include msgText_class_Tablet_Style;
+	}	
+}
+/*Tablet*/
+/****************************************************************************************************/
+
+
+/****************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.msgText_class{
+		@include msgText_class_Laptop_Style;
+
+	}
+
+	.imgWrap1_class{
+		@include imgWrap1_class_Laptop_Style;
+	}
+
+	.imgWrap2_class{
+		@include msgText_class_Laptop_Style;
+	}	
+}
+/*Laptop*/
+/****************************************************************************************************/
+
+
+/****************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	.msgText_class{
+		@include msgText_class_Desktop_Style;
+
+	}
+
+	.imgWrap1_class{
+		@include imgWrap1_class_Desktop_Style;
+	}
+
+	.imgWrap2_class{
+		@include msgText_class_Desktop_Style;
+	}		
+}
+/*Desktop*/
+/****************************************************************************************************/
+/*Limited Height*/
+@media all and (max-height:655px){
+	
+}
+/*Limited Height*/
+/****************************************************************************************************/
+/*Standard Height*/
+@media all and (min-height:656px){
+
+}
+/*Standard Height*/
+/****************************************************************************************************/

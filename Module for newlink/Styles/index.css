@@ -1,0 +1,133 @@
+/****************************************************************************************************/
+/*Import Mixins*/
+/****************************************************************************************************/
+/*General*/
+/*General*/
+/****************************************************************************************************/
+/*Announcement Message*/
+/****************************************************************************************************/
+/*Announcement Message*/
+/****************************************************************************************************/
+/*Announcement Image Top*/
+/****************************************************************************************************/
+/*Announcement Image Top*/
+/****************************************************************************************************/
+/*Import Mixins*/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/*General*/
+html, body {
+  position: relative;
+  min-height: 100vh; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+.firstDivWrap_class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.contentDivWrap_class {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.imgWrap1_class {
+  margin-bottom: 10px;
+  min-width: 150px; }
+
+.imgWrap1_class img {
+  width: 100%;
+  object-fit: contain; }
+
+.imgWrap2_class {
+  /*@include imgWrap2_class_General_Style;*/
+  font-family: calibri; }
+
+/*.imgWrap2_class img{
+	@include img;
+}*/
+.clickButton_class {
+  text-decoration: none; }
+
+.clickButton_class:hover {
+  opacity: 0.7;
+  width: 95%;
+  text-decoration: underline; }
+
+.msgText_class {
+  font-family: calibri; }
+
+/*General*/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .msgText_class {
+    font-size: 3.2vw;
+    margin-bottom: 10px; }
+
+  .imgWrap1_class {
+    max-width: 300px; }
+
+  .imgWrap2_class {
+    font-size: 3.2vw;
+    margin-bottom: 10px; } }
+/*Mobile*/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .msgText_class {
+    font-size: 3.5vw;
+    margin-bottom: 10px; }
+
+  .imgWrap1_class {
+    max-width: 350px; }
+
+  .imgWrap2_class {
+    font-size: 3.5vw;
+    margin-bottom: 10px; } }
+/*Tablet*/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .msgText_class {
+    margin-bottom: 20px;
+    font-size: 3vw; }
+
+  .imgWrap1_class {
+    max-width: 400px; }
+
+  .imgWrap2_class {
+    margin-bottom: 20px;
+    font-size: 3vw; } }
+/*Laptop*/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .msgText_class {
+    font-size: 3vw;
+    margin-bottom: 20px; }
+
+  .imgWrap1_class {
+    max-width: 450px; }
+
+  .imgWrap2_class {
+    font-size: 3vw;
+    margin-bottom: 20px; } }
+/*Desktop*/
+/****************************************************************************************************/
+/*Limited Height*/
+/*Limited Height*/
+/****************************************************************************************************/
+/*Standard Height*/
+/*Standard Height*/
+/****************************************************************************************************/
+
+/*# sourceMappingURL=index.css.map */

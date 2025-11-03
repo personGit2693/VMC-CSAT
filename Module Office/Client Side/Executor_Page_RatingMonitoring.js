@@ -1,5 +1,5 @@
 /*Import*/
-import controller_Document_SearchPopulatePointOfEntry from "./Controller_Document_SearchPopulatePointOfEntry.js";
+import controller_Doc_SearchPopulatePointOfEntry from "./Controller_Doc_SearchPopulatePointOfEntry.js";
 import controller_Document_AssignDefaultFilterClientTypes from "./Controller_Document_AssignDefaultFilterClientTypes.js";
 import controller_Document_AssignDefaultDateRangeOne from "./Controller_Document_AssignDefaultDateRangeOne.js";
 import controller_Document_GetNewRespondent from "./Controller_Document_GetNewRespondent.js";
@@ -19,7 +19,7 @@ renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rog
 
 
 /*Populate search point of entry*/
-controller_Document_SearchPopulatePointOfEntry();
+controller_Doc_SearchPopulatePointOfEntry();
 /*Populate search point of entry*/
 
 

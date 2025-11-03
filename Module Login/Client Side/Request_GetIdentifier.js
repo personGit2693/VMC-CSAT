@@ -38,6 +38,7 @@ async function requestGetIdentifier(usernInput){
 			}else if(parseObj.serverConnection !== null){
 
 				console.log("Connection Lost!");
+				console.log(parseObj.serverConnection);
 
 			}else if(parseObj.validToken !== null){
 
