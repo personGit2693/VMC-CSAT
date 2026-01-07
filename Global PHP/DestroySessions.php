@@ -4,7 +4,7 @@ declare(strict_types=1);
 session_start();
 date_default_timezone_set('Asia/Manila');
 $currentDateTime = date("Y-m-d H:i:s", time());
-$page_Login_Path = "../Module Login/Pages/Page_Login.php";
+$page_Login_Path = "../../Module Login/Pages/Page_Login.php";
 /*Dependency PHP Codes*/
 
 
