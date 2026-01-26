@@ -45,7 +45,7 @@ function validateAccToken(object $vmcCsat_Conn, string $accToken, string $accoun
 
 
 	/*Return response*/
-	$validateAccTok_Resp->found = $found;
+	$validateAccTok_Resp->found = 1;
 	$validateAccTok_Resp->execution = $execution;
 
 	return $validateAccTok_Resp;
