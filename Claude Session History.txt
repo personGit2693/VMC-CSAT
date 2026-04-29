@@ -1,0 +1,1907 @@
+╭─── Claude Code v2.1.119 ─────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│                Welcome back ROGINIE!               │ started                 │
+│                                                    │ √ Run /init to create … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ Recent activity         │
+│                        ▘▘ ▝▝                       │ No recent activity      │
+│       Sonnet 4.6 · Claude Pro ·                    │                         │
+│       cruzjr.rogelio@gmail.com's Organization      │                         │
+│               C:\laragon\www\VMC-CSAT              │                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  /remote-control is active · Code in CLI or at https://claude.ai/code/session_011FuQpTdesf8JasXfez8ENE
+
+> /init                                                                         
+
+● I'll explore the codebase to understand its structure before creating the
+  CLAUDE.md file.
+
+● Explore(Codebase exploration for CLAUDE.md)
+  ⎿  Done (49 tool uses · 59.3k tokens · 3m 47s)
+  (ctrl+o to expand)
+
+● Now I'll create the CLAUDE.md file based on what I've learned.
+
+● Write(CLAUDE.md)
+  ⎿  Wrote 114 lines to CLAUDE.md
+      2 # CLAUDE.md
+      3 This file provides guidance to Claude Code (claude.ai/code) when 
+        working with code in this repository.
+      5 ## Project Overview
+      6 
+      7 VMC-CSAT is a Customer Satisfaction survey platform for Valmed Co
+        ion with no build pipeline — files are served directly through La
+        ragon (local) or an Apache/PHP server (production).
+      8 
+      9 ## Development Environment
+     … +137 lines (ctrl+o to expand)
+
+● CLAUDE.md has been created at the project root. It covers:
+
+  - Dev environment — Laragon setup, no build steps
+  - Database — both connections and how to use the factory function
+  - Architecture — the Executor→Controller→Gateway→Request→Response chain,
+  module directory layout, and Rogrid UI framework
+  - Global utilities — quick reference table for shared PHP/JS files
+  - Conventions — fetch/JSON pattern, ES6 modules, scoped CSS, third-party libs
+  - New module guide — points to Module Pattern/ as the boilerplate
+
+✻ Brewed for 1m 58s
+
+> Enhance Module Office Client Side Component, View for better speed            
+  perfomance, use the module pattern for reference                              
+
+● Let me read both the Module Office and Module Pattern client-side files to
+  understand the current state and the reference pattern.
+
+● Explore(Explore Module Office and Module Pattern client side)
+  ⎿  Done (111 tool uses · 89.2k tokens · 1m 38s)
+  (ctrl+o to expand)
+
+● Good overview. Now let me read the actual file contents directly before making
+   any changes.
+
+  Searched for 3 patterns, read 22 files (ctrl+o to expand)
+
+● Now let me read the remaining View files and the loader components.
+
+  Read 8 files (ctrl+o to expand)
+
+● Now I have a complete picture. Here are the specific performance issues I
+  found:
+
+  1. innerHTML += in 4 View files — browser serializes the entire existing DOM
+  to string, concatenates, and re-parses everything. insertAdjacentHTML appends
+  without touching existing nodes.
+  2. String concatenation += in loops across all table/list Components — creates
+   O(N²) intermediate string objects. array.push + .join('') is faster.
+  3. .toFixed(0) called 2–6× per row (condition + display string) — should
+  compute once per row.
+  4. Redundant else if(x != "") after if(x == "") — dead logic in 4 View files.
+  5. Intermediate let variable then return in loaders — no need for the
+  variable.
+
+  Applying all fixes now.
+
+● Update(Module Office\Client Side\Component_CitizenCharterOneScoresTable.js)
+  ⎿  Added 10 lines, removed 25 lines
+       6  /*Component*/
+       7  function CitizenCharterOneScoresTable(){
+       8  
+       9 -  let citizenCharterOneScoresTable = "";                       
+       9 +  if(citizenCharterOneScoresDetails_Array.length === 0) return 
+         +"";                                                            
+      10  
+      11 -  if(citizenCharterOneScoresDetails_Array.length > 0){         
+      12 -                                                               
+      13 -    citizenCharterOneScoresTable += `<table>`+                 
+      14 -      `<caption><b>`+citizenCharterOneScoresDetails_Array[0].cc
+         -Question+`</b></caption>`+                                     
+      15 -      `<thead>`+                                               
+      16 -        `<tr>`+                                                
+      17 -          `<th>Number</th>`+                                   
+      18 -          `<th>Rating Description</th>`+                       
+      19 -          `<th>Responses</th>`+                                
+      20 -        `</tr>`+                                               
+      21 -      `</thead>`+                                              
+      22 -    `<tbody>`;                                                 
+      23 -                                                               
+      24 -    for(let index=0; index < citizenCharterOneScoresDetails_Arr
+         -ay.length; index++){                                           
+      25 -      citizenCharterOneScoresTable += `<tr>`+                  
+      26 -        `<td>`+citizenCharterOneScoresDetails_Array[index].ccNu
+         -mbering+`</td>`+                                               
+      27 -        `<td>`+citizenCharterOneScoresDetails_Array[index].ccRa
+         -te+`</td>`+                                                    
+      28 -        `<td>`+citizenCharterOneScoresDetails_Array[index].resp
+         -onses+`</td>`+                                                 
+      29 -      `</tr>`;                                                 
+      30 -    }                                                          
+      31 -                                                               
+      32 -    citizenCharterOneScoresTable += `</tbody></table>`;                                               
+      11 +  const rows = [];                                             
+      12 +  for(let index = 0; index < citizenCharterOneScoresDetails_Arr
+         +ay.length; index++){                                           
+      13 +    const row = citizenCharterOneScoresDetails_Array[index];   
+      14 +    rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}
+         +</td><td>${row.responses}</td></tr>`);                         
+      15    }
+      16  
+      35 -                                                               
+      36 -  return citizenCharterOneScoresTable;                         
+      17 +  return `<table>                                              
+      18 +    <caption><b>${citizenCharterOneScoresDetails_Array[0].ccQue
+         +stion}</b></caption>                                           
+      19 +    <thead><tr><th>Number</th><th>Rating Description</th><th>Re
+         +sponses</th></tr></thead>                                      
+      20 +    <tbody>${rows.join('')}</tbody>                            
+      21 +  </table>`;                                                   
+      22  }
+      23  /*Component*/
+      24  
+
+● Update(Module Office\Client Side\Component_CitizenCharterTwoScoresTable.js)
+  ⎿  Added 10 lines, removed 25 lines
+       6  /*Component*/
+       7  function CitizenCharterTwoScoresTable(){
+       8  
+       9 -  let citizenCharterTwoScoresTable = "";                       
+       9 +  if(citizenCharterTwoScoresDetails_Array.length === 0) return 
+         +"";                                                            
+      10  
+      11 -  if(citizenCharterTwoScoresDetails_Array.length > 0){         
+      12 -                                                               
+      13 -    citizenCharterTwoScoresTable += `<table>`+                 
+      14 -      `<caption><b>`+citizenCharterTwoScoresDetails_Array[0].cc
+         -Question+`</b></caption>`+                                     
+      15 -      `<thead>`+                                               
+      16 -        `<tr>`+                                                
+      17 -          `<th>Number</th>`+                                   
+      18 -          `<th>Rating Description</th>`+                       
+      19 -          `<th>Responses</th>`+                                
+      20 -        `</tr>`+                                               
+      21 -      `</thead>`+                                              
+      22 -    `<tbody>`;                                                 
+      23 -                                                               
+      24 -    for(let index=0; index < citizenCharterTwoScoresDetails_Arr
+         -ay.length; index++){                                           
+      25 -                                                               
+      26 -      citizenCharterTwoScoresTable += `<tr>`+                  
+      27 -        `<td>`+citizenCharterTwoScoresDetails_Array[index].ccNu
+         -mbering+`</td>`+                                               
+      28 -        `<td>`+citizenCharterTwoScoresDetails_Array[index].ccRa
+         -te+`</td>`+                                                    
+      29 -        `<td>`+citizenCharterTwoScoresDetails_Array[index].resp
+         -onses+`</td>`+                                                 
+      30 -      `</tr>`;                                                 
+      31 -    }                                                          
+      32 -                                                               
+      33 -    citizenCharterTwoScoresTable += `</tbody></table>`;                                               
+      11 +  const rows = [];                                             
+      12 +  for(let index = 0; index < citizenCharterTwoScoresDetails_Arr
+         +ay.length; index++){                                           
+      13 +    const row = citizenCharterTwoScoresDetails_Array[index];   
+      14 +    rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}
+         +</td><td>${row.responses}</td></tr>`);                         
+      15    }
+      16  
+      36 -  return citizenCharterTwoScoresTable;                         
+      17 +  return `<table>                                              
+      18 +    <caption><b>${citizenCharterTwoScoresDetails_Array[0].ccQue
+         +stion}</b></caption>                                           
+      19 +    <thead><tr><th>Number</th><th>Rating Description</th><th>Re
+         +sponses</th></tr></thead>                                      
+      20 +    <tbody>${rows.join('')}</tbody>                            
+      21 +  </table>`;                                                   
+      22  }
+      23  /*Component*/
+      24  
+
+● Update(Module Office\Client Side\Component_CitizenCharterThreeScoresTable.js)
+  ⎿  Added 10 lines, removed 25 lines
+       6  /*Component*/
+       7  function CitizenCharterThreeScoresTable(){
+       8  
+       9 -  let citizenCharterThreeScoresTable = "";                     
+       9 +  if(citizenCharterThreeScoresDetails_Array.length === 0) retur
+         +n "";                                                          
+      10  
+      11 -  if(citizenCharterThreeScoresDetails_Array.length > 0){       
+      12 -                                                               
+      13 -    citizenCharterThreeScoresTable += `<table>`+               
+      14 -      `<caption><b>`+citizenCharterThreeScoresDetails_Array[0].
+         -ccQuestion+`</b></caption>`+                                   
+      15 -      `<thead>`+                                               
+      16 -        `<tr>`+                                                
+      17 -          `<th>Number</th>`+                                   
+      18 -          `<th>Rating Description</th>`+                       
+      19 -          `<th>Responses</th>`+                                
+      20 -        `</tr>`+                                               
+      21 -      `</thead>`+                                              
+      22 -    `<tbody>`;                                                 
+      23 -                                                               
+      24 -    for(let index=0; index < citizenCharterThreeScoresDetails_A
+         -rray.length; index++){                                         
+      25 -                                                               
+      26 -      citizenCharterThreeScoresTable += `<tr>`+                
+      27 -        `<td>`+citizenCharterThreeScoresDetails_Array[index].cc
+         -Numbering+`</td>`+                                             
+      28 -        `<td>`+citizenCharterThreeScoresDetails_Array[index].cc
+         -Rate+`</td>`+                                                  
+      29 -        `<td>`+citizenCharterThreeScoresDetails_Array[index].re
+         -sponses+`</td>`+                                               
+      30 -      `</tr>`;                                                 
+      31 -    }                                                          
+      32 -                                                               
+      33 -    citizenCharterThreeScoresTable += `</tbody></table>`;                                           
+      11 +  const rows = [];                                             
+      12 +  for(let index = 0; index < citizenCharterThreeScoresDetails_A
+         +rray.length; index++){                                         
+      13 +    const row = citizenCharterThreeScoresDetails_Array[index]; 
+      14 +    rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}
+         +</td><td>${row.responses}</td></tr>`);                         
+      15    }
+      16  
+      36 -  return citizenCharterThreeScoresTable;                       
+      17 +  return `<table>                                              
+      18 +    <caption><b>${citizenCharterThreeScoresDetails_Array[0].ccQ
+         +uestion}</b></caption>                                         
+      19 +    <thead><tr><th>Number</th><th>Rating Description</th><th>Re
+         +sponses</th></tr></thead>                                      
+      20 +    <tbody>${rows.join('')}</tbody>                            
+      21 +  </table>`;                                                   
+      22  }
+      23  /*Component*/
+      24  
+
+● Update(Module Office\Client Side\Component_QuestionsScoresTable.js)
+  ⎿  Added 26 lines, removed 49 lines
+       6  /*Component*/
+       7  function QuestionsScoresTable(){
+       8  
+       9 -  let questionsScoresTable = "";                               
+       9 +  if(questionsScoresDetails_Array.length === 0) return "";     
+      10  
+      11 -  if(questionsScoresDetails_Array.length > 0){                 
+      11 +  const rows = [];                                             
+      12 +  for(let index = 0; index < questionsScoresDetails_Array.lengt
+         +h; index++){                                                   
+      13 +    const q = questionsScoresDetails_Array[index];             
+      14 +    const totalRespPerQuestion = q.totalStronglyAgree + q.total
+         +Agree + q.totalNeither + q.totalDisagree + q.totalStronglyDisag
+         +ree;                                                           
+      15 +    const pct = ((q.totalStronglyAgree + q.totalAgree) / totalR
+         +espPerQuestion * 100).toFixed(0);                              
+      16 +    const pctColor = pct >= 80 ? "#0ABE50" : "#BD212F";        
+      17  
+      13 -    questionsScoresTable += `<table>`+                         
+      14 -      `<thead>`+                                               
+      15 -        `<tr>`+                                                
+      16 -          `<th>Numbers</th>`+                                  
+      17 -          `<th>Questions</th>`+                                
+      18 -          `<th>Strongly Agree</th>`+                           
+      19 -          `<th>Agree</th>`+                                    
+      20 -          `<th>Neither Agree nor Disagree</th>`+               
+      21 -          `<th>Disagree</th>`+                                 
+      22 -          `<th>Strongly disagree</th>`+                        
+      23 -          `<th>No Rating</th>`+                                
+      24 -          `<th>Percentage</th>`+                               
+      25 -        `</tr>`+                                               
+      26 -      `</thead>`+                                              
+      27 -    `<tbody>`;                                                 
+      28 -                                                               
+      29 -    for(let index=0; index < questionsScoresDetails_Array.lengt
+         -h; index++){                                                   
+      30 -                                                               
+      31 -      const totalRespPerQuestion = questionsScoresDetails_Array
+         -[index].totalStronglyAgree + questionsScoresDetails_Array[index
+         -].totalAgree + questionsScoresDetails_Array[index].totalNeither
+         - + questionsScoresDetails_Array[index].totalDisagree + question
+         -sScoresDetails_Array[index].totalStronglyDisagree;             
+      32 -      const totalAgrees = questionsScoresDetails_Array[index].t
+         -otalStronglyAgree + questionsScoresDetails_Array[index].totalAg
+         -ree;                                                           
+      33 -      const perQuestionPercent = (totalAgrees / totalRespPerQue
+         -stion) * 100;                                                  
+      34 -                                                               
+      35 -      questionsScoresTable += `<tr>`+                          
+      36 -        `<td>`+questionsScoresDetails_Array[index].questionNo+`
+         -</td>`+                                                        
+      37 -        `<td>`+questionsScoresDetails_Array[index].questionValu
+         -e+`</td>`+                                                     
+      38 -        `<td>`+questionsScoresDetails_Array[index].totalStrongl
+         -yAgree+`</td>`+                                                
+      39 -        `<td>`+questionsScoresDetails_Array[index].totalAgree+`
+         -</td>`+                                                        
+      40 -        `<td>`+questionsScoresDetails_Array[index].totalNeither
+         -+`</td>`+                                                      
+      41 -        `<td>`+questionsScoresDetails_Array[index].totalDisagre
+         -e+`</td>`+                                                     
+      42 -        `<td>`+questionsScoresDetails_Array[index].totalStrongl
+         -yDisagree+`</td>`+                                             
+      43 -        `<td>`+questionsScoresDetails_Array[index].totalNoRatin
+         -g+`</td>`;                                                     
+      44 -                                                               
+      45 -        if(perQuestionPercent.toFixed(0) >= 80){               
+      46 -                                                               
+      47 -          questionsScoresTable += `<td style="color:#0ABE50;">`
+         -+perQuestionPercent.toFixed(0)+`%</td>`;                       
+      48 -                                                               
+      49 -        }else if(perQuestionPercent.toFixed(0) < 80){          
+      50 -                                                               
+      51 -          questionsScoresTable += `<td style="color:#BD212F;">`
+         -+perQuestionPercent.toFixed(0)+`%</td>`;                       
+      52 -        }                                                      
+      53 -                                                               
+      54 -      questionsScoresTable += `</tr>`;                         
+      55 -    }                                                          
+      56 -                                                               
+      57 -    questionsScoresTable += `</tbody></table>`;                
+      18 +    rows.push(`<tr>                                            
+      19 +      <td>${q.questionNo}</td>                                 
+      20 +      <td>${q.questionValue}</td>                              
+      21 +      <td>${q.totalStronglyAgree}</td>                         
+      22 +      <td>${q.totalAgree}</td>                                 
+      23 +      <td>${q.totalNeither}</td>                               
+      24 +      <td>${q.totalDisagree}</td>                              
+      25 +      <td>${q.totalStronglyDisagree}</td>                      
+      26 +      <td>${q.totalNoRating}</td>                              
+      27 +      <td style="color:${pctColor};">${pct}%</td>              
+      28 +    </tr>`);                                                   
+      29    }
+      30  
+      60 -                                                               
+      61 -  return questionsScoresTable;                                 
+      31 +  return `<table>                                              
+      32 +    <thead><tr>                                                
+      33 +      <th>Numbers</th><th>Questions</th>                       
+      34 +      <th>Strongly Agree</th><th>Agree</th><th>Neither Agree no
+         +r Disagree</th>                                                
+      35 +      <th>Disagree</th><th>Strongly disagree</th><th>No Rating<
+         +/th><th>Percentage</th>                                        
+      36 +    </tr></thead>                                              
+      37 +    <tbody>${rows.join('')}</tbody>                            
+      38 +  </table>`;                                                   
+      39  }
+      40  /*Component*/
+      41  
+
+● Update(Module Office\Client Side\Component_CommentDiv.js)
+  ⎿  Added 23 lines, removed 32 lines
+       6  /*Component*/
+       7  function CommentDiv(){
+       8  
+       9 -  let commentDiv = "";                                         
+       9 +  const cards = [];                                            
+      10  
+      11 -  for(let index=0; index < commentDetails_Array.length; index++
+         -){                                                             
+      11 +  for(let index = 0; index < commentDetails_Array.length; index
+         +++){                                                           
+      12 +    const c = commentDetails_Array[index];                     
+      13 +    const satisLevel = (c.allPassScore / c.allCountedScore * 10
+         +0).toFixed(0);                                                 
+      14 +    const satisColor = satisLevel >= 80 ? "#0ABE50" : "#BD212F"
+         +;                                                              
+      15  
+      13 -    /*Compute Satisfaction Level*/                             
+      14 -    const satisLevelResult = (commentDetails_Array[index].allPa
+         -ssScore / commentDetails_Array[index].allCountedScore) * 100;  
+      15 -    /*Compute Satisfaction Level*/                             
+      16 -                                                               
+      17 -    commentDiv += `<div class="commentDetailsWrap">`+          
+      18 -      `<div class="commentHeaderFlex">`+                       
+      19 -        `<div class="commentIcon-Class"></div>`+               
+      20 -        `<div class="commentRefNo-Class">`+commentDetails_Array
+         -[index].referenceNo+`</div>`;                                  
+      21 -                                                               
+      22 -        if(satisLevelResult.toFixed(0) >= 80){                 
+      23 -                                                               
+      24 -          commentDiv += `<div class="commentRating-Class">Satis
+         -faction Level: <span class="commentRatingValue-Class" style="co
+         -lor: #0ABE50;">`+satisLevelResult.toFixed(0)+`%</span></div>`; 
+      25 -                                                               
+      26 -        }else if(satisLevelResult.toFixed(0) <= 79){           
+      27 -                                                               
+      28 -          commentDiv += `<div class="commentRating-Class">Satis
+         -faction Level: <span class="commentRatingValue-Class" style="co
+         -lor: #BD212F;">`+satisLevelResult.toFixed(0)+`%</span></div>`; 
+      29 -        }                                                      
+      30 -      commentDiv += `</div>`+                                  
+      31 -      `<div class="commentRespDetFlex">`+                      
+      32 -        `<div class="commentRespDetItem-Class">`+commentDetails
+         -_Array[index].officeAbre+`</div>`+                             
+      33 -        `<div class="commentRespDetItem-Class">`+commentDetails
+         -_Array[index].respType+`</div>`+                               
+      34 -        `<div class="commentRespDetItem-Class">`+commentDetails
+         -_Array[index].ageRangeValue+`</div>`+                          
+      35 -        `<div class="commentRespDetItem-Class">`+commentDetails
+         -_Array[index].gender+`</div>`+                                 
+      36 -        `<div class="commentRespDetItem-Class">`+commentDetails
+         -_Array[index].clientType+`</div>`+                             
+      37 -      `</div>`+                                                
+      38 -      `<div class="commentQuestion-Class">Commented on: <span c
+         -lass="commentQuestionValue-Class">`+commentDetails_Array[index]
+         -.question+`</div>`+                                            
+      39 -      `<div class="commentAnswer-Class">`+commentDetails_Array[
+         -index].comment+`</div>`+                                       
+      40 -      `<div class="commentedDatetime-Class">`+commentDetails_Ar
+         -ray[index].datetime+`</div>`+                                  
+      41 -    `</div>`;                                                  
+      16 +    cards.push(`<div class="commentDetailsWrap">               
+      17 +      <div class="commentHeaderFlex">                          
+      18 +        <div class="commentIcon-Class"></div>                  
+      19 +        <div class="commentRefNo-Class">${c.referenceNo}</div> 
+      20 +        <div class="commentRating-Class">Satisfaction Level: <s
+         +pan class="commentRatingValue-Class" style="color:${satisColor}
+         +;">${satisLevel}%</span></div>                                 
+      21 +      </div>                                                   
+      22 +      <div class="commentRespDetFlex">                         
+      23 +        <div class="commentRespDetItem-Class">${c.officeAbre}</
+         +div>                                                           
+      24 +        <div class="commentRespDetItem-Class">${c.respType}</di
+         +v>                                                             
+      25 +        <div class="commentRespDetItem-Class">${c.ageRangeValue
+         +}</div>                                                        
+      26 +        <div class="commentRespDetItem-Class">${c.gender}</div>
+      27 +        <div class="commentRespDetItem-Class">${c.clientType}</
+         +div>                                                           
+      28 +      </div>                                                   
+      29 +      <div class="commentQuestion-Class">Commented on: <span cl
+         +ass="commentQuestionValue-Class">${c.question}</div>           
+      30 +      <div class="commentAnswer-Class">${c.comment}</div>      
+      31 +      <div class="commentedDatetime-Class">${c.datetime}</div> 
+      32 +    </div>`);                                                  
+      33    }
+      34  
+      44 -  return commentDiv;                                           
+      35 +  return cards.join('');                                       
+      36  }
+      37  /*Component*/
+      38  
+
+● Update(Module Office\Client Side\Component_PointOfEntryOption.js)
+  ⎿  Added 10 lines, removed 12 lines
+       6  /*Component*/
+       7  function PointOfEntryOption(){
+       8  
+       9 -  let pointOfEntryOption = "";                                 
+      10 -                                                               
+      11 -  for(let index=0; index < pointOfEntry_Array.length; index++){
+      12 -                                                               
+      13 -    const elemValue = btoa(unescape(encodeURIComponent(JSON.str
+         -ingify(pointOfEntry_Array[index]))));                          
+      14 -                                                               
+      15 -    pointOfEntryOption += `<div class="selectDropdownOpt_RoClas
+         -s" onclick="displaySelectedOpt(this, '180px'), controller_DivOp
+         -tion_AssignSelectedPointOfEntry(), controller_SearchArea_Displa
+         -yMonitoring()">`+                                              
+      16 -      `<input type="hidden" class="optValue_RoClass" value="`+e
+         -lemValue+`">`+                                                 
+      17 -      `<div class="optIcon_RoClass" style="--optIcon: url('../.
+         -./src/`+pointOfEntry_Array[index].office_icon+`');"></div>`+   
+      18 -      `<div class="optText_RoClass" title="`+pointOfEntry_Array
+         -[index].office_abbre+`">`+pointOfEntry_Array[index].office_valu
+         -e+`</div>`+                                                    
+      19 -    `</div>`;                                                  
+       9 +  const opts = [];                                             
+      10 +  for(let index = 0; index < pointOfEntry_Array.length; index++
+         +){                                                             
+      11 +    const entry = pointOfEntry_Array[index];                   
+      12 +    const elemValue = btoa(unescape(encodeURIComponent(JSON.str
+         +ingify(entry))));                                              
+      13 +    opts.push(`<div class="selectDropdownOpt_RoClass" onclick="
+         +displaySelectedOpt(this, '180px'), controller_DivOption_AssignS
+         +electedPointOfEntry(), controller_SearchArea_DisplayMonitoring(
+         +)">                                                            
+      14 +      <input type="hidden" class="optValue_RoClass" value="${el
+         +emValue}">                                                     
+      15 +      <div class="optIcon_RoClass" style="--optIcon: url('../..
+         +/src/${entry.office_icon}');"></div>                           
+      16 +      <div class="optText_RoClass" title="${entry.office_abbre}
+         +">${entry.office_value}</div>                                  
+      17 +    </div>`);                                                  
+      18    }
+      19  
+      22 -  return pointOfEntryOption;                                   
+      20 +  return opts.join('');                                        
+      21  }
+      22  /*Component*/
+      23  
+
+● Update(Module Office\Client Side\Component_PointOfEntryOptionStack.js)
+  ⎿  Added 10 lines, removed 12 lines
+       6  /*Component*/
+       7  function PointOfEntryOptionStack(){
+       8  
+       9 -  let pointOfEntryOptionStack = "";                            
+      10 -                                                               
+      11 -  for(let index=0; index < pointOfEntry_Array.length; index++){
+      12 -                                                               
+      13 -    const elemValue = btoa(unescape(encodeURIComponent(JSON.str
+         -ingify(pointOfEntry_Array[index]))));                          
+      14 -                                                               
+      15 -    pointOfEntryOptionStack += `<div class="selectDropdownOpt_R
+         -oClass" onclick="displaySelectedOpt(this, '180px'), controller_
+         -DivOption_AssignSelectedPointOfEntry(), controller_SearchArea_D
+         -isplayMonitoring()">`+                                         
+      16 -      `<input type="hidden" class="optValue_RoClass" value="`+e
+         -lemValue+`">`+                                                 
+      17 -      `<div class="optIcon_RoClass" style="--optIcon: url('../.
+         -./src/`+pointOfEntry_Array[index].office_icon+`');"></div>`+   
+      18 -      `<div class="optText_RoClass" title="`+pointOfEntry_Array
+         -[index].office_abbre+`">`+pointOfEntry_Array[index].office_valu
+         -e+`</div>`+                                                    
+      19 -    `</div>`;                                                  
+       9 +  const opts = [];                                             
+      10 +  for(let index = 0; index < pointOfEntry_Array.length; index++
+         +){                                                             
+      11 +    const entry = pointOfEntry_Array[index];                   
+      12 +    const elemValue = btoa(unescape(encodeURIComponent(JSON.str
+         +ingify(entry))));                                              
+      13 +    opts.push(`<div class="selectDropdownOpt_RoClass" onclick="
+         +displaySelectedOpt(this, '180px'), controller_DivOption_AssignS
+         +electedPointOfEntry(), controller_SearchArea_DisplayMonitoring(
+         +)">                                                            
+      14 +      <input type="hidden" class="optValue_RoClass" value="${el
+         +emValue}">                                                     
+      15 +      <div class="optIcon_RoClass" style="--optIcon: url('../..
+         +/src/${entry.office_icon}');"></div>                           
+      16 +      <div class="optText_RoClass" title="${entry.office_abbre}
+         +">${entry.office_value}</div>                                  
+      17 +    </div>`);                                                  
+      18    }
+      19  
+      22 -  return pointOfEntryOptionStack;                              
+      20 +  return opts.join('');                                        
+      21  }
+      22  /*Component*/
+      23  
+● Update(Module Office\Client Side\Component_RatingSpan.js)
+  ⎿  Added 16 lines, removed 32 lines
+       7  /*Component*/
+       8  function RatingSpan(){
+       9  
+      10 -  let ratingSpan = "";                                         
+      10 +  if(totalAnsweredQuestions == 0) return "";                   
+      11  
+      12 -  /*Compute Point of entry rating*/                            
+      13 -  if(totalAnsweredQuestions != 0){                             
+      12 +  const pct = ((countedPassScore / totalAnsweredQuestions) * 10
+         +0).toFixed(0);                                                 
+      13  
+      15 -    const pointOfEntryRate = (countedPassScore / totalAnsweredQ
+         -uestions) * 100;                                               
+      16 -                                                               
+      17 -    if(pointOfEntryRate.toFixed(0) >= 95){                     
+      18 -                                                               
+      19 -      ratingSpan = `<span style="color: #036939;">`+pointOfEntr
+         -yRate.toFixed(0)+`% (Excellent)</span>`;                       
+      20 -                                                               
+      21 -    }else if(pointOfEntryRate.toFixed(0) >= 90 && pointOfEntryR
+         -ate.toFixed(0) < 95){                                          
+      22 -                                                               
+      23 -      ratingSpan = `<span style="color: #036939;">`+pointOfEntr
+         -yRate.toFixed(0)+`% (Very Satisfactory)</span>`;               
+      24 -                                                               
+      25 -    }else if(pointOfEntryRate.toFixed(0) >= 85 && pointOfEntryR
+         -ate.toFixed(0) < 90){                                          
+      26 -                                                               
+      27 -      ratingSpan = `<span style="color: #8EC63F;">`+pointOfEntr
+         -yRate.toFixed(0)+`% (Satisfactory)</span>`;                    
+      28 -                                                               
+      29 -    }else if(pointOfEntryRate.toFixed(0) >= 80 && pointOfEntryR
+         -ate.toFixed(0) < 85){                                          
+      30 -                                                               
+      31 -      ratingSpan = `<span style="color: #FAB042;">`+pointOfEntr
+         -yRate.toFixed(0)+`% (Compliant)</span>`;                       
+      32 -                                                               
+      33 -    }else if(pointOfEntryRate.toFixed(0) >= 75 && pointOfEntryR
+         -ate.toFixed(0) < 80){                                          
+      34 -                                                               
+      35 -      ratingSpan = `<span style="color: #E15268;">`+pointOfEntr
+         -yRate.toFixed(0)+`% (Needs Improvement)</span>`;               
+      36 -                                                               
+      37 -    }else if(pointOfEntryRate.toFixed(0) < 75){                
+      38 -                                                               
+      39 -      ratingSpan = `<span style="color: #BD212F;">`+pointOfEntr
+         -yRate.toFixed(0)+`% (Poor)</span>`;                            
+      40 -    }                                                          
+      14 +  let color, label;                                            
+      15 +  if(pct >= 95){                                               
+      16 +    color = "#036939"; label = "Excellent";                    
+      17 +  }else if(pct >= 90){                                         
+      18 +    color = "#036939"; label = "Very Satisfactory";            
+      19 +  }else if(pct >= 85){                                         
+      20 +    color = "#8EC63F"; label = "Satisfactory";                 
+      21 +  }else if(pct >= 80){                                         
+      22 +    color = "#FAB042"; label = "Compliant";                    
+      23 +  }else if(pct >= 75){                                         
+      24 +    color = "#E15268"; label = "Needs Improvement";            
+      25 +  }else{                                                       
+      26 +    color = "#BD212F"; label = "Poor";                         
+      27    }
+      42 -  /*Compute Point of entry rating*/                            
+      28  
+      44 -                                                               
+      45 -  return ratingSpan;                                           
+      29 +  return `<span style="color:${color};">${pct}% (${label})</spa
+         +n>`;                                                           
+      30  }
+      31  /*Component*/
+      32  
+
+● Now the loader components — remove the unnecessary intermediate variable and
+  empty import block:
+
+● Update(Module Office\Client Side\Component_CommentDivLoader.js)
+  ⎿  Added 3 lines, removed 9 lines
+       6  /*Component*/
+       7  function CommentDivLoader(){
+       8  
+       9 -  const loaderGifPath = "../../src/Spinner.gif";               
+      10 -                                                               
+      11 -  let commentDivLoader = `<div class="boxLoaderWrap_RoClass" id
+         -="commentDivLoader-Id" style="display:flex">`+                 
+      12 -    `<div class="boxLoaderIcon_RoClass">`+                     
+      13 -      `<img src="`+loaderGifPath+`">`+                         
+      14 -    `</div>`+                                                  
+      15 -  `</div>`;                                                    
+      16 -                                                               
+      17 -  return commentDivLoader;                                     
+       9 +  return `<div class="boxLoaderWrap_RoClass" id="commentDivLoad
+         +er-Id" style="display:flex">                                   
+      10 +    <div class="boxLoaderIcon_RoClass"><img src="../../src/Spin
+         +ner.gif"></div>                                                
+      11 +  </div>`;                                                     
+      12  }
+      13  /*Component*/
+      14  
+
+● Update(Module Office\Client Side\Component_PointOfEntryOptionLoader.js)
+  ⎿  Added 3 lines, removed 9 lines
+       6  /*Component*/
+       7  function PointOfEntryOptionLoader(){
+       8  
+       9 -  const loaderGifPath = "../../src/Spinner.gif";               
+      10 -                                                               
+      11 -  let pointOfEntryOptionLoader = `<div class="boxLoaderWrap_RoC
+         -lass" id="pointOfEntryOptionLoader-Id" style="display:flex">`+ 
+      12 -    `<div class="boxLoaderIcon_RoClass">`+                     
+      13 -      `<img src="`+loaderGifPath+`">`+                         
+      14 -    `</div>`+                                                  
+      15 -  `</div>`;                                                    
+      16 -                                                               
+      17 -  return pointOfEntryOptionLoader;                             
+       9 +  return `<div class="boxLoaderWrap_RoClass" id="pointOfEntryOp
+         +tionLoader-Id" style="display:flex">                           
+      10 +    <div class="boxLoaderIcon_RoClass"><img src="../../src/Spin
+         +ner.gif"></div>                                                
+      11 +  </div>`;                                                     
+      12  }
+      13  /*Component*/
+      14  
+
+● Update(Module Office\Client Side\Component_RespondentSpanLoader.js)
+  ⎿  Added 3 lines, removed 9 lines
+       6  /*Component*/
+       7  function RespondentSpanLoader(){
+       8  
+       9 -  const loaderGifPath = "../../src/Spinner.gif";               
+      10 -                                                               
+      11 -  let respondentSpanLoader = `<div class="boxLoaderWrap_RoClass
+         -" id="respondentSpanLoader-Id" style="display:flex">`+         
+      12 -    `<div class="boxLoaderIcon_RoClass">`+                     
+      13 -      `<img src="`+loaderGifPath+`">`+                         
+      14 -    `</div>`+                                                  
+      15 -  `</div>`;                                                    
+      16 -                                                               
+      17 -  return respondentSpanLoader;                                 
+       9 +  return `<div class="boxLoaderWrap_RoClass" id="respondentSpan
+         +Loader-Id" style="display:flex">                               
+      10 +    <div class="boxLoaderIcon_RoClass"><img src="../../src/Spin
+         +ner.gif"></div>                                                
+      11 +  </div>`;                                                     
+      12  }
+      13  /*Component*/
+      14  
+
+● Now the View files — the four innerHTML += cases and the redundant else if
+  conditions:
+
+● Update(Module Office\Client Side\View_CommentDiv.js)
+  ⎿  Added 1 line, removed 1 line
+       7  /*Render*/
+       8  function viewCommentDiv(){
+       9    
+      10 -  commentSectionWrap.innerHTML += CommentDiv();                               
+      10 +  commentSectionWrap.insertAdjacentHTML('beforeend', CommentDiv
+         +());                                                           
+      11  }
+      12  /*Render*/
+      13  
+
+● Update(Module Office\Client Side\View_CommentDivLoader.js)
+  ⎿  Added 1 line, removed 1 line
+       7  /*Render*/
+       8  function viewCommentDivLoader(){
+       9    
+      10 -  commentSectionWrap.innerHTML += CommentDivLoader();                   
+      10 +  commentSectionWrap.insertAdjacentHTML('beforeend', CommentDiv
+         +Loader());                                                     
+      11  }
+      12  /*Render*/
+      13  
+
+● Update(Module Office\Client Side\View_PointOfEntryOptionStack.js)
+  ⎿  Added 1 line, removed 1 line
+       7  /*Render*/
+       8  function viewPointOfEntryOptionStack(){
+       9    
+      10 -  pointOfEntryOptsArea.innerHTML += PointOfEntryOptionStack(); 
+      10 +  pointOfEntryOptsArea.insertAdjacentHTML('beforeend', PointOfE
+         +ntryOptionStack());                                            
+      11  }
+      12  /*Render*/
+      13  
+
+● Update(Module Office\Client Side\View_PointOfEntryOptionLoader.js)
+  ⎿  Added 1 line, removed 1 line
+       7  /*Render*/
+       8  function viewPointOfEntryOptionLoader(){
+       9  
+      10 -  pointOfEntryOptsArea.innerHTML += PointOfEntryOptionLoader();
+      10 +  pointOfEntryOptsArea.insertAdjacentHTML('beforeend', PointOfE
+         +ntryOptionLoader());                                           
+      11  }
+      12  /*Render*/
+      13  
+
+● Now fix the redundant else if conditions in the CC table Views and normalize
+  QuestionsScoresTable:
+
+● Update(Module Office\Client Side\View_CitizenCharterOneScoresTable.js)
+  ⎿  Added 3 lines, removed 6 lines
+       6  
+       7  /*Render*/
+       8  function viewCitizenCharterOneScoresTable(){
+       9 -                                                               
+       9 +                                                               
+      10    const citizenCharterOneScoresTable_Handler = CitizenCharterOn
+          eScoresTable();
+      11  
+      12    if(citizenCharterOneScoresTable_Handler == ""){
+      13 -                                                               
+      13      cc1TabWrap.innerHTML = "No CC1 Scores Result";
+      15 -                                                               
+      16 -  }else if(citizenCharterOneScoresTable_Handler != ""){        
+      17 -                                                               
+      14 +  }else{                                                       
+      15      cc1TabWrap.innerHTML = citizenCharterOneScoresTable_Handler
+          ;
+      19 -  }                                                                       
+      16 +  }                                                            
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_CitizenCharterTwoScoresTable.js)
+  ⎿  Added 3 lines, removed 6 lines
+       6  
+       7  /*Render*/
+       8  function viewCitizenCharterTwoScoresTable(){
+       9 -                                                               
+       9 +                                                               
+      10    const citizenCharterTwoScoresTable_Handler = CitizenCharterTw
+          oScoresTable();
+      11  
+      12    if(citizenCharterTwoScoresTable_Handler == ""){
+      13 -                                                               
+      13      cc2TabWrap.innerHTML = "No CC2 Scores Result";
+      15 -                                                               
+      16 -  }else if(citizenCharterTwoScoresTable_Handler != ""){        
+      17 -                                                               
+      14 +  }else{                                                       
+      15      cc2TabWrap.innerHTML = citizenCharterTwoScoresTable_Handler
+          ;
+      19 -  }                                                                       
+      16 +  }                                                            
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_CitizenCharterThreeScoresTable.js)
+  ⎿  Added 3 lines, removed 6 lines
+       6  
+       7  /*Render*/
+       8  function viewCitizenCharterThreeScoresTable(){
+       9 -                                                               
+       9 +                                                               
+      10    const citizenCharterThreeScoresTable_Handler = CitizenCharter
+          ThreeScoresTable();
+      11  
+      12    if(citizenCharterThreeScoresTable_Handler == ""){
+      13 -                                                               
+      13      cc3TabWrap.innerHTML = "No CC3 Scores Result";
+      15 -                                                               
+      16 -  }else if(citizenCharterThreeScoresTable_Handler != ""){      
+      17 -                                                               
+      14 +  }else{                                                       
+      15      cc3TabWrap.innerHTML = citizenCharterThreeScoresTable_Handl
+          er;
+      19 -  }                                                                       
+      16 +  }                                                            
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_QuestionsScoresTable.js)
+  ⎿  Added 4 lines, removed 8 lines
+       6  
+       7  /*Render*/
+       8  function viewQuestionsScoresTable(){
+       9 -                                                               
+       9 +                                                               
+      10    const questionsScoresTable_Handler = QuestionsScoresTable();
+      11  
+      12 -  if(questionsScoresTable_Handler != ""){                      
+      13 -                                                               
+      14 -    questionsTabWrap.innerHTML = questionsScoresTable_Handler; 
+      15 -                                                               
+      16 -  }else if(questionsScoresTable_Handler == ""){                
+      17 -                                                               
+      12 +  if(questionsScoresTable_Handler == ""){                      
+      13      questionsTabWrap.innerHTML = "No Questions Rating Result Fo
+          und.";
+      14 +  }else{                                                       
+      15 +    questionsTabWrap.innerHTML = questionsScoresTable_Handler; 
+      16    }
+      20 -                                                               
+      17  }
+      18  /*Render*/
+      19  
+
+● All 21 files updated. Here's a summary of what was changed and why:
+
+  ---
+  Changes made
+
+  Components — 10 files
+
+  File: Component_CC{One,Two,Three}ScoresTable.js
+  Change: += loop → array.push + .join('')
+  Why: Avoids O(N²) string allocations from repeated concatenation
+  ────────────────────────────────────────
+  File: Component_QuestionsScoresTable.js
+  Change: Same + compute toFixed(0) once per row
+  Why: Was calling .toFixed(0) 3× per row (condition + display); now 1×
+  ────────────────────────────────────────
+  File: Component_CommentDiv.js
+  Change: Same + compute satisLevel once per item
+  Why: Was calling .toFixed(0) 2× per item inside both the condition and the
+    output string
+  ────────────────────────────────────────
+  File: Component_RatingSpan.js
+  Change: Compute pct once, then branch on it
+  Why: Was calling .toFixed(0) in every if/else if condition (up to 6×) plus the
+
+    output
+  ────────────────────────────────────────
+  File: Component_PointOfEntryOption.js
+  Change: += loop → array.push + .join(''); extract entry variable
+  Why: Removes repeated index access
+  ────────────────────────────────────────
+  File: Component_PointOfEntryOptionStack.js
+  Change: Same as above
+  Why: Same
+  ────────────────────────────────────────
+  File: Component_{Comment,PointOfEntry,Respondent}Loader.js
+  Change: Remove intermediate let variable, return template directly
+  Why: Dead variable; static HTML doesn't need a named binding
+
+  Views — 8 files
+
+  File: View_CommentDiv.js, View_CommentDivLoader.js
+  Change: innerHTML += → insertAdjacentHTML('beforeend', ...)
+  Why: innerHTML += serializes the full existing DOM, concatenates, then
+    re-parses the whole thing — gets progressively slower with each page of
+    comments loaded
+  ────────────────────────────────────────
+  File: View_PointOfEntryOptionStack.js, View_PointOfEntryOptionLoader.js
+  Change: Same
+  Why: Same reason
+  ────────────────────────────────────────
+  File: View_CC{One,Two,Three}ScoresTable.js
+  Change: else if(x != "") → else
+  Why: The second condition was always true when the first was false — dead
+    branch
+  ────────────────────────────────────────
+  File: View_QuestionsScoresTable.js
+  Change: Normalize to empty-first order, else if → else
+  Why: Consistent with rest of module; removed dead condition
+
+✻ Crunched for 5m 53s
+
+※ recap: Enhanced Module Office Client Side Component and View files for speed. Next: test the page in the browser to verify rendering is correct. (disable recaps in /config)
+
+> Component should be async, follow the format  in Module Pattern               
+
+● Let me read the current state of all Component and View files after the
+  previous edits before making changes.
+
+  Read 10 files (ctrl+o to expand)
+
+● Good — I have the current state of all files. Now I'll convert every Component
+   to async with the Promise/resolve/return await pattern from Module Pattern,
+  then update every View to use .then().
+
+● Update(Module Office\Client Side\Component_CitizenCharterOneScoresTable.js)
+  ⎿  Added 22 lines, removed 12 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function CitizenCharterOneScoresTable(){                       
+       7 +async function CitizenCharterOneScoresTable(){                 
+       8  
+       9 -  if(citizenCharterOneScoresDetails_Array.length === 0) return 
+         -"";                                                            
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      11 -  const rows = [];                                             
+      12 -  for(let index = 0; index < citizenCharterOneScoresDetails_Arr
+         -ay.length; index++){                                           
+      13 -    const row = citizenCharterOneScoresDetails_Array[index];   
+      14 -    rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}
+         -</td><td>${row.responses}</td></tr>`);                         
+      15 -  }                                                            
+      11 +    let citizenCharterOneScoresTable = "";                     
+      12  
+      17 -  return `<table>                                              
+      18 -    <caption><b>${citizenCharterOneScoresDetails_Array[0].ccQue
+         -stion}</b></caption>                                           
+      19 -    <thead><tr><th>Number</th><th>Rating Description</th><th>Re
+         -sponses</th></tr></thead>                                      
+      20 -    <tbody>${rows.join('')}</tbody>                            
+      21 -  </table>`;                                                   
+      13 +    if(citizenCharterOneScoresDetails_Array.length > 0){       
+      14 +                                                               
+      15 +      const rows = [];                                         
+      16 +      for(let index = 0; index < citizenCharterOneScoresDetails
+         +_Array.length; index++){                                       
+      17 +        const row = citizenCharterOneScoresDetails_Array[index]
+         +;                                                              
+      18 +        rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccR
+         +ate}</td><td>${row.responses}</td></tr>`);                     
+      19 +      }                                                        
+      20 +                                                               
+      21 +      citizenCharterOneScoresTable = `<table>                  
+      22 +        <caption><b>${citizenCharterOneScoresDetails_Array[0].c
+         +cQuestion}</b></caption>                                       
+      23 +        <thead><tr><th>Number</th><th>Rating Description</th><t
+         +h>Responses</th></tr></thead>                                  
+      24 +        <tbody>${rows.join('')}</tbody>                        
+      25 +      </table>`;                                               
+      26 +    }                                                          
+      27 +                                                               
+      28 +    resolve(citizenCharterOneScoresTable);                     
+      29 +  });                                                          
+      30 +                                                               
+      31 +  return await requestPromise;                                 
+      32  }
+      33  /*Component*/
+      34  
+
+  Read 8 files (ctrl+o to expand)
+● Good, I have everything. Now I'll convert all remaining Components and all
+  Views in parallel batches.
+
+● Update(Module Office\Client Side\Component_CitizenCharterTwoScoresTable.js)
+  ⎿  Added 22 lines, removed 12 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function CitizenCharterTwoScoresTable(){                       
+       7 +async function CitizenCharterTwoScoresTable(){                 
+       8  
+       9 -  if(citizenCharterTwoScoresDetails_Array.length === 0) return 
+         -"";                                                            
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      11 -  const rows = [];                                             
+      12 -  for(let index = 0; index < citizenCharterTwoScoresDetails_Arr
+         -ay.length; index++){                                           
+      13 -    const row = citizenCharterTwoScoresDetails_Array[index];   
+      14 -    rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}
+         -</td><td>${row.responses}</td></tr>`);                         
+      15 -  }                                                            
+      11 +    let citizenCharterTwoScoresTable = "";                     
+      12  
+      17 -  return `<table>                                              
+      18 -    <caption><b>${citizenCharterTwoScoresDetails_Array[0].ccQue
+         -stion}</b></caption>                                           
+      19 -    <thead><tr><th>Number</th><th>Rating Description</th><th>Re
+         -sponses</th></tr></thead>                                      
+      20 -    <tbody>${rows.join('')}</tbody>                            
+      21 -  </table>`;                                                   
+      13 +    if(citizenCharterTwoScoresDetails_Array.length > 0){       
+      14 +                                                               
+      15 +      const rows = [];                                         
+      16 +      for(let index = 0; index < citizenCharterTwoScoresDetails
+         +_Array.length; index++){                                       
+      17 +        const row = citizenCharterTwoScoresDetails_Array[index]
+         +;                                                              
+      18 +        rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccR
+         +ate}</td><td>${row.responses}</td></tr>`);                     
+      19 +      }                                                        
+      20 +                                                               
+      21 +      citizenCharterTwoScoresTable = `<table>                  
+      22 +        <caption><b>${citizenCharterTwoScoresDetails_Array[0].c
+         +cQuestion}</b></caption>                                       
+      23 +        <thead><tr><th>Number</th><th>Rating Description</th><t
+         +h>Responses</th></tr></thead>                                  
+      24 +        <tbody>${rows.join('')}</tbody>                        
+      25 +      </table>`;                                               
+      26 +    }                                                          
+      27 +                                                               
+      28 +    resolve(citizenCharterTwoScoresTable);                     
+      29 +  });                                                          
+      30 +                                                               
+      31 +  return await requestPromise;                                 
+      32  }
+      33  /*Component*/
+      34  
+
+● Update(Module Office\Client Side\Component_CitizenCharterThreeScoresTable.js)
+  ⎿  Added 22 lines, removed 12 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function CitizenCharterThreeScoresTable(){                     
+       7 +async function CitizenCharterThreeScoresTable(){               
+       8  
+       9 -  if(citizenCharterThreeScoresDetails_Array.length === 0) retur
+         -n "";                                                          
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      11 -  const rows = [];                                             
+      12 -  for(let index = 0; index < citizenCharterThreeScoresDetails_A
+         -rray.length; index++){                                         
+      13 -    const row = citizenCharterThreeScoresDetails_Array[index]; 
+      14 -    rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}
+         -</td><td>${row.responses}</td></tr>`);                         
+      15 -  }                                                            
+      11 +    let citizenCharterThreeScoresTable = "";                   
+      12  
+      17 -  return `<table>                                              
+      18 -    <caption><b>${citizenCharterThreeScoresDetails_Array[0].ccQ
+         -uestion}</b></caption>                                         
+      19 -    <thead><tr><th>Number</th><th>Rating Description</th><th>Re
+         -sponses</th></tr></thead>                                      
+      20 -    <tbody>${rows.join('')}</tbody>                            
+      21 -  </table>`;                                                   
+      13 +    if(citizenCharterThreeScoresDetails_Array.length > 0){     
+      14 +                                                               
+      15 +      const rows = [];                                         
+      16 +      for(let index = 0; index < citizenCharterThreeScoresDetai
+         +ls_Array.length; index++){                                     
+      17 +        const row = citizenCharterThreeScoresDetails_Array[inde
+         +x];                                                            
+      18 +        rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccR
+         +ate}</td><td>${row.responses}</td></tr>`);                     
+      19 +      }                                                        
+      20 +                                                               
+      21 +      citizenCharterThreeScoresTable = `<table>                
+      22 +        <caption><b>${citizenCharterThreeScoresDetails_Array[0]
+         +.ccQuestion}</b></caption>                                     
+      23 +        <thead><tr><th>Number</th><th>Rating Description</th><t
+         +h>Responses</th></tr></thead>                                  
+      24 +        <tbody>${rows.join('')}</tbody>                        
+      25 +      </table>`;                                               
+      26 +    }                                                          
+      27 +                                                               
+      28 +    resolve(citizenCharterThreeScoresTable);                   
+      29 +  });                                                          
+      30 +                                                               
+      31 +  return await requestPromise;                                 
+      32  }
+      33  /*Component*/
+      34  
+
+● Update(Module Office\Client Side\Component_QuestionsScoresTable.js)
+  ⎿  Added 38 lines, removed 28 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function QuestionsScoresTable(){                               
+       7 +async function QuestionsScoresTable(){                         
+       8  
+       9 -  if(questionsScoresDetails_Array.length === 0) return "";     
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      11 -  const rows = [];                                             
+      12 -  for(let index = 0; index < questionsScoresDetails_Array.lengt
+         -h; index++){                                                   
+      13 -    const q = questionsScoresDetails_Array[index];             
+      14 -    const totalRespPerQuestion = q.totalStronglyAgree + q.total
+         -Agree + q.totalNeither + q.totalDisagree + q.totalStronglyDisag
+         -ree;                                                           
+      15 -    const pct = ((q.totalStronglyAgree + q.totalAgree) / totalR
+         -espPerQuestion * 100).toFixed(0);                              
+      16 -    const pctColor = pct >= 80 ? "#0ABE50" : "#BD212F";        
+      11 +    let questionsScoresTable = "";                             
+      12  
+      18 -    rows.push(`<tr>                                            
+      19 -      <td>${q.questionNo}</td>                                 
+      20 -      <td>${q.questionValue}</td>                              
+      21 -      <td>${q.totalStronglyAgree}</td>                         
+      22 -      <td>${q.totalAgree}</td>                                 
+      23 -      <td>${q.totalNeither}</td>                               
+      24 -      <td>${q.totalDisagree}</td>                              
+      25 -      <td>${q.totalStronglyDisagree}</td>                      
+      26 -      <td>${q.totalNoRating}</td>                              
+      27 -      <td style="color:${pctColor};">${pct}%</td>              
+      28 -    </tr>`);                                                   
+      29 -  }                                                            
+      13 +    if(questionsScoresDetails_Array.length > 0){               
+      14  
+      31 -  return `<table>                                              
+      32 -    <thead><tr>                                                
+      33 -      <th>Numbers</th><th>Questions</th>                       
+      34 -      <th>Strongly Agree</th><th>Agree</th><th>Neither Agree no
+         -r Disagree</th>                                                
+      35 -      <th>Disagree</th><th>Strongly disagree</th><th>No Rating<
+         -/th><th>Percentage</th>                                        
+      36 -    </tr></thead>                                              
+      37 -    <tbody>${rows.join('')}</tbody>                            
+      38 -  </table>`;                                                   
+      15 +      const rows = [];                                         
+      16 +      for(let index = 0; index < questionsScoresDetails_Array.l
+         +ength; index++){                                               
+      17 +        const q = questionsScoresDetails_Array[index];         
+      18 +        const totalRespPerQuestion = q.totalStronglyAgree + q.t
+         +otalAgree + q.totalNeither + q.totalDisagree + q.totalStronglyD
+         +isagree;                                                       
+      19 +        const pct = ((q.totalStronglyAgree + q.totalAgree) / to
+         +talRespPerQuestion * 100).toFixed(0);                          
+      20 +        const pctColor = pct >= 80 ? "#0ABE50" : "#BD212F";    
+      21 +                                                               
+      22 +        rows.push(`<tr>                                        
+      23 +          <td>${q.questionNo}</td>                             
+      24 +          <td>${q.questionValue}</td>                          
+      25 +          <td>${q.totalStronglyAgree}</td>                     
+      26 +          <td>${q.totalAgree}</td>                             
+      27 +          <td>${q.totalNeither}</td>                           
+      28 +          <td>${q.totalDisagree}</td>                          
+      29 +          <td>${q.totalStronglyDisagree}</td>                  
+      30 +          <td>${q.totalNoRating}</td>                          
+      31 +          <td style="color:${pctColor};">${pct}%</td>          
+      32 +        </tr>`);                                               
+      33 +      }                                                        
+      34 +                                                               
+      35 +      questionsScoresTable = `<table>                          
+      36 +        <thead><tr>                                            
+      37 +          <th>Numbers</th><th>Questions</th>                   
+      38 +          <th>Strongly Agree</th><th>Agree</th><th>Neither Agre
+         +e nor Disagree</th>                                            
+      39 +          <th>Disagree</th><th>Strongly disagree</th><th>No Rat
+         +ing</th><th>Percentage</th>                                    
+      40 +        </tr></thead>                                          
+      41 +        <tbody>${rows.join('')}</tbody>                        
+      42 +      </table>`;                                               
+      43 +    }                                                          
+      44 +                                                               
+      45 +    resolve(questionsScoresTable);                             
+      46 +  });                                                          
+      47 +                                                               
+      48 +  return await requestPromise;                                 
+      49  }
+      50  /*Component*/
+      51  
+
+● Update(Module Office\Client Side\Component_CommentDiv.js)
+  ⎿  Added 33 lines, removed 25 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function CommentDiv(){                                         
+       7 +async function CommentDiv(){                                   
+       8  
+       9 -  const cards = [];                                            
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      11 -  for(let index = 0; index < commentDetails_Array.length; index
+         -++){                                                           
+      12 -    const c = commentDetails_Array[index];                     
+      13 -    const satisLevel = (c.allPassScore / c.allCountedScore * 10
+         -0).toFixed(0);                                                 
+      14 -    const satisColor = satisLevel >= 80 ? "#0ABE50" : "#BD212F"
+         -;                                                              
+      11 +    let commentDiv = "";                                       
+      12  
+      16 -    cards.push(`<div class="commentDetailsWrap">               
+      17 -      <div class="commentHeaderFlex">                          
+      18 -        <div class="commentIcon-Class"></div>                  
+      19 -        <div class="commentRefNo-Class">${c.referenceNo}</div> 
+      20 -        <div class="commentRating-Class">Satisfaction Level: <s
+         -pan class="commentRatingValue-Class" style="color:${satisColor}
+         -;">${satisLevel}%</span></div>                                 
+      21 -      </div>                                                   
+      22 -      <div class="commentRespDetFlex">                         
+      23 -        <div class="commentRespDetItem-Class">${c.officeAbre}</
+         -div>                                                           
+      24 -        <div class="commentRespDetItem-Class">${c.respType}</di
+         -v>                                                             
+      25 -        <div class="commentRespDetItem-Class">${c.ageRangeValue
+         -}</div>                                                        
+      26 -        <div class="commentRespDetItem-Class">${c.gender}</div>
+      27 -        <div class="commentRespDetItem-Class">${c.clientType}</
+         -div>                                                           
+      28 -      </div>                                                   
+      29 -      <div class="commentQuestion-Class">Commented on: <span cl
+         -ass="commentQuestionValue-Class">${c.question}</div>           
+      30 -      <div class="commentAnswer-Class">${c.comment}</div>      
+      31 -      <div class="commentedDatetime-Class">${c.datetime}</div> 
+      32 -    </div>`);                                                  
+      33 -  }                                                            
+      13 +    const cards = [];                                          
+      14 +    for(let index = 0; index < commentDetails_Array.length; ind
+         +ex++){                                                         
+      15 +      const c = commentDetails_Array[index];                   
+      16 +      const satisLevel = (c.allPassScore / c.allCountedScore * 
+         +100).toFixed(0);                                               
+      17 +      const satisColor = satisLevel >= 80 ? "#0ABE50" : "#BD212
+         +F";                                                            
+      18  
+      35 -  return cards.join('');                                       
+      19 +      cards.push(`<div class="commentDetailsWrap">             
+      20 +        <div class="commentHeaderFlex">                        
+      21 +          <div class="commentIcon-Class"></div>                
+      22 +          <div class="commentRefNo-Class">${c.referenceNo}</div
+         +>                                                              
+      23 +          <div class="commentRating-Class">Satisfaction Level: 
+         +<span class="commentRatingValue-Class" style="color:${satisColo
+         +r};">${satisLevel}%</span></div>                               
+      24 +        </div>                                                 
+      25 +        <div class="commentRespDetFlex">                       
+      26 +          <div class="commentRespDetItem-Class">${c.officeAbre}
+         +</div>                                                         
+      27 +          <div class="commentRespDetItem-Class">${c.respType}</
+         +div>                                                           
+      28 +          <div class="commentRespDetItem-Class">${c.ageRangeVal
+         +ue}</div>                                                      
+      29 +          <div class="commentRespDetItem-Class">${c.gender}</di
+         +v>                                                             
+      30 +          <div class="commentRespDetItem-Class">${c.clientType}
+         +</div>                                                         
+      31 +        </div>                                                 
+      32 +        <div class="commentQuestion-Class">Commented on: <span 
+         +class="commentQuestionValue-Class">${c.question}</div>         
+      33 +        <div class="commentAnswer-Class">${c.comment}</div>    
+      34 +        <div class="commentedDatetime-Class">${c.datetime}</div
+         +>                                                              
+      35 +      </div>`);                                                
+      36 +    }                                                          
+      37 +                                                               
+      38 +    commentDiv = cards.join('');                               
+      39 +                                                               
+      40 +    resolve(commentDiv);                                       
+      41 +  });                                                          
+      42 +                                                               
+      43 +  return await requestPromise;                                 
+      44  }
+      45  /*Component*/
+      46  
+
+● Update(Module Office\Client Side\Component_RatingSpan.js)
+  ⎿  Added 28 lines, removed 18 lines
+       5  
+       6  
+       7  /*Component*/
+       8 -function RatingSpan(){                                         
+       8 +async function RatingSpan(){                                   
+       9  
+      10 -  if(totalAnsweredQuestions == 0) return "";                   
+      10 +  const requestPromise = new Promise(function(resolve){        
+      11  
+      12 -  const pct = ((countedPassScore / totalAnsweredQuestions) * 10
+         -0).toFixed(0);                                                 
+      12 +    let ratingSpan = "";                                       
+      13  
+      14 -  let color, label;                                            
+      15 -  if(pct >= 95){                                               
+      16 -    color = "#036939"; label = "Excellent";                    
+      17 -  }else if(pct >= 90){                                         
+      18 -    color = "#036939"; label = "Very Satisfactory";            
+      19 -  }else if(pct >= 85){                                         
+      20 -    color = "#8EC63F"; label = "Satisfactory";                 
+      21 -  }else if(pct >= 80){                                         
+      22 -    color = "#FAB042"; label = "Compliant";                    
+      23 -  }else if(pct >= 75){                                         
+      24 -    color = "#E15268"; label = "Needs Improvement";            
+      25 -  }else{                                                       
+      26 -    color = "#BD212F"; label = "Poor";                         
+      27 -  }                                                            
+      14 +    if(totalAnsweredQuestions != 0){                           
+      15  
+      29 -  return `<span style="color:${color};">${pct}% (${label})</spa
+         -n>`;                                                           
+      16 +      const pct = ((countedPassScore / totalAnsweredQuestions) 
+         +* 100).toFixed(0);                                             
+      17 +                                                               
+      18 +      let color, label;                                        
+      19 +      if(pct >= 95){                                           
+      20 +        color = "#036939"; label = "Excellent";                
+      21 +      }else if(pct >= 90){                                     
+      22 +        color = "#036939"; label = "Very Satisfactory";        
+      23 +      }else if(pct >= 85){                                     
+      24 +        color = "#8EC63F"; label = "Satisfactory";             
+      25 +      }else if(pct >= 80){                                     
+      26 +        color = "#FAB042"; label = "Compliant";                
+      27 +      }else if(pct >= 75){                                     
+      28 +        color = "#E15268"; label = "Needs Improvement";        
+      29 +      }else{                                                   
+      30 +        color = "#BD212F"; label = "Poor";                     
+      31 +      }                                                        
+      32 +                                                               
+      33 +      ratingSpan = `<span style="color:${color};">${pct}% (${la
+         +bel})</span>`;                                                 
+      34 +    }                                                          
+      35 +                                                               
+      36 +    resolve(ratingSpan);                                       
+      37 +  });                                                          
+      38 +                                                               
+      39 +  return await requestPromise;                                 
+      40  }
+      41  /*Component*/
+      42  
+
+● Update(Module Office\Client Side\Component_RespondentSpan.js)
+  ⎿  Added 12 lines, removed 8 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function RespondentSpan(){                                     
+       7 +async function RespondentSpan(){                               
+       8  
+       9 -  let respondentSpan = "";                                     
+      10 -                                                               
+      11 -  if(isNaN(totalRespondent) === false){                        
+      12 -                                                               
+      13 -    respondentSpan = `<span>`+totalRespondent+`</span>`;       
+      14 -  }                                                               
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      16 -  return respondentSpan;                                       
+      11 +    let respondentSpan = "";                                   
+      12 +                                                               
+      13 +    if(isNaN(totalRespondent) === false){                      
+      14 +      respondentSpan = `<span>${totalRespondent}</span>`;      
+      15 +    }                                                          
+      16 +                                                               
+      17 +    resolve(respondentSpan);                                   
+      18 +  });                                                          
+      19 +                                                               
+      20 +  return await requestPromise;                                 
+      21  }
+      22  /*Component*/
+      23  
+
+● Update(Module Office\Client Side\Component_TotalAnsweredQuestionsSpan.js)
+  ⎿  Added 10 lines, removed 7 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function TotalAnsweredQuestionsSpan(){                         
+       7 +async function TotalAnsweredQuestionsSpan(){                   
+       8  
+       9 -  let totalAnsweredQuestionsSpan = "";                         
+      10 -                                                               
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      12 -  if(isNaN(totalAnsweredQuestions) === false){                 
+      11 +    let totalAnsweredQuestionsSpan = "";                       
+      12  
+      14 -    totalAnsweredQuestionsSpan = `<span>`+totalAnsweredQuestion
+         -s+`</span>`;                                                   
+      15 -  }                                                               
+      13 +    if(isNaN(totalAnsweredQuestions) === false){               
+      14 +      totalAnsweredQuestionsSpan = `<span>${totalAnsweredQuesti
+         +ons}</span>`;                                                  
+      15 +    }                                                          
+      16  
+      17 -  return totalAnsweredQuestionsSpan;                           
+      17 +    resolve(totalAnsweredQuestionsSpan);                       
+      18 +  });                                                          
+      19 +                                                               
+      20 +  return await requestPromise;                                 
+      21  }
+      22  /*Component*/
+      23  
+
+● Update(Module Office\Client Side\Component_PointOfEntryOption.js)
+  ⎿  Added 21 lines, removed 12 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function PointOfEntryOption(){                                 
+       7 +async function PointOfEntryOption(){                           
+       8  
+       9 -  const opts = [];                                             
+      10 -  for(let index = 0; index < pointOfEntry_Array.length; index++
+         -){                                                             
+      11 -    const entry = pointOfEntry_Array[index];                   
+      12 -    const elemValue = btoa(unescape(encodeURIComponent(JSON.str
+         -ingify(entry))));                                              
+      13 -    opts.push(`<div class="selectDropdownOpt_RoClass" onclick="
+         -displaySelectedOpt(this, '180px'), controller_DivOption_AssignS
+         -electedPointOfEntry(), controller_SearchArea_DisplayMonitoring(
+         -)">                                                            
+      14 -      <input type="hidden" class="optValue_RoClass" value="${el
+         -emValue}">                                                     
+      15 -      <div class="optIcon_RoClass" style="--optIcon: url('../..
+         -/src/${entry.office_icon}');"></div>                           
+      16 -      <div class="optText_RoClass" title="${entry.office_abbre}
+         -">${entry.office_value}</div>                                  
+      17 -    </div>`);                                                  
+      18 -  }                                                            
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      20 -  return opts.join('');                                        
+      11 +    let pointOfEntryOption = "";                               
+      12 +                                                               
+      13 +    const opts = [];                                           
+      14 +    for(let index = 0; index < pointOfEntry_Array.length; index
+         +++){                                                           
+      15 +      const entry = pointOfEntry_Array[index];                 
+      16 +      const elemValue = btoa(unescape(encodeURIComponent(JSON.s
+         +tringify(entry))));                                            
+      17 +      opts.push(`<div class="selectDropdownOpt_RoClass" onclick
+         +="displaySelectedOpt(this, '180px'), controller_DivOption_Assig
+         +nSelectedPointOfEntry(), controller_SearchArea_DisplayMonitorin
+         +g()">                                                          
+      18 +        <input type="hidden" class="optValue_RoClass" value="${
+         +elemValue}">                                                   
+      19 +        <div class="optIcon_RoClass" style="--optIcon: url('../
+         +../src/${entry.office_icon}');"></div>                         
+      20 +        <div class="optText_RoClass" title="${entry.office_abbr
+         +e}">${entry.office_value}</div>                                
+      21 +      </div>`);                                                
+      22 +    }                                                          
+      23 +                                                               
+      24 +    pointOfEntryOption = opts.join('');                        
+      25 +                                                               
+      26 +    resolve(pointOfEntryOption);                               
+      27 +  });                                                          
+      28 +                                                               
+      29 +  return await requestPromise;                                 
+      30  }
+      31  /*Component*/
+      32  
+
+● Update(Module Office\Client Side\Component_PointOfEntryOptionStack.js)
+  ⎿  Added 21 lines, removed 12 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function PointOfEntryOptionStack(){                            
+       7 +async function PointOfEntryOptionStack(){                      
+       8  
+       9 -  const opts = [];                                             
+      10 -  for(let index = 0; index < pointOfEntry_Array.length; index++
+         -){                                                             
+      11 -    const entry = pointOfEntry_Array[index];                   
+      12 -    const elemValue = btoa(unescape(encodeURIComponent(JSON.str
+         -ingify(entry))));                                              
+      13 -    opts.push(`<div class="selectDropdownOpt_RoClass" onclick="
+         -displaySelectedOpt(this, '180px'), controller_DivOption_AssignS
+         -electedPointOfEntry(), controller_SearchArea_DisplayMonitoring(
+         -)">                                                            
+      14 -      <input type="hidden" class="optValue_RoClass" value="${el
+         -emValue}">                                                     
+      15 -      <div class="optIcon_RoClass" style="--optIcon: url('../..
+         -/src/${entry.office_icon}');"></div>                           
+      16 -      <div class="optText_RoClass" title="${entry.office_abbre}
+         -">${entry.office_value}</div>                                  
+      17 -    </div>`);                                                  
+      18 -  }                                                            
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10  
+      20 -  return opts.join('');                                        
+      11 +    let pointOfEntryOptionStack = "";                          
+      12 +                                                               
+      13 +    const opts = [];                                           
+      14 +    for(let index = 0; index < pointOfEntry_Array.length; index
+         +++){                                                           
+      15 +      const entry = pointOfEntry_Array[index];                 
+      16 +      const elemValue = btoa(unescape(encodeURIComponent(JSON.s
+         +tringify(entry))));                                            
+      17 +      opts.push(`<div class="selectDropdownOpt_RoClass" onclick
+         +="displaySelectedOpt(this, '180px'), controller_DivOption_Assig
+         +nSelectedPointOfEntry(), controller_SearchArea_DisplayMonitorin
+         +g()">                                                          
+      18 +        <input type="hidden" class="optValue_RoClass" value="${
+         +elemValue}">                                                   
+      19 +        <div class="optIcon_RoClass" style="--optIcon: url('../
+         +../src/${entry.office_icon}');"></div>                         
+      20 +        <div class="optText_RoClass" title="${entry.office_abbr
+         +e}">${entry.office_value}</div>                                
+      21 +      </div>`);                                                
+      22 +    }                                                          
+      23 +                                                               
+      24 +    pointOfEntryOptionStack = opts.join('');                   
+      25 +                                                               
+      26 +    resolve(pointOfEntryOptionStack);                          
+      27 +  });                                                          
+      28 +                                                               
+      29 +  return await requestPromise;                                 
+      30  }
+      31  /*Component*/
+      32  
+
+● Update(Module Office\Client Side\Component_CommentDivLoader.js)
+  ⎿  Added 11 lines, removed 4 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function CommentDivLoader(){                                   
+       7 +async function CommentDivLoader(){                             
+       8  
+       9 -  return `<div class="boxLoaderWrap_RoClass" id="commentDivLoad
+         -er-Id" style="display:flex">                                   
+      10 -    <div class="boxLoaderIcon_RoClass"><img src="../../src/Spin
+         -ner.gif"></div>                                                
+      11 -  </div>`;                                                     
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10 +                                                               
+      11 +    let commentDivLoader = `<div class="boxLoaderWrap_RoClass" 
+         +id="commentDivLoader-Id" style="display:flex">                 
+      12 +      <div class="boxLoaderIcon_RoClass"><img src="../../src/Sp
+         +inner.gif"></div>                                              
+      13 +    </div>`;                                                   
+      14 +                                                               
+      15 +    resolve(commentDivLoader);                                 
+      16 +  });                                                          
+      17 +                                                               
+      18 +  return await requestPromise;                                 
+      19  }
+      20  /*Component*/
+      21  
+
+● Update(Module Office\Client Side\Component_PointOfEntryOptionLoader.js)
+  ⎿  Added 11 lines, removed 4 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function PointOfEntryOptionLoader(){                           
+       7 +async function PointOfEntryOptionLoader(){                     
+       8  
+       9 -  return `<div class="boxLoaderWrap_RoClass" id="pointOfEntryOp
+         -tionLoader-Id" style="display:flex">                           
+      10 -    <div class="boxLoaderIcon_RoClass"><img src="../../src/Spin
+         -ner.gif"></div>                                                
+      11 -  </div>`;                                                     
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10 +                                                               
+      11 +    let pointOfEntryOptionLoader = `<div class="boxLoaderWrap_R
+         +oClass" id="pointOfEntryOptionLoader-Id" style="display:flex"> 
+      12 +      <div class="boxLoaderIcon_RoClass"><img src="../../src/Sp
+         +inner.gif"></div>                                              
+      13 +    </div>`;                                                   
+      14 +                                                               
+      15 +    resolve(pointOfEntryOptionLoader);                         
+      16 +  });                                                          
+      17 +                                                               
+      18 +  return await requestPromise;                                 
+      19  }
+      20  /*Component*/
+      21  
+
+● Update(Module Office\Client Side\Component_RespondentSpanLoader.js)
+  ⎿  Added 11 lines, removed 4 lines
+       4  
+       5  
+       6  /*Component*/
+       7 -function RespondentSpanLoader(){                               
+       7 +async function RespondentSpanLoader(){                         
+       8  
+       9 -  return `<div class="boxLoaderWrap_RoClass" id="respondentSpan
+         -Loader-Id" style="display:flex">                               
+      10 -    <div class="boxLoaderIcon_RoClass"><img src="../../src/Spin
+         -ner.gif"></div>                                                
+      11 -  </div>`;                                                     
+       9 +  const requestPromise = new Promise(function(resolve){        
+      10 +                                                               
+      11 +    let respondentSpanLoader = `<div class="boxLoaderWrap_RoCla
+         +ss" id="respondentSpanLoader-Id" style="display:flex">         
+      12 +      <div class="boxLoaderIcon_RoClass"><img src="../../src/Sp
+         +inner.gif"></div>                                              
+      13 +    </div>`;                                                   
+      14 +                                                               
+      15 +    resolve(respondentSpanLoader);                             
+      16 +  });                                                          
+      17 +                                                               
+      18 +  return await requestPromise;                                 
+      19  }
+      20  /*Component*/
+      21  
+
+● All 13 Components are now async. Now update all 13 Views to use .then():
+
+● Update(Module Office\Client Side\View_CitizenCharterOneScoresTable.js)
+  ⎿  Added 7 lines, removed 7 lines
+       7  /*Render*/
+       8  function viewCitizenCharterOneScoresTable(){
+       9  
+      10 -  const citizenCharterOneScoresTable_Handler = CitizenCharterOn
+         -eScoresTable();                                                
+      11 -                                                               
+      12 -  if(citizenCharterOneScoresTable_Handler == ""){              
+      13 -    cc1TabWrap.innerHTML = "No CC1 Scores Result";             
+      14 -  }else{                                                       
+      15 -    cc1TabWrap.innerHTML = citizenCharterOneScoresTable_Handler
+         -;                                                              
+      16 -  }                                                            
+      10 +  CitizenCharterOneScoresTable().then(component => {           
+      11 +    if(component == ""){                                       
+      12 +      cc1TabWrap.innerHTML = "No CC1 Scores Result";           
+      13 +    }else{                                                     
+      14 +      cc1TabWrap.innerHTML = component;                        
+      15 +    }                                                          
+      16 +  });                                                          
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_CitizenCharterTwoScoresTable.js)
+  ⎿  Added 7 lines, removed 7 lines
+       7  /*Render*/
+       8  function viewCitizenCharterTwoScoresTable(){
+       9  
+      10 -  const citizenCharterTwoScoresTable_Handler = CitizenCharterTw
+         -oScoresTable();                                                
+      11 -                                                               
+      12 -  if(citizenCharterTwoScoresTable_Handler == ""){              
+      13 -    cc2TabWrap.innerHTML = "No CC2 Scores Result";             
+      14 -  }else{                                                       
+      15 -    cc2TabWrap.innerHTML = citizenCharterTwoScoresTable_Handler
+         -;                                                              
+      16 -  }                                                            
+      10 +  CitizenCharterTwoScoresTable().then(component => {           
+      11 +    if(component == ""){                                       
+      12 +      cc2TabWrap.innerHTML = "No CC2 Scores Result";           
+      13 +    }else{                                                     
+      14 +      cc2TabWrap.innerHTML = component;                        
+      15 +    }                                                          
+      16 +  });                                                          
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_CitizenCharterThreeScoresTable.js)
+  ⎿  Added 7 lines, removed 7 lines
+       7  /*Render*/
+       8  function viewCitizenCharterThreeScoresTable(){
+       9  
+      10 -  const citizenCharterThreeScoresTable_Handler = CitizenCharter
+         -ThreeScoresTable();                                            
+      11 -                                                               
+      12 -  if(citizenCharterThreeScoresTable_Handler == ""){            
+      13 -    cc3TabWrap.innerHTML = "No CC3 Scores Result";             
+      14 -  }else{                                                       
+      15 -    cc3TabWrap.innerHTML = citizenCharterThreeScoresTable_Handl
+         -er;                                                            
+      16 -  }                                                            
+      10 +  CitizenCharterThreeScoresTable().then(component => {         
+      11 +    if(component == ""){                                       
+      12 +      cc3TabWrap.innerHTML = "No CC3 Scores Result";           
+      13 +    }else{                                                     
+      14 +      cc3TabWrap.innerHTML = component;                        
+      15 +    }                                                          
+      16 +  });                                                          
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_QuestionsScoresTable.js)
+  ⎿  Added 7 lines, removed 7 lines
+       7  /*Render*/
+       8  function viewQuestionsScoresTable(){
+       9  
+      10 -  const questionsScoresTable_Handler = QuestionsScoresTable(); 
+      11 -                                                               
+      12 -  if(questionsScoresTable_Handler == ""){                      
+      13 -    questionsTabWrap.innerHTML = "No Questions Rating Result Fo
+         -und.";                                                         
+      14 -  }else{                                                       
+      15 -    questionsTabWrap.innerHTML = questionsScoresTable_Handler; 
+      16 -  }                                                            
+      10 +  QuestionsScoresTable().then(component => {                   
+      11 +    if(component == ""){                                       
+      12 +      questionsTabWrap.innerHTML = "No Questions Rating Result 
+         +Found.";                                                       
+      13 +    }else{                                                     
+      14 +      questionsTabWrap.innerHTML = component;                  
+      15 +    }                                                          
+      16 +  });                                                          
+      17  }
+      18  /*Render*/
+      19  
+
+● Update(Module Office\Client Side\View_CommentDiv.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewCommentDiv(){
+       9 -                                                               
+      10 -  commentSectionWrap.insertAdjacentHTML('beforeend', CommentDiv
+         -());                                                           
+       9 +                                                               
+      10 +  CommentDiv().then(component => {                             
+      11 +    commentSectionWrap.insertAdjacentHTML('beforeend', componen
+         +t);                                                            
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_CommentDivLoader.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewCommentDivLoader(){
+       9 -                                                               
+      10 -  commentSectionWrap.insertAdjacentHTML('beforeend', CommentDiv
+         -Loader());                                                     
+       9 +                                                               
+      10 +  CommentDivLoader().then(component => {                       
+      11 +    commentSectionWrap.insertAdjacentHTML('beforeend', componen
+         +t);                                                            
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_PointOfEntryOption.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewPointOfEntryOption(){
+       9 -                                                               
+      10 -  pointOfEntryOptsArea.innerHTML = PointOfEntryOption();       
+       9 +                                                               
+      10 +  PointOfEntryOption().then(component => {                     
+      11 +    pointOfEntryOptsArea.innerHTML = component;                
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+● Update(Module Office\Client Side\View_PointOfEntryOptionLoader.js)
+  ⎿  Added 3 lines, removed 1 line
+       7  /*Render*/
+       8  function viewPointOfEntryOptionLoader(){
+       9  
+      10 -  pointOfEntryOptsArea.insertAdjacentHTML('beforeend', PointOfE
+         -ntryOptionLoader());                                           
+      10 +  PointOfEntryOptionLoader().then(component => {               
+      11 +    pointOfEntryOptsArea.insertAdjacentHTML('beforeend', compon
+         +ent);                                                          
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_PointOfEntryOptionStack.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewPointOfEntryOptionStack(){
+       9 -                                                               
+      10 -  pointOfEntryOptsArea.insertAdjacentHTML('beforeend', PointOfE
+         -ntryOptionStack());                                            
+       9 +                                                               
+      10 +  PointOfEntryOptionStack().then(component => {                
+      11 +    pointOfEntryOptsArea.insertAdjacentHTML('beforeend', compon
+         +ent);                                                          
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_RatingSpan.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewRatingSpan(){
+       9 -                                                               
+      10 -  pointOfEntryRating.innerHTML = RatingSpan();                 
+       9 +                                                               
+      10 +  RatingSpan().then(component => {                             
+      11 +    pointOfEntryRating.innerHTML = component;                  
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_RespondentSpan.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewRespondentSpan(){
+       9 -                                                               
+      10 -  respondentVal.innerHTML = RespondentSpan();                  
+       9 +                                                               
+      10 +  RespondentSpan().then(component => {                         
+      11 +    respondentVal.innerHTML = component;                       
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_RespondentSpanLoader.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewRespondentSpanLoader(){
+       9 -                                                               
+      10 -  respondentVal.innerHTML = RespondentSpanLoader();            
+       9 +                                                               
+      10 +  RespondentSpanLoader().then(component => {                   
+      11 +    respondentVal.innerHTML = component;                       
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● Update(Module Office\Client Side\View_TotalAnsweredQuestionsSpan.js)
+  ⎿  Added 4 lines, removed 2 lines
+       6  
+       7  /*Render*/
+       8  function viewTotalAnsweredQuestionsSpan(){
+       9 -                                                               
+      10 -  overallEngagementVal.innerHTML = TotalAnsweredQuestionsSpan()
+         -;                                                              
+       9 +                                                               
+      10 +  TotalAnsweredQuestionsSpan().then(component => {             
+      11 +    overallEngagementVal.innerHTML = component;                
+      12 +  });                                                          
+      13  }
+      14  /*Render*/
+      15  
+
+● All 26 files updated. Here's what changed in every file:
+
+  13 Components — all converted to async with the exact Module Pattern
+  structure:
+  async function ComponentName(){
+
+      const requestPromise = new Promise(function(resolve){
+
+          let componentVariable = "";
+
+          // build logic...
+
+          resolve(componentVariable);
+      });
+
+      return await requestPromise;
+  }
+
+  13 Views — all updated to call the component as a Promise and render inside
+  .then():
+  function viewComponentName(){
+
+      ComponentName().then(component => {
+          element.innerHTML = component;
+      });
+  }
+
+  Views that had an empty-check condition (CC1, CC2, CC3, Questions) preserve
+  their fallback message inside the .then() callback. Views that append
+  (CommentDiv, CommentDivLoader, PointOfEntryOptionStack,
+  PointOfEntryOptionLoader) keep insertAdjacentHTML('beforeend', ...) inside the
+   callback.
+
+✻ Brewed for 4m 10s
+
+※ recap: Enhanced Module Office Client Side Components and Views to match the Module Pattern. All 13 Components are now async with Promise/resolve/return await, and all 13 Views use .then() for rendering. Ready for your next task. (disable recaps in /config)
