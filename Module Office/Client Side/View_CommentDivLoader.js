@@ -6,8 +6,10 @@ import CommentDivLoader from "./Component_CommentDivLoader.js";
 
 /*Render*/
 function viewCommentDivLoader(){
-	
-	commentSectionWrap.innerHTML += CommentDivLoader();		
+
+	CommentDivLoader().then(component => {
+		commentSectionWrap.insertAdjacentHTML('beforeend', component);
+	});
 }
 /*Render*/
 

@@ -4,17 +4,20 @@ import {totalAnsweredQuestions} from "./Request_TotalAnsweredQuestions.js";
 
 
 /*Component*/
-function TotalAnsweredQuestionsSpan(){
+async function TotalAnsweredQuestionsSpan(){
 
-	let totalAnsweredQuestionsSpan = "";
-	
+	const requestPromise = new Promise(function(resolve){
 
-	if(isNaN(totalAnsweredQuestions) === false){
+		let totalAnsweredQuestionsSpan = "";
 
-		totalAnsweredQuestionsSpan = `<span>`+totalAnsweredQuestions+`</span>`;
-	}	
+		if(isNaN(totalAnsweredQuestions) === false){
+			totalAnsweredQuestionsSpan = `<span>${totalAnsweredQuestions}</span>`;
+		}
 
-	return totalAnsweredQuestionsSpan;
+		resolve(totalAnsweredQuestionsSpan);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

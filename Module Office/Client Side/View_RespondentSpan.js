@@ -6,8 +6,10 @@ import RespondentSpan from "./Component_RespondentSpan.js";
 
 /*Render*/
 function viewRespondentSpan(){
-	
-	respondentVal.innerHTML = RespondentSpan();
+
+	RespondentSpan().then(component => {
+		respondentVal.innerHTML = component;
+	});
 }
 /*Render*/
 

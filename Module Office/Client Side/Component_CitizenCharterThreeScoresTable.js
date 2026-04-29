@@ -4,36 +4,31 @@ import {citizenCharterThreeScoresDetails_Array} from "./Request_CitizenCharterTh
 
 
 /*Component*/
-function CitizenCharterThreeScoresTable(){
+async function CitizenCharterThreeScoresTable(){
 
-	let citizenCharterThreeScoresTable = "";
+	const requestPromise = new Promise(function(resolve){
 
-	if(citizenCharterThreeScoresDetails_Array.length > 0){
+		let citizenCharterThreeScoresTable = "";
 
-		citizenCharterThreeScoresTable += `<table>`+
-			`<caption><b>`+citizenCharterThreeScoresDetails_Array[0].ccQuestion+`</b></caption>`+
-			`<thead>`+
-				`<tr>`+
-					`<th>Number</th>`+
-					`<th>Rating Description</th>`+
-					`<th>Responses</th>`+
-				`</tr>`+
-			`</thead>`+
-		`<tbody>`;
+		if(citizenCharterThreeScoresDetails_Array.length > 0){
 
-		for(let index=0; index < citizenCharterThreeScoresDetails_Array.length; index++){
-			
-			citizenCharterThreeScoresTable += `<tr>`+
-				`<td>`+citizenCharterThreeScoresDetails_Array[index].ccNumbering+`</td>`+
-				`<td>`+citizenCharterThreeScoresDetails_Array[index].ccRate+`</td>`+
-				`<td>`+citizenCharterThreeScoresDetails_Array[index].responses+`</td>`+
-			`</tr>`;
+			const rows = [];
+			for(let index = 0; index < citizenCharterThreeScoresDetails_Array.length; index++){
+				const row = citizenCharterThreeScoresDetails_Array[index];
+				rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}</td><td>${row.responses}</td></tr>`);
+			}
+
+			citizenCharterThreeScoresTable = `<table>
+				<caption><b>${citizenCharterThreeScoresDetails_Array[0].ccQuestion}</b></caption>
+				<thead><tr><th>Number</th><th>Rating Description</th><th>Responses</th></tr></thead>
+				<tbody>${rows.join('')}</tbody>
+			</table>`;
 		}
-		
-		citizenCharterThreeScoresTable += `</tbody></table>`;					
-	}
 
-	return citizenCharterThreeScoresTable;
+		resolve(citizenCharterThreeScoresTable);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

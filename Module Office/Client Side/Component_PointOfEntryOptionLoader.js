@@ -4,17 +4,18 @@
 
 
 /*Component*/
-function PointOfEntryOptionLoader(){
+async function PointOfEntryOptionLoader(){
 
-	const loaderGifPath = "../../src/Spinner.gif";
+	const requestPromise = new Promise(function(resolve){
 
-	let pointOfEntryOptionLoader = `<div class="boxLoaderWrap_RoClass" id="pointOfEntryOptionLoader-Id" style="display:flex">`+
-		`<div class="boxLoaderIcon_RoClass">`+
-			`<img src="`+loaderGifPath+`">`+
-		`</div>`+
-	`</div>`;
+		let pointOfEntryOptionLoader = `<div class="boxLoaderWrap_RoClass" id="pointOfEntryOptionLoader-Id" style="display:flex">
+			<div class="boxLoaderIcon_RoClass"><img src="../../src/Spinner.gif"></div>
+		</div>`;
 
-	return pointOfEntryOptionLoader;
+		resolve(pointOfEntryOptionLoader);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

@@ -4,44 +4,43 @@ import {commentDetails_Array} from "./Request_Comments.js";
 
 
 /*Component*/
-function CommentDiv(){
+async function CommentDiv(){
 
-	let commentDiv = "";
+	const requestPromise = new Promise(function(resolve){
 
-	for(let index=0; index < commentDetails_Array.length; index++){
+		let commentDiv = "";
 
-		/*Compute Satisfaction Level*/
-		const satisLevelResult = (commentDetails_Array[index].allPassScore / commentDetails_Array[index].allCountedScore) * 100;
-		/*Compute Satisfaction Level*/
+		const cards = [];
+		for(let index = 0; index < commentDetails_Array.length; index++){
+			const c = commentDetails_Array[index];
+			const satisLevel = (c.allPassScore / c.allCountedScore * 100).toFixed(0);
+			const satisColor = satisLevel >= 80 ? "#0ABE50" : "#BD212F";
 
-		commentDiv += `<div class="commentDetailsWrap">`+
-			`<div class="commentHeaderFlex">`+
-				`<div class="commentIcon-Class"></div>`+
-				`<div class="commentRefNo-Class">`+commentDetails_Array[index].referenceNo+`</div>`;
-				
-				if(satisLevelResult.toFixed(0) >= 80){
+			cards.push(`<div class="commentDetailsWrap">
+				<div class="commentHeaderFlex">
+					<div class="commentIcon-Class"></div>
+					<div class="commentRefNo-Class">${c.referenceNo}</div>
+					<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color:${satisColor};">${satisLevel}%</span></div>
+				</div>
+				<div class="commentRespDetFlex">
+					<div class="commentRespDetItem-Class">${c.officeAbre}</div>
+					<div class="commentRespDetItem-Class">${c.respType}</div>
+					<div class="commentRespDetItem-Class">${c.ageRangeValue}</div>
+					<div class="commentRespDetItem-Class">${c.gender}</div>
+					<div class="commentRespDetItem-Class">${c.clientType}</div>
+				</div>
+				<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">${c.question}</div>
+				<div class="commentAnswer-Class">${c.comment}</div>
+				<div class="commentedDatetime-Class">${c.datetime}</div>
+			</div>`);
+		}
 
-					commentDiv += `<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #0ABE50;">`+satisLevelResult.toFixed(0)+`%</span></div>`;
+		commentDiv = cards.join('');
 
-				}else if(satisLevelResult.toFixed(0) <= 79){
+		resolve(commentDiv);
+	});
 
-					commentDiv += `<div class="commentRating-Class">Satisfaction Level: <span class="commentRatingValue-Class" style="color: #BD212F;">`+satisLevelResult.toFixed(0)+`%</span></div>`;
-				}
-			commentDiv += `</div>`+
-			`<div class="commentRespDetFlex">`+
-				`<div class="commentRespDetItem-Class">`+commentDetails_Array[index].officeAbre+`</div>`+
-				`<div class="commentRespDetItem-Class">`+commentDetails_Array[index].respType+`</div>`+
-				`<div class="commentRespDetItem-Class">`+commentDetails_Array[index].ageRangeValue+`</div>`+
-				`<div class="commentRespDetItem-Class">`+commentDetails_Array[index].gender+`</div>`+
-				`<div class="commentRespDetItem-Class">`+commentDetails_Array[index].clientType+`</div>`+
-			`</div>`+
-			`<div class="commentQuestion-Class">Commented on: <span class="commentQuestionValue-Class">`+commentDetails_Array[index].question+`</div>`+
-			`<div class="commentAnswer-Class">`+commentDetails_Array[index].comment+`</div>`+
-			`<div class="commentedDatetime-Class">`+commentDetails_Array[index].datetime+`</div>`+
-		`</div>`;
-	}
-
-	return commentDiv;
+	return await requestPromise;
 }
 /*Component*/
 

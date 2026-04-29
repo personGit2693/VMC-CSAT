@@ -6,17 +6,14 @@ import CitizenCharterOneScoresTable from "./Component_CitizenCharterOneScoresTab
 
 /*Render*/
 function viewCitizenCharterOneScoresTable(){
-	
-	const citizenCharterOneScoresTable_Handler = CitizenCharterOneScoresTable();
 
-	if(citizenCharterOneScoresTable_Handler == ""){
-
-		cc1TabWrap.innerHTML = "No CC1 Scores Result";
-
-	}else if(citizenCharterOneScoresTable_Handler != ""){
-
-		cc1TabWrap.innerHTML = citizenCharterOneScoresTable_Handler;
-	}		
+	CitizenCharterOneScoresTable().then(component => {
+		if(component == ""){
+			cc1TabWrap.innerHTML = "No CC1 Scores Result";
+		}else{
+			cc1TabWrap.innerHTML = component;
+		}
+	});
 }
 /*Render*/
 

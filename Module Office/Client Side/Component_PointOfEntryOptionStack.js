@@ -4,22 +4,29 @@ import {pointOfEntry_Array} from "./Request_PointOfEntry.js";
 
 
 /*Component*/
-function PointOfEntryOptionStack(){
+async function PointOfEntryOptionStack(){
 
-	let pointOfEntryOptionStack = "";
+	const requestPromise = new Promise(function(resolve){
 
-	for(let index=0; index < pointOfEntry_Array.length; index++){
-		
-		const elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(pointOfEntry_Array[index]))));
+		let pointOfEntryOptionStack = "";
 
-		pointOfEntryOptionStack += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px'), controller_DivOption_AssignSelectedPointOfEntry(), controller_SearchArea_DisplayMonitoring()">`+
-			`<input type="hidden" class="optValue_RoClass" value="`+elemValue+`">`+
-			`<div class="optIcon_RoClass" style="--optIcon: url('../../src/`+pointOfEntry_Array[index].office_icon+`');"></div>`+
-			`<div class="optText_RoClass" title="`+pointOfEntry_Array[index].office_abbre+`">`+pointOfEntry_Array[index].office_value+`</div>`+
-		`</div>`;
-	}
+		const opts = [];
+		for(let index = 0; index < pointOfEntry_Array.length; index++){
+			const entry = pointOfEntry_Array[index];
+			const elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(entry))));
+			opts.push(`<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '180px'), controller_DivOption_AssignSelectedPointOfEntry(), controller_SearchArea_DisplayMonitoring()">
+				<input type="hidden" class="optValue_RoClass" value="${elemValue}">
+				<div class="optIcon_RoClass" style="--optIcon: url('../../src/${entry.office_icon}');"></div>
+				<div class="optText_RoClass" title="${entry.office_abbre}">${entry.office_value}</div>
+			</div>`);
+		}
 
-	return pointOfEntryOptionStack;
+		pointOfEntryOptionStack = opts.join('');
+
+		resolve(pointOfEntryOptionStack);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

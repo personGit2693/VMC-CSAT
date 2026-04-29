@@ -5,44 +5,38 @@ import {countedPassScore} from "./Request_CountPassScore.js";
 
 
 /*Component*/
-function RatingSpan(){
+async function RatingSpan(){
 
-	let ratingSpan = "";
+	const requestPromise = new Promise(function(resolve){
 
-	/*Compute Point of entry rating*/
-	if(totalAnsweredQuestions != 0){
+		let ratingSpan = "";
 
-		const pointOfEntryRate = (countedPassScore / totalAnsweredQuestions) * 100;
+		if(totalAnsweredQuestions != 0){
 
-		if(pointOfEntryRate.toFixed(0) >= 95){
+			const pct = ((countedPassScore / totalAnsweredQuestions) * 100).toFixed(0);
 
-			ratingSpan = `<span style="color: #036939;">`+pointOfEntryRate.toFixed(0)+`% (Excellent)</span>`;
+			let color, label;
+			if(pct >= 95){
+				color = "#036939"; label = "Excellent";
+			}else if(pct >= 90){
+				color = "#036939"; label = "Very Satisfactory";
+			}else if(pct >= 85){
+				color = "#8EC63F"; label = "Satisfactory";
+			}else if(pct >= 80){
+				color = "#FAB042"; label = "Compliant";
+			}else if(pct >= 75){
+				color = "#E15268"; label = "Needs Improvement";
+			}else{
+				color = "#BD212F"; label = "Poor";
+			}
 
-		}else if(pointOfEntryRate.toFixed(0) >= 90 && pointOfEntryRate.toFixed(0) < 95){
-
-			ratingSpan = `<span style="color: #036939;">`+pointOfEntryRate.toFixed(0)+`% (Very Satisfactory)</span>`;
-
-		}else if(pointOfEntryRate.toFixed(0) >= 85 && pointOfEntryRate.toFixed(0) < 90){
-
-			ratingSpan = `<span style="color: #8EC63F;">`+pointOfEntryRate.toFixed(0)+`% (Satisfactory)</span>`;
-
-		}else if(pointOfEntryRate.toFixed(0) >= 80 && pointOfEntryRate.toFixed(0) < 85){
-
-			ratingSpan = `<span style="color: #FAB042;">`+pointOfEntryRate.toFixed(0)+`% (Compliant)</span>`;
-
-		}else if(pointOfEntryRate.toFixed(0) >= 75 && pointOfEntryRate.toFixed(0) < 80){
-
-			ratingSpan = `<span style="color: #E15268;">`+pointOfEntryRate.toFixed(0)+`% (Needs Improvement)</span>`;
-
-		}else if(pointOfEntryRate.toFixed(0) < 75){
-
-			ratingSpan = `<span style="color: #BD212F;">`+pointOfEntryRate.toFixed(0)+`% (Poor)</span>`;
+			ratingSpan = `<span style="color:${color};">${pct}% (${label})</span>`;
 		}
-	}
-	/*Compute Point of entry rating*/
 
+		resolve(ratingSpan);
+	});
 
-	return ratingSpan;
+	return await requestPromise;
 }
 /*Component*/
 

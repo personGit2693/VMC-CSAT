@@ -4,36 +4,31 @@ import {citizenCharterTwoScoresDetails_Array} from "./Request_CitizenCharterTwoS
 
 
 /*Component*/
-function CitizenCharterTwoScoresTable(){
+async function CitizenCharterTwoScoresTable(){
 
-	let citizenCharterTwoScoresTable = "";
+	const requestPromise = new Promise(function(resolve){
 
-	if(citizenCharterTwoScoresDetails_Array.length > 0){
+		let citizenCharterTwoScoresTable = "";
 
-		citizenCharterTwoScoresTable += `<table>`+
-			`<caption><b>`+citizenCharterTwoScoresDetails_Array[0].ccQuestion+`</b></caption>`+
-			`<thead>`+
-				`<tr>`+
-					`<th>Number</th>`+
-					`<th>Rating Description</th>`+
-					`<th>Responses</th>`+
-				`</tr>`+
-			`</thead>`+
-		`<tbody>`;
+		if(citizenCharterTwoScoresDetails_Array.length > 0){
 
-		for(let index=0; index < citizenCharterTwoScoresDetails_Array.length; index++){
-			
-			citizenCharterTwoScoresTable += `<tr>`+
-				`<td>`+citizenCharterTwoScoresDetails_Array[index].ccNumbering+`</td>`+
-				`<td>`+citizenCharterTwoScoresDetails_Array[index].ccRate+`</td>`+
-				`<td>`+citizenCharterTwoScoresDetails_Array[index].responses+`</td>`+
-			`</tr>`;
+			const rows = [];
+			for(let index = 0; index < citizenCharterTwoScoresDetails_Array.length; index++){
+				const row = citizenCharterTwoScoresDetails_Array[index];
+				rows.push(`<tr><td>${row.ccNumbering}</td><td>${row.ccRate}</td><td>${row.responses}</td></tr>`);
+			}
+
+			citizenCharterTwoScoresTable = `<table>
+				<caption><b>${citizenCharterTwoScoresDetails_Array[0].ccQuestion}</b></caption>
+				<thead><tr><th>Number</th><th>Rating Description</th><th>Responses</th></tr></thead>
+				<tbody>${rows.join('')}</tbody>
+			</table>`;
 		}
 
-		citizenCharterTwoScoresTable += `</tbody></table>`;					
-	}
+		resolve(citizenCharterTwoScoresTable);
+	});
 
-	return citizenCharterTwoScoresTable;
+	return await requestPromise;
 }
 /*Component*/
 

@@ -6,8 +6,10 @@ import RatingSpan from "./Component_RatingSpan.js";
 
 /*Render*/
 function viewRatingSpan(){
-	
-	pointOfEntryRating.innerHTML = RatingSpan();
+
+	RatingSpan().then(component => {
+		pointOfEntryRating.innerHTML = component;
+	});
 }
 /*Render*/
 

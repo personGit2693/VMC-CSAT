@@ -6,8 +6,10 @@ import PointOfEntryOptionStack from "./Component_PointOfEntryOptionStack.js";
 
 /*Render*/
 function viewPointOfEntryOptionStack(){
-	
-	pointOfEntryOptsArea.innerHTML += PointOfEntryOptionStack();
+
+	PointOfEntryOptionStack().then(component => {
+		pointOfEntryOptsArea.insertAdjacentHTML('beforeend', component);
+	});
 }
 /*Render*/
 

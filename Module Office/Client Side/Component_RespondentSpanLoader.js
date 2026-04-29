@@ -4,17 +4,18 @@
 
 
 /*Component*/
-function RespondentSpanLoader(){
+async function RespondentSpanLoader(){
 
-	const loaderGifPath = "../../src/Spinner.gif";
+	const requestPromise = new Promise(function(resolve){
 
-	let respondentSpanLoader = `<div class="boxLoaderWrap_RoClass" id="respondentSpanLoader-Id" style="display:flex">`+
-		`<div class="boxLoaderIcon_RoClass">`+
-			`<img src="`+loaderGifPath+`">`+
-		`</div>`+
-	`</div>`;
+		let respondentSpanLoader = `<div class="boxLoaderWrap_RoClass" id="respondentSpanLoader-Id" style="display:flex">
+			<div class="boxLoaderIcon_RoClass"><img src="../../src/Spinner.gif"></div>
+		</div>`;
 
-	return respondentSpanLoader;
+		resolve(respondentSpanLoader);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

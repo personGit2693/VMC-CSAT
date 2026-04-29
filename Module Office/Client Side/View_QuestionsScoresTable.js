@@ -6,18 +6,14 @@ import QuestionsScoresTable from "./Component_QuestionsScoresTable.js";
 
 /*Render*/
 function viewQuestionsScoresTable(){
-	
-	const questionsScoresTable_Handler = QuestionsScoresTable();
 
-	if(questionsScoresTable_Handler != ""){
-
-		questionsTabWrap.innerHTML = questionsScoresTable_Handler;
-
-	}else if(questionsScoresTable_Handler == ""){
-
-		questionsTabWrap.innerHTML = "No Questions Rating Result Found.";
-	}
-
+	QuestionsScoresTable().then(component => {
+		if(component == ""){
+			questionsTabWrap.innerHTML = "No Questions Rating Result Found.";
+		}else{
+			questionsTabWrap.innerHTML = component;
+		}
+	});
 }
 /*Render*/
 

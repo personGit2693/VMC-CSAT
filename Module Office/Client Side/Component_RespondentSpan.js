@@ -4,16 +4,20 @@ import {totalRespondent} from "./Request_TotalRespondent.js";
 
 
 /*Component*/
-function RespondentSpan(){
+async function RespondentSpan(){
 
-	let respondentSpan = "";
-	
-	if(isNaN(totalRespondent) === false){
-		
-		respondentSpan = `<span>`+totalRespondent+`</span>`;
-	}	
+	const requestPromise = new Promise(function(resolve){
 
-	return respondentSpan;
+		let respondentSpan = "";
+
+		if(isNaN(totalRespondent) === false){
+			respondentSpan = `<span>${totalRespondent}</span>`;
+		}
+
+		resolve(respondentSpan);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

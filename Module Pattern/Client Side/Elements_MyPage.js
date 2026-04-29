@@ -1,0 +1,1 @@
+export const parent_id = document.getElementById('parent-id');

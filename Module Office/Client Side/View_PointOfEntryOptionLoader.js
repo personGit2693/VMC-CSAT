@@ -7,7 +7,9 @@ import PointOfEntryOptionLoader from "./Component_PointOfEntryOptionLoader.js";
 /*Render*/
 function viewPointOfEntryOptionLoader(){
 
-	pointOfEntryOptsArea.innerHTML += PointOfEntryOptionLoader();
+	PointOfEntryOptionLoader().then(component => {
+		pointOfEntryOptsArea.insertAdjacentHTML('beforeend', component);
+	});
 }
 /*Render*/
 

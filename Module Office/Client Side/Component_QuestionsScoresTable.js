@@ -4,61 +4,48 @@ import {questionsScoresDetails_Array} from "./Request_QuestionsScoresDetails.js"
 
 
 /*Component*/
-function QuestionsScoresTable(){
+async function QuestionsScoresTable(){
 
-	let questionsScoresTable = "";
+	const requestPromise = new Promise(function(resolve){
 
-	if(questionsScoresDetails_Array.length > 0){
+		let questionsScoresTable = "";
 
-		questionsScoresTable += `<table>`+
-			`<thead>`+
-				`<tr>`+
-					`<th>Numbers</th>`+
-					`<th>Questions</th>`+
-					`<th>Strongly Agree</th>`+
-					`<th>Agree</th>`+
-					`<th>Neither Agree nor Disagree</th>`+
-					`<th>Disagree</th>`+
-					`<th>Strongly disagree</th>`+
-					`<th>No Rating</th>`+
-					`<th>Percentage</th>`+
-				`</tr>`+
-			`</thead>`+
-		`<tbody>`;
+		if(questionsScoresDetails_Array.length > 0){
 
-		for(let index=0; index < questionsScoresDetails_Array.length; index++){
+			const rows = [];
+			for(let index = 0; index < questionsScoresDetails_Array.length; index++){
+				const q = questionsScoresDetails_Array[index];
+				const totalRespPerQuestion = q.totalStronglyAgree + q.totalAgree + q.totalNeither + q.totalDisagree + q.totalStronglyDisagree;
+				const pct = ((q.totalStronglyAgree + q.totalAgree) / totalRespPerQuestion * 100).toFixed(0);
+				const pctColor = pct >= 80 ? "#0ABE50" : "#BD212F";
 
-			const totalRespPerQuestion = questionsScoresDetails_Array[index].totalStronglyAgree + questionsScoresDetails_Array[index].totalAgree + questionsScoresDetails_Array[index].totalNeither + questionsScoresDetails_Array[index].totalDisagree + questionsScoresDetails_Array[index].totalStronglyDisagree; 
-			const totalAgrees = questionsScoresDetails_Array[index].totalStronglyAgree + questionsScoresDetails_Array[index].totalAgree;
-			const perQuestionPercent = (totalAgrees / totalRespPerQuestion) * 100;
+				rows.push(`<tr>
+					<td>${q.questionNo}</td>
+					<td>${q.questionValue}</td>
+					<td>${q.totalStronglyAgree}</td>
+					<td>${q.totalAgree}</td>
+					<td>${q.totalNeither}</td>
+					<td>${q.totalDisagree}</td>
+					<td>${q.totalStronglyDisagree}</td>
+					<td>${q.totalNoRating}</td>
+					<td style="color:${pctColor};">${pct}%</td>
+				</tr>`);
+			}
 
-			questionsScoresTable += `<tr>`+
-				`<td>`+questionsScoresDetails_Array[index].questionNo+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].questionValue+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].totalStronglyAgree+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].totalAgree+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].totalNeither+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].totalDisagree+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].totalStronglyDisagree+`</td>`+
-				`<td>`+questionsScoresDetails_Array[index].totalNoRating+`</td>`;
-
-				if(perQuestionPercent.toFixed(0) >= 80){
-
-					questionsScoresTable += `<td style="color:#0ABE50;">`+perQuestionPercent.toFixed(0)+`%</td>`;
-
-				}else if(perQuestionPercent.toFixed(0) < 80){
-
-					questionsScoresTable += `<td style="color:#BD212F;">`+perQuestionPercent.toFixed(0)+`%</td>`;
-				}
-
-			questionsScoresTable += `</tr>`;
+			questionsScoresTable = `<table>
+				<thead><tr>
+					<th>Numbers</th><th>Questions</th>
+					<th>Strongly Agree</th><th>Agree</th><th>Neither Agree nor Disagree</th>
+					<th>Disagree</th><th>Strongly disagree</th><th>No Rating</th><th>Percentage</th>
+				</tr></thead>
+				<tbody>${rows.join('')}</tbody>
+			</table>`;
 		}
-		
-		questionsScoresTable += `</tbody></table>`;
-	}
 
+		resolve(questionsScoresTable);
+	});
 
-	return questionsScoresTable;
+	return await requestPromise;
 }
 /*Component*/
 

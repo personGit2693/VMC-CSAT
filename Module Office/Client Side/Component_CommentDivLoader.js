@@ -4,17 +4,18 @@
 
 
 /*Component*/
-function CommentDivLoader(){
+async function CommentDivLoader(){
 
-	const loaderGifPath = "../../src/Spinner.gif";
+	const requestPromise = new Promise(function(resolve){
 
-	let commentDivLoader = `<div class="boxLoaderWrap_RoClass" id="commentDivLoader-Id" style="display:flex">`+
-		`<div class="boxLoaderIcon_RoClass">`+
-			`<img src="`+loaderGifPath+`">`+
-		`</div>`+
-	`</div>`;
+		let commentDivLoader = `<div class="boxLoaderWrap_RoClass" id="commentDivLoader-Id" style="display:flex">
+			<div class="boxLoaderIcon_RoClass"><img src="../../src/Spinner.gif"></div>
+		</div>`;
 
-	return commentDivLoader;
+		resolve(commentDivLoader);
+	});
+
+	return await requestPromise;
 }
 /*Component*/
 

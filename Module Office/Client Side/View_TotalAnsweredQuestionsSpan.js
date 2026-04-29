@@ -6,8 +6,10 @@ import TotalAnsweredQuestionsSpan from "./Component_TotalAnsweredQuestionsSpan.j
 
 /*Render*/
 function viewTotalAnsweredQuestionsSpan(){
-	
-	overallEngagementVal.innerHTML = TotalAnsweredQuestionsSpan();
+
+	TotalAnsweredQuestionsSpan().then(component => {
+		overallEngagementVal.innerHTML = component;
+	});
 }
 /*Render*/
 
