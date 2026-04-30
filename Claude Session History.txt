@@ -1905,3 +1905,1232 @@
 ✻ Brewed for 4m 10s
 
 ※ recap: Enhanced Module Office Client Side Components and Views to match the Module Pattern. All 13 Components are now async with Promise/resolve/return await, and all 13 Views use .then() for rendering. Ready for your next task. (disable recaps in /config)
+
+
+
+ ▐▛███▜▌   Claude Code v2.1.123
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    C:\laragon\www\VMC-CSAT
+
+  /remote-control is active · Code in CLI or at https://claude.ai/code/session_01JzhkRB6SFxiQfrCpG5DKP4
+
+❯ Enhance the MySQL query for Response_Comments to expedite the reading speed   
+  on phpMyAdmin                                                                 
+
+● Let me find the relevant file first.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Now I can see the query. There are two clear performance bottlenecks:
+
+  1. Two separate scans of questionresponses_tab — the two LEFT JOIN subqueries
+  each scan the full table independently. These can be merged into one using
+  conditional SUM().
+  2. Non-sargable date filter — CONVERT(column, DATE) BETWEEN ... wraps the
+  column in a function, blocking index use. A range condition on the raw column
+  is sargable.
+
+● Update(Module Office\Server Side\Response_Comments.php)
+  ⎿  Added 28 lines, removed 34 lines
+      124          commentsresponses_tab.commentresponse_id AS 'commentId
+           ',
+      125          commentsresponses_tab.commentresponse_value AS 'commen
+           t',
+      126          commentsresponses_tab.commentresponse_datetime AS 'dat
+           etime',
+      127 -        IFNULL(allcountedscores_tab.allCountedScore, 0) AS 'al
+          -lCountedScore',                                               
+      128 -        IFNULL(allpassscore_tab.allPassScore, 0) AS 'allPassSc
+          -ore'                                                          
+      129 -        FROM clientresponses_tab                              
+      130 -        INNER JOIN offices_tab                                
+      131 -        ON clientresponses_tab.office_id = offices_tab.office_
+          -id                                                            
+      132 -        INNER JOIN respondents_tab                            
+      133 -        ON clientresponses_tab.respondent_id = respondents_tab
+          -.respondent_id                                                
+      134 -        INNER JOIN ageranges_tab                              
+      135 -        ON clientresponses_tab.agerange_id = ageranges_tab.age
+          -range_id                                                      
+      136 -        INNER JOIN genders_tab                                
+      137 -        ON clientresponses_tab.gender_id = genders_tab.gender_
+          -id                                                            
+      138 -        INNER JOIN clienttypes_tab                            
+      139 -        ON clientresponses_tab.clienttype_id = clienttypes_tab
+          -.clienttype_id                                                
+      140 -        INNER JOIN commentsresponses_tab                      
+      127 +        IFNULL(scores_tab.allCountedScore, 0) AS 'allCountedSc
+          +ore',                                                         
+      128 +        IFNULL(scores_tab.allPassScore, 0) AS 'allPassScore'  
+      129 +        FROM clientresponses_tab                              
+      130 +        INNER JOIN offices_tab                                
+      131 +        ON clientresponses_tab.office_id = offices_tab.office_
+          +id                                                            
+      132 +        INNER JOIN respondents_tab                            
+      133 +        ON clientresponses_tab.respondent_id = respondents_tab
+          +.respondent_id                                                
+      134 +        INNER JOIN ageranges_tab                              
+      135 +        ON clientresponses_tab.agerange_id = ageranges_tab.age
+          +range_id                                                      
+      136 +        INNER JOIN genders_tab                                
+      137 +        ON clientresponses_tab.gender_id = genders_tab.gender_
+          +id                                                            
+      138 +        INNER JOIN clienttypes_tab                            
+      139 +        ON clientresponses_tab.clienttype_id = clienttypes_tab
+          +.clienttype_id                                                
+      140 +        INNER JOIN commentsresponses_tab                      
+      141          ON clientresponses_tab.clientresponse_reference = comm
+           entsresponses_tab.clientresponse_reference
+      142 -        INNER JOIN questions_tab                              
+      143 -        ON commentsresponses_tab.question_id = questions_tab.q
+          -uestion_id                                                    
+      144 -        LEFT JOIN (SELECT clientresponse_reference AS 'clientr
+          -esponse_reference',                                           
+      145 -          COUNT(questionresponse_id) AS 'allCountedScore'     
+      146 -            FROM questionresponses_tab                        
+      147 -          WHERE NOT score_id = :noRating_Id                   
+      148 -          GROUP BY clientresponse_reference)                                                  
+      149 -        AS allcountedscores_tab                               
+      150 -        ON clientresponses_tab.clientresponse_reference = allc
+          -ountedscores_tab.clientresponse_reference                     
+      151 -        LEFT JOIN (SELECT clientresponse_reference AS 'clientr
+          -esponse_reference',                                           
+      152 -          COUNT(questionresponse_id) AS 'allPassScore'        
+      153 -          FROM questionresponses_tab                          
+      154 -          WHERE score_id = :stronglyAgree_Id OR score_id = :ag
+          -ree_Id                                                        
+      155 -          GROUP BY clientresponse_reference)                                   
+      156 -        AS allpassscore_tab                                   
+      157 -        ON clientresponses_tab.clientresponse_reference = allp
+          -assscore_tab.clientresponse_reference                         
+      158 -        WHERE clientresponses_tab.office_id = :officeId       
+      142 +        INNER JOIN questions_tab                              
+      143 +        ON commentsresponses_tab.question_id = questions_tab.q
+          +uestion_id                                                    
+      144 +        LEFT JOIN (SELECT clientresponse_reference,           
+      145 +          SUM(score_id != :noRating_Id) AS allCountedScore,   
+      146 +          SUM(score_id = :stronglyAgree_Id OR score_id = :agre
+          +e_Id) AS allPassScore                                         
+      147 +          FROM questionresponses_tab                          
+      148 +          GROUP BY clientresponse_reference)                  
+      149 +        AS scores_tab                                         
+      150 +        ON clientresponses_tab.clientresponse_reference = scor
+          +es_tab.clientresponse_reference                               
+      151 +        WHERE clientresponses_tab.office_id = :officeId       
+      152          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal)
+      160 -        AND CONVERT(commentsresponses_tab.commentresponse_date
+          -time, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:date
+          -To, DATE)                                                     
+      161 -        ORDER BY commentsresponses_tab.commentresponse_datetim
+          -e DESC                                                        
+      153 +        AND commentsresponses_tab.commentresponse_datetime >= 
+          +:dateFrom                                                     
+      154 +        AND commentsresponses_tab.commentresponse_datetime < D
+          +ATE_ADD(:dateTo, INTERVAL 1 DAY)                              
+      155 +        ORDER BY commentsresponses_tab.commentresponse_datetim
+          +e DESC                                                        
+      156          LIMIT :commentStartIndex, :commentDisplay;
+      163 -      ";                                                                                                          
+      157 +      ";                                                                                                           
+      158        /*_Prep query*/
+      159  
+      160        /*_Execute query*/
+
+● Two optimizations applied:
+
+  1. Merged two questionresponses_tab subqueries into one
+  - Before: two LEFT JOINs each triggered a full scan of questionresponses_tab
+  - After: one scan using conditional SUM(score_id != :noRating_Id) and
+  SUM(score_id = :stronglyAgree_Id OR score_id = :agree_Id) — cuts that work in
+  half
+
+  2. Made the date filter index-sargable
+  - Before: CONVERT(column, DATE) BETWEEN ... — wrapping the column in a
+  function forces a full scan, even if commentresponse_datetime is indexed
+  - After: column >= :dateFrom AND column < DATE_ADD(:dateTo, INTERVAL 1 DAY) —
+  a bare range condition lets MySQL use an index on commentresponse_datetime
+
+  If query speed is still a concern after this, adding composite indexes on
+  clientresponses_tab(office_id, clienttype_id) and
+  commentsresponses_tab(commentresponse_datetime) would be the next step.
+
+✻ Brewed for 1m 30s
+
+❯ add composite indexes on clientresponses_tab(office_id, clienttype_id) and    
+  commentsresponses_tab(commentresponse_datetime), apply on valmed_vmc_csat.sql 
+
+● Let me find the SQL file first.
+
+  Searched for 2 patterns (ctrl+o to expand)
+
+● Let me read the CREATE TABLE sections for both tables.
+
+  Read 1 file (ctrl+o to expand)
+
+● Now let me find the ALTER TABLE / index sections for both tables.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● I have all the context I need. I'll add the composite index to
+  clientresponses_tab and the datetime index to commentsresponses_tab.
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Added 2 lines, removed 1 line
+      3567338    ADD KEY `office_id(offices_tab)(3)` (`office_id`),
+      3567339    ADD KEY `gender_id` (`gender_id`),
+      3567340    ADD KEY `genderpreference_id(genderpreferences_tab)` (`g
+               enderpreference_id`),
+      3567341 -  ADD KEY `officeservice_id(officeservices_tab)` (`offices
+              -ervice_id`);                                              
+      3567341 +  ADD KEY `officeservice_id(officeservices_tab)` (`offices
+              +ervice_id`),                                              
+      3567342 +  ADD KEY `idx_office_clienttype` (`office_id`,`clienttype
+              +_id`);                                                    
+      3567343  
+      3567344  --
+      3567345  -- Indexes for table `clienttypes_tab`
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Added 2 lines, removed 1 line
+      3567353  ALTER TABLE `commentsresponses_tab`
+      3567354    ADD PRIMARY KEY (`commentresponse_id`),
+      3567355    ADD KEY `question_id(questions_tab)(2)` (`question_id`),
+      3567356 -  ADD KEY `clientresponse_reference(clientresponses_tab)(3
+              -)` (`clientresponse_reference`);                          
+      3567356 +  ADD KEY `clientresponse_reference(clientresponses_tab)(3
+              +)` (`clientresponse_reference`),                          
+      3567357 +  ADD KEY `idx_commentresponse_datetime` (`commentresponse
+              +_datetime`);                                              
+      3567358  
+      3567359  --
+      3567360  -- Indexes for table `dimensions_tab`
+
+● Done. Two indexes added to the SQL file:
+
+  ┌────────────────────┬──────────────────────────┬────────────────────────┐
+  │       Table        │          Index           │          Key           │
+  ├────────────────────┼──────────────────────────┼────────────────────────┤
+  │ clientresponses_ta │ idx_office_clienttype    │ (office_id,            │
+  │ b                  │                          │ clienttype_id)         │
+  ├────────────────────┼──────────────────────────┼────────────────────────┤
+  │ commentsresponses_ │ idx_commentresponse_date │ (commentresponse_datet │
+  │ tab                │ time                     │ ime)                   │
+  └────────────────────┴──────────────────────────┴────────────────────────┘
+
+  The composite (office_id, clienttype_id) lets MySQL satisfy the WHERE 
+  office_id = ? AND clienttype_id IN (?, ?) filter with a single index lookup
+  instead of scanning two separate indexes. The commentresponse_datetime index
+  enables the sargable range filter from the earlier query change to actually
+  use the index rather than doing a full table scan.
+
+  To apply these to your live database, run the two ALTER TABLE statements
+  directly in phpMyAdmin on valmed_vmc_csat.
+
+✻ Cooked for 1m 6s
+
+※ recap: Optimized the Comments query and SQL schema for faster reads. Next: apply the two new ALTER TABLE index statements to the live valmed_vmc_csat database in phpMyAdmin. (disable recaps in /config)
+
+❯ Enhance the MySQL query for Response_CitizenCharterOneScores  to expedite the 
+   reading speed on phpMyAdmin                                                  
+
+● Let me find and read the file.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Two issues in this query:
+
+  1. Non-sargable date filter — same CONVERT(column, DATE) BETWEEN ... pattern
+  blocking index use on ccresponse_datetime
+  2. ORDER BY inside a derived table — MySQL 8.0 ignores ORDER BY inside
+  subqueries without LIMIT; it adds overhead with no guaranteed effect. It
+  belongs on the outer query.
+
+● Update(Module Office\Server Side\Response_CitizenCharterOneScores.php)
+  ⎿  Added 23 lines, removed 22 lines
+      113          SELECT cc1questions_tab.ccquestion_question AS 'ccQues
+           tion',
+      114          cc1questions_tab.ccquestionsrate_numbering AS 'ccNumbe
+           ring',
+      115          cc1questions_tab.ccquestionsrate_value AS 'ccRate',
+      116 -        IFNULL(ccscores_tab.responses, 0) AS 'responses'      
+      116 +        IFNULL(ccscores_tab.responses, 0) AS 'responses'      
+      117          FROM (SELECT ccquestionsrates_tab.ccquestionsrate_id A
+           S 'ccquestionsrate_id',
+      118            ccquestionsrates_tab.ccquestionsrate_numbering AS 'c
+           cquestionsrate_numbering',
+      119 -          ccquestionsrates_tab.ccquestionsrate_value AS 'ccque
+          -stionsrate_value',                                            
+      120 -          ccquestions_tab.ccquestion_question AS 'ccquestion_q
+          -uestion'                                                      
+      121 -          FROM ccquestionsrates_tab                           
+      122 -          INNER JOIN ccquestions_tab                          
+      123 -          ON ccquestionsrates_tab.ccquestion_id = ccquestions_
+          -tab.ccquestion_id                                             
+      119 +          ccquestionsrates_tab.ccquestionsrate_value AS 'ccque
+          +stionsrate_value',                                            
+      120 +          ccquestions_tab.ccquestion_question AS 'ccquestion_q
+          +uestion'                                                      
+      121 +          FROM ccquestionsrates_tab                           
+      122 +          INNER JOIN ccquestions_tab                          
+      123 +          ON ccquestionsrates_tab.ccquestion_id = ccquestions_
+          +tab.ccquestion_id                                             
+      124            WHERE ccquestionsrates_tab.ccquestion_id = :ccOne_Id
+      125 -          ORDER BY ccquestionsrates_tab.ccquestionsrate_number
+          -ing                                                           
+      126 -        ) AS cc1questions_tab                                 
+      125 +        ) AS cc1questions_tab                                 
+      126          LEFT JOIN (SELECT ccresponses_tab.ccquestionsrate_id A
+           S 'ccquestionsrate_id',
+      128 -            COUNT(ccresponses_tab.ccresponse_id) AS 'responses
+          -'                                                             
+      129 -            FROM clientresponses_tab                          
+      130 -            INNER JOIN ccresponses_tab                        
+      131 -            ON clientresponses_tab.clientresponse_reference = 
+          -ccresponses_tab.clientresponse_reference                      
+      132 -            INNER JOIN ccquestionsrates_tab                   
+      133 -            ON ccresponses_tab.ccquestionsrate_id = ccquestion
+          -srates_tab.ccquestionsrate_id                                 
+      134 -            WHERE clientresponses_tab.office_id = :officeId   
+      135 -            AND (clientresponses_tab.clienttype_id = :clientTy
+          -peInternal OR clientresponses_tab.clienttype_id = :clientTypeE
+          -xternal)                                                      
+      136 -          AND CONVERT(ccresponses_tab.ccresponse_datetime, DAT
+          -E) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+      137 -            AND ccquestionsrates_tab.ccquestion_id = :ccOne_Id
+          -                                                              
+      138 -            GROUP BY ccresponses_tab.ccquestionsrate_id       
+      139 -        ) AS ccscores_tab                                     
+      140 -        ON cc1questions_tab.ccquestionsrate_id = ccscores_tab.
+          -ccquestionsrate_id;                                                             
+      141 -      ";                                                                                                          
+      127 +          COUNT(ccresponses_tab.ccresponse_id) AS 'responses' 
+      128 +          FROM clientresponses_tab                            
+      129 +          INNER JOIN ccresponses_tab                          
+      130 +          ON clientresponses_tab.clientresponse_reference = cc
+          +responses_tab.clientresponse_reference                        
+      131 +          INNER JOIN ccquestionsrates_tab                     
+      132 +          ON ccresponses_tab.ccquestionsrate_id = ccquestionsr
+          +ates_tab.ccquestionsrate_id                                   
+      133 +          WHERE clientresponses_tab.office_id = :officeId     
+      134 +          AND (clientresponses_tab.clienttype_id = :clientType
+          +Internal OR clientresponses_tab.clienttype_id = :clientTypeExt
+          +ernal)                                                        
+      135 +          AND ccresponses_tab.ccresponse_datetime >= :dateFrom
+      136 +          AND ccresponses_tab.ccresponse_datetime < DATE_ADD(:
+          +dateTo, INTERVAL 1 DAY)                                       
+      137 +          AND ccquestionsrates_tab.ccquestion_id = :ccOne_Id  
+      138 +          GROUP BY ccresponses_tab.ccquestionsrate_id         
+      139 +        ) AS ccscores_tab                                     
+      140 +        ON cc1questions_tab.ccquestionsrate_id = ccscores_tab.
+          +ccquestionsrate_id                                            
+      141 +        ORDER BY cc1questions_tab.ccquestionsrate_numbering;  
+      142 +      ";                                                                                                           
+      143        /*_Prep query*/
+      144  
+      145        /*_Execute query*/
+
+● Two optimizations applied:
+
+  1. Sargable date filter
+  - Before: CONVERT(ccresponses_tab.ccresponse_datetime, DATE) BETWEEN ... —
+  function on column blocks index use
+  - After: ccresponse_datetime >= :dateFrom AND ccresponse_datetime < 
+  DATE_ADD(:dateTo, INTERVAL 1 DAY) — bare column range lets MySQL use an index
+  on ccresponse_datetime
+
+  2. ORDER BY moved to outer query
+  - Before: ORDER BY was inside the derived table cc1questions_tab — MySQL 8.0
+  ignores it there entirely, making it dead overhead
+  - After: ORDER BY cc1questions_tab.ccquestionsrate_numbering on the outer
+  SELECT where it actually takes effect
+
+  If you want to add a matching index on ccresponses_tab(ccresponse_datetime) in
+   the SQL file, say the word and I'll apply it alongside the ones already added
+   for commentsresponses_tab.
+✻ Worked for 1m 4s
+
+※ recap: Optimizing MySQL queries in the VMC-CSAT Office module for faster phpMyAdmin reads. Two Response files are done with sargable date filters and merged subqueries. Next: add an index on ccresponses_tab(ccresponse_datetime) to the SQL file if confirmed. (disable recaps in /config)
+
+❯ Apply the MySQL query to others Server Side Response in Module Office         
+
+● Let me find all Server Side Response files in Module Office.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Let me read all the relevant files in parallel to identify which ones need
+  optimizations.
+
+  Read 16 files (ctrl+o to expand)
+
+● Now I have a complete picture. Let me categorize all the needed fixes across
+  13 files:
+
+  - Date filter (CONVERT(col, DATE) BETWEEN ... → sargable range): all files
+  with queries
+  - ORDER BY in derived table → move to outer query: CitizenCharterTwo,
+  CitizenCharterThree
+  - 6 separate LEFT JOIN subqueries → 1 consolidated with conditional SUM():
+  QuestionsScoresDetails
+
+  Applying all fixes in parallel batches.
+
+● Update(Module Office\Server Side\Response_TotalRespondent.php)
+  ⎿  Added 5 lines, removed 4 lines
+      108  
+      109        /*Count Total Respondent*/
+      110        /*_Prep query*/
+      111 -      $countTotalRespondent_Query = "SELECT COUNT(clientrespon
+          -se_reference) AS 'totalRespondent'                            
+      112 -        FROM clientresponses_tab                              
+      113 -        WHERE office_id = :officeId                           
+      114 -        AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT
+          -(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)                  
+      111 +      $countTotalRespondent_Query = "SELECT COUNT(clientrespon
+          +se_reference) AS 'totalRespondent'                            
+      112 +        FROM clientresponses_tab                              
+      113 +        WHERE office_id = :officeId                           
+      114 +        AND clientresponse_date >= :dateFrom                  
+      115 +        AND clientresponse_date < DATE_ADD(:dateTo, INTERVAL 1
+          + DAY)                                                         
+      116          AND (clienttype_id = :clientTypeInternal OR clienttype
+           _id = :clientTypeExternal);
+      117        "; 
+      118        /*_Prep query*/
+
+● Update(Module Office\Server Side\Response_TotalAnsweredQuestions.php)
+  ⎿  Added 8 lines, removed 7 lines
+      109        
+      110        /*Count Overall Engagement*/
+      111        /*_Prep query*/
+      112 -      $totalAnsweredQuestions_Query = "SELECT COUNT(questionre
+          -sponses_tab.questionresponse_id) AS 'totalAnsweredQuestions'  
+      113 -        FROM questionresponses_tab                            
+      114 -        INNER JOIN clientresponses_tab                        
+      115 -        ON questionresponses_tab.clientresponse_reference = cl
+          -ientresponses_tab.clientresponse_reference                    
+      116 -        WHERE clientresponses_tab.office_id = :officeId       
+      117 -        AND NOT questionresponses_tab.score_id = :noRating_Id 
+      118 -        AND CONVERT(questionresponses_tab.questionresponse_dat
+          -etime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dat
+          -eTo, DATE)                                                    
+      112 +      $totalAnsweredQuestions_Query = "SELECT COUNT(questionre
+          +sponses_tab.questionresponse_id) AS 'totalAnsweredQuestions'  
+      113 +        FROM questionresponses_tab                            
+      114 +        INNER JOIN clientresponses_tab                        
+      115 +        ON questionresponses_tab.clientresponse_reference = cl
+          +ientresponses_tab.clientresponse_reference                    
+      116 +        WHERE clientresponses_tab.office_id = :officeId       
+      117 +        AND NOT questionresponses_tab.score_id = :noRating_Id 
+      118 +        AND questionresponses_tab.questionresponse_datetime >=
+          + :dateFrom                                                    
+      119 +        AND questionresponses_tab.questionresponse_datetime < 
+          +DATE_ADD(:dateTo, INTERVAL 1 DAY)                             
+      120          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal);
+      121        "; 
+      122        /*_Prep query*/
+
+● Update(Module Office\Server Side\Response_GetStronglyAgreeNumber.php)
+  ⎿  Added 3 lines, removed 2 lines
+      129          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      130          WHERE clientresponses_tab.office_id = :officeId 
+      131          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      132 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      133 -        AND questionresponses_tab.score_id = :stronglyAgree_Id
+          -                                                              
+      132 +        AND questionresponse_datetime >= :dateFrom            
+      133 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      134 +        AND questionresponses_tab.score_id = :stronglyAgree_Id
+      135          GROUP BY CONVERT(questionresponse_datetime, DATE) 
+      136          ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
+      137        "; 
+
+● Update(Module Office\Server Side\Response_GetAgreeNumber.php)
+  ⎿  Added 3 lines, removed 2 lines
+      129          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      130          WHERE clientresponses_tab.office_id = :officeId 
+      131          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      132 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      133 -        AND questionresponses_tab.score_id = :agree_Id        
+      132 +        AND questionresponse_datetime >= :dateFrom            
+      133 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      134 +        AND questionresponses_tab.score_id = :agree_Id        
+      135          GROUP BY CONVERT(questionresponse_datetime, DATE) 
+      136          ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
+      137        "; 
+
+● Update(Module Office\Server Side\Response_GetNeitherNumber.php)
+  ⎿  Added 3 lines, removed 2 lines
+      130          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      131          WHERE clientresponses_tab.office_id = :officeId 
+      132          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      133 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      134 -        AND questionresponses_tab.score_id = :neither_Id      
+      133 +        AND questionresponse_datetime >= :dateFrom            
+      134 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      135 +        AND questionresponses_tab.score_id = :neither_Id      
+      136          GROUP BY CONVERT(questionresponse_datetime, DATE) 
+      137          ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
+      138        "; 
+
+● Update(Module Office\Server Side\Response_GetDisagreeNumber.php)
+  ⎿  Added 3 lines, removed 2 lines
+      130          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      131          WHERE clientresponses_tab.office_id = :officeId 
+      132          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      133 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      134 -        AND questionresponses_tab.score_id = :disagree_Id     
+      133 +        AND questionresponse_datetime >= :dateFrom            
+      134 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      135 +        AND questionresponses_tab.score_id = :disagree_Id     
+      136          GROUP BY CONVERT(questionresponse_datetime, DATE) 
+      137          ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
+      138        "; 
+
+● Update(Module Office\Server Side\Response_GetStronglyDisagreeNumber.php)
+  ⎿  Added 3 lines, removed 2 lines
+      130          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      131          WHERE clientresponses_tab.office_id = :officeId 
+      132          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      133 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      134 -        AND questionresponses_tab.score_id = :stronglyDisagree
+          -_Id                                                           
+      133 +        AND questionresponse_datetime >= :dateFrom            
+      134 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      135 +        AND questionresponses_tab.score_id = :stronglyDisagree
+          +_Id                                                           
+      136          GROUP BY CONVERT(questionresponse_datetime, DATE) 
+      137          ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
+      138        "; 
+
+● Update(Module Office\Server Side\Response_GetNoRatingNumber.php)
+  ⎿  Added 3 lines, removed 2 lines
+      129          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      130          WHERE clientresponses_tab.office_id = :officeId 
+      131          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      132 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      133 -        AND questionresponses_tab.score_id = :noRating_Id     
+      132 +        AND questionresponse_datetime >= :dateFrom            
+      133 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      134 +        AND questionresponses_tab.score_id = :noRating_Id     
+      135          GROUP BY CONVERT(questionresponse_datetime, DATE) 
+      136          ORDER BY CONVERT(questionresponse_datetime, DATE) ASC;
+      137        "; 
+
+● Update(Module Office\Server Side\Response_RespondentPerScore.php)
+  ⎿  Added 2 lines, removed 1 line
+      118          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      119          WHERE clientresponses_tab.office_id = :officeId 
+      120          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal) 
+      121 -        AND CONVERT(questionresponse_datetime, DATE) BETWEEN C
+          -ONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)            
+      121 +        AND questionresponse_datetime >= :dateFrom            
+      122 +        AND questionresponse_datetime < DATE_ADD(:dateTo, INTE
+          +RVAL 1 DAY)                                                   
+      123          GROUP BY scores_tab.score_name
+      124          ORDER BY scores_tab.score_id;
+      125        "; 
+
+● Update(Module Office\Server Side\Response_CountPassScore.php)
+  ⎿  Added 2 lines, removed 1 line
+      117          ON questionresponses_tab.clientresponse_reference = cl
+           ientresponses_tab.clientresponse_reference 
+      118          WHERE clientresponses_tab.office_id = :officeId 
+      119          AND (questionresponses_tab.score_id = :stronglyAgree_I
+           d OR questionresponses_tab.score_id = :agree_Id)
+      120 -        AND CONVERT(questionresponses_tab.questionresponse_dat
+          -etime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dat
+          -eTo, DATE)                                                    
+      120 +        AND questionresponses_tab.questionresponse_datetime >=
+          + :dateFrom                                                    
+      121 +        AND questionresponses_tab.questionresponse_datetime < 
+          +DATE_ADD(:dateTo, INTERVAL 1 DAY)                             
+      122          AND (clientresponses_tab.clienttype_id = :clientTypeIn
+           ternal OR clientresponses_tab.clienttype_id = :clientTypeExter
+           nal);
+      123        "; 
+      124        /*_Prep query*/
+
+● Update(Module Office\Server Side\Response_GetOfficeServiceAvailed.php)
+  ⎿  Error editing file
+
+● Update(Module Office\Server Side\Response_CitizenCharterTwoScores.php)
+  ⎿  Error editing file
+
+● Update(Module Office\Server Side\Response_CitizenCharterThreeScores.php)
+  ⎿  Added 23 lines, removed 22 lines
+      113          SELECT cc3questions_tab.ccquestion_question AS 'ccQues
+           tion',
+      114          cc3questions_tab.ccquestionsrate_numbering AS 'ccNumbe
+           ring',
+      115          cc3questions_tab.ccquestionsrate_value AS 'ccRate',
+      116 -        IFNULL(ccscores_tab.responses, 0) AS 'responses'      
+      116 +        IFNULL(ccscores_tab.responses, 0) AS 'responses'      
+      117          FROM (SELECT ccquestionsrates_tab.ccquestionsrate_id A
+           S 'ccquestionsrate_id',
+      118            ccquestionsrates_tab.ccquestionsrate_numbering AS 'c
+           cquestionsrate_numbering',
+      119 -          ccquestionsrates_tab.ccquestionsrate_value AS 'ccque
+          -stionsrate_value',                                            
+      120 -          ccquestions_tab.ccquestion_question AS 'ccquestion_q
+          -uestion'                                                      
+      121 -          FROM ccquestionsrates_tab                           
+      122 -          INNER JOIN ccquestions_tab                          
+      123 -          ON ccquestionsrates_tab.ccquestion_id = ccquestions_
+          -tab.ccquestion_id                                             
+      124 -          WHERE ccquestionsrates_tab.ccquestion_id = :ccThree_
+          -Id                                                            
+      125 -          ORDER BY ccquestionsrates_tab.ccquestionsrate_number
+          -ing                                                           
+      126 -        ) AS cc3questions_tab                                 
+      119 +          ccquestionsrates_tab.ccquestionsrate_value AS 'ccque
+          +stionsrate_value',                                            
+      120 +          ccquestions_tab.ccquestion_question AS 'ccquestion_q
+          +uestion'                                                      
+      121 +          FROM ccquestionsrates_tab                           
+      122 +          INNER JOIN ccquestions_tab                          
+      123 +          ON ccquestionsrates_tab.ccquestion_id = ccquestions_
+          +tab.ccquestion_id                                             
+      124 +          WHERE ccquestionsrates_tab.ccquestion_id = :ccThree_
+          +Id                                                            
+      125 +        ) AS cc3questions_tab                                 
+      126          LEFT JOIN (SELECT ccresponses_tab.ccquestionsrate_id A
+           S 'ccquestionsrate_id',
+      128 -            COUNT(ccresponses_tab.ccresponse_id) AS 'responses
+          -'                                                             
+      129 -            FROM clientresponses_tab                          
+      130 -            INNER JOIN ccresponses_tab                        
+      131 -            ON clientresponses_tab.clientresponse_reference = 
+          -ccresponses_tab.clientresponse_reference                      
+      132 -            INNER JOIN ccquestionsrates_tab                   
+      133 -            ON ccresponses_tab.ccquestionsrate_id = ccquestion
+          -srates_tab.ccquestionsrate_id                                 
+      134 -            WHERE clientresponses_tab.office_id = :officeId   
+      135 -            AND (clientresponses_tab.clienttype_id = :clientTy
+          -peInternal OR clientresponses_tab.clienttype_id = :clientTypeE
+          -xternal)                                                      
+      136 -          AND CONVERT(ccresponses_tab.ccresponse_datetime, DAT
+          -E) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+      137 -            AND ccquestionsrates_tab.ccquestion_id = :ccThree_
+          -Id                                                            
+      138 -            GROUP BY ccresponses_tab.ccquestionsrate_id       
+      139 -        ) AS ccscores_tab                                     
+      140 -        ON cc3questions_tab.ccquestionsrate_id = ccscores_tab.
+          -ccquestionsrate_id;                                                             
+      127 +          COUNT(ccresponses_tab.ccresponse_id) AS 'responses' 
+      128 +          FROM clientresponses_tab                            
+      129 +          INNER JOIN ccresponses_tab                          
+      130 +          ON clientresponses_tab.clientresponse_reference = cc
+          +responses_tab.clientresponse_reference                        
+      131 +          INNER JOIN ccquestionsrates_tab                     
+      132 +          ON ccresponses_tab.ccquestionsrate_id = ccquestionsr
+          +ates_tab.ccquestionsrate_id                                   
+      133 +          WHERE clientresponses_tab.office_id = :officeId     
+      134 +          AND (clientresponses_tab.clienttype_id = :clientType
+          +Internal OR clientresponses_tab.clienttype_id = :clientTypeExt
+          +ernal)                                                        
+      135 +          AND ccresponses_tab.ccresponse_datetime >= :dateFrom
+      136 +          AND ccresponses_tab.ccresponse_datetime < DATE_ADD(:
+          +dateTo, INTERVAL 1 DAY)                                       
+      137 +          AND ccquestionsrates_tab.ccquestion_id = :ccThree_Id
+      138 +          GROUP BY ccresponses_tab.ccquestionsrate_id         
+      139 +        ) AS ccscores_tab                                     
+      140 +        ON cc3questions_tab.ccquestionsrate_id = ccscores_tab.
+          +ccquestionsrate_id                                            
+      141 +        ORDER BY cc3questions_tab.ccquestionsrate_numbering;  
+      142        "; 
+      143        /*_Prep query*/
+      144  
+
+● Two files had indentation mismatches. Let me re-read them to get the exact
+  whitespace.
+
+  Read 2 files (ctrl+o to expand)
+● Update(Module Office\Server Side\Response_GetOfficeServiceAvailed.php)
+  ⎿  Added 2 lines, removed 1 line
+      130              ON officeservices_tab.officeservice_id = clientres
+           ponses_tab.officeservice_id 
+      131              WHERE clientresponses_tab.office_id = :officeId 
+      132              AND (clientresponses_tab.clienttype_id = :clientTy
+           peInternal OR clientresponses_tab.clienttype_id = :clientTypeE
+           xternal)
+      133 -            AND CONVERT(clientresponses_tab.clientresponse_dat
+          -e, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND  CONVERT(:dateTo
+          -, DATE)                                                       
+      133 +            AND clientresponses_tab.clientresponse_date >= :da
+          +teFrom                                                        
+      134 +          AND clientresponses_tab.clientresponse_date < DATE_A
+          +DD(:dateTo, INTERVAL 1 DAY)                                   
+      135              GROUP BY officeservices_tab.officeservice_name
+      136          ) AS serviceavailed_dummytab 
+      137          ON officeservices_dummytab.officeservice_id = servicea
+           vailed_dummytab.officeservice_id 
+
+● Update(Module Office\Server Side\Response_CitizenCharterTwoScores.php)
+  ⎿  Added 24 lines, removed 23 lines
+      113          SELECT cc2questions_tab.ccquestion_question AS 'ccQues
+           tion',
+      114          cc2questions_tab.ccquestionsrate_numbering AS 'ccNumbe
+           ring',
+      115          cc2questions_tab.ccquestionsrate_value AS 'ccRate',
+      116 -        IFNULL(ccscores_tab.responses, 0) AS 'responses'      
+      116 +        IFNULL(ccscores_tab.responses, 0) AS 'responses'      
+      117          FROM (SELECT ccquestionsrates_tab.ccquestionsrate_id A
+           S 'ccquestionsrate_id',
+      118            ccquestionsrates_tab.ccquestionsrate_numbering AS 'c
+           cquestionsrate_numbering',
+      119 -          ccquestionsrates_tab.ccquestionsrate_value AS 'ccque
+          -stionsrate_value',                                            
+      120 -          ccquestions_tab.ccquestion_question AS 'ccquestion_q
+          -uestion'                                                      
+      121 -          FROM ccquestionsrates_tab                           
+      122 -          INNER JOIN ccquestions_tab                          
+      123 -          ON ccquestionsrates_tab.ccquestion_id = ccquestions_
+          -tab.ccquestion_id                                             
+      124 -          WHERE ccquestionsrates_tab.ccquestion_id = :ccTwo_Id
+          -                                                              
+      125 -          ORDER BY ccquestionsrates_tab.ccquestionsrate_number
+          -ing                                                           
+      126 -        ) AS cc2questions_tab                                 
+      119 +          ccquestionsrates_tab.ccquestionsrate_value AS 'ccque
+          +stionsrate_value',                                            
+      120 +          ccquestions_tab.ccquestion_question AS 'ccquestion_q
+          +uestion'                                                      
+      121 +          FROM ccquestionsrates_tab                           
+      122 +          INNER JOIN ccquestions_tab                          
+      123 +          ON ccquestionsrates_tab.ccquestion_id = ccquestions_
+          +tab.ccquestion_id                                             
+      124 +          WHERE ccquestionsrates_tab.ccquestion_id = :ccTwo_Id
+      125 +        ) AS cc2questions_tab                                 
+      126          LEFT JOIN (SELECT ccresponses_tab.ccquestionsrate_id A
+           S 'ccquestionsrate_id',
+      128 -            COUNT(ccresponses_tab.ccresponse_id) AS 'responses
+          -'                                                             
+      129 -            FROM clientresponses_tab                          
+      130 -            INNER JOIN ccresponses_tab                        
+      131 -            ON clientresponses_tab.clientresponse_reference = 
+          -ccresponses_tab.clientresponse_reference                      
+      132 -            INNER JOIN ccquestionsrates_tab                   
+      133 -            ON ccresponses_tab.ccquestionsrate_id = ccquestion
+          -srates_tab.ccquestionsrate_id                                 
+      134 -            WHERE clientresponses_tab.office_id = :officeId   
+      135 -            AND (clientresponses_tab.clienttype_id = :clientTy
+          -peInternal OR clientresponses_tab.clienttype_id = :clientTypeE
+          -xternal)                                                      
+      136 -          AND CONVERT(ccresponses_tab.ccresponse_datetime, DAT
+          -E) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+      137 -            AND ccquestionsrates_tab.ccquestion_id = :ccTwo_Id
+          -                                                              
+      138 -            GROUP BY ccresponses_tab.ccquestionsrate_id       
+      139 -        ) AS ccscores_tab                                     
+      140 -        ON cc2questions_tab.ccquestionsrate_id = ccscores_tab.
+          -ccquestionsrate_id;                                                             
+      141 -      ";                                                                                                          
+      127 +          COUNT(ccresponses_tab.ccresponse_id) AS 'responses' 
+      128 +          FROM clientresponses_tab                            
+      129 +          INNER JOIN ccresponses_tab                          
+      130 +          ON clientresponses_tab.clientresponse_reference = cc
+          +responses_tab.clientresponse_reference                        
+      131 +          INNER JOIN ccquestionsrates_tab                     
+      132 +          ON ccresponses_tab.ccquestionsrate_id = ccquestionsr
+          +ates_tab.ccquestionsrate_id                                   
+      133 +          WHERE clientresponses_tab.office_id = :officeId     
+      134 +          AND (clientresponses_tab.clienttype_id = :clientType
+          +Internal OR clientresponses_tab.clienttype_id = :clientTypeExt
+          +ernal)                                                        
+      135 +          AND ccresponses_tab.ccresponse_datetime >= :dateFrom
+      136 +          AND ccresponses_tab.ccresponse_datetime < DATE_ADD(:
+          +dateTo, INTERVAL 1 DAY)                                       
+      137 +          AND ccquestionsrates_tab.ccquestion_id = :ccTwo_Id  
+      138 +          GROUP BY ccresponses_tab.ccquestionsrate_id         
+      139 +        ) AS ccscores_tab                                     
+      140 +        ON cc2questions_tab.ccquestionsrate_id = ccscores_tab.
+          +ccquestionsrate_id                                            
+      141 +        ORDER BY cc2questions_tab.ccquestionsrate_numbering;  
+      142 +      ";                                                                                                           
+      143        /*_Prep query*/
+      144  
+      145        /*_Execute query*/
+
+● Now the most impactful one — Response_QuestionsScoresDetails.php,
+  consolidating 6 LEFT JOIN subqueries into one.
+
+● Update(Module Office\Server Side\Response_QuestionsScoresDetails.php)
+  ⎿  Added 34 lines, removed 95 lines
+      116        
+      117        /*Get Questions scores details*/
+      118        /*_Prep query*/
+      119 -      $questionsScoreDetails_Query = "SELECT officeQuestions_t
+          -ab.question_id AS 'questionId',                               
+      119 +      $questionsScoreDetails_Query = "SELECT officeQuestions_t
+          +ab.question_id AS 'questionId',                               
+      120          officeQuestions_tab.question_value AS 'questionValue',
+      121          officeQuestions_tab.question_number AS 'questionNo',
+      122 -        IFNULL(totalStronglyAgreeResp_tab.totalStronglyAgree, 
+          -0) AS 'totalStronglyAgree',                                   
+      123 -        IFNULL(totalAgreeResp_tab.totalAgree, 0) AS 'totalAgre
+          -e',                                                           
+      124 -        IFNULL(totalNeitherResp_tab.totalNeither, 0) AS 'total
+          -Neither',                                                     
+      125 -        IFNULL(totalDisagreeResp_tab.totalDisagree, 0) AS 'tot
+          -alDisagree',                                                  
+      126 -        IFNULL(totalStronglyDisagreeResp_tab.totalStronglyDisa
+          -gree, 0) AS 'totalStronglyDisagree',                          
+      127 -        IFNULL(totalNoRatingResp_tab.totalNoRating, 0) AS 'tot
+          -alNoRating'                                                   
+      122 +        IFNULL(scoresResp_tab.totalStronglyAgree, 0) AS 'total
+          +StronglyAgree',                                               
+      123 +        IFNULL(scoresResp_tab.totalAgree, 0) AS 'totalAgree', 
+      124 +        IFNULL(scoresResp_tab.totalNeither, 0) AS 'totalNeithe
+          +r',                                                           
+      125 +        IFNULL(scoresResp_tab.totalDisagree, 0) AS 'totalDisag
+          +ree',                                                         
+      126 +        IFNULL(scoresResp_tab.totalStronglyDisagree, 0) AS 'to
+          +talStronglyDisagree',                                         
+      127 +        IFNULL(scoresResp_tab.totalNoRating, 0) AS 'totalNoRat
+          +ing'                                                          
+      128          FROM (SELECT DISTINCT questionstag_tab.question_id AS 
+           'question_id',
+      129                       questions_tab.question_value AS 'question_value'
+           ,
+      130                       questions_tab.question_number AS 'question_numbe
+           r'
+      131 -            FROM offices_tab                                  
+      132 -            INNER JOIN officestag_tab                         
+      133 -            ON offices_tab.office_id = officestag_tab.office_i
+          -d                                                             
+      134 -            INNER JOIN forms_tab                              
+      135 -            ON officestag_tab.form_id = forms_tab.form_id     
+      136 -            INNER JOIN questionstag_tab                       
+      137 -            ON forms_tab.form_id = questionstag_tab.form_id   
+      138 -            INNER JOIN questions_tab                          
+      139 -            ON questionstag_tab.question_id = questions_tab.qu
+          -estion_id                                                     
+      131 +            FROM offices_tab                                  
+      132 +            INNER JOIN officestag_tab                         
+      133 +            ON offices_tab.office_id = officestag_tab.office_i
+          +d                                                             
+      134 +            INNER JOIN forms_tab                              
+      135 +            ON officestag_tab.form_id = forms_tab.form_id     
+      136 +            INNER JOIN questionstag_tab                       
+      137 +            ON forms_tab.form_id = questionstag_tab.form_id   
+      138 +            INNER JOIN questions_tab                          
+      139 +            ON questionstag_tab.question_id = questions_tab.qu
+          +estion_id                                                     
+      140              WHERE offices_tab.office_id = :officeId
+      141              AND NOT questions_tab.dimension_id = :dimensionCom
+           ment_Id
+      142 -            AND(forms_tab.clienttype_id = :clientTypeInternal 
+          -OR forms_tab.clienttype_id = :clientTypeExternal)                   
+      143 -            ) AS officeQuestions_tab                          
+      144 -        LEFT JOIN (SELECT clientresponses_tab.clientresponse_r
+          -eference AS 'clientresponse_reference',                       
+      145 -                    questionresponses_tab.question_id AS 'ques
+          -tion_id',                                                     
+      146 -                    COUNT(questionresponses_tab.questionrespon
+          -se_id) AS 'totalStronglyAgree'                                
+      147 -                    FROM clientresponses_tab                  
+      148 -                    INNER JOIN questionresponses_tab          
+      142 +            AND (forms_tab.clienttype_id = :clientTypeInternal
+          + OR forms_tab.clienttype_id = :clientTypeExternal)            
+      143 +            ) AS officeQuestions_tab                          
+      144 +        LEFT JOIN (SELECT questionresponses_tab.question_id AS
+          + 'question_id',                                               
+      145 +                    SUM(questionresponses_tab.score_id = :stro
+          +nglyAgree_Id) AS totalStronglyAgree,                          
+      146 +                    SUM(questionresponses_tab.score_id = :agre
+          +e_Id) AS totalAgree,                                          
+      147 +                    SUM(questionresponses_tab.score_id = :neit
+          +her_Id) AS totalNeither,                                      
+      148 +                    SUM(questionresponses_tab.score_id = :disa
+          +gree_Id) AS totalDisagree,                                    
+      149 +                    SUM(questionresponses_tab.score_id = :stro
+          +nglyDisagree_Id) AS totalStronglyDisagree,                    
+      150 +                    SUM(questionresponses_tab.score_id = :noRa
+          +ting_Id) AS totalNoRating                                     
+      151 +                    FROM clientresponses_tab                  
+      152 +                    INNER JOIN questionresponses_tab          
+      153                      ON clientresponses_tab.clientresponse_refe
+           rence = questionresponses_tab.clientresponse_reference
+      150 -                    WHERE questionresponses_tab.score_id = :st
+          -ronglyAgree_Id                                                
+      151 -                     AND clientresponses_tab.office_id = :office
+          -Id                                                            
+      154 +                    WHERE clientresponses_tab.office_id = :off
+          +iceId                                                         
+      155                      AND (clientresponses_tab.clienttype_id = :
+           clientTypeInternal OR clientresponses_tab.clienttype_id = :cli
+           entTypeExternal)
+      153 -                    AND CONVERT(clientresponse_date, DATE) BET
+          -WEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)      
+      156 +                    AND clientresponses_tab.clientresponse_dat
+          +e >= :dateFrom                                                
+      157 +                    AND clientresponses_tab.clientresponse_dat
+          +e < DATE_ADD(:dateTo, INTERVAL 1 DAY)                         
+      158                      GROUP BY questionresponses_tab.question_id
+      155 -                  ) AS totalStronglyAgreeResp_tab             
+      156 -        ON officeQuestions_tab.question_id = totalStronglyAgre
+          -eResp_tab.question_id                                         
+      157 -        LEFT JOIN (SELECT clientresponses_tab.clientresponse_r
+          -eference AS 'clientresponse_reference',                       
+      158 -                    questionresponses_tab.question_id AS 'ques
+          -tion_id',                                                     
+      159 -                    COUNT(questionresponses_tab.questionrespon
+          -se_id) AS 'totalAgree'                                        
+      160 -                    FROM clientresponses_tab                  
+      161 -                    INNER JOIN questionresponses_tab          
+      162 -                    ON clientresponses_tab.clientresponse_refe
+          -rence = questionresponses_tab.clientresponse_reference        
+      163 -                    WHERE questionresponses_tab.score_id = :ag
+          -ree_Id                                                        
+      164 -                     AND clientresponses_tab.office_id = :office
+          -Id                                                            
+      165 -                    AND (clientresponses_tab.clienttype_id = :
+          -clientTypeInternal OR clientresponses_tab.clienttype_id = :cli
+          -entTypeExternal)                                              
+      166 -                    AND CONVERT(clientresponse_date, DATE) BET
+          -WEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)      
+      167 -                    GROUP BY questionresponses_tab.question_id
+      168 -                  ) AS totalAgreeResp_tab                     
+      169 -        ON officeQuestions_tab.question_id = totalAgreeResp_ta
+          -b.question_id                                                 
+      170 -        LEFT JOIN (SELECT clientresponses_tab.clientresponse_r
+          -eference AS 'clientresponse_reference',                       
+      171 -                    questionresponses_tab.question_id AS 'ques
+          -tion_id',                                                     
+      172 -                    COUNT(questionresponses_tab.questionrespon
+          -se_id) AS 'totalNeither'                                      
+      173 -                    FROM clientresponses_tab                  
+      174 -                    INNER JOIN questionresponses_tab          
+      175 -                    ON clientresponses_tab.clientresponse_refe
+          -rence = questionresponses_tab.clientresponse_reference        
+      176 -                    WHERE questionresponses_tab.score_id = :ne
+          -ither_Id                                                      
+      177 -                     AND clientresponses_tab.office_id = :office
+          -Id                                                            
+      178 -                    AND (clientresponses_tab.clienttype_id = :
+          -clientTypeInternal OR clientresponses_tab.clienttype_id = :cli
+          -entTypeExternal)                                              
+      179 -                    AND CONVERT(clientresponse_date, DATE) BET
+          -WEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)      
+      180 -                    GROUP BY questionresponses_tab.question_id
+      181 -                  ) AS totalNeitherResp_tab                   
+      182 -        ON officeQuestions_tab.question_id = totalNeitherResp_
+          -tab.question_id                                               
+      183 -        LEFT JOIN (SELECT clientresponses_tab.clientresponse_r
+          -eference AS 'clientresponse_reference',                       
+      184 -                    questionresponses_tab.question_id AS 'ques
+          -tion_id',                                                     
+      185 -                    COUNT(questionresponses_tab.questionrespon
+          -se_id) AS 'totalDisagree'                                     
+      186 -                    FROM clientresponses_tab                  
+      187 -                    INNER JOIN questionresponses_tab          
+      188 -                    ON clientresponses_tab.clientresponse_refe
+          -rence = questionresponses_tab.clientresponse_reference        
+      189 -                    WHERE questionresponses_tab.score_id = :di
+          -sagree_Id                                                     
+      190 -                     AND clientresponses_tab.office_id = :office
+          -Id                                                            
+      191 -                    AND (clientresponses_tab.clienttype_id = :
+          -clientTypeInternal OR clientresponses_tab.clienttype_id = :cli
+          -entTypeExternal)                                              
+      192 -                    AND CONVERT(clientresponse_date, DATE) BET
+          -WEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)      
+      193 -                    GROUP BY questionresponses_tab.question_id
+      194 -                  ) AS totalDisagreeResp_tab                  
+      195 -        ON officeQuestions_tab.question_id = totalDisagreeResp
+          -_tab.question_id                                              
+      196 -        LEFT JOIN (SELECT clientresponses_tab.clientresponse_r
+          -eference AS 'clientresponse_reference',                       
+      197 -                    questionresponses_tab.question_id AS 'ques
+          -tion_id',                                                     
+      198 -                    COUNT(questionresponses_tab.questionrespon
+          -se_id) AS 'totalStronglyDisagree'                             
+      199 -                    FROM clientresponses_tab                  
+      200 -                    INNER JOIN questionresponses_tab          
+      201 -                    ON clientresponses_tab.clientresponse_refe
+          -rence = questionresponses_tab.clientresponse_reference        
+      202 -                    WHERE questionresponses_tab.score_id = :st
+          -ronglyDisagree_Id                                             
+      203 -                     AND clientresponses_tab.office_id = :office
+          -Id                                                            
+      204 -                    AND (clientresponses_tab.clienttype_id = :
+          -clientTypeInternal OR clientresponses_tab.clienttype_id = :cli
+          -entTypeExternal)                                              
+      205 -                    AND CONVERT(clientresponse_date, DATE) BET
+          -WEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)      
+      206 -                    GROUP BY questionresponses_tab.question_id
+      207 -                  ) AS totalStronglyDisagreeResp_tab          
+      208 -        ON officeQuestions_tab.question_id = totalStronglyDisa
+          -greeResp_tab.question_id                                      
+      209 -        LEFT JOIN (SELECT clientresponses_tab.clientresponse_r
+          -eference AS 'clientresponse_reference',                       
+      210 -                    questionresponses_tab.question_id AS 'ques
+          -tion_id',                                                     
+      211 -                    COUNT(questionresponses_tab.questionrespon
+          -se_id) AS 'totalNoRating'                                     
+      212 -                    FROM clientresponses_tab                  
+      213 -                    INNER JOIN questionresponses_tab          
+      214 -                    ON clientresponses_tab.clientresponse_refe
+          -rence = questionresponses_tab.clientresponse_reference        
+      215 -                    WHERE questionresponses_tab.score_id = :no
+          -Rating_Id                                                     
+      216 -                     AND clientresponses_tab.office_id = :office
+          -Id                                                            
+      217 -                    AND (clientresponses_tab.clienttype_id = :
+          -clientTypeInternal OR clientresponses_tab.clienttype_id = :cli
+          -entTypeExternal)                                              
+      218 -                    AND CONVERT(clientresponse_date, DATE) BET
+          -WEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)      
+      219 -                    GROUP BY questionresponses_tab.question_id
+      220 -                  ) AS totalNoRatingResp_tab                  
+      221 -        ON officeQuestions_tab.question_id = totalNoRatingResp
+          -_tab.question_id                                              
+      222 -        ORDER BY officeQuestions_tab.question_number;                                 
+      223 -      ";                                                                                                          
+      159 +                  ) AS scoresResp_tab                         
+      160 +        ON officeQuestions_tab.question_id = scoresResp_tab.qu
+          +estion_id                                                     
+      161 +        ORDER BY officeQuestions_tab.question_number;         
+      162 +      ";                                                                                                           
+      163        /*_Prep query*/
+      164  
+      165        /*_Execute query*/
+
+● All 13 files updated. Here's a summary of every change applied:
+
+  Sargable date filter — applied to all 13 files with date-filtered queries:
+
+  ┌────────────────────────────────────┬───────────────────────────┐
+  │                File                │       Column fixed        │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_TotalRespondent           │ clientresponse_date       │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_TotalAnsweredQuestions    │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetStronglyAgreeNumber    │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetAgreeNumber            │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetNeitherNumber          │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetDisagreeNumber         │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetStronglyDisagreeNumber │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetNoRatingNumber         │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_RespondentPerScore        │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_CountPassScore            │ questionresponse_datetime │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_GetOfficeServiceAvailed   │ clientresponse_date       │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_CitizenCharterTwoScores   │ ccresponse_datetime       │
+  ├────────────────────────────────────┼───────────────────────────┤
+  │ Response_CitizenCharterThreeScores │ ccresponse_datetime       │
+  └────────────────────────────────────┴───────────────────────────┘
+
+  ORDER BY moved from derived table to outer query — CitizenCharterTwo,
+  CitizenCharterThree (same fix as CitizenCharterOne from before)
+
+  6 LEFT JOIN subqueries consolidated into 1 — Response_QuestionsScoresDetails
+  reduced from 6 separate scans of clientresponses_tab + questionresponses_tab
+  down to a single scan using conditional SUM(), cutting that query's I/O by
+  ~83%.
+
+✻ Worked for 4m 7s
+
+※ recap: Optimized MySQL queries across all Module Office Server Side Response files by fixing non-sargable date filters and consolidating redundant subqueries. Next: apply the same index additions to the SQL file for any newly touched tables like ccresponses_tab. (disable recaps in /config)
+
+❯ add a matching index in valmed_vmc_csat.sql for those tables                  
+
+● Let me find the ALTER TABLE index sections for all the relevant tables.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Now let me see the full clientresponses_tab index block at line 3579210.
+
+  Read 1 file (ctrl+o to expand)
+
+● There are two separate clientresponses_tab index blocks (the file has
+  duplicate sections). I need to add idx_clientresponse_date to both, plus add
+  idx_questionresponse_datetime and idx_ccresponse_datetime to their respective
+  tables. Let me do all four edits in parallel.
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Error editing file
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Added 3 lines, removed 1 line
+      3579218    ADD KEY `office_id(offices_tab)(3)` (`office_id`),
+      3579219    ADD KEY `gender_id` (`gender_id`),
+      3579220    ADD KEY `genderpreference_id(genderpreferences_tab)` (`g
+               enderpreference_id`),
+      3579221 -  ADD KEY `officeservice_id(officeservices_tab)` (`offices
+              -ervice_id`);                                              
+      3579221 +  ADD KEY `officeservice_id(officeservices_tab)` (`offices
+              +ervice_id`),                                              
+      3579222 +  ADD KEY `idx_office_clienttype` (`office_id`,`clienttype
+              +_id`),                                                    
+      3579223 +  ADD KEY `idx_clientresponse_date` (`clientresponse_date`
+              +);                                                        
+      3579224  
+      3579225  --
+      3579226  -- Indexes for table `clienttypes_tab`
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Added 2 lines, removed 1 line
+      3579319    ADD PRIMARY KEY (`questionresponse_id`),
+      3579320    ADD KEY `question_id(questions_tab)(1)` (`question_id`),
+      3579321    ADD KEY `score_id(scores_tab)` (`score_id`),
+      3579322 -  ADD KEY `clientresponse_reference(clientresponses_tab)(2
+              -)` (`clientresponse_reference`);                          
+      3579322 +  ADD KEY `clientresponse_reference(clientresponses_tab)(2
+              +)` (`clientresponse_reference`),                          
+      3579323 +  ADD KEY `idx_questionresponse_datetime` (`questionrespon
+              +se_datetime`);                                            
+      3579324  
+      3579325  --
+      3579326  -- Indexes for table `questionsgroups_tab`
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Added 2 lines, removed 1 line
+      3579202  ALTER TABLE `ccresponses_tab`
+      3579203    ADD PRIMARY KEY (`ccresponse_id`),
+      3579204    ADD KEY `ccquestionsrate_id(ccquestionsrates_tab)` (`ccq
+               uestionsrate_id`),
+      3579205 -  ADD KEY `clientresponse_reference(clientresponses_tab)(1
+              -)` (`clientresponse_reference`);                          
+      3579205 +  ADD KEY `clientresponse_reference(clientresponses_tab)(1
+              +)` (`clientresponse_reference`),                          
+      3579206 +  ADD KEY `idx_ccresponse_datetime` (`ccresponse_datetime`
+              +);                                                        
+      3579207  
+      3579208  --
+      3579209  -- Indexes for table `clientresponses_tab`
+
+● The first edit didn't match — let me re-read the first clientresponses_tab
+  block to get the exact current text.
+
+  Read 1 file (ctrl+o to expand)
+
+● The file has grown since the data was inserted, so line numbers have shifted.
+  Let me locate the first clientresponses_tab index block by searching for the
+  key we already added.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Good — the second block is complete. Now let me find the first
+  clientresponses_tab index block (it had idx_office_clienttype added earlier
+  but not yet idx_clientresponse_date).
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Only one instance exists, meaning the first block is the same one we just
+  updated. Let me verify there's truly only one clientresponses_tab index block.
+
+  Searched for 1 pattern (ctrl+o to expand)
+● Good — there's only one index block. All our indexes are in the right place.
+  Let me verify all four new indexes were applied correctly.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● All indexes are confirmed in the file. Let me also verify the earlier
+  idx_commentresponse_datetime is still intact.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● The idx_commentresponse_datetime from the earlier session is missing. Let me
+  find the commentsresponses_tab index block and re-add it.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● The commentsresponses_tab index was lost — the earlier edit was to a different
+   section of the file. Adding it now.
+
+● Update(valmed_vmc_csat.sql)
+  ⎿  Added 2 lines, removed 1 line
+      3579235  ALTER TABLE `commentsresponses_tab`
+      3579236    ADD PRIMARY KEY (`commentresponse_id`),
+      3579237    ADD KEY `question_id(questions_tab)(2)` (`question_id`),
+      3579238 -  ADD KEY `clientresponse_reference(clientresponses_tab)(3
+              -)` (`clientresponse_reference`);                          
+      3579238 +  ADD KEY `clientresponse_reference(clientresponses_tab)(3
+              +)` (`clientresponse_reference`),                          
+      3579239 +  ADD KEY `idx_commentresponse_datetime` (`commentresponse
+              +_datetime`);                                              
+      3579240  
+      3579241  --
+      3579242  -- Indexes for table `dimensions_tab`
+
+● All indexes are now in place. Here's the complete set added across this
+  session:
+
+  Table: clientresponses_tab
+  Index: idx_office_clienttype
+  Column(s): (office_id, clienttype_id)
+  Purpose: Composite filter on office + client type
+  ────────────────────────────────────────
+  Table: clientresponses_tab
+  Index: idx_clientresponse_date
+  Column(s): (clientresponse_date)
+  Purpose: Sargable date range filter
+  ────────────────────────────────────────
+  Table: commentsresponses_tab
+  Index: idx_commentresponse_datetime
+  Column(s): (commentresponse_datetime)
+  Purpose: Sargable date range filter
+  ────────────────────────────────────────
+  Table: questionresponses_tab
+  Index: idx_questionresponse_datetime
+  Column(s): (questionresponse_datetime)
+  Purpose: Sargable date range filter
+  ────────────────────────────────────────
+  Table: ccresponses_tab
+  Index: idx_ccresponse_datetime
+  Column(s): (ccresponse_datetime)
+  Purpose: Sargable date range filter
+
+  To apply to the live database, run the five ALTER TABLE statements in
+  phpMyAdmin against valmed_vmc_csat.
+
+✻ Baked for 2m 55s
+
+※ recap: Optimized all Module Office Server Side queries for faster phpMyAdmin reads by fixing non-sargable date filters and consolidating redundant subqueries, then added matching indexes to valmed_vmc_csat.sql. Next: apply the ALTER TABLE index statements to the live database in phpMyAdmin.
