@@ -1,5 +1,5 @@
 /*Import*/
-import {requestName} from "./Request_Name.js";
+import {requestName, sample1, sample2} from "./Request_Name.js";
 /*Import*/
 
 
@@ -26,8 +26,13 @@ function submitName(controller, dataObj, controllersObj, loaderObj){
 			if(requestPromise === true){
 
 				/*Logic here*/
-				
+				console.log(`${sample1} ${sample2}`);
+
+				if("myFunctionOrController" in controllersObj){
+					controllersObj.myFunctionOrController();
+				}
 				/*Logic here*/
+
 
 				/*Remove loader*/
 				/*				

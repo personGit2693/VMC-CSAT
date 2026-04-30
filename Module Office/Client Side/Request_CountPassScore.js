@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -13,60 +13,61 @@ var countedPassScore = null;
 /*Export variables*/
 
 
-/*Count pass score*/
-async function requestCountPassScore(officeId, stronglyAgree_Id, agree_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
-	
+/*Count Pass Score*/
+async function requestCountPassScore(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("officeId", officeId);
-		fData.append("clientTypeInternal", clientTypeInternal);
-		fData.append("clientTypeExternal", clientTypeExternal);
-		fData.append("dateFrom", dateFrom);
-		fData.append("dateTo", dateTo);
-		fData.append("stronglyAgree_Id", stronglyAgree_Id);		
-		fData.append("agree_Id", agree_Id);
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
+		fData.append("officeId", dataObj.officeId);
+		fData.append("stronglyAgree_Id", dataObj.stronglyAgree_Id);
+		fData.append("agree_Id", dataObj.agree_Id);
+		fData.append("clientTypeInternal", dataObj.clientTypeInternal);
+		fData.append("clientTypeExternal", dataObj.clientTypeExternal);
+		fData.append("dateFrom", dataObj.dateFrom);
+		fData.append("dateTo", dataObj.dateTo);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_CountPassScore.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
-			}else if(parseObj.execution === false){
-
-				console.log("Execution Problem in Request Count Pass Score!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution !== false){
-
+				console.log(parseObj.validToken);
+				resolve(false);
+			}else if(parseObj.execution !== true){
+				console.log("Execution Problem in Request_CountPassScore!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				countedPassScore = parseObj.countedPassScore;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 
 	return await requestPromise;
 };
-/*Count pass score*/
+/*Count Pass Score*/
 
 
 /*Export*/

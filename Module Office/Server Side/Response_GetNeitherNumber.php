@@ -35,7 +35,7 @@ if(isset($_POST["token"]) && isset($_POST["neither_Id"]) && isset($_POST["client
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -47,7 +47,8 @@ if(isset($_POST["token"]) && isset($_POST["neither_Id"]) && isset($_POST["client
 	/*Prep response*/
 	$getNeitherNumber_Resp = new stdClass();
 	$getNeitherNumber_Resp->validAccess = true;
-	$getNeitherNumber_Resp->serverConnection = $dbConnection->serverConnection;
+	$getNeitherNumber_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getNeitherNumber_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getNeitherNumber_Resp->validToken = null;
 	$getNeitherNumber_Resp->execution = null;	
 	$getNeitherNumber_Resp->neitherNumberDetails_Array = array();
@@ -60,47 +61,48 @@ if(isset($_POST["token"]) && isset($_POST["neither_Id"]) && isset($_POST["client
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getNeitherNumber_Resp->validToken = $validToken;
 
-		echo json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getNeitherNumber_Resp->validToken = $validToken;
 
-		echo json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getNeitherNumber_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -136,7 +138,7 @@ if(isset($_POST["token"]) && isset($_POST["neither_Id"]) && isset($_POST["client
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$getNeitherNumber_QueryObj = $dbConnection->selectedPdoConn->prepare($getNeitherNumber_Query);
+			$getNeitherNumber_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getNeitherNumber_Query);
 			$getNeitherNumber_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$getNeitherNumber_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$getNeitherNumber_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -167,7 +169,7 @@ if(isset($_POST["token"]) && isset($_POST["neither_Id"]) && isset($_POST["client
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

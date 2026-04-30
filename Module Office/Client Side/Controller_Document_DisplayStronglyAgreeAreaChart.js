@@ -1,7 +1,8 @@
 /*Import*/
-import {valueStronglyAgreeNumberDetails, selectedPointOfEntry_Obj, stronglyAgree_Id, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
+import token from "./../../Global Client Side/Token.js";
+import {response_GetStronglyAgreeNumber_Path, selectedPointOfEntry_Obj, stronglyAgree_Id, clientTypeInternal, clientTypeExternal, valueStronglyAgreeNumberDetails} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
-import {submitGetStronglyAgreeNumber} from "./SubmitRequest_GetStronglyAgreeNumber.js";
+import {submitGetStronglyAgreeNumber} from "./Submit_GetStronglyAgreeNumber.js";
 import outputStronglyAgreeNumberAreaChart from "./Output_StronglyAgreeNumberAreaChart.js";
 /*Import*/
 
@@ -9,7 +10,11 @@ import outputStronglyAgreeNumberAreaChart from "./Output_StronglyAgreeNumberArea
 /*Controller*/
 function controller_Document_DisplayStronglyAgreeAreaChart(){
 
-	submitGetStronglyAgreeNumber(outputStronglyAgreeNumberAreaChart, valueStronglyAgreeNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, stronglyAgree_Id);
+	const dataObj = {endpoint: response_GetStronglyAgreeNumber_Path, token, officeId: selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateFrom: dateRangeOneCalLiteFromVal.value, dateTo: dateRangeOneCalLiteToVal.value, stronglyAgree_Id};
+	const controllersObj = {assignValue: valueStronglyAgreeNumberDetails, outputFn: outputStronglyAgreeNumberAreaChart};
+	const loaderObj = {};
+
+	submitGetStronglyAgreeNumber(controller_Document_DisplayStronglyAgreeAreaChart, dataObj, controllersObj, loaderObj);
 }
 /*Controller*/
 

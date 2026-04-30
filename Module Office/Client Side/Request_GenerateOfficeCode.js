@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -15,48 +15,49 @@ var generatedOfficeCode = null;
 
 
 /*Generate Office Code*/
-async function requestGenerateOfficeCode(officeId){
-	
+async function requestGenerateOfficeCode(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("officeId", officeId);		
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
+		fData.append("officeId", dataObj.officeId);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_GenerateOfficeCode.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
-			}else if(parseObj.execution === false){
-
-				console.log("Execution Problem in Request Generate Office Code!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution !== false){
-
+				console.log(parseObj.validToken);
+				resolve(false);
+			}else if(parseObj.execution !== true){
+				console.log("Execution Problem in Request_GenerateOfficeCode!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				officeCodeCreated = parseObj.officeCodeCreated;
 				generatedOfficeCode = parseObj.generatedOfficeCode;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 

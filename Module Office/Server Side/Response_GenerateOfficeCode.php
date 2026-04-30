@@ -27,7 +27,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -39,7 +39,8 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 	/*Prep response*/
 	$generateOfficeCode_Resp = new stdClass();
 	$generateOfficeCode_Resp->validAccess = true;
-	$generateOfficeCode_Resp->serverConnection = $dbConnection->serverConnection;
+	$generateOfficeCode_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$generateOfficeCode_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$generateOfficeCode_Resp->validToken = null;
 	$generateOfficeCode_Resp->execution = null;
 	$generateOfficeCode_Resp->officeCodeCreated = 0;
@@ -53,47 +54,48 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$generateOfficeCode_Resp->validToken = $validToken;
 
-		echo json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$generateOfficeCode_Resp->validToken = $validToken;
 
-		echo json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($generateOfficeCode_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -115,7 +117,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$generateOfficeCode_QueryObj = $dbConnection->selectedPdoConn->prepare($generateOfficeCode_Query);		
+			$generateOfficeCode_QueryObj = $csatDbConnection->selectedPdoConn->prepare($generateOfficeCode_Query);		
 			$generateOfficeCode_QueryObj->bindValue(':generatedOfficeCode', $generatedOfficeCode, PDO::PARAM_STR);			
 			$generateOfficeCode_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$execution = $generateOfficeCode_QueryObj->execute();
@@ -133,7 +135,7 @@ if(isset($_POST["token"]) && isset($_POST["officeId"])){
 	
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

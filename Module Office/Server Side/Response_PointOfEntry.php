@@ -29,7 +29,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 
 	/*Prep Variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	$division_id = intval($_SESSION["division_id"]);
 	/*Prep Variables*/
@@ -38,7 +38,8 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 	/*Prep response*/
 	$getPointOfEntry_Resp = new stdClass();
 	$getPointOfEntry_Resp->validAccess = true;
-	$getPointOfEntry_Resp->serverConnection = $dbConnection->serverConnection;
+	$getPointOfEntry_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getPointOfEntry_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getPointOfEntry_Resp->validToken = null;
 	$getPointOfEntry_Resp->execution = null;	
 	$getPointOfEntry_Resp->pointOfEntry_Array = array();
@@ -50,47 +51,48 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getPointOfEntry_Resp->validToken = $validToken;
 
-		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getPointOfEntry_Resp->validToken = $validToken;
 
-		echo json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getPointOfEntry_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -120,7 +122,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$getPointOfEntry_QueryObj = $dbConnection->selectedPdoConn->prepare($getPointOfEntry_Query);		
+		$getPointOfEntry_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getPointOfEntry_Query);		
 
 		if($division_id != 9){
 
@@ -153,7 +155,7 @@ if(isset($_POST["token"]) && isset($_POST["searchPointOfEntry"]) && isset($_POST
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 	
 

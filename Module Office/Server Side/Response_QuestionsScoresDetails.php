@@ -39,7 +39,7 @@ if(isset($_POST["token"]) && isset($_POST["dimensionComment_Id"]) && isset($_POS
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -51,7 +51,8 @@ if(isset($_POST["token"]) && isset($_POST["dimensionComment_Id"]) && isset($_POS
 	/*Prep response*/
 	$questionsScoreDetails_Resp = new stdClass();
 	$questionsScoreDetails_Resp->validAccess = true;
-	$questionsScoreDetails_Resp->serverConnection = $dbConnection->serverConnection;
+	$questionsScoreDetails_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$questionsScoreDetails_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$questionsScoreDetails_Resp->validToken = null;
 	$questionsScoreDetails_Resp->execution = null;	
 	$questionsScoreDetails_Resp->questionsScoresDetails_Array = array();
@@ -63,47 +64,48 @@ if(isset($_POST["token"]) && isset($_POST["dimensionComment_Id"]) && isset($_POS
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$questionsScoreDetails_Resp->validToken = $validToken;
 
-		echo json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$questionsScoreDetails_Resp->validToken = $validToken;
 
-		echo json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($questionsScoreDetails_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -222,7 +224,7 @@ if(isset($_POST["token"]) && isset($_POST["dimensionComment_Id"]) && isset($_POS
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$questionsScoreDetails_QueryObj = $dbConnection->selectedPdoConn->prepare($questionsScoreDetails_Query);
+			$questionsScoreDetails_QueryObj = $csatDbConnection->selectedPdoConn->prepare($questionsScoreDetails_Query);
 			$questionsScoreDetails_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$questionsScoreDetails_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$questionsScoreDetails_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -253,7 +255,7 @@ if(isset($_POST["token"]) && isset($_POST["dimensionComment_Id"]) && isset($_POS
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 	
 

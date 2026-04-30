@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -14,46 +14,47 @@ var countedNewRespondent = null;
 
 
 /*Get New Respondent*/
-async function requestGetNewRespondent(){
-	
+async function requestGetNewRespondent(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);		
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_GetNewRespondent.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
+				console.log(parseObj.validToken);
+				resolve(false);
 			}else if(parseObj.execution !== true){
-
-				console.log("Execution Problem in Request Get New Respondent!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
-
+				console.log("Execution Problem in Request_GetNewRespondent!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				countedNewRespondent = parseObj.countedNewRespondent;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 

@@ -1,7 +1,6 @@
 /*Import*/
 import {currentNewRespondent, valueCurrentNewRespondent} from "./Values_Office.js";
 import controller_Document_CountTotalAnsweredQuestions from "./Controller_Document_CountTotalAnsweredQuestions.js";
-import {submitGetNewRespondent} from "./SubmitRequest_GetNewRespondent.js";
 import controller_Document_DisplayRespondent from "./Controller_Document_DisplayRespondent.js";
 import controller_Document_DisplayRespondentPerScorePieChart from "./Controller_Document_DisplayRespondentPerScorePieChart.js";
 import controller_Document_DisplayStronglyAgreeAreaChart from "./Controller_Document_DisplayStronglyAgreeAreaChart.js";
@@ -20,16 +19,19 @@ import controller_Document_DisplayCcThreeScoresTable from "./Controller_Document
 
 /*Controller*/
 function controller_Document_GetNewRespondent(){
-	
+
 	/*
-	submitGetNewRespondent(valueCurrentNewRespondent, controllers_Array);
+	const dataObj = {endpoint: response_GetNewRespondent_Path, token};
+	const controllersObj = {assignValue: valueCurrentNewRespondent, controllers_Array};
+	const loaderObj = {};
+	submitGetNewRespondent(controller_Document_GetNewRespondent, dataObj, controllersObj, loaderObj);
 	*/
 
 
 	if(typeof(EventSource) !== "undefined"){
-		
+
 		const controllers_Array = [
-			controller_Document_CountTotalAnsweredQuestions, 
+			controller_Document_CountTotalAnsweredQuestions,
 			controller_Document_DisplayRespondent,
 			controller_Document_DisplayRespondentPerScorePieChart,
 			controller_Document_DisplayStronglyAgreeAreaChart,
@@ -63,7 +65,7 @@ function controller_Document_GetNewRespondent(){
 				});
 			}
 		};
-		/*Response Message*/		
+		/*Response Message*/
 	}else{
 		console.log("Sorry, your browser does not support server-sent events...");
 	}

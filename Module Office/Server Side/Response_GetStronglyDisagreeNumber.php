@@ -35,7 +35,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -47,7 +47,8 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 	/*Prep response*/
 	$getStronglyDisagreeNumber_Resp = new stdClass();
 	$getStronglyDisagreeNumber_Resp->validAccess = true;
-	$getStronglyDisagreeNumber_Resp->serverConnection = $dbConnection->serverConnection;
+	$getStronglyDisagreeNumber_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getStronglyDisagreeNumber_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getStronglyDisagreeNumber_Resp->validToken = null;
 	$getStronglyDisagreeNumber_Resp->execution = null;	
 	$getStronglyDisagreeNumber_Resp->stronglyDisagreeNumberDetails_Array = array();
@@ -60,47 +61,48 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getStronglyDisagreeNumber_Resp->validToken = $validToken;
 
-		echo json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getStronglyDisagreeNumber_Resp->validToken = $validToken;
 
-		echo json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getStronglyDisagreeNumber_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -136,7 +138,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$stronglyDisagreeNumber_QueryObj = $dbConnection->selectedPdoConn->prepare($stronglyDisagreeNumber_Query);
+			$stronglyDisagreeNumber_QueryObj = $csatDbConnection->selectedPdoConn->prepare($stronglyDisagreeNumber_Query);
 			$stronglyDisagreeNumber_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$stronglyDisagreeNumber_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$stronglyDisagreeNumber_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -167,7 +169,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyDisagree_Id"]) && isset($_POS
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

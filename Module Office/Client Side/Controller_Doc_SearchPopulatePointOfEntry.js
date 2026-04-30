@@ -1,6 +1,6 @@
 /*Import*/
 import {searchPointOfEntry_Value, pointOfEntry_StartIndex, pointOfEntry_Display} from "./Values_Office.js";
-import {submitPointOfEntry} from "./SubmitRequest_PointOfEntry.js";
+import {submitPointOfEntry} from "./Submit_PointOfEntry.js";
 import outputPointOfEntryOption from "./Output_PointOfEntryOption.js";
 import outputPointOfEntryOptionLoader from "./Output_PointOfEntryOptionLoader.js";
 /*Import*/

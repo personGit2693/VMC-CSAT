@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -14,57 +14,58 @@ var newRespondent = null;
 /*Export variables*/
 
 
-/*Get New Respondent*/
-async function requestNewRespondentNotifier(currentNewRespondent){
-	
+/*Get New Respondent Notifier*/
+async function requestNewRespondentNotifier(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("currentNewRespondent", currentNewRespondent)		
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
+		fData.append("currentNewRespondent", dataObj.currentNewRespondent);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_NewRespondentNotifier.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
+				console.log(parseObj.validToken);
+				resolve(false);
 			}else if(parseObj.execution !== true){
-
-				console.log("Execution Problem in Request New Respondent Notifier!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
-
+				console.log("Execution Problem in Request_NewRespondentNotifier!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				newUpdate = parseObj.newUpdate;
 				newRespondent = parseObj.newRespondent;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 
 	return await requestPromise;
 };
-/*Get New Respondent*/
+/*Get New Respondent Notifier*/
 
 
 /*Export*/
-export {newRespondent, requestNewRespondentNotifier, newUpdate};
+export {requestNewRespondentNotifier, newUpdate, newRespondent};
 /*Export*/

@@ -33,7 +33,7 @@ if(isset($_POST["token"]) && isset($_POST["agree_Id"]) && isset($_POST["strongly
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -45,7 +45,8 @@ if(isset($_POST["token"]) && isset($_POST["agree_Id"]) && isset($_POST["strongly
 	/*Prep response*/
 	$countPassingScore_Resp = new stdClass();
 	$countPassingScore_Resp->validAccess = true;
-	$countPassingScore_Resp->serverConnection = $dbConnection->serverConnection;
+	$countPassingScore_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$countPassingScore_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$countPassingScore_Resp->validToken = null;
 	$countPassingScore_Resp->execution = null;	
 	$countPassingScore_Resp->countedPassScore = 0;
@@ -57,47 +58,48 @@ if(isset($_POST["token"]) && isset($_POST["agree_Id"]) && isset($_POST["strongly
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$countPassingScore_Resp->validToken = $validToken;
 
-		echo json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$countPassingScore_Resp->validToken = $validToken;
 
-		echo json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($countPassingScore_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -121,7 +123,7 @@ if(isset($_POST["token"]) && isset($_POST["agree_Id"]) && isset($_POST["strongly
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$countPassScore_QueryObj = $dbConnection->selectedPdoConn->prepare($countPassScore_Query);
+			$countPassScore_QueryObj = $csatDbConnection->selectedPdoConn->prepare($countPassScore_Query);
 			$countPassScore_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$countPassScore_QueryObj->bindValue(':stronglyAgree_Id', intval($stronglyAgree_Id), PDO::PARAM_INT);
 			$countPassScore_QueryObj->bindValue(':agree_Id', intval($agree_Id), PDO::PARAM_INT);			
@@ -147,7 +149,7 @@ if(isset($_POST["token"]) && isset($_POST["agree_Id"]) && isset($_POST["strongly
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

@@ -31,7 +31,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -43,7 +43,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Prep response*/
 	$getOfficeServiceAvailed_Resp = new stdClass();
 	$getOfficeServiceAvailed_Resp->validAccess = true;
-	$getOfficeServiceAvailed_Resp->serverConnection = $dbConnection->serverConnection;
+	$getOfficeServiceAvailed_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getOfficeServiceAvailed_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getOfficeServiceAvailed_Resp->validToken = null;
 	$getOfficeServiceAvailed_Resp->execution = null;	
 	$getOfficeServiceAvailed_Resp->availedOfficeService_Array = array();
@@ -55,34 +56,49 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Prep response*/
 
 
+	/*Check connection*/
+	if($csatDbConnection->serverConnection != null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getOfficeServiceAvailed_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getOfficeServiceAvailed_Resp, JSON_NUMERIC_CHECK));
+	}
+	/*Check connection*/
+
+
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getOfficeServiceAvailed_Resp->validToken = $validToken;
 
-		echo json_encode($getOfficeServiceAvailed_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getOfficeServiceAvailed_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getOfficeServiceAvailed_Resp->validToken = $validToken;
 
-		echo json_encode($getOfficeServiceAvailed_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getOfficeServiceAvailed_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -123,7 +139,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$getOfficeServiceAvailed_QueryObj = $dbConnection->selectedPdoConn->prepare($getOfficeServiceAvailed_Query);
+			$getOfficeServiceAvailed_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getOfficeServiceAvailed_Query);
 			$getOfficeServiceAvailed_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$getOfficeServiceAvailed_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$getOfficeServiceAvailed_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -147,7 +163,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

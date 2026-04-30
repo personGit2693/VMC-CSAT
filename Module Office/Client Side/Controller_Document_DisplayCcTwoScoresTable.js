@@ -1,7 +1,8 @@
 /*Import*/
-import {ccTwo_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
+import token from "./../../Global Client Side/Token.js";
+import {response_CitizenCharterTwoScores_Path, ccTwo_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
-import {submitCitizenCharterTwoScores} from "./SubmitRequest_CitizenCharterTwoScores.js";
+import {submitCitizenCharterTwoScores} from "./Submit_CitizenCharterTwoScores.js";
 import outputCitizenCharterTwoScoresTable from "./Output_CitizenCharterTwoScoresTable.js";
 /*Import*/
 
@@ -9,7 +10,11 @@ import outputCitizenCharterTwoScoresTable from "./Output_CitizenCharterTwoScores
 /*Controller*/
 function controller_Document_DisplayCcTwoScoresTable(){
 
-	submitCitizenCharterTwoScores(outputCitizenCharterTwoScoresTable, selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, ccTwo_Id);
+	const dataObj = {endpoint: response_CitizenCharterTwoScores_Path, token, officeId: selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateFrom: dateRangeOneCalLiteFromVal.value, dateTo: dateRangeOneCalLiteToVal.value, ccTwo_Id};
+	const controllersObj = {outputFn: outputCitizenCharterTwoScoresTable};
+	const loaderObj = {};
+
+	submitCitizenCharterTwoScores(controller_Document_DisplayCcTwoScoresTable, dataObj, controllersObj, loaderObj);
 }
 /*Controller*/
 

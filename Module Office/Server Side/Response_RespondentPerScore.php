@@ -31,7 +31,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -43,7 +43,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Prep response*/
 	$getRespondentPerScoreDetails_Resp = new stdClass();
 	$getRespondentPerScoreDetails_Resp->validAccess = true;
-	$getRespondentPerScoreDetails_Resp->serverConnection = $dbConnection->serverConnection;
+	$getRespondentPerScoreDetails_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getRespondentPerScoreDetails_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getRespondentPerScoreDetails_Resp->validToken = null;
 	$getRespondentPerScoreDetails_Resp->execution = null;	
 	$getRespondentPerScoreDetails_Resp->respondentPerScoreDetails_Array = array();
@@ -55,47 +56,48 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getRespondentPerScoreDetails_Resp->validToken = $validToken;
 
-		echo json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getRespondentPerScoreDetails_Resp->validToken = $validToken;
 
-		echo json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getRespondentPerScoreDetails_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -123,7 +125,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$getRespondentPerScoreDetails_QueryObj = $dbConnection->selectedPdoConn->prepare($getRespondentPerScoreDetails_Query);
+			$getRespondentPerScoreDetails_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getRespondentPerScoreDetails_Query);
 			$getRespondentPerScoreDetails_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$getRespondentPerScoreDetails_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$getRespondentPerScoreDetails_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -147,7 +149,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

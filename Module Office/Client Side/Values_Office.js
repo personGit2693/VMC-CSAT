@@ -19,6 +19,27 @@ var scoresDetails_Array = [
 
 
 /*Prep export variables*/
+var response_TotalRespondent_Path = "./../Server Side/Response_TotalRespondent.php";
+var response_TotalAnsweredQuestions_Path = "./../Server Side/Response_TotalAnsweredQuestions.php";
+var response_GetStronglyAgreeNumber_Path = "./../Server Side/Response_GetStronglyAgreeNumber.php";
+var response_GetAgreeNumber_Path = "./../Server Side/Response_GetAgreeNumber.php";
+var response_GetNeitherNumber_Path = "./../Server Side/Response_GetNeitherNumber.php";
+var response_GetDisagreeNumber_Path = "./../Server Side/Response_GetDisagreeNumber.php";
+var response_GetStronglyDisagreeNumber_Path = "./../Server Side/Response_GetStronglyDisagreeNumber.php";
+var response_GetNoRatingNumber_Path = "./../Server Side/Response_GetNoRatingNumber.php";
+var response_RespondentPerScore_Path = "./../Server Side/Response_RespondentPerScore.php";
+var response_CountPassScore_Path = "./../Server Side/Response_CountPassScore.php";
+var response_GetOfficeServiceAvailed_Path = "./../Server Side/Response_GetOfficeServiceAvailed.php";
+var response_QuestionsScoresDetails_Path = "./../Server Side/Response_QuestionsScoresDetails.php";
+var response_CitizenCharterOneScores_Path = "./../Server Side/Response_CitizenCharterOneScores.php";
+var response_CitizenCharterTwoScores_Path = "./../Server Side/Response_CitizenCharterTwoScores.php";
+var response_CitizenCharterThreeScores_Path = "./../Server Side/Response_CitizenCharterThreeScores.php";
+var response_PointOfEntry_Path = "./../Server Side/Response_PointOfEntry.php";
+var response_GenerateOfficeCode_Path = "./../Server Side/Response_GenerateOfficeCode.php";
+var response_Comments_Path = "./../Server Side/Response_Comments.php";
+var response_GetNewRespondent_Path = "./../Server Side/Response_GetNewRespondent.php";
+var response_NewRespondentNotifier_Path = "./../Server Side/Response_NewRespondentNotifier.php";
+
 var searchPointOfEntry_Value = "";
 var pointOfEntry_StartIndex = 0;
 var pointOfEntry_Display = 10;
@@ -426,5 +447,5 @@ function resetPointOfEntry_StartIndex(){
 
 
 /*Export*/
-export {comments_PageNo, resetCommentStartIndex, valueCommentStartIndex, commentDisplay, commentStartIndex, dimensionComment_Id, ccThree_Id, ccTwo_Id, ccOne_Id, availedOfficeService_Array, resetAvailedOfficeService, valueAvailedOfficeService, resetNoRatingNumberDetails, valueNoRatingNumberDetails, noRatingNumberDetails_Array, resetStronglyDisagreeNumberDetails, valueStronglyDisagreeNumberDetails, stronglyDisagreeNumberDetails_Array, stronglyDisagree_Id, resetDisagreeNumberDetails, valueDisagreeNumberDetails, disagreeNumberDetails_Array, disagree_Id, neither_Id, resetNeitherNumberDetails, valueNeitherNumberDetails, neitherNumberDetails_Array, agreeNumberDetails_Array, valueAgreeNumberDetails, resetAgreeNumberDetails, resetStronglyAgreeNumberDetails, valueStronglyAgreeNumberDetails, stronglyAgreeNumberDetails_Array, resetRespondentPerScoreDetails, valueRespondentPerScoreDetails, respondentPerScoreDetails_Array, noRating_Id, agree_Id, stronglyAgree_Id, selectedPointOfEntry_Obj, valueCurrentNewRespondent, currentNewRespondent, valueClientTypeExternal, valueClientTypeInternal, clientTypeExternal, clientTypeInternal, valueSelectedPointOfEntry, resetSelectedPointOfEntry, valuePointOfEntry_StartIndex, resetPointOfEntry_StartIndex, resetSearchPointOfEntry, pointOfEntry_Display, pointOfEntry_StartIndex, valueSearchPointOfEntry, searchPointOfEntry_Value};
+export {response_TotalRespondent_Path, response_TotalAnsweredQuestions_Path, response_GetStronglyAgreeNumber_Path, response_GetAgreeNumber_Path, response_GetNeitherNumber_Path, response_GetDisagreeNumber_Path, response_GetStronglyDisagreeNumber_Path, response_GetNoRatingNumber_Path, response_RespondentPerScore_Path, response_CountPassScore_Path, response_GetOfficeServiceAvailed_Path, response_QuestionsScoresDetails_Path, response_CitizenCharterOneScores_Path, response_CitizenCharterTwoScores_Path, response_CitizenCharterThreeScores_Path, response_PointOfEntry_Path, response_GenerateOfficeCode_Path, response_Comments_Path, response_GetNewRespondent_Path, response_NewRespondentNotifier_Path, comments_PageNo, resetCommentStartIndex, valueCommentStartIndex, commentDisplay, commentStartIndex, dimensionComment_Id, ccThree_Id, ccTwo_Id, ccOne_Id, availedOfficeService_Array, resetAvailedOfficeService, valueAvailedOfficeService, resetNoRatingNumberDetails, valueNoRatingNumberDetails, noRatingNumberDetails_Array, resetStronglyDisagreeNumberDetails, valueStronglyDisagreeNumberDetails, stronglyDisagreeNumberDetails_Array, stronglyDisagree_Id, resetDisagreeNumberDetails, valueDisagreeNumberDetails, disagreeNumberDetails_Array, disagree_Id, neither_Id, resetNeitherNumberDetails, valueNeitherNumberDetails, neitherNumberDetails_Array, agreeNumberDetails_Array, valueAgreeNumberDetails, resetAgreeNumberDetails, resetStronglyAgreeNumberDetails, valueStronglyAgreeNumberDetails, stronglyAgreeNumberDetails_Array, resetRespondentPerScoreDetails, valueRespondentPerScoreDetails, respondentPerScoreDetails_Array, noRating_Id, agree_Id, stronglyAgree_Id, selectedPointOfEntry_Obj, valueCurrentNewRespondent, currentNewRespondent, valueClientTypeExternal, valueClientTypeInternal, clientTypeExternal, clientTypeInternal, valueSelectedPointOfEntry, resetSelectedPointOfEntry, valuePointOfEntry_StartIndex, resetPointOfEntry_StartIndex, resetSearchPointOfEntry, pointOfEntry_Display, pointOfEntry_StartIndex, valueSearchPointOfEntry, searchPointOfEntry_Value};
 /*Export*/

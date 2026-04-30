@@ -27,14 +27,15 @@ if(isset($_POST["token"])){
 	/*Prep variables*/
 	$newRespondentFile = "../../Global PHP/Notifications/Notif_NewRespondent.txt";
 
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 	/*Prep variables*/
 
 
 	/*Prep response*/
 	$getNewRespondent_Resp = new stdClass();
 	$getNewRespondent_Resp->validAccess = true;
-	$getNewRespondent_Resp->serverConnection = $dbConnection->serverConnection;
+	$getNewRespondent_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getNewRespondent_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getNewRespondent_Resp->validToken = null;
 	$getNewRespondent_Resp->execution = null;	
 	$getNewRespondent_Resp->countedNewRespondent = null;	
@@ -46,42 +47,48 @@ if(isset($_POST["token"])){
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
+	if($csatDbConnection->serverConnection != null){
 
-		echo json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK);
-		return;
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getNewRespondent_Resp->validToken = $validToken;
 
-		echo json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getNewRespondent_Resp->validToken = $validToken;
 
-		echo json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getNewRespondent_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -104,7 +111,7 @@ if(isset($_POST["token"])){
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

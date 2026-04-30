@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -14,49 +14,50 @@ var pointOfEntry_Array = null;
 
 
 /*Get Point Of Entries*/
-async function requestPointOfEntry(searchPointOfEntry, startIn, maxDisplayRow){
-	
+async function requestPointOfEntry(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("searchPointOfEntry", searchPointOfEntry);
-		fData.append("startIn", startIn);
-		fData.append("maxDisplayRow", maxDisplayRow);
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
+		fData.append("searchPointOfEntry", dataObj.searchPointOfEntry);
+		fData.append("startIn", dataObj.startIn);
+		fData.append("maxDisplayRow", dataObj.maxDisplayRow);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_PointOfEntry.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
+				console.log(parseObj.validToken);
+				resolve(false);
 			}else if(parseObj.execution !== true){
-
-				console.log("Execution Problem in Request Point of Entry!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){				
-
+				console.log("Execution Problem in Request_PointOfEntry!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				pointOfEntry_Array = parseObj.pointOfEntry_Array;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 

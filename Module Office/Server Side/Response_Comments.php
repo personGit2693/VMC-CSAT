@@ -36,7 +36,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -48,7 +48,8 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 	/*Prep response*/
 	$comments_Resp = new stdClass();
 	$comments_Resp->validAccess = true;
-	$comments_Resp->serverConnection = $dbConnection->serverConnection;
+	$comments_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$comments_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$comments_Resp->validToken = null;
 	$comments_Resp->execution = null;	
 	$comments_Resp->commentDetails_Array = array();
@@ -60,47 +61,48 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($comments_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($comments_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($comments_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$comments_Resp->validToken = $validToken;
 
-		echo json_encode($comments_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($comments_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$comments_Resp->validToken = $validToken;
 
-		echo json_encode($comments_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($comments_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -162,7 +164,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$comments_QueryObj = $dbConnection->selectedPdoConn->prepare($comments_Query);
+			$comments_QueryObj = $csatDbConnection->selectedPdoConn->prepare($comments_Query);
 			$comments_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$comments_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$comments_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -191,7 +193,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 	
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

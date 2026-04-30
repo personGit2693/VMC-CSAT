@@ -14,6 +14,8 @@ var elemReference_Name = "";
 var eventReference_Name = "";
 
 var name = "";
+var data1 = "";
+var data2 = "";
 var response_Name_Path = "./../Server Side/Response_Name.php";
 /*Prep export variables*/
 
@@ -37,6 +39,14 @@ function assignEventReference_Name(newValue){
 function assign_Name(newValue){
 	name = newValue;
 }
+
+function assign_Data1(newValue){
+	data1 = newValue;
+}
+
+function assign_Data2(newValue){
+	data2 = newValue;
+}
 /**Assign*/
 
 
@@ -54,6 +64,8 @@ export {
 	assignElemReference_Name,
 	assignEventReference_Name,
 	assign_Name,
-	reset_Name
+	reset_Name,
+	data1,
+	data2
 };
 /*Export*/

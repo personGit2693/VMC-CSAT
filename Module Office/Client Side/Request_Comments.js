@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -14,56 +14,57 @@ var commentDetails_Array = null;
 
 
 /*Get Comment Details*/
-async function requestComments(officeId, clientTypeInternal, clientTypeExternal, dateFrom, dateTo, stronglyAgree_Id, agree_Id, noRating_Id, commentDisplay, commentStartIndex){
-	
+async function requestComments(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("officeId", officeId);
-		fData.append("clientTypeInternal", clientTypeInternal);
-		fData.append("clientTypeExternal", clientTypeExternal);
-		fData.append("dateFrom", dateFrom);
-		fData.append("dateTo", dateTo);	
-		fData.append("stronglyAgree_Id", stronglyAgree_Id);		
-		fData.append("agree_Id", agree_Id);
-		fData.append("noRating_Id", noRating_Id);
-		fData.append("commentDisplay", commentDisplay);
-		fData.append("commentStartIndex", commentStartIndex);
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
+		fData.append("officeId", dataObj.officeId);
+		fData.append("clientTypeInternal", dataObj.clientTypeInternal);
+		fData.append("clientTypeExternal", dataObj.clientTypeExternal);
+		fData.append("dateFrom", dataObj.dateFrom);
+		fData.append("dateTo", dataObj.dateTo);
+		fData.append("stronglyAgree_Id", dataObj.stronglyAgree_Id);
+		fData.append("agree_Id", dataObj.agree_Id);
+		fData.append("noRating_Id", dataObj.noRating_Id);
+		fData.append("commentDisplay", dataObj.commentDisplay);
+		fData.append("commentStartIndex", dataObj.commentStartIndex);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_Comments.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
-			}else if(parseObj.execution === false){
-
-				console.log("Execution Problem in Request Commments!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution !== false){
-
+				console.log(parseObj.validToken);
+				resolve(false);
+			}else if(parseObj.execution !== true){
+				console.log("Execution Problem in Request_Comments!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				commentDetails_Array = parseObj.commentDetails_Array;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 

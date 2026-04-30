@@ -32,7 +32,7 @@ if(isset($_POST["token"]) && isset($_POST["ccThree_Id"]) && isset($_POST["client
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -44,7 +44,8 @@ if(isset($_POST["token"]) && isset($_POST["ccThree_Id"]) && isset($_POST["client
 	/*Prep response*/
 	$citizenCharterThreeScores_Resp = new stdClass();
 	$citizenCharterThreeScores_Resp->validAccess = true;
-	$citizenCharterThreeScores_Resp->serverConnection = $dbConnection->serverConnection;
+	$citizenCharterThreeScores_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$citizenCharterThreeScores_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$citizenCharterThreeScores_Resp->validToken = null;
 	$citizenCharterThreeScores_Resp->execution = null;	
 	$citizenCharterThreeScores_Resp->citizenCharterThreeScoresDetails_Array = array();
@@ -56,47 +57,48 @@ if(isset($_POST["token"]) && isset($_POST["ccThree_Id"]) && isset($_POST["client
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$citizenCharterThreeScores_Resp->validToken = $validToken;
 
-		echo json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$citizenCharterThreeScores_Resp->validToken = $validToken;
 
-		echo json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($citizenCharterThreeScores_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -140,7 +142,7 @@ if(isset($_POST["token"]) && isset($_POST["ccThree_Id"]) && isset($_POST["client
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$citizenCharterThreeScores_QueryObj = $dbConnection->selectedPdoConn->prepare($citizenCharterThreeScores_Query);
+			$citizenCharterThreeScores_QueryObj = $csatDbConnection->selectedPdoConn->prepare($citizenCharterThreeScores_Query);
 			$citizenCharterThreeScores_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$citizenCharterThreeScores_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$citizenCharterThreeScores_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -165,7 +167,7 @@ if(isset($_POST["token"]) && isset($_POST["ccThree_Id"]) && isset($_POST["client
 	
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/	
 
 

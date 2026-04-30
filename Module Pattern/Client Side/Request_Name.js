@@ -21,8 +21,9 @@ async function requestName(dataObj){
 
 		/*Form data*/
 		const fData = new FormData(); 							
-		fData.append("patientRecord_Base", dataObj.patientRecord_Base);
-		fData.append("newConsultation", dataObj.newConsultation);
+		fData.append("token", dataObj.token);
+		fData.append("data1", dataObj.data1);
+		fData.append("data2", dataObj.data2);
 		/*Form data*/
 
 
@@ -77,5 +78,5 @@ async function requestName(dataObj){
 
 
 /*Export*/
-export {requestName, name, consultationDetails};
+export {requestName, sample1, sample2};
 /*Export*/

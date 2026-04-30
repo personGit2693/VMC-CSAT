@@ -1,7 +1,8 @@
 /*Import*/
-import {valueStronglyDisagreeNumberDetails, selectedPointOfEntry_Obj, stronglyDisagree_Id, clientTypeInternal, clientTypeExternal, currentNewRespondent} from "./Values_Office.js";
+import token from "./../../Global Client Side/Token.js";
+import {response_GetStronglyDisagreeNumber_Path, selectedPointOfEntry_Obj, stronglyDisagree_Id, clientTypeInternal, clientTypeExternal, valueStronglyDisagreeNumberDetails} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
-import {submitGetStronglyDisagreeNumber} from "./SubmitRequest_GetStronglyDisagreeNumber.js";
+import {submitGetStronglyDisagreeNumber} from "./Submit_GetStronglyDisagreeNumber.js";
 import outputStronglyDisagreeNumberAreaChart from "./Output_StronglyDisagreeNumberAreaChart.js";
 /*Import*/
 
@@ -9,7 +10,11 @@ import outputStronglyDisagreeNumberAreaChart from "./Output_StronglyDisagreeNumb
 /*Controller*/
 function controller_Document_DisplayStronglyDisgreeAreaChart(){
 
-	submitGetStronglyDisagreeNumber(outputStronglyDisagreeNumberAreaChart, valueStronglyDisagreeNumberDetails, selectedPointOfEntry_Obj.office_id, stronglyDisagree_Id, clientTypeInternal, clientTypeExternal, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value);
+	const dataObj = {endpoint: response_GetStronglyDisagreeNumber_Path, token, officeId: selectedPointOfEntry_Obj.office_id, stronglyDisagree_Id, clientTypeInternal, clientTypeExternal, dateFrom: dateRangeOneCalLiteFromVal.value, dateTo: dateRangeOneCalLiteToVal.value};
+	const controllersObj = {assignValue: valueStronglyDisagreeNumberDetails, outputFn: outputStronglyDisagreeNumberAreaChart};
+	const loaderObj = {};
+
+	submitGetStronglyDisagreeNumber(controller_Document_DisplayStronglyDisgreeAreaChart, dataObj, controllersObj, loaderObj);
 }
 /*Controller*/
 

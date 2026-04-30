@@ -1,5 +1,5 @@
 /*Import*/
-import token from "../../Global Client Side/Token.js";
+
 /*Import*/
 
 
@@ -13,59 +13,60 @@ var noRatingNumberDetails_Array = null;
 /*Export variables*/
 
 
-/*Count pass score*/
-async function requestGetNoRatingNumber(officeId, noRating_Id, clientTypeInternal, clientTypeExternal, dateFrom, dateTo){
-	
+/*Get No Rating Number*/
+async function requestGetNoRatingNumber(dataObj){
+
 	const requestPromise = new Promise(function(resolve){
-		
+
 		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("officeId", officeId);
-		fData.append("clientTypeInternal", clientTypeInternal);
-		fData.append("clientTypeExternal", clientTypeExternal);
-		fData.append("dateFrom", dateFrom);
-		fData.append("dateTo", dateTo);	
-		fData.append("noRating_Id", noRating_Id);
+		const fData = new FormData();
+		fData.append("token", dataObj.token);
+		fData.append("officeId", dataObj.officeId);
+		fData.append("noRating_Id", dataObj.noRating_Id);
+		fData.append("clientTypeInternal", dataObj.clientTypeInternal);
+		fData.append("clientTypeExternal", dataObj.clientTypeExternal);
+		fData.append("dateFrom", dataObj.dateFrom);
+		fData.append("dateTo", dataObj.dateTo);
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_GetNoRatingNumber.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch(`${dataObj.endpoint}`, {method: "POST", body: fData})
+		.then(res => {
+
+			return res.json();
+		}).then(parseObj => {
 
 			if(parseObj.validAccess !== true){
-
 				console.log("Invalid Access!");
-
+				resolve(false);
 			}else if(parseObj.serverConnection !== null){
-
-				console.log("Connection Lost!");
-
+				console.log("vmc_csat Connection Lost!");
+				resolve(false);
+			}else if(parseObj.selectedPdoConn == null){
+				console.log("vmc_csat Object Connection Incorrect!");
+				resolve(false);
 			}else if(parseObj.validToken !== null){
-
-				console.log("Invalid Token!");
-
-			}else if(parseObj.execution === false){
-
-				console.log("Execution Problem in Request Get No Rating Number!");
-
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution !== false){
-
+				console.log(parseObj.validToken);
+				resolve(false);
+			}else if(parseObj.execution !== true){
+				console.log("Execution Problem in Request_GetNoRatingNumber!");
+				console.log(parseObj.execution);
+				resolve(false);
+			}else{
 				noRatingNumberDetails_Array = parseObj.noRatingNumberDetails_Array;
-
 				resolve(true);
 			}
 		});
+
 		/*Fetch method*/
-		
+
 	});
 
 
 	return await requestPromise;
 };
-/*Count pass score*/
+/*Get No Rating Number*/
 
 
 /*Export*/

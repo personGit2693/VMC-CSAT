@@ -31,7 +31,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 	
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -43,7 +43,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 	/*Prep response*/
 	$countTotalRespondent_Resp = new stdClass();
 	$countTotalRespondent_Resp->validAccess = true;
-	$countTotalRespondent_Resp->serverConnection = $dbConnection->serverConnection;
+	$countTotalRespondent_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$countTotalRespondent_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$countTotalRespondent_Resp->validToken = null;
 	$countTotalRespondent_Resp->execution = null;	
 	$countTotalRespondent_Resp->totalRespondent = 0;
@@ -55,47 +56,48 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$countTotalRespondent_Resp->validToken = $validToken;
 
-		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$countTotalRespondent_Resp->validToken = $validToken;
 
-		echo json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($countTotalRespondent_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -115,7 +117,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$countTotalRespondent_QueryObj = $dbConnection->selectedPdoConn->prepare($countTotalRespondent_Query);
+			$countTotalRespondent_QueryObj = $csatDbConnection->selectedPdoConn->prepare($countTotalRespondent_Query);
 			$countTotalRespondent_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$countTotalRespondent_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$countTotalRespondent_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -139,7 +141,7 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

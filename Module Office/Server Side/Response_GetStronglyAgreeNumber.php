@@ -35,7 +35,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -47,7 +47,8 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 	/*Prep response*/
 	$getStronglyAgreeNumber_Resp = new stdClass();
 	$getStronglyAgreeNumber_Resp->validAccess = true;
-	$getStronglyAgreeNumber_Resp->serverConnection = $dbConnection->serverConnection;
+	$getStronglyAgreeNumber_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$getStronglyAgreeNumber_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$getStronglyAgreeNumber_Resp->validToken = null;
 	$getStronglyAgreeNumber_Resp->execution = null;	
 	$getStronglyAgreeNumber_Resp->stronglyAgreeNumberDetails_Array = array();
@@ -60,47 +61,48 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$getStronglyAgreeNumber_Resp->validToken = $validToken;
 
-		echo json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$getStronglyAgreeNumber_Resp->validToken = $validToken;
 
-		echo json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($getStronglyAgreeNumber_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -135,7 +137,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$getStronglyAgreeNumber_QueryObj = $dbConnection->selectedPdoConn->prepare($getStronglyAgreeNumber_Query);
+			$getStronglyAgreeNumber_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getStronglyAgreeNumber_Query);
 			$getStronglyAgreeNumber_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$getStronglyAgreeNumber_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
 			$getStronglyAgreeNumber_QueryObj->bindValue(':clientTypeExternal', intval($clientTypeExternal), PDO::PARAM_INT);
@@ -166,7 +168,7 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

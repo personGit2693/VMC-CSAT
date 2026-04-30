@@ -32,7 +32,7 @@ if(isset($_POST["token"]) && isset($_POST["noRating_Id"]) && isset($_POST["clien
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_csat");
+	$csatDbConnection = connectToDb("vmc_csat");
 
 	if(isset($_SESSION["office_id"]) && $_SESSION["office_id"] != 0){
 	
@@ -44,7 +44,8 @@ if(isset($_POST["token"]) && isset($_POST["noRating_Id"]) && isset($_POST["clien
 	/*Prep response*/
 	$totalAnsweredQuestions_Resp = new stdClass();
 	$totalAnsweredQuestions_Resp->validAccess = true;
-	$totalAnsweredQuestions_Resp->serverConnection = $dbConnection->serverConnection;
+	$totalAnsweredQuestions_Resp->serverConnection = $csatDbConnection->serverConnection;
+	$totalAnsweredQuestions_Resp->selectedPdoConn = ($csatDbConnection->selectedPdoConn !== null) ? true : null;
 	$totalAnsweredQuestions_Resp->validToken = null;
 	$totalAnsweredQuestions_Resp->execution = null;	
 	$totalAnsweredQuestions_Resp->totalAnsweredQuestions = 0;
@@ -56,47 +57,48 @@ if(isset($_POST["token"]) && isset($_POST["noRating_Id"]) && isset($_POST["clien
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
-
-		echo json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK);
+	if($csatDbConnection->serverConnection != null){
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK));
+	}else if($csatDbConnection->selectedPdoConn == null){
+
+		/*_Disconnect*/
+		$csatDbConnection = null;
+		/*_Disconnect*/
+
+		exit(json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Check connection*/
 
 
 	/*Validate token*/
-	$validateGlobalToken_Obj = validateGlobalToken($dbConnection->selectedPdoConn, $token);
+	$validateGlobalToken_Obj = validateGlobalToken($csatDbConnection->selectedPdoConn, $token);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating global token has execution problem!";
 		$totalAnsweredQuestions_Resp->validToken = $validToken;
 
-		echo json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK));
 
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "Token can't be found!";
 		$totalAnsweredQuestions_Resp->validToken = $validToken;
 
-		echo json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK);
-
 		/*_Disconnect*/
-		$dbConnection = null;
+		$csatDbConnection = null;
 		/*_Disconnect*/
 
-		return;
+		exit(json_encode($totalAnsweredQuestions_Resp, JSON_NUMERIC_CHECK));
 	}
 	/*Validate token*/
 
@@ -119,7 +121,7 @@ if(isset($_POST["token"]) && isset($_POST["noRating_Id"]) && isset($_POST["clien
 			/*_Prep query*/
 
 			/*_Execute query*/
-			$totalAnsweredQuestions_QueryObj = $dbConnection->selectedPdoConn->prepare($totalAnsweredQuestions_Query);
+			$totalAnsweredQuestions_QueryObj = $csatDbConnection->selectedPdoConn->prepare($totalAnsweredQuestions_Query);
 			$totalAnsweredQuestions_QueryObj->bindValue(':officeId', intval($officeId), PDO::PARAM_INT);
 			$totalAnsweredQuestions_QueryObj->bindValue(':noRating_Id', intval($noRating_Id), PDO::PARAM_INT);
 			$totalAnsweredQuestions_QueryObj->bindValue(':clientTypeInternal', intval($clientTypeInternal), PDO::PARAM_INT);
@@ -144,7 +146,7 @@ if(isset($_POST["token"]) && isset($_POST["noRating_Id"]) && isset($_POST["clien
 
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$csatDbConnection = null;
 	/*Disconnect*/
 
 

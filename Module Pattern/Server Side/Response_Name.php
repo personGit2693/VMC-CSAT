@@ -13,7 +13,7 @@ require_once "./../../Global PHP/CheckGlobalToken_Class.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["token"]) && isset($_POST["details"])){
+if(isset($_POST["token"]) && isset($_POST["data1"]) && isset($_POST["data2"])){
 	
 	/*Required Files*/
 	
@@ -22,6 +22,8 @@ if(isset($_POST["token"]) && isset($_POST["details"])){
 
 	/*Query string*/
 	$token = $_POST["token"];
+	$data1 = $_POST["data1"];
+	$data2 = $_POST["data2"];
 	/*Query string*/
 
 
@@ -96,22 +98,19 @@ if(isset($_POST["token"]) && isset($_POST["details"])){
 
 	if($validToken === null){			
 
-		/*Get Consultation Details*/	
-
+		/*Response Name*/	
 		/**Prep query*/
-		$getsample2_Query = "
-			SELECT logdetails 
-			FROM hconsults 
-			WHERE hpercode = :hpercode 
-			AND tscode = :tscode 
-
+		$getsample_Query = "
+			SELECT column1 
+			FROM table 
+			WHERE column1 = :data1 			
 		";
 
-		if(!$newConsultation){
-			$getsample2_Query .= " AND enccode = :enccode";
+		if(!$data2){
+			$getsample_Query .= " AND column2 = :data2";
 		}
 
-		$getsample2_Query .= " ORDER BY created_at DESC";
+		$getsample_Query .= " ORDER BY column3 DESC";
 		/**Prep query*/
 
 		/**Execution*/
@@ -120,23 +119,22 @@ if(isset($_POST["token"]) && isset($_POST["details"])){
 			$csatDbConnection->selectedPdoConn->beginTransaction();
 
 			/**Execute insert to hconsult*/
-			$getsample2_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getsample2_Query);
-			$getsample2_QueryObj->bindValue(':hpercode', $patientRecord_Obj->patientDetails->hpercode, PDO::PARAM_STR);
-			$getsample2_QueryObj->bindValue(':tscode', $patientRecord_Obj->tscode, PDO::PARAM_STR);
+			$getsample_QueryObj = $csatDbConnection->selectedPdoConn->prepare($getsample_Query);
+			$getsample_QueryObj->bindValue(':data1', $data1, PDO::PARAM_STR);			
 
-			if(!$newConsultation){
-				$getsample2_QueryObj->bindValue(':enccode', $patientRecord_Obj->enccode, PDO::PARAM_STR);	
+			if(!$data2){
+				$getsample_QueryObj->bindValue(':data2', $data2, PDO::PARAM_STR);
 			}
 						
-			$execution = $getsample2_QueryObj->execute();
+			$execution = $getsample_QueryObj->execute();
 			/**Execute insert to hconsult*/
 
 			/**Fetching*/
 			if($execution){
 				
-				if($sample2_Assoc = $getsample2_QueryObj->fetch(PDO::FETCH_ASSOC)){				
-					$sample2 = $sample2_Assoc["logdetails"];
-					$sample1 = true;
+				if($sample_Assoc = $getsample_QueryObj->fetch(PDO::FETCH_ASSOC)){				
+					$sample1 = $sample_Assoc["column1"];
+					$sample2 = $sample_Assoc["column2"];
 				}			
 			}
 			/**Fetching*/			
@@ -147,14 +145,13 @@ if(isset($_POST["token"]) && isset($_POST["details"])){
 			$csatDbConnection->selectedPdoConn->rollback();
 
 			/*Return response*/
-			$name_Resp->execution = $pdoEx;	
-			$name_Resp->sample1 = false;	
+			$name_Resp->execution = $pdoEx;		
 
 			exit(json_encode($name_Resp, JSON_NUMERIC_CHECK));
 			/*Return response*/
 		}				
 		/**Execution*/
-		/*Get Consultation Details*/
+		/*Response Name*/
 	}
 	
 

@@ -1,8 +1,8 @@
 /*Import*/
-import {disagree_Id, selectedPointOfEntry_Obj, clientTypeExternal, clientTypeInternal, currentNewRespondent, valueDisagreeNumberDetails} from "./Values_Office.js";
+import token from "./../../Global Client Side/Token.js";
+import {response_GetDisagreeNumber_Path, disagree_Id, selectedPointOfEntry_Obj, clientTypeInternal, clientTypeExternal, valueDisagreeNumberDetails} from "./Values_Office.js";
 import {dateRangeOneCalLiteFromVal, dateRangeOneCalLiteToVal} from "./Elements_Page_RatingMonitoring.js";
-import controller_Document_CountTotalAnsweredQuestions from "./Controller_Document_CountTotalAnsweredQuestions.js";
-import {submitGetDisagreeNumber} from "./SubmitRequest_GetDisagreeNumber.js";
+import {submitGetDisagreeNumber} from "./Submit_GetDisagreeNumber.js";
 import outputDisagreeNumberAreaChart from "./Output_DisagreeNumberAreaChart.js";
 /*Import*/
 
@@ -10,7 +10,11 @@ import outputDisagreeNumberAreaChart from "./Output_DisagreeNumberAreaChart.js";
 /*Controller*/
 function controller_Document_DisplayDisagreeNumberAreaChart(){
 
-	submitGetDisagreeNumber(outputDisagreeNumberAreaChart, valueDisagreeNumberDetails, clientTypeInternal, clientTypeExternal, selectedPointOfEntry_Obj.office_id, dateRangeOneCalLiteFromVal.value, dateRangeOneCalLiteToVal.value, disagree_Id);
+	const dataObj = {endpoint: response_GetDisagreeNumber_Path, token, officeId: selectedPointOfEntry_Obj.office_id, clientTypeInternal, clientTypeExternal, dateFrom: dateRangeOneCalLiteFromVal.value, dateTo: dateRangeOneCalLiteToVal.value, disagree_Id};
+	const controllersObj = {assignValue: valueDisagreeNumberDetails, outputFn: outputDisagreeNumberAreaChart};
+	const loaderObj = {};
+
+	submitGetDisagreeNumber(controller_Document_DisplayDisagreeNumberAreaChart, dataObj, controllersObj, loaderObj);
 }
 /*Controller*/
 
