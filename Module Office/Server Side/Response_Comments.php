@@ -124,43 +124,37 @@ if(isset($_POST["token"]) && isset($_POST["stronglyAgree_Id"]) && isset($_POST["
 				commentsresponses_tab.commentresponse_id AS 'commentId',
 				commentsresponses_tab.commentresponse_value AS 'comment',
 				commentsresponses_tab.commentresponse_datetime AS 'datetime',
-				IFNULL(allcountedscores_tab.allCountedScore, 0) AS 'allCountedScore',
-				IFNULL(allpassscore_tab.allPassScore, 0) AS 'allPassScore'
-				FROM clientresponses_tab 
-				INNER JOIN offices_tab 
-				ON clientresponses_tab.office_id = offices_tab.office_id 
-				INNER JOIN respondents_tab 
-				ON clientresponses_tab.respondent_id = respondents_tab.respondent_id 
-				INNER JOIN ageranges_tab 
-				ON clientresponses_tab.agerange_id = ageranges_tab.agerange_id 
-				INNER JOIN genders_tab 
-				ON clientresponses_tab.gender_id = genders_tab.gender_id 
-				INNER JOIN clienttypes_tab 
-				ON clientresponses_tab.clienttype_id = clienttypes_tab.clienttype_id 
-				INNER JOIN commentsresponses_tab 
+				IFNULL(scores_tab.allCountedScore, 0) AS 'allCountedScore',
+				IFNULL(scores_tab.allPassScore, 0) AS 'allPassScore'
+				FROM clientresponses_tab
+				INNER JOIN offices_tab
+				ON clientresponses_tab.office_id = offices_tab.office_id
+				INNER JOIN respondents_tab
+				ON clientresponses_tab.respondent_id = respondents_tab.respondent_id
+				INNER JOIN ageranges_tab
+				ON clientresponses_tab.agerange_id = ageranges_tab.agerange_id
+				INNER JOIN genders_tab
+				ON clientresponses_tab.gender_id = genders_tab.gender_id
+				INNER JOIN clienttypes_tab
+				ON clientresponses_tab.clienttype_id = clienttypes_tab.clienttype_id
+				INNER JOIN commentsresponses_tab
 				ON clientresponses_tab.clientresponse_reference = commentsresponses_tab.clientresponse_reference
-				INNER JOIN questions_tab 
-				ON commentsresponses_tab.question_id = questions_tab.question_id 
-				LEFT JOIN (SELECT clientresponse_reference AS 'clientresponse_reference', 
-					COUNT(questionresponse_id) AS 'allCountedScore' 
-				    FROM questionresponses_tab  
-					WHERE NOT score_id = :noRating_Id
-					GROUP BY clientresponse_reference) 				   
-				AS allcountedscores_tab 
-				ON clientresponses_tab.clientresponse_reference = allcountedscores_tab.clientresponse_reference
-				LEFT JOIN (SELECT clientresponse_reference AS 'clientresponse_reference', 
-					COUNT(questionresponse_id) AS 'allPassScore' 
-					FROM questionresponses_tab  
-					WHERE score_id = :stronglyAgree_Id OR score_id = :agree_Id
-					GROUP BY clientresponse_reference)			    
-				AS allpassscore_tab 
-				ON clientresponses_tab.clientresponse_reference = allpassscore_tab.clientresponse_reference
-				WHERE clientresponses_tab.office_id = :officeId 
+				INNER JOIN questions_tab
+				ON commentsresponses_tab.question_id = questions_tab.question_id
+				LEFT JOIN (SELECT clientresponse_reference,
+					SUM(score_id != :noRating_Id) AS allCountedScore,
+					SUM(score_id = :stronglyAgree_Id OR score_id = :agree_Id) AS allPassScore
+					FROM questionresponses_tab
+					GROUP BY clientresponse_reference)
+				AS scores_tab
+				ON clientresponses_tab.clientresponse_reference = scores_tab.clientresponse_reference
+				WHERE clientresponses_tab.office_id = :officeId
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				AND CONVERT(commentsresponses_tab.commentresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE) 
-				ORDER BY commentsresponses_tab.commentresponse_datetime DESC 
+				AND commentsresponses_tab.commentresponse_datetime >= :dateFrom
+				AND commentsresponses_tab.commentresponse_datetime < DATE_ADD(:dateTo, INTERVAL 1 DAY)
+				ORDER BY commentsresponses_tab.commentresponse_datetime DESC
 				LIMIT :commentStartIndex, :commentDisplay;
-			"; 							
+			";							
 			/*_Prep query*/
 
 			/*_Execute query*/

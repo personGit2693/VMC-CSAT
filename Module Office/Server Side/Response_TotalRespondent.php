@@ -108,10 +108,11 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 
 			/*Count Total Respondent*/
 			/*_Prep query*/
-			$countTotalRespondent_Query = "SELECT COUNT(clientresponse_reference) AS 'totalRespondent' 
-				FROM clientresponses_tab 
-				WHERE office_id = :officeId 
-				AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+			$countTotalRespondent_Query = "SELECT COUNT(clientresponse_reference) AS 'totalRespondent'
+				FROM clientresponses_tab
+				WHERE office_id = :officeId
+				AND clientresponse_date >= :dateFrom
+				AND clientresponse_date < DATE_ADD(:dateTo, INTERVAL 1 DAY)
 				AND (clienttype_id = :clientTypeInternal OR clienttype_id = :clientTypeExternal);
 			"; 							
 			/*_Prep query*/

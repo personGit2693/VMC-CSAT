@@ -117,7 +117,8 @@ if(isset($_POST["token"]) && isset($_POST["agree_Id"]) && isset($_POST["strongly
 				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
 				WHERE clientresponses_tab.office_id = :officeId 
 				AND (questionresponses_tab.score_id = :stronglyAgree_Id OR questionresponses_tab.score_id = :agree_Id)
-				AND CONVERT(questionresponses_tab.questionresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+				AND questionresponses_tab.questionresponse_datetime >= :dateFrom
+				AND questionresponses_tab.questionresponse_datetime < DATE_ADD(:dateTo, INTERVAL 1 DAY)
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal);
 			"; 							
 			/*_Prep query*/

@@ -116,111 +116,50 @@ if(isset($_POST["token"]) && isset($_POST["dimensionComment_Id"]) && isset($_POS
 			
 			/*Get Questions scores details*/
 			/*_Prep query*/
-			$questionsScoreDetails_Query = "SELECT officeQuestions_tab.question_id AS 'questionId', 
+			$questionsScoreDetails_Query = "SELECT officeQuestions_tab.question_id AS 'questionId',
 				officeQuestions_tab.question_value AS 'questionValue',
 				officeQuestions_tab.question_number AS 'questionNo',
-				IFNULL(totalStronglyAgreeResp_tab.totalStronglyAgree, 0) AS 'totalStronglyAgree',
-				IFNULL(totalAgreeResp_tab.totalAgree, 0) AS 'totalAgree',
-				IFNULL(totalNeitherResp_tab.totalNeither, 0) AS 'totalNeither',
-				IFNULL(totalDisagreeResp_tab.totalDisagree, 0) AS 'totalDisagree',
-				IFNULL(totalStronglyDisagreeResp_tab.totalStronglyDisagree, 0) AS 'totalStronglyDisagree',
-				IFNULL(totalNoRatingResp_tab.totalNoRating, 0) AS 'totalNoRating'
+				IFNULL(scoresResp_tab.totalStronglyAgree, 0) AS 'totalStronglyAgree',
+				IFNULL(scoresResp_tab.totalAgree, 0) AS 'totalAgree',
+				IFNULL(scoresResp_tab.totalNeither, 0) AS 'totalNeither',
+				IFNULL(scoresResp_tab.totalDisagree, 0) AS 'totalDisagree',
+				IFNULL(scoresResp_tab.totalStronglyDisagree, 0) AS 'totalStronglyDisagree',
+				IFNULL(scoresResp_tab.totalNoRating, 0) AS 'totalNoRating'
 				FROM (SELECT DISTINCT questionstag_tab.question_id AS 'question_id',
 				      	questions_tab.question_value AS 'question_value',
 				      	questions_tab.question_number AS 'question_number'
-						FROM offices_tab 
-						INNER JOIN officestag_tab 
-						ON offices_tab.office_id = officestag_tab.office_id 
-						INNER JOIN forms_tab 
-						ON officestag_tab.form_id = forms_tab.form_id 
-						INNER JOIN questionstag_tab 
-						ON forms_tab.form_id = questionstag_tab.form_id 
-						INNER JOIN questions_tab 
-						ON questionstag_tab.question_id = questions_tab.question_id 
+						FROM offices_tab
+						INNER JOIN officestag_tab
+						ON offices_tab.office_id = officestag_tab.office_id
+						INNER JOIN forms_tab
+						ON officestag_tab.form_id = forms_tab.form_id
+						INNER JOIN questionstag_tab
+						ON forms_tab.form_id = questionstag_tab.form_id
+						INNER JOIN questions_tab
+						ON questionstag_tab.question_id = questions_tab.question_id
 						WHERE offices_tab.office_id = :officeId
 						AND NOT questions_tab.dimension_id = :dimensionComment_Id
-						AND(forms_tab.clienttype_id = :clientTypeInternal OR forms_tab.clienttype_id = :clientTypeExternal)      	
-				    ) AS officeQuestions_tab 
-				LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				            questionresponses_tab.question_id AS 'question_id',
-				            COUNT(questionresponses_tab.questionresponse_id) AS 'totalStronglyAgree' 
-				            FROM clientresponses_tab 
-				            INNER JOIN questionresponses_tab 
+						AND (forms_tab.clienttype_id = :clientTypeInternal OR forms_tab.clienttype_id = :clientTypeExternal)
+				    ) AS officeQuestions_tab
+				LEFT JOIN (SELECT questionresponses_tab.question_id AS 'question_id',
+				            SUM(questionresponses_tab.score_id = :stronglyAgree_Id) AS totalStronglyAgree,
+				            SUM(questionresponses_tab.score_id = :agree_Id) AS totalAgree,
+				            SUM(questionresponses_tab.score_id = :neither_Id) AS totalNeither,
+				            SUM(questionresponses_tab.score_id = :disagree_Id) AS totalDisagree,
+				            SUM(questionresponses_tab.score_id = :stronglyDisagree_Id) AS totalStronglyDisagree,
+				            SUM(questionresponses_tab.score_id = :noRating_Id) AS totalNoRating
+				            FROM clientresponses_tab
+				            INNER JOIN questionresponses_tab
 				            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
-				            WHERE questionresponses_tab.score_id = :stronglyAgree_Id 
-				           	AND clientresponses_tab.office_id = :officeId
+				            WHERE clientresponses_tab.office_id = :officeId
 				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+				            AND clientresponses_tab.clientresponse_date >= :dateFrom
+				            AND clientresponses_tab.clientresponse_date < DATE_ADD(:dateTo, INTERVAL 1 DAY)
 				            GROUP BY questionresponses_tab.question_id
-				          ) AS totalStronglyAgreeResp_tab
-				ON officeQuestions_tab.question_id = totalStronglyAgreeResp_tab.question_id
-				LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				            questionresponses_tab.question_id AS 'question_id',
-				            COUNT(questionresponses_tab.questionresponse_id) AS 'totalAgree' 
-				            FROM clientresponses_tab 
-				            INNER JOIN questionresponses_tab 
-				            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
-				            WHERE questionresponses_tab.score_id = :agree_Id 
-				           	AND clientresponses_tab.office_id = :officeId
-				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
-				            GROUP BY questionresponses_tab.question_id
-				          ) AS totalAgreeResp_tab
-				ON officeQuestions_tab.question_id = totalAgreeResp_tab.question_id
-				LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				            questionresponses_tab.question_id AS 'question_id',
-				            COUNT(questionresponses_tab.questionresponse_id) AS 'totalNeither' 
-				            FROM clientresponses_tab 
-				            INNER JOIN questionresponses_tab 
-				            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
-				            WHERE questionresponses_tab.score_id = :neither_Id 
-				           	AND clientresponses_tab.office_id = :officeId
-				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
-				            GROUP BY questionresponses_tab.question_id
-				          ) AS totalNeitherResp_tab
-				ON officeQuestions_tab.question_id = totalNeitherResp_tab.question_id
-				LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				            questionresponses_tab.question_id AS 'question_id',
-				            COUNT(questionresponses_tab.questionresponse_id) AS 'totalDisagree' 
-				            FROM clientresponses_tab 
-				            INNER JOIN questionresponses_tab 
-				            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
-				            WHERE questionresponses_tab.score_id = :disagree_Id 
-				           	AND clientresponses_tab.office_id = :officeId
-				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
-				            GROUP BY questionresponses_tab.question_id
-				          ) AS totalDisagreeResp_tab
-				ON officeQuestions_tab.question_id = totalDisagreeResp_tab.question_id
-				LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				            questionresponses_tab.question_id AS 'question_id',
-				            COUNT(questionresponses_tab.questionresponse_id) AS 'totalStronglyDisagree' 
-				            FROM clientresponses_tab 
-				            INNER JOIN questionresponses_tab 
-				            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
-				            WHERE questionresponses_tab.score_id = :stronglyDisagree_Id 
-				           	AND clientresponses_tab.office_id = :officeId
-				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
-				            GROUP BY questionresponses_tab.question_id
-				          ) AS totalStronglyDisagreeResp_tab
-				ON officeQuestions_tab.question_id = totalStronglyDisagreeResp_tab.question_id
-				LEFT JOIN (SELECT clientresponses_tab.clientresponse_reference AS 'clientresponse_reference',
-				            questionresponses_tab.question_id AS 'question_id',
-				            COUNT(questionresponses_tab.questionresponse_id) AS 'totalNoRating' 
-				            FROM clientresponses_tab 
-				            INNER JOIN questionresponses_tab 
-				            ON clientresponses_tab.clientresponse_reference = questionresponses_tab.clientresponse_reference
-				            WHERE questionresponses_tab.score_id = :noRating_Id 
-				           	AND clientresponses_tab.office_id = :officeId
-				            AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				            AND CONVERT(clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
-				            GROUP BY questionresponses_tab.question_id
-				          ) AS totalNoRatingResp_tab
-				ON officeQuestions_tab.question_id = totalNoRatingResp_tab.question_id
-				ORDER BY officeQuestions_tab.question_number;			
-			"; 							
+				          ) AS scoresResp_tab
+				ON officeQuestions_tab.question_id = scoresResp_tab.question_id
+				ORDER BY officeQuestions_tab.question_number;
+			";							
 			/*_Prep query*/
 
 			/*_Execute query*/

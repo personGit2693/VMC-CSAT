@@ -109,13 +109,14 @@ if(isset($_POST["token"]) && isset($_POST["noRating_Id"]) && isset($_POST["clien
 			
 			/*Count Overall Engagement*/			
 			/*_Prep query*/
-			$totalAnsweredQuestions_Query = "SELECT COUNT(questionresponses_tab.questionresponse_id) AS 'totalAnsweredQuestions' 
-				FROM questionresponses_tab 
-				INNER JOIN clientresponses_tab 
-				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
-				WHERE clientresponses_tab.office_id = :officeId 
-				AND NOT questionresponses_tab.score_id = :noRating_Id 
-				AND CONVERT(questionresponses_tab.questionresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+			$totalAnsweredQuestions_Query = "SELECT COUNT(questionresponses_tab.questionresponse_id) AS 'totalAnsweredQuestions'
+				FROM questionresponses_tab
+				INNER JOIN clientresponses_tab
+				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference
+				WHERE clientresponses_tab.office_id = :officeId
+				AND NOT questionresponses_tab.score_id = :noRating_Id
+				AND questionresponses_tab.questionresponse_datetime >= :dateFrom
+				AND questionresponses_tab.questionresponse_datetime < DATE_ADD(:dateTo, INTERVAL 1 DAY)
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal);
 			"; 							
 			/*_Prep query*/

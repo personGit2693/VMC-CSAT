@@ -130,7 +130,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				    ON officeservices_tab.officeservice_id = clientresponses_tab.officeservice_id 
 				    WHERE clientresponses_tab.office_id = :officeId 
 				    AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal)
-				    AND CONVERT(clientresponses_tab.clientresponse_date, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND  CONVERT(:dateTo, DATE)
+				    AND clientresponses_tab.clientresponse_date >= :dateFrom
+					AND clientresponses_tab.clientresponse_date < DATE_ADD(:dateTo, INTERVAL 1 DAY)
 				    GROUP BY officeservices_tab.officeservice_name
 				) AS serviceavailed_dummytab 
 				ON officeservices_dummytab.officeservice_id = serviceavailed_dummytab.officeservice_id 

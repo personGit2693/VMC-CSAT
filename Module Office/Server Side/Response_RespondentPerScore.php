@@ -118,7 +118,8 @@ if(isset($_POST["token"]) && isset($_POST["clientTypeInternal"]) && isset($_POST
 				ON questionresponses_tab.clientresponse_reference = clientresponses_tab.clientresponse_reference 
 				WHERE clientresponses_tab.office_id = :officeId 
 				AND (clientresponses_tab.clienttype_id = :clientTypeInternal OR clientresponses_tab.clienttype_id = :clientTypeExternal) 
-				AND CONVERT(questionresponse_datetime, DATE) BETWEEN CONVERT(:dateFrom, DATE) AND CONVERT(:dateTo, DATE)
+				AND questionresponse_datetime >= :dateFrom
+				AND questionresponse_datetime < DATE_ADD(:dateTo, INTERVAL 1 DAY)
 				GROUP BY scores_tab.score_name
 				ORDER BY scores_tab.score_id;
 			"; 							
