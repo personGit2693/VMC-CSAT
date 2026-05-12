@@ -67,7 +67,7 @@ if(isset($_SESSION["account_number"]) && isset($_SESSION["office_id"]) && isset(
 
 	<!--Javascripts-->
 	<!--_Dependencies-->
-	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v1"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v2"></script>
 	<!--_Dependencies-->
 
 	<!--_Controllers-->

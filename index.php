@@ -115,7 +115,7 @@ if(isset($_GET["unit"]) && !empty($_GET["unit"])){
 
 	<!--Javascripts-->
 	<!--_Dependencies-->
-	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js?v1"></script>
+	<script type="text/javascript" src="Rogrid/Scripts/RogridNodeScript_Index.js?v2"></script>
 	<!--_Dependencies-->
 
 	<!--_Controllers-->
