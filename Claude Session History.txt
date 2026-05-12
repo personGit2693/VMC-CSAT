@@ -3134,3 +3134,437 @@
 ✻ Baked for 2m 55s
 
 ※ recap: Optimized all Module Office Server Side queries for faster phpMyAdmin reads by fixing non-sargable date filters and consolidating redundant subqueries, then added matching indexes to valmed_vmc_csat.sql. Next: apply the ALTER TABLE index statements to the live database in phpMyAdmin.
+
+ ▐▛███▜▌   Claude Code v2.1.139
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    C:\laragon\www\VMC-CSAT
+
+  /remote-control is active · Code in CLI or at https://claude.ai/code/session_01R1QXoTq7M5eddPjhoka7nF
+
+❯ format controller_Doc_SearchPopulatePointOfEntry the same with other          
+  controllers which have dataObj, controllersObj, loaderObj                     
+
+● Let me find the file and compare it with other controllers.
+
+  Searched for 2 patterns, read 2 files (ctrl+o to expand)
+
+● Now let me look at the Submit_PointOfEntry.js to understand the new function
+  signature and more controllers for the pattern.
+
+  Searched for 1 pattern, read 2 files (ctrl+o to expand)
+
+● Let me check the Values file and Request to understand what data fields are
+  needed.
+
+  Searched for 1 pattern, read 2 files (ctrl+o to expand)
+
+● Now I have a clear picture. I'll reformat the file to match the
+  dataObj/controllersObj/loaderObj pattern used in the other controllers.
+
+● Write(Module Office\Client Side\Controller_Doc_SearchPopulatePointOfEntry.js)
+  ⎿  Added 8 lines, removed 3 lines
+      1  /*Import*/
+      2 -import {searchPointOfEntry_Value, pointOfEntry_StartIndex, point
+        -OfEntry_Display} from "./Values_Office.js";                     
+      2 +import token from "./../../Global Client Side/Token.js";        
+      3 +import {response_PointOfEntry_Path, searchPointOfEntry_Value, po
+        +intOfEntry_StartIndex, pointOfEntry_Display} from "./Values_Offi
+        +ce.js";                                                         
+      4  import {submitPointOfEntry} from "./Submit_PointOfEntry.js";
+      5  import outputPointOfEntryOption from "./Output_PointOfEntryOptio
+         n.js";
+      6  import outputPointOfEntryOptionLoader from "./Output_PointOfEntr
+         yOptionLoader.js";
+     ...
+      10  /*Controller*/
+      11  function controller_Doc_SearchPopulatePointOfEntry(){
+      12  
+      12 -  submitPointOfEntry(outputPointOfEntryOption, outputPointOfEnt
+         -ryOptionLoader, "pointOfEntryOptionLoader-Id", searchPointOfEnt
+         -ry_Value, pointOfEntry_StartIndex, pointOfEntry_Display);      
+      13 +  const dataObj = {endpoint: response_PointOfEntry_Path, token,
+         + searchPointOfEntry: searchPointOfEntry_Value, startIn: pointOf
+         +Entry_StartIndex, maxDisplayRow: pointOfEntry_Display};        
+      14 +  const controllersObj = {outputFn: outputPointOfEntryOption}; 
+      15 +  const loaderObj = {boxLoader: outputPointOfEntryOptionLoader,
+         + boxLoader_Id: "pointOfEntryOptionLoader-Id"};                 
+      16 +                                                               
+      17 +  submitPointOfEntry(controller_Doc_SearchPopulatePointOfEntry,
+         + dataObj, controllersObj, loaderObj);                          
+      18  }
+      19  /*Controller*/
+      20  
+     ...
+      26  
+      27  /*Export*/
+      28  export default controller_Doc_SearchPopulatePointOfEntry;
+      24 -/*Export*/                                                     
+      29   No newline at end of file
+      30 +/*Export*/                                                     
+
+● Done. The controller now follows the same pattern as the other controllers:
+
+  - Added token and response_PointOfEntry_Path imports
+  - Replaced the old positional arguments with the three object variables:
+  dataObj, controllersObj, loaderObj
+  - Call signature is now
+  submitPointOfEntry(controller_Doc_SearchPopulatePointOfEntry, dataObj, 
+  controllersObj, loaderObj) matching
+  Controller_DivOptionWrap_SearchPopulatePointOfEntry.js
+
+✻ Brewed for 57s
+
+❯ Do the same to other controllers which have import from Submit_               
+
+● Let me find all controllers that import from Submit_ files.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Let me read all the files that need reformatting (excluding the two already
+  done).
+
+  Read 8 files (ctrl+o to expand)
+
+● Several are already formatted correctly. Let me check the remaining ones.
+
+  Read 8 files (ctrl+o to expand)
+
+● These are all already correct. Let me check the remaining ones.
+
+  Read 7 files (ctrl+o to expand)
+
+● Three files need reformatting. Let me look at their Submit files to understand
+   the correct signature.
+
+  Searched for 2 patterns, read 3 files (ctrl+o to expand)
+
+● The three files that need reformatting have Submit functions that still use
+  the old positional signature. I need to see the full flow to update them
+  correctly.
+
+  Searched for 2 patterns, read 3 files (ctrl+o to expand)
+
+● Now I have the full picture. The three files that need updating are in
+  Settings and Index modules — their Submit functions also use the old
+  positional signature, so both Submit and Controller files need to be updated
+  together.
+
+  Let me make all the changes:
+
+● Write(Module Settings\Client Side\Submit_CheckBypassDevice.js)  ⎿  Added 9 lines, removed 9 lines
+      10  
+      11  
+      12  /*Submit Function*/
+      13 -function submitCheckBypassDevice(elem, assignBypassPassCode, ch
+         -eckCusCheckBox){                                                     
+      13 +function submitCheckBypassDevice(controller, dataObj, controlle
+         +rsObj, loaderObj){                                             
+      14  
+      15    if(blockRequest === false){
+      16  
+      17      blockRequest = true;
+      18  
+      19 -    /*boxLoader();*/                                             
+      19 +    /*boxLoader();*/                                           
+      20  
+      21      gatewayCheckBypassDevice()
+      22      .then(gatewayPromise => {
+      23  
+      24        /*
+      25 -      if(document.getElementById(boxLoader_Id) !== null){      
+      26 -                                                               
+      27 -        document.getElementById(boxLoader_Id).remove();        
+      25 +      if(document.getElementById(loaderObj.boxLoader_Id) !== nu
+         +ll){                                                           
+      26 +                                                               
+      27 +        document.getElementById(loaderObj.boxLoader_Id).remove(
+         +);                                                             
+      28        }
+      29        */
+      30 -                                                               
+      31 -      if(gatewayPromise === true){                                                                                         
+      30  
+      33 -        assignBypassPassCode(bypassIsSet);                     
+      34 -        checkCusCheckBox(elem);                                                               
+      31 +      if(gatewayPromise === true){                             
+      32 +                                                               
+      33 +        controllersObj.assignBypassPassCode(bypassIsSet);      
+      34 +        controllersObj.checkCusCheckBox(dataObj.elem);         
+      35        }
+      36  
+      37        blockRequest = false;
+
+● Write(Module Settings\Client Side\Submit_SetBypassDevice.js)
+  ⎿  Added 8 lines, removed 8 lines
+       9  
+      10  
+      11  /*Submit Function*/
+      12 -function submitSetBypassDevice(elem, checkCusCheckBox){               
+      12 +function submitSetBypassDevice(controller, dataObj, controllers
+         +Obj, loaderObj){                                               
+      13  
+      14    if(blockRequest === false){
+      15  
+     ...
+      17  
+      18      /*boxLoader();*/
+      19  
+      20 -    let bypassPassCodeChecked = elem.checked;                           
+      20 +    let bypassPassCodeChecked = dataObj.elem.checked;          
+      21  
+      22      gatewaySetBypassDevice(bypassPassCodeChecked)
+      23      .then(gatewayPromise => {
+      24  
+      25        /*
+      26 -      if(document.getElementById(boxLoader_Id) !== null){      
+      27 -                                                               
+      28 -        document.getElementById(boxLoader_Id).remove();        
+      26 +      if(document.getElementById(loaderObj.boxLoader_Id) !== nu
+         +ll){                                                           
+      27 +                                                               
+      28 +        document.getElementById(loaderObj.boxLoader_Id).remove(
+         +);                                                             
+      29        }
+      30        */
+      31 -                                                               
+      32 -      if(gatewayPromise === true){                                                                                         
+      31  
+      34 -        checkCusCheckBox(elem);                                                               
+      32 +      if(gatewayPromise === true){                             
+      33 +                                                               
+      34 +        controllersObj.checkCusCheckBox(dataObj.elem);         
+      35        }
+      36  
+      37        blockRequest = false;
+
+● Write(Module Index\Client Side\Submit_CheckBypassDevice.js)
+  ⎿  Added 10 lines, removed 10 lines
+      10  
+      11  
+      12  /*Submit Function*/
+      13 -function submitCheckBypassDevice(assignInputCode, controller_Do
+         -cument_ShowInputCodeModal, controller_Document_ShowRateOurServB
+         -tn){                                                             
+      13 +function submitCheckBypassDevice(controller, dataObj, controlle
+         +rsObj, loaderObj){                                             
+      14  
+      15    if(blockRequest === false){
+      16  
+     ...
+      22      .then(gatewayPromise => {
+      23  
+      24        /*
+      25 -      if(document.getElementById(boxLoader_Id) !== null){      
+      26 -                                                               
+      27 -        document.getElementById(boxLoader_Id).remove();        
+      25 +      if(document.getElementById(loaderObj.boxLoader_Id) !== nu
+         +ll){                                                           
+      26 +                                                               
+      27 +        document.getElementById(loaderObj.boxLoader_Id).remove(
+         +);                                                             
+      28        }
+      29        */
+      30 -                                                               
+      31 -      if(gatewayPromise === true){                                                                                         
+      30  
+      31 +      if(gatewayPromise === true){                             
+      32 +                                                               
+      33          if(bypassIsSet === true){
+      34  
+      35 -          assignInputCode(generatedOfficeCode);                
+      36 -          controller_Document_ShowRateOurServBtn();            
+      35 +          controllersObj.assignInputCode(generatedOfficeCode); 
+      36 +          controllersObj.showRateOurServBtn();                 
+      37  
+      38          }else if(bypassIsSet !== true){
+      39  
+      40 -          controller_Document_ShowInputCodeModal();            
+      41 -        }                                                                           
+      40 +          controllersObj.showInputCodeModal();                 
+      41 +        }                                                      
+      42        }
+      43  
+      44        blockRequest = false;
+
+● Now update the three controllers:
+
+● Write(Module Settings\Client Side\Controller_Document_CheckBypassDevice.js)
+  ⎿  Added 10 lines, removed 6 lines
+       1  /*Import*/
+       2 -import {submitCheckBypassDevice} from "./Submit_CheckBypassDevi
+         -ce.js";                                                        
+       2  import {assignBypassPassCode} from "./Values_Settings.js";
+       3 +import {submitCheckBypassDevice} from "./Submit_CheckBypassDevi
+         +ce.js";                                                        
+       4  /*Import*/
+       5  
+       6  
+       7 -/*Check if bypass code is set*/                                
+       7 +/*Controller*/                                                 
+       8  function controller_Document_CheckBypassDevice(elem, checkCusCh
+          eckBox){
+       9 -                                                               
+      10 -  submitCheckBypassDevice(elem, assignBypassPassCode, checkCusC
+         -heckBox);                                                      
+       9 +                                                               
+      10 +  const dataObj = {elem};                                      
+      11 +  const controllersObj = {assignBypassPassCode, checkCusCheckBo
+         +x};                                                            
+      12 +  const loaderObj = {};                                        
+      13 +                                                               
+      14 +  submitCheckBypassDevice(controller_Document_CheckBypassDevice
+         +, dataObj, controllersObj, loaderObj);                         
+      15  }
+      12 -/*Check if bypass code is set*/                                
+      16 +/*Controller*/                                                 
+      17  
+      18  
+      19  /*Declare Global*/
+     ...
+      23  
+      24  /*Export*/
+      25  export default controller_Document_CheckBypassDevice;
+      22 -/*Export*/                                                     
+      26   No newline at end of file
+      27 +/*Export*/                                                     
+
+● Write(Module Settings\Client Side\Controller_RadioBtn_SetBypassDevice.js)
+  ⎿  Added 9 lines, removed 7 lines
+       3  /*Import*/
+       4  
+       5  
+       6 -/*Check or uncheck bypass code*/                               
+       6 +/*Controller*/                                                 
+       7  function controller_RadioBtn_SetBypassDevice(elem, checkCusChec
+          kBox){
+       8 -                                                               
+       9 -                                                               
+      10 -                                                               
+      11 -  submitSetBypassDevice(elem, checkCusCheckBox);               
+       8 +                                                               
+       9 +  const dataObj = {elem};                                      
+      10 +  const controllersObj = {checkCusCheckBox};                   
+      11 +  const loaderObj = {};                                        
+      12 +                                                               
+      13 +  submitSetBypassDevice(controller_RadioBtn_SetBypassDevice, da
+         +taObj, controllersObj, loaderObj);                             
+      14  }
+      13 -/*Check or uncheck bypass code*/                               
+      15 +/*Controller*/                                                 
+      16  
+      17  
+      18  /*Declare Global*/
+     ...
+      22  
+      23  /*Export*/
+      24  export default controller_RadioBtn_SetBypassDevice;
+      23 -/*Export*/                                                     
+      25   No newline at end of file
+      26 +/*Export*/                                                     
+
+● Write(Module Index\Client Side\Controller_Document_CheckBypassDevice.js)
+  ⎿  Added 9 lines, removed 5 lines
+       6  /*Import*/
+       7  
+       8  
+       9 -/*Controller check bypass if set then generate auto passcode*/ 
+       9 +/*Controller*/                                                 
+      10  function controller_Document_CheckBypassDevice(){
+      11 -                                                               
+      12 -  submitCheckBypassDevice(assignInputCode, controller_Document_
+         -ShowInputCodeModal, controller_Document_ShowRateOurServBtn);   
+      11 +                                                               
+      12 +  const dataObj = {};                                          
+      13 +  const controllersObj = {assignInputCode, showInputCodeModal: 
+         +controller_Document_ShowInputCodeModal, showRateOurServBtn: con
+         +troller_Document_ShowRateOurServBtn};                          
+      14 +  const loaderObj = {};                                        
+      15 +                                                               
+      16 +  submitCheckBypassDevice(controller_Document_CheckBypassDevice
+         +, dataObj, controllersObj, loaderObj);                         
+      17  }
+      14 -/*Controller check bypass if set then generate auto passcode*/ 
+      18 +/*Controller*/                                                 
+      19  
+      20  
+      21  /*Declare Global*/
+     ...
+      25  
+      26  /*Export*/
+      27  export default controller_Document_CheckBypassDevice;
+      24 -/*Export*/                                                     
+      28   No newline at end of file
+      29 +/*Export*/                                                     
+
+● All 6 files updated across 3 modules. Summary of what changed:
+
+  Module Settings:
+  - Controller_Document_CheckBypassDevice — replaced positional args with
+  dataObj = {elem}, controllersObj = {assignBypassPassCode, checkCusCheckBox},
+  loaderObj = {}
+  - Controller_RadioBtn_SetBypassDevice — replaced positional args with dataObj 
+  = {elem}, controllersObj = {checkCusCheckBox}, loaderObj = {}
+  - Submit_CheckBypassDevice — updated signature to (controller, dataObj, 
+  controllersObj, loaderObj), reads values from the objects internally
+  - Submit_SetBypassDevice — same signature update, reads dataObj.elem.checked
+  and calls controllersObj.checkCusCheckBox
+
+  Module Index:
+  - Controller_Document_CheckBypassDevice — replaced positional args with
+  dataObj = {}, controllersObj = {assignInputCode, showInputCodeModal, 
+  showRateOurServBtn}, loaderObj = {}
+  - Submit_CheckBypassDevice — updated signature to (controller, dataObj, 
+  controllersObj, loaderObj), calls controllers via
+  controllersObj.assignInputCode, controllersObj.showRateOurServBtn,
+  controllersObj.showInputCodeModal
+
+✻ Baked for 2m 30s
+
+※ recap: Reformatting all controllers that import from Submit files to use the dataObj, controllersObj, loaderObj pattern. All 25 matching controllers are now updated. No pending actions remain. (disable recaps in /config)
+
+❯ update the script file .js?v* increment 1 value for example from .js?v1 to    
+  .js?v2                                                                        
+
+● Let me find all files containing .js?v version strings.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Let me read all the files to see the current versions (excluding the Backup
+  file).
+
+  Searched for 6 patterns (ctrl+o to expand)
+
+● Each file uses a consistent version throughout. I'll increment all in one
+  PowerShell pass:
+  - index.php, Page_AccountSettings.php, Page_CSATReports.php, Page_Login.php:
+  v1 → v2
+  - Page_RateService.php: v4 → v5
+  - Page_RatingMonitoring.php: v8 → v9
+
+● PowerShell($files = @(…)
+  ⎿  index.php: .js?v1 → .js?v2 (1 replacements)
+     Page_RateService.php: .js?v4 → .js?v5 (33 replacements)
+     Page_AccountSettings.php: .js?v1 → .js?v2 (2 replacements)
+     … +3 lines (ctrl+o to expand)
+
+● Done. All 6 files updated — 55 replacements total:
+
+  ┌───────────────────────────┬─────────┬───────┐
+  │           File            │ Change  │ Count │
+  ├───────────────────────────┼─────────┼───────┤
+  │ index.php                 │ v1 → v2 │ 1     │
+  ├───────────────────────────┼─────────┼───────┤
+  │ Page_RateService.php      │ v4 → v5 │ 33    │
+  ├───────────────────────────┼─────────┼───────┤
+  │ Page_AccountSettings.php  │ v1 → v2 │ 2     │
+  ├───────────────────────────┼─────────┼───────┤
+  │ Page_CSATReports.php      │ v1 → v2 │ 3     │
+  ├───────────────────────────┼─────────┼───────┤
+  │ Page_RatingMonitoring.php │ v8 → v9 │ 15    │
+  ├───────────────────────────┼─────────┼───────┤
+  │ Page_Login.php            │ v1 → v2 │ 1     │
+  └───────────────────────────┴─────────┴───────┘
+
+✻ Cogitated for 45s
+
+※ recap: Updated controllers and Submit files in Module Settings and Index to use the dataObj, controllersObj, loaderObj pattern, then incremented all .js version strings across 6 page files. No immediate next action pending. (disable recaps in /config)
