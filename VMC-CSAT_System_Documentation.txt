@@ -1,0 +1,143 @@
+================================================================================
+DETAILED SYSTEM DOCUMENTATION: VMC-CSAT
+Valenzuela Medical Center - Customer Satisfaction Measurement System
+Version: 1.1.0
+Last Updated: May 12, 2026
+================================================================================
+
+1. TITLE PAGE
+--------------------------------------------------------------------------------
+System Name:       VMC-CSAT
+Full Name:         Valenzuela Medical Center - Customer Satisfaction Measurement
+Organization:      Valenzuela Medical Center (VMC)
+Owner:             IMISS (Information Management and Information Systems Service)
+Application Type:  Internal Web Application / Survey Kiosk Platform
+Primary Tech:      PHP 7.4/8.x, Rogrid JS Framework, MySQL/MariaDB
+
+2. REVISION HISTORY
+--------------------------------------------------------------------------------
+Version | Date       | Author                  | Description
+--------|------------|-------------------------|--------------------------------
+1.0.0   | 2026-05-12 | Senior Analyst          | Initial Release
+1.1.0   | 2026-05-12 | Software Architect     | Expanded technical details & security fixes
+
+3. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+VMC-CSAT is a specialized digital feedback system engineered to fulfill the 
+mandates of the Anti-Red Tape Authority (ARTA) and Republic Act No. 11032. It 
+digitizes the collection of Customer Satisfaction Measurement (CSM) data, 
+replacing manual paper surveys with a secure, modular, and analytically 
+driven platform. The system provides real-time reporting for administrative 
+offices and maintains strict compliance with the Data Privacy Act of 2012.
+
+4. SYSTEM ARCHITECTURE & TECHNICAL STACK
+--------------------------------------------------------------------------------
+4.1 Architectural Pattern
+The system employs a "Modular Monolithic" design. Each functional unit (Login, 
+Survey, Reports, Settings) is self-contained within its own directory structure.
+
+4.2 Software Stack
+- Backend: Native PHP (Vanilla) with PDO (PHP Data Objects).
+- Frontend: ES6 JavaScript Modules, Rogrid UI Component Library.
+- Database: MySQL/MariaDB Relational Database.
+- Web Server: Apache (Laragon-ready).
+- Styling: SCSS/CSS using a proprietary Rostrap/Rogrid styling engine.
+
+4.3 Rogrid JS Framework Flow
+The system follows a strict execution chain for every user interaction:
+1. Executor: Entry point for the page; initializes components.
+2. Controller: Logic layer; handles DOM events and state.
+3. SubmitRequest: Triggers the data fetching process.
+4. Gateway: Wrapper for the Fetch API; manages Promise-based responses.
+5. Request: Performs the actual HTTP POST fetch call to the PHP backend.
+6. Response (PHP): Validates tokens, executes SQL, and returns JSON.
+
+5. FUNCTIONAL MODULES DETAIL
+--------------------------------------------------------------------------------
+5.1 Module Index (Authentication & Entry)
+- Purpose: Entry point for survey respondents.
+- Features: Data Privacy agreement, Passcode verification.
+- Flow: User agrees to DPA -> Enters 6-digit passcode -> Passcode is "burned" 
+  (deleted) upon successful use to prevent reuse.
+
+5.2 Module Survey (Data Collection)
+- Purpose: Interactive survey form for patient/client feedback.
+- Demographic Fields: Age, Gender, Religion, Education, Office, Client Type.
+- Dynamic Logic: Questions are dynamically loaded based on the office selected 
+  to ensure relevance (e.g., Medical vs. Administrative services).
+- Ratings: 5-point Likert scale (Outstanding to Poor).
+
+5.3 Module Reports (Analytics & Export)
+- Purpose: Real-time data visualization and ARTA compliance reporting.
+- Reports: 
+  * Data One: Raw respondent data with demographics.
+  * CSM Output: Calculated ARTA scores per office.
+  * Comment Report: Qualitative feedback analysis.
+- Export: High-fidelity Excel export functionality.
+
+5.4 Module Settings/IMISS (Configuration)
+- Purpose: Technical management of system parameters.
+- Features: Update questions, manage offices, configure point-of-entry links.
+
+6. DATABASE SCHEMA DETAIL
+--------------------------------------------------------------------------------
+6.1 Core Tables
+- accounts_tab: Administrative user credentials (Argon2id hashed).
+- clientresponses_tab: Master table for survey headers.
+- respondents_tab: Lookup for respondent types (e.g., Patient, Relative).
+- offices_tab: List of hospital departments.
+- officeservices_tab: Detailed list of services mapped to specific offices.
+- questions_tab: Central repository for survey questions.
+- ccquestionsrates_tab: Stores the rating values (Likert scale definitions).
+- tokens_tab: (Legacy) Stored static tokens; now replaced by session-based CSRF.
+
+6.2 Key Relationships
+- clientresponses_tab.office_id -> offices_tab.office_id
+- serviceresponses_tab.client_ref -> clientresponses_tab.client_ref
+- officeservices_tab.office_id -> offices_tab.office_id
+
+7. SECURITY HARDENING MEASURES
+--------------------------------------------------------------------------------
+7.1 Authentication Security
+- Algorithm: Argon2id (replacing legacy MD5).
+- Migration: Transparent re-hashing of legacy passwords upon first login.
+- Implementation: Uses PHP password_hash() and password_verify().
+
+7.2 Session & Request Security
+- CSRF Protection: Dynamic session-based tokens generated on index.php.
+- Token Validation: Timing-attack-safe comparison using hash_equals().
+- Cookie Hardening: HttpOnly, Secure, and SameSite=Lax flags enabled.
+
+7.3 Data Privacy & Integrity
+- Prepared Statements: 100% PDO prepared statement coverage for all queries.
+- Secret Keys: Respondent identifiers are cryptographically secure random bytes.
+- IP Logging: Anonymized IP tracking for audit purposes.
+
+8. SYSTEM WORKFLOW (End-to-End)
+--------------------------------------------------------------------------------
+1. Landing: User arrives at index.php via QR code or kiosk link.
+2. Consent: Mandatory agreement to the Confidentiality and Nondisclosure Policy.
+3. Access: Entry of a valid passcode provided by the respective hospital office.
+4. Survey: Completion of demographics and Likert-scale ratings.
+5. Submission: Data is encrypted/sanitized and saved via Fetch API.
+6. Processing: IMISS administrators access the Reports module to generate 
+   quarterly CSM summaries for hospital management.
+
+9. DEPLOYMENT & ENVIRONMENT
+--------------------------------------------------------------------------------
+- Directory: C:\laragon\www\VMC-CSAT\
+- Timezone: Asia/Manila (Strictly enforced in all PHP scripts).
+- Browser: Optimized for Chromium-based browsers (Chrome, Edge).
+- Database Connection: Factory pattern implemented in Global_Connection.php 
+  to handle primary and secondary DB connections.
+
+10. LIMITATIONS & FUTURE SCOPE
+--------------------------------------------------------------------------------
+- Limitations: Internal network dependency; Optimized primarily for desktop view.
+- Future Scope: Implementation of automated email alerts for low-rating 
+  submissions; Integration with the hospital's central EMR for demographic 
+  auto-population.
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================

@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitSetBypassDevice(elem, checkCusCheckBox){	
+function submitSetBypassDevice(controller, dataObj, controllersObj, loaderObj){
 
 	if(blockRequest === false){
 
@@ -17,21 +17,21 @@ function submitSetBypassDevice(elem, checkCusCheckBox){
 
 		/*boxLoader();*/
 
-		let bypassPassCodeChecked = elem.checked;		
+		let bypassPassCodeChecked = dataObj.elem.checked;
 
 		gatewaySetBypassDevice(bypassPassCodeChecked)
 		.then(gatewayPromise => {
 
 			/*
-			if(document.getElementById(boxLoader_Id) !== null){
-					
-				document.getElementById(boxLoader_Id).remove();
+			if(document.getElementById(loaderObj.boxLoader_Id) !== null){
+
+				document.getElementById(loaderObj.boxLoader_Id).remove();
 			}
 			*/
-			
-			if(gatewayPromise === true){								
 
-				checkCusCheckBox(elem);				
+			if(gatewayPromise === true){
+
+				controllersObj.checkCusCheckBox(dataObj.elem);
 			}
 
 			blockRequest = false;

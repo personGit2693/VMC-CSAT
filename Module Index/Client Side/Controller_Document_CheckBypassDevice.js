@@ -6,12 +6,16 @@ import controller_Document_ShowRateOurServBtn from "./Controller_Document_ShowRa
 /*Import*/
 
 
-/*Controller check bypass if set then generate auto passcode*/
+/*Controller*/
 function controller_Document_CheckBypassDevice(){
-	
-	submitCheckBypassDevice(assignInputCode, controller_Document_ShowInputCodeModal, controller_Document_ShowRateOurServBtn);
+
+	const dataObj = {};
+	const controllersObj = {assignInputCode, showInputCodeModal: controller_Document_ShowInputCodeModal, showRateOurServBtn: controller_Document_ShowRateOurServBtn};
+	const loaderObj = {};
+
+	submitCheckBypassDevice(controller_Document_CheckBypassDevice, dataObj, controllersObj, loaderObj);
 }
-/*Controller check bypass if set then generate auto passcode*/
+/*Controller*/
 
 
 /*Declare Global*/

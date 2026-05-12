@@ -3,14 +3,16 @@ import {submitSetBypassDevice} from "./Submit_SetBypassDevice.js";
 /*Import*/
 
 
-/*Check or uncheck bypass code*/
+/*Controller*/
 function controller_RadioBtn_SetBypassDevice(elem, checkCusCheckBox){
-	
-	
-	
-	submitSetBypassDevice(elem, checkCusCheckBox);
+
+	const dataObj = {elem};
+	const controllersObj = {checkCusCheckBox};
+	const loaderObj = {};
+
+	submitSetBypassDevice(controller_RadioBtn_SetBypassDevice, dataObj, controllersObj, loaderObj);
 }
-/*Check or uncheck bypass code*/
+/*Controller*/
 
 
 /*Declare Global*/

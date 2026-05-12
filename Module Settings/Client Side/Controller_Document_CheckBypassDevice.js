@@ -1,15 +1,19 @@
 /*Import*/
-import {submitCheckBypassDevice} from "./Submit_CheckBypassDevice.js";
 import {assignBypassPassCode} from "./Values_Settings.js";
+import {submitCheckBypassDevice} from "./Submit_CheckBypassDevice.js";
 /*Import*/
 
 
-/*Check if bypass code is set*/
+/*Controller*/
 function controller_Document_CheckBypassDevice(elem, checkCusCheckBox){
-	
-	submitCheckBypassDevice(elem, assignBypassPassCode, checkCusCheckBox);
+
+	const dataObj = {elem};
+	const controllersObj = {assignBypassPassCode, checkCusCheckBox};
+	const loaderObj = {};
+
+	submitCheckBypassDevice(controller_Document_CheckBypassDevice, dataObj, controllersObj, loaderObj);
 }
-/*Check if bypass code is set*/
+/*Controller*/
 
 
 /*Declare Global*/

@@ -10,7 +10,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitCheckBypassDevice(assignInputCode, controller_Document_ShowInputCodeModal, controller_Document_ShowRateOurServBtn){	
+function submitCheckBypassDevice(controller, dataObj, controllersObj, loaderObj){
 
 	if(blockRequest === false){
 
@@ -22,23 +22,23 @@ function submitCheckBypassDevice(assignInputCode, controller_Document_ShowInputC
 		.then(gatewayPromise => {
 
 			/*
-			if(document.getElementById(boxLoader_Id) !== null){
-					
-				document.getElementById(boxLoader_Id).remove();
+			if(document.getElementById(loaderObj.boxLoader_Id) !== null){
+
+				document.getElementById(loaderObj.boxLoader_Id).remove();
 			}
 			*/
-			
-			if(gatewayPromise === true){								
+
+			if(gatewayPromise === true){
 
 				if(bypassIsSet === true){
 
-					assignInputCode(generatedOfficeCode);
-					controller_Document_ShowRateOurServBtn();
+					controllersObj.assignInputCode(generatedOfficeCode);
+					controllersObj.showRateOurServBtn();
 
 				}else if(bypassIsSet !== true){
 
-					controller_Document_ShowInputCodeModal();
-				}			
+					controllersObj.showInputCodeModal();
+				}
 			}
 
 			blockRequest = false;
